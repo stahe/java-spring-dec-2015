@@ -1295,10 +1295,10 @@
 <a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>aux lignes 23-27, remplacez la dépendance sur le projet [intro-server-webjson-01] par celle sur le projet [elections-webjson-metier-dao-spring-data] étudié au paragraphe 12, page 209 ;</li>
-<li>aux lignes 4-7, mettre les caractéristiques du nouveau projet ;
-Il nous reste à modifier les classes de configuration du projet :</li>
+<li>aux lignes 23-27, remplacez la dépendance sur le projet [intro-server-webjson-01] par celle sur le projet [elections-webjson-metier-dao-spring-data] étudié au paragraphe 12, page 208 ;</li>
+<li>aux lignes 4-7, mettre les caractéristiques du nouveau projet ;</li>
 </ul>
+<p>Il nous reste à modifier les classes de configuration du projet :</p>
 <p><u><strong>[DaoConfig]</strong></u></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
@@ -1347,9 +1347,9 @@ Il nous reste à modifier les classes de configuration du projet :</li>
 <p>Les modifications sont aux lignes suivantes :</p>
 <ul>
 <li>lignes 8, 9, 14 : mettre les bons noms de packages ;</li>
-<li>ligne 10 : la classe importée est maintenant [elections.dao.config.DaoConfig] du projet [elections-webjson-metier-dao-spring-data] ;
-<strong>Note</strong> : comme il a été dit, cette configuration ne marche que si la classe [elections.dao.config.DaoConfig] a l'annotation [@Configuration]. Vérifiez ce point.</li>
+<li>ligne 10 : la classe importée est maintenant [elections.dao.config.DaoConfig] du projet [elections-webjson-metier-dao-spring-data] ;</li>
 </ul>
+<p><strong>Note</strong> : comme il a été dit, cette configuration ne marche que si la classe [elections.dao.config.DaoConfig] a l'annotation [@Configuration]. Vérifiez ce point.</p>
 <p><u><strong>[SecurityConfig]</strong></u></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -1375,9 +1375,9 @@ Il nous reste à modifier les classes de configuration du projet :</li>
 </code></pre></div></td></tr></table></div>
 <p>Les modifications sont aux lignes suivantes :</p>
 <ul>
-<li>ligne 6 : changez le nom du package ;
-C'est tout. Faites un premier test en exécutant le test JUnit [] :</li>
+<li>ligne 6 : changez le nom du package ;</li>
 </ul>
+<p>C'est tout. Faites un premier test en exécutant le test JUnit [] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C9000000608400FFD5.png" style="display:inline-block; margin:4px;width:3.72cm;height:1.78cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Exécutez la classe de boot [Boot] puis avec l'extension Chrome [Advanced Rest Client] faites le test suivant :</p>
@@ -1394,7 +1394,7 @@ C'est tout. Faites un premier test en exécutant le test JUnit [] :</li>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b></p><img src="images/100000000000013E0000014000C8A91B.png" style="display:inline-block; margin:4px;width:5.89cm;height:5.92cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><strong>Travail à faire</strong> : en [1], renommez les packages si nécessaire et supprimez ceux de la couche [ui] et des classes de démarrage [boot].</p>
-<p>Nous allons procéder maintenant comme il a été fait au paragraphe 16.5, page 321.</p>
+<p>Nous allons procéder maintenant comme il a été fait au paragraphe 16.5, page 319.</p>
 <h3 id="1741-configuration-maven">17.4.1. Configuration Maven</h3>
 <p>Seule la partie identification du projet change :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -2096,9 +2096,9 @@ C'est tout. Faites un premier test en exécutant le test JUnit [] :</li>
 <li>supprimez les packages [elections.client.dao, elections.client.metier, elections.client.entities] ;</li>
 <li>dans le package [elections.client.ui], gardez seulement la classe console [ElectionsConsole] et son interface [IElectionsUI] ;</li>
 <li>renommez les packages comme indiqué en [3] ;</li>
-<li>réglez les problèmes d'import dans les diverses classes par [clic droit / Fix Imports] ;
-A ce stade, le nouveau projet présente de nombreuses erreurs.</li>
+<li>réglez les problèmes d'import dans les diverses classes par [clic droit / Fix Imports] ;</li>
 </ul>
+<p>A ce stade, le nouveau projet présente de nombreuses erreurs.</p>
 <h3 id="1751-configuration-maven">17.5.1. Configuration Maven</h3>
 <p>Le fichier [pom.xml] du nouveau projet est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
@@ -2181,7 +2181,7 @@ A ce stade, le nouveau projet présente de nombreuses erreurs.</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 4-8 : l'identité Maven du nouveau projet ;</li>
-<li>lignes 22-26 : la dépendance sur le projet [elections-metier-dao-security-webjson] que nous venons de construire au paragraphe 17.4, page 333, et qui fournit les couches [DAO] et [métier] ;</li>
+<li>lignes 22-26 : la dépendance sur le projet [elections-metier-dao-security-webjson] que nous venons de construire au paragraphe 17.4, page 331, et qui fournit les couches [DAO] et [métier] ;</li>
 </ul>
 <h3 id="1752-configuration-spring">17.5.2. Configuration Spring</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000000E555E1FEA0.png" style="display:inline-block; margin:4px;width:4.56cm;height:4.24cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -2228,7 +2228,7 @@ A ce stade, le nouveau projet présente de nombreuses erreurs.</li>
 <a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 8 : on importe la classe [elections.security.client.config.MetierConfig] du projet [elections-metier-dao-security-webjson] étudié au paragraphe 17.4, page 333 ;</li>
+<li>ligne 8 : on importe la classe [elections.security.client.config.MetierConfig] du projet [elections-metier-dao-security-webjson] étudié au paragraphe 17.4, page 331 ;</li>
 <li>ligne 9 : on déclare les packages où se trouvent les beans Spring ;</li>
 <li>lignes 12-18 : le bean [admin] est l'utilisateur [admin, admin] qui sera utilisé par l'application console. On se rappelle que c'est le seul utilisateur autorisé à interroger el serveur web / jSON sécurisé ;</li>
 </ul>
@@ -2412,9 +2412,9 @@ A ce stade, le nouveau projet présente de nombreuses erreurs.</li>
 <li>dans le package [elections.client.ui], supprimez les classes [ElectionsConsole, IElectionsUI] ;</li>
 <li>renommez les packages comme indiqué en [2] ;</li>
 <li>dans le package [elections.security.client.swing], renommez la classe [AbstractElectionsSwing] qui implémente l'interface graphique en [AbstractElectionsMainForm] et la classe [ElectionsSwing] qui implémente les gestionnaires des événements de l'interface graphque en [ElectionsMainForm] ;</li>
-<li>réglez les problèmes d'import dans les diverses classes par [clic droit / Fix Imports] ;
-A ce stade, il y a de nombreuses erreurs.</li>
+<li>réglez les problèmes d'import dans les diverses classes par [clic droit / Fix Imports] ;</li>
 </ul>
+<p>A ce stade, il y a de nombreuses erreurs.</p>
 <h3 id="1761-configuration-maven">17.6.1. Configuration Maven</h3>
 <p>Le fichier [pom.xml] évolue de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
@@ -2497,10 +2497,10 @@ A ce stade, il y a de nombreuses erreurs.</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 4-8 : l'identité Maven du nouveau projet ;</li>
-<li>lignes 22-26 : une dépendance sur le projet console que nous venons d'étudier au paragraphe 17.5, page 339 ;</li>
+<li>lignes 22-26 : une dépendance sur le projet console que nous venons d'étudier au paragraphe 17.5, page 337 ;</li>
 </ul>
 <h3 id="1762-configuration-spring">17.6.2. Configuration Spring</h3>
-<p>Ce projet utilise la configuration Spring du projet console qu'il importe (cf paragraphe 17.5.2, page 341).</p>
+<p>Ce projet utilise la configuration Spring du projet console qu'il importe (cf paragraphe 17.5.2, page 339).</p>
 <h3 id="1763-les-vues-de-lapplication-swing">17.6.3. Les vues de l'application Swing</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000B9393BA944.png" style="display:inline-block; margin:4px;width:5.519cm;height:3.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 

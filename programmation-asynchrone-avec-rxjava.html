@@ -1149,36 +1149,34 @@
 
 <h1 id="20-programmation-asynchrone-avec-rxjava">20. Programmation asynchrone avec RxJava</h1>
 <p><strong>Document à lire</strong> : [<a href="http://tahe.developpez.com/tutoriels-cours/rxjava-rxswing-rxandroid/documents/rxjava.pdf"><u>Introduction à RxJava. Application aux environnements Swing et Android</u></a>.]</p>
-<p>Dans ce chapitre, nous revenons sur le chapitre 17.6, page 343 où nous avions construit une application client / serveur avec l'architecture suivante :</p>
+<p>Dans ce chapitre, nous revenons sur le chapitre 17.6, page 341 où nous avions construit une application client / serveur avec l'architecture suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C7000002EECD229798.png" style="display:inline-block; margin:4px;width:16.18cm;height:9.922cm;" /></td></tr></table>
 
-<p>Certaines actions de l'utilisateur sur l'interface Swing en [1] déclenchent des actions jusque dans la base de données en [3] au-travers d'un réseau HTTP [2]. A cause de celui-ci, la réponse à l'action de l'utilisateur peut être plus ou moins longue à venir. Ce serait bien de pouvoir mettre un indicateur d'attente sur l'interface utilisateur avec une option d'annulation de l'opération lancée si celle-ci venait à être trop longue. Dans le chapitre 17.6, page 343, chaque action de l'utilisateur nécessitant d'échanger des informations avec le serveur est synchrone. Le gestionnaire d'événement exécuté par le code n'est terminé que lorsque la réponse est reçue. Pendant tout ce temps, l'interface graphique est gelée : elle ne répond pas aux nouvelles actions de l'utilisateur. Celles-ci sont simplement mises en file d'attente pour être traitées lorsque le gestionnaire d'événement qui s'exécute actuellement soit terminé. Ainsi, si on faisait apparaître un bouton d'annulation, l'utilisateur pourrait cliquer dessus mais il ne se passerait rien tant que l'opération en cours ne serait pas terminée. Le bouton d'annulation n'aurait alors aucun intérêt.</p>
+<p>Certaines actions de l'utilisateur sur l'interface Swing en [1] déclenchent des actions jusque dans la base de données en [3] au-travers d'un réseau HTTP [2]. A cause de celui-ci, la réponse à l'action de l'utilisateur peut être plus ou moins longue à venir. Ce serait bien de pouvoir mettre un indicateur d'attente sur l'interface utilisateur avec une option d'annulation de l'opération lancée si celle-ci venait à être trop longue. Dans le chapitre 17.6, page 341, chaque action de l'utilisateur nécessitant d'échanger des informations avec le serveur est synchrone. Le gestionnaire d'événement exécuté par le code n'est terminé que lorsque la réponse est reçue. Pendant tout ce temps, l'interface graphique est gelée : elle ne répond pas aux nouvelles actions de l'utilisateur. Celles-ci sont simplement mises en file d'attente pour être traitées lorsque le gestionnaire d'événement qui s'exécute actuellement soit terminé. Ainsi, si on faisait apparaître un bouton d'annulation, l'utilisateur pourrait cliquer dessus mais il ne se passerait rien tant que l'opération en cours ne serait pas terminée. Le bouton d'annulation n'aurait alors aucun intérêt.</p>
 <p>Pour que le clic sur le bouton d'annulation soit suivi d'effet, il faut que l'opération en cours soit terminée. Pour cela, elle doit lancer l'opération potentiellement longue de façon asynchrone : </p>
 <ul>
 <li>le gestionnaire d'événement lance l'opération longue mais n'attend pas son résultat et rend la main au thread de l'UI qui gère les événements de l'interface graphique. L'opération longue est lancée sur un thread différent de celui de l'UI ce qui ne bloque pas ce dernier ;</li>
 <li>si l'utilisateur clique sur le bouton d'annulation avant la fin de l'opération longue, le thread de l'UI qui est inoccupé peut traiter cet événement. On peut alors abandonner l'opération longue en ignorant son résultat ;</li>
-<li>si l'opération longue n'a pas été annulée, l'arrivée de la réponse va provoquer un événement dans le thread de l'UI. Celui-ci, s'il est inoccupé, va alors exécuter le code lié à cet événement qui va exploiter la réponse ;
-L'interface utilisateur va fonctionner comme précédemment. Si les temps de réponse du serveur sont rapides, l'utilisateur ne verra pas la différence. S'ils sont perceptibles, l'utilisateur verra un bouton d'annulation apparaître et aura la possibilté d'interrompre l'opération en cours.</li>
+<li>si l'opération longue n'a pas été annulée, l'arrivée de la réponse va provoquer un événement dans le thread de l'UI. Celui-ci, s'il est inoccupé, va alors exécuter le code lié à cet événement qui va exploiter la réponse ;</li>
 </ul>
+<p>L'interface utilisateur va fonctionner comme précédemment. Si les temps de réponse du serveur sont rapides, l'utilisateur ne verra pas la différence. S'ils sont perceptibles, l'utilisateur verra un bouton d'annulation apparaître et aura la possibilté d'interrompre l'opération en cours.</p>
 <p>La bibliothèque [<a href="http://reactivex.io/"><u>Rx</u></a>] permet de faire de la programmation asynchrone. Son grand intérêt réside dans le fait qu'elle a été portée dans de nombreux environnements (Java, .NET, JS, ...) et que sa maîtrise dans un environnement peut être transposée facilement dans un autre environnement. Nous allons nous appuyer ici sur le chapitre 2 du document [<a href="http://tahe.developpez.com/tutoriels-cours/rxjava-rxswing-rxandroid/documents/rxjava.pdf"><u>Introduction à RxJava. Application aux </u></a><a href="http://tahe.developpez.com/tutoriels-cours/rxjava-rxswing-rxandroid/documents/rxjava.pdf"><u>environnements Swing et Android</u></a>]. Le lecteur est invité à le lire. Dans la suite, nous reprenons du code issu des exemples de ce chapitre.</p>
 <p>Nous allons faire évoluer l'architecture de l'application de la façon suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003BD000001460AF459F1.png" style="display:inline-block; margin:4px;width:12.661cm;height:4.313cm;" /></td></tr></table>
 
 <ul>
-<li>
-<p>en [1], nous intercalons une couche [RxJava] entre la couche [swing] et la couche [métier]. Les méthodes de celle-ci vont désormais être appelées de façon asynchrone ;
-Nous allons procéder en plusieurs étapes :</p>
-</li>
-<li>
-<p><strong>étape 1</strong> : la couche [metier, DAO] présente pour l'instant une interface synchrone à la couche [ui]. Nous allons la transformer en une couche asynchrone [RxJava, metier, DAO] ;</p>
-</li>
+<li>en [1], nous intercalons une couche [RxJava] entre la couche [swing] et la couche [métier]. Les méthodes de celle-ci vont désormais être appelées de façon asynchrone ;</li>
+</ul>
+<p>Nous allons procéder en plusieurs étapes :</p>
+<ul>
+<li><strong>étape 1</strong> : la couche [metier, DAO] présente pour l'instant une interface synchrone à la couche [ui]. Nous allons la transformer en une couche asynchrone [RxJava, metier, DAO] ;</li>
 <li><strong>étape 2</strong> : nous porterons l'application console synchrone en une application toujours synchrone mais utilisant l'interface asynchrone [RxJava, metier, DAO] ;</li>
 <li><strong>étape 3</strong> : nous porterons l'application swing synchrone en une application swing asynchrone ;</li>
 </ul>
 <h2 id="201-etape-1">20.1. étape 1</h2>
 <p>Nous transformons la couche synchrone actuelle [metier, DAO] en une couche asynchrone [RxJava, metier, DAO].</p>
 <h3 id="2011-creation">20.1.1. Création</h3>
-<p>Nous partons du projet Maven du chapitre 17.4, page 333 que nous ouvrons avec <strong>Netbeans</strong> :</p>
+<p>Nous partons du projet Maven du chapitre 17.4, page 331 que nous ouvrons avec <strong>Netbeans</strong> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F0000000C583EDA9B3.png" style="display:inline-block; margin:4px;width:4.45cm;height:3.649cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001310000010375A45E24.png" style="display:inline-block; margin:4px;width:5.65cm;height:4.8cm;" /></td></tr></table>
 
 <p>Nous dupliquons ce projet [1] (copy / paste) dans un nouveau projet [elections-rxjava-metier-dao-security-webjson] [2].</p>
@@ -1418,9 +1416,9 @@ Nous allons procéder en plusieurs étapes :</p>
 <ul>
 <li><strong>onSuccess</strong>(T result) qui avertit qu'un résultat de type T est disponible. L'opération asynchrone peut fournir plusieurs résultats ;</li>
 <li><strong>onError</strong>(Throwable th) qui avertit que l'opération asynchrone a rencontré une erreur ;</li>
-<li><strong>onCompleted</strong>() qui avertit que l'opération asynchrone est terminée ;
-Tant que la méthode [Observable.subscribe] n'est pas appelée, l'opération asynchrone liée à l'observable n'est pas lancée. Le code qui appelle une méthode M de l'interface [IRxElectionsMetier] n'obtient pas le résultat T attendu, mais un type Observable&lt;T&gt; qui lui permettra ultérieurement d'obtenir le résultat T en appelant la méthode [Observable.subscribe].</li>
+<li><strong>onCompleted</strong>() qui avertit que l'opération asynchrone est terminée ;</li>
 </ul>
+<p>Tant que la méthode [Observable.subscribe] n'est pas appelée, l'opération asynchrone liée à l'observable n'est pas lancée. Le code qui appelle une méthode M de l'interface [IRxElectionsMetier] n'obtient pas le résultat T attendu, mais un type Observable&lt;T&gt; qui lui permettra ultérieurement d'obtenir le résultat T en appelant la méthode [Observable.subscribe].</p>
 <p>L'implémentation [RxElectionsMetier] de l'interface [IRxElectionsMetier] est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -1550,9 +1548,9 @@ Tant que la méthode [Observable.subscribe] n'est pas appelée, l'opération asy
 <li>lignes 23-32 : le code qu'on veut donner à la méthode [call] ;</li>
 <li>ligne 25 : on demande les listes électorales de façon synchrone à la couche [métier] injectée en ligne 13. Il va donc y avoir attente du résultat. Lorsque celui-ci va être reçu, il est passé à la méthode [onNext] du souscripteur ;</li>
 <li>ligne 28 : en cas d'erreur, l'exception est passée à la méthode [onError] du souscripteur ;</li>
-<li>ligne 31 : on n'attend qu'un résultat. Lorsque celui-ci a été obtenu (les listes électorales ou une exception), on indique au souscripteur que le processus observé a terminé d'émettre des résultats ;
-On se rappellera bien que la méthode [RxElectionsMetier] rend un type Observable&lt;ListeElectorale[]&gt; et non le type ListeElectorale[] lui-même. Il faudra que le code appelant appelle la méthode Observable&lt;ListeElectorale[]&gt;.<strong>subscribe</strong> pour que le code des lignes 23-33 soit exécuté et rende les listes électorales au moyen de la ligne 25.</li>
+<li>ligne 31 : on n'attend qu'un résultat. Lorsque celui-ci a été obtenu (les listes électorales ou une exception), on indique au souscripteur que le processus observé a terminé d'émettre des résultats ;</li>
 </ul>
+<p>On se rappellera bien que la méthode [RxElectionsMetier] rend un type Observable&lt;ListeElectorale[]&gt; et non le type ListeElectorale[] lui-même. Il faudra que le code appelant appelle la méthode Observable&lt;ListeElectorale[]&gt;.<strong>subscribe</strong> pour que le code des lignes 23-33 soit exécuté et rende les listes électorales au moyen de la ligne 25.</p>
 <p>Le code des autres méthodes est analogue :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">  2</a></span>
@@ -1771,7 +1769,7 @@ On se rappellera bien que la méthode [RxElectionsMetier] rend un type Observabl
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012000000113B05A3BCF.png" style="display:inline-block; margin:4px;width:5.33cm;height:5.091cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <h4 id="20141-test01">20.1.4.1. Test01</h4>
-<p>Nous reprenons le test unitaire [Test01] étudié au paragraphe 17.4.4, page 337. Il a été prévu pour faire des appels synchrones à l'interface [IElectionsMetier]. Nous le modifions pour qu'il fasse des appels synchrones à la nouvelle interface [IRxElectionsMetier]. Il est en effet possible de faire des appels synchrones à une interface asynchrone RxJava. Le code devient le suivant :</p>
+<p>Nous reprenons le test unitaire [Test01] étudié au paragraphe 17.4.4, page 335. Il a été prévu pour faire des appels synchrones à l'interface [IElectionsMetier]. Nous le modifions pour qu'il fasse des appels synchrones à la nouvelle interface [IRxElectionsMetier]. Il est en effet possible de faire des appels synchrones à une interface asynchrone RxJava. Le code devient le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">  3</a></span>
@@ -2195,9 +2193,9 @@ On se rappellera bien que la méthode [RxElectionsMetier] rend un type Observabl
 <li>ligne 48 : la méthode statique [BlockingObservable.from(Observable).first] :</li>
 <li>s'abonne à l'observable paramètre de [from] ;</li>
 <li>lance l'exécution du code associé à l'observable ;</li>
-<li>attend de recevoir le 1er résultat. C'est donc une opération synchrone ;
-Nous utilisons ici la méthode [firstOrDefault(null)] parce que l'observable [metier.authenticate] ne rend pas de résultat lorsqu'il est exécuté. Le résultat de la méthode [firstOrDefault(null)] sera donc null, valeur inexploitée ici ;</li>
+<li>attend de recevoir le 1er résultat. C'est donc une opération synchrone ;</li>
 </ul>
+<p>Nous utilisons ici la méthode [firstOrDefault(null)] parce que l'observable [metier.authenticate] ne rend pas de résultat lorsqu'il est exécuté. Le résultat de la méthode [firstOrDefault(null)] sera donc null, valeur inexploitée ici ;</p>
 <p>Nous reprenons ce schéma dans le reste du code à chaque fois que nous voulons faire appel à la couche [métier].</p>
 <p>Le test unitaire [Test01] doit passer :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001D2000000F6CBC27211.png" style="display:inline-block; margin:4px;width:8.513cm;height:4.493cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -2282,15 +2280,13 @@ Nous utilisons ici la méthode [firstOrDefault(null)] parce que l'observable [me
 <li>ligne 16 : nous le mémorisons dans un champ de la classe de test de type [ElectionsException] car l'observable exécuté n'émet que ce type d'exception ;</li>
 <li>ligne 17 : nous passons le sémaphore à 0 pour indiquer que le thread [Thread2] a terminé son travail ;</li>
 <li>la troisième [<strong>()-&gt;{...}</strong>] est appelée lorsque l'observable n'a plus d'éléments à émettre. Nous traitons cet événement de la façon suivante :</li>
-<li>
-<p>ligne 20 : nous passons le sémaphore à 0 pour indiquer que le thread [Thread2] a terminé son travail ;
-Il faut noter que le troisième lambda n'est pas appelé si une exception se produit. C'est pourquoi, on a été obligé de mettre le sémaphore à 0 également ligne 17 ;</p>
-</li>
-<li>
-<p>ligne 25 : lorsqu'on arrive à cette ligne, l'observable a terminé son travail. On peut alors faire les mêmes vérifications que dans le test [Test01] ;
-Examinons un autre test :</p>
-</li>
+<li>ligne 20 : nous passons le sémaphore à 0 pour indiquer que le thread [Thread2] a terminé son travail ;</li>
 </ul>
+<p>Il faut noter que le troisième lambda n'est pas appelé si une exception se produit. C'est pourquoi, on a été obligé de mettre le sémaphore à 0 également ligne 17 ;</p>
+<ul>
+<li>ligne 25 : lorsqu'on arrive à cette ligne, l'observable a terminé son travail. On peut alors faire les mêmes vérifications que dans le test [Test01] ;</li>
+</ul>
+<p>Examinons un autre test :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -2392,17 +2388,17 @@ Examinons un autre test :</p>
 <ul>
 <li>lignes 20-30 : exécution asynchrone de l'observable [electionsMetier.calculerSieges(admin, listes)] ;</li>
 <li>lignes 21-23 : l'exécution de l'observable rend un type [ListeElectorale[]] qu'on mémorise dans un champ de la classe de test, ligne 3 ;</li>
-<li>lignes 34-48 : ces vérifications sont celles du test [Test01] auxquelles on a ajouté la vérification de la ligne 34 qui s'assure qu'il n'y a pas eu d'exception ;
-L'ensemble du test [Test02] est disponible dans le support de cours.</li>
+<li>lignes 34-48 : ces vérifications sont celles du test [Test01] auxquelles on a ajouté la vérification de la ligne 34 qui s'assure qu'il n'y a pas eu d'exception ;</li>
 </ul>
+<p>L'ensemble du test [Test02] est disponible dans le support de cours.</p>
 <p><strong>Travail à faire</strong> : passer le test [Test02] et vérifier qu'il passe.</p>
 <h4 id="20143-test03">20.1.4.3. Test03</h4>
 <p>Le test [Test03] fait la même chose que le test [Test01] : il teste l'interface [IRxElectionsMetier] par des appels synchrones à cette interface. C'est une copie du test [Test02] à deux détails près :</p>
 <ul>
 <li>les observables ne sont plus exécutés dans un thread différent de celui qui exécute les tests. Lorsque le thread [Thread1] exécute la méthode [subscribe] d'un observable, celle-ci démarre une opération HTTP vers le serveur également sur le thread [Thread1]. Toute la méthode [subscribe] devient alors synchrone ;</li>
-<li>puisqu'il n'y a plus qu'un thread, la synchronisation de threads devient inutile et le sémaphore disparaît ;
-Voici deux exemples de tests :</li>
+<li>puisqu'il n'y a plus qu'un thread, la synchronisation de threads devient inutile et le sémaphore disparaît ;</li>
 </ul>
+<p>Voici deux exemples de tests :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
@@ -2530,10 +2526,10 @@ Voici deux exemples de tests :</li>
 </ul>
 <p><strong>Travail à faire</strong> : passer le test [Test03] et vérifier qu'il passe.</p>
 <h2 id="202-etape-2">20.2. étape 2</h2>
-<p>Nous portons maintenant l'application console synchrone du chapitre 17.5, page 339, en une application toujours synchrone mais utilisant l'interface asynchrone [RxJava, metier, DAO] ;</p>
+<p>Nous portons maintenant l'application console synchrone du chapitre 17.5, page 337, en une application toujours synchrone mais utilisant l'interface asynchrone [RxJava, metier, DAO] ;</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003F2000001322CEEF8B8.png" style="display:inline-block; margin:4px;width:13.361cm;height:4.048cm;" /></td></tr></table>
 
-<p>Nous partons du projet [elections-console-metier-dao-security-webjson] [1] du chapitre 17.5, page 339 que nous dupliquons dans un nouveau projet [elections-console-<strong>rxjava- </strong>metier-dao-security-webjson] [2] :</p>
+<p>Nous partons du projet [elections-console-metier-dao-security-webjson] [1] du chapitre 17.5, page 337 que nous dupliquons dans un nouveau projet [elections-console-<strong>rxjava- </strong>metier-dao-security-webjson] [2] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001420000010BCAA9096A.png" style="display:inline-block; margin:4px;width:5.96cm;height:4.941cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016B00000135D181CE2C.png" style="display:inline-block; margin:4px;width:6.72cm;height:5.72cm;" /></td></tr></table>
 
 <ul>
@@ -2547,9 +2543,9 @@ Voici deux exemples de tests :</li>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000021100000244E2DEC2B7.png" style="display:inline-block; margin:4px;width:8.641cm;height:9.474cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D00000117BD12F800.png" style="display:inline-block; margin:4px;width:5.57cm;height:5.159cm;" /></td></tr></table>
 
 <ul>
-<li>en [10-14], on renomme la classe [ElectionsConsole] en [ElectionsConsole01] ;
-De même, on renomme la classe [BootElectionsConsole] en [BootElectionsConsole01] :</li>
+<li>en [10-14], on renomme la classe [ElectionsConsole] en [ElectionsConsole01] ;</li>
 </ul>
+<p>De même, on renomme la classe [BootElectionsConsole] en [BootElectionsConsole01] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000100000000B8D59AAE49.png" style="display:inline-block; margin:4px;width:4.74cm;height:3.41cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le code actuel de la classe [BootElectionsConsole01] est le suivant :</p>
@@ -2637,7 +2633,7 @@ De même, on renomme la classe [BootElectionsConsole] en [BootElectionsConsole01
 <a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="w">        </span><span class="p">...</span>
 <a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Si on suit l'exemple du test [Test01] du paragraphe 20.1.4.1, page 391, les lignes 5, 17, 20 et 22 vont évoluer de la façon suivante :</p>
+<p>Si on suit l'exemple du test [Test01] du paragraphe 20.1.4.1, page 389, les lignes 5, 17, 20 et 22 vont évoluer de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -2687,13 +2683,13 @@ De même, on renomme la classe [BootElectionsConsole] en [BootElectionsConsole01
 <a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="w">  </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Travail à faire</strong> : configurez le projet pour exécuter la classe [BootElectionsConsole01] avec les trois paramètres [SS, Heures travaillées, Jours travaillés] et vérifiez que l'exécution du projet ainsi configuré donne les résultats attendus.</p>
-<p><strong>Travail à faire</strong> : configurez le projet pour exécuter le couple [BootElectionsConsole02, ElectionsConsole02] où la classe [ElectionsConsole02] aura été écrite en suivant le modèle du test [Test02] du paragraphe 20.1.4.2, page 394.</p>
-<p><strong>Travail à faire</strong> : configurez le projet pour exécuter le couple [BootElectionsConsole03, ElectionsConsole03] où la classe [ElectionsConsole03] aura été écrite en suivant le modèle du test [Test03] du paragraphe 20.1.4.3, page 395.</p>
+<p><strong>Travail à faire</strong> : configurez le projet pour exécuter le couple [BootElectionsConsole02, ElectionsConsole02] où la classe [ElectionsConsole02] aura été écrite en suivant le modèle du test [Test02] du paragraphe 20.1.4.2, page 392.</p>
+<p><strong>Travail à faire</strong> : configurez le projet pour exécuter le couple [BootElectionsConsole03, ElectionsConsole03] où la classe [ElectionsConsole03] aura été écrite en suivant le modèle du test [Test03] du paragraphe 20.1.4.3, page 393.</p>
 <h2 id="203-etape-3">20.3. étape 3</h2>
 <p>Nous passons maintenant au portage de l'application swing dans un environnement asynchrone.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003CA00000133793411BE.png" style="display:inline-block; margin:4px;width:12.832cm;height:4.062cm;" /></td></tr></table>
 
-<p>Nous commençons par dupliquer le projet [elections-swing-metier-dao-security-webjson] [1] du chapitre 17.6, page 343, dans un nouveau projet [elections-swing-rxjava-metier-dao-security-webjson] [2] :</p>
+<p>Nous commençons par dupliquer le projet [elections-swing-metier-dao-security-webjson] [1] du chapitre 17.6, page 341, dans un nouveau projet [elections-swing-rxjava-metier-dao-security-webjson] [2] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000ACC12B8135.png" style="display:inline-block; margin:4px;width:6.04cm;height:3.191cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000191000001222CDE9ABE.png" style="display:inline-block; margin:4px;width:7.421cm;height:5.369cm;" /></td></tr></table>
 
 <ul>
@@ -2702,16 +2698,14 @@ De même, on renomme la classe [BootElectionsConsole] en [BootElectionsConsole01
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000106000000BDF7A58C21.png" style="display:inline-block; margin:4px;width:4.851cm;height:3.5cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002410000014F8DEACC02.png" style="display:inline-block; margin:4px;width:10.68cm;height:6.2cm;" /></td></tr></table>
 
 <ul>
-<li>
-<p>en [5-9], nous ajoutons une dépendance sur la couche console asynchrone ;
-La couche [swing] va faire de vrais appels asynchrones à la couche [métier]. Lors de l'appel à une méthode de celle-ci, il y aura deux threads :</p>
-</li>
-<li>
-<p>le thread de l'UI, celui qui gère les événements ;</p>
-</li>
-<li>un thread d'E/S qui exécutera l'appel HTTP au serveur ;
-Pendant toute la durée de l'appel asynchrone, nous devrions afficher une image d'attente ainsi qu'un bouton d'annulation. Nous ne le ferons pas ici et cela vous sera proposé comme amélioration de l'application. Les modifications ont lieu dans les deux classes qui font des appels à la couche [métier] :</li>
+<li>en [5-9], nous ajoutons une dépendance sur la couche console asynchrone ;</li>
 </ul>
+<p>La couche [swing] va faire de vrais appels asynchrones à la couche [métier]. Lors de l'appel à une méthode de celle-ci, il y aura deux threads :</p>
+<ul>
+<li>le thread de l'UI, celui qui gère les événements ;</li>
+<li>un thread d'E/S qui exécutera l'appel HTTP au serveur ;</li>
+</ul>
+<p>Pendant toute la durée de l'appel asynchrone, nous devrions afficher une image d'attente ainsi qu'un bouton d'annulation. Nous ne le ferons pas ici et cela vous sera proposé comme amélioration de l'application. Les modifications ont lieu dans les deux classes qui font des appels à la couche [métier] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012C000000C88953966C.png" style="display:inline-block; margin:4px;width:5.549cm;height:3.701cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <h3 id="2031-configuration-maven">20.3.1. Configuration Maven</h3>
@@ -2975,13 +2969,11 @@ Pendant toute la durée de l'appel asynchrone, nous devrions afficher une image 
 <ul>
 <li>le processus observé est [metier.authenticate(user)] ;</li>
 <li>il sera exécuté sur un thread d'E/S pris dans le pool [Schedulers.io()] ;</li>
-<li>
-<p>il sera observé dans le thread de l'UI, celui qui gère les événements de l'interface Swing [observeOn(SwingScheduler.getInstance())]. Ce thread est obtenu par la méthode [SwingScheduler.getInstance()] où [SwingScheduler] est une classe fournie par la bibliothèque [RxSwing]. Ceci est obligatoire. A l'obtention du résultat de l'opration asynchrone, celui-ci est souvent utilisé pour modifier des éléments de l'interface Swing. Or celle-ci ne peut être modifiée que dans le thread de l'UI, sinon on a une exception. Il faut donc que les lignes 41-61 s'exécutent dans le thread de l'UI. C'est assuré ici par la méthode [observeOn(SwingScheduler.getInstance())] ;
-Commentons le reste du code :</p>
-</li>
-<li>
-<p>lignes 42-43 : ces lignes sont là pour respecter la syntaxe de la méthode [subscribe]. Elles ne seront jamais exécutées car le processus [metier.authenticate(user)] ne rend aucun résultat ;</p>
-</li>
+<li>il sera observé dans le thread de l'UI, celui qui gère les événements de l'interface Swing [observeOn(SwingScheduler.getInstance())]. Ce thread est obtenu par la méthode [SwingScheduler.getInstance()] où [SwingScheduler] est une classe fournie par la bibliothèque [RxSwing]. Ceci est obligatoire. A l'obtention du résultat de l'opration asynchrone, celui-ci est souvent utilisé pour modifier des éléments de l'interface Swing. Or celle-ci ne peut être modifiée que dans le thread de l'UI, sinon on a une exception. Il faut donc que les lignes 41-61 s'exécutent dans le thread de l'UI. C'est assuré ici par la méthode [observeOn(SwingScheduler.getInstance())] ;</li>
+</ul>
+<p>Commentons le reste du code :</p>
+<ul>
+<li>lignes 42-43 : ces lignes sont là pour respecter la syntaxe de la méthode [subscribe]. Elles ne seront jamais exécutées car le processus [metier.authenticate(user)] ne rend aucun résultat ;</li>
 <li>lignes 35-52 : à réception d'une exception, celle-ci est affichée ;</li>
 <li>lignes 54-61 : exécutées lorsque le processus [metier.authenticate(user)] signale la fin de ses émissions ;</li>
 </ul>
@@ -3235,9 +3227,9 @@ Commentons le reste du code :</p>
 <li>ligne 7 : le processus observé est [metier.getNbSiegesAPourvoir(user)]. Il est exécuté sur un thread d'E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l'UI [observeOn(SwingScheduler.getInstance()] ;</li>
 <li>lignes 10-13 : le résultat renvoyé par le processus est utilisé pour mettre à jour l'interface graphique ;</li>
 <li>ligne 15 : on affiche l'éventuelle exception ;</li>
-<li>lignes 17-20 : à réception du signal de fin de l'observable, on passe à l'étape 3 du processus d'initialisation ;
-L'étape 3 de l'initialisation est assurée par le code suivant :</li>
+<li>lignes 17-20 : à réception du signal de fin de l'observable, on passe à l'étape 3 du processus d'initialisation ;</li>
 </ul>
+<p>L'étape 3 de l'initialisation est assurée par le code suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
@@ -3314,9 +3306,9 @@ L'étape 3 de l'initialisation est assurée par le code suivant :</li>
 <li>ligne 6 : le processus observé est [metier.calculerSieges(user, tListesSaisies)]. Il est exécuté sur un thread d'E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l'UI [observeOn(SwingScheduler.getInstance()] ;</li>
 <li>ligne 9 : le résultat renvoyé par le processus est utilisé par la méthode [consumeResultSieges] ;</li>
 <li>ligne 11 : on affiche l'éventuelle exception ;</li>
-<li>lignes 13-14 : à réception du signal de fin de l'observable, rien n'est fait ;
-Ligne 9, la méthode [consumeResultSieges] exploite le résultat renvoyé par le processus observé, les listes candidates avec leurs champs [sieges, elimine] mis à jour :</li>
+<li>lignes 13-14 : à réception du signal de fin de l'observable, rien n'est fait ;</li>
 </ul>
+<p>Ligne 9, la méthode [consumeResultSieges] exploite le résultat renvoyé par le processus observé, les listes candidates avec leurs champs [sieges, elimine] mis à jour :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
@@ -3395,9 +3387,9 @@ Ligne 9, la méthode [consumeResultSieges] exploite le résultat renvoyé par le
 <li>ligne 4 : le processus observé est [metier.recordResultats(user, tListesSaisies)]. Il est exécuté sur un thread d'E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l'UI [observeOn(SwingScheduler.getInstance()] ;</li>
 <li>lignes 7-8 : ces lignes ne seront jamais exécutées car le processus observé ne rend pas de résultat ;</li>
 <li>ligne 10 : on affiche l'éventuelle exception ;</li>
-<li>lignes 14-16 : à réception du signal de fin de l'observable, on met à jour l'interface graphique ;
-<strong>Travail à faire</strong> : vérifier que l'application Swing fonctionne. Puis faites évoluer l'interface graphique et le code pour que lors d'une opération asynchrone avec le serveur web / jSON, une image d'attente apparaisse ainsi qu'une option d'annulation de l'opération en cours.</li>
+<li>lignes 14-16 : à réception du signal de fin de l'observable, on met à jour l'interface graphique ;</li>
 </ul>
+<p><strong>Travail à faire</strong> : vérifier que l'application Swing fonctionne. Puis faites évoluer l'interface graphique et le code pour que lors d'une opération asynchrone avec le serveur web / jSON, une image d'attente apparaisse ainsi qu'une option d'annulation de l'opération en cours.</p>
 
 
 

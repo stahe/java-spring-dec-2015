@@ -997,9 +997,9 @@
 <p><strong>Références</strong> : </p>
 <ol>
 <li><a href="https://tahe.developpez.com/java/cours"><u>Introduction au langage Java</u></a> ;</li>
-<li><a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>Exploiter une base relationnelle avec l'écosystème Spring</u></a> ;
-Nous noterons ces références respectivement [<a href="https://tahe.developpez.com/java/cours"><u>ref1</u></a>] et [<a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>ref2</u></a>]. La source [<a href="https://tahe.developpez.com/java/cours"><u>ref1</u></a>] est ancienne (2002) mais suffisante pour ce document où elle n'est utilisée que pour sa présentation de la syntaxe du langage Java et de ses actions élémentaires. Le reste nécessaire à la réalisation du TD est présenté dans ce document dans des chapitres intitulés [Cours]. Ces chapitres proviennent directement de [<a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>ref2</u></a>] (2015) et ont été parfois simplifiés.</li>
+<li><a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>Exploiter une base relationnelle avec l'écosystème Spring</u></a> ;</li>
 </ol>
+<p>Nous noterons ces références respectivement [<a href="https://tahe.developpez.com/java/cours"><u>ref1</u></a>] et [<a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>ref2</u></a>]. La source [<a href="https://tahe.developpez.com/java/cours"><u>ref1</u></a>] est ancienne (2002) mais suffisante pour ce document où elle n'est utilisée que pour sa présentation de la syntaxe du langage Java et de ses actions élémentaires. Le reste nécessaire à la réalisation du TD est présenté dans ce document dans des chapitres intitulés [Cours]. Ces chapitres proviennent directement de [<a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>ref2</u></a>] (2015) et ont été parfois simplifiés.</p>
 <p>L'objectif du document est d'enseigner le langage Java dans une optique professionnelle. Pour cette raison, nous nous appuyons fortement sur le framework Spring [http://spring.io/] très utilisé dans le développement JEE (Java Enterprise Edition). Logiquement, ce cours devrait être suivi par un cours JEE. C'est le cas à l'Istia (université d'Angers). JEE est la principale source d'emplois actuellement (novembre 2015) pour les jeunes développeurs Bac+5. Il y a beaucoup d'autres technologies que Spring dans le monde JEE. Spring a l'avantage d'être compréhensible et surtout d'apporter de bonnes pratiques de codage réutilisables en dehors de l'écosystème Spring. C'est ce qui explique son choix ici.</p>
 <p>Ce TD est utilisé depuis plus de 10 ans et a évolué avec les technologies. Il est suivi (à l'IstiA) d'un TD JEE [<a href="https://tahe.developpez.com/java/javaee"><u>Introduction à Java EE</u></a>]. Ce dernier TD date de 2012 (on est ici en 2015) et mériterait d'être rafraîchi. Il présente l'orthodoxie JEE au travers du framework web JSF2 (Java Server Faces) et les EJB3 (Enterprise Java Bean). Mis bout à bout, ces deux TD ont permis à de nombreux étudiants de décrocher des stages JEE en ESN (Entreprises de Services Numériques) et de s'y faire embaucher dans la foulée.</p>
 <p>On ne trouvera pas dans ce document, une présentation formelle de toutes les facettes de Java. Au fil des ans, le comportement des développeurs juniors face à un problème a beaucoup évolué. Désormais, ils utilisent quasi systématiquement Internet pour trouver des bouts de code qui mis bout à bout font un programme. Si on leur fournit un cours, ils l'utilisent assez peu et préfèrent de nouveau aller sur Internet. Dubitatif au départ sur cette façon de travailler, j'ai quand même été étonné des résultats obtenus. Ainsi des étudiants faibles réussissaient à produire des programmes qui marchaient alors que sans l'aide d'Internet ils n'y seraient probablement pas arrivés.  Je m'appuie désormais sur cette façon de travailler.</p>
@@ -1043,22 +1043,22 @@ Nous noterons ces références respectivement [<a href="https://tahe.developpez.
 
 <ul>
 <li>en [1], une application web délivre des pages HTML / Javascript ;</li>
-<li>en [2], le navigateur exécute le Javascript embarqué dans les pages HTML pour interroger le service web sécurisé [3-4] ;
-Soit D1=http://machine1:port1 le domaine du serveur [1] et D4=http://machine4:port4 le domaine du serveur [4]. Si les serveurs [1] et [4] ne sont pas dans le même domaine [D1!=D4], alors les requêtes de [3] vers [4] sont appelées des requêtes inter-domaines. A cause de restrictions de sécurité mises en oeuvre par les navigateurs, leur mise en place peut être problématique. Nous examinerons une solution.</li>
+<li>en [2], le navigateur exécute le Javascript embarqué dans les pages HTML pour interroger le service web sécurisé [3-4] ;</li>
 </ul>
+<p>Soit D1=http://machine1:port1 le domaine du serveur [1] et D4=http://machine4:port4 le domaine du serveur [4]. Si les serveurs [1] et [4] ne sont pas dans le même domaine [D1!=D4], alors les requêtes de [3] vers [4] sont appelées des requêtes inter-domaines. A cause de restrictions de sécurité mises en oeuvre par les navigateurs, leur mise en place peut être problématique. Nous examinerons une solution.</p>
 <p>Le chapitre 19 met en oeuvre les requêtes inter-domaines avec l'application des élections.</p>
 <h2 id="13-les-outils-utilises">1.3. Les outils utilisés</h2>
 <p>Les exemples qui suivent ont été testés dans l'environnement suivant :</p>
 <ul>
 <li>machine Windows 10 pro 64 bits ;</li>
-<li>JDK 1.8 (page 409) ;</li>
-<li>IDE Spring Tool Suite 3.6.3 (page 410) ;</li>
-<li>Netbeans 8.1 (page 421) ;</li>
+<li>JDK 1.8 (page 407) ;</li>
+<li>IDE Spring Tool Suite 3.6.3 (page 408) ;</li>
+<li>Netbeans 8.1 (page 419) ;</li>
 <li>navigateur Chrome (les autres navigateurs n'ont pas été utilisés) ;</li>
-<li>extension Chrome [Advanced Rest Client] (page 422) ;</li>
-<li>WampServer qui amène le SGBD MySQL et l'outil [PhpMyAdmin] pour le gérer (page 424) ;
-Il est important d'utiliser un JDK 1.8. Certains exemples utilisent des éléments de ce JDK. La plupart des exemples sont des projets Maven qui peuvent être ouverts indifféremment par les IDE Eclipse [<a href="https://www.eclipse.org/"><u>https://www.eclipse.org/</u></a>], IntellijIDEA Community Edition [<a href="https://www.jetbrains.com/idea/download/"><u>https://www.jetbrains.com/idea/download/</u></a>] et Netbeans [<a href="https://netbeans.org/"><u>https://netbeans.org/</u></a>]. Dans la suite, les copies d'écran proviennent de l'IDE Spring Tool Suite, une variante d'Eclipse.</li>
+<li>extension Chrome [Advanced Rest Client] (page 420) ;</li>
+<li>WampServer qui amène le SGBD MySQL et l'outil [PhpMyAdmin] pour le gérer (page 422) ;</li>
 </ul>
+<p>Il est important d'utiliser un JDK 1.8. Certains exemples utilisent des éléments de ce JDK. La plupart des exemples sont des projets Maven qui peuvent être ouverts indifféremment par les IDE Eclipse [<a href="https://www.eclipse.org/"><u>https://www.eclipse.org/</u></a>], IntellijIDEA Community Edition [<a href="https://www.jetbrains.com/idea/download/"><u>https://www.jetbrains.com/idea/download/</u></a>] et Netbeans [<a href="https://netbeans.org/"><u>https://netbeans.org/</u></a>]. Dans la suite, les copies d'écran proviennent de l'IDE Spring Tool Suite, une variante d'Eclipse.</p>
 <h2 id="14-le-support">1.4. Le support</h2>
 <p>Les projets Eclipse de ce document sont disponibles sur le site [<a href="https://tahe.developpez.com/tutoriels-cours/intro-java-spring/serge-tahe-introduction-au-langage-java-et-a-l-ecosysteme-spring/"><u>https://tahe.developpez.com/tutoriels-cours/intro-java-spring/serge-tahe-introduction-au-langage-java-et-a-l-ecosysteme-spring/</u></a>].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AC000002E5B53D0CE8.png" style="display:inline-block; margin:4px;width:17.999cm;height:9.185cm;" /></td></tr></table>

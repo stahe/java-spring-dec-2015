@@ -1258,9 +1258,9 @@
 <li>chargement du pilote JDBC de la base de données ;</li>
 <li>ouverture d'une connexion avec la base ;</li>
 <li>émission d'un ordre SQL sur la base et traitement des résultats de l'ordre SQL ;</li>
-<li>fermeture de la connexion ;
-L'étape 1 ne se fait qu'une fois. Les étapes 2-4 se font de façon répétée. On notera qu'on ne laisse pas une connexion ouverte. On la ferme dès qu'on en n'a plus besoin.</li>
+<li>fermeture de la connexion ;</li>
 </ol>
+<p>L'étape 1 ne se fait qu'une fois. Les étapes 2-4 se font de façon répétée. On notera qu'on ne laisse pas une connexion ouverte. On la ferme dès qu'on en n'a plus besoin.</p>
 <h3 id="631-etape-1-chargement-en-memoire-du-pilote-jdbc">6.3.1. étape 1 - chargement en mémoire du pilote JDBC</h3>
 <p><u>Le code</u></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
@@ -1417,9 +1417,9 @@ L'étape 1 ne se fait qu'une fois. Les étapes 2-4 se font de façon répétée.
 <ul>
 <li>lignes 8, 10 : ouverture d'une transaction (ligne 8) en mode lecture seule (ligne 10). Une transaction est une séquence d'ordes SQL qui soit tous réussissent soit tous échouent. Ainsi dans une transaction comportant N ordres SQL, si l'ordre I+1 échoue, alors les I précédents seront annulés. Pour une opération de lecture, une transaction n'est pas nécessaire. Néanmoins créer une transaction en lecture seule peut permettre à certains SGBD de faire certaines optimisations ;</li>
 <li>ligne 12 : utilisation d'un [PreparedStatement]. Un [PreparedStatement] a normalement des paramètres notés par le caractère ?. Ici il n'en a pas. Un [PreparedStatement] est un ordre préparé par le SGBD. Cette préparation a un coût et elle n'est faite qu'une fois. Ensuite cet ordre préparé est exécuté par le SGBD avec différents paramètres effectifs qui vont venir remplacer les paramètres formels ?. A noter qu'il est préférable de nommer les colonnes désirées plutôt que d'utiliser la notation * pour obtenir toutes les colonnes. En précisant le nom des colonnes on peut ensuite obtenir leurs valeurs à partir de leur position dans la requête SELECT ;</li>
-<li>ligne 13 : exécution du [PreparedStatement]. On récupère un objet de type [ResultSet] ;
-Un objet de type [ResultSet] représente une table, c’est à dire un ensemble de lignes et de colonnes. A un moment donné, on n’a accès qu’à une ligne de la table appelée ligne courante. Lors de la création initiale du [ResultSet], il n'y a pas de ligne courante. Il faut faire une opération [ResultSet.next()] pour l'obtenir. La signature de la méthode next est la suivante :</li>
+<li>ligne 13 : exécution du [PreparedStatement]. On récupère un objet de type [ResultSet] ;</li>
 </ul>
+<p>Un objet de type [ResultSet] représente une table, c’est à dire un ensemble de lignes et de colonnes. A un moment donné, on n’a accès qu’à une ligne de la table appelée ligne courante. Lors de la création initiale du [ResultSet], il n'y a pas de ligne courante. Il faut faire une opération [ResultSet.next()] pour l'obtenir. La signature de la méthode next est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>    boolean next()
 </code></pre></div></td></tr></table></div>
 <p>Cette méthode tente de passer à la ligne suivante du [ResultSet] et rend true si elle réussit, false sinon. En cas de réussite, la ligne suivante devient la nouvelle ligne courante. La ligne précédente est perdue et on ne pourra revenir en arrière pour la récupérer.</p>
@@ -1429,9 +1429,9 @@ Un objet de type [ResultSet] représente une table, c’est à dire un ensemble 
 <ul>
 <li>la colonne [ID] ira dans une colonne du [ResultSet] nommée [myId] ;</li>
 <li>la colonne [NOM] ira dans une colonne du [ResultSet] nommée [myNom] ;</li>
-<li>...
-Ci-dessus, les identifiants [myCol] sont appelés des <strong>labels de colonne</strong>. En l'absence de ces labels, les noms des colonnes du [ResultSet] sont dépendants du SGBD. Lorsque le [SELECT] opère sur une unique table, les labels des colonnes seront par défaut les noms des colonnes demandées par le SELECT. Le problème surgit lorsque le [SELECT] opère sur plusieurs tables et que dans celles-ci on trouve des noms de colonnes identiques comme dans l'exemple suivant :</li>
+<li>...</li>
 </ul>
+<p>Ci-dessus, les identifiants [myCol] sont appelés des <strong>labels de colonne</strong>. En l'absence de ces labels, les noms des colonnes du [ResultSet] sont dépendants du SGBD. Lorsque le [SELECT] opère sur une unique table, les labels des colonnes seront par défaut les noms des colonnes demandées par le SELECT. Le problème surgit lorsque le [SELECT] opère sur plusieurs tables et que dans celles-ci on trouve des noms de colonnes identiques comme dans l'exemple suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="n">PRODUITS</span><span class="p">.</span><span class="n">NOM</span><span class="p">,</span><span class="w"> </span><span class="n">CATEGORIES</span><span class="p">.</span><span class="n">NOM</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">PRODUITS</span><span class="p">,</span><span class="w"> </span><span class="n">CATEGORIES</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">PRODUITS</span><span class="p">.</span><span class="n">CATEGORIE_ID</span><span class="o">=</span><span class="n">CATEGORIES</span><span class="p">.</span><span class="n">ID</span>
 </code></pre></div></td></tr></table></div>
 <p>en imaginant que la table [PRODUITS] ait une clé étrangère vers la table [CATEGORIES] symbolisée par la relation [Produits].CATEGORIE_ID --&gt; [CATEGORIES].ID, et que les tables [PRODUITS] et [CATEGORIES] aient toutes les deux un champ [NOM]. Dans ce cas, les noms donnés dans le [ResultSet] aux colonnes [<strong>PRODUITS.NOM</strong>] et [<strong>CATEGORIES.NOM</strong>] sont dépendants du SGBD. Pour la portabilité entre SGBD, il faut donc utiliser des labels de colonnes ici et on écrira :</p>
@@ -1506,10 +1506,10 @@ Ci-dessus, les identifiants [myCol] sont appelés des <strong>labels de colonne<
 <p>lignes 3-9 : fermeture du [ResultSet] ;</p>
 </li>
 <li>lignes 11-17 : fermeture du [PreparedStatement] ;</li>
-<li>
-<p>lignes 18-27 : fermeture de la connexion ;
-Les fermetures des lignes 3-17 semblent redondantes dans la mesure on ferme la connexion lignes 18-25. En fait, dans certains cas elles ne le sont pas et il est conseillé de les laisser [<a href="http://stackoverflow.com/questions/4507440/must-jdbc-resultsets-and-statements-be-closed-separately-although-the-connection"><u>http://stackoverflow.com/questions/4507440/must-jdbc-resultsets-and-statements-be-closed-separately-although-the-connection</u></a>].</p>
-</li>
+<li>lignes 18-27 : fermeture de la connexion ;</li>
+</ul>
+<p>Les fermetures des lignes 3-17 semblent redondantes dans la mesure on ferme la connexion lignes 18-25. En fait, dans certains cas elles ne le sont pas et il est conseillé de les laisser [<a href="http://stackoverflow.com/questions/4507440/must-jdbc-resultsets-and-statements-be-closed-separately-although-the-connection"><u>http://stackoverflow.com/questions/4507440/must-jdbc-resultsets-and-statements-be-closed-separately-although-the-connection</u></a>].</p>
+<ul>
 <li>
 <p>ligne 22 : l'exception est traitée par la méthode [doCatchException] suivante :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
@@ -1613,9 +1613,9 @@ Les fermetures des lignes 3-17 semblent redondantes dans la mesure on ferme la c
 <li>[NOM] : nom d'un produit - unique ;</li>
 <li>[CATEGORIE] : n° de sa catégorie ;</li>
 <li>[PRIX] : son prix ;</li>
-<li>[DESCRIPTION] : une description du produit ;
-On la créera avec l'outil [WampServer] de la façon suivante [1-9] :</li>
+<li>[DESCRIPTION] : une description du produit ;</li>
 </ul>
+<p>On la créera avec l'outil [WampServer] de la façon suivante [1-9] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005CF000001D89A2EDB81.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.711cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000567000003F7018B2BEB.png" style="display:inline-block; margin:4px;width:17.999cm;height:13.208cm;" /></td></tr></table>
@@ -1668,7 +1668,7 @@ On la créera avec l'outil [WampServer] de la façon suivante [1-9] :</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 8-12 : le pilote JDBC du SGBD MySQL5 ;</li>
-<li>lignes 13-17 : une bibliothèque capable de gérer du jSON (Javascript Object Notation) (cf paragraphe 22.6, page 423). Nous allons l'utiliser pour afficher sous forme jSON les produits de la base de données ;</li>
+<li>lignes 13-17 : une bibliothèque capable de gérer du jSON (Javascript Object Notation) (cf paragraphe 22.6, page 421). Nous allons l'utiliser pour afficher sous forme jSON les produits de la base de données ;</li>
 </ul>
 <h3 id="644-la-classe-des-produits">6.4.4. La classe des produits</h3>
 <p>La classe [Produit] est la suivante :</p>
@@ -1824,9 +1824,9 @@ On la créera avec l'outil [WampServer] de la façon suivante [1-9] :</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 8-19 : permet d'avoir la liste des erreurs encapsulées dans un objet de type [Throwable] qui est la classe mère de la classe [Exception] ;</li>
-<li>lignes 21-28 : affiche à l'écran une liste de messages ;
-Ce code pourrait être dans la classe principale parce qu'ici c'est la seule à l'utiliser. On se place ici dans un cas plus large ou d'autres classes auraient besoin de ce code.</li>
+<li>lignes 21-28 : affiche à l'écran une liste de messages ;</li>
 </ul>
+<p>Ce code pourrait être dans la classe principale parce qu'ici c'est la seule à l'utiliser. On se place ici dans un cas plus large ou d'autres classes auraient besoin de ce code.</p>
 <h3 id="646-le-squelette-de-la-classe-principale">6.4.6. Le squelette de la classe principale</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-16-2">  2</a></span>
@@ -2115,9 +2115,9 @@ Ce code pourrait être dans la classe principale parce qu'ici c'est la seule à 
 <li>fin d'une transaction avec échec  : [<strong>connexion</strong><strong>.rollback()</strong>]. Dans ce cas, toutes les opérations faites sur la BD lors de la transaction sont annulées ;</li>
 <li>retour au mode [auto-commit] qui est le mode par défaut de l'API JDBC : [<strong>connexion</strong><strong>.setAutoCommit(</strong><strong>true</strong><strong>)</strong>]. Dans ce mode, chaque ordre SQL fait l'objet d'une transaction. Ainsi si on fait deux insertions dont la deuxième échoue :</li>
 <li>en mode [AutoCommit=true], la première insertion reste (elle a été validée par le 1er AutoCommit) ;</li>
-<li>en mode [AutoCommit=false], la première insertion est annulée ;
-Dans nos exemples, à chaque fois que se produit une exception, nous annulons la transaction dans la méthode [doCatchException] :</li>
+<li>en mode [AutoCommit=false], la première insertion est annulée ;</li>
 </ul>
+<p>Dans nos exemples, à chaque fois que se produit une exception, nous annulons la transaction dans la méthode [doCatchException] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
@@ -2469,9 +2469,9 @@ Dans nos exemples, à chaque fois que se produit une exception, nous annulons la
 <ul>
 <li>lorsque le pool est instancié, un certain nombre de connexions est ouvert avec la base de données. Ce nombre est configurable ;</li>
 <li>lorsque le code Java ouvre une connexion, celle-ci est fournie par le pool ;</li>
-<li>lorsque le code Java ferme une connexion, celle-ci est rendue au pool ;
-Au final, les connexions ne sont ouvertes qu'une fois, ce qui améliore la performance d'accès à la base de données. La source de données sera définie dans une classe de configuration Spring</li>
+<li>lorsque le code Java ferme une connexion, celle-ci est rendue au pool ;</li>
 </ul>
+<p>Au final, les connexions ne sont ouvertes qu'une fois, ce qui améliore la performance d'accès à la base de données. La source de données sera définie dans une classe de configuration Spring</p>
 <h3 id="651-le-projet-eclipse">6.5.1. Le projet Eclipse</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D30000010D4DBC1498.png" style="display:inline-block; margin:4px;width:3.911cm;height:4.979cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2544,9 +2544,9 @@ Au final, les connexions ne sont ouvertes qu'une fois, ce qui améliore la perfo
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 21-25 : dépendance sur Spring ;</li>
-<li>lignes 27-31 : dépendance sur la bibliothèque qui fournit la source de données ;
-La classe de configuration de Spring [AppConfig] est la suivante :</li>
+<li>lignes 27-31 : dépendance sur la bibliothèque qui fournit la source de données ;</li>
 </ul>
+<p>La classe de configuration de Spring [AppConfig] est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-25-3"> 3</a></span>

@@ -1115,9 +1115,9 @@
 <li>[elections.dao.repositories] : contient les interfaces [CrudRepository] pour les tables [CONF] et [LISTES] ;</li>
 <li>[elections.dao.service] : contient l'implémentation de la couche [DAO]. C'est elle qu'il nous faut écrire ;</li>
 <li>[elections.dao.console] : contient une classe de test de type [console] ;</li>
-<li>[pom.xml] : le fichier de configuration du projet Maven ;
-Ce projet implémente l'architecture suivante :</li>
+<li>[pom.xml] : le fichier de configuration du projet Maven ;</li>
 </ul>
+<p>Ce projet implémente l'architecture suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000438000000FAD9AFB415.png" style="display:inline-block; margin:4px;width:14.288cm;height:3.307cm;" /></td></tr></table>
 
 <p>La couche [DAO] ne voit que la couche implémentée par [Spring Data].</p>
@@ -1284,7 +1284,7 @@ Ce projet implémente l'architecture suivante :</li>
 <a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="p">...</span>
 <a id="__codelineno-0-71" name="__codelineno-0-71"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>C'est la classe décrite au paragraphe 11.3.5.2, page 190, sans les filtres jSON. Ici en effet, les tables [CONF] et [LISTES] ne sont pas liées par une relation de clé étrangère. Or c'est l'existence d'une telle relation avec le mode [lazy loading] qui induit la nécessité de filtres jSON.</p>
+<p>C'est la classe décrite au paragraphe 11.3.5.2, page 189, sans les filtres jSON. Ici en effet, les tables [CONF] et [LISTES] ne sont pas liées par une relation de clé étrangère. Or c'est l'existence d'une telle relation avec le mode [lazy loading] qui induit la nécessité de filtres jSON.</p>
 <h3 id="1243-la-classe-electionsconfig">12.4.3. La classe [ElectionsConfig]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D10000005A7D0E977A.png" style="display:inline-block; margin:4px;width:3.87cm;height:1.67cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1618,7 +1618,7 @@ Ce projet implémente l'architecture suivante :</li>
 </code></pre></div></td></tr></table></div>
 <p><strong>Travail à faire</strong> : passez les tests [console] et [JUnit] sur votre couche [DAO].</p>
 <h2 id="129-generation-de-larchive-maven-du-projet">12.9. Génération de l'archive Maven du projet</h2>
-<p>En suivant l'exemple du paragraphe 11.3.12, page 207, générez l'archive Maven du projet.</p>
+<p>En suivant l'exemple du paragraphe 11.3.12, page 206, générez l'archive Maven du projet.</p>
 
 
 

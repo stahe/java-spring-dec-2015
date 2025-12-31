@@ -1416,9 +1416,9 @@
 <a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 12 : l'attribut [th:href="@{/hello}"] va générer l'attribut [href] de la balise [&lt;a&gt;]. La valeur [@{/hello}] va générer le chemin [&lt;context&gt;/hello] où [context] est le contexte de l'application web ;
-Le code HTML généré est le suivant :</li>
+<li>ligne 12 : l'attribut [th:href="@{/hello}"] va générer l'attribut [href] de la balise [&lt;a&gt;]. La valeur [@{/hello}] va générer le chemin [&lt;context&gt;/hello] où [context] est le contexte de l'application web ;</li>
 </ul>
+<p>Le code HTML généré est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1484,9 +1484,9 @@ Le code HTML généré est le suivant :</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 9 : L'attribut [th:inline="text"] va générer le texte de la balise [&lt;h1&gt;]. Ce texte contient une expression \$ qui doit être évaluée. L'élément [[\${#httpServletRequest.remoteUser}]] est la valeur de l'attribut [RemoteUser] de la requête HTTP courante. C'est le nom de l'utilisateur connecté ;</li>
-<li>ligne 10 : un formulaire HTML. L'attribut [th:action="@{/logout}"] va générer l'attribut [action] de la balise [form]. La valeur [@{/logout}] va générer le chemin [&lt;context&gt;/logout] où [context] est le contexte de l'application web ;
-Le code HTML généré est le suivant :</li>
+<li>ligne 10 : un formulaire HTML. L'attribut [th:action="@{/logout}"] va générer l'attribut [action] de la balise [form]. La valeur [@{/logout}] va générer le chemin [&lt;context&gt;/logout] où [context] est le contexte de l'application web ;</li>
 </ul>
+<p>Le code HTML généré est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -1518,9 +1518,9 @@ Le code HTML généré est le suivant :</li>
 <ul>
 <li>ligne 8 : la traduction de Hello [[\${#httpServletRequest.remoteUser}]]!;</li>
 <li>ligne 9 :  la traduction de @{/logout} ;</li>
-<li>ligne 11 : un champ caché appelé (attribut name) <strong>_csrf</strong> ;
-La vue [login.html] est la suivante :</li>
+<li>ligne 11 : un champ caché appelé (attribut name) <strong>_csrf</strong> ;</li>
 </ul>
+<p>La vue [login.html] est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000C2EE6CA80A.png" style="display:inline-block; margin:4px;width:5.609cm;height:3.341cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
@@ -1579,9 +1579,9 @@ La vue [login.html] est la suivante :</li>
 <li>lignes 11-23 : un formulaire HTML ;</li>
 <li>ligne 11 : le formulaire sera posté à l'URL [&lt;context&gt;/login] où &lt;context&gt; est le contexte de l'application web ;</li>
 <li>ligne 13 : un champ de saisie nommé [username] ;</li>
-<li>ligne 17 : un champ de saisie nommé [password] ;
-Le code HTML généré est le suivant :</li>
+<li>ligne 17 : un champ de saisie nommé [password] ;</li>
 </ul>
+<p>Le code HTML généré est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -1843,9 +1843,9 @@ Le code HTML généré est le suivant :</li>
 <a id="__codelineno-12-10" name="__codelineno-12-10"></a>&lt;/html&gt;
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 7, un champ caché apparaît qui n'est pas dans la page [login.html] d'origine. C'est Thymeleaf qui l'a ajouté. Ce code appelé CSRF (Cross Site Request Forgery) vise à éliminer une faille de sécurité. Ce jeton doit être renvoyé à Spring Security avec l'authentification pour que cette dernière soit acceptée ;
-Nous nous souvenons que seul l'utilisateur user/password est reconnu par Spring Security. Si nous entrons autre chose en [2], nous obtenons la même page avec un message d'erreur en [3]. Spring Security a redirigé le navigateur vers l'URL [http://localhost:8080/login?error]. La présence du paramètre [error] a déclenché l'affichage de la balise :</li>
+<li>ligne 7, un champ caché apparaît qui n'est pas dans la page [login.html] d'origine. C'est Thymeleaf qui l'a ajouté. Ce code appelé CSRF (Cross Site Request Forgery) vise à éliminer une faille de sécurité. Ce jeton doit être renvoyé à Spring Security avec l'authentification pour que cette dernière soit acceptée ;</li>
 </ul>
+<p>Nous nous souvenons que seul l'utilisateur user/password est reconnu par Spring Security. Si nous entrons autre chose en [2], nous obtenons la même page avec un message d'erreur en [3]. Spring Security a redirigé le navigateur vers l'URL [http://localhost:8080/login?error]. La présence du paramètre [error] a déclenché l'affichage de la balise :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">th:if</span><span class="o">=</span><span class="s">&quot;${param.error}&quot;</span><span class="p">&gt;</span>Invalid username and password.<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <p>Maintenant, entrons les valeurs attendues user/password [4] :</p>
@@ -1883,15 +1883,15 @@ Nous nous souvenons que seul l'utilisateur user/password est reconnu par Spring 
 <li>l'authentification doit être accompagnée du jeton CSRF délivré par Spring Security ;</li>
 <li>si l'authentification échoue, on est redirigé vers la page d'authentification avec de plus un paramètre <strong>error</strong> dans l'URL ;</li>
 <li>si l'authentification réussit, on est redirigé vers la page demandée lorsque l'authentification a eu lieu. Si on demande directement la page d'authentification sans passer par une page intermédiaire, alors Spring Security nous redirige vers l'URL [/] (ce cas n'a pas été présenté) ;</li>
-<li>on se déconnecte en demandant l'URL [/logout] avec un POST. Spring Security nous redirige alors vers la page d'authentification avec le paramètre <strong>logout</strong> dans l'URL ;
-Toutes ces conclusions reposent sur des comportements par défaut de Spring Security. Ces comportements peuvent être changés par configuration en redéfinissant certaines méthodes de la classe [WebSecurityConfigurerAdapter].</li>
+<li>on se déconnecte en demandant l'URL [/logout] avec un POST. Spring Security nous redirige alors vers la page d'authentification avec le paramètre <strong>logout</strong> dans l'URL ;</li>
 </ul>
+<p>Toutes ces conclusions reposent sur des comportements par défaut de Spring Security. Ces comportements peuvent être changés par configuration en redéfinissant certaines méthodes de la classe [WebSecurityConfigurerAdapter].</p>
 <p>Le tutoriel précédent nous aidera peu dans la suite. Nous allons en effet utiliser :</p>
 <ul>
 <li>une base de données pour stocker les utilisateurs, leurs mots de passe et leurs rôles ;</li>
-<li>une authentification par entête HTTP ;
-On trouve assez peu de tutoriels pour ce qu'on veut faire ici. La solution qui va être proposée est un assemblage de codes trouvés ici et là.</li>
+<li>une authentification par entête HTTP ;</li>
 </ul>
+<p>On trouve assez peu de tutoriels pour ce qu'on veut faire ici. La solution qui va être proposée est un assemblage de codes trouvés ici et là.</p>
 <h2 id="164-mise-en-place-de-la-securite-sur-le-service-web-json-des-produits">16.4. Mise en place de la sécurité sur le service web / json des produits</h2>
 <h3 id="1641-la-base-de-donnees">16.4.1. La base de données</h3>
 <p>La base de données [dbintrospringdata] évolue pour prendre en compte les utilisateurs, leurs mots de passe et leur rôles. Trois nouvelles tables apparaissent :</p>
@@ -1902,9 +1902,9 @@ On trouve assez peu de tutoriels pour ce qu'on veut faire ici. La solution qui v
 <li>VERSION : colonne de versioning de la ligne ;</li>
 <li>IDENTITY : une identité descriptive de l'utilisateur ;</li>
 <li>LOGIN : le login de l'utilisateur ;</li>
-<li>PASSWORD : son mot de passe ;
-Dans la table USERS, les mots de passe ne sont pas stockés en clair :</li>
+<li>PASSWORD : son mot de passe ;</li>
 </ul>
+<p>Dans la table USERS, les mots de passe ne sont pas stockés en clair :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025B00000088CAEA4E9C.png" style="display:inline-block; margin:4px;width:11.171cm;height:2.521cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L'algorithme qui crypte les mots de passe est l'algorithme BCRYPT.</p>
@@ -2159,9 +2159,9 @@ Dans la table USERS, les mots de passe ne sont pas stockés en clair :</li>
 <a id="__codelineno-19-33" name="__codelineno-19-33"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 11 : la classe étend la classe [AbstractEntity] déjà utilisée pour les autres entités ;
-La classe [Role] est l'image de la table [ROLES] :</li>
+<li>ligne 11 : la classe étend la classe [AbstractEntity] déjà utilisée pour les autres entités ;</li>
 </ul>
+<p>La classe [Role] est l'image de la table [ROLES] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
@@ -2374,9 +2374,9 @@ La classe [Role] est l'image de la table [ROLES] :</li>
 <li>ligne 9 : l'interface [UserRepository] étend l'interface [CrudRepository] de Spring Data (ligne 4) ;</li>
 <li>lignes 12-13 : la méthode [getRoles(User user)] permet d'avoir tous les rôles d'un utilisateur identifié par son [id]</li>
 <li>lignes 16-17 : idem mais pour un utilisateur identifié pas ses login / mot de passe ;</li>
-<li>ligne 20 : pour trouver un utilisateur via son login ;
-L'interface [RoleRepository] gère les accès aux entités [Role] :</li>
+<li>ligne 20 : pour trouver un utilisateur via son login ;</li>
 </ul>
+<p>L'interface [RoleRepository] gère les accès aux entités [Role] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
@@ -2403,9 +2403,9 @@ L'interface [RoleRepository] gère les accès aux entités [Role] :</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 7 : l'interface [RoleRepository] étend l'interface [CrudRepository] ;</li>
-<li>ligne 10 : on peut chercher un rôle via son nom ;
-L'interface [UserRoleRepository] gère les accès aux entités [UserRole] :</li>
+<li>ligne 10 : on peut chercher un rôle via son nom ;</li>
 </ul>
+<p>L'interface [UserRoleRepository] gère les accès aux entités [UserRole] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
 <span class="normal"><a href="#__codelineno-24-2">2</a></span>
 <span class="normal"><a href="#__codelineno-24-3">3</a></span>
@@ -2428,7 +2428,7 @@ L'interface [UserRoleRepository] gère les accès aux entités [UserRole] :</li
 <li>ligne 5 : l'interface [UserRoleRepository] se contente d'étendre l'interface [CrudRepository] sans lui ajouter de nouvelles méthodes ;</li>
 </ul>
 <h3 id="1646-les-classes-de-gestion-des-utilisateurs-et-des-roles">16.4.6. Les classes de gestion des utilisateurs et des rôles</h3>
-<p>Couche[repositories]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>DAO</strong>]<strong>7</strong>Spring 4SGBD</p>
+<p>Couche[<strong>DAO</strong>]Couche[<strong>JPA</strong>]Pilote[<strong>JDBC</strong>]Couche[repositories]<strong>7</strong>Spring 4SGBD</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F8000000B04E5DAD91.png" style="display:inline-block; margin:4px;width:4.59cm;height:3.26cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Spring Security impose la création d'une classe implémentant l'interface [UsersDetail] suivante :</p>
@@ -2592,9 +2592,9 @@ L'interface [UserRoleRepository] gère les accès aux entités [UserRole] :</li
 <li>lignes 51-54 : le compte de l'utilisateur n'expire jamais ;</li>
 <li>lignes 56-59 : le compte de l'utilisateur n'est jamais bloqué ;</li>
 <li>lignes 61-64 : les identifiants de l'utilisateur n'expirent jamais ;</li>
-<li>lignes 66-69 :  le compte de l'utilisateur est toujours actif ;
-Spring Security impose également l'existence d'une classe implémentant l'interface [AppUserDetailsService] :</li>
+<li>lignes 66-69 :  le compte de l'utilisateur est toujours actif ;</li>
 </ul>
+<p>Spring Security impose également l'existence d'une classe implémentant l'interface [AppUserDetailsService] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019C0000007FEE7FC945.png" style="display:inline-block; margin:4px;width:7.631cm;height:2.35cm;" /></td></tr></table>
 
 <p>Cette interface est implémentée par la classe [AppUserDetailsService] suivante :</p>
@@ -2805,9 +2805,9 @@ Spring Security impose également l'existence d'une classe implémentant l'inter
 <ul>
 <li>ligne 11 : définir une classe qui étend la classe [WebSecurityConfigurerAdapter] ;</li>
 <li>ligne 13 : définir une méthode [configure(HttpSecurity http)] qui définit les droits d'accès aux différentes URL du service web ;</li>
-<li>ligne 19 : définir une méthode [configure(AuthenticationManagerBuilder auth)] qui définit les utilisateurs et leurs rôles ;
-La classe [SecurityConfig] sera la suivante :</li>
+<li>ligne 19 : définir une méthode [configure(AuthenticationManagerBuilder auth)] qui définit les utilisateurs et leurs rôles ;</li>
 </ul>
+<p>La classe [SecurityConfig] sera la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-30-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-30-3"> 3</a></span>
@@ -3108,9 +3108,9 @@ La classe [SecurityConfig] sera la suivante :</li>
 <li>ligne 48 : ainsi que la relation qui le lie à son rôle ;</li>
 <li>lignes 51-57 : cas où le login existe déjà – on regarde alors si parmi ses rôles se trouve déjà le rôle qu'on veut lui attribuer ;</li>
 <li>ligne 59-61 : si le rôle cherché n'a pas été trouvé, on crée une ligne dans la table [USERS_ROLES] pour relier l'utilisateur à son rôle ;</li>
-<li>on ne s'est pas protégé des exceptions éventuelles. C'est une classe de soutien pour créer rapidement un utilisateur avec un rôle.
-Lorsqu'on exécute la classe avec les arguments [x x guest], on obtient en base les résultats suivants :</li>
+<li>on ne s'est pas protégé des exceptions éventuelles. C'est une classe de soutien pour créer rapidement un utilisateur avec un rôle.</li>
 </ul>
+<p>Lorsqu'on exécute la classe avec les arguments [x x guest], on obtient en base les résultats suivants :</p>
 <p><strong>Table [USERS]</strong></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025F000000704AB541BB.png" style="display:inline-block; margin:4px;width:11.24cm;height:2.071cm;" /></td></tr></table>
 
@@ -3283,9 +3283,9 @@ Lorsqu'on exécute la classe avec les arguments [x x guest], on obtient en base 
 <li>lignes 37-44 : test visuel. On affiche tous les utilisateurs avec leurs rôles ;</li>
 <li>lignes 46-56 : on vérifie que l'utilisateur [admin] a le mot de passe [admin] et le  rôle [ROLE_ADMIN] en utilisant le repository [UserRepository] ;</li>
 <li>ligne 51 : [admin] est le mot de passe en clair. En base, il est crypté selon l'algorithme BCrypt. La méthode [BCrypt.checkpw] permet de vérifier que le mot de passe en clair une fois crypté est bien égal à celui qui est en base ;</li>
-<li>lignes 58-69 : on vérifie que l'utilisateur [admin] a le mot de passe [admin] et le  rôle [ROLE_ADMIN] en utilisant le service [appUserDetailsService] ;
-L'exécution des tests réussit avec les logs suivants :</li>
+<li>lignes 58-69 : on vérifie que l'utilisateur [admin] a le mot de passe [admin] et le  rôle [ROLE_ADMIN] en utilisant le service [appUserDetailsService] ;</li>
 </ul>
+<p>L'exécution des tests réussit avec les logs suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-36-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-36-3"> 3</a></span>
@@ -3378,31 +3378,31 @@ L'exécution des tests réussit avec les logs suivants :</li>
 <li>en [1], nous demandons l'URL des catégories ;</li>
 <li>en [2], avec une méthode GET ;</li>
 <li>en [3], nous donnons l'entête HTTP de l'authentification. Le code [YWRtaW46YWRtaW4=] est le codage Base64 de la chaîne [admin:admin] ;</li>
-<li>en [4], nous envoyons la commande HTTP ;
-La réponse du serveur est la suivante :</li>
+<li>en [4], nous envoyons la commande HTTP ;</li>
 </ul>
+<p>La réponse du serveur est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002CE000001B5B729F0DF.png" style="display:inline-block; margin:4px;width:9.499cm;height:5.782cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], l'entête HTTP d'authentification ;</li>
-<li>en [2], le serveur renvoie une réponse jSON ;
-On obtient bien la liste des catégories :</li>
+<li>en [2], le serveur renvoie une réponse jSON ;</li>
 </ul>
+<p>On obtient bien la liste des catégories :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000119000001657189CC21.png" style="display:inline-block; margin:4px;width:5.2cm;height:6.609cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Tentons maintenant une requête HTTP avec un entête d'authentification incorrect. La réponse est alors la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000417000001BAAC19A967.png" style="display:inline-block; margin:4px;width:13.852cm;height:5.847cm;" /></td></tr></table>
 
 <ul>
-<li>en [1] : l'entête HTTP d'authentification ;
-Nous obtenons la réponse suivante :</li>
+<li>en [1] : l'entête HTTP d'authentification ;</li>
 </ul>
+<p>Nous obtenons la réponse suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000323000001EA481B75CA.png" style="display:inline-block; margin:4px;width:10.624cm;height:6.482cm;" /></td></tr></table>
 
 <ul>
-<li>en [2] : la réponse du service web ;
-Maintenant, essayons l'utilisateur user / user. Il existe mais n'a pas accès au service web. Si nous exécutons le programme d'encodage Base64 avec les deux arguments [user user] :</li>
+<li>en [2] : la réponse du service web ;</li>
 </ul>
+<p>Maintenant, essayons l'utilisateur user / user. Il existe mais n'a pas accès au service web. Si nous exécutons le programme d'encodage Base64 avec les deux arguments [user user] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000009E000000765D52ED73.png" style="display:inline-block; margin:4px;width:2.93cm;height:2.191cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>nous obtenons le résultat suivant :</p>
@@ -3416,9 +3416,9 @@ Maintenant, essayons l'utilisateur user / user. Il existe mais n'a pas accès au
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002AC000001CCB5568B61.png" style="display:inline-block; margin:4px;width:9.049cm;height:6.085cm;" /></td></tr></table>
 
 <ul>
-<li>en [2] : la réponse du service web. Elle est différente de la précédente qui était [401 Unauthorized]. Cette fois-ci, l'utilisateur s'est authentifié correctement mais n'a pas les droits suffisants pour accéder à l'URL ;
-Notre service web sécurisé est désormais opérationnel.</li>
+<li>en [2] : la réponse du service web. Elle est différente de la précédente qui était [401 Unauthorized]. Cette fois-ci, l'utilisateur s'est authentifié correctement mais n'a pas les droits suffisants pour accéder à l'URL ;</li>
 </ul>
+<p>Notre service web sécurisé est désormais opérationnel.</p>
 <h3 id="16410-une-url-dauthentification">16.4.10. Une URL d'authentification</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000117000000BAB751A9D8.png" style="display:inline-block; margin:4px;width:5.159cm;height:3.44cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -3487,9 +3487,9 @@ Notre service web sécurisé est désormais opérationnel.</li>
 <li>ligne 15 : la classe [AuthenticateController] est un contrôleur Spring. A ce titre elle expose des URL ;</li>
 <li>ligne 22 : expose l'URL [/authenticate] ;</li>
 <li>ligne 23 : le résultat de la méthode sera envoyé directement au client ;</li>
-<li>lignes 26-27 : la méthode se contente de renvoyer un objet [Response] vide mais avec un [status] égal à 0, montrant qu'il n'y a pas eu d'erreur ;
-A quoi sert cette URL ? Lorsque nous voudrons simplement authentifier un utilisateur, nous la demanderons. Nous avons vu que si la couche de sécurité n'accepte pas cet utilisateur, elle renvoie une exception. Voici un exemple ;</li>
+<li>lignes 26-27 : la méthode se contente de renvoyer un objet [Response] vide mais avec un [status] égal à 0, montrant qu'il n'y a pas eu d'erreur ;</li>
 </ul>
+<p>A quoi sert cette URL ? Lorsque nous voudrons simplement authentifier un utilisateur, nous la demanderons. Nous avons vu que si la couche de sécurité n'accepte pas cet utilisateur, elle renvoie une exception. Voici un exemple ;</p>
 <p>Avec l'utilisateur [admin:admin] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001420000009AABCE08F9.png" style="display:inline-block; margin:4px;width:5.96cm;height:2.85cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000117000000B591DBE78F.png" style="display:inline-block; margin:4px;width:5.159cm;height:3.35cm;" /></td></tr></table>
 
@@ -3550,9 +3550,9 @@ A quoi sert cette URL ? Lorsque nous voudrons simplement authentifier un utilis
 <a id="__codelineno-43-17" name="__codelineno-43-17"></a><span class="c1">// url : URL à contacter</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 15 : la méthode générique [getResponse] en charge de la communication HTTP avec le service web sécurisé, admet désormais comme premier paramètre l'utilisateur qui demande une URL. La classe [User] est la suivante :
-Cette classe est la suivante :</li>
+<li>ligne 15 : la méthode générique [getResponse] en charge de la communication HTTP avec le service web sécurisé, admet désormais comme premier paramètre l'utilisateur qui demande une URL. La classe [User] est la suivante :</li>
 </ul>
+<p>Cette classe est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E7000000C0BE8614F6.png" style="display:inline-block; margin:4px;width:4.279cm;height:3.56cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-44-1"> 1</a></span>
@@ -4138,9 +4138,9 @@ Cette classe est la suivante :</li>
 <li>l'utilisateur [admin] a accès aux URL du service web, test lignes 96-104 ;</li>
 <li>l'utilisateur [user] existe mais n'est pas autorisé à utiliser les URL du service web, test lignes 71-81 ;</li>
 <li>l'utilisateur [unknown] n'existe pas, test lignes 83-93 ;</li>
-<li>les méthodes de tests sont celles déjà vues pour le service web non sécurisé, si ce n'est que les méthodes de l'interface [IDaoClient] sont appelées avec comme premier paramètre, l'utilisateur [admin] qui a le droit d'utiliser les URL ;
-Le test passe mais on peut constater qu'il est plus lent qu'avec le service web non sécurisé. La sécurisation d'une application augmente sensiblement ses temps de réponse. On peut noter un facteur important dans les performances du service web sécurisé : dans la classe [AppConfig] qui le configure, nous avons écrit :</li>
+<li>les méthodes de tests sont celles déjà vues pour le service web non sécurisé, si ce n'est que les méthodes de l'interface [IDaoClient] sont appelées avec comme premier paramètre, l'utilisateur [admin] qui a le droit d'utiliser les URL ;</li>
 </ul>
+<p>Le test passe mais on peut constater qu'il est plus lent qu'avec le service web non sécurisé. La sécurisation d'une application augmente sensiblement ses temps de réponse. On peut noter un facteur important dans les performances du service web sécurisé : dans la classe [AppConfig] qui le configure, nous avons écrit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-49-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-49-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-49-3"> 3</a></span>

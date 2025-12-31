@@ -1104,7 +1104,7 @@
 <p>Nous allons faire évoluer cette architecture vers la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D8000001138084BFB3.png" style="display:inline-block; margin:4px;width:16.404cm;height:3.639cm;" /></td></tr></table>
 
-<p>afin d'exposer sur le web l'interface [IMetier] de la couche métier. Pour cela nous allons suivre la méthodologie décrite au paragraphe 13.5, page 229.</p>
+<p>afin d'exposer sur le web l'interface [IMetier] de la couche métier. Pour cela nous allons suivre la méthodologie décrite au paragraphe 13.5, page 227.</p>
 <h2 id="141-support">14.1. Support</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001060000007DF83B60DF.png" style="display:inline-block; margin:4px;width:4.851cm;height:2.311cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1221,7 +1221,7 @@
 <a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 18-22 : la dépendance sur la couche [DAO] construite au paragraphe 12, page 209 ;</li>
+<li>lignes 18-22 : la dépendance sur la couche [DAO] construite au paragraphe 12, page 208 ;</li>
 <li>lignes 23-34 : les dépendances nécessaires aux tests ;</li>
 </ul>
 <h3 id="1422-configuration-spring">14.2.2. Configuration Spring</h3>
@@ -1374,7 +1374,7 @@
 <a id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 19-23 : la dépendance sur l'archive la couche [métier]. C'est celle que nous avons créé au paragraphe 14 page 266;</li>
+<li>lignes 19-23 : la dépendance sur l'archive la couche [métier]. C'est celle que nous avons créé au paragraphe 14 page 264;</li>
 <li>lignes 25-28 : la dépendance pour avoir une application Spring MVC ;</li>
 </ul>
 <h2 id="145-configuration-spring">14.5. Configuration Spring</h2>
@@ -1484,7 +1484,7 @@
 <a id="__codelineno-3-51" name="__codelineno-3-51"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>la signification de cette configuration a été donnée au paragraphe 13.5.3.1, page 231. Nous n'expliquons que les nouveautés :</li>
+<li>la signification de cette configuration a été donnée au paragraphe 13.5.3.1, page 229. Nous n'expliquons que les nouveautés :</li>
 <li>ligne 22 : on importe le fichier de configuration de la couche [métier] pour bénéficier de tous ses beans ;</li>
 <li>ligne 23 : on indique que d'autres beans seront trouvés dans le dossier [elections.webjson.server.service] ;</li>
 </ul>
@@ -1579,7 +1579,7 @@
 <a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="p">...</span>
 <a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Cette classe a été présentée et étudiée au paragraphe 13.5.5.3, page 238.</p>
+<p>Cette classe a été présentée et étudiée au paragraphe 13.5.5.3, page 236.</p>
 <h2 id="148-limplementation-du-service-web-json">14.8. L'implémentation du service web / jSON</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000A451BFCA3B.png" style="display:inline-block; margin:4px;width:6.04cm;height:3.039cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1758,7 +1758,7 @@
 <a id="__codelineno-6-86" name="__codelineno-6-86"></a>
 <a id="__codelineno-6-87" name="__codelineno-6-87"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Travail à faire</strong> : en suivant ce qui a été fait au paragraphe 13.5.5, page 236, complétez le code de la classe [ElectionsController].</p>
+<p><strong>Travail à faire</strong> : en suivant ce qui a été fait au paragraphe 13.5.5, page 234, complétez le code de la classe [ElectionsController].</p>
 <p><strong>Notes</strong> : </p>
 <ul>
 <li>il n'y a pas ici de filtres jSON car les tables [CONF] et [LISTES] ne sont pas liées entre-elles par une relation de clé étrangère, ce qui allège considérablement le code du service web ;</li>
@@ -1788,9 +1788,9 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000389000002951E58C4B7.png" style="display:inline-block; margin:4px;width:11.973cm;height:8.745cm;" /></td></tr></table>
 
 <ul>
-<li>en [6], demandez l'URL [setListesElectorales]. Cette URL se demande avec un POST. La valeur postée est le tableau jSON des listes en compétition dont il faut enregistrer les résultats en base ;
-On obtient le résultat suivant :</li>
+<li>en [6], demandez l'URL [setListesElectorales]. Cette URL se demande avec un POST. La valeur postée est le tableau jSON des listes en compétition dont il faut enregistrer les résultats en base ;</li>
 </ul>
+<p>On obtient le résultat suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000AAEFA1BA96.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.15cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le champ [status=0] indique qu'il n'y a pas eu d'erreur. Pour le vérifier, redemandez les listes en compétition et vérifiez que les modifications que vous aviez faites sur les listes ont été prises en compte :</p>
@@ -1802,9 +1802,9 @@ On obtient le résultat suivant :</li>
 <ul>
 <li>en [1] : l'URL du calcul des sièges ;</li>
 <li>en [2] : on fait un [POST] ;</li>
-<li>en [3] : les listes en compétition. On donne au champ [voix] les valeurs du TD, tous les [sieges] sont à 0, tous les champs [elimine] sont à false ;
-Le résultat obtenu est le suivant :</li>
+<li>en [3] : les listes en compétition. On donne au champ [voix] les valeurs du TD, tous les [sieges] sont à 0, tous les champs [elimine] sont à false ;</li>
 </ul>
+<p>Le résultat obtenu est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010E00000280D0177E14.png" style="display:inline-block; margin:4px;width:5.001cm;height:11.85cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 

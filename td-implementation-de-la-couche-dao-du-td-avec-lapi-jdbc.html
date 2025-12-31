@@ -1155,9 +1155,9 @@
 <li>[id] : clé primaire auto-incrémentée ;</li>
 <li>[version] : n° de version de l'enregistrement - peut être ignoré ici ;</li>
 <li>[sap] : nombre de sièges à pourvoir ;</li>
-<li>[seuilelectoral] : la barre au-dessous de laquelle une liste est éliminée ;
-Son contenu est le suivant :</li>
+<li>[seuilelectoral] : la barre au-dessous de laquelle une liste est éliminée ;</li>
 </ul>
+<p>Son contenu est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BE000000518D5261E4.png" style="display:inline-block; margin:4px;width:8.26cm;height:1.499cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La table [listes] contient les listes candidates de l'élection :</p>
@@ -1169,9 +1169,9 @@ Son contenu est le suivant :</li>
 <li>[nom] : nom de la liste ;</li>
 <li>[voix] : voix de la liste - n'est connu qu'après saisie de l'utilisateur dans la couche [présentation] ;</li>
 <li>[sieges] : nombre de sièges obtenus - n'est connu qu'après calcul de la couche [métier] ;</li>
-<li>[elimine] : à 1 si la liste est éliminée, à 0 sinon - n'est connu qu'après calcul de la couche [métier] ;
-Le contenu de la table [listes] est le suivant :</li>
+<li>[elimine] : à 1 si la liste est éliminée, à 0 sinon - n'est connu qu'après calcul de la couche [métier] ;</li>
 </ul>
+<p>Le contenu de la table [listes] est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000CD7E60F518.png" style="display:inline-block; margin:4px;width:4.761cm;height:3.799cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le script SQL pour générer la base [dbelections] s'appelle [dbelections.sql] et est sur le serveur. Son code est le suivant :</p>
@@ -2157,16 +2157,14 @@ Le contenu de la table [listes] est le suivant :</li>
 <p>C'est la bibliothèque [logback] qui va assurer les logs. Elle est configurée par deux fichiers :</p>
 <ul>
 <li>[logback.xml] pour la branche principale du code ;</li>
-<li>
-<p>[logback-test.xml] pour la branche de test du code. En l'absence de ce fichier, le fichier précédent est alors utilisé ;
-Ces deux fichiers doivent se trouver dans le [Classpath] du projet. Pour cette raison, ils sont placés dans le dossier :</p>
-</li>
-<li>
-<p>[src / main / ressources] pour la branche principale du code ;</p>
-</li>
-<li>[src / test / ressources] pour la branche de test du code ;
-Le contenu des fichiers est ici le même :</li>
+<li>[logback-test.xml] pour la branche de test du code. En l'absence de ce fichier, le fichier précédent est alors utilisé ;</li>
 </ul>
+<p>Ces deux fichiers doivent se trouver dans le [Classpath] du projet. Pour cette raison, ils sont placés dans le dossier :</p>
+<ul>
+<li>[src / main / ressources] pour la branche principale du code ;</li>
+<li>[src / test / ressources] pour la branche de test du code ;</li>
+</ul>
+<p>Le contenu des fichiers est ici le même :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
@@ -2202,9 +2200,9 @@ Le contenu des fichiers est ici le même :</li>
 <li>[debug] : le niveau le plus détaillé ;</li>
 <li>[off] : pas de logs ;</li>
 <li>[info] : le niveau normal des logs ;</li>
-<li>[warn] : idem niveau [info] plus les messages d'avertissement (warning). Ces messages indiquent une possibilité d'erreur ;
-Passez en mode [debug] dès que des erreurs apparaissent à l'exécution.</li>
+<li>[warn] : idem niveau [info] plus les messages d'avertissement (warning). Ces messages indiquent une possibilité d'erreur ;</li>
 </ul>
+<p>Passez en mode [debug] dès que des erreurs apparaissent à l'exécution.</p>
 <h2 id="78-implementation-de-la-couche-dao">7.8. Implémentation de la couche [DAO]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052300000111576A9DF3.png" style="display:inline-block; margin:4px;width:17.397cm;height:3.612cm;" /></td></tr></table>
 
@@ -2420,9 +2418,9 @@ Passez en mode [debug] dès que des erreurs apparaissent à l'exécution.</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 24 : l'annotation [@Cacheable] est une annotation Spring qui demande de mettre en mémoire ('cacher') les résultats de la méthode [getElectionsConfig]. Il est possible de faire cela ici parce que le contenu de la table [CONF] ne change jamais. Il ne serait pas possible de mettre cette annotation sur la méthode [getListesElectorales] car le contenu de la table [LISTES] change au cours du temps ;</li>
-<li>les méthodes [doCatchException] et [doFinally] retournent un type [ElectionsException]. La méthode [doFinally] rend un pointeur null si la libération des ressources s'est faite sans erreurs ;
-<strong>Travail à faire </strong>: écrivez la classe [ElectionDaoJdbc] en vous inspirant de la classe [IntroJdbc02] étudiée au paragraphe 6.5.2, page 96.</li>
+<li>les méthodes [doCatchException] et [doFinally] retournent un type [ElectionsException]. La méthode [doFinally] rend un pointeur null si la libération des ressources s'est faite sans erreurs ;</li>
 </ul>
+<p><strong>Travail à faire </strong>: écrivez la classe [ElectionDaoJdbc] en vous inspirant de la classe [IntroJdbc02] étudiée au paragraphe 6.5.2, page 96.</p>
 <h2 id="79-la-classe-de-test-main">7.9. La classe de test [Main]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005120000010C2BC21605.png" style="display:inline-block; margin:4px;width:17.171cm;height:3.545cm;" /></td></tr></table>
 
@@ -2629,9 +2627,9 @@ Passez en mode [debug] dès que des erreurs apparaissent à l'exécution.</li>
 <li>
 <p>ligne 59 : fermeture du contexte Spring ;</p>
 </li>
-<li>lignes 62-67 : affichage des informations obtenues ;
-Les résultats obtenus avec une couche [DAO] implémentée sont les suivants :</li>
+<li>lignes 62-67 : affichage des informations obtenues ;</li>
 </ul>
+<p>Les résultats obtenus avec une couche [DAO] implémentée sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
@@ -2665,9 +2663,9 @@ Les résultats obtenus avec une couche [DAO] implémentée sont les suivants :<
 <ul>
 <li>lignes 2-4 : montrent l'influence du cache :</li>
 <li>la requête 1 dure 80 millisecondes ;</li>
-<li>la requête 2 dure 1 milliseconde ;
-Lorsque la base de données est coupée on obtient les résultats suivants :</li>
+<li>la requête 2 dure 1 milliseconde ;</li>
 </ul>
+<p>Lorsque la base de données est coupée on obtient les résultats suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
 <span class="normal"><a href="#__codelineno-16-2">2</a></span>
 <span class="normal"><a href="#__codelineno-16-3">3</a></span>
@@ -2782,9 +2780,9 @@ Lorsque la base de données est coupée on obtient les résultats suivants :</l
 <li>ligne 17 : l'annotation [RunWith] qui est une annotation [JUnit] (ligne 6) assure l'intégration avec Spring via la classe [SpringJUnit4ClassRunner] ;</li>
 <li>ligne 16 : l'annotation [SpringApplicationConfiguration] est une annotation [Spring] (ligne 8) qui permet de désigner les classes de configuration du test JUnit. Ici on désigne la classe [AppConfig] utilisée pour configurer le projet. On dispose alors de tous les objets Spring définis par cette classe de configuration. C'est ainsi qu'on peut injecter lignes 21-22 une référence sur la couche [DAO] qui va être testée ;</li>
 <li>ligne 25 : l'annotation [Before] désigne une méthode qui doit être exécutée avant chaque test ;</li>
-<li>lignes 26-41 : la méthode [init] met les voix et sièges des listes de la table [LISTES] à zéro et le booléen [elimine] à [false] ;
-L'unique méthode de test est la suivante :</li>
+<li>lignes 26-41 : la méthode [init] met les voix et sièges des listes de la table [LISTES] à zéro et le booléen [elimine] à [false] ;</li>
 </ul>
+<p>L'unique méthode de test est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-18-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-18-3"> 3</a></span>
@@ -2902,9 +2900,9 @@ L'unique méthode de test est la suivante :</li>
 <li>lignes 11-19 : on affiche le contenu de la table [LISTES]. Il n'y a pas de tests ici, seulement un contrôle visuel ;</li>
 <li>lignes 21-35 : on modifie en base, la table [LISTES] en donnant aux listes des valeurs pour leurs champs [voix, sieges, elimine] ;</li>
 <li>lignes 37-51 : on relit la table [LISTES] et on vérifie que ce qui est obtenu est bien égal à ce qui a été mis ;</li>
-<li>lignes 52-55 : vérification visuelle ;
-Les résultats console obtenus avec une couche [DAO] implémentée sont les suivants :</li>
+<li>lignes 52-55 : vérification visuelle ;</li>
 </ul>
+<p>Les résultats console obtenus avec une couche [DAO] implémentée sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
@@ -2993,9 +2991,9 @@ Les résultats console obtenus avec une couche [DAO] implémentée sont les suiv
 <li>lignes 1-23 : logs de Spring Test ;</li>
 <li>lignes 25-26 : le contenu de la table [CONF] ;</li>
 <li>lignes 27-34 : le contenu initial de la table [LISTES] ;</li>
-<li>lignes 35-42 : le contenu de la table [LISTES] après affectation de valeurs aux champs [voix, sieges, elimine] ;
-Par ailleurs le test JUnit réussit :</li>
+<li>lignes 35-42 : le contenu de la table [LISTES] après affectation de valeurs aux champs [voix, sieges, elimine] ;</li>
 </ul>
+<p>Par ailleurs le test JUnit réussit :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015C000000CBF66E50FE.png" style="display:inline-block; margin:4px;width:6.44cm;height:3.761cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <h2 id="711-creation-de-larchive-with-dependencies-de-la-couche-dao">7.11. Création de l'archive [with-dependencies] de la couche [dao]</h2>
@@ -3244,9 +3242,9 @@ Par ailleurs le test JUnit réussit :</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 25-37 : configurent un plugin Maven pour générer le jar ;</li>
-<li>ligne 15 : indique la version de Java à utiliser pour la compilation ;
-Une fois cette modification faite, on peut générer le jar de la façon suivante [1-10] :</li>
+<li>ligne 15 : indique la version de Java à utiliser pour la compilation ;</li>
 </ul>
+<p>Une fois cette modification faite, on peut générer le jar de la façon suivante [1-10] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E5000002EDF261F0B0.png" style="display:inline-block; margin:4px;width:16.577cm;height:9.91cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DF00000141E7C0DBB7.png" style="display:inline-block; margin:4px;width:13.111cm;height:4.247cm;" /></td></tr></table>
@@ -3268,9 +3266,9 @@ Une fois cette modification faite, on peut générer le jar de la façon suivant
 
 <ul>
 <li>en [17], exécutez la configuration d'exécution ;</li>
-<li>en [13], l'archive générée ;
-On peut ouvrir cette archive avec un dézippeur :</li>
+<li>en [13], l'archive générée ;</li>
 </ul>
+<p>On peut ouvrir cette archive avec un dézippeur :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013500000180C2689868.png" style="display:inline-block; margin:4px;width:5.72cm;height:7.11cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <h2 id="712-test-de-larchive-de-la-couche-dao">7.12. Test de l'archive de la couche [DAO]</h2>
@@ -3296,9 +3294,9 @@ On peut ouvrir cette archive avec un dézippeur :</li>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000307000000DBE24C6827.png" style="display:inline-block; margin:4px;width:10.253cm;height:2.898cm;" /></td></tr></table>
 
 <ul>
-<li>en [19], le projet ne présente plus d'erreurs ;
-On peut alors exécuter la classe [Main]. On obtient les mêmes résultats que précédemment.</li>
+<li>en [19], le projet ne présente plus d'erreurs ;</li>
 </ul>
+<p>On peut alors exécuter la classe [Main]. On obtient les mêmes résultats que précédemment.</p>
 
 
 

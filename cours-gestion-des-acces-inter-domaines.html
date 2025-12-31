@@ -1170,9 +1170,9 @@
 
 <ul>
 <li>les pages HTML / CSS / JS de l'application Angular viennent du serveur [1] ;</li>
-<li>en [2], le service [dao] fait une requête à un autre serveur, le serveur [2]. Et bien ça, c'est interdit par le navigateur qui exécute l'application Angular parce que c'est une faille de sécurité. L'application ne peut interroger que le serveur d'où elle vient, ç-à-d le serveur [1] ;
-En fait, il est inexact de dire que le navigateur interdit à l'application Angular d'interroger le serveur [2]. Elle l'interroge en fait pour lui demander s'il autorise un client qui ne vient pas de chez lui à l'interroger. On appelle cette technique de partage, le <strong>CORS</strong> (Cross-Origin Resource Sharing). Le serveur [2] donne son accord en envoyant des entêtes HTTP précis.</li>
+<li>en [2], le service [dao] fait une requête à un autre serveur, le serveur [2]. Et bien ça, c'est interdit par le navigateur qui exécute l'application Angular parce que c'est une faille de sécurité. L'application ne peut interroger que le serveur d'où elle vient, ç-à-d le serveur [1] ;</li>
 </ul>
+<p>En fait, il est inexact de dire que le navigateur interdit à l'application Angular d'interroger le serveur [2]. Elle l'interroge en fait pour lui demander s'il autorise un client qui ne vient pas de chez lui à l'interroger. On appelle cette technique de partage, le <strong>CORS</strong> (Cross-Origin Resource Sharing). Le serveur [2] donne son accord en envoyant des entêtes HTTP précis.</p>
 <p>Nous allons créer l'architecture suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C20000027F7259DF97.png" style="display:inline-block; margin:4px;width:16.113cm;height:8.454cm;" /></td></tr></table>
 
@@ -1373,7 +1373,7 @@ En fait, il est inexact de dire que le navigateur interdit à l'application Angu
 <ul>
 <li>ligne 15 : la classe configure un projet Spring MVC ;</li>
 <li>ligne 16 : la classe étend la classe [WebMvcConfigurerAdapter] pour redéfinir certaines de ses méthodes ;</li>
-<li>lignes 18-36 : nous avons déjà rencontré ces beans, par exemple au paragraphe 13.5.3.1, page 231 . On notera, ligne 35, que le service web fonctionnera sur le port 8081 ;</li>
+<li>lignes 18-36 : nous avons déjà rencontré ces beans, par exemple au paragraphe 13.5.3.1, page 229 . On notera, ligne 35, que le service web fonctionnera sur le port 8081 ;</li>
 <li>lignes 38-42 : la méthode [addResourceHandlers] permet de définir des ressources statiques, ç-à-d des ressources non traitées par la [DispatcherServlet] de la ligne 23 ;</li>
 <li>ligne 40 : toute requête d'une ressource ayant un suffixe .html aura pour réponse le fichier demandé par la requête et trouvé dans le dossier [static] du Classpath du projet ;</li>
 <li>ligne 41 : toute requête d'une ressource ayant un suffixe .js aura pour réponse le fichier Javascript demandé par la requête et trouvé dans le dossier [static/js] du Classpath du projet ;</li>
@@ -1414,9 +1414,9 @@ En fait, il est inexact de dire que le navigateur interdit à l'application Angu
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 6 : importation de jQuery ;</li>
-<li>lignes 10-12 : un élément de la page d'<strong>id</strong> [element1]. Nous allons jouer avec cet élément.
-Il nous faut télécharger le fichier [jquery-2.1.3.min.js]. On trouvera la dernière version de jQuery à l'URL [<a href="http://jquery.com/download/"><u>http://jquery.com/download/</u></a>] :</li>
+<li>lignes 10-12 : un élément de la page d'<strong>id</strong> [element1]. Nous allons jouer avec cet élément.</li>
 </ul>
+<p>Il nous faut télécharger le fichier [jquery-2.1.3.min.js]. On trouvera la dernière version de jQuery à l'URL [<a href="http://jquery.com/download/"><u>http://jquery.com/download/</u></a>] :</p>
 <p><img src="images/10000000000003CC00000103F6C4BFF9.png" style="width:18cm;height:4.8cm;" alt="Image" /></p>
 <p>On placera le fichier téléchargé dans le dossier [static / js] et on changera la ligne 6 du fichier HTML en fonction de la version installée.</p>
 <p>Ceci fait, on demande la vue statique [jQuery.html] avec Chrome [1-2] :</p>
@@ -1521,9 +1521,9 @@ Il nous faut télécharger le fichier [jquery-2.1.3.min.js]. On trouvera la dern
 <ul>
 <li>ligne 6 : on importe la bibliothèque jQuery ;</li>
 <li>ligne 7 : on importe un code que nous allons écrire ;</li>
-<li>lignes 15, 19, 26, 29, 31 : on notera les identifiants [id] des composants de la page. Le javascript référence ces composants via ces identifiants ;
-Le code [client.js] est le suivant :</li>
+<li>lignes 15, 19, 26, 29, 31 : on notera les identifiants [id] des composants de la page. Le javascript référence ces composants via ces identifiants ;</li>
 </ul>
+<p>Le code [client.js] est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -1766,15 +1766,15 @@ Le code [client.js] est le suivant :</li>
 <p>Nous lançons :</p>
 <ul>
 <li>le serveur web / json sur le port 8080 ;</li>
-<li>le client de ce serveur sur le port 8081 ;
-puis nous demandons l'URL [http://localhost:8081/client.html] [1] :</li>
+<li>le client de ce serveur sur le port 8081 ;</li>
 </ul>
+<p>puis nous demandons l'URL [http://localhost:8081/client.html] [1] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F500000239E2064DDE.png" style="display:inline-block; margin:4px;width:16.789cm;height:7.528cm;" /></td></tr></table>
 
 <ul>
-<li>en [2], nous faisons un GET sur l'URL [http://localhost:8080/getAllCategories];
-Nous n'obtenons pas de réponse du serveur. Lorsqu'on regarde la console de développement de Chrome (Ctrl-Maj-I) on découvre une erreur :</li>
+<li>en [2], nous faisons un GET sur l'URL [http://localhost:8080/getAllCategories];</li>
 </ul>
+<p>Nous n'obtenons pas de réponse du serveur. Lorsqu'on regarde la console de développement de Chrome (Ctrl-Maj-I) on découvre une erreur :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042D00000440D640C30B.png" style="display:inline-block; margin:4px;width:14.143cm;height:14.393cm;" /></td></tr></table>
 
 <ul>
@@ -1785,9 +1785,9 @@ Nous n'obtenons pas de réponse du serveur. Lorsqu'on regarde la console de dév
 <li>en [7],  le navigateur demande si les entêtes HTTP [accept] et [authorization] sont acceptés. L'entête de la requête [Access-Control-Request-Headers] attend une réponse avec un entête HTTP [Access-Control-Allow-Headers] indiquant que les entêtes demandés sont acceptés ;</li>
 <li>on a une erreur en [3]. En cliquant sur l'icône, on a l'erreur [4] ;</li>
 <li>en [4], le message indique que le serveur n'a pas envoyé l'entête HTTP [Access-Control-Allow-Origin] qui indique si l'origine de la requête est acceptée ;</li>
-<li>en [8], on peut constater que le serveur n'a effectivement pas envoyé cet entête. Du coup le navigateur a refusé de faire la requête HTTP GET demandée initialement ;
-Il nous faut modifier le serveur web / jSON.</li>
+<li>en [8], on peut constater que le serveur n'a effectivement pas envoyé cet entête. Du coup le navigateur a refusé de faire la requête HTTP GET demandée initialement ;</li>
 </ul>
+<p>Il nous faut modifier le serveur web / jSON.</p>
 <h2 id="189-le-nouveau-service-web-json">18.9. Le nouveau service web / json</h2>
 <p>Nous créons un nouveau projet Maven [intro-spring-cors-server-jpa] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E7000000C4577E8D45.png" style="display:inline-block; margin:4px;width:4.3cm;height:3.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000179000000B7366183FA.png" style="display:inline-block; margin:4px;width:6.98cm;height:3.39cm;" /></td></tr></table>
@@ -2001,13 +2001,11 @@ Il nous faut modifier le serveur web / jSON.</li>
 </ul>
 <p>Ici le paramètre [origin] de la ligne 13 aurait la valeur [http://localhost:8081]. Au cas, où la demande ne contient pas l'entête HTTP [Origin], on s'arrangera pour avoir [origin==null] ;</p>
 <ul>
-<li>
-<p>l'objet [HttpServletResponse response] qui va être renvoyé au client qui a fait la demande ;
-Ces deux paramètres sont injectés par Spring ;</p>
-</li>
-<li>
-<p>lignes 15-175 : si l'application est configurée pour accepter les requêtes inter-domaines et si l'émetteur a envoyé l'entête HTTP [Origin] et si cette origine commence par [http://localhost], alors on va accepter la requête inter-domaines, sinon on la rejette ;</p>
-</li>
+<li>l'objet [HttpServletResponse response] qui va être renvoyé au client qui a fait la demande ;</li>
+</ul>
+<p>Ces deux paramètres sont injectés par Spring ;</p>
+<ul>
+<li>lignes 15-175 : si l'application est configurée pour accepter les requêtes inter-domaines et si l'émetteur a envoyé l'entête HTTP [Origin] et si cette origine commence par [http://localhost], alors on va accepter la requête inter-domaines, sinon on la rejette ;</li>
 <li>ligne 19 : si le client est dans le domaine [http://localhost:port], on envoie l'entête HTTP :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>Access-Control-Allow-Origin:  http://localhost:port
 </code></pre></div></td></tr></table></div></li>
@@ -2022,7 +2020,7 @@ Ces deux paramètres sont injectés par Spring ;</p>
 </ul>
 <p>A l'entête HTTP [Access-Control-Request-X], le serveur répond avec un entête HTTP [Access-Control-Allow-X] dans lequel il indique ce qui est autorisé. Les lignes 20-23 se contentent de reprendre la demande du client pour indiquer qu'elle est acceptée ;</p>
 <h3 id="1894-le-controleur-mycontrollerwithhttpoptions">18.9.4. Le contrôleur [MyControllerWithHttpOptions]</h3>
-<p>Afin de ne pas avoir à modifier le serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe 13.5.3, page 230 nous allons créer un nouveau contrôleur qui là où le serveur non sécurisé traite l'URL [/url], le nouveau contrôleur traitera l'URL [/cors-url] et cette URL acceptera les requêtes inter-domaines.</p>
+<p>Afin de ne pas avoir à modifier le serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe 13.5.3, page 228 nous allons créer un nouveau contrôleur qui là où le serveur non sécurisé traite l'URL [/url], le nouveau contrôleur traitera l'URL [/cors-url] et cette URL acceptera les requêtes inter-domaines.</p>
 <p>La classe [MyControllerWithHttpOptions] est le contrôleur qui va traiter les requêtes HTTP de type [OPTIONS] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000CF59FC9B0F.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.829cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2079,9 +2077,9 @@ Ces deux paramètres sont injectés par Spring ;</p>
 <li>ligne 18 : la méthode [getAllCategories] admet deux paramètres :</li>
 <li>[@RequestHeader(value = "Origin", required = <strong>false</strong>) String origin] pour récupérer la valeur de l'entête HTTP [<strong>Origin</strong>:http://localhost:8081] lorsqu'il est présent. Dans cet exemple, le paramètre [String origin] recevra la valeur [http://localhost:8081]. Cet entête n'est pas obligatoire [required = <strong>false</strong>]. Lorsqu'il n'est pas présent, le paramètre [String origin] aura la valeur null ;</li>
 <li>[HttpServletResponse httpServletResponse] : la réponse qui sera envoyée au client ;</li>
-<li>ligne 21 : on envoie les entêtes HTTP qui permettent les requêtes inter-domaines. La méthode [setHeaders] est définie dans la classe parent [AbstractCorsController] ;
-Il est fait ainsi pour toutes les URL exposées par le serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe 13.5.3, page 230. Lorsque ce service expose l'URL [/url], la classe [MyControllerWithHttpOptions] ci-dessus expose l'URL [/<strong>cors-</strong>url].</li>
+<li>ligne 21 : on envoie les entêtes HTTP qui permettent les requêtes inter-domaines. La méthode [setHeaders] est définie dans la classe parent [AbstractCorsController] ;</li>
 </ul>
+<p>Il est fait ainsi pour toutes les URL exposées par le serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe 13.5.3, page 228. Lorsque ce service expose l'URL [/url], la classe [MyControllerWithHttpOptions] ci-dessus expose l'URL [/<strong>cors-</strong>url].</p>
 <h3 id="1895-le-controleur-mycontrollerwithcors">18.9.5. Le contrôleur [MyControllerWithCors]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000CF2C6ABD45.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.829cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2153,14 +2151,14 @@ Il est fait ainsi pour toutes les URL exposées par le serveur web / jSON non s�
 <ul>
 <li>ligne 17 : la classe [MyControllerWithCors] est un contrôleur Spring MVC</li>
 <li>ligne 18 : elle étend la classe [AbstractCorsController] ;</li>
-<li>lignes 21-22 : injection du contrôleur [MyController] du serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe 13.5.3, page 230 ;</li>
+<li>lignes 21-22 : injection du contrôleur [MyController] du serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe 13.5.3, page 228 ;</li>
 <li>lignes 25-27 : la méthode [getAllCategories] traite l'URL [/cors-getAllCategories] (ligne 28) lorsqu'elle demandée avec la méthode HTTP [GET] ;</li>
 <li>ligne 26 : le résultat de la méthode [getAllCategories] sera envoyé au client. Ce résultat est un flux jSON (attribut [produces] de la ligne 27 et type [String] du résultat ligne 25) ;</li>
 <li>ligne 27 : la méthode reçoit les mêmes paramètres que la méthode [getAllCategories] du contrôleur [MyControllerWithHttpOptions] que nous venons d'étudier ;</li>
-<li>ligne 30 : on demande à la méthode [myController.getAllCategories()] d'envoyer la réponse ;
-Au final, c'est la méthode [myController.getAllCategories()] du serveur non sécurisé qui envoie la réponse. On a simplement enrichi sa réponse avec les entêtes nécessaires aux requêtes inter-domaines.</li>
+<li>ligne 30 : on demande à la méthode [myController.getAllCategories()] d'envoyer la réponse ;</li>
 </ul>
-<p>Il est fait ainsi pour toutes les URL exposées par le serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe 13.5.3, page 230. Lorsque ce service expose l'URL [/url], la classe [MyControllerWithCors] ci-dessus expose l'URL [/<strong>cors-</strong>url].</p>
+<p>Au final, c'est la méthode [myController.getAllCategories()] du serveur non sécurisé qui envoie la réponse. On a simplement enrichi sa réponse avec les entêtes nécessaires aux requêtes inter-domaines.</p>
+<p>Il est fait ainsi pour toutes les URL exposées par le serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe 13.5.3, page 228. Lorsque ce service expose l'URL [/url], la classe [MyControllerWithCors] ci-dessus expose l'URL [/<strong>cors-</strong>url].</p>
 <p>Une requête inter-domaine se déroulera de la façon suivante :</p>
 <ul>
 <li>le code JS du client demande l'URL [/cors-url] avec une requête HTTP GET ou un POST ;</li>
@@ -2200,9 +2198,9 @@ Au final, c'est la méthode [myController.getAllCategories()] du serveur non sé
 <ul>
 <li>ligne 10 : la méthode statique [SpringApplication.run] est exécutée avec la configuration Spring [AppConfig]. A cause de cette configuration, le serveur Tomcat embarqué dans les archives du projet est exécuté et l'application web [intro-spring-cors-server-jpa] est déployée dessus. L'application web du serveur non sécurisé [intro-server-webjson-01] qui fait partie des archives du projet est également déployée dessus. Comme le projet [intro-spring-security-server-01] fait également partie des archives, deux types d'URL sont finalement exposées :</li>
 <li>celles du service web sécurisé : /url ;</li>
-<li>celles du service web acceptant les requêtes inter-domaines : /cors-url ;
-Nous sommes désormais prêts pour de nouveaux tests. Nous lançons la nouvelle version du service web et nous découvrons que le problème reste entier. Rien n'a changé. Si ligne 7 ci-dessous, on met un affichage console, celui-ci n'est jamais affiché montrant par là que la méthode [getAllCategories] de la classe [MyControllerWithHttpOptions] n'est jamais appelée ;</li>
+<li>celles du service web acceptant les requêtes inter-domaines : /cors-url ;</li>
 </ul>
+<p>Nous sommes désormais prêts pour de nouveaux tests. Nous lançons la nouvelle version du service web et nous découvrons que le problème reste entier. Rien n'a changé. Si ligne 7 ci-dessous, on met un affichage console, celui-ci n'est jamais affiché montrant par là que la méthode [getAllCategories] de la classe [MyControllerWithHttpOptions] n'est jamais appelée ;</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -2293,19 +2291,19 @@ Nous sommes désormais prêts pour de nouveaux tests. Nous lançons la nouvelle 
 <a id="__codelineno-17-33" name="__codelineno-17-33"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 25-26 : injection du bean [dispatcherServlet] qui gère les demandes des clients. Ce bean a été défini dans la configuration du serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe 13.5.3, page 230 ;</li>
+<li>lignes 25-26 : injection du bean [dispatcherServlet] qui gère les demandes des clients. Ce bean a été défini dans la configuration du serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe 13.5.3, page 228 ;</li>
 <li>lignes 28-29 : la méthode [init] (ligne 29) sera exécutée dès que la classe [AppConfig] aura été instanciée et les injections Spring faites. Donc lorsqu'elle s'exécute, le champ de la ligne 26 a été initialisé ;</li>
-<li>ligne 31 : on configure le bean [dispatcherServlet] pour qu'il laisse l'application web traiter elle-même les commandes HTTP [OPTIONS] ;
-Nous refaisons les tests avec cette nouvelle configuration. On obtient le résultat suivant :</li>
+<li>ligne 31 : on configure le bean [dispatcherServlet] pour qu'il laisse l'application web traiter elle-même les commandes HTTP [OPTIONS] ;</li>
 </ul>
+<p>Nous refaisons les tests avec cette nouvelle configuration. On obtient le résultat suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051D0000039B3DDD374B.png" style="display:inline-block; margin:4px;width:17.318cm;height:12.211cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], nous voyons qu'il y a deux requêtes HTTP vers l'URL [http://localhost:8080/cors-getAllCategories];</li>
 <li>en [2], la requête [OPTIONS] ;</li>
-<li>en [3], les trois entêtes HTTP que nous venons de configurer dans la réponse du serveur ;
-Examinons maintenant la seconde requête :</li>
+<li>en [3], les trois entêtes HTTP que nous venons de configurer dans la réponse du serveur ;</li>
 </ul>
+<p>Examinons maintenant la seconde requête :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051E000003C11F3B3495.png" style="display:inline-block; margin:4px;width:17.33cm;height:12.714cm;" /></td></tr></table>
 
 <ul>
@@ -2314,9 +2312,9 @@ Examinons maintenant la seconde requête :</li>
 <li>en [3], la réponse du serveur ;</li>
 <li>en [4], le serveur envoie du jSON ;</li>
 <li>en [5], une erreur s'est produite ;</li>
-<li>en [6], le message d'erreur ;
-Il est plus difficile d'expliquer ce qui s'est passé ici. La réponse [3] du serveur est normale [HTTP/1.1 200 OK]. On devrait donc avoir le document demandé. Il est possible que le serveur ait bien envoyé le document mais que c'est le navigateur qui empêche son utilisation parce qu'il veut que pour la requête GET également, la réponse comporte l'entête HTTP [Access-Control-Allow-Origin:http://localhost:8081].</li>
+<li>en [6], le message d'erreur ;</li>
 </ul>
+<p>Il est plus difficile d'expliquer ce qui s'est passé ici. La réponse [3] du serveur est normale [HTTP/1.1 200 OK]. On devrait donc avoir le document demandé. Il est possible que le serveur ait bien envoyé le document mais que c'est le navigateur qui empêche son utilisation parce qu'il veut que pour la requête GET également, la réponse comporte l'entête HTTP [Access-Control-Allow-Origin:http://localhost:8081].</p>
 <p>Nous modifions alors le contrôleur [MyControllerWithCors] pour que lui aussi envoie les entêtes nécessaires aux requêtes inter-domaines :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
 <span class="normal"><a href="#__codelineno-18-2">2</a></span>
@@ -2337,9 +2335,9 @@ Il est plus difficile d'expliquer ce qui s'est passé ici. La réponse [3] du se
 <a id="__codelineno-18-9" name="__codelineno-18-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 6 :  les entêtes nécessaires aux requêtes inter-domaines sont inclus dans la réponse ;
-Après cette modification, les résultats sont les suivants :</li>
+<li>ligne 6 :  les entêtes nécessaires aux requêtes inter-domaines sont inclus dans la réponse ;</li>
 </ul>
+<p>Après cette modification, les résultats sont les suivants :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000344000001B12C453CD6.png" style="display:inline-block; margin:4px;width:15.48cm;height:8.02cm;" /></td></tr></table>
 
 <p>Nous avons bien obtenu la liste des catégories.</p>
@@ -2386,18 +2384,18 @@ Après cette modification, les résultats sont les suivants :</li>
 <ul>
 <li>on fait un POST [1] vers l'URL [2] ;</li>
 <li>en [3], la valeur postée. Il s'agit d'une chaîne jSON ;</li>
-<li>au total, on cherche à créer une catégorie appelée [categorie2] ;
-Nous ne modifions pour l'instant aucun code. Le résultat obtenu est le suivant :</li>
+<li>au total, on cherche à créer une catégorie appelée [categorie2] ;</li>
 </ul>
+<p>Nous ne modifions pour l'instant aucun code. Le résultat obtenu est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E4000003F5B1DD62CA.png" style="display:inline-block; margin:4px;width:16.563cm;height:13.402cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], comme pour les requêtes [GET], une requête [OPTIONS] est faite par le navigateur ;</li>
 <li>en [2], il demande une autorisation d'accès pour une requête [POST]. Auparavant c'était [GET] ;</li>
 <li>en [3], il demande une autorisation d'envoyer les entêtes HTTP [accept, authorization, content-type]. Auparavant, on avait seulement les deux premiers entêtes ;</li>
-<li>en [4], le service web ne donne pas toutes les autorisations demandées ce qui provoque l'erreur [5] ;
-Nous modifions la méthode [AbstractController.sendHeaders] de la façon suivante :</li>
+<li>en [4], le service web ne donne pas toutes les autorisations demandées ce qui provoque l'erreur [5] ;</li>
 </ul>
+<p>Nous modifions la méthode [AbstractController.sendHeaders] de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
@@ -2450,9 +2448,9 @@ Nous modifions la méthode [AbstractController.sendHeaders] de la façon suivant
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 21 : on a ajouté l'entête HTTP [Content-Type] (la casse n'a pas d'importance) ;</li>
-<li>ligne 23 : on a ajouté la méthode HTTP [POST] ;
-Ceci fait les méthodes [POST] sont traitées de la même façon que les requêtes [GET]. Voici l'exemple de l'URL [/cors-addArticles] :</li>
+<li>ligne 23 : on a ajouté la méthode HTTP [POST] ;</li>
 </ul>
+<p>Ceci fait les méthodes [POST] sont traitées de la même façon que les requêtes [GET]. Voici l'exemple de l'URL [/cors-addArticles] :</p>
 <p><u><strong>dans [MyControllerWithCors]</strong></u></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-22-2"> 2</a></span>

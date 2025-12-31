@@ -1007,9 +1007,9 @@
 <p><strong>Lectures conseillées</strong> :</p>
 <ul>
 <li>paragraphes 2.1, 2.2, 2.4 et 2.7 du chapitre 2 de [<a href="http://tahe.developpez.com/java/cours"><u>ref1</u></a>] : Classes et interfaces</li>
-<li>paragraphes 3.3 (classe String), 3.5 (classe ArrayList), 3.6 (classe Arrays)
-Dans la partie 1 de l'exercice ELECTIONS aucune classe n'a été utilisée. On a construit une solution comme on l'aurait construite en langage C. Nous introduisons maintenant la notion de <strong>classe Java</strong>.</li>
+<li>paragraphes 3.3 (classe String), 3.5 (classe ArrayList), 3.6 (classe Arrays)</li>
 </ul>
+<p>Dans la partie 1 de l'exercice ELECTIONS aucune classe n'a été utilisée. On a construit une solution comme on l'aurait construite en langage C. Nous introduisons maintenant la notion de <strong>classe Java</strong>.</p>
 <h2 id="31-support">3.1. Support</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000AE0000007E2A79D0D2.png" style="display:inline-block; margin:4px;width:3.221cm;height:2.33cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000ED000000894DDDE97D.png" style="display:inline-block; margin:4px;width:4.39cm;height:2.54cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1334,22 +1334,20 @@ Dans la partie 1 de l'exercice ELECTIONS aucune classe n'a été utilisée. On a
 <li>ligne 13 : le nom de la liste.</li>
 <li>ligne 17 : le nombre de voix de la liste</li>
 <li>ligne 21 : le nombre de sièges de la liste</li>
-<li>
-<p>ligne 25 : booléen indiquant si la liste est éliminée (pourcentage de voix obtenues au-dessous du seuil électoral) ou non.
-Chaque champ privé nommé [xyz] peut être initialisé par une méthode nommée [set<strong>X</strong>yz]. La méthode [get<strong>X</strong>yz] permet elle d'obtenir la valeur du champ privé [xyz]. Dans le cas particulier où [xyz] est un champ de type booléen, la méthode [get<strong>X</strong>yz] peut être remplacée par la méthode [is<strong>X</strong>yz]. Le nommage particulier de ces méthodes obéit à une norme de codage appelée norme <strong>JavaBean</strong>. Ainsi nous définissons les méthodes publiques suivantes :</p>
-</li>
-<li>
-<p>getId (ligne 48), setId (ligne 57)</p>
-</li>
+<li>ligne 25 : booléen indiquant si la liste est éliminée (pourcentage de voix obtenues au-dessous du seuil électoral) ou non.</li>
+</ul>
+<p>Chaque champ privé nommé [xyz] peut être initialisé par une méthode nommée [set<strong>X</strong>yz]. La méthode [get<strong>X</strong>yz] permet elle d'obtenir la valeur du champ privé [xyz]. Dans le cas particulier où [xyz] est un champ de type booléen, la méthode [get<strong>X</strong>yz] peut être remplacée par la méthode [is<strong>X</strong>yz]. Le nommage particulier de ces méthodes obéit à une norme de codage appelée norme <strong>JavaBean</strong>. Ainsi nous définissons les méthodes publiques suivantes :</p>
+<ul>
+<li>getId (ligne 48), setId (ligne 57)</li>
 <li>getNom (ligne 65), setNom (ligne 74)</li>
 <li>getVoix (ligne 82), setVoix (ligne 90)</li>
 <li>getSieges (ligne 98), setSieges (ligne 106)</li>
 <li>isElimine (ligne 114), setElimine (ligne 122)</li>
 <li>lignes 30-31 : définissent un constructeur sans paramètres. Celui-ci permet de créer un objet [ListeElectorale] sans l'initialiser. Celui-ci peut ensuite être initialisé grâce aux méthodes <strong>set</strong>.</li>
 <li>lignes 40-42 : définissent un constructeur permettant de créer un objet [ListeElectorale]  tout en initialisant ses cinq champs privés.</li>
-<li>ligne 130-132 : définissent la méthode [toString] qui rend une chaîne de caractères donnant les valeurs des cinq champs de l'objet.
-Un programme de test de la classe <strong>ListeElectorale</strong> pourrait être le suivant :</li>
+<li>ligne 130-132 : définissent la méthode [toString] qui rend une chaîne de caractères donnant les valeurs des cinq champs de l'objet.</li>
 </ul>
+<p>Un programme de test de la classe <strong>ListeElectorale</strong> pourrait être le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1410,9 +1408,9 @@ Un programme de test de la classe <strong>ListeElectorale</strong> pourrait êtr
 <li>[2] : l'application sera placée dans un paquetage, ici [istia.st.elections]</li>
 <li>[3] : [ListeElectorale.java] est le code source de la classe [ListeElectorale]</li>
 <li>[4] : les classes de test seront placées dans un paquetage, ici [istia.st.elections.tests]</li>
-<li>[5] : la classe de test [MainTest1ListeElectorale]
-L'affichage écran obtenu après exécution du programme ci-dessus est le suivant :</li>
+<li>[5] : la classe de test [MainTest1ListeElectorale]</li>
 </ul>
+<p>L'affichage écran obtenu après exécution du programme ci-dessus est le suivant :</p>
 <p><img src="images/1000000000000153000000893AA31019.png" style="width:5.78cm;height:2.32cm;" alt="Image" /></p>
 <p><strong>Travail à faire</strong> : en vous aidant de ce qui précède, complétez le code de la classe <strong>ListeElectorale</strong>.</p>
 <h2 id="33-creation-dune-classe-dexception-electionsexception">3.3. Création d'une classe d'exception [ElectionsException]</h2>
@@ -1485,9 +1483,9 @@ L'affichage écran obtenu après exécution du programme ci-dessus est le suivan
 <p>Il y a des avantages et inconvénients à créer et utiliser des classes d'exception dérivées de [RuntimeException] :</p>
 <ul>
 <li>au chapitre des avantages : le code est plus léger</li>
-<li>au chapitre des inconvénients : on peut être ramené aux méthodes du C où chaque fonction rend un code d'erreur que peu de gens utilisent, justement pour avoir un code plus léger. Lorsqu'une telle erreur non gérée se produit, le programme plante, généralement de façon peu élégante.
-Nous décidons de créer une classe spéciale regroupant toutes les exceptions pouvant survenir dans notre application ELECTIONS. Elle s'appellera [ElectionsException] et dérivera de la classe [RuntimeException]. Son code est le suivant :</li>
+<li>au chapitre des inconvénients : on peut être ramené aux méthodes du C où chaque fonction rend un code d'erreur que peu de gens utilisent, justement pour avoir un code plus léger. Lorsqu'une telle erreur non gérée se produit, le programme plante, généralement de façon peu élégante.</li>
 </ul>
+<p>Nous décidons de créer une classe spéciale regroupant toutes les exceptions pouvant survenir dans notre application ELECTIONS. Elle s'appellera [ElectionsException] et dérivera de la classe [RuntimeException]. Son code est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -1591,9 +1589,9 @@ Nous décidons de créer une classe spéciale regroupant toutes les exceptions p
 <li>[2] : l'application est placée dans un paquetage, ici [istia.st.elections]</li>
 <li>[3] : les classes [ListeElectorale] et [ElectionsException]</li>
 <li>[4] : les classes de test sont placées dans un paquetage, ici [istia.st.elections.tests]</li>
-<li>[5] : la classe de test [MainTest1ListeElectorale]
-La classe de test [MainTest1ListeElectorale] déjà étudiée est légèrement modifiée pour tester les cas d'exception :</li>
+<li>[5] : la classe de test [MainTest1ListeElectorale]</li>
 </ul>
+<p>La classe de test [MainTest1ListeElectorale] déjà étudiée est légèrement modifiée pour tester les cas d'exception :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
@@ -1666,9 +1664,9 @@ La classe de test [MainTest1ListeElectorale] déjà étudiée est légèrement m
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 28 : on essaie d'initialiser le nombre de sièges avec une valeur interdite</li>
-<li>ligne 30 : s'il y a exception, elle est affichée
-L'exécution du test donne les résultats suivants :</li>
+<li>ligne 30 : s'il y a exception, elle est affichée</li>
 </ul>
+<p>L'exécution du test donne les résultats suivants :</p>
 <p><img src="images/10000000000003990000009D8D7FAF3A.png" style="width:17.06cm;height:2.91cm;" alt="Image" /></p>
 <p>On remarque que la classe [ListeElectorale] a bien généré une exception lorsqu'on a voulu initialiser le nombre de sièges avec une valeur invalide (ligne 28 du code).</p>
 <h2 id="34-une-classe-de-test-unitaire">3.4. Une classe de test unitaire</h2>
@@ -1757,9 +1755,9 @@ L'exécution du test donne les résultats suivants :</li>
 <li><strong>assertSame(Object1, Object2)</strong> et <strong>assertSame(message, Object1, Object2)</strong> : vérifie que les références <strong>Object1</strong> et <strong>Object2</strong> pointent sur le même objet,</li>
 <li><strong>assertNotSame(Object1, Object2)</strong> et <strong>assertNotSame(message, Object1, Object2)</strong> : vérifie que les références <strong>Object1</strong> et <strong>Object2</strong> ne pointent pas sur le même objet ;</li>
 <li>ligne 24 : cette assertion doit réussir ;</li>
-<li>ligne 30 : cette assertion doit échouer ;
-Dans l'environnement Eclipse, la création d'une classe de test JUnit peut se faire de la façon suivante :</li>
+<li>ligne 30 : cette assertion doit échouer ;</li>
 </ul>
+<p>Dans l'environnement Eclipse, la création d'une classe de test JUnit peut se faire de la façon suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004FD0000037B88E88961.png" style="display:inline-block; margin:4px;width:11.83cm;height:8.25cm;" /></td></tr></table>
 
 <ul>
@@ -1773,9 +1771,9 @@ Dans l'environnement Eclipse, la création d'une classe de test JUnit peut se fa
 <li>[3] : choix du paquetage dans lequel la classe de test doit être créée ;</li>
 <li>[4] : nom de la classe de test ;</li>
 <li>[5] : choix des méthodes à inclure dans la classe qui va être générée ;</li>
-<li>[6] : la classe JUnitEssai a été générée
-L'assistant précédent génère une classe quasiment vide :</li>
+<li>[6] : la classe JUnitEssai a été générée</li>
 </ul>
+<p>L'assistant précédent génère une classe quasiment vide :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -2006,48 +2004,42 @@ L'assistant précédent génère une classe quasiment vide :</li>
 <p><strong>Lectures conseillées</strong> :</p>
 <ul>
 <li>paragraphes 2.1, 2.2, 2.4 et 2.7 du chapitre 2 de [1] : Classes et interfaces</li>
-<li>
-<p>paragraphes 3.3 (classe String), 3.5 (classe ArrayList), 3.6 (classe Arrays)
-On désire réécrire l'application [Elections] en y ajoutant les nouvelles contraintes suivantes :</p>
-</li>
-<li>
-<p>on utilisera la classe [ListeElectorale] pour représenter une liste candidate</p>
-</li>
+<li>paragraphes 3.3 (classe String), 3.5 (classe ArrayList), 3.6 (classe Arrays)</li>
+</ul>
+<p>On désire réécrire l'application [Elections] en y ajoutant les nouvelles contraintes suivantes :</p>
+<ul>
+<li>on utilisera la classe [ListeElectorale] pour représenter une liste candidate</li>
 <li>l'application demandera au clavier les informations suivantes :</li>
 <li>le nombre de sièges à pourvoir</li>
 <li>les noms et voix des listes. On ne sait pas à priori combien il y a de listes. La dernière liste sera signalée par un nom égal à la chaîne "*".</li>
 <li>parce qu'on ne connaît  pas à priori le nombre de listes, celles-ci seront tout d'abord mémorisées dans un objet de type [ArrayList]. Puis, lorsque toutes les listes auront été saisies, elles seront transférées dans un tableau de listes.</li>
-<li>
-<p>les résultats seront affichés par ordre décroissant du nombre de sièges obtenus.
-Pour trier un tableau T, on dispose de différentes méthodes statiques de la classe [Arrays] :</p>
-</li>
-<li>
-<p><strong>Arrays.sort(T)</strong> : trie le tableau T selon un ordre naturel s'il en a un (croissant pour les nombres, les dates, alphabétique pour les chaînes, ...)</p>
-</li>
-<li><strong>Arrays.sort(T,comparateur)</strong> : pour trier des tableaux T n'ayant pas un ordre naturel. C'est le cas ici du tableau des listes qu'il faut trier selon un champ particulier de la liste : le nombre de sièges obtenus.
-Dans la méthode <strong>Arrays.sort(T,comparateur)</strong>, le paramètre <strong>comparateur</strong> est un objet implémentant l'interface <strong>Comparator</strong> suivante :</li>
+<li>les résultats seront affichés par ordre décroissant du nombre de sièges obtenus.</li>
 </ul>
+<p>Pour trier un tableau T, on dispose de différentes méthodes statiques de la classe [Arrays] :</p>
+<ul>
+<li><strong>Arrays.sort(T)</strong> : trie le tableau T selon un ordre naturel s'il en a un (croissant pour les nombres, les dates, alphabétique pour les chaînes, ...)</li>
+<li><strong>Arrays.sort(T,comparateur)</strong> : pour trier des tableaux T n'ayant pas un ordre naturel. C'est le cas ici du tableau des listes qu'il faut trier selon un champ particulier de la liste : le nombre de sièges obtenus.</li>
+</ul>
+<p>Dans la méthode <strong>Arrays.sort(T,comparateur)</strong>, le paramètre <strong>comparateur</strong> est un objet implémentant l'interface <strong>Comparator</strong> suivante :</p>
 <p><img src="images/10000000000002110000009A0EFC1F82.png" style="width:9.8cm;height:2.85cm;" alt="Image" /></p>
 <ul>
 <li>la méthode <strong>compare</strong> permet de comparer deux éléments du tableau T</li>
-<li>
-<p>la méthode <strong>equals</strong> permet de dire si deux objets sont égaux
-Les deux méthodes comparent des types <strong>Object</strong> obj1 et obj2. Dire que obj1&lt;obj2 ou obj1=obj2 ou obj1&gt;obj2 dépend de la relation d'ordre que l'on veut créer entre les deux objets. C'est au développeur qui implémente cette interface d'indiquer comment on sait que :</p>
-</li>
-<li>
-<p>obj1 est plus petit que obj2</p>
-</li>
-<li>obj1 est plus grand que obj2</li>
-<li>obj1 est égal à obj2
-La classe <strong>Object</strong> dont dérive toute classe Java dispose déjà d'une méthode [equals]. Pour trier un tableau T d'objets de type O, la méthode [equals] de la classe O n'est pas utile. On peut donc laisser l'implémentation par défaut apportée par la classe <strong>Object</strong>. Seule la méthode [compare] doit être alors implémentée. Cette méthode est appelée de façon répétée par la méthode [<strong>Arrays.sort</strong>]. Celle-ci va à chaque fois passer comme paramètres <strong>obj1</strong> et <strong>obj2</strong> de la méthode <strong>compare</strong>, deux éléments du tableau <strong>T</strong> à trier. Dans notre cas, ces éléments seront de type [ListeElectorale]. On notera ici le polymorphisme à l'oeuvre. La méthode [compare] est définie comme recevant des paramètres de type [Object]. Cela veut dire qu'elle peut recevoir des paramètres de type [Object] ou dérivé (polymorphisme). Comme [Object] est la classe parent de toutes les classes Java, les paramètres effectifs peuvent avoir le type [ListeElectorale].</li>
+<li>la méthode <strong>equals</strong> permet de dire si deux objets sont égaux</li>
 </ul>
+<p>Les deux méthodes comparent des types <strong>Object</strong> obj1 et obj2. Dire que obj1&lt;obj2 ou obj1=obj2 ou obj1&gt;obj2 dépend de la relation d'ordre que l'on veut créer entre les deux objets. C'est au développeur qui implémente cette interface d'indiquer comment on sait que :</p>
+<ul>
+<li>obj1 est plus petit que obj2</li>
+<li>obj1 est plus grand que obj2</li>
+<li>obj1 est égal à obj2</li>
+</ul>
+<p>La classe <strong>Object</strong> dont dérive toute classe Java dispose déjà d'une méthode [equals]. Pour trier un tableau T d'objets de type O, la méthode [equals] de la classe O n'est pas utile. On peut donc laisser l'implémentation par défaut apportée par la classe <strong>Object</strong>. Seule la méthode [compare] doit être alors implémentée. Cette méthode est appelée de façon répétée par la méthode [<strong>Arrays.sort</strong>]. Celle-ci va à chaque fois passer comme paramètres <strong>obj1</strong> et <strong>obj2</strong> de la méthode <strong>compare</strong>, deux éléments du tableau <strong>T</strong> à trier. Dans notre cas, ces éléments seront de type [ListeElectorale]. On notera ici le polymorphisme à l'oeuvre. La méthode [compare] est définie comme recevant des paramètres de type [Object]. Cela veut dire qu'elle peut recevoir des paramètres de type [Object] ou dérivé (polymorphisme). Comme [Object] est la classe parent de toutes les classes Java, les paramètres effectifs peuvent avoir le type [ListeElectorale].</p>
 <p>Pour un tri dans l'ordre croissant, la méthode [compare] doit rendre :</p>
 <ul>
 <li>-1 si obj1 est plus petit que obj2</li>
 <li>+1 si obj1 est plus grand que obj2</li>
-<li>0 si obj1 est égal à obj2
-Pour un tri dans l'ordre décroissant, les valeurs +1 et -1 sont inversées. Les termes "est plus petit que", "est plus grand que", "est égal à" expriment une relation d'ordre. Pour des objets de type [ListeElectorale], on aura la relation <strong>liste1</strong> "est plus petit que"  <strong>liste2</strong> si <strong>liste1</strong> a moins de voix que <strong>liste2</strong>.</li>
+<li>0 si obj1 est égal à obj2</li>
 </ul>
+<p>Pour un tri dans l'ordre décroissant, les valeurs +1 et -1 sont inversées. Les termes "est plus petit que", "est plus grand que", "est égal à" expriment une relation d'ordre. Pour des objets de type [ListeElectorale], on aura la relation <strong>liste1</strong> "est plus petit que"  <strong>liste2</strong> si <strong>liste1</strong> a moins de voix que <strong>liste2</strong>.</p>
 <p>Dans le même fichier source que la classe [MainElections], on pourra ajouter une deuxième classe :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
@@ -2074,9 +2066,9 @@ Pour un tri dans l'ordre décroissant, les valeurs +1 et -1 sont inversées. Les
 <a id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 2 : la classe n'est pas déclarée <strong>publique</strong>. Dans un fichier source Java, il peut y avoir plusieurs classes mais une seule peut avoir l'attribut <strong>public</strong>, celle qui porte le nom du fichier source.
-Dans la méthode compare précédente, les paramètres sont de type Object, ce qui oblige lignes 7 et 8, à faire un transtypage des paramètres de la méthode, du type Object vers le type ListeElectorale. La signature de la méthode compare est imposée par l'interface Comparator qui a été écrite pour comparer des objets quelconques. Depuis le JDK 1.5, il existe une interface Comparator générique : Comparator&lt;T&gt; où T est un type Java quelconque. La méthode compare de l'interface Comparator&lt;T&gt; compare des objets de type T et non de type Object ce qui évite les transtypages précédents. La classe de comparaison des objets de type ListeElectorale pourrait ressembler à ceci :</li>
+<li>ligne 2 : la classe n'est pas déclarée <strong>publique</strong>. Dans un fichier source Java, il peut y avoir plusieurs classes mais une seule peut avoir l'attribut <strong>public</strong>, celle qui porte le nom du fichier source.</li>
 </ul>
+<p>Dans la méthode compare précédente, les paramètres sont de type Object, ce qui oblige lignes 7 et 8, à faire un transtypage des paramètres de la méthode, du type Object vers le type ListeElectorale. La signature de la méthode compare est imposée par l'interface Comparator qui a été écrite pour comparer des objets quelconques. Depuis le JDK 1.5, il existe une interface Comparator générique : Comparator&lt;T&gt; où T est un type Java quelconque. La méthode compare de l'interface Comparator&lt;T&gt; compare des objets de type T et non de type Object ce qui évite les transtypages précédents. La classe de comparaison des objets de type ListeElectorale pourrait ressembler à ceci :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
 <span class="normal"><a href="#__codelineno-21-2">2</a></span>
 <span class="normal"><a href="#__codelineno-21-3">3</a></span>
@@ -2097,9 +2089,9 @@ Dans la méthode compare précédente, les paramètres sont de type Object, ce q
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 2 : la classe implémente l'interface Comparator&lt;ListeElectorale&gt;</li>
-<li>lignes 5-6 : les paramètres de la méthode compare sont de type ListeElectorale. Le transtypage est désormais inutile.
-Le JDK 1.5 a introduit le concept de classe / interface générique pour diverses classes / interfaces du JDK 1.4 qui manipulaient initialement uniquement des objets de type Object. C'est le cas des listes, dictionnaires, ...</li>
+<li>lignes 5-6 : les paramètres de la méthode compare sont de type ListeElectorale. Le transtypage est désormais inutile.</li>
 </ul>
+<p>Le JDK 1.5 a introduit le concept de classe / interface générique pour diverses classes / interfaces du JDK 1.4 qui manipulaient initialement uniquement des objets de type Object. C'est le cas des listes, dictionnaires, ...</p>
 <p>Nous avons dit un peu plus haut que, parce qu'on ne connaissait pas le nombre de listes, on ne pouvait mémoriser celles-ci dans un tableau. Elles peuvent être mémorisées dans un objet ArrayList qui implémente la notion de "liste d'objets". Cette classe mémorise des objets de type Object. Depuis le JDK 1.5, il existe des listes d'objets typés. Ainsi on utilisera un objet ArrayList&lt;ListeElectorale&gt; pour mémoriser les listes avant de les transférer dans un tableau. Si ce dernier s'appelle tListes, son tri sera obtenu par l'instruction :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
 <span class="normal"><a href="#__codelineno-22-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>// tri des listes

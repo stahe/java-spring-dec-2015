@@ -1466,16 +1466,16 @@
 <li>une page d'erreur si la demande n'a pu être traitée correctement</li>
 <li>une page de confirmation sinon</li>
 <li>l'action demande à une certaine vue de s'afficher [3]. Cette vue va afficher des données qu'on appelle le <strong>modèle de la vue</strong>. C'est le <strong>M</strong> de MVC. L'action va créer ce modèle M [2c] et demander à une vue <strong>V</strong> de s'afficher [3] ;</li>
-<li><strong>réponse</strong> - la vue <strong>V</strong> choisie utilise le modèle <strong>M</strong> construit par l'action pour initialiser les parties dynamiques de la réponse HTML qu'elle doit envoyer au client puis envoie cette réponse.
-Pour un service web / jSON, l'architecture précédente est légèrement modifiée :</li>
+<li><strong>réponse</strong> - la vue <strong>V</strong> choisie utilise le modèle <strong>M</strong> construit par l'action pour initialiser les parties dynamiques de la réponse HTML qu'elle doit envoyer au client puis envoie cette réponse.</li>
 </ol>
+<p>Pour un service web / jSON, l'architecture précédente est légèrement modifiée :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046B0000015D36B32E26.png" style="display:inline-block; margin:4px;width:14.963cm;height:4.618cm;" /></td></tr></table>
 
 <ul>
 <li>en [4a], le modèle qui est une classe Java est transformé en chaîne jSON par une bibliothèque jSON ;</li>
-<li>en [4b], cette chaîne jSON est envoyée au navigateur ;
-Maintenant, précisons le lien entre architecture web MVC et architecture en couches. Selon la définition qu'on donne au <strong>modèle</strong>, ces deux concepts sont liés ou non. Prenons une application web Spring MVC à une couche :</li>
+<li>en [4b], cette chaîne jSON est envoyée au navigateur ;</li>
 </ul>
+<p>Maintenant, précisons le lien entre architecture web MVC et architecture en couches. Selon la définition qu'on donne au <strong>modèle</strong>, ces deux concepts sont liés ou non. Prenons une application web Spring MVC à une couche :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DE00000164C5D9CDE1.png" style="display:inline-block; margin:4px;width:13.097cm;height:4.71cm;" /></td></tr></table>
 
 <p>Si nous implémentons la couche [Web] avec Spring MVC, nous aurons bien une architecture web MVC mais pas une architecture multicouche. Ici, la couche [web] s'occupera de tout : présentation, métier, accès aux données. Ce sont les actions qui feront ce travail.</p>
@@ -1490,9 +1490,9 @@ Maintenant, précisons le lien entre architecture web MVC et architecture en cou
 <p>Beaucoup d'auteurs considèrent que ce qui est à droite de la couche [Web] forme le modèle M du MVC. Pour éviter les ambigüités on peut parler :</p>
 <ul>
 <li>du <strong>modèle du domaine</strong> lorsqu'on désigne tout ce qui est à droite de la couche [Web]</li>
-<li>du <strong>modèle de la vue</strong> lorsqu'on désigne les données affichées par une vue V
-Dans la suite, le terme " modèle M " désignera exclusivement le <strong>modèle d'une vue</strong> V.</li>
+<li>du <strong>modèle de la vue</strong> lorsqu'on désigne les données affichées par une vue V</li>
 </ul>
+<p>Dans la suite, le terme " modèle M " désignera exclusivement le <strong>modèle d'une vue</strong> V.</p>
 <h2 id="134-un-projet-web-json-avec-spring-mvc">13.4. Un projet web / jSON avec Spring MVC</h2>
 <p>Le site [<a href="http://spring.io/guides"><u>http://spring.io/guides</u></a>] offre des tutoriels de démarrage pour découvrir l'écosystème Spring. Nous allons suivre l'un d'eux pour découvrir la configuration Maven nécessaire à un projet Spring MVC.</p>
 <h3 id="1341-le-projet-de-demonstration">13.4.1. Le projet de démonstration</h3>
@@ -1508,9 +1508,9 @@ Dans la suite, le terme " modèle M " désignera exclusivement le <strong>mod�
 <li>en [3], on choisit le projet Maven ;</li>
 <li>en [4], on prend la version finale du guide ;</li>
 <li>en [5], on valide ;</li>
-<li>en [6], le projet importé ;
-Les services web accessibles via des URL standard et qui délivrent du texte jSON sont souvent appelés des services REST (REpresentational State Transfer). Un service est dit Restful s'il respecte certaines règles.</li>
+<li>en [6], le projet importé ;</li>
 </ul>
+<p>Les services web accessibles via des URL standard et qui délivrent du texte jSON sont souvent appelés des services REST (REpresentational State Transfer). Un service est dit Restful s'il respecte certaines règles.</p>
 <p>Examinons maintenant le projet importé, d'abord sa configuration Maven.</p>
 <h3 id="1342-configuration-maven">13.4.2. Configuration Maven</h3>
 <p>Le fichier [pom.xml] est le suivant :</p>
@@ -1613,9 +1613,9 @@ Les services web accessibles via des URL standard et qui délivrent du texte jSO
 <ul>
 <li>lignes 6-8 : les propriétés du projet Maven. Manque une balise [&lt;packaging&gt;] indiquant le type du fichier produit par la compilation Maven. En l'absence de celle-ci, c'est le type [jar] qui est utilisé. L'application est donc une application exécutable de type console, et non une application web où le packaging serait alors [war] ;</li>
 <li>lignes 10-14 : le projet Maven a un projet parent [spring-boot-starter-parent]. C'est lui qui définit l'essentiel des dépendances du projet. Elles peuvent être suffisantes, auquel cas on n'en rajoute pas, ou pas, auquel cas on rajoute les dépendances manquantes ;</li>
-<li>lignes 17-20 : l'artifact [spring-boot-starter-web] amène avec lui les bibliothèques nécessaires à un projet Spring MVC de type service web où il n'y a pas de vues générées. Cet artifact amène avec lui un très grand nombre de bibliothèques dont celles d'un serveur Tomcat embarqué. C'est sur ce serveur que l'application sera exécutée ;
-Les bibliothèques amenées par cette configuration sont très nombreuses :</li>
+<li>lignes 17-20 : l'artifact [spring-boot-starter-web] amène avec lui les bibliothèques nécessaires à un projet Spring MVC de type service web où il n'y a pas de vues générées. Cet artifact amène avec lui un très grand nombre de bibliothèques dont celles d'un serveur Tomcat embarqué. C'est sur ce serveur que l'application sera exécutée ;</li>
 </ul>
+<p>Les bibliothèques amenées par cette configuration sont très nombreuses :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013900000130C601B465.png" style="display:inline-block; margin:4px;width:5.791cm;height:5.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F700000110A13A7F1F.png" style="display:inline-block; margin:4px;width:4.57cm;height:5.039cm;" /></td></tr></table>
 
 <p>Ci-dessus on voit les trois archives du serveur Tomcat.</p>
@@ -1820,12 +1820,12 @@ Les bibliothèques amenées par cette configuration sont très nombreuses :</li
 <ul>
 <li>ligne 13 : le serveur Tomcat démarre sur le port 8080 (ligne 12) ;</li>
 <li>ligne 17 : la servlet [DispatcherServlet] est présente ;</li>
-<li>ligne 20 : la méthode [GreetingController.greeting] a été découverte ;
-Pour tester l'application web, on demande l'URL [http://localhost:8080/greeting] :</li>
+<li>ligne 20 : la méthode [GreetingController.greeting] a été découverte ;</li>
 </ul>
+<p>Pour tester l'application web, on demande l'URL [http://localhost:8080/greeting] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000145000000802108509F.png" style="display:inline-block; margin:4px;width:5.609cm;height:2.208cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019F00000085614557B2.png" style="display:inline-block; margin:4px;width:7.68cm;height:2.461cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>On reçoit bien la chaîne jSON attendue. Il peut être intéressant de voir les entêtes HTTP envoyés par le serveur. Pour cela, on va utiliser l'extension de Chrome appelée [Advanced Rest Client] (Chrome / Ctrl-T / Menu [Applications] / [Advanced Rest Client] - cf Annexes page 422) :</p>
+<p>On reçoit bien la chaîne jSON attendue. Il peut être intéressant de voir les entêtes HTTP envoyés par le serveur. Pour cela, on va utiliser l'extension de Chrome appelée [Advanced Rest Client] (Chrome / Ctrl-T / Menu [Applications] / [Advanced Rest Client] - cf Annexes page 420) :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000535000004DB0D231B7F.png" style="display:inline-block; margin:4px;width:17.635cm;height:16.445cm;" /></td></tr></table>
 
 <ul>
@@ -1849,9 +1849,9 @@ Pour tester l'application web, on demande l'URL [http://localhost:8080/greeting]
 <li>en [1] : on exécute une cible Maven ;</li>
 <li>en [2] : il y a deux cibles (goals) : [clean] pour supprimer le dossier [target] du projet Maven, [package] pour le régénérer ;</li>
 <li>en [3] : le dossier [target] généré, le sera dans ce dossier ;</li>
-<li>en [4] : on génère la cible ;
-Dans les logs qui apparaissent dans la console, il est important de voir apparaître le plugin [spring-boot-maven-plugin]. C'est lui qui génère l'archive exécutable.</li>
+<li>en [4] : on génère la cible ;</li>
 </ul>
+<p>Dans les logs qui apparaissent dans la console, il est important de voir apparaître le plugin [spring-boot-maven-plugin]. C'est lui qui génère l'archive exécutable.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="o">[</span><span class="n">INFO</span><span class="o">]</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">maven</span><span class="o">-</span><span class="n">plugin</span><span class="p">:</span><span class="mf">1.1.0</span><span class="p">.</span><span class="na">RELEASE</span><span class="p">:</span><span class="n">repackage</span><span class="w"> </span><span class="p">(</span><span class="k">default</span><span class="p">)</span><span class="w"> </span><span class="err">@</span><span class="w"> </span><span class="n">gs</span><span class="o">-</span><span class="n">rest</span><span class="o">-</span><span class="n">service</span><span class="w"> </span><span class="o">---</span>
 </code></pre></div></td></tr></table></div>
 <p>Avec une console, on se place dans le dossier généré :</p>
@@ -1874,9 +1874,9 @@ Dans les logs qui apparaissent dans la console, il est important de voir appara�
 <a id="__codelineno-8-9" name="__codelineno-8-9"></a>...
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 5 : l'archive générée ;
-Cette archive est exécutée de la façon suivante :</li>
+<li>ligne 5 : l'archive générée ;</li>
 </ul>
+<p>Cette archive est exécutée de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -1937,9 +1937,9 @@ Cette archive est exécutée de la façon suivante :</li>
 <a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 9 : il faut indiquer qu'on va générer une archive war (Web ARchive) ;
-Il faut par ailleurs configurer l'application web. En l'absence de fichier [web.xml], cela se fait avec une classe héritant de [SpringBootServletInitializer] :</li>
+<li>ligne 9 : il faut indiquer qu'on va générer une archive war (Web ARchive) ;</li>
 </ul>
+<p>Il faut par ailleurs configurer l'application web. En l'absence de fichier [web.xml], cela se fait avec une classe héritant de [SpringBootServletInitializer] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000102000000D1A9F9B1A9.png" style="display:inline-block; margin:4px;width:4.78cm;height:3.87cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ApplicationInitializer] est la suivante :</p>
@@ -1972,15 +1972,15 @@ Il faut par ailleurs configurer l'application web. En l'absence de fichier [web.
 <ul>
 <li>ligne 6 : la classe [ApplicationInitializer] étend la classe [SpringBootServletInitializer] ;</li>
 <li>ligne 9 : la méthode [configure] est redéfinie (ligne 8) ;</li>
-<li>ligne 10 : on fournit la classe qui configure le projet ;
-Pour exécuter le projet, on peut procéder ainsi :</li>
+<li>ligne 10 : on fournit la classe qui configure le projet ;</li>
 </ul>
+<p>Pour exécuter le projet, on peut procéder ainsi :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E700000158F9710373.png" style="display:inline-block; margin:4px;width:16.603cm;height:4.551cm;" /></td></tr></table>
 
 <ul>
-<li>en [1-2], on exécute le projet sur l'un des serveurs enregistrés dans l'IDE Eclipse ;
-Ceci fait, on peut demander l'URL [http://localhost:8080/gs-rest-service/greeting/?name=Mitchell] dans un navigateur :</li>
+<li>en [1-2], on exécute le projet sur l'un des serveurs enregistrés dans l'IDE Eclipse ;</li>
 </ul>
+<p>Ceci fait, on peut demander l'URL [http://localhost:8080/gs-rest-service/greeting/?name=Mitchell] dans un navigateur :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022B0000008EA361FFF2.png" style="display:inline-block; margin:4px;width:10.28cm;height:2.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <h3 id="13410-conclusion">13.4.10. Conclusion</h3>
@@ -2098,15 +2098,15 @@ Ceci fait, on peut demander l'URL [http://localhost:8080/gs-rest-service/greetin
 <li>lignes 11-15 : le projet Maven parent déjà utilisé pour la couche [DAO] ;</li>
 <li>lignes 18-22 : la dépendance sur la couche [DAO] ;</li>
 <li>lignes 23-26 : la dépendance sur l'artifact [spring-boot-starter-web]. Cet artifact amène avec lui toutes les dépendances nécessaires à la création d'un service web / jSON. Il amène aussi des bibliothèques inutiles. Une configuration plus précise serait donc nécessaire. Mais cette configuration est pratique pour démarrer ;</li>
-<li>lignes 28-30 : la dépendance sur l'artifact [spring-boot-starter] permet de gérer les annotation Spring Boot ;
-Les dépendances amenées par cette configuration sont les suivantes :</li>
+<li>lignes 28-30 : la dépendance sur l'artifact [spring-boot-starter] permet de gérer les annotation Spring Boot ;</li>
 </ul>
+<p>Les dépendances amenées par cette configuration sont les suivantes :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F80000021C318645BE.png" style="display:inline-block; margin:4px;width:16.828cm;height:7.144cm;" /></td></tr></table>
 
 <ul>
-<li>en [1], on voit qu'Eclipse a vu la dépendance sur l'archive du projet [intro-spring-data-01] ;
-Les dépendances ci-dessus sont à la fois celles de la couche [DAO] et de la couche [web].</li>
+<li>en [1], on voit qu'Eclipse a vu la dépendance sur l'archive du projet [intro-spring-data-01] ;</li>
 </ul>
+<p>Les dépendances ci-dessus sont à la fois celles de la couche [DAO] et de la couche [web].</p>
 <h4 id="13531-configuration-de-la-couche-web">13.5.3.1. Configuration de la couche [web]</h4>
 <p>La couche [web] est configurée par un fichier [AppConfig] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F7000000CD6A8D0755.png" style="display:inline-block; margin:4px;width:4.57cm;height:3.799cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -2308,9 +2308,9 @@ Les dépendances ci-dessus sont à la fois celles de la couche [DAO] et de la co
 <li>lignes 47-57 : le mappeur jSON qui permet d'avoir une catégorie avec ses produits. On notera que lorsqu'on demande une catégorie avec ses produits, il faut à la fois configurer le filtre jSON de la classe [Categorie] et celui de la classe [Produit]. Il en est toujours ainsi. Lorsqu'on sérialise / désérialise une classe en jSON, il faut configurer le filtre jSON de la classe et ceux de toutes les dépendances à inclure dans celle-ci ;</li>
 <li>lignes 59-69 : le mappeur jSON qui permet d'avoir un produit avec sa catégorie ;</li>
 <li>lignes 71-80 : le mappeur jSON qui permet d'avoir une catégorie sans ses produits ;</li>
-<li>lignes 82-91 : le mappeur jSON qui permet d'avoir un produit sans sa catégorie ;
-La classe [AppConfig] configure l'ensemble de l'application, ç-à-d les couches [web] et [DAO] :</li>
+<li>lignes 82-91 : le mappeur jSON qui permet d'avoir un produit sans sa catégorie ;</li>
 </ul>
+<p>La classe [AppConfig] configure l'ensemble de l'application, ç-à-d les couches [web] et [DAO] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
@@ -2337,9 +2337,9 @@ La classe [AppConfig] configure l'ensemble de l'application, ç-à-d les couches
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 9 : on importe les beans de la couche [DAO] et ceux de la couche [web] ;</li>
-<li>ligne 8 : indique dans quels packages trouver d'autres beans Spring ;
-On notera que nulle part, nous n'avons utilisé l'annotation [@EnableAutoConfiguration]. Nous avons préféré contrôler la configuration nous-mêmes.</li>
+<li>ligne 8 : indique dans quels packages trouver d'autres beans Spring ;</li>
 </ul>
+<p>On notera que nulle part, nous n'avons utilisé l'annotation [@EnableAutoConfiguration]. Nous avons préféré contrôler la configuration nous-mêmes.</p>
 <h3 id="1354-le-modele-de-lapplication">13.5.4. Le modèle de l'application</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F5000000A53F2ECF2A.png" style="display:inline-block; margin:4px;width:4.54cm;height:3.06cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2546,15 +2546,15 @@ On notera que nulle part, nous n'avons utilisé l'annotation [@EnableAutoConfigu
 <li>ligne 12 : la classe est un singleton Spring ;</li>
 <li>ligne 13 : qui implémente l'interface [IDao] de la couche [DAO] ;</li>
 <li>lignes 16-17 : injection d'une référence sur la couche [DAO] ;</li>
-<li>lignes 19-99 : implémentation de l'interface [IDao] ;
-L'architecture de la couche web évolue comme suit :</li>
+<li>lignes 19-99 : implémentation de l'interface [IDao] ;</li>
 </ul>
+<p>L'architecture de la couche web évolue comme suit :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000466000001628820A007.png" style="display:inline-block; margin:4px;width:14.896cm;height:4.683cm;" /></td></tr></table>
 
 <ul>
-<li>en [2b], les méthodes du ou des contrôleurs communiquent avec le singleton [ApplicationModel] ;
-Cette stratégie amène de la souplesse quant à la gestion d'un éventuel cache. La classe [ApplicationModel] peut servir à mémoriser des informations obtenues auprès de la couche [DAO] ou encore des données de configuration. Cela peut être utile lorsqu'on n'a pas la maîtrise de la couche [DAO]. Cette stratégie de cache peut évoluer au fil du temps. Les modifications n'auront aucun impact sur le code du ou des contrôleurs.</li>
+<li>en [2b], les méthodes du ou des contrôleurs communiquent avec le singleton [ApplicationModel] ;</li>
 </ul>
+<p>Cette stratégie amène de la souplesse quant à la gestion d'un éventuel cache. La classe [ApplicationModel] peut servir à mémoriser des informations obtenues auprès de la couche [DAO] ou encore des données de configuration. Cela peut être utile lorsqu'on n'a pas la maîtrise de la couche [DAO]. Cette stratégie de cache peut évoluer au fil du temps. Les modifications n'auront aucun impact sur le code du ou des contrôleurs.</p>
 <h3 id="1355-le-controleur">13.5.5. Le contrôleur</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004550000016BDC470FEB.png" style="display:inline-block; margin:4px;width:14.672cm;height:4.803cm;" /></td></tr></table>
 
@@ -2965,9 +2965,9 @@ Cette stratégie amène de la souplesse quant à la gestion d'un éventuel cache
 <ul>
 <li>ligne 10 : la méthode statique [SpringApplication.run] est exécutée. La classe [SpringApplication] est une classe du projet [Spring Boot] (ligne 3). On lui passe deux paramètres :</li>
 <li>[AppConfig.<strong>class</strong>] : la classe qui configure la totalité de l'application ;</li>
-<li>[args] : les éventuels arguments passés à la méthode [main] ligne 9. Ce paramètre n'est pas utilisé ici ;
-Lorsqu'on exécute cette classe, on a les logs suivants :</li>
+<li>[args] : les éventuels arguments passés à la méthode [main] ligne 9. Ce paramètre n'est pas utilisé ici ;</li>
 </ul>
+<p>Lorsqu'on exécute cette classe, on a les logs suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
@@ -3095,30 +3095,30 @@ Lorsqu'on exécute cette classe, on a les logs suivants :</li>
 <p>Pour faire les tests, nous générons la base de données MySQL [dbintrospringdata] à partir du script SQL [dbintrospringdata.sql] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B70000007E76D27739.png" style="display:inline-block; margin:4px;width:3.39cm;height:2.33cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>Ceci fait, nous utilisons le client [Advanced Rest Client] (cf page 422) pour interroger les URL exposées par le service web / jSON (le service web / jSON doit être lancé). </p>
+<p>Ceci fait, nous utilisons le client [Advanced Rest Client] (cf page 420) pour interroger les URL exposées par le service web / jSON (le service web / jSON doit être lancé). </p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DB000001FB88B90933.png" style="display:inline-block; margin:4px;width:13.058cm;height:6.708cm;" /></td></tr></table>
 
 <ul>
-<li>en [1-3], nous demandons l'URL [/getAllCategories] via une commande HTTP GET ;
-Nous obtenons la réponse suivante :</li>
+<li>en [1-3], nous demandons l'URL [/getAllCategories] via une commande HTTP GET ;</li>
 </ul>
+<p>Nous obtenons la réponse suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000031C000002CDA89C5976.png" style="display:inline-block; margin:4px;width:10.53cm;height:9.486cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], la requête HTTP du client ;</li>
 <li>en [2], la réponse HTTP du serveur ;</li>
 <li>en [3], le statut [200 OK] indique que le serveur a correctement traité la demande ;</li>
-<li>en [4], la réponse jSON du serveur ;
-La réponse jSON complète est la suivante :</li>
+<li>en [4], la réponse jSON du serveur ;</li>
 </ul>
+<p>La réponse jSON complète est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>{&quot;status&quot;:0,&quot;messages&quot;:null,&quot;body&quot;:[{&quot;id&quot;:415,&quot;version&quot;:0,&quot;nom&quot;:&quot;categorie0&quot;,&quot;produits&quot;:[{&quot;id&quot;:1849,&quot;version&quot;:0,&quot;nom&quot;:&quot;produit00&quot;,&quot;idCategorie&quot;:415,&quot;prix&quot;:100.0,&quot;description&quot;:&quot;desc00&quot;},{&quot;id&quot;:1850,&quot;version&quot;:0,&quot;nom&quot;:&quot;produit01&quot;,&quot;idCategorie&quot;:415,&quot;prix&quot;:101.0,&quot;description&quot;:&quot;desc01&quot;},{&quot;id&quot;:1851,&quot;version&quot;:0,&quot;nom&quot;:&quot;produit02&quot;,&quot;idCategorie&quot;:415,&quot;prix&quot;:102.0,&quot;description&quot;:&quot;desc02&quot;},{&quot;id&quot;:1852,&quot;version&quot;:0,&quot;nom&quot;:&quot;produit03&quot;,&quot;idCategorie&quot;:415,&quot;prix&quot;:103.0,&quot;description&quot;:&quot;desc03&quot;},{&quot;id&quot;:1853,&quot;version&quot;:0,&quot;nom&quot;:&quot;produit04&quot;,&quot;idCategorie&quot;:415,&quot;prix&quot;:104.0,&quot;description&quot;:&quot;desc04&quot;}]},{&quot;id&quot;:416,&quot;version&quot;:0,&quot;nom&quot;:&quot;categorie1&quot;,&quot;produits&quot;:[{&quot;id&quot;:1856,&quot;version&quot;:0,&quot;nom&quot;:&quot;produit12&quot;,&quot;idCategorie&quot;:416,&quot;prix&quot;:112.0,&quot;description&quot;:&quot;desc12&quot;},{&quot;id&quot;:1857,&quot;version&quot;:0,&quot;nom&quot;:&quot;produit13&quot;,&quot;idCategorie&quot;:416,&quot;prix&quot;:113.0,&quot;description&quot;:&quot;desc13&quot;},{&quot;id&quot;:1858,&quot;version&quot;:0,&quot;nom&quot;:&quot;produit14&quot;,&quot;idCategorie&quot;:416,&quot;prix&quot;:114.0,&quot;description&quot;:&quot;desc14&quot;},{&quot;id&quot;:1854,&quot;version&quot;:0,&quot;nom&quot;:&quot;produit10&quot;,&quot;idCategorie&quot;:416,&quot;prix&quot;:110.0,&quot;description&quot;:&quot;desc10&quot;},{&quot;id&quot;:1855,&quot;version&quot;:0,&quot;nom&quot;:&quot;produit11&quot;,&quot;idCategorie&quot;:416,&quot;prix&quot;:111.0,&quot;description&quot;:&quot;desc11&quot;}]}]}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><strong>status:0</strong> signifie qu'il n'y a pas eu d'erreurs côté serveur ;</li>
 <li><strong>messages : null</strong> signifie qu'il n'y a pas de messages d'erreur ;</li>
-<li><strong>body</strong> : est le corps de la réponse, ici la liste des catégories avec leurs produits. Il y a deux catégories avec chacune 5 produits ;
-Nous allons ajouter à la catégorie [categorie1], le produit [produit15]. Pour cela nous allons utiliser l'URL [/addCategories] qui a le code suivant :</li>
+<li><strong>body</strong> : est le corps de la réponse, ici la liste des catégories avec leurs produits. Il y a deux catégories avec chacune 5 produits ;</li>
 </ul>
+<p>Nous allons ajouter à la catégorie [categorie1], le produit [produit15]. Pour cela nous allons utiliser l'URL [/addCategories] qui a le code suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
@@ -3181,9 +3181,9 @@ Nous allons ajouter à la catégorie [categorie1], le produit [produit15]. Pour 
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : le client doit faire un POST et la valeur postée doit être une chaîne jSON ;</li>
-<li>lignes 9-12 : la valeur postée doit être une liste de catégories avec leurs produits associés ;
-Nous allons créer une catégorie [categorie2] avec un produit [produit21]. La chaîne jSON à envoyer est alors la suivante :</li>
+<li>lignes 9-12 : la valeur postée doit être une liste de catégories avec leurs produits associés ;</li>
 </ul>
+<p>Nous allons créer une catégorie [categorie2] avec un produit [produit21]. La chaîne jSON à envoyer est alors la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>[{&quot;id&quot;:null,&quot;version&quot;:0,&quot;nom&quot;:&quot;categorie2&quot;,&quot;produits&quot;:[{&quot;id&quot;:null,&quot;version&quot;:0,&quot;nom&quot;:&quot;produit21&quot;,&quot;idCategorie&quot;:null,&quot;prix&quot;:111.0,&quot;description&quot;:&quot;desc21&quot;}]}]
 </code></pre></div></td></tr></table></div>
 <p>La requête au service web / jSON est faite de la façon suivante :</p>
@@ -3193,9 +3193,9 @@ Nous allons créer une catégorie [categorie2] avec un produit [produit21]. La c
 <li>en [1], l'URL demandée ;</li>
 <li>en [2], elle est demandée via une opération POST ;</li>
 <li>en [3], la chaîne jSON postée ;</li>
-<li>en [4], on indique au serveur qu'on va lui envoyer du jSON ;
-La réponse du serveur est la suivante :</li>
+<li>en [4], on indique au serveur qu'on va lui envoyer du jSON ;</li>
 </ul>
+<p>La réponse du serveur est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002A3000003BA6C0FC241.png" style="display:inline-block; margin:4px;width:8.931cm;height:12.621cm;" /></td></tr></table>
 
 <ul>
@@ -3625,20 +3625,18 @@ La réponse du serveur est la suivante :</li>
 <li>ligne 24 : la classe [RestTemplate] est construite avec ce composant. Comme elle s'appuie sur celui-ci pour communiquer avec le service web / jSON, les échanges seront bien soumis au timeout ;</li>
 <li>le client et le serveur vont s'échanger des lignes de texte. Un convertisseur s'occupe de sérialiser un objet en texte et inversement de désérialiser un texte en objet. Il peut y avoir plusieurs convertisseurs associés à la classe [RestTemplate] et celui choisi à un moment donné dépend des entêtes HTTP envoyés par le serveur. Ici, nous n'aurons aucun convertisseur. Aussi, le composant [RestTemplate] ne cherchera pas à convertir d'une façon ou d'une autre les deux éléments suivants :</li>
 <li>le texte posté ;</li>
-<li>
-<p>le texte reçu en réponse ;
-Ces textes seront des chaînes jSON qui seront donc laissées en l'état par le composant [RestTemplate]. C'est nous développeur, qui ferons les séralisations / désérialisations jSON nécessaires. Ceci parce que les filtres à appliquer à la valeur postée et à la réponse reçue peuvent être différents et l'expérience montre qu'il est plus facile de les gérer soi-même que d'essayer de configurer le composant [RestTemplate] afin qu'il utilise le bon convertisseur jSON ;</p>
-</li>
-<li>
-<p>lignes 42-92 : définissent des filtres jSON. Ce sont les mêmes que ceux du serveur présentés et expliqués au paragraphe 13.5.3.1, page 231 ;</p>
-</li>
+<li>le texte reçu en réponse ;</li>
+</ul>
+<p>Ces textes seront des chaînes jSON qui seront donc laissées en l'état par le composant [RestTemplate]. C'est nous développeur, qui ferons les séralisations / désérialisations jSON nécessaires. Ceci parce que les filtres à appliquer à la valeur postée et à la réponse reçue peuvent être différents et l'expérience montre qu'il est plus facile de les gérer soi-même que d'essayer de configurer le composant [RestTemplate] afin qu'il utilise le bon convertisseur jSON ;</p>
+<ul>
+<li>lignes 42-92 : définissent des filtres jSON. Ce sont les mêmes que ceux du serveur présentés et expliqués au paragraphe 13.5.3.1, page 229 ;</li>
 <li>lignes 43-46 : un mappeur jSON sans filtres ;</li>
 <li>lignes 64-68 : un mappeur jSON pour avoir une catégorie sans ses produits ;</li>
 <li>lignes 48-58 : un mappeur jSON pour avoir une catégorie avec ses produits ;</li>
 <li>lignes 83-92 : un mappeur jSON pour avoir un produit sans sa catégorie ;</li>
-<li>lignes 60-70 : un mappeur jSON pour avoir un produit avec sa catégorie ;
-Tous ces beans vont être disponibles aux codes de la couche [DAO] ainsi qu'au test Junit.</li>
+<li>lignes 60-70 : un mappeur jSON pour avoir un produit avec sa catégorie ;</li>
 </ul>
+<p>Tous ces beans vont être disponibles aux codes de la couche [DAO] ainsi qu'au test Junit.</p>
 <h4 id="13632-les-entites">13.6.3.2. Les entités</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EA000000B3AD48A719.png" style="display:inline-block; margin:4px;width:4.33cm;height:3.311cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -3895,11 +3893,11 @@ Tous ces beans vont être disponibles aux codes de la couche [DAO] ainsi qu'au t
 <h4 id="13633-la-classe-daoexception">13.6.3.3. La classe [DaoException]</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D1000000C90F5AC4AE.png" style="display:inline-block; margin:4px;width:3.87cm;height:3.72cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>Lorsque la couche [DAO] rencontrera une erreur, elle lancera une exception de type [DaoException]. Cette classe est celle utilisée côté serveur et décrite au paragraphe 11.3.7, page 193.</p>
+<p>Lorsque la couche [DAO] rencontrera une erreur, elle lancera une exception de type [DaoException]. Cette classe est celle utilisée côté serveur et décrite au paragraphe 11.3.7, page 192.</p>
 <h4 id="13634-linterface-de-la-couche-dao">13.6.3.4. L'interface de la couche [DAO]</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D1000000C9D2A8FD21.png" style="display:inline-block; margin:4px;width:3.87cm;height:3.72cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>La couche [DAO] présente l'interface [IDao] décrite au paragraphe 11.3.7, page 193.</p>
+<p>La couche [DAO] présente l'interface [IDao] décrite au paragraphe 11.3.7, page 192.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-30-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-30-3"> 3</a></span>
@@ -4007,7 +4005,7 @@ Tous ces beans vont être disponibles aux codes de la couche [DAO] ainsi qu'au t
 <h4 id="13635-la-reponse-du-service-web-json">13.6.3.5. La réponse du service web / jSON</h4>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D1000000C9C8BF23B9.png" style="display:inline-block; margin:4px;width:3.87cm;height:3.72cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>Nous avons vu que toutes les URL du service web / jSON rendaient un type [Response] défini au paragraphe 13.5.5.3, page 238. Nous reprenons ici cette classe :</p>
+<p>Nous avons vu que toutes les URL du service web / jSON rendaient un type [Response] défini au paragraphe 13.5.5.3, page 236. Nous reprenons ici cette classe :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-31-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-31-3"> 3</a></span>
@@ -4164,13 +4162,11 @@ Tous ces beans vont être disponibles aux codes de la couche [DAO] ainsi qu'au t
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 15-16 : injection du composant [RestTemplate] qui assure la communication avec le serveur ;</li>
-<li>
-<p>lignes 17-18 : injection de l'URL du service web / jSON ;
-L'implémentation des méthodes de communication avec le serveur est factorisée dans la méthode [getResponse] :</p>
-</li>
-<li>
-<p>ligne 21 : la méthode reçoit 2 paramètres :</p>
-</li>
+<li>lignes 17-18 : injection de l'URL du service web / jSON ;</li>
+</ul>
+<p>L'implémentation des méthodes de communication avec le serveur est factorisée dans la méthode [getResponse] :</p>
+<ul>
+<li>ligne 21 : la méthode reçoit 2 paramètres :</li>
 <li>[url] : l'URL demandée ;</li>
 <li>[jsonPost] : la chaîne jSON à poster, null sinon. Si [jsonPost==null], la requête de l'URL est faite avec un GET, sinon avec un POST ; </li>
 <li>ligne 38 : l'instruction qui fait la requête au serveur et reçoit sa réponse. Le composant [RestTemplate] offre un nombre important de méthodes d'échange avec le serveur. Nous avons choisi ici la méthode [exchange], mais il en existe d'autres ;</li>
@@ -4282,9 +4278,9 @@ L'implémentation des méthodes de communication avec le serveur est factorisée
 <li>ligne 17 : la classe [Dao] est un composant Spring dans lequel on peut donc injecter d'autres composants Spring ;</li>
 <li>ligne 18 : la classe [Dao] étend la classe [AbstractDao] que nous venons de voir et implémente l'interface [IDao] ;</li>
 <li>lignes 20-21 : on injecte le contexte Spring afin d'avoir accès à ses beans ;</li>
-<li>lignes 24-38 : injection des mappeurs jSON définis dans la classe [AppConfig] présentée au paragraphe 13.6.2, page 249 ;
-Les implémentations des différentes méthodes de l'interface [IDao] suivent toutes le même schéma. Nous allons présenter deux méthodes, l'une s'appuyant sur une opération [POST], l'autre sur une opération [GET].</li>
+<li>lignes 24-38 : injection des mappeurs jSON définis dans la classe [AppConfig] présentée au paragraphe 13.6.2, page 247 ;</li>
 </ul>
+<p>Les implémentations des différentes méthodes de l'interface [IDao] suivent toutes le même schéma. Nous allons présenter deux méthodes, l'une s'appuyant sur une opération [POST], l'autre sur une opération [GET].</p>
 <p>Un exemple de [GET] : [getCategorieByNameWithProduits]</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-34-2"> 2</a></span>
@@ -4341,9 +4337,9 @@ Les implémentations des différentes méthodes de l'interface [IDao] suivent to
 <li>
 <p>l'URL du service interrogée [/getCategorieByNameWithProduits/nom] ;</p>
 </li>
-<li>la valeur postée. Ici il n'y en a pas ;
-La méthode [getResponse] rend un type String qui est la réponse jSON envoyée par le serveur. On désérialise cette réponse jSON de la façon suivante :</li>
+<li>la valeur postée. Ici il n'y en a pas ;</li>
 </ul>
+<p>La méthode [getResponse] rend un type String qui est la réponse jSON envoyée par le serveur. On désérialise cette réponse jSON de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1">1</a></span>
 <span class="normal"><a href="#__codelineno-36-2">2</a></span>
 <span class="normal"><a href="#__codelineno-36-3">3</a></span>
@@ -4357,9 +4353,9 @@ La méthode [getResponse] rend un type String qui est la réponse jSON envoyée 
 <li>lignes 11-17 : on teste le statut de la réponse. Si le statut est différent de 0, alors c'est qu'il y a eu une erreur côté serveur. On lance alors une exception (ligne 13), en reprenant les informations contenues dans la réponse (statut et liste de messages d'erreur) ;</li>
 <li>ligne 16 : s'il n'y a pas eu d'erreur côté serveur, on rend le corps du type [Response&lt;Categorie&gt;], ç-à-d la catégorie demandée ;</li>
 <li>lignes 18-19 : on gère l'exception lancée ligne 16 ;</li>
-<li>lignes 20-22 : traitent toutes les autres exceptions ;
-Un exemple de [POST] : [addCategories]</li>
+<li>lignes 20-22 : traitent toutes les autres exceptions ;</li>
 </ul>
+<p>Un exemple de [POST] : [addCategories]</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-37-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-37-3"> 3</a></span>
@@ -4425,9 +4421,9 @@ Un exemple de [POST] : [addCategories]</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 11-17 : gestion de la réponse du serveur (erreur ou pas) ;</li>
-<li>lignes 20-22 : gestion des exceptions ;
-Toutes les autres méthodes suivent le canevas des deux méthodes présentées.</li>
+<li>lignes 20-22 : gestion des exceptions ;</li>
 </ul>
+<p>Toutes les autres méthodes suivent le canevas des deux méthodes présentées.</p>
 <h3 id="1364-le-test-junit">13.6.4. Le test JUnit</h3>
 <p>Revenons à l'architecture client / serveur en cours de construction :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004730000030E094525DC.png" style="display:inline-block; margin:4px;width:15.069cm;height:10.345cm;" /></td></tr></table>
