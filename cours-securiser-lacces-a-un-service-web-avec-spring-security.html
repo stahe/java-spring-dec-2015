@@ -1854,7 +1854,7 @@ Nous nous souvenons que seul l'utilisateur user/password est reconnu par Spring 
 <ul>
 <li>en [4], nous nous identifions ;</li>
 <li>en [5], Spring Security nous redirige vers l'URL [/hello] car c'est l'URL que nous demandions lorsque nous avons été redirigés vers la page de login. L'identité de l'utilisateur a été affichée par la ligne suivante de [hello.html] :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>    &lt;h1 th:inline=&quot;text&quot;&gt;Hello [[${#httpServletRequest.remoteUser}]]!&lt;/h1&gt;
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="w">    </span><span class="o">&lt;</span><span class="nx">h1</span><span class="w"> </span><span class="nx">th</span><span class="o">:</span><span class="nx">inline</span><span class="o">=</span><span class="s2">&quot;text&quot;</span><span class="o">&gt;</span><span class="nx">Hello</span><span class="w"> </span><span class="p">[[</span><span class="nx">$</span><span class="p">{</span><span class="n">#httpServletRequest</span><span class="p">.</span><span class="nx">remoteUser</span><span class="p">}]]</span><span class="o">!&lt;</span><span class="err">/h1&gt;</span>
 </code></pre></div></td></tr></table></div></li>
 </ul>
 <p>La page [5] affiche le formulaire suivant :</p>

@@ -1610,93 +1610,93 @@ Le code [client.js] est le suivant :</li>
 <span class="normal"><a href="#__codelineno-4-84">84</a></span>
 <span class="normal"><a href="#__codelineno-4-85">85</a></span>
 <span class="normal"><a href="#__codelineno-4-86">86</a></span>
-<span class="normal"><a href="#__codelineno-4-87">87</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>// données globales
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>var url;
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>var posted;
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>var response;
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>var method;
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>var baseUrl = &#39;http://localhost:8080&#39;;
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>var identifiant;
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>var password;
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>var authorizationHeader;
+<span class="normal"><a href="#__codelineno-4-87">87</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// données globales</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kd">var</span><span class="w"> </span><span class="nx">url</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">posted</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kd">var</span><span class="w"> </span><span class="nx">response</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="kd">var</span><span class="w"> </span><span class="nx">method</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="kd">var</span><span class="w"> </span><span class="nx">baseUrl</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;http://localhost:8080&#39;</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="kd">var</span><span class="w"> </span><span class="nx">identifiant</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="kd">var</span><span class="w"> </span><span class="nx">password</span><span class="p">;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="kd">var</span><span class="w"> </span><span class="nx">authorizationHeader</span><span class="p">;</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a>function requestServer() {
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a>    // on récupère les informations
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a>    var urlValue = url.val();
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a>    var postedValue = posted.val();
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a>    var identifiantValue = identifiant.val();
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a>    var passwordValue = password.val();
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a>    var method = document.forms[0].elements[&#39;method&#39;].value;
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a>    authorizationCode = btoa(identifiantValue + &#39;:&#39; + passwordValue);
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a>    // on efface la réponse précédente
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a>    response.text(&quot;&quot;);
-<a id="__codelineno-4-21" name="__codelineno-4-21"></a>    // on fait un appel Ajax à la main
-<a id="__codelineno-4-22" name="__codelineno-4-22"></a>    if (method === &quot;get&quot;) {
-<a id="__codelineno-4-23" name="__codelineno-4-23"></a>        doGet(urlValue);
-<a id="__codelineno-4-24" name="__codelineno-4-24"></a>    } else {
-<a id="__codelineno-4-25" name="__codelineno-4-25"></a>        doPost(urlValue, postedValue);
-<a id="__codelineno-4-26" name="__codelineno-4-26"></a>    }
-<a id="__codelineno-4-27" name="__codelineno-4-27"></a>}
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="kd">function</span><span class="w"> </span><span class="nx">requestServer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span><span class="c1">// on récupère les informations</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">urlValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">url</span><span class="p">.</span><span class="nx">val</span><span class="p">();</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">postedValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">posted</span><span class="p">.</span><span class="nx">val</span><span class="p">();</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">identifiantValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">identifiant</span><span class="p">.</span><span class="nx">val</span><span class="p">();</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">passwordValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">password</span><span class="p">.</span><span class="nx">val</span><span class="p">();</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">forms</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">elements</span><span class="p">[</span><span class="s1">&#39;method&#39;</span><span class="p">].</span><span class="nx">value</span><span class="p">;</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">    </span><span class="nx">authorizationCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">btoa</span><span class="p">(</span><span class="nx">identifiantValue</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;:&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">passwordValue</span><span class="p">);</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">    </span><span class="c1">// on efface la réponse précédente</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">    </span><span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">    </span><span class="c1">// on fait un appel Ajax à la main</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">method</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;get&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">        </span><span class="nx">doGet</span><span class="p">(</span><span class="nx">urlValue</span><span class="p">);</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">        </span><span class="nx">doPost</span><span class="p">(</span><span class="nx">urlValue</span><span class="p">,</span><span class="w"> </span><span class="nx">postedValue</span><span class="p">);</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="p">}</span>
 <a id="__codelineno-4-28" name="__codelineno-4-28"></a>
-<a id="__codelineno-4-29" name="__codelineno-4-29"></a>function doGet(url) {
-<a id="__codelineno-4-30" name="__codelineno-4-30"></a>    // on fait un appel Ajax à la main
-<a id="__codelineno-4-31" name="__codelineno-4-31"></a>    $.ajax({
-<a id="__codelineno-4-32" name="__codelineno-4-32"></a>        headers : {
-<a id="__codelineno-4-33" name="__codelineno-4-33"></a>            &#39;Authorization&#39;:&#39;Basic &#39;+authorizationCode
-<a id="__codelineno-4-34" name="__codelineno-4-34"></a>        },
-<a id="__codelineno-4-35" name="__codelineno-4-35"></a>        url : baseUrl + url,
-<a id="__codelineno-4-36" name="__codelineno-4-36"></a>        type : &#39;GET&#39;,
-<a id="__codelineno-4-37" name="__codelineno-4-37"></a>        dataType : &#39;text&#39;,
-<a id="__codelineno-4-38" name="__codelineno-4-38"></a>        beforeSend : function() {
-<a id="__codelineno-4-39" name="__codelineno-4-39"></a>        },
-<a id="__codelineno-4-40" name="__codelineno-4-40"></a>        success : function(data) {
-<a id="__codelineno-4-41" name="__codelineno-4-41"></a>            // résultat texte
-<a id="__codelineno-4-42" name="__codelineno-4-42"></a>            response.text(data);
-<a id="__codelineno-4-43" name="__codelineno-4-43"></a>        },
-<a id="__codelineno-4-44" name="__codelineno-4-44"></a>        complete : function() {
-<a id="__codelineno-4-45" name="__codelineno-4-45"></a>        },
-<a id="__codelineno-4-46" name="__codelineno-4-46"></a>        error : function(jqXHR) {
-<a id="__codelineno-4-47" name="__codelineno-4-47"></a>            // erreur système
-<a id="__codelineno-4-48" name="__codelineno-4-48"></a>            response.text(JSON.stringify(jqXHR.statusCode()));
-<a id="__codelineno-4-49" name="__codelineno-4-49"></a>        }
-<a id="__codelineno-4-50" name="__codelineno-4-50"></a>    })
-<a id="__codelineno-4-51" name="__codelineno-4-51"></a>}
+<a id="__codelineno-4-29" name="__codelineno-4-29"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doGet</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">    </span><span class="c1">// on fait un appel Ajax à la main</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">    </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">        </span><span class="nx">headers</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">            </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="s1">&#39;Basic &#39;</span><span class="o">+</span><span class="nx">authorizationCode</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-4-35" name="__codelineno-4-35"></a><span class="w">        </span><span class="nx">url</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">baseUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="w">        </span><span class="nx">type</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">        </span><span class="nx">dataType</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;text&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">        </span><span class="nx">beforeSend</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">        </span><span class="nx">success</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-41" name="__codelineno-4-41"></a><span class="w">            </span><span class="c1">// résultat texte</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">            </span><span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="w">        </span><span class="nx">complete</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="w">        </span><span class="nx">error</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-47" name="__codelineno-4-47"></a><span class="w">            </span><span class="c1">// erreur système</span>
+<a id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="w">            </span><span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">()));</span>
+<a id="__codelineno-4-49" name="__codelineno-4-49"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-50" name="__codelineno-4-50"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-4-51" name="__codelineno-4-51"></a><span class="p">}</span>
 <a id="__codelineno-4-52" name="__codelineno-4-52"></a>
-<a id="__codelineno-4-53" name="__codelineno-4-53"></a>function doPost(url, posted) {
-<a id="__codelineno-4-54" name="__codelineno-4-54"></a>    // on fait un appel Ajax à la main
-<a id="__codelineno-4-55" name="__codelineno-4-55"></a>    $.ajax({
-<a id="__codelineno-4-56" name="__codelineno-4-56"></a>        headers : {
-<a id="__codelineno-4-57" name="__codelineno-4-57"></a>            &#39;Authorization&#39;:&#39;Basic &#39;+authorizationCode
-<a id="__codelineno-4-58" name="__codelineno-4-58"></a>        },
-<a id="__codelineno-4-59" name="__codelineno-4-59"></a>        url : baseUrl + url,
-<a id="__codelineno-4-60" name="__codelineno-4-60"></a>        type : &#39;POST&#39;,
-<a id="__codelineno-4-61" name="__codelineno-4-61"></a>        contentType : &#39;application/json; charset=UTF-8&#39;,
-<a id="__codelineno-4-62" name="__codelineno-4-62"></a>        data : posted,
-<a id="__codelineno-4-63" name="__codelineno-4-63"></a>        dataType : &#39;text&#39;,
-<a id="__codelineno-4-64" name="__codelineno-4-64"></a>        beforeSend : function() {
-<a id="__codelineno-4-65" name="__codelineno-4-65"></a>        },
-<a id="__codelineno-4-66" name="__codelineno-4-66"></a>        success : function(data) {
-<a id="__codelineno-4-67" name="__codelineno-4-67"></a>            // résultat texte
-<a id="__codelineno-4-68" name="__codelineno-4-68"></a>            response.text(data);
-<a id="__codelineno-4-69" name="__codelineno-4-69"></a>        },
-<a id="__codelineno-4-70" name="__codelineno-4-70"></a>        complete : function() {
-<a id="__codelineno-4-71" name="__codelineno-4-71"></a>        },
-<a id="__codelineno-4-72" name="__codelineno-4-72"></a>        error : function(jqXHR) {
-<a id="__codelineno-4-73" name="__codelineno-4-73"></a>            // erreur système
-<a id="__codelineno-4-74" name="__codelineno-4-74"></a>            response.text(JSON.stringify(jqXHR.statusCode()));
-<a id="__codelineno-4-75" name="__codelineno-4-75"></a>        }
-<a id="__codelineno-4-76" name="__codelineno-4-76"></a>    })
-<a id="__codelineno-4-77" name="__codelineno-4-77"></a>}
+<a id="__codelineno-4-53" name="__codelineno-4-53"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doPost</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span><span class="w"> </span><span class="nx">posted</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-54" name="__codelineno-4-54"></a><span class="w">    </span><span class="c1">// on fait un appel Ajax à la main</span>
+<a id="__codelineno-4-55" name="__codelineno-4-55"></a><span class="w">    </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+<a id="__codelineno-4-56" name="__codelineno-4-56"></a><span class="w">        </span><span class="nx">headers</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-57" name="__codelineno-4-57"></a><span class="w">            </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="s1">&#39;Basic &#39;</span><span class="o">+</span><span class="nx">authorizationCode</span>
+<a id="__codelineno-4-58" name="__codelineno-4-58"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-4-59" name="__codelineno-4-59"></a><span class="w">        </span><span class="nx">url</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">baseUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span>
+<a id="__codelineno-4-60" name="__codelineno-4-60"></a><span class="w">        </span><span class="nx">type</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;POST&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-61" name="__codelineno-4-61"></a><span class="w">        </span><span class="nx">contentType</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json; charset=UTF-8&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-62" name="__codelineno-4-62"></a><span class="w">        </span><span class="nx">data</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">posted</span><span class="p">,</span>
+<a id="__codelineno-4-63" name="__codelineno-4-63"></a><span class="w">        </span><span class="nx">dataType</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;text&#39;</span><span class="p">,</span>
+<a id="__codelineno-4-64" name="__codelineno-4-64"></a><span class="w">        </span><span class="nx">beforeSend</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-65" name="__codelineno-4-65"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-4-66" name="__codelineno-4-66"></a><span class="w">        </span><span class="nx">success</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-67" name="__codelineno-4-67"></a><span class="w">            </span><span class="c1">// résultat texte</span>
+<a id="__codelineno-4-68" name="__codelineno-4-68"></a><span class="w">            </span><span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-4-69" name="__codelineno-4-69"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-4-70" name="__codelineno-4-70"></a><span class="w">        </span><span class="nx">complete</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-71" name="__codelineno-4-71"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-4-72" name="__codelineno-4-72"></a><span class="w">        </span><span class="nx">error</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-73" name="__codelineno-4-73"></a><span class="w">            </span><span class="c1">// erreur système</span>
+<a id="__codelineno-4-74" name="__codelineno-4-74"></a><span class="w">            </span><span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">()));</span>
+<a id="__codelineno-4-75" name="__codelineno-4-75"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-76" name="__codelineno-4-76"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-4-77" name="__codelineno-4-77"></a><span class="p">}</span>
 <a id="__codelineno-4-78" name="__codelineno-4-78"></a>
-<a id="__codelineno-4-79" name="__codelineno-4-79"></a>// au chargement du document
-<a id="__codelineno-4-80" name="__codelineno-4-80"></a>$(document).ready(function() {
-<a id="__codelineno-4-81" name="__codelineno-4-81"></a>    // on récupère les références des composants de la page
-<a id="__codelineno-4-82" name="__codelineno-4-82"></a>    identifiant = $(&quot;#identifiant&quot;);
-<a id="__codelineno-4-83" name="__codelineno-4-83"></a>    password = $(&quot;#password&quot;);
-<a id="__codelineno-4-84" name="__codelineno-4-84"></a>    url = $(&quot;#url&quot;);
-<a id="__codelineno-4-85" name="__codelineno-4-85"></a>    posted = $(&quot;#posted&quot;);
-<a id="__codelineno-4-86" name="__codelineno-4-86"></a>    response = $(&quot;#response&quot;);
-<a id="__codelineno-4-87" name="__codelineno-4-87"></a>});
+<a id="__codelineno-4-79" name="__codelineno-4-79"></a><span class="c1">// au chargement du document</span>
+<a id="__codelineno-4-80" name="__codelineno-4-80"></a><span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-81" name="__codelineno-4-81"></a><span class="w">    </span><span class="c1">// on récupère les références des composants de la page</span>
+<a id="__codelineno-4-82" name="__codelineno-4-82"></a><span class="w">    </span><span class="nx">identifiant</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#identifiant&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-83" name="__codelineno-4-83"></a><span class="w">    </span><span class="nx">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#password&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-84" name="__codelineno-4-84"></a><span class="w">    </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#url&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-85" name="__codelineno-4-85"></a><span class="w">    </span><span class="nx">posted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#posted&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-86" name="__codelineno-4-86"></a><span class="w">    </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#response&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-87" name="__codelineno-4-87"></a><span class="p">});</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 80-87 : du code jS exécuté à la fin du chargement du document dans le navigateur ;</li>
@@ -2351,12 +2351,12 @@ Après cette modification, les résultats sont les suivants :</li>
 <span class="normal"><a href="#__codelineno-19-3">3</a></span>
 <span class="normal"><a href="#__codelineno-19-4">4</a></span>
 <span class="normal"><a href="#__codelineno-19-5">5</a></span>
-<span class="normal"><a href="#__codelineno-19-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>    @RequestMapping(value = &quot;/cors-getAllProduits&quot;, method = RequestMethod.OPTIONS)
-<a id="__codelineno-19-2" name="__codelineno-19-2"></a>    public void getAllProduits(@RequestHeader(value = &quot;Origin&quot;, required = false) String origin,
-<a id="__codelineno-19-3" name="__codelineno-19-3"></a>            HttpServletResponse httpServletResponse) {
-<a id="__codelineno-19-4" name="__codelineno-19-4"></a>        // entêtes CORS
-<a id="__codelineno-19-5" name="__codelineno-19-5"></a>        setHeaders(origin, httpServletResponse);
-<a id="__codelineno-19-6" name="__codelineno-19-6"></a>}
+<span class="normal"><a href="#__codelineno-19-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="w">    </span><span class="err">@</span><span class="nx">RequestMapping</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;/cors-getAllProduits&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">RequestMethod</span><span class="p">.</span><span class="nx">OPTIONS</span><span class="p">)</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">    </span><span class="kr">public</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="nx">getAllProduits</span><span class="p">(</span><span class="err">@</span><span class="nx">RequestHeader</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Origin&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">required</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="nx">origin</span><span class="p">,</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">            </span><span class="nx">HttpServletResponse</span><span class="w"> </span><span class="nx">httpServletResponse</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">        </span><span class="c1">// entêtes CORS</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">        </span><span class="nx">setHeaders</span><span class="p">(</span><span class="nx">origin</span><span class="p">,</span><span class="w"> </span><span class="nx">httpServletResponse</span><span class="p">);</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><u><strong>dans [MyControllerWithCors]</strong></u></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
@@ -2601,29 +2601,29 @@ Ceci fait les méthodes [POST] sont traitées de la même façon que les requêt
 <span class="normal"><a href="#__codelineno-25-20">20</a></span>
 <span class="normal"><a href="#__codelineno-25-21">21</a></span>
 <span class="normal"><a href="#__codelineno-25-22">22</a></span>
-<span class="normal"><a href="#__codelineno-25-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>function doGet(url) {
-<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    // on fait un appel Ajax à la main
-<a id="__codelineno-25-3" name="__codelineno-25-3"></a>    $.ajax({
-<a id="__codelineno-25-4" name="__codelineno-25-4"></a>        headers : {
-<a id="__codelineno-25-5" name="__codelineno-25-5"></a>            &#39;Authorization&#39;:&#39;Basic &#39;+authorizationCode
-<a id="__codelineno-25-6" name="__codelineno-25-6"></a>        },
-<a id="__codelineno-25-7" name="__codelineno-25-7"></a>        url : baseUrl + url,
-<a id="__codelineno-25-8" name="__codelineno-25-8"></a>        type : &#39;GET&#39;,
-<a id="__codelineno-25-9" name="__codelineno-25-9"></a>        dataType : &#39;text&#39;,
-<a id="__codelineno-25-10" name="__codelineno-25-10"></a>        beforeSend : function() {
-<a id="__codelineno-25-11" name="__codelineno-25-11"></a>        },
-<a id="__codelineno-25-12" name="__codelineno-25-12"></a>        success : function(data) {
-<a id="__codelineno-25-13" name="__codelineno-25-13"></a>            // résultat texte
-<a id="__codelineno-25-14" name="__codelineno-25-14"></a>            response.text(data);
-<a id="__codelineno-25-15" name="__codelineno-25-15"></a>        },
-<a id="__codelineno-25-16" name="__codelineno-25-16"></a>        complete : function() {
-<a id="__codelineno-25-17" name="__codelineno-25-17"></a>        },
-<a id="__codelineno-25-18" name="__codelineno-25-18"></a>        error : function(jqXHR) {
-<a id="__codelineno-25-19" name="__codelineno-25-19"></a>            // erreur système
-<a id="__codelineno-25-20" name="__codelineno-25-20"></a>            response.text(JSON.stringify(jqXHR.statusCode()));
-<a id="__codelineno-25-21" name="__codelineno-25-21"></a>        }
-<a id="__codelineno-25-22" name="__codelineno-25-22"></a>    })
-<a id="__codelineno-25-23" name="__codelineno-25-23"></a>}
+<span class="normal"><a href="#__codelineno-25-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doGet</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">    </span><span class="c1">// on fait un appel Ajax à la main</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">    </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">({</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="w">        </span><span class="nx">headers</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">            </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="s1">&#39;Basic &#39;</span><span class="o">+</span><span class="nx">authorizationCode</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="w">        </span><span class="nx">url</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">baseUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">url</span><span class="p">,</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="w">        </span><span class="nx">type</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">        </span><span class="nx">dataType</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;text&#39;</span><span class="p">,</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="w">        </span><span class="nx">beforeSend</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="w">        </span><span class="nx">success</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="w">            </span><span class="c1">// résultat texte</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a><span class="w">            </span><span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-25-16" name="__codelineno-25-16"></a><span class="w">        </span><span class="nx">complete</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-17" name="__codelineno-25-17"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-25-18" name="__codelineno-25-18"></a><span class="w">        </span><span class="nx">error</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-19" name="__codelineno-25-19"></a><span class="w">            </span><span class="c1">// erreur système</span>
+<a id="__codelineno-25-20" name="__codelineno-25-20"></a><span class="w">            </span><span class="nx">response</span><span class="p">.</span><span class="nx">text</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">()));</span>
+<a id="__codelineno-25-21" name="__codelineno-25-21"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-25-22" name="__codelineno-25-22"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-25-23" name="__codelineno-25-23"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
