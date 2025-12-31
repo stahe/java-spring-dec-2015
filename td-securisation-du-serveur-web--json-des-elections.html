@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/java-spring-dec-2015/td-securisation-du-serveur-web--json-des-elections.html">
       
       
-        <link rel="prev" href="cours-securiser-lx27acces-a-un-service-web-avec-spring-security.html">
+        <link rel="prev" href="cours-securiser-lacces-a-un-service-web-avec-spring-security.html">
       
       
         <link rel="next" href="cours-gestion-des-acces-inter-domaines.html">
@@ -428,14 +428,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-introduction-a-lx27api-jdbc.html" class="md-nav__link">
+      <a href="cours-introduction-a-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. [Cours] : Introduction à l&#x27;API JDBC
+    6. [Cours] : Introduction à l'API JDBC
   
 
     
@@ -455,14 +455,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-implementation-de-la-couche-dao-du-td-avec-lx27api-jdbc.html" class="md-nav__link">
+      <a href="td-implementation-de-la-couche-dao-du-td-avec-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [TD] : Implémentation de la couche [DAO] du TD avec l&#x27;API JDBC
+    7. [TD] : Implémentation de la couche [DAO] du TD avec l'API JDBC
   
 
     
@@ -671,14 +671,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-creation-dx27un-client-pour-le-service-web.html" class="md-nav__link">
+      <a href="td-creation-dun-client-pour-le-service-web.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. [TD] : création d&#x27;un client pour le service web
+    15. [TD] : création d'un client pour le service web
   
 
     
@@ -698,14 +698,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-securiser-lx27acces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
+      <a href="cours-securiser-lacces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. [Cours] : Sécuriser l&#x27;accès à un service web avec Spring Security
+    16. [Cours] : Sécuriser l'accès à un service web avec Spring Security
   
 
     
@@ -916,7 +916,7 @@
   <a href="#1753-lapplication-de-boot-de-la-console" class="md-nav__link">
     <span class="md-ellipsis">
       
-        17.5.3. L&#x27;application de boot de la console
+        17.5.3. L'application de boot de la console
       
     </span>
   </a>
@@ -966,7 +966,7 @@
   <a href="#1763-les-vues-de-lapplication-swing" class="md-nav__link">
     <span class="md-ellipsis">
       
-        17.6.3. Les vues de l&#x27;application Swing
+        17.6.3. Les vues de l'application Swing
       
     </span>
   </a>
@@ -1198,7 +1198,7 @@
 
 <h1 id="17-td-securisation-du-serveur-web-json-des-elections">17. [TD] : sécurisation du serveur web / jSON des élections</h1>
 <p><strong>Mots clés</strong> : architecture multicouche, Spring, injection de dépendances, service web / jSON sécurisé, client / serveur</p>
-<p>Nous appliquons maintenant ce que nous avons appris dans le chapitre précédent au TD des élections. L&#x27;architecture sera la suivante :</p>
+<p>Nous appliquons maintenant ce que nous avons appris dans le chapitre précédent au TD des élections. L'architecture sera la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000485000002EDCB27EACE.png" style="display:inline-block; margin:4px;width:15.307cm;height:9.91cm;" /></td></tr></table>
 
 <p>La progession se fera de la façon suivante :</p>
@@ -1257,42 +1257,42 @@
 <span class="normal"><a href="#__codelineno-0-33">33</a></span>
 <span class="normal"><a href="#__codelineno-0-34">34</a></span>
 <span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&lt;</span><span class="n">project</span><span class="w"> </span><span class="n">xmlns</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="n">xmlns</span><span class="p">:</span><span class="n">xsi</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">xsi</span><span class="p">:</span><span class="n">schemaLocation</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">modelVersion</span><span class="o">&gt;</span><span class="mf">4.0.0</span><span class="o">&lt;/</span><span class="n">modelVersion</span><span class="o">&gt;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">spring</span><span class="o">-</span><span class="n">data</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>elections-security-webjson-metier-dao-spring-data<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">spring</span><span class="o">-</span><span class="n">data</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">elections</span><span class="w"> </span><span class="n">spring</span><span class="w"> </span><span class="n">security</span><span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>elections-security-webjson-metier-dao-spring-data<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="nt">&lt;description&gt;</span>elections<span class="w"> </span>spring<span class="w"> </span>security<span class="nt">&lt;/description&gt;</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">properties</span><span class="o">&gt;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span><span class="mf">1.8</span><span class="o">&lt;/</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">properties</span><span class="o">&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="nt">&lt;properties&gt;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="nt">&lt;java.version&gt;</span>1.8<span class="nt">&lt;/java.version&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">parent</span><span class="o">&gt;</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">parent</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">1.2.7</span><span class="p">.</span><span class="na">RELEASE</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">parent</span><span class="o">&gt;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="nt">&lt;parent&gt;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>1.2.7.RELEASE<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="nt">&lt;/parent&gt;</span>
 <a id="__codelineno-0-21" name="__codelineno-0-21"></a>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependencies</span><span class="o">&gt;</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">webjson</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">spring</span><span class="o">-</span><span class="n">data</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">        </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">Spring</span><span class="w"> </span><span class="n">security</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">        </span><span class="p">...</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependencies</span><span class="o">&gt;</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">plugins</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">build</span><span class="o">&gt;</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="p">...</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">build</span><span class="o">&gt;</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>elections-webjson-metier-dao-spring-data<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">            </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">        </span><span class="cm">&lt;!-- Spring security --&gt;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">        </span>...
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="cm">&lt;!-- plugins --&gt;</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span>...
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">    </span><span class="nt">&lt;/build&gt;</span>
 <a id="__codelineno-0-35" name="__codelineno-0-35"></a>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="o">&lt;/</span><span class="n">project</span><span class="o">&gt;</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>aux lignes 23-27, remplacez la dépendance sur le projet [intro-server-webjson-01] par celle sur le projet [elections-webjson-metier-dao-spring-data] étudié au paragraphe 12, page 209 ;</li>
@@ -1348,7 +1348,7 @@ Il nous reste à modifier les classes de configuration du projet :</li>
 <ul>
 <li>lignes 8, 9, 14 : mettre les bons noms de packages ;</li>
 <li>ligne 10 : la classe importée est maintenant [elections.dao.config.DaoConfig] du projet [elections-webjson-metier-dao-spring-data] ;
-<strong>Note</strong> : comme il a été dit, cette configuration ne marche que si la classe [elections.dao.config.DaoConfig] a l&#x27;annotation [@Configuration]. Vérifiez ce point.</li>
+<strong>Note</strong> : comme il a été dit, cette configuration ne marche que si la classe [elections.dao.config.DaoConfig] a l'annotation [@Configuration]. Vérifiez ce point.</li>
 </ul>
 <p><u><strong>[SecurityConfig]</strong></u></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
@@ -1376,14 +1376,14 @@ Il nous reste à modifier les classes de configuration du projet :</li>
 <p>Les modifications sont aux lignes suivantes :</p>
 <ul>
 <li>ligne 6 : changez le nom du package ;
-C&#x27;est tout. Faites un premier test en exécutant le test JUnit [] :</li>
+C'est tout. Faites un premier test en exécutant le test JUnit [] :</li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C9000000608400FFD5.png" style="display:inline-block; margin:4px;width:3.72cm;height:1.78cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>Exécutez la classe de boot [Boot] puis avec l&#x27;extension Chrome [Advanced Rest Client] faites le test suivant :</p>
+<p>Exécutez la classe de boot [Boot] puis avec l'extension Chrome [Advanced Rest Client] faites le test suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B200000335949105CD.png" style="display:inline-block; margin:4px;width:15.901cm;height:10.862cm;" /></td></tr></table>
 
-<p>En [1], la demande. En [3], la réponse. En [2], l&#x27;entête HTTP est l&#x27;entête d&#x27;authentification de l&#x27;utilisateur [admin, admin] : <strong>Authorization:Basic YWRtaW46YWRtaW4=</strong></p>
+<p>En [1], la demande. En [3], la réponse. En [2], l'entête HTTP est l'entête d'authentification de l'utilisateur [admin, admin] : <strong>Authorization:Basic YWRtaW46YWRtaW4=</strong></p>
 <p>Demandez maintenant, les listes en compétition :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000489000003FC6AA66833.png" style="display:inline-block; margin:4px;width:15.36cm;height:13.494cm;" /></td></tr></table>
 
@@ -1405,20 +1405,20 @@ C&#x27;est tout. Faites un premier test en exécutant le test JUnit [] :</li>
 <span class="normal"><a href="#__codelineno-3-6">6</a></span>
 <span class="normal"><a href="#__codelineno-3-7">7</a></span>
 <span class="normal"><a href="#__codelineno-3-8">8</a></span>
-<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="o">&lt;</span><span class="n">project</span><span class="w"> </span><span class="n">xmlns</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="n">xmlns</span><span class="p">:</span><span class="n">xsi</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="n">xsi</span><span class="p">:</span><span class="n">schemaLocation</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">modelVersion</span><span class="o">&gt;</span><span class="mf">4.0.0</span><span class="o">&lt;/</span><span class="n">modelVersion</span><span class="o">&gt;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">Client</span><span class="w"> </span><span class="n">jUnit</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">serveur</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">jSON</span><span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="p">...</span>
+<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>elections-metier-dao-security-webjson<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="nt">&lt;description&gt;</span>Client<span class="w"> </span>jUnit<span class="w"> </span>du<span class="w"> </span>serveur<span class="w"> </span>web<span class="w"> </span>/<span class="w"> </span>jSON<span class="nt">&lt;/description&gt;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>elections-metier-dao-security-webjson<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>...
 </code></pre></div></td></tr></table></div>
 <h3 id="1742-refactorisation-de-la-couche-metier">17.4.2. Refactorisation de la couche [métier]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000106000000A6331D601E.png" style="display:inline-block; margin:4px;width:4.851cm;height:3.069cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>L&#x27;interface [IElectionsMetier] évolue de la façon suivante :</p>
+<p>L'interface [IElectionsMetier] évolue de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -1471,8 +1471,8 @@ C&#x27;est tout. Faites un premier test en exécutant le test JUnit [] :</li>
 <a id="__codelineno-4-25" name="__codelineno-4-25"></a>
 <a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Toutes les méthodes ont pour premier paramètre, l&#x27;utilisateur qui veut utiliser les ressources du serveur sécurisé.</p>
-<p>L&#x27;implémentation [ElectionsMetier] évolue de la façon suivante :</p>
+<p>Toutes les méthodes ont pour premier paramètre, l'utilisateur qui veut utiliser les ressources du serveur sécurisé.</p>
+<p>L'implémentation [ElectionsMetier] évolue de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -2079,7 +2079,7 @@ C&#x27;est tout. Faites un premier test en exécutant le test JUnit [] :</li>
 <a id="__codelineno-7-207" name="__codelineno-7-207"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-7-208" name="__codelineno-7-208"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Travail à faire</strong> : comprenez ce test et vérifiez qu&#x27;il passe.</p>
+<p><strong>Travail à faire</strong> : comprenez ce test et vérifiez qu'il passe.</p>
 <h2 id="175-le-client-du-serveur-securise-avec-une-couche-console">17.5. Le client du serveur sécurisé avec une couche [console]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BC000002E7C848F928.png" style="display:inline-block; margin:4px;width:16.034cm;height:9.83cm;" /></td></tr></table>
 
@@ -2096,7 +2096,7 @@ C&#x27;est tout. Faites un premier test en exécutant le test JUnit [] :</li>
 <li>supprimez les packages [elections.client.dao, elections.client.metier, elections.client.entities] ;</li>
 <li>dans le package [elections.client.ui], gardez seulement la classe console [ElectionsConsole] et son interface [IElectionsUI] ;</li>
 <li>renommez les packages comme indiqué en [3] ;</li>
-<li>réglez les problèmes d&#x27;import dans les diverses classes par [clic droit / Fix Imports] ;
+<li>réglez les problèmes d'import dans les diverses classes par [clic droit / Fix Imports] ;
 A ce stade, le nouveau projet présente de nombreuses erreurs.</li>
 </ul>
 <h3 id="1751-configuration-maven">17.5.1. Configuration Maven</h3>
@@ -2139,48 +2139,48 @@ A ce stade, le nouveau projet présente de nombreuses erreurs.</li>
 <span class="normal"><a href="#__codelineno-8-36">36</a></span>
 <span class="normal"><a href="#__codelineno-8-37">37</a></span>
 <span class="normal"><a href="#__codelineno-8-38">38</a></span>
-<span class="normal"><a href="#__codelineno-8-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="o">&lt;</span><span class="n">project</span><span class="w"> </span><span class="n">xmlns</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="n">xmlns</span><span class="p">:</span><span class="n">xsi</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="n">xsi</span><span class="p">:</span><span class="n">schemaLocation</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">modelVersion</span><span class="o">&gt;</span><span class="mf">4.0.0</span><span class="o">&lt;/</span><span class="n">modelVersion</span><span class="o">&gt;</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">console</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">console</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">couche</span><span class="w"> </span><span class="n">console</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">jSON</span><span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-8-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>elections-console-metier-dao-security-webjson<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>elections-console-metier-dao-security-webjson<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="nt">&lt;description&gt;</span>couche<span class="w"> </span>console<span class="w"> </span>du<span class="w"> </span>client<span class="w"> </span>web<span class="w"> </span>/<span class="w"> </span>jSON<span class="nt">&lt;/description&gt;</span>
 <a id="__codelineno-8-9" name="__codelineno-8-9"></a>
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">properties</span><span class="o">&gt;</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span><span class="mf">1.8</span><span class="o">&lt;/</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">properties</span><span class="o">&gt;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="nt">&lt;properties&gt;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="nt">&lt;java.version&gt;</span>1.8<span class="nt">&lt;/java.version&gt;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
 <a id="__codelineno-8-14" name="__codelineno-8-14"></a>
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">parent</span><span class="o">&gt;</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">parent</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">1.2.7</span><span class="p">.</span><span class="na">RELEASE</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">parent</span><span class="o">&gt;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">    </span><span class="nt">&lt;parent&gt;</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>1.2.7.RELEASE<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">    </span><span class="nt">&lt;/parent&gt;</span>
 <a id="__codelineno-8-20" name="__codelineno-8-20"></a>
-<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependencies</span><span class="o">&gt;</span>
-<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependencies</span><span class="o">&gt;</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>elections-metier-dao-security-webjson<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">            </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
 <a id="__codelineno-8-28" name="__codelineno-8-28"></a>
-<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">build</span><span class="o">&gt;</span>
-<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">plugins</span><span class="o">&gt;</span>
-<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">plugin</span><span class="o">&gt;</span>
-<a id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">apache</span><span class="p">.</span><span class="na">maven</span><span class="p">.</span><span class="na">plugins</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">maven</span><span class="o">-</span><span class="n">surefire</span><span class="o">-</span><span class="n">plugin</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">2.18.1</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="w">            </span><span class="o">&lt;/</span><span class="n">plugin</span><span class="o">&gt;</span>
-<a id="__codelineno-8-36" name="__codelineno-8-36"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">plugins</span><span class="o">&gt;</span>
-<a id="__codelineno-8-37" name="__codelineno-8-37"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">build</span><span class="o">&gt;</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="w">                </span><span class="nt">&lt;version&gt;</span>2.18.1<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a><span class="w">    </span><span class="nt">&lt;/build&gt;</span>
 <a id="__codelineno-8-38" name="__codelineno-8-38"></a>
-<a id="__codelineno-8-39" name="__codelineno-8-39"></a><span class="o">&lt;/</span><span class="n">project</span><span class="o">&gt;</span>
+<a id="__codelineno-8-39" name="__codelineno-8-39"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 4-8 : l&#x27;identité Maven du nouveau projet ;</li>
+<li>lignes 4-8 : l'identité Maven du nouveau projet ;</li>
 <li>lignes 22-26 : la dépendance sur le projet [elections-metier-dao-security-webjson] que nous venons de construire au paragraphe 17.4, page 333, et qui fournit les couches [DAO] et [métier] ;</li>
 </ul>
 <h3 id="1752-configuration-spring">17.5.2. Configuration Spring</h3>
@@ -2230,9 +2230,9 @@ A ce stade, le nouveau projet présente de nombreuses erreurs.</li>
 <ul>
 <li>ligne 8 : on importe la classe [elections.security.client.config.MetierConfig] du projet [elections-metier-dao-security-webjson] étudié au paragraphe 17.4, page 333 ;</li>
 <li>ligne 9 : on déclare les packages où se trouvent les beans Spring ;</li>
-<li>lignes 12-18 : le bean [admin] est l&#x27;utilisateur [admin, admin] qui sera utilisé par l&#x27;application console. On se rappelle que c&#x27;est le seul utilisateur autorisé à interroger el serveur web / jSON sécurisé ;</li>
+<li>lignes 12-18 : le bean [admin] est l'utilisateur [admin, admin] qui sera utilisé par l'application console. On se rappelle que c'est le seul utilisateur autorisé à interroger el serveur web / jSON sécurisé ;</li>
 </ul>
-<h3 id="1753-lapplication-de-boot-de-la-console">17.5.3. L&#x27;application de boot de la console</h3>
+<h3 id="1753-lapplication-de-boot-de-la-console">17.5.3. L'application de boot de la console</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000105000000A3E63A28B1.png" style="display:inline-block; margin:4px;width:4.83cm;height:3.02cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ElectionsConsole] évolue de la façon suivante :</p>
@@ -2398,8 +2398,8 @@ A ce stade, le nouveau projet présente de nombreuses erreurs.</li>
 <a id="__codelineno-10-80" name="__codelineno-10-80"></a>
 <a id="__codelineno-10-81" name="__codelineno-10-81"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>La classe ElectionsConsole bouge très peu. Il faut simplement se rappeler que maintenant les méthodes de la couche [métier] réclament comme premier paramètre, un utilisateur (lignes 31, 49, 51). Celui-ci est fourni par l&#x27;injection des lignes 21-22. L&#x27;utilisateur injecté est celui autorisé à interroger le serveur web / jSON.</p>
-<p><strong>Travail à faire</strong> : testez l&#x27;application console (pensez à lancer auparavant le serveur sécurisé).</p>
+<p>La classe ElectionsConsole bouge très peu. Il faut simplement se rappeler que maintenant les méthodes de la couche [métier] réclament comme premier paramètre, un utilisateur (lignes 31, 49, 51). Celui-ci est fourni par l'injection des lignes 21-22. L'utilisateur injecté est celui autorisé à interroger le serveur web / jSON.</p>
+<p><strong>Travail à faire</strong> : testez l'application console (pensez à lancer auparavant le serveur sécurisé).</p>
 <h2 id="176-le-client-du-serveur-securise-avec-une-couche-swing">17.6. Le client du serveur sécurisé avec une couche [swing]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C3000002EF3F2B3A54.png" style="display:inline-block; margin:4px;width:16.127cm;height:9.936cm;" /></td></tr></table>
 
@@ -2411,8 +2411,8 @@ A ce stade, le nouveau projet présente de nombreuses erreurs.</li>
 <li>supprimez les packages [elections.client.dao, elections.client.metier, elections.client.entities] ;</li>
 <li>dans le package [elections.client.ui], supprimez les classes [ElectionsConsole, IElectionsUI] ;</li>
 <li>renommez les packages comme indiqué en [2] ;</li>
-<li>dans le package [elections.security.client.swing], renommez la classe [AbstractElectionsSwing] qui implémente l&#x27;interface graphique en [AbstractElectionsMainForm] et la classe [ElectionsSwing] qui implémente les gestionnaires des événements de l&#x27;interface graphque en [ElectionsMainForm] ;</li>
-<li>réglez les problèmes d&#x27;import dans les diverses classes par [clic droit / Fix Imports] ;
+<li>dans le package [elections.security.client.swing], renommez la classe [AbstractElectionsSwing] qui implémente l'interface graphique en [AbstractElectionsMainForm] et la classe [ElectionsSwing] qui implémente les gestionnaires des événements de l'interface graphque en [ElectionsMainForm] ;</li>
+<li>réglez les problèmes d'import dans les diverses classes par [clic droit / Fix Imports] ;
 A ce stade, il y a de nombreuses erreurs.</li>
 </ul>
 <h3 id="1761-configuration-maven">17.6.1. Configuration Maven</h3>
@@ -2455,70 +2455,70 @@ A ce stade, il y a de nombreuses erreurs.</li>
 <span class="normal"><a href="#__codelineno-11-36">36</a></span>
 <span class="normal"><a href="#__codelineno-11-37">37</a></span>
 <span class="normal"><a href="#__codelineno-11-38">38</a></span>
-<span class="normal"><a href="#__codelineno-11-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="o">&lt;</span><span class="n">project</span><span class="w"> </span><span class="n">xmlns</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="n">xmlns</span><span class="p">:</span><span class="n">xsi</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="n">xsi</span><span class="p">:</span><span class="n">schemaLocation</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">modelVersion</span><span class="o">&gt;</span><span class="mf">4.0.0</span><span class="o">&lt;/</span><span class="n">modelVersion</span><span class="o">&gt;</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">swing</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">swing</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">couche</span><span class="w"> </span><span class="n">swing</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">jSON</span><span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-11-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>elections-swing-metier-dao-security-webjson<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>elections-swing-metier-dao-security-webjson<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="nt">&lt;description&gt;</span>couche<span class="w"> </span>swing<span class="w"> </span>du<span class="w"> </span>client<span class="w"> </span>web<span class="w"> </span>/<span class="w"> </span>jSON<span class="nt">&lt;/description&gt;</span>
 <a id="__codelineno-11-9" name="__codelineno-11-9"></a>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">properties</span><span class="o">&gt;</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span><span class="mf">1.8</span><span class="o">&lt;/</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">properties</span><span class="o">&gt;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">    </span><span class="nt">&lt;properties&gt;</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">        </span><span class="nt">&lt;java.version&gt;</span>1.8<span class="nt">&lt;/java.version&gt;</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
 <a id="__codelineno-11-14" name="__codelineno-11-14"></a>
-<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">parent</span><span class="o">&gt;</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">parent</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">1.2.7</span><span class="p">.</span><span class="na">RELEASE</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">parent</span><span class="o">&gt;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">    </span><span class="nt">&lt;parent&gt;</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>1.2.7.RELEASE<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">    </span><span class="nt">&lt;/parent&gt;</span>
 <a id="__codelineno-11-20" name="__codelineno-11-20"></a>
-<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependencies</span><span class="o">&gt;</span>
-<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">console</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-11-27" name="__codelineno-11-27"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependencies</span><span class="o">&gt;</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21"></a><span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>elections-console-metier-dao-security-webjson<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="w">            </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-11-27" name="__codelineno-11-27"></a><span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
 <a id="__codelineno-11-28" name="__codelineno-11-28"></a>
-<a id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">build</span><span class="o">&gt;</span>
-<a id="__codelineno-11-30" name="__codelineno-11-30"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">plugins</span><span class="o">&gt;</span>
-<a id="__codelineno-11-31" name="__codelineno-11-31"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">plugin</span><span class="o">&gt;</span>
-<a id="__codelineno-11-32" name="__codelineno-11-32"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">apache</span><span class="p">.</span><span class="na">maven</span><span class="p">.</span><span class="na">plugins</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-11-33" name="__codelineno-11-33"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">maven</span><span class="o">-</span><span class="n">surefire</span><span class="o">-</span><span class="n">plugin</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-11-34" name="__codelineno-11-34"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">2.18.1</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-11-35" name="__codelineno-11-35"></a><span class="w">            </span><span class="o">&lt;/</span><span class="n">plugin</span><span class="o">&gt;</span>
-<a id="__codelineno-11-36" name="__codelineno-11-36"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">plugins</span><span class="o">&gt;</span>
-<a id="__codelineno-11-37" name="__codelineno-11-37"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">build</span><span class="o">&gt;</span>
+<a id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
+<a id="__codelineno-11-30" name="__codelineno-11-30"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
+<a id="__codelineno-11-31" name="__codelineno-11-31"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
+<a id="__codelineno-11-32" name="__codelineno-11-32"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-11-33" name="__codelineno-11-33"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34"></a><span class="w">                </span><span class="nt">&lt;version&gt;</span>2.18.1<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-11-35" name="__codelineno-11-35"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
+<a id="__codelineno-11-37" name="__codelineno-11-37"></a><span class="w">    </span><span class="nt">&lt;/build&gt;</span>
 <a id="__codelineno-11-38" name="__codelineno-11-38"></a>
-<a id="__codelineno-11-39" name="__codelineno-11-39"></a><span class="o">&lt;/</span><span class="n">project</span><span class="o">&gt;</span>
+<a id="__codelineno-11-39" name="__codelineno-11-39"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 4-8 : l&#x27;identité Maven du nouveau projet ;</li>
-<li>lignes 22-26 : une dépendance sur le projet console que nous venons d&#x27;étudier au paragraphe 17.5, page 339 ;</li>
+<li>lignes 4-8 : l'identité Maven du nouveau projet ;</li>
+<li>lignes 22-26 : une dépendance sur le projet console que nous venons d'étudier au paragraphe 17.5, page 339 ;</li>
 </ul>
 <h3 id="1762-configuration-spring">17.6.2. Configuration Spring</h3>
-<p>Ce projet utilise la configuration Spring du projet console qu&#x27;il importe (cf paragraphe 17.5.2, page 341).</p>
-<h3 id="1763-les-vues-de-lapplication-swing">17.6.3. Les vues de l&#x27;application Swing</h3>
+<p>Ce projet utilise la configuration Spring du projet console qu'il importe (cf paragraphe 17.5.2, page 341).</p>
+<h3 id="1763-les-vues-de-lapplication-swing">17.6.3. Les vues de l'application Swing</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000B9393BA944.png" style="display:inline-block; margin:4px;width:5.519cm;height:3.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Ce projet va utiliser deux vues :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005380000024F96777603.png" style="display:inline-block; margin:4px;width:17.674cm;height:7.819cm;" /></td></tr></table>
 
 <ul>
-<li>la vue [1] de connexion est nouvelle. Elle sert à authentifier l&#x27;utilisateur qui veut utiliser l&#x27;application. Elle utilise les classes :</li>
+<li>la vue [1] de connexion est nouvelle. Elle sert à authentifier l'utilisateur qui veut utiliser l'application. Elle utilise les classes :</li>
 <li>[AbstractElectionsConnectForm] qui implémente la vue ;</li>
 <li>[ElectionsConnectForm] qui gère les événements de la vue ;</li>
-<li>la vue [2] est connue. C&#x27;est celle utilisée jusqu&#x27;à maintenant. Elle utilise les classes :</li>
+<li>la vue [2] est connue. C'est celle utilisée jusqu'à maintenant. Elle utilise les classes :</li>
 <li>[AbstractElectionsMainForm] qui implémente la vue ;</li>
 <li>[ElectionsMainForm] qui gère les événements de la vue ;</li>
 </ul>
 <h3 id="1764-la-session">17.6.4. La session</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B58BE6BCD8.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>Lorsqu&#x27;une application Swing a plusieurs vues, il faut trouver un moyen pour qu&#x27;une vue puisse passer de l&#x27;information à une autre vue. Nous utilisons un concept utilisé en développement web : la session qui permet aux vues associées à un utilisateur précis de  partager de l&#x27;information. Ce concept sera implémenté ici à l&#x27;aide d&#x27;un singleton Spring qui sera injecté dans les deux classes qui gèrent les événements des deux vues :</p>
+<p>Lorsqu'une application Swing a plusieurs vues, il faut trouver un moyen pour qu'une vue puisse passer de l'information à une autre vue. Nous utilisons un concept utilisé en développement web : la session qui permet aux vues associées à un utilisateur précis de  partager de l'information. Ce concept sera implémenté ici à l'aide d'un singleton Spring qui sera injecté dans les deux classes qui gèrent les événements des deux vues :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -2549,12 +2549,12 @@ A ce stade, il y a de nombreuses erreurs.</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 6 : la classe [UiSession] est un composant Spring ;</li>
-<li>ligne 10 : elle ne sert qu&#x27;à une chose : mémoriser l&#x27;utilisateur qui se connecte avec la vue [1]. La vue [2] qui a besoin de connaître celui-ci ira le chercher là ;</li>
+<li>ligne 10 : elle ne sert qu'à une chose : mémoriser l'utilisateur qui se connecte avec la vue [1]. La vue [2] qui a besoin de connaître celui-ci ira le chercher là ;</li>
 </ul>
 <h3 id="1765-la-classe-de-boot">17.6.5. La classe de boot</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001170000006EEE4D1884.png" style="display:inline-block; margin:4px;width:5.159cm;height:2.041cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>La classe de boot de l&#x27;application graphique est la suivante :</p>
+<p>La classe de boot de l'application graphique est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
@@ -2586,10 +2586,10 @@ A ce stade, il y a de nombreuses erreurs.</li>
 <ul>
 <li>ligne 5 : la classe [BootElectionsSwing] étend la classe [AbstractBootElections] définit dans le projet console présent dans les dépendances du projet ;</li>
 <li>lignes 10-13 : la classe [BootElectionsSwing] fera afficher la vue de connexion [ElectionsConnectForm] ;</li>
-<li>lignes 6-8 : c&#x27;est la méthode [run] de cette classe qui sera exécutée ;</li>
+<li>lignes 6-8 : c'est la méthode [run] de cette classe qui sera exécutée ;</li>
 </ul>
 <h3 id="1766-la-classe-electionsmainform">17.6.6. La classe [ElectionsMainForm]</h3>
-<p>La classe [ElectionsMainForm] est celle qui s&#x27;appelait auparavant [ElectionsSwing]. Elle gère les événements de la vue [AbstractElectionsMainForm]. Son code évolue de la façon suivante :</p>
+<p>La classe [ElectionsMainForm] est celle qui s'appelait auparavant [ElectionsSwing]. Elle gère les événements de la vue [AbstractElectionsMainForm]. Son code évolue de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">  3</a></span>
@@ -2831,9 +2831,9 @@ A ce stade, il y a de nombreuses erreurs.</li>
 <a id="__codelineno-14-120" name="__codelineno-14-120"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 32-33 : injection de la session de l&#x27;application ;</li>
+<li>lignes 32-33 : injection de la session de l'application ;</li>
 <li>lignes 112-119 : la vue sera activée comme précédemment par sa méthode [run] ;</li>
-<li>ligne 115 : on récupère l&#x27;utilisateur dans la session. Celui-ci y aura été mis par le code de la vue de connexion [ElectionsConnectForm]. Le code ensuite est modifié pour que le 1er paramètre des appels à la couche [métier] soient cet utilisateur (lignes 63, 69-70 par exemple) ;</li>
+<li>ligne 115 : on récupère l'utilisateur dans la session. Celui-ci y aura été mis par le code de la vue de connexion [ElectionsConnectForm]. Le code ensuite est modifié pour que le 1er paramètre des appels à la couche [métier] soient cet utilisateur (lignes 63, 69-70 par exemple) ;</li>
 </ul>
 <h3 id="1767-la-vue-abstractelectionsconnectform">17.6.7. La vue [AbstractElectionsConnectForm]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B510C58FFE.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -2841,7 +2841,7 @@ A ce stade, il y a de nombreuses erreurs.</li>
 <p>Construisez avec Netbeans le formulaire suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020A0000012673B4D7F0.png" style="display:inline-block; margin:4px;width:8.28cm;height:4.671cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>La classe n&#x27;implémentera pas elle-même la méthode gérant le clic sur l&#x27;option de menu [Connexion]. Elle fera appel à une méthode [doConnecter] déclarée abstraite et la classe de la vue sera elle-même déclarée abstraite. On supprimera la méthode statique [main] qui a été générée automatiquement.</p>
+<p>La classe n'implémentera pas elle-même la méthode gérant le clic sur l'option de menu [Connexion]. Elle fera appel à une méthode [doConnecter] déclarée abstraite et la classe de la vue sera elle-même déclarée abstraite. On supprimera la méthode statique [main] qui a été générée automatiquement.</p>
 <h3 id="1768-la-gestion-des-evenements-de-la-vue-de-connexion">17.6.8. La gestion des événements de la vue de connexion</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B552B2A441.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -3040,10 +3040,10 @@ A ce stade, il y a de nombreuses erreurs.</li>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 73-82 : la méthode [run] qui sera appelée par la classe de boot [BootElectionsSwing] ;</li>
-<li>lignes 26-27 : injection d&#x27;une référence sur la vue n° 2 qui devra être affichée si l&#x27;utilisateur est reconnu ;</li>
-<li>lignes 30-31 : injection de la session de l&#x27;application ;</li>
+<li>lignes 26-27 : injection d'une référence sur la vue n° 2 qui devra être affichée si l'utilisateur est reconnu ;</li>
+<li>lignes 30-31 : injection de la session de l'application ;</li>
 <li>ligne 84 : la méthode [isPageValid] fait deux choses :</li>
-<li>elle vérifie que l&#x27;identifiant n&#x27;est pas vide (le mot de passe peut l&#x27;être lui) ;</li>
+<li>elle vérifie que l'identifiant n'est pas vide (le mot de passe peut l'être lui) ;</li>
 <li>instancie avec les saisies le champ User de la ligne 23 ;</li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012AA6F09D99.png" style="display:inline-block; margin:4px;width:8.641cm;height:4.895cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A6F32C14F.png" style="display:inline-block; margin:4px;width:8.839cm;height:5.006cm;" /></td></tr></table>
@@ -3051,7 +3051,7 @@ A ce stade, il y a de nombreuses erreurs.</li>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A404BE896.png" style="display:inline-block; margin:4px;width:8.641cm;height:4.895cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A0B2E7A39.png" style="display:inline-block; margin:4px;width:8.839cm;height:5.006cm;" /></td></tr></table>
 
 <p><strong>Travail à faire</strong> : complétez le code de la classe.</p>
-<p><strong>Travail à faire</strong> : Testez l&#x27;application.</p>
+<p><strong>Travail à faire</strong> : Testez l'application.</p>
 
 
 

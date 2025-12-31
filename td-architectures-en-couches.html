@@ -448,7 +448,7 @@
   <a href="#42-les-interfaces-de-lapplication-elections" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.2. Les interfaces de l&#x27;application [Elections]
+        4.2. Les interfaces de l'application [Elections]
       
     </span>
   </a>
@@ -459,7 +459,7 @@
   <a href="#43-la-classe-dexception" class="md-nav__link">
     <span class="md-ellipsis">
       
-        4.3. La classe d&#x27;exception
+        4.3. La classe d'exception
       
     </span>
   </a>
@@ -508,14 +508,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-introduction-a-lx27api-jdbc.html" class="md-nav__link">
+      <a href="cours-introduction-a-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. [Cours] : Introduction à l&#x27;API JDBC
+    6. [Cours] : Introduction à l'API JDBC
   
 
     
@@ -535,14 +535,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-implementation-de-la-couche-dao-du-td-avec-lx27api-jdbc.html" class="md-nav__link">
+      <a href="td-implementation-de-la-couche-dao-du-td-avec-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [TD] : Implémentation de la couche [DAO] du TD avec l&#x27;API JDBC
+    7. [TD] : Implémentation de la couche [DAO] du TD avec l'API JDBC
   
 
     
@@ -751,14 +751,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-creation-dx27un-client-pour-le-service-web.html" class="md-nav__link">
+      <a href="td-creation-dun-client-pour-le-service-web.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. [TD] : création d&#x27;un client pour le service web
+    15. [TD] : création d'un client pour le service web
   
 
     
@@ -778,14 +778,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-securiser-lx27acces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
+      <a href="cours-securiser-lacces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. [Cours] : Sécuriser l&#x27;accès à un service web avec Spring Security
+    16. [Cours] : Sécuriser l'accès à un service web avec Spring Security
   
 
     
@@ -985,11 +985,11 @@
 <h2 id="41-introduction">4.1. Introduction</h2>
 <p>Rappelons ce qui a été fait :</p>
 <ul>
-<li>dans la partie 1 de l&#x27;exercice ELECTIONS aucune classe n&#x27;a été utilisée. On a construit une solution comme on l&#x27;aurait construite en langage C.</li>
-<li>dans la partie 2 de l&#x27;exercice, deux classes ont été introduites :</li>
-<li>[ListeElectorale] qui représente les attributs (id, nom, voix, sièges, élimine) d&#x27;une liste candidate</li>
-<li>[ElectionsException] une classe d&#x27;exceptions non contrôlées. Ce type d&#x27;exception est utilisé à chaque fois que se produit une erreur fatale dans l&#x27;application des élections. Elle est non contrôlée, c.a.d. que le développeur n&#x27;est pas obligé de la gérer avec un try-catch.
-Le calcul du résultat des élections a été confié jusqu&#x27;à maintenant à une méthode [main] d&#x27;une classe [MainElections]</li>
+<li>dans la partie 1 de l'exercice ELECTIONS aucune classe n'a été utilisée. On a construit une solution comme on l'aurait construite en langage C.</li>
+<li>dans la partie 2 de l'exercice, deux classes ont été introduites :</li>
+<li>[ListeElectorale] qui représente les attributs (id, nom, voix, sièges, élimine) d'une liste candidate</li>
+<li>[ElectionsException] une classe d'exceptions non contrôlées. Ce type d'exception est utilisé à chaque fois que se produit une erreur fatale dans l'application des élections. Elle est non contrôlée, c.a.d. que le développeur n'est pas obligé de la gérer avec un try-catch.
+Le calcul du résultat des élections a été confié jusqu'à maintenant à une méthode [main] d'une classe [MainElections]</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -1041,17 +1041,17 @@ Le calcul du résultat des élections a été confié jusqu&#x27;à maintenant �
 </code></pre></div></td></tr></table></div>
 <p>La solution précédente inclut trois phases classiques :</p>
 <ul>
-<li>l&#x27;acquisition des données, lignes 17-18</li>
+<li>l'acquisition des données, lignes 17-18</li>
 <li>le calcul de la solution, lignes 19-20</li>
-<li>l&#x27;affichage et / ou la persistance des résultats, lignes 21-22
-Seule la phase 2 est vraiment constante. La phase 1 peut varier : les données peuvent venir du clavier comme dans les exemples étudiés, d&#x27;un fichier texte, d&#x27;une interface graphique, d&#x27;une base de données, du réseau, ... De même il y a de multiples façons de restituer les résultats dans la phase 3 : les afficher à l&#x27;écran comme cela a été fait dans les exemples étudiés, les enregistrer dans un fichier, dans une base de données, les envoyer sur le réseau, ...</li>
+<li>l'affichage et / ou la persistance des résultats, lignes 21-22
+Seule la phase 2 est vraiment constante. La phase 1 peut varier : les données peuvent venir du clavier comme dans les exemples étudiés, d'un fichier texte, d'une interface graphique, d'une base de données, du réseau, ... De même il y a de multiples façons de restituer les résultats dans la phase 3 : les afficher à l'écran comme cela a été fait dans les exemples étudiés, les enregistrer dans un fichier, dans une base de données, les envoyer sur le réseau, ...</li>
 </ul>
 <p>De façon plus générale, une application peut souvent être modélisée en trois couches ayant chacune un rôle bien défini :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E80000018177EC9E34.png" style="display:inline-block; margin:4px;width:16.371cm;height:3.56cm;" /></td></tr></table>
 
-<p>On appelle également cette architecture, &quot;<strong>architecture trois tiers</strong>&quot;, traduction de l&#x27;anglais &quot;three tier architecture&quot;. Le terme &quot;trois tiers&quot; désigne normalement une architecture où chaque tier est sur une machine différente. Lorsque les tiers sont sur une même machine, l&#x27;architecture devient une architecture &quot;<strong>trois couches</strong>&quot;.</p>
+<p>On appelle également cette architecture, "<strong>architecture trois tiers</strong>", traduction de l'anglais "three tier architecture". Le terme "trois tiers" désigne normalement une architecture où chaque tier est sur une machine différente. Lorsque les tiers sont sur une même machine, l'architecture devient une architecture "<strong>trois couches</strong>".</p>
 <ul>
-<li>la couche [metier] est celle qui contient les règles métier de l&#x27;application. Pour notre application d&#x27;élections, ce sont les règles qui permettent de calculer les sièges obtenus par les différentes listes, une fois que l&#x27;on connaît les voix obtenues par chacune d&#x27;elles. Cette couche a besoin de données pour travailler. Par exemple dans l&#x27;application d&#x27;élections :</li>
+<li>la couche [metier] est celle qui contient les règles métier de l'application. Pour notre application d'élections, ce sont les règles qui permettent de calculer les sièges obtenus par les différentes listes, une fois que l'on connaît les voix obtenues par chacune d'elles. Cette couche a besoin de données pour travailler. Par exemple dans l'application d'élections :</li>
 <li>les listes avec pour chacune son nom et son nombre de voix</li>
 <li>le nombre de sièges à pourvoir</li>
 <li>
@@ -1059,90 +1059,90 @@ Seule la phase 2 est vraiment constante. La phase 1 peut varier : les données p
 Dans le schéma ci-dessus, les données peuvent provenir de deux endroits :</p>
 </li>
 <li>
-<p>la couche d&#x27;accès aux données ou [dao] (DAO = Data Access Object) pour les données déjà enregistrées dans des fichiers ou bases de données. Ce pourrait être le cas ici du nom des listes, du nombre de sièges à pourvoir, du seuil électoral. On connaît en effet ces informations avant l&#x27;élection elle-même.</p>
+<p>la couche d'accès aux données ou [dao] (DAO = Data Access Object) pour les données déjà enregistrées dans des fichiers ou bases de données. Ce pourrait être le cas ici du nom des listes, du nombre de sièges à pourvoir, du seuil électoral. On connaît en effet ces informations avant l'élection elle-même.</p>
 </li>
-<li>la couche d&#x27;interface avec l&#x27;utilisateur ou [ui] (UI = User Interface) pour les données saisies par l&#x27;utilisateur ou affichées à l&#x27;utilisateur. Ce pourrait être le cas ici des voix des listes qui ne sont connues qu&#x27;au dernier moment ainsi que de l&#x27;affichage des résultats de l&#x27;élection.</li>
-<li>de façon générale, la couche [dao] s&#x27;occupe de l&#x27;accès aux données persistantes (fichiers, bases de données) ou non persistantes (réseau, capteurs, ...).</li>
-<li>la couche [ui] elle, s&#x27;occupe des interactions avec l&#x27;utilisateur s&#x27;il y en a un.</li>
-<li>les trois couches sont rendues indépendantes grâce à l&#x27;utilisation d&#x27;interfaces Java.</li>
-<li>pour intégrer ces couches ensemble dans l&#x27;application, il existe différentes méthodes. Nous serons amenés à utiliser un outil appelé &quot; Spring &quot;. Sur le schéma, il est transversal aux autres couches.
-Nous allons reprendre l&#x27;application [Elections] développée précédemment pour lui donner une architecture 3 couches. Pour cela, nous allons étudier les couches [ui, metier, dao] les unes après les autres, en commençant par la couche [dao], couche qui s&#x27;occupe des données persistantes.</li>
+<li>la couche d'interface avec l'utilisateur ou [ui] (UI = User Interface) pour les données saisies par l'utilisateur ou affichées à l'utilisateur. Ce pourrait être le cas ici des voix des listes qui ne sont connues qu'au dernier moment ainsi que de l'affichage des résultats de l'élection.</li>
+<li>de façon générale, la couche [dao] s'occupe de l'accès aux données persistantes (fichiers, bases de données) ou non persistantes (réseau, capteurs, ...).</li>
+<li>la couche [ui] elle, s'occupe des interactions avec l'utilisateur s'il y en a un.</li>
+<li>les trois couches sont rendues indépendantes grâce à l'utilisation d'interfaces Java.</li>
+<li>pour intégrer ces couches ensemble dans l'application, il existe différentes méthodes. Nous serons amenés à utiliser un outil appelé " Spring ". Sur le schéma, il est transversal aux autres couches.
+Nous allons reprendre l'application [Elections] développée précédemment pour lui donner une architecture 3 couches. Pour cela, nous allons étudier les couches [ui, metier, dao] les unes après les autres, en commençant par la couche [dao], couche qui s'occupe des données persistantes.</li>
 </ul>
-<p>Auparavant, il nous faut définir les interfaces des différentes couches de l&#x27;application [Elections].</p>
-<h2 id="42-les-interfaces-de-lapplication-elections">4.2. Les interfaces de l&#x27;application [Elections]</h2>
-<p>Rappelons qu&#x27;une interface définit un ensemble de signatures de méthodes. Les classes implémentant l&#x27;interface donnent un contenu à ces méthodes.</p>
-<p>Revenons à l&#x27;architecture 3 couches de notre application :</p>
+<p>Auparavant, il nous faut définir les interfaces des différentes couches de l'application [Elections].</p>
+<h2 id="42-les-interfaces-de-lapplication-elections">4.2. Les interfaces de l'application [Elections]</h2>
+<p>Rappelons qu'une interface définit un ensemble de signatures de méthodes. Les classes implémentant l'interface donnent un contenu à ces méthodes.</p>
+<p>Revenons à l'architecture 3 couches de notre application :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E80000018177EC9E34.png" style="display:inline-block; margin:4px;width:16.371cm;height:3.56cm;" /></td></tr></table>
 
-<p>Dans ce type d&#x27;architecture, c&#x27;est souvent l&#x27;utilisateur qui prend les initiatives. Il fait une demande en [1] et reçoit une réponse en [8]. On appelle cela le cycle demande - réponse. Prenons l&#x27;exemple du calcul des sièges obtenus au soir des élections. Celui-ci va nécessiter plusieurs étapes :</p>
-<ul>
-<li>la couche [ui] va devoir demander à l&#x27;utilisateur le nombre de voix obtenues par chacune des listes. Pour cela elle va devoir présenter à celui-ci le nom des listes en compétition. L&#x27;utilisateur n&#x27;aura alors qu&#x27;à mettre le nombre de voix en face de chaque liste puis à demander le calcul des sièges.</li>
-<li>la couche [ui] ne dispose pas du nom des listes. Celles-ci sont enregistrées dans la source de données à droite du schéma. Elle va utiliser le chemin [2, 3, 4, 5, 6, 7] pour les obtenir. L&#x27;opération [2] est la demande des listes, l&#x27;opération [7] la réponse à cette demande. Ceci fait, elle peut les présenter à l&#x27;utilisateur par [8].</li>
-<li>l&#x27;utilisateur va transmettre à la couche [ui] le nombre de voix obtenues par chacune des listes. C&#x27;est l&#x27;opération [1] ci-dessus. Au cours de cette étape, l&#x27;utilisateur n&#x27;interagit qu&#x27;avec la couche [ui]. C&#x27;est celle-ci qui va notamment vérifier la validité des données saisies. Ceci fait, l&#x27;utilisateur va demander la liste des sièges obtenus par chacune des listes.</li>
-<li>la couche [ui] va demander à la couche métier de faire le calcul des sièges. Pour cela elle va lui transmettre les données qu&#x27;elle a reçues de l&#x27;utilisateur. C&#x27;est l&#x27;opération [2].</li>
-<li>la couche [metier] a besoin de certaines informations pour mener à bien son travail. Elle a déjà les listes depuis l&#x27;opération (b). Il lui faut également le nombre de sièges à pourvoir ainsi que la valeur du seuil électoral. Elle va demander ces informations à la couche [dao] avec le chemin [3, 4, 5, 6]. [3] est la demande initiale et [6] la réponse à cette demande.</li>
+<p>Dans ce type d'architecture, c'est souvent l'utilisateur qui prend les initiatives. Il fait une demande en [1] et reçoit une réponse en [8]. On appelle cela le cycle demande - réponse. Prenons l'exemple du calcul des sièges obtenus au soir des élections. Celui-ci va nécessiter plusieurs étapes :</p>
+<ol>
+<li>la couche [ui] va devoir demander à l'utilisateur le nombre de voix obtenues par chacune des listes. Pour cela elle va devoir présenter à celui-ci le nom des listes en compétition. L'utilisateur n'aura alors qu'à mettre le nombre de voix en face de chaque liste puis à demander le calcul des sièges.</li>
+<li>la couche [ui] ne dispose pas du nom des listes. Celles-ci sont enregistrées dans la source de données à droite du schéma. Elle va utiliser le chemin [2, 3, 4, 5, 6, 7] pour les obtenir. L'opération [2] est la demande des listes, l'opération [7] la réponse à cette demande. Ceci fait, elle peut les présenter à l'utilisateur par [8].</li>
+<li>l'utilisateur va transmettre à la couche [ui] le nombre de voix obtenues par chacune des listes. C'est l'opération [1] ci-dessus. Au cours de cette étape, l'utilisateur n'interagit qu'avec la couche [ui]. C'est celle-ci qui va notamment vérifier la validité des données saisies. Ceci fait, l'utilisateur va demander la liste des sièges obtenus par chacune des listes.</li>
+<li>la couche [ui] va demander à la couche métier de faire le calcul des sièges. Pour cela elle va lui transmettre les données qu'elle a reçues de l'utilisateur. C'est l'opération [2].</li>
+<li>la couche [metier] a besoin de certaines informations pour mener à bien son travail. Elle a déjà les listes depuis l'opération (b). Il lui faut également le nombre de sièges à pourvoir ainsi que la valeur du seuil électoral. Elle va demander ces informations à la couche [dao] avec le chemin [3, 4, 5, 6]. [3] est la demande initiale et [6] la réponse à cette demande.</li>
 <li>ayant toutes les données dont elle avait besoin, la couche [metier] calcule les sièges obtenus par chacune des listes.</li>
-<li>la couche [metier] peut maintenant répondre à la demande de la couche [ui] faite en (d). C&#x27;est le chemin [7].</li>
-<li>la couche [ui] va mettre en forme ces résultats pour les présenter à l&#x27;utilisateur sous une forme appropriée puis les présenter. C&#x27;est le chemin [8].</li>
-<li>on peut imaginer que ces résultats doivent être mémorisés dans un fichier ou une base de données. Cela peut être fait de façon automatique. Dans ce cas, après l&#x27;opération (f), la couche [metier] va demander à la couche [dao] d&#x27;enregistrer les résultats. Ce sera le chemin [3, 4, 5, 6]. Cela peut être fait également seulement sur demande de l&#x27;utilisateur. Ce sera le chemin [1-8] qui sera utilisé par le cycle demande - réponse.
-On voit dans cette description qu&#x27;une couche est amenée à utiliser les ressources de la couche qui est à sa droite, jamais de celle qui est à sa gauche. Considérons deux couches contigües :</li>
-</ul>
+<li>la couche [metier] peut maintenant répondre à la demande de la couche [ui] faite en (d). C'est le chemin [7].</li>
+<li>la couche [ui] va mettre en forme ces résultats pour les présenter à l'utilisateur sous une forme appropriée puis les présenter. C'est le chemin [8].</li>
+<li>on peut imaginer que ces résultats doivent être mémorisés dans un fichier ou une base de données. Cela peut être fait de façon automatique. Dans ce cas, après l'opération (f), la couche [metier] va demander à la couche [dao] d'enregistrer les résultats. Ce sera le chemin [3, 4, 5, 6]. Cela peut être fait également seulement sur demande de l'utilisateur. Ce sera le chemin [1-8] qui sera utilisé par le cycle demande - réponse.
+On voit dans cette description qu'une couche est amenée à utiliser les ressources de la couche qui est à sa droite, jamais de celle qui est à sa gauche. Considérons deux couches contigües :</li>
+</ol>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D5000000F627965266.png" style="display:inline-block; margin:4px;width:11.449cm;height:2.281cm;" /></td></tr></table>
 
-<p>La couche [A] fait des demandes à la couche [B]. Dans les cas les plus simples, une couche est implémentée par une unique classe. Une application évolue au cours du temps. Ainsi la couche [B] peut avoir des classes d&#x27;implémentation différentes [B1, B2, ...]. Si la couche [B] est la couche [dao], celle-ci peut avoir une première implémentation [B1] qui va chercher des données dans un fichier. Quelques années plus tard, on peut vouloir mettre les données dans une base de données.  On va alors construire une seconde classe d&#x27;implémentation [B2]. Si dans l&#x27;application initiale, la couche [A] travaillait directement avec la classe [B1] on est obligés de réécrire partiellement le code de la couche [A]. Supposons par exemple qu&#x27;on ait écrit dans la couche [A] quelque chose comme suit :</p>
+<p>La couche [A] fait des demandes à la couche [B]. Dans les cas les plus simples, une couche est implémentée par une unique classe. Une application évolue au cours du temps. Ainsi la couche [B] peut avoir des classes d'implémentation différentes [B1, B2, ...]. Si la couche [B] est la couche [dao], celle-ci peut avoir une première implémentation [B1] qui va chercher des données dans un fichier. Quelques années plus tard, on peut vouloir mettre les données dans une base de données.  On va alors construire une seconde classe d'implémentation [B2]. Si dans l'application initiale, la couche [A] travaillait directement avec la classe [B1] on est obligés de réécrire partiellement le code de la couche [A]. Supposons par exemple qu'on ait écrit dans la couche [A] quelque chose comme suit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
-<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">B1</span><span class="w"> </span><span class="n">b1</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">B1</span><span class="p">(...);</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="p">..</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">b1</span><span class="p">.</span><span class="na">getData</span><span class="p">(...);</span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>B1 b1=new B1(...);
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>..
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>b1.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : une instance de la classe [B1] est créée</li>
 <li>ligne 3 : des données sont demandées à cette instance
-Si on suppose, que la nouvelle classe d&#x27;implémentation [B2] utilise des méthodes de même signature que celle de la classe [B1], il faudra changer tous les [B1] en [B2]. Ca, c&#x27;est le cas très favorable et assez improbable si on n&#x27;a pas prêté attention à ces signatures de méthodes. Dans la pratique, il est fréquent que les classes [B1] et [B2] n&#x27;aient pas les mêmes signatures de méthodes et que donc une bonne partie de la couche [A] doive être totalement réécrite.</li>
+Si on suppose, que la nouvelle classe d'implémentation [B2] utilise des méthodes de même signature que celle de la classe [B1], il faudra changer tous les [B1] en [B2]. Ca, c'est le cas très favorable et assez improbable si on n'a pas prêté attention à ces signatures de méthodes. Dans la pratique, il est fréquent que les classes [B1] et [B2] n'aient pas les mêmes signatures de méthodes et que donc une bonne partie de la couche [A] doive être totalement réécrite.</li>
 </ul>
-<p>On peut améliorer les choses si on met une interface entre les couches [A] et [B]. Cela signifie qu&#x27;on fige dans une interface les signatures des méthodes présentées par la couche [B] à la couche [A]. Le schéma précédent devient alors le suivant :</p>
+<p>On peut améliorer les choses si on met une interface entre les couches [A] et [B]. Cela signifie qu'on fige dans une interface les signatures des méthodes présentées par la couche [B] à la couche [A]. Le schéma précédent devient alors le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DF0000011E86BFD530.png" style="display:inline-block; margin:4px;width:11.55cm;height:2.649cm;" /></td></tr></table>
 
-<p>La couche [A] ne s&#x27;adresse désormais plus directement à la couche [B] mais à son interface [IB]. Ainsi dans le code de la couche [A], la classe d&#x27;implémentation [Bi] de la couche [B] n&#x27;apparaît qu&#x27;une fois, au moment de l&#x27;implémentation de l&#x27;interface [IB]. Ceci fait, c&#x27;est l&#x27;interface [IB] et non sa classe d&#x27;implémentation qui est utilisée dans le code. Le code précédent devient celui-ci :</p>
+<p>La couche [A] ne s'adresse désormais plus directement à la couche [B] mais à son interface [IB]. Ainsi dans le code de la couche [A], la classe d'implémentation [Bi] de la couche [B] n'apparaît qu'une fois, au moment de l'implémentation de l'interface [IB]. Ceci fait, c'est l'interface [IB] et non sa classe d'implémentation qui est utilisée dans le code. Le code précédent devient celui-ci :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">IB</span><span class="w"> </span><span class="n">ib</span><span class="o">=</span><span class="k">new</span><span class="w"> </span><span class="n">B1</span><span class="p">(...);</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="p">..</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">ib</span><span class="p">.</span><span class="na">getData</span><span class="p">(...);</span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>IB ib=new B1(...);
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>..
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>ib.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : une instance [ib] implémentant l&#x27;interface [IB] est créée par instanciation de la classe [B1]</li>
-<li>ligne 3 : des données sont demandées à l&#x27;instance [ib]
-Désormais si on remplace l&#x27;implémentation [B1] de la couche [B] par une implémentation [B2], et que ces deux implémentations respectent la même interface [IB], alors seule la ligne 1 de la couche [A] doit être modifiée et aucune autre. C&#x27;est un grand avantage qui à lui seul justifie l&#x27;usage systématique des interfaces entre deux couches.</li>
+<li>ligne 1 : une instance [ib] implémentant l'interface [IB] est créée par instanciation de la classe [B1]</li>
+<li>ligne 3 : des données sont demandées à l'instance [ib]
+Désormais si on remplace l'implémentation [B1] de la couche [B] par une implémentation [B2], et que ces deux implémentations respectent la même interface [IB], alors seule la ligne 1 de la couche [A] doit être modifiée et aucune autre. C'est un grand avantage qui à lui seul justifie l'usage systématique des interfaces entre deux couches.</li>
 </ul>
-<p>On peut aller encore plus loin et rendre la couche [A] totalement indépendante de la couche [B]. Dans le code ci-dessus, la ligne 1 pose problème parce qu&#x27;elle référence en dur la classe [B1]. L&#x27;idéal serait que la couche [A] puisse disposer d&#x27;une implémentation de l&#x27;interface [IB] sans avoir à nommer de classe. Ce serait cohérent avec notre schéma ci-dessus. On y voit que la couche [A] s&#x27;adresse à l&#x27;interface [IB] et on ne voit pas pourquoi elle aurait besoin de connaître le nom de la classe qui implémente cette interface. Ce détail n&#x27;est pas utile à la couche [A].</p>
-<p>Le framework Spring (http://www.springframework.org) permet d&#x27;obtenir ce résultat. L&#x27;architecture précédente évolue de la façon suivante :</p>
+<p>On peut aller encore plus loin et rendre la couche [A] totalement indépendante de la couche [B]. Dans le code ci-dessus, la ligne 1 pose problème parce qu'elle référence en dur la classe [B1]. L'idéal serait que la couche [A] puisse disposer d'une implémentation de l'interface [IB] sans avoir à nommer de classe. Ce serait cohérent avec notre schéma ci-dessus. On y voit que la couche [A] s'adresse à l'interface [IB] et on ne voit pas pourquoi elle aurait besoin de connaître le nom de la classe qui implémente cette interface. Ce détail n'est pas utile à la couche [A].</p>
+<p>Le framework Spring (http://www.springframework.org) permet d'obtenir ce résultat. L'architecture précédente évolue de la façon suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050800000175AF8E87D4.png" style="display:inline-block; margin:4px;width:10.22cm;height:2.96cm;" /></td></tr></table>
 
-<p>La couche transversale [Spring] va permettre à une couche d&#x27;obtenir par configuration une référence sur la couche située à sa droite sans avoir à connaître le nom de la classe d&#x27;implémentation de la couche. Ce nom sera dans les fichiers de configuration et non pas dans le code Java. Le code Java de la couche [A] prend alors la forme suivante :</p>
+<p>La couche transversale [Spring] va permettre à une couche d'obtenir par configuration une référence sur la couche située à sa droite sans avoir à connaître le nom de la classe d'implémentation de la couche. Ce nom sera dans les fichiers de configuration et non pas dans le code Java. Le code Java de la couche [A] prend alors la forme suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">IB</span><span class="w"> </span><span class="n">ib</span><span class="p">;</span><span class="w"> </span><span class="c1">// initialisé par Spring</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="p">..</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="n">ib</span><span class="p">.</span><span class="na">getData</span><span class="p">(...);</span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>IB ib; // initialisé par Spring
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>..
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>ib.getData(...);
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : une instance [ib] implémentant l&#x27;interface [IB] de la couche [B]. Cette instance est créée par Spring sur la base d&#x27;informations trouvées dans un fichier de configuration. Spring va s&#x27;occuper de créer :</li>
-<li>l&#x27;instance [b] implémentant la couche [B]</li>
-<li>l&#x27;instance [a] implémentant la couche [A]. Cette instance sera initialisée. Le champ [ib] ci-dessus recevra pour valeur la référence [b] de l&#x27;objet implémentant la couche [B]</li>
-<li>ligne 3 : des données sont demandées à l&#x27;instance [ib]
-On voit maintenant que, la classe d&#x27;implémentation [B1] de la couche B n&#x27;apparaît nulle part dans le code de la couche [A]. Lorsque l&#x27;implémentation [B1] sera remplacée par une nouvelle implémentation [B2], rien ne changera dans le code de la classe [A]. On changera simplement les fichiers de configuration de Spring pour instancier [B2] au lieu de [B1].</li>
+<li>ligne 1 : une instance [ib] implémentant l'interface [IB] de la couche [B]. Cette instance est créée par Spring sur la base d'informations trouvées dans un fichier de configuration. Spring va s'occuper de créer :</li>
+<li>l'instance [b] implémentant la couche [B]</li>
+<li>l'instance [a] implémentant la couche [A]. Cette instance sera initialisée. Le champ [ib] ci-dessus recevra pour valeur la référence [b] de l'objet implémentant la couche [B]</li>
+<li>ligne 3 : des données sont demandées à l'instance [ib]
+On voit maintenant que, la classe d'implémentation [B1] de la couche B n'apparaît nulle part dans le code de la couche [A]. Lorsque l'implémentation [B1] sera remplacée par une nouvelle implémentation [B2], rien ne changera dans le code de la classe [A]. On changera simplement les fichiers de configuration de Spring pour instancier [B2] au lieu de [B1].</li>
 </ul>
-<p>Le couple <strong>Spring</strong> et <strong>interfaces</strong> <strong>Java</strong> apporte une amélioration décisive à la maintenance d&#x27;applications en rendant les couches de celles-ci étanches entre elles. C&#x27;est cette solution que nous utiliserons pour l&#x27;application [Elections].</p>
-<p>Revenons à l&#x27;architecture trois couches de notre application :</p>
+<p>Le couple <strong>Spring</strong> et <strong>interfaces</strong> <strong>Java</strong> apporte une amélioration décisive à la maintenance d'applications en rendant les couches de celles-ci étanches entre elles. C'est cette solution que nous utiliserons pour l'application [Elections].</p>
+<p>Revenons à l'architecture trois couches de notre application :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D90000017E26BC8CF3.png" style="display:inline-block; margin:4px;width:13.91cm;height:3.03cm;" /></td></tr></table>
 
-<p>Dans les cas simples, on peut partir de la couche [metier] pour découvrir les interfaces de l&#x27;application. Pour travailler, elle a besoin de données :</p>
+<p>Dans les cas simples, on peut partir de la couche [metier] pour découvrir les interfaces de l'application. Pour travailler, elle a besoin de données :</p>
 <ul>
 <li>déjà disponibles dans des fichiers, bases de données ou via le réseau. Elles sont fournies par la couche [dao].</li>
 <li>
-<p>pas encore disponibles. Elles sont alors fournies par la couche [ui] qui les obtient auprès de l&#x27;utilisateur de l&#x27;application.
+<p>pas encore disponibles. Elles sont alors fournies par la couche [ui] qui les obtient auprès de l'utilisateur de l'application.
 Quelle interface doit offrir la couche [dao] à la couche [metier] ? Quelles sont les interactions possibles entre ces deux couches ? La couche [dao] doit fournir les données suivantes à la couche [metier] :</p>
 </li>
 <li>
@@ -1150,9 +1150,9 @@ Quelle interface doit offrir la couche [dao] à la couche [metier] ? Quelles son
 </li>
 <li>la valeur du seuil électoral au-dessous duquel une liste est éliminée</li>
 <li>les noms des listes
-Ces informations sont en effet connues avant l&#x27;élection et peuvent donc être mémorisées. Dans le sens [metier] -&gt; [dao], la couche [metier] peut demander à la couche [dao] d&#x27;enregistrer le résultat des élections, notamment les sièges obtenus par les différentes listes.</li>
+Ces informations sont en effet connues avant l'élection et peuvent donc être mémorisées. Dans le sens [metier] -&gt; [dao], la couche [metier] peut demander à la couche [dao] d'enregistrer le résultat des élections, notamment les sièges obtenus par les différentes listes.</li>
 </ul>
-<p>Avec ces informations, on pourrait tenter une première définition de l&#x27;interface de la couche [dao] :</p>
+<p>Avec ces informations, on pourrait tenter une première définition de l'interface de la couche [dao] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -1174,21 +1174,21 @@ Ces informations sont en effet connues avant l&#x27;élection et peuvent donc ê
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 1 : l&#x27;interface s&#x27;appelle [IElectionsDao]. Elle définit quatre méthodes :</li>
-<li>trois méthodes pour lire des données venant de la source de données : [getSeuilElectoral,  getNbSiegesAPourvoir,  getListesElectorales]. Ces trois méthodes permettront à la couche [metier] d&#x27;obtenir les données qui caractérisent l&#x27;élection courante.</li>
-<li>une méthode pour écrire des données dans la source de données : [setListesElectorales]. Cette méthode permettra à la couche [metier] de demander l&#x27;enregistrement des résultats qu&#x27;elle aura calculés.
-Revenons à l&#x27;architecture trois couches de notre application :</li>
+<li>ligne 1 : l'interface s'appelle [IElectionsDao]. Elle définit quatre méthodes :</li>
+<li>trois méthodes pour lire des données venant de la source de données : [getSeuilElectoral,  getNbSiegesAPourvoir,  getListesElectorales]. Ces trois méthodes permettront à la couche [metier] d'obtenir les données qui caractérisent l'élection courante.</li>
+<li>une méthode pour écrire des données dans la source de données : [setListesElectorales]. Cette méthode permettra à la couche [metier] de demander l'enregistrement des résultats qu'elle aura calculés.
+Revenons à l'architecture trois couches de notre application :</li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D90000017E26BC8CF3.png" style="display:inline-block; margin:4px;width:13.91cm;height:3.03cm;" /></td></tr></table>
 
 <p>Quelle interface la couche [metier] doit-elle présenter à la couche [ui] ? Examinons les interactions possibles entre ces deux couches.</p>
-<ul>
-<li>la couche [ui] va avoir pour rôle de demander à l&#x27;utilisateur les voix des différentes listes en compétition. Pour cela, elle doit connaître le nombre de listes. Elle peut demander ce renseignement à la couche [metier] qui peut demander à son tour le tableau des listes en compétition à la couche [dao]. Si la couche [metier] a ce tableau, autant transférer celui-ci dans la couche [ui]. Celle-ci disposera ainsi des noms des listes et pourra affiner ses messages à l&#x27;utilisateur en demandant par exemple &quot; Nombre de voix de la liste A &quot;.</li>
+<ol>
+<li>la couche [ui] va avoir pour rôle de demander à l'utilisateur les voix des différentes listes en compétition. Pour cela, elle doit connaître le nombre de listes. Elle peut demander ce renseignement à la couche [metier] qui peut demander à son tour le tableau des listes en compétition à la couche [dao]. Si la couche [metier] a ce tableau, autant transférer celui-ci dans la couche [ui]. Celle-ci disposera ainsi des noms des listes et pourra affiner ses messages à l'utilisateur en demandant par exemple " Nombre de voix de la liste A ".</li>
 <li>lorsque la couche [ui] aura obtenu les voix de toutes les listes, elle demandera le calcul des sièges à la couche [metier]. Celle-ci pourra faire ce calcul et rendre le résultat à la couche [ui].</li>
-<li>la couche [ui] pourra alors présenter ces résultats à l&#x27;utilisateur. Celui-ci pourra également demander leur enregistrement.</li>
-<li>la couche [ui] peut vouloir par ailleurs présenter des informations complémentaires à l&#x27;utilisateur, telles que le seuil électoral ou le nombre de sièges à pourvoir.
-Avec ces informations, on pourrait tenter une première définition de l&#x27;interface de la couche [metier] : </li>
-</ul>
+<li>la couche [ui] pourra alors présenter ces résultats à l'utilisateur. Celui-ci pourra également demander leur enregistrement.</li>
+<li>la couche [ui] peut vouloir par ailleurs présenter des informations complémentaires à l'utilisateur, telles que le seuil électoral ou le nombre de sièges à pourvoir.
+Avec ces informations, on pourrait tenter une première définition de l'interface de la couche [metier] : </li>
+</ol>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -1216,69 +1216,69 @@ Avec ces informations, on pourrait tenter une première définition de l&#x27;in
 <a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 51: l&#x27;interface s&#x27;appelle [IElectionsMetier]. Elle définit les méthodes suivantes :</li>
-<li>ligne 3 : une méthode [getListesElectorales] qui permettra à la couche [ui] d&#x27;obtenir le tableau des listes en compétition ;</li>
-<li>ligne 5 : la méthode [getNbSiegesAPourvoir] permet d&#x27;obtenir le nombre de sièges à pourvoir ;</li>
-<li>ligne 7 : la méthode [getSeuilElectoral] permet d&#x27;obtenir le seuil électoral ;</li>
+<li>ligne 51: l'interface s'appelle [IElectionsMetier]. Elle définit les méthodes suivantes :</li>
+<li>ligne 3 : une méthode [getListesElectorales] qui permettra à la couche [ui] d'obtenir le tableau des listes en compétition ;</li>
+<li>ligne 5 : la méthode [getNbSiegesAPourvoir] permet d'obtenir le nombre de sièges à pourvoir ;</li>
+<li>ligne 7 : la méthode [getSeuilElectoral] permet d'obtenir le seuil électoral ;</li>
 <li>ligne 11 : une méthode [calculerSieges] (ligne 36) qui permettra à la couche [ui] de demander le calcul des sièges une fois que les nombres  de voix des différentes listes seront connus. Le paramètre est le tableau des listes en compétition, sans leurs sièges et sans le booléen éliminé. Le résultat rendu est ce même tableau avec cette fois les champs [sièges, elimine] initialisés ;</li>
-<li>ligne 9 : une méthode [recordResultats]  qui permettra à la couche [ui] de demander l&#x27;enregistrement des résultats.
-<strong>Note</strong> : de par sa position, la couche [métier] reprend certaines des méthodes de la couche [DAO] pour les offrir à la couche [UI]. A cause de cette redondance, on peut être tenté de tout regrouper dans une unique couche qui regrouperait et le métier et l&#x27;accès aux données. Cette unique couche est parfois appelée le <strong>modèle</strong>, le M du sigle <strong>MVC</strong> (Modèle - Vue - Contrôleur). MVC est un modèle de conception (design pattern) répandu dans les applications web.</li>
+<li>ligne 9 : une méthode [recordResultats]  qui permettra à la couche [ui] de demander l'enregistrement des résultats.
+<strong>Note</strong> : de par sa position, la couche [métier] reprend certaines des méthodes de la couche [DAO] pour les offrir à la couche [UI]. A cause de cette redondance, on peut être tenté de tout regrouper dans une unique couche qui regrouperait et le métier et l'accès aux données. Cette unique couche est parfois appelée le <strong>modèle</strong>, le M du sigle <strong>MVC</strong> (Modèle - Vue - Contrôleur). MVC est un modèle de conception (design pattern) répandu dans les applications web.</li>
 </ul>
 <p>Examinons la signature de la méthode [calculerSieges] :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>public ListeElectorale[] calculerSieges(ListeElectorale[] listesElectorales);
 </code></pre></div></td></tr></table></div>
 <p>Il a été écrit plus haut : « Le paramètre est le tableau des listes en compétition, sans leurs sièges et sans le booléen éliminé. Le résultat est ce même tableau avec cette fois les champs [sièges, elimine] ». La signature de la méthode pourrait être également la suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>public void calculerSieges(ListeElectorale[] listesElectorales);
 </code></pre></div></td></tr></table></div>
-<p>Le paramètre [listesElectorales] est une référence d&#x27;objet, ici un tableau. Chaque élément est à son tour une référence d&#x27;objet, ici un type [ListeElectorale]. La méthode [calculerSieges] va changer les champs [sieges, elimine] de chacun de ces objets. La méthode appelante détient un pointeur [listesElectorales] qui :</p>
+<p>Le paramètre [listesElectorales] est une référence d'objet, ici un tableau. Chaque élément est à son tour une référence d'objet, ici un type [ListeElectorale]. La méthode [calculerSieges] va changer les champs [sieges, elimine] de chacun de ces objets. La méthode appelante détient un pointeur [listesElectorales] qui :</p>
 <ul>
-<li>avant l&#x27;appel, est la référence d&#x27;un tableau d&#x27;objets [ListeElectorale] ayant ses champs [sieges, elimine] non initialisés ;</li>
-<li>après l&#x27;appel, est la référence (la même) d&#x27;un tableau d&#x27;objets [ListeElectorale] ayant ses champs [sieges, elimine] initialisés ;
+<li>avant l'appel, est la référence d'un tableau d'objets [ListeElectorale] ayant ses champs [sieges, elimine] non initialisés ;</li>
+<li>après l'appel, est la référence (la même) d'un tableau d'objets [ListeElectorale] ayant ses champs [sieges, elimine] initialisés ;
 Alors pourquoi utiliser la signature :</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>public ListeElectorale[] calculerSieges(ListeElectorale[] listesElectorales);
 </code></pre></div></td></tr></table></div>
-<p>Lorsqu&#x27;on écrit une interface, il est bon de se rappeler qu&#x27;elle peut être utilisée dans deux contextes différents : local et distant. Dans le contexte local, la méthode appelante et la méthode appelée sont exécutées dans la même JVM (Java Virtual Machine) :</p>
+<p>Lorsqu'on écrit une interface, il est bon de se rappeler qu'elle peut être utilisée dans deux contextes différents : local et distant. Dans le contexte local, la méthode appelante et la méthode appelée sont exécutées dans la même JVM (Java Virtual Machine) :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D90000017E26BC8CF3.png" style="display:inline-block; margin:4px;width:13.91cm;height:3.03cm;" /></td></tr></table>
 
-<p>Si la couche [ui] fait appel à la méthode calculerSieges de la couche [DAO], elle a bien une référence sur le paramètre [ListeElectorale[] listesElectorales] qu&#x27;elle passe à la méthode.</p>
+<p>Si la couche [ui] fait appel à la méthode calculerSieges de la couche [DAO], elle a bien une référence sur le paramètre [ListeElectorale[] listesElectorales] qu'elle passe à la méthode.</p>
 <p>Dans le contexte distant, la méthode appelante et la méthode appelée sont exécutées dans des JVM différentes :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000070000000191104E68B3.png" style="display:inline-block; margin:4px;width:14.22cm;height:3.18cm;" /></td></tr></table>
 
-<p>Ci-dessus, la couche [ui] s&#x27;exécute dans la JVM 1 et la couche [métier] dans la JVM 2 sur deux machines différentes. Les deux couches ne communiquent pas directement. Entre-elles  s&#x27;intercale une couche qu&#x27;on appellera couche de communication [1]. Celle-ci est composée d&#x27;une couche d&#x27;émission [2] et d&#x27;une couche de réception [3]. Le développeur n&#x27;a en général pas à écrire ces couches de communication. Elles sont générées automatiquement par des outils logiciels. La couche [metier] est écrite comme si elle s&#x27;exécutait dans la même JVM que la couche [DAO]. Il n&#x27;y a donc aucune modification de code.</p>
+<p>Ci-dessus, la couche [ui] s'exécute dans la JVM 1 et la couche [métier] dans la JVM 2 sur deux machines différentes. Les deux couches ne communiquent pas directement. Entre-elles  s'intercale une couche qu'on appellera couche de communication [1]. Celle-ci est composée d'une couche d'émission [2] et d'une couche de réception [3]. Le développeur n'a en général pas à écrire ces couches de communication. Elles sont générées automatiquement par des outils logiciels. La couche [metier] est écrite comme si elle s'exécutait dans la même JVM que la couche [DAO]. Il n'y a donc aucune modification de code.</p>
 <p>Le mécanisme de communication entre la couche [ui] et la couche [métier] est le suivant :</p>
 <ul>
 <li>la couche [ui] fait appel à la méthode calculerSieges de la couche [métier] en lui passant le paramètre [ListeElectorale[] listesElectorales1] ;</li>
-<li>ce paramètre est en fait passé à la couche d&#x27;émission [2]. Celle-ci va transmettre sur le réseau, la <strong>valeur</strong> du paramètre listesElectorales1 et non sa <strong>référence</strong>. La forme exacte de cette valeur dépend du protocole de communication utilisé ;</li>
-<li>la couche de réception [3] va récupérer cette valeur et reconstruire à partir d&#x27;elle un objet [ListeElectorale[] listesElectorales2] image du paramètre initial envoyé par la couche [metier]. On a maintenant deux objets identiques (au sens de contenu) dans deux JVM différentes : listesElectorales1 et listesElectorales2.</li>
+<li>ce paramètre est en fait passé à la couche d'émission [2]. Celle-ci va transmettre sur le réseau, la <strong>valeur</strong> du paramètre listesElectorales1 et non sa <strong>référence</strong>. La forme exacte de cette valeur dépend du protocole de communication utilisé ;</li>
+<li>la couche de réception [3] va récupérer cette valeur et reconstruire à partir d'elle un objet [ListeElectorale[] listesElectorales2] image du paramètre initial envoyé par la couche [metier]. On a maintenant deux objets identiques (au sens de contenu) dans deux JVM différentes : listesElectorales1 et listesElectorales2.</li>
 <li>
-<p>la couche de réception va passer l&#x27;objet listesElectorales2 à la méthode calculerSieges de la couche [métier] ; qui va le persister en base de données. Après cette opération, la référence listesElectorales2 pointe sur un tableau d&#x27;objets [ListeElectorale] ayant leurs champs [sieges, elimine] initialisés. . Ce n&#x27;est pas le cas de l&#x27;objet listesElectorales1 sur lequel la couche [ui] a une référence. Si on veut que la couche [ui] ait une référence sur l&#x27;objet listesElectorales2, il faut lui envoyer celui-ci. Aussi est-on amenés à utiliser la signature suivante pour la méthode [calculerSieges] :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
+<p>la couche de réception va passer l'objet listesElectorales2 à la méthode calculerSieges de la couche [métier] ; qui va le persister en base de données. Après cette opération, la référence listesElectorales2 pointe sur un tableau d'objets [ListeElectorale] ayant leurs champs [sieges, elimine] initialisés. . Ce n'est pas le cas de l'objet listesElectorales1 sur lequel la couche [ui] a une référence. Si on veut que la couche [ui] ait une référence sur l'objet listesElectorales2, il faut lui envoyer celui-ci. Aussi est-on amenés à utiliser la signature suivante pour la méthode [calculerSieges] :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>public ListeElectorale[] calculerSieges(ListeElectorale[] listesElectorales);
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p>avec cette signature, la méthode calculerSieges va rendre comme résultat la référence listesElectorales2. Ce résultat est rendu à la couche de réception [3] qui avait appelé la couche [métier]. Celle-ci va rendre la <strong>valeur</strong> (et non la <strong>référence</strong>) de listesElectorales2 à la couche d&#x27;émission [2] ;</p>
+<p>avec cette signature, la méthode calculerSieges va rendre comme résultat la référence listesElectorales2. Ce résultat est rendu à la couche de réception [3] qui avait appelé la couche [métier]. Celle-ci va rendre la <strong>valeur</strong> (et non la <strong>référence</strong>) de listesElectorales2 à la couche d'émission [2] ;</p>
 </li>
-<li>la couche d&#x27;émission [2] va récupérer cette valeur et reconstruire à partir d&#x27;elle un objet [ListeElectorale[] listesElectorales3] image du résultat rendu par la méthode calculerSieges de la couche [métier].</li>
+<li>la couche d'émission [2] va récupérer cette valeur et reconstruire à partir d'elle un objet [ListeElectorale[] listesElectorales3] image du résultat rendu par la méthode calculerSieges de la couche [métier].</li>
 <li>
-<p>l&#x27;objet [ListeElectorale[] listesElectorales3] est rendu à la méthode de la couche [ui] dont l&#x27;appel à la méthode calculerSieges de la couche [DAO] avait initié tout ce mécanisme ;
+<p>l'objet [ListeElectorale[] listesElectorales3] est rendu à la méthode de la couche [ui] dont l'appel à la méthode calculerSieges de la couche [DAO] avait initié tout ce mécanisme ;
 Dans ce processus, des objets de type [ListeElectorale] vont transiter entre les couches [2] et [3] :</p>
 </li>
 <li>
-<p>lorsque la couche [2] transmet la valeur d&#x27;un objet [ListeElectorale] à la couche [3], on dit que l&#x27;objet est <strong>sérialisé</strong>. La forme exacte de cette sérialisation dépend du protocole de communication utilisé ;</p>
+<p>lorsque la couche [2] transmet la valeur d'un objet [ListeElectorale] à la couche [3], on dit que l'objet est <strong>sérialisé</strong>. La forme exacte de cette sérialisation dépend du protocole de communication utilisé ;</p>
 </li>
-<li>lorsque la couche [3] récupère la valeur d&#x27;un objet [ListeElectorale] afin de créer de nouveau un objet [ListeElectorale], on dit que l&#x27;objet est <strong>désérialisé</strong> ;
-Pour qu&#x27;un objet puisse subir cette sérialisation / désérialisation, certains protocoles exigent que l&#x27;objet implémente l&#x27;interface [Serializable]. Cette interface est juste un marqueur. Il n&#x27;y a pas de méthodes à implémenter. Aussi la classe [ListeElectorale] sera-t-elle désormais déclarée de la façon suivante :</li>
+<li>lorsque la couche [3] récupère la valeur d'un objet [ListeElectorale] afin de créer de nouveau un objet [ListeElectorale], on dit que l'objet est <strong>désérialisé</strong> ;
+Pour qu'un objet puisse subir cette sérialisation / désérialisation, certains protocoles exigent que l'objet implémente l'interface [Serializable]. Cette interface est juste un marqueur. Il n'y a pas de méthodes à implémenter. Aussi la classe [ListeElectorale] sera-t-elle désormais déclarée de la façon suivante :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
 <span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ListeElectorale</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">serialVersionUID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1L</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>le champ de la ligne 2 est imposé. On peut le conserver tel quel et l&#x27;utiliser pour toute classe de type [Serializable].</li>
+<li>le champ de la ligne 2 est imposé. On peut le conserver tel quel et l'utiliser pour toute classe de type [Serializable].</li>
 </ul>
-<h2 id="43-la-classe-dexception">4.3. La classe d&#x27;exception</h2>
-<p>Revenons à l&#x27;interface de la couche [DAO] :</p>
+<h2 id="43-la-classe-dexception">4.3. La classe d'exception</h2>
+<p>Revenons à l'interface de la couche [DAO] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E600000186C15E5B12.png" style="display:inline-block; margin:4px;width:14.019cm;height:3.099cm;" /></td></tr></table>
 
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
@@ -1301,7 +1301,7 @@ Pour qu&#x27;un objet puisse subir cette sérialisation / désérialisation, cer
 <a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setListesElectorales</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
 <a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Ces méthodes travaillent avec une base de données et peuvent rencontrer diverses erreurs, par exemple un SGBD non disponible. Lorsqu&#x27;on écrit une méthode, il faut toujours prévoir les cas d&#x27;erreur. Celles-ci sont signalées classiquement par une exception. Nous avons déjà rencontré la classe [ElectionsException] au paragraphe 3.3, page 22. Nous allons continuer à l&#x27;utiliser mais en l&#x27;enrichissant de la façon suivante :</p>
+<p>Ces méthodes travaillent avec une base de données et peuvent rencontrer diverses erreurs, par exemple un SGBD non disponible. Lorsqu'on écrit une méthode, il faut toujours prévoir les cas d'erreur. Celles-ci sont signalées classiquement par une exception. Nous avons déjà rencontré la classe [ElectionsException] au paragraphe 3.3, page 22. Nous allons continuer à l'utiliser mais en l'enrichissant de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -1464,17 +1464,17 @@ Pour qu&#x27;un objet puisse subir cette sérialisation / désérialisation, cer
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 16-17 : le type [ElectionsException] encapsule :</li>
-<li>un code d&#x27;erreur, ligne 16 ;</li>
+<li>un code d'erreur, ligne 16 ;</li>
 <li>
-<p>une liste de messages d&#x27;erreur, ligne 17 ;
+<p>une liste de messages d'erreur, ligne 17 ;
 La classe supporte cinq constructeurs :</p>
 </li>
 <li>
 <p>ligne 20 : <strong>ElectionsException</strong>()</p>
 </li>
-<li>ligne 24 : <strong>ElectionsException</strong>(<strong>int</strong> code, Throwable e) : le second paramètre est un type [Throwable] qui est la classe parente de la classe [Exception]. Ce constructeur permet d&#x27;encapsuler l&#x27;exception <strong>e</strong> avec un code d&#x27;erreur. Le type [Throwable] (et donc le type Exception) permet d&#x27;encapsuler une ou plusieurs exceptions. L&#x27;idée est :</li>
-<li>d&#x27;arrêter (catch) une exception qui se produit ;</li>
-<li>de l&#x27;enrichir d&#x27;un message en l&#x27;encapsulant dans une nouvelle exception ;</li>
+<li>ligne 24 : <strong>ElectionsException</strong>(<strong>int</strong> code, Throwable e) : le second paramètre est un type [Throwable] qui est la classe parente de la classe [Exception]. Ce constructeur permet d'encapsuler l'exception <strong>e</strong> avec un code d'erreur. Le type [Throwable] (et donc le type Exception) permet d'encapsuler une ou plusieurs exceptions. L'idée est :</li>
+<li>d'arrêter (catch) une exception qui se produit ;</li>
+<li>de l'enrichir d'un message en l'encapsulant dans une nouvelle exception ;</li>
 <li>de relancer la nouvelle exception ;
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
@@ -1487,14 +1487,14 @@ La classe supporte cinq constructeurs :</p>
 <a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>L&#x27;encapsulation a lieu ligne 34 par l&#x27;instruction [<strong>super</strong>(message,e)]. Ce processus d&#x27;encapsulation peut être répété et l&#x27;exception initiale enrichie de différents messages. On dit alors qu&#x27;on a une pile d&#x27;exceptions. La méthode [<strong>private</strong> List&lt;String&gt; getErreursForException(Throwable th)] permet d&#x27;obtenir les différents messages associés aux exceptions encapsulées :</p>
+<p>L'encapsulation a lieu ligne 34 par l'instruction [<strong>super</strong>(message,e)]. Ce processus d'encapsulation peut être répété et l'exception initiale enrichie de différents messages. On dit alors qu'on a une pile d'exceptions. La méthode [<strong>private</strong> List&lt;String&gt; getErreursForException(Throwable th)] permet d'obtenir les différents messages associés aux exceptions encapsulées :</p>
 <ul>
-<li>l&#x27;exception encapsulée est obtenue par la méthode Throwable [Throwable].getCause() ;</li>
+<li>l'exception encapsulée est obtenue par la méthode Throwable [Throwable].getCause() ;</li>
 <li>le message associé à une exception est la méthode String [Throwable].getMessage() ;</li>
 <li>lignes 28-29 : on construit les champs [code, erreurs] ;</li>
-<li>ligne 32 : <strong>public</strong> ElectionsException(<strong>int</strong> code, String message, Throwable e) : ce constructeur est analogue au précédent, si ce n&#x27;est qu&#x27;il enrichit l&#x27;exception qu&#x27;il va encapsuler et d&#x27;un code et d&#x27;un message ;</li>
-<li>ligne 40 : <strong>public</strong> ElectionsException(<strong>int</strong> code, String message) : constructeur sans encapsulation d&#x27;exception ;</li>
-<li>ligne 50 : <strong>public</strong> ElectionsException(<strong>int</strong> code, List&lt;String&gt; erreurs) : constructeur sans encapsulation d&#x27;exception, ni mesage ;
+<li>ligne 32 : <strong>public</strong> ElectionsException(<strong>int</strong> code, String message, Throwable e) : ce constructeur est analogue au précédent, si ce n'est qu'il enrichit l'exception qu'il va encapsuler et d'un code et d'un message ;</li>
+<li>ligne 40 : <strong>public</strong> ElectionsException(<strong>int</strong> code, String message) : constructeur sans encapsulation d'exception ;</li>
+<li>ligne 50 : <strong>public</strong> ElectionsException(<strong>int</strong> code, List&lt;String&gt; erreurs) : constructeur sans encapsulation d'exception, ni mesage ;
 La classe [ElectionsException] pourra être utilisée de la façon suivante :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
@@ -1507,17 +1507,17 @@ La classe [ElectionsException] pourra être utilisée de la façon suivante :</
 <a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">(</span><span class="n">un_code</span><span class="p">,</span><span class="n">un_message</span><span class="p">,</span><span class="n">e1</span><span class="p">);</span>
 <a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>où le message sera ou non présent. Une fois créée, l&#x27;exception [ElectionsException] n&#x27;a pas vocation à encapsuler de nouvelles exceptions. Ci-dessus, elle encapsule l&#x27;exception e1 et les exceptions que e1 encapsule. Il n&#x27;y a ensuite, plus de nouvelles encapsulations.</p>
+<p>où le message sera ou non présent. Une fois créée, l'exception [ElectionsException] n'a pas vocation à encapsuler de nouvelles exceptions. Ci-dessus, elle encapsule l'exception e1 et les exceptions que e1 encapsule. Il n'y a ensuite, plus de nouvelles encapsulations.</p>
 <p>La classe [ElectionsException] pourra être également utilisée de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
 <span class="normal"><a href="#__codelineno-15-2">2</a></span>
 <span class="normal"><a href="#__codelineno-15-3">3</a></span>
 <span class="normal"><a href="#__codelineno-15-4">4</a></span>
-<span class="normal"><a href="#__codelineno-15-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="c1">// code susceptible de rencontrer un cas d&#39;erreur (mais pas sous la forme d&#39;une exception)</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="p">...</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="k">if</span><span class="p">(</span><span class="n">erreur</span><span class="p">){</span>
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">(</span><span class="n">un_code</span><span class="p">,</span><span class="n">un_message</span><span class="p">);</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>// code susceptible de rencontrer un cas d&#39;erreur (mais pas sous la forme d&#39;une exception)
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>...
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>if(erreur){
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>    throw new ElectionsException(un_code,un_message);
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>}
 </code></pre></div></td></tr></table></div>
 
 

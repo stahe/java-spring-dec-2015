@@ -12,13 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/java-spring-dec-2015/td-creation-dx27un-client-pour-le-service-web.html">
+        <link rel="canonical" href="https://stahe.github.io/java-spring-dec-2015/td-creation-dun-client-pour-le-service-web.html">
       
       
         <link rel="prev" href="td-exposition-sur-le-web-de-la-couche-metier.html">
       
       
-        <link rel="next" href="cours-securiser-lx27acces-a-un-service-web-avec-spring-security.html">
+        <link rel="next" href="cours-securiser-lacces-a-un-service-web-avec-spring-security.html">
       
       
         
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              15. [TD] : création d&#x27;un client pour le service web
+              15. [TD] : création d'un client pour le service web
             
           </span>
         </div>
@@ -428,14 +428,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-introduction-a-lx27api-jdbc.html" class="md-nav__link">
+      <a href="cours-introduction-a-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. [Cours] : Introduction à l&#x27;API JDBC
+    6. [Cours] : Introduction à l'API JDBC
   
 
     
@@ -455,14 +455,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-implementation-de-la-couche-dao-du-td-avec-lx27api-jdbc.html" class="md-nav__link">
+      <a href="td-implementation-de-la-couche-dao-du-td-avec-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [TD] : Implémentation de la couche [DAO] du TD avec l&#x27;API JDBC
+    7. [TD] : Implémentation de la couche [DAO] du TD avec l'API JDBC
   
 
     
@@ -687,7 +687,7 @@
   <span class="md-ellipsis">
     
   
-    15. [TD] : création d&#x27;un client pour le service web
+    15. [TD] : création d'un client pour le service web
   
 
     
@@ -698,14 +698,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="td-creation-dx27un-client-pour-le-service-web.html" class="md-nav__link md-nav__link--active">
+      <a href="td-creation-dun-client-pour-le-service-web.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. [TD] : création d&#x27;un client pour le service web
+    15. [TD] : création d'un client pour le service web
   
 
     
@@ -745,7 +745,7 @@
   <a href="#152-larchitecture-client-serveur" class="md-nav__link">
     <span class="md-ellipsis">
       
-        15.2. L&#x27;architecture client / serveur
+        15.2. L'architecture client / serveur
       
     </span>
   </a>
@@ -812,7 +812,7 @@
   <a href="#1553-linterface-de-la-couche-dao" class="md-nav__link">
     <span class="md-ellipsis">
       
-        15.5.3. L&#x27;interface de la couche [DAO]
+        15.5.3. L'interface de la couche [DAO]
       
     </span>
   </a>
@@ -883,14 +883,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-securiser-lx27acces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
+      <a href="cours-securiser-lacces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. [Cours] : Sécuriser l&#x27;accès à un service web avec Spring Security
+    16. [Cours] : Sécuriser l'accès à un service web avec Spring Security
   
 
     
@@ -1085,14 +1085,14 @@
   
 
 
-<h1 id="15-td-creation-dun-client-pour-le-service-web">15. [TD] : création d&#x27;un client pour le service web</h1>
+<h1 id="15-td-creation-dun-client-pour-le-service-web">15. [TD] : création d'un client pour le service web</h1>
 <p><strong>Mots clés</strong> : architecture multicouche, Spring, injection de dépendances, service web / jSON, client / serveur</p>
 <h2 id="151-support">15.1. Support</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E60000008E405A5931.png" style="display:inline-block; margin:4px;width:4.26cm;height:2.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Les projets de ce chapitre seront trouvés dans le dossier [support / chap-15].</p>
-<h2 id="152-larchitecture-client-serveur">15.2. L&#x27;architecture client / serveur</h2>
-<p>Nous voulons créer l&#x27;architecture client / serveur suivante :</p>
+<h2 id="152-larchitecture-client-serveur">15.2. L'architecture client / serveur</h2>
+<p>Nous voulons créer l'architecture client / serveur suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000461000002E4615022DB.png" style="display:inline-block; margin:4px;width:14.831cm;height:9.79cm;" /></td></tr></table>
 
 <p>La couche [ui] sera celle déjà développée aux paragraphes 9 et 10. Cela sera possible parce que la couche [métier] ci-dessus implémentera la même interface [IElectionsMetier] que la couche [métier] du paragraphe 8 :</p>
@@ -1141,7 +1141,7 @@
 <a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Dans le paragraphe 7, la couche [DAO] échangeait des données avec un SGBD. Ici la couche [DAO] échange des données avec un serveur web / jSON.</p>
-<p>Dans un premier temps, nous nous intéresserons à l&#x27;architecture suivante :</p>
+<p>Dans un premier temps, nous nous intéresserons à l'architecture suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000465000002E513809146.png" style="display:inline-block; margin:4px;width:14.884cm;height:9.804cm;" /></td></tr></table>
 
 <h2 id="153-le-projet-eclipse">15.3. Le projet Eclipse</h2>
@@ -1150,7 +1150,7 @@
 
 <p>Cette structure reprend celle du projet exemple du paragraphe 13.6.1, page 248. Nous allons suivre la même démarche.</p>
 <h2 id="154-configuration-maven">15.4. Configuration Maven</h2>
-<p>C&#x27;est celle décrite au paragraphe 13.6.2, page 249.</p>
+<p>C'est celle décrite au paragraphe 13.6.2, page 249.</p>
 <h2 id="155-implementation-de-la-couche-dao">15.5. Implémentation de la couche [DAO]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035100000167C91D7514.png" style="display:inline-block; margin:4px;width:11.232cm;height:4.75cm;" /></td></tr></table>
 
@@ -1158,7 +1158,7 @@
 
 <ul>
 <li>le package [elections.client.config] contient la configation Spring de la couche [DAO] ;</li>
-<li>le package [elections .client.dao] contient l&#x27;implémentation de la couche [DAO] ;</li>
+<li>le package [elections .client.dao] contient l'implémentation de la couche [DAO] ;</li>
 <li>le package [elections .client.entities] contient les objets échangés avec le service web / jSON ;</li>
 <li>le package [elections .client.metier] contient la couche [métier]</li>
 <li>le package [elections .client.ui] contient la couche [UI]</li>
@@ -1261,11 +1261,11 @@
 <a id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Ce code a été expliqué au paragraphe 13.6.3.1, page 251. Il est plus simple car il n&#x27;y a pas ici de filtres jSON à gérer.</p>
+<p>Ce code a été expliqué au paragraphe 13.6.3.1, page 251. Il est plus simple car il n'y a pas ici de filtres jSON à gérer.</p>
 <h3 id="1552-les-entites">15.5.2. Les entités</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010F000000EEE269C67D.png" style="display:inline-block; margin:4px;width:5.02cm;height:4.41cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>Les entités manipulées par les couches [DAO] et [métier] sont celles qu&#x27;elles échangent avec le service web / jSON. Ce sont les objets de type [ElectionsConfig] et [ListeElectorale]. Côté serveur, ces entités avaient des annotations de persistence JPA. Ici, ces annotations ont été enlevées. Nous redonnons le code des entités pour rappel :</p>
+<p>Les entités manipulées par les couches [DAO] et [métier] sont celles qu'elles échangent avec le service web / jSON. Ce sont les objets de type [ElectionsConfig] et [ListeElectorale]. Côté serveur, ces entités avaient des annotations de persistence JPA. Ici, ces annotations ont été enlevées. Nous redonnons le code des entités pour rappel :</p>
 <p>[AbstractEntity]</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -1445,10 +1445,10 @@
 <a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="p">...</span>
 <a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="1553-linterface-de-la-couche-dao">15.5.3. L&#x27;interface de la couche [DAO]</h3>
+<h3 id="1553-linterface-de-la-couche-dao">15.5.3. L'interface de la couche [DAO]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010A000000D19F1A04FD.png" style="display:inline-block; margin:4px;width:4.93cm;height:3.87cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>La couche [DAO] présente l&#x27;interface [IClientDao] suivante :</p>
+<p>La couche [DAO] présente l'interface [IClientDao] suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
@@ -1465,16 +1465,16 @@
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a>
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>L&#x27;interface n&#x27;a qu&#x27;une unique méthode [getResponse] :</p>
+<p>L'interface n'a qu'une unique méthode [getResponse] :</p>
 <ul>
-<li>le 1er paramètre est l&#x27;URL du serveur à interroger ;</li>
-<li>le second paramètre est la valeur jSON de la valeur à poster, null s&#x27;il n&#x27;y a rien à poster ;</li>
-<li>le résultat est la chaîne jSON d&#x27;un objet [Response&lt;T&gt;] où la classe [Response] a été décrite au paragraphe 14.7, page 272 ;</li>
+<li>le 1er paramètre est l'URL du serveur à interroger ;</li>
+<li>le second paramètre est la valeur jSON de la valeur à poster, null s'il n'y a rien à poster ;</li>
+<li>le résultat est la chaîne jSON d'un objet [Response&lt;T&gt;] où la classe [Response] a été décrite au paragraphe 14.7, page 272 ;</li>
 </ul>
 <h3 id="1554-implementation-des-echanges-avec-le-service-web-json">15.5.4. Implémentation des échanges avec le service web / jSON</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000117000000CA2AEDA8C2.png" style="display:inline-block; margin:4px;width:5.159cm;height:3.739cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>La classe [ClientDao] implémente l&#x27;interface [IClientDao] de la façon suivante :</p>
+<p>La classe [ClientDao] implémente l'interface [IClientDao] de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -1828,21 +1828,21 @@
 <p>Le type [Response] utilisé ligne 37 est la réponse du serveur web / jSON décrite au paragraphe 14.7, page 272 ;</p>
 <p><strong>Travail à faire</strong> : en suivant le paragraphe 13.6.3.7, page 258, complétez la classe [ElectionsMetier] ;</p>
 <h2 id="157-le-test-junit">15.7. Le test Junit</h2>
-<p>Revenons à l&#x27;architecture client / serveur en cours de construction :</p>
+<p>Revenons à l'architecture client / serveur en cours de construction :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B2000002ED88B9ECD2.png" style="display:inline-block; margin:4px;width:15.901cm;height:9.91cm;" /></td></tr></table>
 
-<p>La couche [JUnit] [1] communique avec la couche [Métier] du serveur [5] au travers des couches [2-4]. En faisant en sorte que les couches [Métier] [2] et [5] aient la même interface, on rend les couches [2-4] transparentes. La couche [1] a l&#x27;impression de communiquer directement avec la couche [5]. Le point intéressant est qu&#x27;en [1] on va pouvoir utiliser le test JUnit qui avait été utilisé pour tester la couche [Métier] [5].</p>
+<p>La couche [JUnit] [1] communique avec la couche [Métier] du serveur [5] au travers des couches [2-4]. En faisant en sorte que les couches [Métier] [2] et [5] aient la même interface, on rend les couches [2-4] transparentes. La couche [1] a l'impression de communiquer directement avec la couche [5]. Le point intéressant est qu'en [1] on va pouvoir utiliser le test JUnit qui avait été utilisé pour tester la couche [Métier] [5].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010D000000934C9BF7F1.png" style="display:inline-block; margin:4px;width:4.979cm;height:2.72cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><strong>Travail à faire</strong> : passez le test JUnit du projet pour vérifier votre implémentation et du serveur et de son client.</p>
 <h2 id="158-implementation-de-la-couche-ui">15.8. Implémentation de la couche [UI]</h2>
-<p>Revenons à l&#x27;architecture que nous voulons construire :</p>
+<p>Revenons à l'architecture que nous voulons construire :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046B000002E99685209C.png" style="display:inline-block; margin:4px;width:14.963cm;height:9.857cm;" /></td></tr></table>
 
 <p>Maintenant que la couche [métier] [2] a été construite et testée, nous pouvons construire la couche [ui] [1].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000043C0000017F8A6B716E.png" style="display:inline-block; margin:4px;width:14.34cm;height:5.068cm;" /></td></tr></table>
 
-<p>Comme l&#x27;interface [IElectionsMetier] de la couche [métier] est identique à celle du projet décrit au paragraphe 8, page 125, nous pouvons en [3], copier le projet de la couches [ui] du paragraphe 10, page 140. Ce projet était un projet Netbeans. Il suffit de faire un copier / coller des classes Java concernées de Netbeans vers Eclipse. Ceci fait, il y a des ajustements de packages et d&#x27;imports à faire.</p>
+<p>Comme l'interface [IElectionsMetier] de la couche [métier] est identique à celle du projet décrit au paragraphe 8, page 125, nous pouvons en [3], copier le projet de la couches [ui] du paragraphe 10, page 140. Ce projet était un projet Netbeans. Il suffit de faire un copier / coller des classes Java concernées de Netbeans vers Eclipse. Ceci fait, il y a des ajustements de packages et d'imports à faire.</p>
 <p>On fera de même pour les classes exécutables du package [elections.client.boot] [4].</p>
 <p>La classe [AbstractBootElections] est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
@@ -1917,7 +1917,7 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 6 : on importe les beans de la couche [métier] ;</li>
-<li>ligne 7 : on indique qu&#x27;il y des beans Spring dans le package [elections.client.ui] ;
+<li>ligne 7 : on indique qu'il y des beans Spring dans le package [elections.client.ui] ;
 <strong>Travail à faire</strong> : vérifiez que les versions console et swing de la couche [ui] fonctionnent.</li>
 </ul>
 

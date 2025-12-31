@@ -428,14 +428,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-introduction-a-lx27api-jdbc.html" class="md-nav__link">
+      <a href="cours-introduction-a-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. [Cours] : Introduction à l&#x27;API JDBC
+    6. [Cours] : Introduction à l'API JDBC
   
 
     
@@ -455,14 +455,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-implementation-de-la-couche-dao-du-td-avec-lx27api-jdbc.html" class="md-nav__link">
+      <a href="td-implementation-de-la-couche-dao-du-td-avec-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [TD] : Implémentation de la couche [DAO] du TD avec l&#x27;API JDBC
+    7. [TD] : Implémentation de la couche [DAO] du TD avec l'API JDBC
   
 
     
@@ -671,14 +671,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-creation-dx27un-client-pour-le-service-web.html" class="md-nav__link">
+      <a href="td-creation-dun-client-pour-le-service-web.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. [TD] : création d&#x27;un client pour le service web
+    15. [TD] : création d'un client pour le service web
   
 
     
@@ -698,14 +698,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-securiser-lx27acces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
+      <a href="cours-securiser-lacces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. [Cours] : Sécuriser l&#x27;accès à un service web avec Spring Security
+    16. [Cours] : Sécuriser l'accès à un service web avec Spring Security
   
 
     
@@ -1026,7 +1026,7 @@
   <a href="#20331-initialisation-de-linterface-graphique" class="md-nav__link">
     <span class="md-ellipsis">
       
-        20.3.3.1. Initialisation de l&#x27;interface graphique
+        20.3.3.1. Initialisation de l'interface graphique
       
     </span>
   </a>
@@ -1048,7 +1048,7 @@
   <a href="#20333-enregistrement-des-resultats-de-lelection" class="md-nav__link">
     <span class="md-ellipsis">
       
-        20.3.3.3. Enregistrement des résultats de l&#x27;élection
+        20.3.3.3. Enregistrement des résultats de l'élection
       
     </span>
   </a>
@@ -1149,19 +1149,19 @@
 
 <h1 id="20-programmation-asynchrone-avec-rxjava">20. Programmation asynchrone avec RxJava</h1>
 <p><strong>Document à lire</strong> : [<a href="http://tahe.developpez.com/tutoriels-cours/rxjava-rxswing-rxandroid/documents/rxjava.pdf"><u>Introduction à RxJava. Application aux environnements Swing et Android</u></a>.]</p>
-<p>Dans ce chapitre, nous revenons sur le chapitre 17.6, page 343 où nous avions construit une application client / serveur avec l&#x27;architecture suivante :</p>
+<p>Dans ce chapitre, nous revenons sur le chapitre 17.6, page 343 où nous avions construit une application client / serveur avec l'architecture suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C7000002EECD229798.png" style="display:inline-block; margin:4px;width:16.18cm;height:9.922cm;" /></td></tr></table>
 
-<p>Certaines actions de l&#x27;utilisateur sur l&#x27;interface Swing en [1] déclenchent des actions jusque dans la base de données en [3] au-travers d&#x27;un réseau HTTP [2]. A cause de celui-ci, la réponse à l&#x27;action de l&#x27;utilisateur peut être plus ou moins longue à venir. Ce serait bien de pouvoir mettre un indicateur d&#x27;attente sur l&#x27;interface utilisateur avec une option d&#x27;annulation de l&#x27;opération lancée si celle-ci venait à être trop longue. Dans le chapitre 17.6, page 343, chaque action de l&#x27;utilisateur nécessitant d&#x27;échanger des informations avec le serveur est synchrone. Le gestionnaire d&#x27;événement exécuté par le code n&#x27;est terminé que lorsque la réponse est reçue. Pendant tout ce temps, l&#x27;interface graphique est gelée : elle ne répond pas aux nouvelles actions de l&#x27;utilisateur. Celles-ci sont simplement mises en file d&#x27;attente pour être traitées lorsque le gestionnaire d&#x27;événement qui s&#x27;exécute actuellement soit terminé. Ainsi, si on faisait apparaître un bouton d&#x27;annulation, l&#x27;utilisateur pourrait cliquer dessus mais il ne se passerait rien tant que l&#x27;opération en cours ne serait pas terminée. Le bouton d&#x27;annulation n&#x27;aurait alors aucun intérêt.</p>
-<p>Pour que le clic sur le bouton d&#x27;annulation soit suivi d&#x27;effet, il faut que l&#x27;opération en cours soit terminée. Pour cela, elle doit lancer l&#x27;opération potentiellement longue de façon asynchrone : </p>
+<p>Certaines actions de l'utilisateur sur l'interface Swing en [1] déclenchent des actions jusque dans la base de données en [3] au-travers d'un réseau HTTP [2]. A cause de celui-ci, la réponse à l'action de l'utilisateur peut être plus ou moins longue à venir. Ce serait bien de pouvoir mettre un indicateur d'attente sur l'interface utilisateur avec une option d'annulation de l'opération lancée si celle-ci venait à être trop longue. Dans le chapitre 17.6, page 343, chaque action de l'utilisateur nécessitant d'échanger des informations avec le serveur est synchrone. Le gestionnaire d'événement exécuté par le code n'est terminé que lorsque la réponse est reçue. Pendant tout ce temps, l'interface graphique est gelée : elle ne répond pas aux nouvelles actions de l'utilisateur. Celles-ci sont simplement mises en file d'attente pour être traitées lorsque le gestionnaire d'événement qui s'exécute actuellement soit terminé. Ainsi, si on faisait apparaître un bouton d'annulation, l'utilisateur pourrait cliquer dessus mais il ne se passerait rien tant que l'opération en cours ne serait pas terminée. Le bouton d'annulation n'aurait alors aucun intérêt.</p>
+<p>Pour que le clic sur le bouton d'annulation soit suivi d'effet, il faut que l'opération en cours soit terminée. Pour cela, elle doit lancer l'opération potentiellement longue de façon asynchrone : </p>
 <ul>
-<li>le gestionnaire d&#x27;événement lance l&#x27;opération longue mais n&#x27;attend pas son résultat et rend la main au thread de l&#x27;UI qui gère les événements de l&#x27;interface graphique. L&#x27;opération longue est lancée sur un thread différent de celui de l&#x27;UI ce qui ne bloque pas ce dernier ;</li>
-<li>si l&#x27;utilisateur clique sur le bouton d&#x27;annulation avant la fin de l&#x27;opération longue, le thread de l&#x27;UI qui est inoccupé peut traiter cet événement. On peut alors abandonner l&#x27;opération longue en ignorant son résultat ;</li>
-<li>si l&#x27;opération longue n&#x27;a pas été annulée, l&#x27;arrivée de la réponse va provoquer un événement dans le thread de l&#x27;UI. Celui-ci, s&#x27;il est inoccupé, va alors exécuter le code lié à cet événement qui va exploiter la réponse ;
-L&#x27;interface utilisateur va fonctionner comme précédemment. Si les temps de réponse du serveur sont rapides, l&#x27;utilisateur ne verra pas la différence. S&#x27;ils sont perceptibles, l&#x27;utilisateur verra un bouton d&#x27;annulation apparaître et aura la possibilté d&#x27;interrompre l&#x27;opération en cours.</li>
+<li>le gestionnaire d'événement lance l'opération longue mais n'attend pas son résultat et rend la main au thread de l'UI qui gère les événements de l'interface graphique. L'opération longue est lancée sur un thread différent de celui de l'UI ce qui ne bloque pas ce dernier ;</li>
+<li>si l'utilisateur clique sur le bouton d'annulation avant la fin de l'opération longue, le thread de l'UI qui est inoccupé peut traiter cet événement. On peut alors abandonner l'opération longue en ignorant son résultat ;</li>
+<li>si l'opération longue n'a pas été annulée, l'arrivée de la réponse va provoquer un événement dans le thread de l'UI. Celui-ci, s'il est inoccupé, va alors exécuter le code lié à cet événement qui va exploiter la réponse ;
+L'interface utilisateur va fonctionner comme précédemment. Si les temps de réponse du serveur sont rapides, l'utilisateur ne verra pas la différence. S'ils sont perceptibles, l'utilisateur verra un bouton d'annulation apparaître et aura la possibilté d'interrompre l'opération en cours.</li>
 </ul>
-<p>La bibliothèque [<a href="http://reactivex.io/"><u>Rx</u></a>] permet de faire de la programmation asynchrone. Son grand intérêt réside dans le fait qu&#x27;elle a été portée dans de nombreux environnements (Java, .NET, JS, ...) et que sa maîtrise dans un environnement peut être transposée facilement dans un autre environnement. Nous allons nous appuyer ici sur le chapitre 2 du document [<a href="http://tahe.developpez.com/tutoriels-cours/rxjava-rxswing-rxandroid/documents/rxjava.pdf"><u>Introduction à RxJava. Application aux </u></a><a href="http://tahe.developpez.com/tutoriels-cours/rxjava-rxswing-rxandroid/documents/rxjava.pdf"><u>environnements Swing et Android</u></a>]. Le lecteur est invité à le lire. Dans la suite, nous reprenons du code issu des exemples de ce chapitre.</p>
-<p>Nous allons faire évoluer l&#x27;architecture de l&#x27;application de la façon suivante :</p>
+<p>La bibliothèque [<a href="http://reactivex.io/"><u>Rx</u></a>] permet de faire de la programmation asynchrone. Son grand intérêt réside dans le fait qu'elle a été portée dans de nombreux environnements (Java, .NET, JS, ...) et que sa maîtrise dans un environnement peut être transposée facilement dans un autre environnement. Nous allons nous appuyer ici sur le chapitre 2 du document [<a href="http://tahe.developpez.com/tutoriels-cours/rxjava-rxswing-rxandroid/documents/rxjava.pdf"><u>Introduction à RxJava. Application aux </u></a><a href="http://tahe.developpez.com/tutoriels-cours/rxjava-rxswing-rxandroid/documents/rxjava.pdf"><u>environnements Swing et Android</u></a>]. Le lecteur est invité à le lire. Dans la suite, nous reprenons du code issu des exemples de ce chapitre.</p>
+<p>Nous allons faire évoluer l'architecture de l'application de la façon suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003BD000001460AF459F1.png" style="display:inline-block; margin:4px;width:12.661cm;height:4.313cm;" /></td></tr></table>
 
 <ul>
@@ -1170,10 +1170,10 @@ L&#x27;interface utilisateur va fonctionner comme précédemment. Si les temps d
 Nous allons procéder en plusieurs étapes :</p>
 </li>
 <li>
-<p><strong>étape 1</strong> : la couche [metier, DAO] présente pour l&#x27;instant une interface synchrone à la couche [ui]. Nous allons la transformer en une couche asynchrone [RxJava, metier, DAO] ;</p>
+<p><strong>étape 1</strong> : la couche [metier, DAO] présente pour l'instant une interface synchrone à la couche [ui]. Nous allons la transformer en une couche asynchrone [RxJava, metier, DAO] ;</p>
 </li>
-<li><strong>étape 2</strong> : nous porterons l&#x27;application console synchrone en une application toujours synchrone mais utilisant l&#x27;interface asynchrone [RxJava, metier, DAO] ;</li>
-<li><strong>étape 3</strong> : nous porterons l&#x27;application swing synchrone en une application swing asynchrone ;</li>
+<li><strong>étape 2</strong> : nous porterons l'application console synchrone en une application toujours synchrone mais utilisant l'interface asynchrone [RxJava, metier, DAO] ;</li>
+<li><strong>étape 3</strong> : nous porterons l'application swing synchrone en une application swing asynchrone ;</li>
 </ul>
 <h2 id="201-etape-1">20.1. étape 1</h2>
 <p>Nous transformons la couche synchrone actuelle [metier, DAO] en une couche asynchrone [RxJava, metier, DAO].</p>
@@ -1266,89 +1266,89 @@ Nous allons procéder en plusieurs étapes :</p>
 <span class="normal"><a href="#__codelineno-0-80">80</a></span>
 <span class="normal"><a href="#__codelineno-0-81">81</a></span>
 <span class="normal"><a href="#__codelineno-0-82">82</a></span>
-<span class="normal"><a href="#__codelineno-0-83">83</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&lt;</span><span class="n">project</span><span class="w"> </span><span class="n">xmlns</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="n">xmlns</span><span class="p">:</span><span class="n">xsi</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">         </span><span class="n">xsi</span><span class="p">:</span><span class="n">schemaLocation</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">modelVersion</span><span class="o">&gt;</span><span class="mf">4.0.0</span><span class="o">&lt;/</span><span class="n">modelVersion</span><span class="o">&gt;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">rxjava</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">Client</span><span class="w"> </span><span class="n">jUnit</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">serveur</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">jSON</span><span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">rxjava</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-0-83">83</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">         </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>elections-metier-dao-security-rxjava-webjson<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="nt">&lt;description&gt;</span>Client<span class="w"> </span>jUnit<span class="w"> </span>du<span class="w"> </span>serveur<span class="w"> </span>web<span class="w"> </span>/<span class="w"> </span>jSON<span class="nt">&lt;/description&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="nt">&lt;name&gt;</span>elections-metier-dao-security-rxjava-webjson<span class="nt">&lt;/name&gt;</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">properties</span><span class="o">&gt;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span><span class="mf">1.8</span><span class="o">&lt;/</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">  </span><span class="o">&lt;/</span><span class="n">properties</span><span class="o">&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="nt">&lt;properties&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="nt">&lt;java.version&gt;</span>1.8<span class="nt">&lt;/java.version&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">  </span><span class="nt">&lt;/properties&gt;</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">parent</span><span class="o">&gt;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">parent</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">1.2.7</span><span class="p">.</span><span class="na">RELEASE</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">  </span><span class="o">&lt;/</span><span class="n">parent</span><span class="o">&gt;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="nt">&lt;parent&gt;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>1.2.7.RELEASE<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">  </span><span class="nt">&lt;/parent&gt;</span>
 <a id="__codelineno-0-20" name="__codelineno-0-20"></a>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">dependencies</span><span class="o">&gt;</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">Spring</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">spring</span><span class="o">-</span><span class="n">web</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">librairie</span><span class="w"> </span><span class="n">jSON</span><span class="w"> </span><span class="n">utilisée</span><span class="w"> </span><span class="n">par</span><span class="w"> </span><span class="n">Spring</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">com</span><span class="p">.</span><span class="na">fasterxml</span><span class="p">.</span><span class="na">jackson</span><span class="p">.</span><span class="na">core</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">jackson</span><span class="o">-</span><span class="n">core</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">com</span><span class="p">.</span><span class="na">fasterxml</span><span class="p">.</span><span class="na">jackson</span><span class="p">.</span><span class="na">core</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">jackson</span><span class="o">-</span><span class="n">databind</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">composant</span><span class="w"> </span><span class="n">utilisé</span><span class="w"> </span><span class="n">par</span><span class="w"> </span><span class="n">Spring</span><span class="w"> </span><span class="n">RestTemplate</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">apache</span><span class="p">.</span><span class="na">httpcomponents</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">httpclient</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">Google</span><span class="w"> </span><span class="n">Guava</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">com</span><span class="p">.</span><span class="na">google</span><span class="p">.</span><span class="na">guava</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">guava</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">16.0.1</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">scope</span><span class="o">&gt;</span><span class="n">test</span><span class="o">&lt;/</span><span class="n">scope</span><span class="o">&gt;</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">bibliothèque</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">logging</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">Spring</span><span class="w"> </span><span class="n">Boot</span><span class="w"> </span><span class="n">Test</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">test</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">scope</span><span class="o">&gt;</span><span class="n">test</span><span class="o">&lt;/</span><span class="n">scope</span><span class="o">&gt;</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">Spring</span><span class="w"> </span><span class="n">Boot</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">scope</span><span class="o">&gt;</span><span class="n">test</span><span class="o">&lt;/</span><span class="n">scope</span><span class="o">&gt;</span>
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="c1">//mvnrepository.com/artifact/io.reactivex/rxjava --&gt;</span>
-<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">io</span><span class="p">.</span><span class="na">reactivex</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">rxjava</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">1.2.0</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">  </span><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="cm">&lt;!-- Spring --&gt;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>spring-web<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="cm">&lt;!-- librairie jSON utilisée par Spring --&gt;</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>com.fasterxml.jackson.core<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>jackson-core<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>com.fasterxml.jackson.core<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>jackson-databind<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">    </span><span class="cm">&lt;!-- composant utilisé par Spring RestTemplate --&gt;</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>org.apache.httpcomponents<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>httpclient<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="cm">&lt;!-- Google Guava --&gt;</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>com.google.guava<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>guava<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">      </span><span class="nt">&lt;version&gt;</span>16.0.1<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">      </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">    </span><span class="cm">&lt;!-- bibliothèque de logs --&gt;</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-logging<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">    </span><span class="cm">&lt;!-- Spring Boot Test --&gt;</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">      </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">    </span><span class="cm">&lt;!-- Spring Boot --&gt;</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>spring-boot<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">      </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">    </span><span class="cm">&lt;!-- https://mvnrepository.com/artifact/io.reactivex/rxjava --&gt;</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>io.reactivex<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>rxjava<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="w">      </span><span class="nt">&lt;version&gt;</span>1.2.0<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
 <a id="__codelineno-0-71" name="__codelineno-0-71"></a>
-<a id="__codelineno-0-72" name="__codelineno-0-72"></a><span class="w">  </span><span class="o">&lt;/</span><span class="n">dependencies</span><span class="o">&gt;</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a><span class="w">  </span><span class="nt">&lt;/dependencies&gt;</span>
 <a id="__codelineno-0-73" name="__codelineno-0-73"></a>
-<a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">build</span><span class="o">&gt;</span>
-<a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">plugins</span><span class="o">&gt;</span>
-<a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">plugin</span><span class="o">&gt;</span>
-<a id="__codelineno-0-77" name="__codelineno-0-77"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">apache</span><span class="p">.</span><span class="na">maven</span><span class="p">.</span><span class="na">plugins</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-78" name="__codelineno-0-78"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">maven</span><span class="o">-</span><span class="n">surefire</span><span class="o">-</span><span class="n">plugin</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-79" name="__codelineno-0-79"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">2.18.1</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-80" name="__codelineno-0-80"></a><span class="w">      </span><span class="o">&lt;/</span><span class="n">plugin</span><span class="o">&gt;</span>
-<a id="__codelineno-0-81" name="__codelineno-0-81"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">plugins</span><span class="o">&gt;</span>
-<a id="__codelineno-0-82" name="__codelineno-0-82"></a><span class="w">  </span><span class="o">&lt;/</span><span class="n">build</span><span class="o">&gt;</span>
-<a id="__codelineno-0-83" name="__codelineno-0-83"></a><span class="o">&lt;/</span><span class="n">project</span><span class="o">&gt;</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="w">  </span><span class="nt">&lt;build&gt;</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="w">    </span><span class="nt">&lt;plugins&gt;</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="w">      </span><span class="nt">&lt;plugin&gt;</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>2.18.1<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a><span class="w">      </span><span class="nt">&lt;/plugin&gt;</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a><span class="w">    </span><span class="nt">&lt;/plugins&gt;</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82"></a><span class="w">  </span><span class="nt">&lt;/build&gt;</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 65-70 : nous avons ajouté la dépendance sur la bibliothèque RxJava ;</li>
@@ -1359,7 +1359,7 @@ Nous allons procéder en plusieurs étapes :</p>
 <p>Pour implémenter la couche [RxJava, métier], nous ajoutons une interface asynchrone [IRxElectionsMetier] [1] et son implémentation [RxElectionsMetier] [2] au projet :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001240000011A86638049.png" style="display:inline-block; margin:4px;width:5.41cm;height:5.219cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>L&#x27;interface [IRxElectionsMetier] est l&#x27;interface asynchrone de la couche [RxJava, métier]. Son code est le suivant :</p>
+<p>L'interface [IRxElectionsMetier] est l'interface asynchrone de la couche [RxJava, métier]. Son code est le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -1414,14 +1414,14 @@ Nous allons procéder en plusieurs étapes :</p>
 <a id="__codelineno-1-26" name="__codelineno-1-26"></a>
 <a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>L&#x27;interface [IRxElectionsMetier] reprend les méthodes de l&#x27;interface [IElectionsMetier] mais là où une méthode M de l&#x27;interface [IElectionsMetier] rendait un résultat de type <strong>T</strong>, la méthode M de l&#x27;interface [IRxElectionsMetier] rend un résultat de type <strong>Observable</strong>&lt;<strong>T</strong>&gt;. Le type [Observable] est fourni par la bibliothèque RxJava. Un type Observable&lt;T&gt; fournit la méthode [subscribe] qui va obtenir le type T de façon asynchrone. Sont associés à cette méthode trois événements :</p>
+<p>L'interface [IRxElectionsMetier] reprend les méthodes de l'interface [IElectionsMetier] mais là où une méthode M de l'interface [IElectionsMetier] rendait un résultat de type <strong>T</strong>, la méthode M de l'interface [IRxElectionsMetier] rend un résultat de type <strong>Observable</strong>&lt;<strong>T</strong>&gt;. Le type [Observable] est fourni par la bibliothèque RxJava. Un type Observable&lt;T&gt; fournit la méthode [subscribe] qui va obtenir le type T de façon asynchrone. Sont associés à cette méthode trois événements :</p>
 <ul>
-<li><strong>onSuccess</strong>(T result) qui avertit qu&#x27;un résultat de type T est disponible. L&#x27;opération asynchrone peut fournir plusieurs résultats ;</li>
-<li><strong>onError</strong>(Throwable th) qui avertit que l&#x27;opération asynchrone a rencontré une erreur ;</li>
-<li><strong>onCompleted</strong>() qui avertit que l&#x27;opération asynchrone est terminée ;
-Tant que la méthode [Observable.subscribe] n&#x27;est pas appelée, l&#x27;opération asynchrone liée à l&#x27;observable n&#x27;est pas lancée. Le code qui appelle une méthode M de l&#x27;interface [IRxElectionsMetier] n&#x27;obtient pas le résultat T attendu, mais un type Observable&lt;T&gt; qui lui permettra ultérieurement d&#x27;obtenir le résultat T en appelant la méthode [Observable.subscribe].</li>
+<li><strong>onSuccess</strong>(T result) qui avertit qu'un résultat de type T est disponible. L'opération asynchrone peut fournir plusieurs résultats ;</li>
+<li><strong>onError</strong>(Throwable th) qui avertit que l'opération asynchrone a rencontré une erreur ;</li>
+<li><strong>onCompleted</strong>() qui avertit que l'opération asynchrone est terminée ;
+Tant que la méthode [Observable.subscribe] n'est pas appelée, l'opération asynchrone liée à l'observable n'est pas lancée. Le code qui appelle une méthode M de l'interface [IRxElectionsMetier] n'obtient pas le résultat T attendu, mais un type Observable&lt;T&gt; qui lui permettra ultérieurement d'obtenir le résultat T en appelant la méthode [Observable.subscribe].</li>
 </ul>
-<p>L&#x27;implémentation [RxElectionsMetier] de l&#x27;interface [IRxElectionsMetier] est la suivante :</p>
+<p>L'implémentation [RxElectionsMetier] de l'interface [IRxElectionsMetier] est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -1533,24 +1533,24 @@ Tant que la méthode [Observable.subscribe] n&#x27;est pas appelée, l&#x27;opé
 <ul>
 <li>lignes 12-13 : injection Spring de la couche métier <strong>synchrone</strong> ;</li>
 <li>lignes 20-34 : nous allons commenter la méthode [getListesElectorales] qui au lieu de rendre un type [ListeElectorale[]] rend un type [Observable&lt;ListeElectorale[]&gt;] ;</li>
-<li>lignes 22-32 : la méthode statique [Observable.create] permet de créer un Observable à partir d&#x27;un type [<strong>Subscriber</strong>]. Le type [Subscriber] représente un abonné aux flux de résultats produits par le processus observé (l&#x27;Observable). Il fournit trois méthodes :</li>
+<li>lignes 22-32 : la méthode statique [Observable.create] permet de créer un Observable à partir d'un type [<strong>Subscriber</strong>]. Le type [Subscriber] représente un abonné aux flux de résultats produits par le processus observé (l'Observable). Il fournit trois méthodes :</li>
 <li>[Subscriber.<strong>onNext</strong>] (ligne 25) pour recevoir un résultat du processus observé ;</li>
-<li>[Subscriber.<strong>onError</strong>] (ligne 30) pour recevoir une exception du processus observé. Après une exception, le type [Observable] n&#x27;émet plus de résultats ;</li>
-<li>[Subscriber.<strong>onCompleted</strong>] (ligne 27) pour recevoir le signal de fin d&#x27;émission du processus observé. Ici, le processus observé n&#x27;émet qu&#x27;un élément. On remarquera ici que ce signal n&#x27;est pas émis s&#x27;il se produit une exception. C&#x27;est le comportement par défaut des Observables : l&#x27;émission d&#x27;une exception signale également la fin des émissions. Les souscripteurs le savent ;</li>
-<li>lignes 22-34 : la méthode [Observable.create] admet pour paramètre un type [Observable.OnSubscribe]. Ce type est une <strong>interface fonctionnelle</strong>. Cette notion a été introduite avec Java 8 et désigne une interface ayant une unique méthode. Ici, la méthode unique de l&#x27;interface [Observable.OnSubscribe] est la suivante :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">T</span><span class="w"> </span><span class="nf">call</span><span class="p">(</span><span class="n">Subscriber</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">subscriber</span><span class="p">)</span>
+<li>[Subscriber.<strong>onError</strong>] (ligne 30) pour recevoir une exception du processus observé. Après une exception, le type [Observable] n'émet plus de résultats ;</li>
+<li>[Subscriber.<strong>onCompleted</strong>] (ligne 27) pour recevoir le signal de fin d'émission du processus observé. Ici, le processus observé n'émet qu'un élément. On remarquera ici que ce signal n'est pas émis s'il se produit une exception. C'est le comportement par défaut des Observables : l'émission d'une exception signale également la fin des émissions. Les souscripteurs le savent ;</li>
+<li>lignes 22-34 : la méthode [Observable.create] admet pour paramètre un type [Observable.OnSubscribe]. Ce type est une <strong>interface fonctionnelle</strong>. Cette notion a été introduite avec Java 8 et désigne une interface ayant une unique méthode. Ici, la méthode unique de l'interface [Observable.OnSubscribe] est la suivante :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>T call(Subscriber&lt;T&gt; subscriber)
 </code></pre></div></td></tr></table></div></li>
 </ul>
 <p>Pour implémenter une interface fonctionnelle de méthode unique <strong>m(param1, param2, ..., paramn)</strong>, on peut utiliser la syntaxe simplifiée suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">(</span><span class="n">param1</span><span class="p">,</span><span class="w"> </span><span class="n">param2</span><span class="p">,</span><span class="w"> </span><span class="p">...,</span><span class="w"> </span><span class="n">paramn</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">code</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">méthode</span><span class="w"> </span><span class="n">m</span><span class="p">}</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>(param1, param2, ..., paramn) -&gt; { code de la méthode m}
 </code></pre></div></td></tr></table></div>
-<p>C&#x27;est ce qui est fait aux lignes 22-34 :</p>
+<p>C'est ce qui est fait aux lignes 22-34 :</p>
 <ul>
 <li>[subscriber] est le paramètre de la méthode [Observable.OnSubscribe.<strong>call</strong>] ;</li>
-<li>lignes 23-32 : le code qu&#x27;on veut donner à la méthode [call] ;</li>
+<li>lignes 23-32 : le code qu'on veut donner à la méthode [call] ;</li>
 <li>ligne 25 : on demande les listes électorales de façon synchrone à la couche [métier] injectée en ligne 13. Il va donc y avoir attente du résultat. Lorsque celui-ci va être reçu, il est passé à la méthode [onNext] du souscripteur ;</li>
-<li>ligne 28 : en cas d&#x27;erreur, l&#x27;exception est passée à la méthode [onError] du souscripteur ;</li>
-<li>ligne 31 : on n&#x27;attend qu&#x27;un résultat. Lorsque celui-ci a été obtenu (les listes électorales ou une exception), on indique au souscripteur que le processus observé a terminé d&#x27;émettre des résultats ;
+<li>ligne 28 : en cas d'erreur, l'exception est passée à la méthode [onError] du souscripteur ;</li>
+<li>ligne 31 : on n'attend qu'un résultat. Lorsque celui-ci a été obtenu (les listes électorales ou une exception), on indique au souscripteur que le processus observé a terminé d'émettre des résultats ;
 On se rappellera bien que la méthode [RxElectionsMetier] rend un type Observable&lt;ListeElectorale[]&gt; et non le type ListeElectorale[] lui-même. Il faudra que le code appelant appelle la méthode Observable&lt;ListeElectorale[]&gt;.<strong>subscribe</strong> pour que le code des lignes 23-33 soit exécuté et rende les listes électorales au moyen de la ligne 25.</li>
 </ul>
 <p>Le code des autres méthodes est analogue :</p>
@@ -1765,13 +1765,13 @@ On se rappellera bien que la méthode [RxElectionsMetier] rend un type Observabl
 <a id="__codelineno-5-105" name="__codelineno-5-105"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 20 et 81 : la méthode [onNext] du souscripteur n&#x27;est pas appelée parce que celui-ci n&#x27;attend pas de résultats ;</li>
+<li>lignes 20 et 81 : la méthode [onNext] du souscripteur n'est pas appelée parce que celui-ci n'attend pas de résultats ;</li>
 </ul>
 <h3 id="2014-les-tests-junit-de-la-couche-metier">20.1.4. Les tests JUnit de la couche [métier]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012000000113B05A3BCF.png" style="display:inline-block; margin:4px;width:5.33cm;height:5.091cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <h4 id="20141-test01">20.1.4.1. Test01</h4>
-<p>Nous reprenons le test unitaire [Test01] étudié au paragraphe 17.4.4, page 337. Il a été prévu pour faire des appels synchrones à l&#x27;interface [IElectionsMetier]. Nous le modifions pour qu&#x27;il fasse des appels synchrones à la nouvelle interface [IRxElectionsMetier]. Il est en effet possible de faire des appels synchrones à une interface asynchrone RxJava. Le code devient le suivant :</p>
+<p>Nous reprenons le test unitaire [Test01] étudié au paragraphe 17.4.4, page 337. Il a été prévu pour faire des appels synchrones à l'interface [IElectionsMetier]. Nous le modifions pour qu'il fasse des appels synchrones à la nouvelle interface [IRxElectionsMetier]. Il est en effet possible de faire des appels synchrones à une interface asynchrone RxJava. Le code devient le suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">  1</a></span>
 <span class="normal"><a href="#__codelineno-6-2">  2</a></span>
 <span class="normal"><a href="#__codelineno-6-3">  3</a></span>
@@ -2193,10 +2193,10 @@ On se rappellera bien que la méthode [RxElectionsMetier] rend un type Observabl
 <p>Etudions les modifications :</p>
 <ul>
 <li>ligne 48 : la méthode statique [BlockingObservable.from(Observable).first] :</li>
-<li>s&#x27;abonne à l&#x27;observable paramètre de [from] ;</li>
-<li>lance l&#x27;exécution du code associé à l&#x27;observable ;</li>
-<li>attend de recevoir le 1er résultat. C&#x27;est donc une opération synchrone ;
-Nous utilisons ici la méthode [firstOrDefault(null)] parce que l&#x27;observable [metier.authenticate] ne rend pas de résultat lorsqu&#x27;il est exécuté. Le résultat de la méthode [firstOrDefault(null)] sera donc null, valeur inexploitée ici ;</li>
+<li>s'abonne à l'observable paramètre de [from] ;</li>
+<li>lance l'exécution du code associé à l'observable ;</li>
+<li>attend de recevoir le 1er résultat. C'est donc une opération synchrone ;
+Nous utilisons ici la méthode [firstOrDefault(null)] parce que l'observable [metier.authenticate] ne rend pas de résultat lorsqu'il est exécuté. Le résultat de la méthode [firstOrDefault(null)] sera donc null, valeur inexploitée ici ;</li>
 </ul>
 <p>Nous reprenons ce schéma dans le reste du code à chaque fois que nous voulons faire appel à la couche [métier].</p>
 <p>Le test unitaire [Test01] doit passer :</p>
@@ -2204,7 +2204,7 @@ Nous utilisons ici la méthode [firstOrDefault(null)] parce que l&#x27;observabl
 
 <p><strong>Travail à faire</strong> : vérifier que le test [Test01] passe.</p>
 <h4 id="20142-test02">20.1.4.2. Test02</h4>
-<p>Nous transformons le test [Test01] afin de tester désormais l&#x27;interface asynchrone [IRxElectionsMetier] en faisant des appels asynchrones à ses méthodes.</p>
+<p>Nous transformons le test [Test01] afin de tester désormais l'interface asynchrone [IRxElectionsMetier] en faisant des appels asynchrones à ses méthodes.</p>
 <p>Etudions un premier test :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
@@ -2261,33 +2261,33 @@ Nous utilisons ici la méthode [firstOrDefault(null)] parce que l&#x27;observabl
 <a id="__codelineno-7-27" name="__codelineno-7-27"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 2 : un sémaphore est un outil utilisé pour synchroniser des threads entre eux. Des threads sont des flux d&#x27;exécution s&#x27;exécutant en parallèle. Pour exécuter une tâche T1, le thread [Thread1] peut avoir besoin qu&#x27;une tâche T2 exécutée par un thread [Thread2] soit terminée. Il attend alors que le thread [Thread2] lui envoie un signal indiquant que la tâche T2 est terminée. Il y a diverses façons de gérer cette synchronisation entre deux threads. La méthode utilisée ici est la suivante ;</li>
+<li>ligne 2 : un sémaphore est un outil utilisé pour synchroniser des threads entre eux. Des threads sont des flux d'exécution s'exécutant en parallèle. Pour exécuter une tâche T1, le thread [Thread1] peut avoir besoin qu'une tâche T2 exécutée par un thread [Thread2] soit terminée. Il attend alors que le thread [Thread2] lui envoie un signal indiquant que la tâche T2 est terminée. Il y a diverses façons de gérer cette synchronisation entre deux threads. La méthode utilisée ici est la suivante ;</li>
 <li>ligne 10 : le thread [Thread1] crée un sémaphore avec la valeur 1 ;</li>
 <li>ligne 12 : le thread [Thread1] crée et lance un thread [Thread2]. Ceci est obtenu par la syntaxe :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">electionsMetier</span><span class="p">.</span><span class="na">authenticate</span><span class="p">(</span><span class="n">user</span><span class="p">).</span><span class="na">subscribeOn</span><span class="p">(</span><span class="n">Schedulers</span><span class="p">.</span><span class="na">io</span><span class="p">())</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>electionsMetier.authenticate(user).subscribeOn(Schedulers.io())
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>La méthode [Observable.subscribeOn] fixe le thread sur lequel s&#x27;exécutera le processus observé. Le paramètre de [subscribeOn] est un pool de threads. La bibliothèque RxJava en fournit plusieurs adaptés à différentes situations. Le pool [Schedulers.io()] est celui qui est conseillé pour les opérations réseau ;</p>
+<p>La méthode [Observable.subscribeOn] fixe le thread sur lequel s'exécutera le processus observé. Le paramètre de [subscribeOn] est un pool de threads. La bibliothèque RxJava en fournit plusieurs adaptés à différentes situations. Le pool [Schedulers.io()] est celui qui est conseillé pour les opérations réseau ;</p>
 <ul>
-<li>lignes 12-13 : l&#x27;opération 
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">electionsMetier</span><span class="p">.</span><span class="na">authenticate</span><span class="p">(</span><span class="n">user</span><span class="p">).</span><span class="na">subscribeOn</span><span class="p">(</span><span class="n">Schedulers</span><span class="p">.</span><span class="na">io</span><span class="p">()).</span><span class="na">subscribe</span><span class="p">(...)</span>
+<li>lignes 12-13 : l'opération 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>electionsMetier.authenticate(user).subscribeOn(Schedulers.io()).subscribe(...)
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p>exécute l&#x27;opération synchrone encapsulée dans l&#x27;observable [authenticate(user)]. Mais parce que cette opération synchrone est lancée sur un autre thread que le thread [Thread1], ce dernier n&#x27;attend pas la réponse de la méthode [subscribe] et passe à l&#x27;instruction suivante ;</p>
+<p>exécute l'opération synchrone encapsulée dans l'observable [authenticate(user)]. Mais parce que cette opération synchrone est lancée sur un autre thread que le thread [Thread1], ce dernier n'attend pas la réponse de la méthode [subscribe] et passe à l'instruction suivante ;</p>
 <ul>
-<li>ligne 23 : le thread [Thread1] s&#x27;arrête et attend que le sémaphore passe à 0 (il est à 1 pour l&#x27;instant) ;</li>
+<li>ligne 23 : le thread [Thread1] s'arrête et attend que le sémaphore passe à 0 (il est à 1 pour l'instant) ;</li>
 <li>lignes 13-21 : la méthode [subscribe] admet comme paramètres trois fonctions lambda :</li>
-<li>la première [<strong>(result)-&gt;{...}</strong>] est appelée à chaque fois que l&#x27;observable [authenticate(user)] émet un résultat [result]. Ici nous avons un observable [authenticate(user)] qui fait quelque chose mais n&#x27;émet aucun résultat. Le lambda [<strong>(result)-&gt;{}</strong>] ne sera donc jamais appelé. C&#x27;est pourquoi son code est ici vide [<strong>{}</strong>] ;</li>
-<li>la seconde [<strong>(th)-&gt;{...}</strong>] reçoit comme paramètre un type [Throwable]. Elle est appelée lorsque l&#x27;exécution de l&#x27;observable rencontre une exception. Ici, nous traitons le paramètre [Throwable th] de la façon suivante :</li>
-<li>ligne 16 : nous le mémorisons dans un champ de la classe de test de type [ElectionsException] car l&#x27;observable exécuté n&#x27;émet que ce type d&#x27;exception ;</li>
+<li>la première [<strong>(result)-&gt;{...}</strong>] est appelée à chaque fois que l'observable [authenticate(user)] émet un résultat [result]. Ici nous avons un observable [authenticate(user)] qui fait quelque chose mais n'émet aucun résultat. Le lambda [<strong>(result)-&gt;{}</strong>] ne sera donc jamais appelé. C'est pourquoi son code est ici vide [<strong>{}</strong>] ;</li>
+<li>la seconde [<strong>(th)-&gt;{...}</strong>] reçoit comme paramètre un type [Throwable]. Elle est appelée lorsque l'exécution de l'observable rencontre une exception. Ici, nous traitons le paramètre [Throwable th] de la façon suivante :</li>
+<li>ligne 16 : nous le mémorisons dans un champ de la classe de test de type [ElectionsException] car l'observable exécuté n'émet que ce type d'exception ;</li>
 <li>ligne 17 : nous passons le sémaphore à 0 pour indiquer que le thread [Thread2] a terminé son travail ;</li>
-<li>la troisième [<strong>()-&gt;{...}</strong>] est appelée lorsque l&#x27;observable n&#x27;a plus d&#x27;éléments à émettre. Nous traitons cet événement de la façon suivante :</li>
+<li>la troisième [<strong>()-&gt;{...}</strong>] est appelée lorsque l'observable n'a plus d'éléments à émettre. Nous traitons cet événement de la façon suivante :</li>
 <li>
 <p>ligne 20 : nous passons le sémaphore à 0 pour indiquer que le thread [Thread2] a terminé son travail ;
-Il faut noter que le troisième lambda n&#x27;est pas appelé si une exception se produit. C&#x27;est pourquoi, on a été obligé de mettre le sémaphore à 0 également ligne 17 ;</p>
+Il faut noter que le troisième lambda n'est pas appelé si une exception se produit. C'est pourquoi, on a été obligé de mettre le sémaphore à 0 également ligne 17 ;</p>
 </li>
 <li>
-<p>ligne 25 : lorsqu&#x27;on arrive à cette ligne, l&#x27;observable a terminé son travail. On peut alors faire les mêmes vérifications que dans le test [Test01] ;
+<p>ligne 25 : lorsqu'on arrive à cette ligne, l'observable a terminé son travail. On peut alors faire les mêmes vérifications que dans le test [Test01] ;
 Examinons un autre test :</p>
 </li>
 </ul>
@@ -2390,17 +2390,17 @@ Examinons un autre test :</p>
 <a id="__codelineno-10-49" name="__codelineno-10-49"></a><span class="w">  </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 20-30 : exécution asynchrone de l&#x27;observable [electionsMetier.calculerSieges(admin, listes)] ;</li>
-<li>lignes 21-23 : l&#x27;exécution de l&#x27;observable rend un type [ListeElectorale[]] qu&#x27;on mémorise dans un champ de la classe de test, ligne 3 ;</li>
-<li>lignes 34-48 : ces vérifications sont celles du test [Test01] auxquelles on a ajouté la vérification de la ligne 34 qui s&#x27;assure qu&#x27;il n&#x27;y a pas eu d&#x27;exception ;
-L&#x27;ensemble du test [Test02] est disponible dans le support de cours.</li>
+<li>lignes 20-30 : exécution asynchrone de l'observable [electionsMetier.calculerSieges(admin, listes)] ;</li>
+<li>lignes 21-23 : l'exécution de l'observable rend un type [ListeElectorale[]] qu'on mémorise dans un champ de la classe de test, ligne 3 ;</li>
+<li>lignes 34-48 : ces vérifications sont celles du test [Test01] auxquelles on a ajouté la vérification de la ligne 34 qui s'assure qu'il n'y a pas eu d'exception ;
+L'ensemble du test [Test02] est disponible dans le support de cours.</li>
 </ul>
-<p><strong>Travail à faire</strong> : passer le test [Test02] et vérifier qu&#x27;il passe.</p>
+<p><strong>Travail à faire</strong> : passer le test [Test02] et vérifier qu'il passe.</p>
 <h4 id="20143-test03">20.1.4.3. Test03</h4>
-<p>Le test [Test03] fait la même chose que le test [Test01] : il teste l&#x27;interface [IRxElectionsMetier] par des appels synchrones à cette interface. C&#x27;est une copie du test [Test02] à deux détails près :</p>
+<p>Le test [Test03] fait la même chose que le test [Test01] : il teste l'interface [IRxElectionsMetier] par des appels synchrones à cette interface. C'est une copie du test [Test02] à deux détails près :</p>
 <ul>
-<li>les observables ne sont plus exécutés dans un thread différent de celui qui exécute les tests. Lorsque le thread [Thread1] exécute la méthode [subscribe] d&#x27;un observable, celle-ci démarre une opération HTTP vers le serveur également sur le thread [Thread1]. Toute la méthode [subscribe] devient alors synchrone ;</li>
-<li>puisqu&#x27;il n&#x27;y a plus qu&#x27;un thread, la synchronisation de threads devient inutile et le sémaphore disparaît ;
+<li>les observables ne sont plus exécutés dans un thread différent de celui qui exécute les tests. Lorsque le thread [Thread1] exécute la méthode [subscribe] d'un observable, celle-ci démarre une opération HTTP vers le serveur également sur le thread [Thread1]. Toute la méthode [subscribe] devient alors synchrone ;</li>
+<li>puisqu'il n'y a plus qu'un thread, la synchronisation de threads devient inutile et le sémaphore disparaît ;
 Voici deux exemples de tests :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
@@ -2440,7 +2440,7 @@ Voici deux exemples de tests :</li>
 <a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 7 : par défaut, la méthode [electionsMetier.authenticate(user).subscribe] s&#x27;exécute dans le thread du code appelant. On a donc une opération synchrone ;
+<li>ligne 7 : par défaut, la méthode [electionsMetier.authenticate(user).subscribe] s'exécute dans le thread du code appelant. On a donc une opération synchrone ;
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -2528,16 +2528,16 @@ Voici deux exemples de tests :</li>
 <a id="__codelineno-12-43" name="__codelineno-12-43"></a><span class="w">  </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div></li>
 </ul>
-<p><strong>Travail à faire</strong> : passer le test [Test03] et vérifier qu&#x27;il passe.</p>
+<p><strong>Travail à faire</strong> : passer le test [Test03] et vérifier qu'il passe.</p>
 <h2 id="202-etape-2">20.2. étape 2</h2>
-<p>Nous portons maintenant l&#x27;application console synchrone du chapitre 17.5, page 339, en une application toujours synchrone mais utilisant l&#x27;interface asynchrone [RxJava, metier, DAO] ;</p>
+<p>Nous portons maintenant l'application console synchrone du chapitre 17.5, page 339, en une application toujours synchrone mais utilisant l'interface asynchrone [RxJava, metier, DAO] ;</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003F2000001322CEEF8B8.png" style="display:inline-block; margin:4px;width:13.361cm;height:4.048cm;" /></td></tr></table>
 
 <p>Nous partons du projet [elections-console-metier-dao-security-webjson] [1] du chapitre 17.5, page 339 que nous dupliquons dans un nouveau projet [elections-console-<strong>rxjava- </strong>metier-dao-security-webjson] [2] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001420000010BCAA9096A.png" style="display:inline-block; margin:4px;width:5.96cm;height:4.941cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016B00000135D181CE2C.png" style="display:inline-block; margin:4px;width:6.72cm;height:5.72cm;" /></td></tr></table>
 
 <ul>
-<li>en [3-4], dans le nouveau projet on supprime la dépendance sur l&#x27;ancienne couche [métier] synchrone ;</li>
+<li>en [3-4], dans le nouveau projet on supprime la dépendance sur l'ancienne couche [métier] synchrone ;</li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000147000000E6F3A24D18.png" style="display:inline-block; margin:4px;width:6.05cm;height:4.26cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002490000011E3D72526F.png" style="display:inline-block; margin:4px;width:10.83cm;height:5.3cm;" /></td></tr></table>
 
@@ -2584,8 +2584,8 @@ De même, on renomme la classe [BootElectionsConsole] en [BootElectionsConsole01
 <a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 13 : parce qu&#x27;on a changé le nom de la classe [ElectionsConsole] en [ElectionsConsole01], il faut désormais écrire :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ctx</span><span class="p">.</span><span class="na">getBean</span><span class="p">(</span><span class="s">&quot;electionsConsole01&quot;</span><span class="p">,</span><span class="n">IElectionsUI</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<li>ligne 13 : parce qu'on a changé le nom de la classe [ElectionsConsole] en [ElectionsConsole01], il faut désormais écrire :
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>        return ctx.getBean(&quot;electionsConsole01&quot;,IElectionsUI.class);
 </code></pre></div></td></tr></table></div></li>
 </ul>
 <p>Revenons au code de la classe [ElectionsConsole01] :</p>
@@ -2637,7 +2637,7 @@ De même, on renomme la classe [BootElectionsConsole] en [BootElectionsConsole01
 <a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="w">        </span><span class="p">...</span>
 <a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Si on suit l&#x27;exemple du test [Test01] du paragraphe 20.1.4.1, page 391, les lignes 5, 17, 20 et 22 vont évoluer de la façon suivante :</p>
+<p>Si on suit l'exemple du test [Test01] du paragraphe 20.1.4.1, page 391, les lignes 5, 17, 20 et 22 vont évoluer de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
@@ -2686,11 +2686,11 @@ De même, on renomme la classe [BootElectionsConsole] en [BootElectionsConsole01
 <a id="__codelineno-16-23" name="__codelineno-16-23"></a><span class="w">    </span><span class="p">...</span>
 <a id="__codelineno-16-24" name="__codelineno-16-24"></a><span class="w">  </span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Travail à faire</strong> : configurez le projet pour exécuter la classe [BootElectionsConsole01] avec les trois paramètres [SS, Heures travaillées, Jours travaillés] et vérifiez que l&#x27;exécution du projet ainsi configuré donne les résultats attendus.</p>
+<p><strong>Travail à faire</strong> : configurez le projet pour exécuter la classe [BootElectionsConsole01] avec les trois paramètres [SS, Heures travaillées, Jours travaillés] et vérifiez que l'exécution du projet ainsi configuré donne les résultats attendus.</p>
 <p><strong>Travail à faire</strong> : configurez le projet pour exécuter le couple [BootElectionsConsole02, ElectionsConsole02] où la classe [ElectionsConsole02] aura été écrite en suivant le modèle du test [Test02] du paragraphe 20.1.4.2, page 394.</p>
 <p><strong>Travail à faire</strong> : configurez le projet pour exécuter le couple [BootElectionsConsole03, ElectionsConsole03] où la classe [ElectionsConsole03] aura été écrite en suivant le modèle du test [Test03] du paragraphe 20.1.4.3, page 395.</p>
 <h2 id="203-etape-3">20.3. étape 3</h2>
-<p>Nous passons maintenant au portage de l&#x27;application swing dans un environnement asynchrone.</p>
+<p>Nous passons maintenant au portage de l'application swing dans un environnement asynchrone.</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003CA00000133793411BE.png" style="display:inline-block; margin:4px;width:12.832cm;height:4.062cm;" /></td></tr></table>
 
 <p>Nous commençons par dupliquer le projet [elections-swing-metier-dao-security-webjson] [1] du chapitre 17.6, page 343, dans un nouveau projet [elections-swing-rxjava-metier-dao-security-webjson] [2] :</p>
@@ -2704,13 +2704,13 @@ De même, on renomme la classe [BootElectionsConsole] en [BootElectionsConsole01
 <ul>
 <li>
 <p>en [5-9], nous ajoutons une dépendance sur la couche console asynchrone ;
-La couche [swing] va faire de vrais appels asynchrones à la couche [métier]. Lors de l&#x27;appel à une méthode de celle-ci, il y aura deux threads :</p>
+La couche [swing] va faire de vrais appels asynchrones à la couche [métier]. Lors de l'appel à une méthode de celle-ci, il y aura deux threads :</p>
 </li>
 <li>
-<p>le thread de l&#x27;UI, celui qui gère les événements ;</p>
+<p>le thread de l'UI, celui qui gère les événements ;</p>
 </li>
-<li>un thread d&#x27;E/S qui exécutera l&#x27;appel HTTP au serveur ;
-Pendant toute la durée de l&#x27;appel asynchrone, nous devrions afficher une image d&#x27;attente ainsi qu&#x27;un bouton d&#x27;annulation. Nous ne le ferons pas ici et cela vous sera proposé comme amélioration de l&#x27;application. Les modifications ont lieu dans les deux classes qui font des appels à la couche [métier] :</li>
+<li>un thread d'E/S qui exécutera l'appel HTTP au serveur ;
+Pendant toute la durée de l'appel asynchrone, nous devrions afficher une image d'attente ainsi qu'un bouton d'annulation. Nous ne le ferons pas ici et cela vous sera proposé comme amélioration de l'application. Les modifications ont lieu dans les deux classes qui font des appels à la couche [métier] :</li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012C000000C88953966C.png" style="display:inline-block; margin:4px;width:5.549cm;height:3.701cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2748,39 +2748,39 @@ Pendant toute la durée de l&#x27;appel asynchrone, nous devrions afficher une i
 <span class="normal"><a href="#__codelineno-17-30">30</a></span>
 <span class="normal"><a href="#__codelineno-17-31">31</a></span>
 <span class="normal"><a href="#__codelineno-17-32">32</a></span>
-<span class="normal"><a href="#__codelineno-17-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="o">&lt;</span><span class="n">project</span><span class="w"> </span><span class="n">xmlns</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="n">xmlns</span><span class="p">:</span><span class="n">xsi</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">         </span><span class="n">xsi</span><span class="p">:</span><span class="n">schemaLocation</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">modelVersion</span><span class="o">&gt;</span><span class="mf">4.0.0</span><span class="o">&lt;/</span><span class="n">modelVersion</span><span class="o">&gt;</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">swing</span><span class="o">-</span><span class="n">rxjava</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">name</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">swing</span><span class="o">-</span><span class="n">rxjava</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">name</span><span class="o">&gt;</span>
-<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">description</span><span class="o">&gt;</span><span class="n">couche</span><span class="w"> </span><span class="n">swing</span><span class="w"> </span><span class="n">asynchrone</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="n">web</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">jSON</span><span class="o">&lt;/</span><span class="n">description</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-17-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">         </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">  </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">  </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>elections-swing-rxjava-metier-dao-security-webjson<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">  </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">  </span><span class="nt">&lt;name&gt;</span>elections-swing-rxjava-metier-dao-security-webjson<span class="nt">&lt;/name&gt;</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">  </span><span class="nt">&lt;description&gt;</span>couche<span class="w"> </span>swing<span class="w"> </span>asynchrone<span class="w"> </span>du<span class="w"> </span>client<span class="w"> </span>web<span class="w"> </span>/<span class="w"> </span>jSON<span class="nt">&lt;/description&gt;</span>
 <a id="__codelineno-17-9" name="__codelineno-17-9"></a>
-<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">properties</span><span class="o">&gt;</span>
-<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span>
-<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span><span class="mf">1.8</span><span class="o">&lt;/</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span>
-<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">maven</span><span class="p">.</span><span class="na">compiler</span><span class="p">.</span><span class="na">source</span><span class="o">&gt;</span><span class="mf">1.8</span><span class="o">&lt;/</span><span class="n">maven</span><span class="p">.</span><span class="na">compiler</span><span class="p">.</span><span class="na">source</span><span class="o">&gt;</span>
-<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">maven</span><span class="p">.</span><span class="na">compiler</span><span class="p">.</span><span class="na">target</span><span class="o">&gt;</span><span class="mf">1.8</span><span class="o">&lt;/</span><span class="n">maven</span><span class="p">.</span><span class="na">compiler</span><span class="p">.</span><span class="na">target</span><span class="o">&gt;</span>
-<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="w">  </span><span class="o">&lt;/</span><span class="n">properties</span><span class="o">&gt;</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">  </span><span class="nt">&lt;properties&gt;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">    </span><span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="w">    </span><span class="nt">&lt;java.version&gt;</span>1.8<span class="nt">&lt;/java.version&gt;</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="w">    </span><span class="nt">&lt;maven.compiler.source&gt;</span>1.8<span class="nt">&lt;/maven.compiler.source&gt;</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="w">    </span><span class="nt">&lt;maven.compiler.target&gt;</span>1.8<span class="nt">&lt;/maven.compiler.target&gt;</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="w">  </span><span class="nt">&lt;/properties&gt;</span>
 <a id="__codelineno-17-16" name="__codelineno-17-16"></a>
-<a id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="w">  </span><span class="o">&lt;</span><span class="n">dependencies</span><span class="o">&gt;</span>
-<a id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">RxSwing</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-17-19" name="__codelineno-17-19"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="c1">//mvnrepository.com/artifact/io.reactivex/rxswing --&gt;</span>
-<a id="__codelineno-17-20" name="__codelineno-17-20"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-17-21" name="__codelineno-17-21"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">io</span><span class="p">.</span><span class="na">reactivex</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-17-22" name="__codelineno-17-22"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">rxswing</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-17-23" name="__codelineno-17-23"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.27.0</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-17-24" name="__codelineno-17-24"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-17-25" name="__codelineno-17-25"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">couches</span><span class="w"> </span><span class="n">basses</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-17-26" name="__codelineno-17-26"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-17-27" name="__codelineno-17-27"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-17-28" name="__codelineno-17-28"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">console</span><span class="o">-</span><span class="n">rxjava</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">security</span><span class="o">-</span><span class="n">webjson</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-17-29" name="__codelineno-17-29"></a><span class="w">      </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-17-30" name="__codelineno-17-30"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-17-31" name="__codelineno-17-31"></a><span class="w">  </span><span class="o">&lt;/</span><span class="n">dependencies</span><span class="o">&gt;</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="w">  </span><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="w">    </span><span class="cm">&lt;!-- RxSwing --&gt;</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19"></a><span class="w">    </span><span class="cm">&lt;!-- https://mvnrepository.com/artifact/io.reactivex/rxswing --&gt;</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>io.reactivex<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>rxswing<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23"></a><span class="w">      </span><span class="nt">&lt;version&gt;</span>0.27.0<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-17-24" name="__codelineno-17-24"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25"></a><span class="w">    </span><span class="cm">&lt;!-- couches basses --&gt;</span>
+<a id="__codelineno-17-26" name="__codelineno-17-26"></a><span class="w">    </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27"></a><span class="w">      </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28"></a><span class="w">      </span><span class="nt">&lt;artifactId&gt;</span>elections-console-rxjava-metier-dao-security-webjson<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-17-29" name="__codelineno-17-29"></a><span class="w">      </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-17-30" name="__codelineno-17-30"></a><span class="w">    </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-17-31" name="__codelineno-17-31"></a><span class="w">  </span><span class="nt">&lt;/dependencies&gt;</span>
 <a id="__codelineno-17-32" name="__codelineno-17-32"></a>
-<a id="__codelineno-17-33" name="__codelineno-17-33"></a><span class="o">&lt;/</span><span class="n">project</span><span class="o">&gt;</span>
+<a id="__codelineno-17-33" name="__codelineno-17-33"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="2032-la-classe-electionsconnectform">20.3.2. La classe [ElectionsConnectForm]</h3>
 <p>Dans un fonctionnement asynchrone, la classe [ElectionsConnectForm] devient la suivante :</p>
@@ -2965,30 +2965,30 @@ Pendant toute la durée de l&#x27;appel asynchrone, nous devrions afficher une i
 <a id="__codelineno-18-90" name="__codelineno-18-90"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 36-63 : la méthode [doConnect] est exécutée lorsque l&#x27;utilisateur appuie sur l&#x27;option de menu [Connexion] :</li>
+<li>lignes 36-63 : la méthode [doConnect] est exécutée lorsque l'utilisateur appuie sur l'option de menu [Connexion] :</li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016A000000EBC99E3A9A.png" style="display:inline-block; margin:4px;width:6.699cm;height:4.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Tout est dans la ligne 40 :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="w">      </span><span class="n">metier</span><span class="p">.</span><span class="na">authenticate</span><span class="p">(</span><span class="n">user</span><span class="p">).</span><span class="na">subscribeOn</span><span class="p">(</span><span class="n">Schedulers</span><span class="p">.</span><span class="na">io</span><span class="p">()).</span><span class="na">observeOn</span><span class="p">(</span><span class="n">SwingScheduler</span><span class="p">.</span><span class="na">getInstance</span><span class="p">()).</span><span class="na">subscribe</span><span class="p">(...)</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a>      metier.authenticate(user).subscribeOn(Schedulers.io()).observeOn(SwingScheduler.getInstance()).subscribe(...)
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>le processus observé est [metier.authenticate(user)] ;</li>
-<li>il sera exécuté sur un thread d&#x27;E/S pris dans le pool [Schedulers.io()] ;</li>
+<li>il sera exécuté sur un thread d'E/S pris dans le pool [Schedulers.io()] ;</li>
 <li>
-<p>il sera observé dans le thread de l&#x27;UI, celui qui gère les événements de l&#x27;interface Swing [observeOn(SwingScheduler.getInstance())]. Ce thread est obtenu par la méthode [SwingScheduler.getInstance()] où [SwingScheduler] est une classe fournie par la bibliothèque [RxSwing]. Ceci est obligatoire. A l&#x27;obtention du résultat de l&#x27;opration asynchrone, celui-ci est souvent utilisé pour modifier des éléments de l&#x27;interface Swing. Or celle-ci ne peut être modifiée que dans le thread de l&#x27;UI, sinon on a une exception. Il faut donc que les lignes 41-61 s&#x27;exécutent dans le thread de l&#x27;UI. C&#x27;est assuré ici par la méthode [observeOn(SwingScheduler.getInstance())] ;
+<p>il sera observé dans le thread de l'UI, celui qui gère les événements de l'interface Swing [observeOn(SwingScheduler.getInstance())]. Ce thread est obtenu par la méthode [SwingScheduler.getInstance()] où [SwingScheduler] est une classe fournie par la bibliothèque [RxSwing]. Ceci est obligatoire. A l'obtention du résultat de l'opration asynchrone, celui-ci est souvent utilisé pour modifier des éléments de l'interface Swing. Or celle-ci ne peut être modifiée que dans le thread de l'UI, sinon on a une exception. Il faut donc que les lignes 41-61 s'exécutent dans le thread de l'UI. C'est assuré ici par la méthode [observeOn(SwingScheduler.getInstance())] ;
 Commentons le reste du code :</p>
 </li>
 <li>
 <p>lignes 42-43 : ces lignes sont là pour respecter la syntaxe de la méthode [subscribe]. Elles ne seront jamais exécutées car le processus [metier.authenticate(user)] ne rend aucun résultat ;</p>
 </li>
-<li>lignes 35-52 : à réception d&#x27;une exception, celle-ci est affichée ;</li>
+<li>lignes 35-52 : à réception d'une exception, celle-ci est affichée ;</li>
 <li>lignes 54-61 : exécutées lorsque le processus [metier.authenticate(user)] signale la fin de ses émissions ;</li>
 </ul>
 <h3 id="2033-la-classe-electionsmainform">20.3.3. La classe [ElectionsMainForm]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012C000000C88953966C.png" style="display:inline-block; margin:4px;width:5.549cm;height:3.701cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<h4 id="20331-initialisation-de-linterface-graphique">20.3.3.1. Initialisation de l&#x27;interface graphique</h4>
+<h4 id="20331-initialisation-de-linterface-graphique">20.3.3.1. Initialisation de l'interface graphique</h4>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
@@ -3162,29 +3162,29 @@ Commentons le reste du code :</p>
 <a id="__codelineno-20-86" name="__codelineno-20-86"></a><span class="p">...</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 46 : la méthode [init] est exécutée lorsque la fenêtre associée va s&#x27;afficher. Elle a pour but d&#x27;initialiser les composants [1-3] ci-dessous :</li>
+<li>ligne 46 : la méthode [init] est exécutée lorsque la fenêtre associée va s'afficher. Elle a pour but d'initialiser les composants [1-3] ci-dessous :</li>
 </ul>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000211000001CC6930C088.png" style="display:inline-block; margin:4px;width:8.641cm;height:7.512cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li>lignes 71-85 : on demande de façon asynchrone les listes candidates (composant [1]) ;</li>
-<li>ligne 71 : le processus observé est [metier.getListesElectorales(user)]. Il est exécuté sur un thread d&#x27;E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l&#x27;UI [observeOn(SwingScheduler.getInstance()] ;</li>
+<li>ligne 71 : le processus observé est [metier.getListesElectorales(user)]. Il est exécuté sur un thread d'E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l'UI [observeOn(SwingScheduler.getInstance()] ;</li>
 <li>lignes 74-77 : le résultat renvoyé par le processus observé est mémorisé dans le champ [listes] de la ligne 38 ;</li>
 <li>
-<p>ligne 79 : l&#x27;éventuelle exception est traitée par la méthode suivante :
+<p>ligne 79 : l'éventuelle exception est traitée par la méthode suivante :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
 <span class="normal"><a href="#__codelineno-21-2">2</a></span>
 <span class="normal"><a href="#__codelineno-21-3">3</a></span>
 <span class="normal"><a href="#__codelineno-21-4">4</a></span>
-<span class="normal"><a href="#__codelineno-21-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">showException</span><span class="p">(</span><span class="n">Throwable</span><span class="w"> </span><span class="n">th</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w">    </span><span class="c1">// on affiche l&#39;exception</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">    </span><span class="n">jTextPaneMessages</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">getInfoForException</span><span class="p">(</span><span class="s">&quot;Les erreurs suivantes se sont produites : &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">th</span><span class="p">));</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">    </span><span class="n">jTextPaneMessages</span><span class="p">.</span><span class="na">setCaretPosition</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-21-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>  private void showException(Throwable th) {
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>    // on affiche l&#39;exception
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>    jTextPaneMessages.setText(getInfoForException(&quot;Les erreurs suivantes se sont produites : &quot;, th));
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>    jTextPaneMessages.setCaretPosition(0);
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>}
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p>lignes 81-84 : à la fin du processus observé, on exécute les lignes 81-84. Ces lignes ne sont pas exécutées s&#x27;il y a eu exception. La méthode [doInitStep2] assure l&#x27;étape 2 de l&#x27;initialisation de la façon suivante :
+<p>lignes 81-84 : à la fin du processus observé, on exécute les lignes 81-84. Ces lignes ne sont pas exécutées s'il y a eu exception. La méthode [doInitStep2] assure l'étape 2 de l'initialisation de la façon suivante :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
@@ -3205,38 +3205,38 @@ Commentons le reste du code :</p>
 <span class="normal"><a href="#__codelineno-22-18">18</a></span>
 <span class="normal"><a href="#__codelineno-22-19">19</a></span>
 <span class="normal"><a href="#__codelineno-22-20">20</a></span>
-<span class="normal"><a href="#__codelineno-22-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doInitStep2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="c1">// on associe les noms des listes au combo jComboBoxNomsListes</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">listes</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">      </span><span class="n">jComboBoxNomsListes</span><span class="p">.</span><span class="na">addItem</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%s - %s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">listes</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getId</span><span class="p">(),</span><span class="w"> </span><span class="n">listes</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">getNom</span><span class="p">()));</span>
-<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">    </span><span class="c1">// nombre de sièges à pourvoir</span>
-<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">    </span><span class="n">metier</span><span class="p">.</span><span class="na">getNbSiegesAPourvoir</span><span class="p">(</span><span class="n">user</span><span class="p">).</span><span class="na">subscribeOn</span><span class="p">(</span><span class="n">Schedulers</span><span class="p">.</span><span class="na">io</span><span class="p">()).</span><span class="na">observeOn</span><span class="p">(</span><span class="n">SwingScheduler</span><span class="p">.</span><span class="na">getInstance</span><span class="p">())</span>
-<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">            </span><span class="p">.</span><span class="na">subscribe</span><span class="p">(</span>
-<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">                    </span><span class="c1">// réponse</span>
-<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="w">                    </span><span class="n">nbSiegesAPourvoir</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-11" name="__codelineno-22-11"></a><span class="w">                      </span><span class="c1">// on initialise le label lié à cette information</span>
-<a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="w">                      </span><span class="n">jLabelSAP</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">jLabelSAP</span><span class="p">.</span><span class="na">getText</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nbSiegesAPourvoir</span><span class="p">);</span>
-<a id="__codelineno-22-13" name="__codelineno-22-13"></a><span class="w">                    </span><span class="p">},</span>
-<a id="__codelineno-22-14" name="__codelineno-22-14"></a><span class="w">                    </span><span class="c1">// exception</span>
-<a id="__codelineno-22-15" name="__codelineno-22-15"></a><span class="w">                    </span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">showException</span><span class="p">(</span><span class="n">th</span><span class="p">),</span>
-<a id="__codelineno-22-16" name="__codelineno-22-16"></a><span class="w">                    </span><span class="c1">// fin observable</span>
-<a id="__codelineno-22-17" name="__codelineno-22-17"></a><span class="w">                    </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-18" name="__codelineno-22-18"></a><span class="w">                      </span><span class="c1">// étape suivante</span>
-<a id="__codelineno-22-19" name="__codelineno-22-19"></a><span class="w">                      </span><span class="n">doInitStep3</span><span class="p">();</span>
-<a id="__codelineno-22-20" name="__codelineno-22-20"></a><span class="w">                    </span><span class="p">});</span>
-<a id="__codelineno-22-21" name="__codelineno-22-21"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-22-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>  private void doInitStep2() {
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>    // on associe les noms des listes au combo jComboBoxNomsListes
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>    for (int i = 0; i &lt; listes.length; i++) {
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>      jComboBoxNomsListes.addItem(String.format(&quot;%s - %s&quot;, listes[i].getId(), listes[i].getNom()));
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>    }
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a>    // nombre de sièges à pourvoir
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a>    metier.getNbSiegesAPourvoir(user).subscribeOn(Schedulers.io()).observeOn(SwingScheduler.getInstance())
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a>            .subscribe(
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a>                    // réponse
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a>                    nbSiegesAPourvoir -&gt; {
+<a id="__codelineno-22-11" name="__codelineno-22-11"></a>                      // on initialise le label lié à cette information
+<a id="__codelineno-22-12" name="__codelineno-22-12"></a>                      jLabelSAP.setText(jLabelSAP.getText() + nbSiegesAPourvoir);
+<a id="__codelineno-22-13" name="__codelineno-22-13"></a>                    },
+<a id="__codelineno-22-14" name="__codelineno-22-14"></a>                    // exception
+<a id="__codelineno-22-15" name="__codelineno-22-15"></a>                    (th) -&gt; showException(th),
+<a id="__codelineno-22-16" name="__codelineno-22-16"></a>                    // fin observable
+<a id="__codelineno-22-17" name="__codelineno-22-17"></a>                    () -&gt; {
+<a id="__codelineno-22-18" name="__codelineno-22-18"></a>                      // étape suivante
+<a id="__codelineno-22-19" name="__codelineno-22-19"></a>                      doInitStep3();
+<a id="__codelineno-22-20" name="__codelineno-22-20"></a>                    });
+<a id="__codelineno-22-21" name="__codelineno-22-21"></a>}
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p>lignes 3-5 : on utilise le résultat de l&#x27;étape précédente pour remplir la liste déroulante avec les noms des listes candidates ;</p>
+<p>lignes 3-5 : on utilise le résultat de l'étape précédente pour remplir la liste déroulante avec les noms des listes candidates ;</p>
 </li>
 <li>lignes 7-20 : on demande le nombre de sièges à pourvoir de façon asynchrone ;</li>
-<li>ligne 7 : le processus observé est [metier.getNbSiegesAPourvoir(user)]. Il est exécuté sur un thread d&#x27;E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l&#x27;UI [observeOn(SwingScheduler.getInstance()] ;</li>
-<li>lignes 10-13 : le résultat renvoyé par le processus est utilisé pour mettre à jour l&#x27;interface graphique ;</li>
-<li>ligne 15 : on affiche l&#x27;éventuelle exception ;</li>
-<li>lignes 17-20 : à réception du signal de fin de l&#x27;observable, on passe à l&#x27;étape 3 du processus d&#x27;initialisation ;
-L&#x27;étape 3 de l&#x27;initialisation est assurée par le code suivant :</li>
+<li>ligne 7 : le processus observé est [metier.getNbSiegesAPourvoir(user)]. Il est exécuté sur un thread d'E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l'UI [observeOn(SwingScheduler.getInstance()] ;</li>
+<li>lignes 10-13 : le résultat renvoyé par le processus est utilisé pour mettre à jour l'interface graphique ;</li>
+<li>ligne 15 : on affiche l'éventuelle exception ;</li>
+<li>lignes 17-20 : à réception du signal de fin de l'observable, on passe à l'étape 3 du processus d'initialisation ;
+L'étape 3 de l'initialisation est assurée par le code suivant :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
@@ -3252,28 +3252,28 @@ L&#x27;étape 3 de l&#x27;initialisation est assurée par le code suivant :</li
 <span class="normal"><a href="#__codelineno-23-12">12</a></span>
 <span class="normal"><a href="#__codelineno-23-13">13</a></span>
 <span class="normal"><a href="#__codelineno-23-14">14</a></span>
-<span class="normal"><a href="#__codelineno-23-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doInitStep3</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">    </span><span class="c1">// seuil électoral</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">    </span><span class="n">metier</span><span class="p">.</span><span class="na">getSeuilElectoral</span><span class="p">(</span><span class="n">user</span><span class="p">).</span><span class="na">subscribeOn</span><span class="p">(</span><span class="n">Schedulers</span><span class="p">.</span><span class="na">io</span><span class="p">()).</span><span class="na">observeOn</span><span class="p">(</span><span class="n">SwingScheduler</span><span class="p">.</span><span class="na">getInstance</span><span class="p">())</span>
-<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">            </span><span class="p">.</span><span class="na">subscribe</span><span class="p">(</span>
-<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">                    </span><span class="c1">// réponse</span>
-<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">                    </span><span class="n">seuilElectoral</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">                      </span><span class="c1">// on initialise le label lié à cette information</span>
-<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">                      </span><span class="n">jLabelSE</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">jLabelSE</span><span class="p">.</span><span class="na">getText</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">seuilElectoral</span><span class="p">);</span>
-<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">                    </span><span class="p">},</span>
-<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">                    </span><span class="c1">// exception</span>
-<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="w">                    </span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">showException</span><span class="p">(</span><span class="n">th</span><span class="p">),</span>
-<a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="w">                    </span><span class="c1">// fin observable</span>
-<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="w">                    </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="w">                    </span><span class="p">});</span>
-<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-23-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>  private void doInitStep3() {
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>    // seuil électoral
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>    metier.getSeuilElectoral(user).subscribeOn(Schedulers.io()).observeOn(SwingScheduler.getInstance())
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a>            .subscribe(
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>                    // réponse
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a>                    seuilElectoral -&gt; {
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>                      // on initialise le label lié à cette information
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a>                      jLabelSE.setText(jLabelSE.getText() + seuilElectoral);
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a>                    },
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a>                    // exception
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a>                    (th) -&gt; showException(th),
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a>                    // fin observable
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a>                    () -&gt; {
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a>                    });
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 3-4 : on demande le seuil électoral de façon asynchrone ;</li>
-<li>ligne 3 : le processus observé est [metier.getSeuilElectoral(user)]. Il est exécuté sur un thread d&#x27;E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l&#x27;UI [observeOn(SwingScheduler.getInstance()] ;</li>
-<li>lignes 6-9 : le résultat renvoyé par le processus est utilisé pour mettre à jour l&#x27;interface graphique ;</li>
-<li>ligne 11 : on affiche l&#x27;éventuelle exception ;</li>
-<li>lignes 13-14 : à réception du signal de fin de l&#x27;observable, rien n&#x27;est fait : le processus d&#x27;initialisation de l&#x27;interface graphique est terminé ;</li>
+<li>ligne 3 : le processus observé est [metier.getSeuilElectoral(user)]. Il est exécuté sur un thread d'E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l'UI [observeOn(SwingScheduler.getInstance()] ;</li>
+<li>lignes 6-9 : le résultat renvoyé par le processus est utilisé pour mettre à jour l'interface graphique ;</li>
+<li>ligne 11 : on affiche l'éventuelle exception ;</li>
+<li>lignes 13-14 : à réception du signal de fin de l'observable, rien n'est fait : le processus d'initialisation de l'interface graphique est terminé ;</li>
 </ul>
 <h4 id="20332-calcul-des-sieges-obtenus-par-les-differentes-listes">20.3.3.2. Calcul des sièges obtenus par les différentes listes</h4>
 <p>La méthode [doCalculer] a pour fonction de calculer le nombre de sièges obtenus par les différentes listes :</p>
@@ -3292,29 +3292,29 @@ L&#x27;étape 3 de l&#x27;initialisation est assurée par le code suivant :</li
 <span class="normal"><a href="#__codelineno-24-13">13</a></span>
 <span class="normal"><a href="#__codelineno-24-14">14</a></span>
 <span class="normal"><a href="#__codelineno-24-15">15</a></span>
-<span class="normal"><a href="#__codelineno-24-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="w">  </span><span class="nd">@Override</span>
-<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="w">  </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doCalculer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">    </span><span class="n">tListesSaisies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listesSaisies</span><span class="p">.</span><span class="na">toArray</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">);</span>
-<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="w">    </span><span class="c1">// calcul des sièges</span>
-<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">    </span><span class="n">metier</span><span class="p">.</span><span class="na">calculerSieges</span><span class="p">(</span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">tListesSaisies</span><span class="p">).</span><span class="na">subscribeOn</span><span class="p">(</span><span class="n">Schedulers</span><span class="p">.</span><span class="na">io</span><span class="p">()).</span><span class="na">observeOn</span><span class="p">(</span><span class="n">SwingScheduler</span><span class="p">.</span><span class="na">getInstance</span><span class="p">())</span>
-<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">            </span><span class="p">.</span><span class="na">subscribe</span><span class="p">(</span>
-<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">                    </span><span class="c1">// traitement résultat</span>
-<a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="w">                    </span><span class="n">result</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">consumeResultSieges</span><span class="p">(</span><span class="n">result</span><span class="p">),</span>
-<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="w">                    </span><span class="c1">// traitement exception</span>
-<a id="__codelineno-24-11" name="__codelineno-24-11"></a><span class="w">                    </span><span class="n">th</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">showException</span><span class="p">(</span><span class="n">th</span><span class="p">),</span>
-<a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="w">                    </span><span class="c1">// fin observable</span>
-<a id="__codelineno-24-13" name="__codelineno-24-13"></a><span class="w">                    </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="w">                    </span><span class="p">}</span>
-<a id="__codelineno-24-15" name="__codelineno-24-15"></a><span class="w">            </span><span class="p">);</span>
-<a id="__codelineno-24-16" name="__codelineno-24-16"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-24-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>  @Override
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>  protected void doCalculer() {
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a>    tListesSaisies = listesSaisies.toArray(new ListeElectorale[0]);
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>    // calcul des sièges
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a>    String info = null;
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a>    metier.calculerSieges(user, tListesSaisies).subscribeOn(Schedulers.io()).observeOn(SwingScheduler.getInstance())
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a>            .subscribe(
+<a id="__codelineno-24-8" name="__codelineno-24-8"></a>                    // traitement résultat
+<a id="__codelineno-24-9" name="__codelineno-24-9"></a>                    result -&gt; consumeResultSieges(result),
+<a id="__codelineno-24-10" name="__codelineno-24-10"></a>                    // traitement exception
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a>                    th -&gt; showException(th),
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a>                    // fin observable
+<a id="__codelineno-24-13" name="__codelineno-24-13"></a>                    () -&gt; {
+<a id="__codelineno-24-14" name="__codelineno-24-14"></a>                    }
+<a id="__codelineno-24-15" name="__codelineno-24-15"></a>            );
+<a id="__codelineno-24-16" name="__codelineno-24-16"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 6-15 : on calcule de façon asynchrone les sièges obtenus par les différentes listes ;</li>
-<li>ligne 6 : le processus observé est [metier.calculerSieges(user, tListesSaisies)]. Il est exécuté sur un thread d&#x27;E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l&#x27;UI [observeOn(SwingScheduler.getInstance()] ;</li>
+<li>ligne 6 : le processus observé est [metier.calculerSieges(user, tListesSaisies)]. Il est exécuté sur un thread d'E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l'UI [observeOn(SwingScheduler.getInstance()] ;</li>
 <li>ligne 9 : le résultat renvoyé par le processus est utilisé par la méthode [consumeResultSieges] ;</li>
-<li>ligne 11 : on affiche l&#x27;éventuelle exception ;</li>
-<li>lignes 13-14 : à réception du signal de fin de l&#x27;observable, rien n&#x27;est fait ;
+<li>ligne 11 : on affiche l'éventuelle exception ;</li>
+<li>lignes 13-14 : à réception du signal de fin de l'observable, rien n'est fait ;
 Ligne 9, la méthode [consumeResultSieges] exploite le résultat renvoyé par le processus observé, les listes candidates avec leurs champs [sieges, elimine] mis à jour :</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
@@ -3331,27 +3331,27 @@ Ligne 9, la méthode [consumeResultSieges] exploite le résultat renvoyé par le
 <span class="normal"><a href="#__codelineno-25-12">12</a></span>
 <span class="normal"><a href="#__codelineno-25-13">13</a></span>
 <span class="normal"><a href="#__codelineno-25-14">14</a></span>
-<span class="normal"><a href="#__codelineno-25-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">consumeResultSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">tListesSaisies</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">    </span><span class="c1">// on mémorise le résultat</span>
-<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">tListesSaisies</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tListesSaisies</span><span class="p">;</span>
-<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="w">    </span><span class="c1">// affichage des résultats</span>
-<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">    </span><span class="n">modèleRésultats</span><span class="p">.</span><span class="na">clear</span><span class="p">();</span>
-<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">tListesSaisies</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="w">      </span><span class="n">modèleRésultats</span><span class="p">.</span><span class="na">addElement</span><span class="p">(</span><span class="n">tListesSaisies</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
-<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">    </span><span class="c1">// maj état formulaire</span>
-<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="w">    </span><span class="n">Utilitaires</span><span class="p">.</span><span class="na">setEnabled</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="o">[]</span><span class="p">{</span><span class="n">jLabelEnregistrer</span><span class="p">},</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
-<a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="w">    </span><span class="n">Utilitaires</span><span class="p">.</span><span class="na">setEnabled</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="o">[]</span><span class="p">{</span><span class="n">jLabelCalculer</span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
-<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="w">    </span><span class="n">Utilitaires</span><span class="p">.</span><span class="na">setEnabled</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JMenuItem</span><span class="o">[]</span><span class="p">{</span><span class="n">jMenuItemEnregistrer</span><span class="p">},</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
-<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="w">    </span><span class="n">Utilitaires</span><span class="p">.</span><span class="na">setEnabled</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JMenuItem</span><span class="o">[]</span><span class="p">{</span><span class="n">jMenuItemCalculer</span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
-<a id="__codelineno-25-14" name="__codelineno-25-14"></a><span class="w">    </span><span class="n">jTextPaneMessages</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&quot;Calcul terminé&quot;</span><span class="p">);</span>
-<a id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-25-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>  private void consumeResultSieges(ListeElectorale[] tListesSaisies) {
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>    // on mémorise le résultat
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>    this.tListesSaisies = tListesSaisies;
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>    // affichage des résultats
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a>    modèleRésultats.clear();
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a>    for (int i = 0; i &lt; tListesSaisies.length; i++) {
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a>      modèleRésultats.addElement(tListesSaisies[i].toString());
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a>    }
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a>    // maj état formulaire
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a>    Utilitaires.setEnabled(new JLabel[]{jLabelEnregistrer}, true);
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a>    Utilitaires.setEnabled(new JLabel[]{jLabelCalculer}, false);
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a>    Utilitaires.setEnabled(new JMenuItem[]{jMenuItemEnregistrer}, true);
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a>    Utilitaires.setEnabled(new JMenuItem[]{jMenuItemCalculer}, false);
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a>    jTextPaneMessages.setText(&quot;Calcul terminé&quot;);
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 4-14 : le résultat obtenu est utilisé pour mettre à jour l&#x27;interface graphique ;</li>
+<li>lignes 4-14 : le résultat obtenu est utilisé pour mettre à jour l'interface graphique ;</li>
 </ul>
-<h4 id="20333-enregistrement-des-resultats-de-lelection">20.3.3.3. Enregistrement des résultats de l&#x27;élection</h4>
-<p>L&#x27;enregistrement des résultats de l&#x27;élection est fait par la méthode [doEnregistrer] suivante :</p>
+<h4 id="20333-enregistrement-des-resultats-de-lelection">20.3.3.3. Enregistrement des résultats de l'élection</h4>
+<p>L'enregistrement des résultats de l'élection est fait par la méthode [doEnregistrer] suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
@@ -3370,33 +3370,33 @@ Ligne 9, la méthode [consumeResultSieges] exploite le résultat renvoyé par le
 <span class="normal"><a href="#__codelineno-26-16">16</a></span>
 <span class="normal"><a href="#__codelineno-26-17">17</a></span>
 <span class="normal"><a href="#__codelineno-26-18">18</a></span>
-<span class="normal"><a href="#__codelineno-26-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="w">  </span><span class="nd">@Override</span>
-<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">  </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doEnregistrer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">    </span><span class="c1">// on demande l&#39;enregistrement à la couche [métier]</span>
-<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">    </span><span class="n">metier</span><span class="p">.</span><span class="na">recordResultats</span><span class="p">(</span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">tListesSaisies</span><span class="p">).</span><span class="na">subscribeOn</span><span class="p">(</span><span class="n">Schedulers</span><span class="p">.</span><span class="na">io</span><span class="p">()).</span><span class="na">observeOn</span><span class="p">(</span><span class="n">SwingScheduler</span><span class="p">.</span><span class="na">getInstance</span><span class="p">())</span>
-<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="w">            </span><span class="p">.</span><span class="na">subscribe</span><span class="p">(</span>
-<a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="w">                    </span><span class="c1">// traitement du résultat - il n&#39;y en a pas ici</span>
-<a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="w">                    </span><span class="p">(</span><span class="n">param</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-26-8" name="__codelineno-26-8"></a><span class="w">                    </span><span class="p">},</span>
-<a id="__codelineno-26-9" name="__codelineno-26-9"></a><span class="w">                    </span><span class="c1">// traitement de l&#39;exception</span>
-<a id="__codelineno-26-10" name="__codelineno-26-10"></a><span class="w">                    </span><span class="p">(</span><span class="n">th</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">showException</span><span class="p">(</span><span class="n">th</span><span class="p">),</span>
-<a id="__codelineno-26-11" name="__codelineno-26-11"></a><span class="w">                    </span><span class="c1">// fin observable</span>
-<a id="__codelineno-26-12" name="__codelineno-26-12"></a><span class="w">                    </span><span class="p">()</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-26-13" name="__codelineno-26-13"></a><span class="w">                      </span><span class="c1">// maj du formulaire</span>
-<a id="__codelineno-26-14" name="__codelineno-26-14"></a><span class="w">                      </span><span class="n">Utilitaires</span><span class="p">.</span><span class="na">setEnabled</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JLabel</span><span class="o">[]</span><span class="p">{</span><span class="n">jLabelEnregistrer</span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
-<a id="__codelineno-26-15" name="__codelineno-26-15"></a><span class="w">                      </span><span class="n">Utilitaires</span><span class="p">.</span><span class="na">setEnabled</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JMenuItem</span><span class="o">[]</span><span class="p">{</span><span class="n">jMenuItemEnregistrer</span><span class="p">},</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
-<a id="__codelineno-26-16" name="__codelineno-26-16"></a><span class="w">                      </span><span class="n">jTextPaneMessages</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&quot;Enregistrement des résultats réalisé&quot;</span><span class="p">);</span>
-<a id="__codelineno-26-17" name="__codelineno-26-17"></a><span class="w">                    </span><span class="p">}</span>
-<a id="__codelineno-26-18" name="__codelineno-26-18"></a><span class="w">            </span><span class="p">);</span>
-<a id="__codelineno-26-19" name="__codelineno-26-19"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-26-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>  @Override
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>  protected void doEnregistrer() {
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>    // on demande l&#39;enregistrement à la couche [métier]
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a>    metier.recordResultats(user, tListesSaisies).subscribeOn(Schedulers.io()).observeOn(SwingScheduler.getInstance())
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a>            .subscribe(
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a>                    // traitement du résultat - il n&#39;y en a pas ici
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a>                    (param) -&gt; {
+<a id="__codelineno-26-8" name="__codelineno-26-8"></a>                    },
+<a id="__codelineno-26-9" name="__codelineno-26-9"></a>                    // traitement de l&#39;exception
+<a id="__codelineno-26-10" name="__codelineno-26-10"></a>                    (th) -&gt; showException(th),
+<a id="__codelineno-26-11" name="__codelineno-26-11"></a>                    // fin observable
+<a id="__codelineno-26-12" name="__codelineno-26-12"></a>                    () -&gt; {
+<a id="__codelineno-26-13" name="__codelineno-26-13"></a>                      // maj du formulaire
+<a id="__codelineno-26-14" name="__codelineno-26-14"></a>                      Utilitaires.setEnabled(new JLabel[]{jLabelEnregistrer}, false);
+<a id="__codelineno-26-15" name="__codelineno-26-15"></a>                      Utilitaires.setEnabled(new JMenuItem[]{jMenuItemEnregistrer}, false);
+<a id="__codelineno-26-16" name="__codelineno-26-16"></a>                      jTextPaneMessages.setText(&quot;Enregistrement des résultats réalisé&quot;);
+<a id="__codelineno-26-17" name="__codelineno-26-17"></a>                    }
+<a id="__codelineno-26-18" name="__codelineno-26-18"></a>            );
+<a id="__codelineno-26-19" name="__codelineno-26-19"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 4-17 : on enregistre les résultats de l&#x27;élection de façon asynchrone ;</li>
-<li>ligne 4 : le processus observé est [metier.recordResultats(user, tListesSaisies)]. Il est exécuté sur un thread d&#x27;E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l&#x27;UI [observeOn(SwingScheduler.getInstance()] ;</li>
+<li>lignes 4-17 : on enregistre les résultats de l'élection de façon asynchrone ;</li>
+<li>ligne 4 : le processus observé est [metier.recordResultats(user, tListesSaisies)]. Il est exécuté sur un thread d'E/S [subscribeOn(Schedulers.io())] et observé sur le thread de l'UI [observeOn(SwingScheduler.getInstance()] ;</li>
 <li>lignes 7-8 : ces lignes ne seront jamais exécutées car le processus observé ne rend pas de résultat ;</li>
-<li>ligne 10 : on affiche l&#x27;éventuelle exception ;</li>
-<li>lignes 14-16 : à réception du signal de fin de l&#x27;observable, on met à jour l&#x27;interface graphique ;
-<strong>Travail à faire</strong> : vérifier que l&#x27;application Swing fonctionne. Puis faites évoluer l&#x27;interface graphique et le code pour que lors d&#x27;une opération asynchrone avec le serveur web / jSON, une image d&#x27;attente apparaisse ainsi qu&#x27;une option d&#x27;annulation de l&#x27;opération en cours.</li>
+<li>ligne 10 : on affiche l'éventuelle exception ;</li>
+<li>lignes 14-16 : à réception du signal de fin de l'observable, on met à jour l'interface graphique ;
+<strong>Travail à faire</strong> : vérifier que l'application Swing fonctionne. Puis faites évoluer l'interface graphique et le code pour que lors d'une opération asynchrone avec le serveur web / jSON, une image d'attente apparaisse ainsi qu'une option d'annulation de l'opération en cours.</li>
 </ul>
 
 

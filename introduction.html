@@ -519,14 +519,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-introduction-a-lx27api-jdbc.html" class="md-nav__link">
+      <a href="cours-introduction-a-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. [Cours] : Introduction à l&#x27;API JDBC
+    6. [Cours] : Introduction à l'API JDBC
   
 
     
@@ -546,14 +546,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-implementation-de-la-couche-dao-du-td-avec-lx27api-jdbc.html" class="md-nav__link">
+      <a href="td-implementation-de-la-couche-dao-du-td-avec-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [TD] : Implémentation de la couche [DAO] du TD avec l&#x27;API JDBC
+    7. [TD] : Implémentation de la couche [DAO] du TD avec l'API JDBC
   
 
     
@@ -762,14 +762,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-creation-dx27un-client-pour-le-service-web.html" class="md-nav__link">
+      <a href="td-creation-dun-client-pour-le-service-web.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. [TD] : création d&#x27;un client pour le service web
+    15. [TD] : création d'un client pour le service web
   
 
     
@@ -789,14 +789,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-securiser-lx27acces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
+      <a href="cours-securiser-lacces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. [Cours] : Sécuriser l&#x27;accès à un service web avec Spring Security
+    16. [Cours] : Sécuriser l'accès à un service web avec Spring Security
   
 
     
@@ -993,33 +993,33 @@
 
 <h1 id="1-introduction">1. Introduction</h1>
 <h2 id="11-contexte">1.1. Contexte</h2>
-<p>Ce document est à la fois un cours et un TD (Travail Dirigé) d&#x27;université. Il est destiné à des débutants. Il utilise les sources suivantes :</p>
+<p>Ce document est à la fois un cours et un TD (Travail Dirigé) d'université. Il est destiné à des débutants. Il utilise les sources suivantes :</p>
 <p><strong>Références</strong> : </p>
-<ul>
+<ol>
 <li><a href="https://tahe.developpez.com/java/cours"><u>Introduction au langage Java</u></a> ;</li>
-<li><a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>Exploiter une base relationnelle avec l&#x27;écosystème Spring</u></a> ;
-Nous noterons ces références respectivement [<a href="https://tahe.developpez.com/java/cours"><u>ref1</u></a>] et [<a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>ref2</u></a>]. La source [<a href="https://tahe.developpez.com/java/cours"><u>ref1</u></a>] est ancienne (2002) mais suffisante pour ce document où elle n&#x27;est utilisée que pour sa présentation de la syntaxe du langage Java et de ses actions élémentaires. Le reste nécessaire à la réalisation du TD est présenté dans ce document dans des chapitres intitulés [Cours]. Ces chapitres proviennent directement de [<a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>ref2</u></a>] (2015) et ont été parfois simplifiés.</li>
-</ul>
-<p>L&#x27;objectif du document est d&#x27;enseigner le langage Java dans une optique professionnelle. Pour cette raison, nous nous appuyons fortement sur le framework Spring [http://spring.io/] très utilisé dans le développement JEE (Java Enterprise Edition). Logiquement, ce cours devrait être suivi par un cours JEE. C&#x27;est le cas à l&#x27;Istia (université d&#x27;Angers). JEE est la principale source d&#x27;emplois actuellement (novembre 2015) pour les jeunes développeurs Bac+5. Il y a beaucoup d&#x27;autres technologies que Spring dans le monde JEE. Spring a l&#x27;avantage d&#x27;être compréhensible et surtout d&#x27;apporter de bonnes pratiques de codage réutilisables en dehors de l&#x27;écosystème Spring. C&#x27;est ce qui explique son choix ici.</p>
-<p>Ce TD est utilisé depuis plus de 10 ans et a évolué avec les technologies. Il est suivi (à l&#x27;IstiA) d&#x27;un TD JEE [<a href="https://tahe.developpez.com/java/javaee"><u>Introduction à Java EE</u></a>]. Ce dernier TD date de 2012 (on est ici en 2015) et mériterait d&#x27;être rafraîchi. Il présente l&#x27;orthodoxie JEE au travers du framework web JSF2 (Java Server Faces) et les EJB3 (Enterprise Java Bean). Mis bout à bout, ces deux TD ont permis à de nombreux étudiants de décrocher des stages JEE en ESN (Entreprises de Services Numériques) et de s&#x27;y faire embaucher dans la foulée.</p>
-<p>On ne trouvera pas dans ce document, une présentation formelle de toutes les facettes de Java. Au fil des ans, le comportement des développeurs juniors face à un problème a beaucoup évolué. Désormais, ils utilisent quasi systématiquement Internet pour trouver des bouts de code qui mis bout à bout font un programme. Si on leur fournit un cours, ils l&#x27;utilisent assez peu et préfèrent de nouveau aller sur Internet. Dubitatif au départ sur cette façon de travailler, j&#x27;ai quand même été étonné des résultats obtenus. Ainsi des étudiants faibles réussissaient à produire des programmes qui marchaient alors que sans l&#x27;aide d&#x27;Internet ils n&#x27;y seraient probablement pas arrivés.  Je m&#x27;appuie désormais sur cette façon de travailler.</p>
-<p>Des bouts de code ne donnent pas une vue d&#x27;ensemble de l&#x27;architecture d&#x27;une solution et c&#x27;est l&#x27;un des objectifs de ce document que de donner celle-ci. Les étudiants font ce TD comme un TP, en autonomie. Il n&#x27;y a pas de cours magistral. Il y a un planning qui leur donne l&#x27;état d&#x27;avancement attendu d&#x27;eux au fil des séances. Ils peuvent être en retard ou en avance sur ce planning. Leur avancement est vérifié par un certain nombre de validations qu&#x27;ils doivent présenter à l&#x27;enseignant. Celui-ci est présent à la fois pour leur fournir des explications lorsqu&#x27;ils en demandent et valider leur travail. Chacun va à son rythme. A la fin des 36 h alloués à ce TD, certains auront fait 50% de validations en plus que d&#x27;autres mais chacun, c&#x27;est en tout cas l&#x27;objectif, aura compris ce qu&#x27;il a fait en autonomie. Ce TD peut être fait sans l&#x27;accompagnement d&#x27;un enseignant. C&#x27;est pourquoi, il est disponible sur [<a href="https://tahe.developpez.com/"><u>https://tahe.developpez.com</u></a>].</p>
-<p>Ce document ne conviendra pas à ceux qui chercheraient un cours académique sur Java, quelque chose où on explique Java de façon progressive et structurée et où chaque détail de syntaxe est expliqué et justifié. C&#x27;est plutôt une démarche expérimentale qui est proposée ici. Il est probable que l&#x27;étudiant ne comprendra pas tout ce qui lui est proposé dans le document mais il saura probablement réutiliser son contenu à bon escient et la compréhension des détails viendra avec l&#x27;expérience.</p>
-<p>Ce document n&#x27;est pas non plus un cours d&#x27;algorithmique. L&#x27;algorithme du TD est basique et peut être résolu par tout débutant suivant ses premiers cours d&#x27;algorithmique. Le document est centré sur l&#x27;environnement de développement professionnel en Java avec ses nombreuses bibliothèques ou frameworks et sur l&#x27;architecture du code. La plupart des étudiants que je vois passer présentent des faiblesses en algorithmique qui sont confirmées ensuite par les maîtres de stage. Donc oui, la maîtrise des algorithmes est importante mais ce n&#x27;est pas l&#x27;objet de ce cours-TD.</p>
+<li><a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>Exploiter une base relationnelle avec l'écosystème Spring</u></a> ;
+Nous noterons ces références respectivement [<a href="https://tahe.developpez.com/java/cours"><u>ref1</u></a>] et [<a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>ref2</u></a>]. La source [<a href="https://tahe.developpez.com/java/cours"><u>ref1</u></a>] est ancienne (2002) mais suffisante pour ce document où elle n'est utilisée que pour sa présentation de la syntaxe du langage Java et de ses actions élémentaires. Le reste nécessaire à la réalisation du TD est présenté dans ce document dans des chapitres intitulés [Cours]. Ces chapitres proviennent directement de [<a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/"><u>ref2</u></a>] (2015) et ont été parfois simplifiés.</li>
+</ol>
+<p>L'objectif du document est d'enseigner le langage Java dans une optique professionnelle. Pour cette raison, nous nous appuyons fortement sur le framework Spring [http://spring.io/] très utilisé dans le développement JEE (Java Enterprise Edition). Logiquement, ce cours devrait être suivi par un cours JEE. C'est le cas à l'Istia (université d'Angers). JEE est la principale source d'emplois actuellement (novembre 2015) pour les jeunes développeurs Bac+5. Il y a beaucoup d'autres technologies que Spring dans le monde JEE. Spring a l'avantage d'être compréhensible et surtout d'apporter de bonnes pratiques de codage réutilisables en dehors de l'écosystème Spring. C'est ce qui explique son choix ici.</p>
+<p>Ce TD est utilisé depuis plus de 10 ans et a évolué avec les technologies. Il est suivi (à l'IstiA) d'un TD JEE [<a href="https://tahe.developpez.com/java/javaee"><u>Introduction à Java EE</u></a>]. Ce dernier TD date de 2012 (on est ici en 2015) et mériterait d'être rafraîchi. Il présente l'orthodoxie JEE au travers du framework web JSF2 (Java Server Faces) et les EJB3 (Enterprise Java Bean). Mis bout à bout, ces deux TD ont permis à de nombreux étudiants de décrocher des stages JEE en ESN (Entreprises de Services Numériques) et de s'y faire embaucher dans la foulée.</p>
+<p>On ne trouvera pas dans ce document, une présentation formelle de toutes les facettes de Java. Au fil des ans, le comportement des développeurs juniors face à un problème a beaucoup évolué. Désormais, ils utilisent quasi systématiquement Internet pour trouver des bouts de code qui mis bout à bout font un programme. Si on leur fournit un cours, ils l'utilisent assez peu et préfèrent de nouveau aller sur Internet. Dubitatif au départ sur cette façon de travailler, j'ai quand même été étonné des résultats obtenus. Ainsi des étudiants faibles réussissaient à produire des programmes qui marchaient alors que sans l'aide d'Internet ils n'y seraient probablement pas arrivés.  Je m'appuie désormais sur cette façon de travailler.</p>
+<p>Des bouts de code ne donnent pas une vue d'ensemble de l'architecture d'une solution et c'est l'un des objectifs de ce document que de donner celle-ci. Les étudiants font ce TD comme un TP, en autonomie. Il n'y a pas de cours magistral. Il y a un planning qui leur donne l'état d'avancement attendu d'eux au fil des séances. Ils peuvent être en retard ou en avance sur ce planning. Leur avancement est vérifié par un certain nombre de validations qu'ils doivent présenter à l'enseignant. Celui-ci est présent à la fois pour leur fournir des explications lorsqu'ils en demandent et valider leur travail. Chacun va à son rythme. A la fin des 36 h alloués à ce TD, certains auront fait 50% de validations en plus que d'autres mais chacun, c'est en tout cas l'objectif, aura compris ce qu'il a fait en autonomie. Ce TD peut être fait sans l'accompagnement d'un enseignant. C'est pourquoi, il est disponible sur [<a href="https://tahe.developpez.com/"><u>https://tahe.developpez.com</u></a>].</p>
+<p>Ce document ne conviendra pas à ceux qui chercheraient un cours académique sur Java, quelque chose où on explique Java de façon progressive et structurée et où chaque détail de syntaxe est expliqué et justifié. C'est plutôt une démarche expérimentale qui est proposée ici. Il est probable que l'étudiant ne comprendra pas tout ce qui lui est proposé dans le document mais il saura probablement réutiliser son contenu à bon escient et la compréhension des détails viendra avec l'expérience.</p>
+<p>Ce document n'est pas non plus un cours d'algorithmique. L'algorithme du TD est basique et peut être résolu par tout débutant suivant ses premiers cours d'algorithmique. Le document est centré sur l'environnement de développement professionnel en Java avec ses nombreuses bibliothèques ou frameworks et sur l'architecture du code. La plupart des étudiants que je vois passer présentent des faiblesses en algorithmique qui sont confirmées ensuite par les maîtres de stage. Donc oui, la maîtrise des algorithmes est importante mais ce n'est pas l'objet de ce cours-TD.</p>
 <p>Enfin, ce document (décembre 2015) ne présente pas les dernières nouveautés de Java, notamment les streams et les fonctions lambda. Néanmoins, on y utilise quelques éléments du dernier JDK, le JDK 1.8 et les codes qui suivent doivent être compilés par ce JDK.</p>
 <h2 id="12-contenu">1.2. Contenu</h2>
-<p>Le chapitre 2 présente le sujet du TD, un calcul de résultats d&#x27;élections. Le problème est basique. Le chapitre 2 demande d&#x27;implémenter la solution avec deux langages C# et Java qui sont très proches. L&#x27;implémentation se fait sans classes. L&#x27;objectif est la présentation de la syntaxe de Java, de ses instructions élémentaires, de l&#x27;IDE (Integrated Development Environment) Eclipse qui sert à construire les projets Java.</p>
-<p>Le chapitre 3 demande d&#x27;implémenter la solution du TD en Java avec des classes. L&#x27;objectif est de présenter les notions de classes, d&#x27;héritage, d&#x27;interfaces et de classes génériques. La notion de test unitaire JUnit est introduite.</p>
+<p>Le chapitre 2 présente le sujet du TD, un calcul de résultats d'élections. Le problème est basique. Le chapitre 2 demande d'implémenter la solution avec deux langages C# et Java qui sont très proches. L'implémentation se fait sans classes. L'objectif est la présentation de la syntaxe de Java, de ses instructions élémentaires, de l'IDE (Integrated Development Environment) Eclipse qui sert à construire les projets Java.</p>
+<p>Le chapitre 3 demande d'implémenter la solution du TD en Java avec des classes. L'objectif est de présenter les notions de classes, d'héritage, d'interfaces et de classes génériques. La notion de test unitaire JUnit est introduite.</p>
 <p>Le chapitre 4 introduit les concepts qui sous-tendent les chapitres suivants :</p>
 <ul>
 <li>les architectures en couches ;</li>
 <li>la programmation par interfaces ;</li>
-<li>l&#x27;utilisation de Spring pour implémenter les deux précédents concepts ;</li>
+<li>l'utilisation de Spring pour implémenter les deux précédents concepts ;</li>
 </ul>
 <p><img src="images/10000000000006F80000018144D83424.png" style="width:16.521cm;height:3.56cm;" alt="Image" /></p>
 <p>Le chapitre 5 présente le framework Spring avec quatre projets.</p>
-<p>Le chapitre 6 présente l&#x27;API JDBC qui est une interface d&#x27;accès aux bases de données.</p>
-<p>Le chapitre 7 implémente la couche [DAO] (Data Access Object) du TD avec l&#x27;API JDBC et Spring.</p>
+<p>Le chapitre 6 présente l'API JDBC qui est une interface d'accès aux bases de données.</p>
+<p>Le chapitre 7 implémente la couche [DAO] (Data Access Object) du TD avec l'API JDBC et Spring.</p>
 <p><img src="images/10000000000007820000018239BDF88F.png" style="width:17.799cm;height:3.57cm;" alt="Image" /></p>
 <p>Le chapitre 8 implémente la couche [métier] du TD :</p>
 <p><img src="images/10000000000007790000017F47C0F83A.png" style="width:16.45cm;height:3.29cm;" alt="Image" /></p>
@@ -1028,14 +1028,14 @@ Nous noterons ces références respectivement [<a href="https://tahe.developpez.
 <p>Le chapitre 10 implémente la couche [ui] du TD avec une application graphique utilisant la bibliothèque de composants Swing :</p>
 <p><img src="images/10000000000007770000017CF804CD5C.png" style="width:16.431cm;height:3.27cm;" alt="Image" /></p>
 <p><img src="images/10000000000001F6000001CE59DE5F8B.png" style="width:10.629cm;height:9.781cm;" alt="Image" /></p>
-<p>Le chapitre 11 présente la gestion des bases de données avec le framework [Spring Data], une branche de l&#x27;écosystème Spring. Elle introduit la spécification JPA (Java Persistence API) qui permet à la couche [DAO] de manipuler des objets au lieu de manipuler du SQL (Structured Query Language). L&#x27;architecture en couches évolue de la façon suivante :</p>
+<p>Le chapitre 11 présente la gestion des bases de données avec le framework [Spring Data], une branche de l'écosystème Spring. Elle introduit la spécification JPA (Java Persistence API) qui permet à la couche [DAO] de manipuler des objets au lieu de manipuler du SQL (Structured Query Language). L'architecture en couches évolue de la façon suivante :</p>
 <p><img src="images/10000000000006BE0000019069B4426F.png" style="width:13.7cm;height:3.18cm;" alt="Image" /></p>
-<p>Le chapitre 12 applique le chapitre 11 en implémentant l&#x27;accès à la base de données du TD avec [Spring Data].</p>
-<p>Le chapitre 13 montre comment exposer une base de données sur le web avec [Spring MVC] qui est une autre branche de l&#x27;écosystème Spring. L&#x27;architecture évolue en architecture client / serveur :</p>
+<p>Le chapitre 12 applique le chapitre 11 en implémentant l'accès à la base de données du TD avec [Spring Data].</p>
+<p>Le chapitre 13 montre comment exposer une base de données sur le web avec [Spring MVC] qui est une autre branche de l'écosystème Spring. L'architecture évolue en architecture client / serveur :</p>
 <p><img src="images/1000000000000705000004D0FC6F4ABB.png" style="width:14.259cm;height:9.781cm;" alt="Image" /></p>
-<p>Les chapitres 14 et 15 transforment l&#x27;application du TD en application client / serveur :</p>
+<p>Les chapitres 14 et 15 transforment l'application du TD en application client / serveur :</p>
 <p><img src="images/10000000000006EE000004982F0A4BCC.png" style="width:14.079cm;height:9.329cm;" alt="Image" /></p>
-<p>Le chapitre 16 montre comment sécuriser l&#x27;accès à une application web avec [Spring Security] une autre branche de l&#x27;écosystème Spring.</p>
+<p>Le chapitre 16 montre comment sécuriser l'accès à une application web avec [Spring Security] une autre branche de l'écosystème Spring.</p>
 <p><img src="images/100000000000072000000492568C2BA8.png" style="width:14.48cm;height:9.29cm;" alt="Image" /></p>
 <p>Le chapitre 17 reprend le TD et sécurise le service web des élections.</p>
 <p>Le chapitre 18 aborde le problème des requêtes inter-domaines :</p>
@@ -1046,24 +1046,24 @@ Nous noterons ces références respectivement [<a href="https://tahe.developpez.
 <li>en [2], le navigateur exécute le Javascript embarqué dans les pages HTML pour interroger le service web sécurisé [3-4] ;
 Soit D1=http://machine1:port1 le domaine du serveur [1] et D4=http://machine4:port4 le domaine du serveur [4]. Si les serveurs [1] et [4] ne sont pas dans le même domaine [D1!=D4], alors les requêtes de [3] vers [4] sont appelées des requêtes inter-domaines. A cause de restrictions de sécurité mises en oeuvre par les navigateurs, leur mise en place peut être problématique. Nous examinerons une solution.</li>
 </ul>
-<p>Le chapitre 19 met en oeuvre les requêtes inter-domaines avec l&#x27;application des élections.</p>
+<p>Le chapitre 19 met en oeuvre les requêtes inter-domaines avec l'application des élections.</p>
 <h2 id="13-les-outils-utilises">1.3. Les outils utilisés</h2>
-<p>Les exemples qui suivent ont été testés dans l&#x27;environnement suivant :</p>
+<p>Les exemples qui suivent ont été testés dans l'environnement suivant :</p>
 <ul>
 <li>machine Windows 10 pro 64 bits ;</li>
 <li>JDK 1.8 (page 409) ;</li>
 <li>IDE Spring Tool Suite 3.6.3 (page 410) ;</li>
 <li>Netbeans 8.1 (page 421) ;</li>
-<li>navigateur Chrome (les autres navigateurs n&#x27;ont pas été utilisés) ;</li>
+<li>navigateur Chrome (les autres navigateurs n'ont pas été utilisés) ;</li>
 <li>extension Chrome [Advanced Rest Client] (page 422) ;</li>
-<li>WampServer qui amène le SGBD MySQL et l&#x27;outil [PhpMyAdmin] pour le gérer (page 424) ;
-Il est important d&#x27;utiliser un JDK 1.8. Certains exemples utilisent des éléments de ce JDK. La plupart des exemples sont des projets Maven qui peuvent être ouverts indifféremment par les IDE Eclipse [<a href="https://www.eclipse.org/"><u>https://www.eclipse.org/</u></a>], IntellijIDEA Community Edition [<a href="https://www.jetbrains.com/idea/download/"><u>https://www.jetbrains.com/idea/download/</u></a>] et Netbeans [<a href="https://netbeans.org/"><u>https://netbeans.org/</u></a>]. Dans la suite, les copies d&#x27;écran proviennent de l&#x27;IDE Spring Tool Suite, une variante d&#x27;Eclipse.</li>
+<li>WampServer qui amène le SGBD MySQL et l'outil [PhpMyAdmin] pour le gérer (page 424) ;
+Il est important d'utiliser un JDK 1.8. Certains exemples utilisent des éléments de ce JDK. La plupart des exemples sont des projets Maven qui peuvent être ouverts indifféremment par les IDE Eclipse [<a href="https://www.eclipse.org/"><u>https://www.eclipse.org/</u></a>], IntellijIDEA Community Edition [<a href="https://www.jetbrains.com/idea/download/"><u>https://www.jetbrains.com/idea/download/</u></a>] et Netbeans [<a href="https://netbeans.org/"><u>https://netbeans.org/</u></a>]. Dans la suite, les copies d'écran proviennent de l'IDE Spring Tool Suite, une variante d'Eclipse.</li>
 </ul>
 <h2 id="14-le-support">1.4. Le support</h2>
 <p>Les projets Eclipse de ce document sont disponibles sur le site [<a href="https://tahe.developpez.com/tutoriels-cours/intro-java-spring/serge-tahe-introduction-au-langage-java-et-a-l-ecosysteme-spring/"><u>https://tahe.developpez.com/tutoriels-cours/intro-java-spring/serge-tahe-introduction-au-langage-java-et-a-l-ecosysteme-spring/</u></a>].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AC000002E5B53D0CE8.png" style="display:inline-block; margin:4px;width:17.999cm;height:9.185cm;" /></td></tr></table>
 
-<p>Pour importer les projets d&#x27;un chapitre, procédez avec Eclipse comme indiqué en [1-8] :</p>
+<p>Pour importer les projets d'un chapitre, procédez avec Eclipse comme indiqué en [1-8] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059A00000385CFEED76A.png" style="display:inline-block; margin:4px;width:17.999cm;height:11.308cm;" /></td></tr></table>
 
 <p>La plupart des projets sont des projets Maven. Si après chargement, ceux-ci présentent des erreurs, faites [Alt-F5] et suivez la procédure [9-10]. Les projets Maven sélectionnés vont être reconstruits.</p>

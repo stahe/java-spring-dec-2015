@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/java-spring-dec-2015/td-la-couche-metier.html">
       
       
-        <link rel="prev" href="td-implementation-de-la-couche-dao-du-td-avec-lx27api-jdbc.html">
+        <link rel="prev" href="td-implementation-de-la-couche-dao-du-td-avec-lapi-jdbc.html">
       
       
         <link rel="next" href="td-implementation-de-la-couche-ui-avec-un-programme-console.html">
@@ -428,14 +428,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-introduction-a-lx27api-jdbc.html" class="md-nav__link">
+      <a href="cours-introduction-a-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. [Cours] : Introduction à l&#x27;API JDBC
+    6. [Cours] : Introduction à l'API JDBC
   
 
     
@@ -455,14 +455,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-implementation-de-la-couche-dao-du-td-avec-lx27api-jdbc.html" class="md-nav__link">
+      <a href="td-implementation-de-la-couche-dao-du-td-avec-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [TD] : Implémentation de la couche [DAO] du TD avec l&#x27;API JDBC
+    7. [TD] : Implémentation de la couche [DAO] du TD avec l'API JDBC
   
 
     
@@ -578,7 +578,7 @@
   <a href="#84-linterface-ielectionsmetier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.4. L&#x27;interface [IElectionsMetier]
+        8.4. L'interface [IElectionsMetier]
       
     </span>
   </a>
@@ -589,7 +589,7 @@
   <a href="#85-la-classe-dimplementation-electionsmetier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.5. La classe d&#x27;implémentation [ElectionsMetier]
+        8.5. La classe d'implémentation [ElectionsMetier]
       
     </span>
   </a>
@@ -611,7 +611,7 @@
   <a href="#87-creation-de-larchive-de-la-couche-metier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.7. Création de l&#x27;archive de la couche [metier]
+        8.7. Création de l'archive de la couche [metier]
       
     </span>
   </a>
@@ -806,14 +806,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-creation-dx27un-client-pour-le-service-web.html" class="md-nav__link">
+      <a href="td-creation-dun-client-pour-le-service-web.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. [TD] : création d&#x27;un client pour le service web
+    15. [TD] : création d'un client pour le service web
   
 
     
@@ -833,14 +833,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-securiser-lx27acces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
+      <a href="cours-securiser-lacces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. [Cours] : Sécuriser l&#x27;accès à un service web avec Spring Security
+    16. [Cours] : Sécuriser l'accès à un service web avec Spring Security
   
 
     
@@ -1046,7 +1046,7 @@
 <h2 id="82-configuration-maven">8.2. Configuration Maven</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F600000059101BD928.png" style="display:inline-block; margin:4px;width:4.54cm;height:1.649cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>Le projet [elections-metier-dao-jdbc] va s&#x27;appuyer sur le projet [elections-dao-jdbc-01]. Nous allons installer le jar de ce dernier projet dans le dépôt Maven local :</p>
+<p>Le projet [elections-metier-dao-jdbc] va s'appuyer sur le projet [elections-dao-jdbc-01]. Nous allons installer le jar de ce dernier projet dans le dépôt Maven local :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002AA00000270501FA472.png" style="display:inline-block; margin:4px;width:12.629cm;height:11.561cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Ceci fait, la configuration Maven du projet Eclipse [elections-metier-dao-jdbc] est la suivante :</p>
@@ -1115,89 +1115,89 @@
 <span class="normal"><a href="#__codelineno-0-61">61</a></span>
 <span class="normal"><a href="#__codelineno-0-62">62</a></span>
 <span class="normal"><a href="#__codelineno-0-63">63</a></span>
-<span class="normal"><a href="#__codelineno-0-64">64</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="o">&lt;</span><span class="n">project</span><span class="w"> </span><span class="n">xmlns</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="n">xmlns</span><span class="p">:</span><span class="n">xsi</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">xsi</span><span class="p">:</span><span class="n">schemaLocation</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">modelVersion</span><span class="o">&gt;</span><span class="mf">4.0.0</span><span class="o">&lt;/</span><span class="n">modelVersion</span><span class="o">&gt;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">metier</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">jdbc</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
+<span class="normal"><a href="#__codelineno-0-64">64</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>elections-metier-dao-jdbc<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">parent</span><span class="o">&gt;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">parent</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">1.2.7</span><span class="p">.</span><span class="na">RELEASE</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">parent</span><span class="o">&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;parent&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>1.2.7.RELEASE<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="nt">&lt;/parent&gt;</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">properties</span><span class="o">&gt;</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span><span class="n">UTF</span><span class="o">-</span><span class="mi">8</span><span class="o">&lt;/</span><span class="n">project</span><span class="p">.</span><span class="na">build</span><span class="p">.</span><span class="na">sourceEncoding</span><span class="o">&gt;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span><span class="mf">1.8</span><span class="o">&lt;/</span><span class="n">java</span><span class="p">.</span><span class="na">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">properties</span><span class="o">&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="nt">&lt;properties&gt;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="nt">&lt;java.version&gt;</span>1.8<span class="nt">&lt;/java.version&gt;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">dependencies</span><span class="o">&gt;</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">DAO</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">jdbc</span><span class="o">-</span><span class="mo">01</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">        </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">Spring</span><span class="w"> </span><span class="n">Boot</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">scope</span><span class="o">&gt;</span><span class="n">test</span><span class="o">&lt;/</span><span class="n">scope</span><span class="o">&gt;</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">        </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">Spring</span><span class="w"> </span><span class="n">Boot</span><span class="w"> </span><span class="n">Test</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">spring</span><span class="o">-</span><span class="n">boot</span><span class="o">-</span><span class="n">starter</span><span class="o">-</span><span class="n">test</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">scope</span><span class="o">&gt;</span><span class="n">test</span><span class="o">&lt;/</span><span class="n">scope</span><span class="o">&gt;</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">dependencies</span><span class="o">&gt;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="cm">&lt;!-- DAO --&gt;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>elections-dao-jdbc-01<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">            </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">        </span><span class="cm">&lt;!-- Spring Boot --&gt;</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">            </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">        </span><span class="cm">&lt;!-- Spring Boot Test --&gt;</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">            </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
 <a id="__codelineno-0-39" name="__codelineno-0-39"></a>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">    </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">plugins</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">build</span><span class="o">&gt;</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">        </span><span class="o">&lt;</span><span class="n">plugins</span><span class="o">&gt;</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">plugin</span><span class="o">&gt;</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">maven</span><span class="o">-</span><span class="n">assembly</span><span class="o">-</span><span class="n">plugin</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">configuration</span><span class="o">&gt;</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">                    </span><span class="o">&lt;</span><span class="n">archive</span><span class="o">&gt;</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">                        </span><span class="o">&lt;</span><span class="n">manifest</span><span class="o">&gt;</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">                            </span><span class="o">&lt;</span><span class="n">mainClass</span><span class="o">&gt;</span><span class="n">config</span><span class="p">.</span><span class="na">AppConfig</span><span class="o">&lt;/</span><span class="n">mainClass</span><span class="o">&gt;</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">                        </span><span class="o">&lt;/</span><span class="n">manifest</span><span class="o">&gt;</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">                    </span><span class="o">&lt;/</span><span class="n">archive</span><span class="o">&gt;</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">                    </span><span class="o">&lt;</span><span class="n">descriptorRefs</span><span class="o">&gt;</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">                        </span><span class="o">&lt;</span><span class="n">descriptorRef</span><span class="o">&gt;</span><span class="n">jar</span><span class="o">-</span><span class="n">with</span><span class="o">-</span><span class="n">dependencies</span><span class="o">&lt;/</span><span class="n">descriptorRef</span><span class="o">&gt;</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">                    </span><span class="o">&lt;/</span><span class="n">descriptorRefs</span><span class="o">&gt;</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">                </span><span class="o">&lt;/</span><span class="n">configuration</span><span class="o">&gt;</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">            </span><span class="o">&lt;/</span><span class="n">plugin</span><span class="o">&gt;</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">            </span><span class="o">&lt;!--</span><span class="w"> </span><span class="n">pour</span><span class="w"> </span><span class="n">l</span><span class="err">&#39;</span><span class="n">installation</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">l</span><span class="err">&#39;</span><span class="n">artifact</span><span class="w"> </span><span class="n">du</span><span class="w"> </span><span class="n">projet</span><span class="w"> </span><span class="n">dans</span><span class="w"> </span><span class="n">le</span><span class="w"> </span><span class="n">dépôt</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">Maven</span><span class="w"> </span><span class="o">--&gt;</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">            </span><span class="o">&lt;</span><span class="n">plugin</span><span class="o">&gt;</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">org</span><span class="p">.</span><span class="na">apache</span><span class="p">.</span><span class="na">maven</span><span class="p">.</span><span class="na">plugins</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">maven</span><span class="o">-</span><span class="n">surefire</span><span class="o">-</span><span class="n">plugin</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">                </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">2.18.1</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="w">            </span><span class="o">&lt;/</span><span class="n">plugin</span><span class="o">&gt;</span>
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w">        </span><span class="o">&lt;/</span><span class="n">plugins</span><span class="o">&gt;</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">    </span><span class="o">&lt;/</span><span class="n">build</span><span class="o">&gt;</span>
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="o">&lt;/</span><span class="n">project</span><span class="o">&gt;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">    </span><span class="cm">&lt;!-- plugins --&gt;</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-assembly-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">                </span><span class="nt">&lt;configuration&gt;</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">                    </span><span class="nt">&lt;archive&gt;</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">                        </span><span class="nt">&lt;manifest&gt;</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">                            </span><span class="nt">&lt;mainClass&gt;</span>config.AppConfig<span class="nt">&lt;/mainClass&gt;</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">                        </span><span class="nt">&lt;/manifest&gt;</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">                    </span><span class="nt">&lt;/archive&gt;</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">                    </span><span class="nt">&lt;descriptorRefs&gt;</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">                        </span><span class="nt">&lt;descriptorRef&gt;</span>jar-with-dependencies<span class="nt">&lt;/descriptorRef&gt;</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">                    </span><span class="nt">&lt;/descriptorRefs&gt;</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">                </span><span class="nt">&lt;/configuration&gt;</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">            </span><span class="cm">&lt;!-- pour l&#39;installation de l&#39;artifact du projet dans le dépôt local Maven --&gt;</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">                </span><span class="nt">&lt;version&gt;</span>2.18.1<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">    </span><span class="nt">&lt;/build&gt;</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="nt">&lt;/project&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>
-<p>lignes 21-25 : la dépendance sur le jar du projet [elections-jdbc-01]. On prend ces lignes directement dans le fichier [pom.xml] du projet que l&#x27;on veut importer :
+<p>lignes 21-25 : la dépendance sur le jar du projet [elections-jdbc-01]. On prend ces lignes directement dans le fichier [pom.xml] du projet que l'on veut importer :
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="o">&lt;</span><span class="n">project</span><span class="w"> </span><span class="n">xmlns</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="n">xmlns</span><span class="p">:</span><span class="n">xsi</span><span class="o">=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span class="w"> </span><span class="n">xsi</span><span class="p">:</span><span class="n">schemaLocation</span><span class="o">=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">modelVersion</span><span class="o">&gt;</span><span class="mf">4.0.0</span><span class="o">&lt;/</span><span class="n">modelVersion</span><span class="o">&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">groupId</span><span class="o">&gt;</span><span class="n">istia</span><span class="p">.</span><span class="na">st</span><span class="p">.</span><span class="na">elections</span><span class="o">&lt;/</span><span class="n">groupId</span><span class="o">&gt;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">artifactId</span><span class="o">&gt;</span><span class="n">elections</span><span class="o">-</span><span class="n">dao</span><span class="o">-</span><span class="n">jdbc</span><span class="o">-</span><span class="mo">01</span><span class="o">&lt;/</span><span class="n">artifactId</span><span class="o">&gt;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="o">&lt;</span><span class="n">version</span><span class="o">&gt;</span><span class="mf">0.0.1</span><span class="o">-</span><span class="n">SNAPSHOT</span><span class="o">&lt;/</span><span class="n">version</span><span class="o">&gt;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="p">...</span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span class="w"> </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>elections-dao-jdbc-01<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>...
 </code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p>lignes 26-37 : les dépendances nécessaires aux tests. Bien qu&#x27;elles soient présentes dans le fichier [pom.xml] du projet [elections-jdbc-01], nous sommes obligés de les remettre car leur attribut [&lt;scope&gt;test&lt;/scope&gt;] fait qu&#x27;elles n&#x27;ont pas été incluses dans le jar mis dans le dépôt Maven local ;</p>
+<p>lignes 26-37 : les dépendances nécessaires aux tests. Bien qu'elles soient présentes dans le fichier [pom.xml] du projet [elections-jdbc-01], nous sommes obligés de les remettre car leur attribut [&lt;scope&gt;test&lt;/scope&gt;] fait qu'elles n'ont pas été incluses dans le jar mis dans le dépôt Maven local ;</p>
 </li>
 </ul>
 <h2 id="83-configuration-spring">8.3. Configuration Spring</h2>
@@ -1230,10 +1230,10 @@
 <li>ligne 8 : on active le cache. On ne redéfinit pas le bean [CacheManager], car il est déjà défini dans la couche [DAO] ;</li>
 <li>ligne 9 : la couche [métier] définit de nouveaux beans dans le package [elections.metier.service] ;</li>
 </ul>
-<h2 id="84-linterface-ielectionsmetier">8.4. L&#x27;interface [IElectionsMetier]</h2>
+<h2 id="84-linterface-ielectionsmetier">8.4. L'interface [IElectionsMetier]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000108000000948DAB315D.png" style="display:inline-block; margin:4px;width:4.89cm;height:2.739cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>La couche [metier] aura l&#x27;interface présentée page 37. Nous la rappelons :</p>
+<p>La couche [metier] aura l'interface présentée page 37. Nous la rappelons :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1260,10 +1260,10 @@
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a>
 <a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h2 id="85-la-classe-dimplementation-electionsmetier">8.5. La classe d&#x27;implémentation [ElectionsMetier]</h2>
+<h2 id="85-la-classe-dimplementation-electionsmetier">8.5. La classe d'implémentation [ElectionsMetier]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000108000000944F7FEEAF.png" style="display:inline-block; margin:4px;width:4.89cm;height:2.739cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>Cette classe implémente l&#x27;interface [IElectionsMetier]. L&#x27;implémentation proposée aura la structure suivante :</p>
+<p>Cette classe implémente l'interface [IElectionsMetier]. L'implémentation proposée aura la structure suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
@@ -1362,10 +1362,10 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 10 : la classe [ElectionsMetier] est un composant Spring ;</li>
-<li>ligne 11 : la classe [ElectionsMetier] implémente l&#x27;interface [IElectionsMetier] ;</li>
-<li>lignes 15-16 : injection Spring d&#x27;une référence sur la couche [DAO] ;</li>
+<li>ligne 11 : la classe [ElectionsMetier] implémente l'interface [IElectionsMetier] ;</li>
+<li>lignes 15-16 : injection Spring d'une référence sur la couche [DAO] ;</li>
 <li>lignes 37 et 44 : le nombre de sièges à pourvoir et le seuil électoral sont mis en cache ;
-<strong>Travail à faire</strong> : écrivez la classe [ElectionsMetier]. On s&#x27;aidera des commentaires lorsqu&#x27;il y en a. On n&#x27;essaiera pas d&#x27;arrêter (try / catch) les exceptions de type [ElectionsException] qui remontent de la couche [DAO]. On les laissera remonter à la couche [UI]. Parce que la classe [ElectionsException] est un type d&#x27;exception non contrôlée, il n&#x27;y a pas obligation à la gérer par un (try / catch).</li>
+<strong>Travail à faire</strong> : écrivez la classe [ElectionsMetier]. On s'aidera des commentaires lorsqu'il y en a. On n'essaiera pas d'arrêter (try / catch) les exceptions de type [ElectionsException] qui remontent de la couche [DAO]. On les laissera remonter à la couche [UI]. Parce que la classe [ElectionsException] est un type d'exception non contrôlée, il n'y a pas obligation à la gérer par un (try / catch).</li>
 </ul>
 <h2 id="86-la-classe-de-test">8.6. La classe de test</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FF000000A8D4BBE973.png" style="display:inline-block; margin:4px;width:4.72cm;height:3.11cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1551,19 +1551,19 @@
 <a id="__codelineno-5-89" name="__codelineno-5-89"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-5-90" name="__codelineno-5-90"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Travail à faire</strong> : écrivez les quatre méthodes de tests en vous aidant des commentaires. On se rappellera que lorsque ces méthodes s&#x27;exécutent, le champ [electionsMetier] de la ligne 19 a déjà été initialisé. Vérifiez que le test JUnit passe.</p>
-<h2 id="87-creation-de-larchive-de-la-couche-metier">8.7. Création de l&#x27;archive de la couche [metier]</h2>
-<p>Comme il a été fait pour la couche [DAO], nous mettons l&#x27;archive du projet [elections-metier-dao-jdbc] dans le dépôt Maven local :</p>
+<p><strong>Travail à faire</strong> : écrivez les quatre méthodes de tests en vous aidant des commentaires. On se rappellera que lorsque ces méthodes s'exécutent, le champ [electionsMetier] de la ligne 19 a déjà été initialisé. Vérifiez que le test JUnit passe.</p>
+<h2 id="87-creation-de-larchive-de-la-couche-metier">8.7. Création de l'archive de la couche [metier]</h2>
+<p>Comme il a été fait pour la couche [DAO], nous mettons l'archive du projet [elections-metier-dao-jdbc] dans le dépôt Maven local :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000259000002ABBFF8A05F.png" style="display:inline-block; margin:4px;width:11.13cm;height:12.651cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p><strong>Note</strong> : cette opération peut échouer si votre projet Eclipse est associé à un JRE (Java Runtime Environment) au lieu d&#x27;un JDK (Java Development Kit). Pour le savoir, procédez comme indiqué au paragraphe 3.1, page 16. Si vous découvrez que vous avez un JRE et non un JDK, associez votre projet à un JDK comme indiqué dans ce paragraphe.</p>
+<p><strong>Note</strong> : cette opération peut échouer si votre projet Eclipse est associé à un JRE (Java Runtime Environment) au lieu d'un JDK (Java Development Kit). Pour le savoir, procédez comme indiqué au paragraphe 3.1, page 16. Si vous découvrez que vous avez un JRE et non un JDK, associez votre projet à un JDK comme indiqué dans ce paragraphe.</p>
 <h2 id="88-conclusion">8.8. Conclusion</h2>
-<p>Rappelons l&#x27;architecture générale de l&#x27;application [Elections] que nous sommes en train de construire :</p>
+<p>Rappelons l'architecture générale de l'application [Elections] que nous sommes en train de construire :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004A6000001087FF7F221.png" style="display:inline-block; margin:4px;width:15.743cm;height:3.493cm;" /></td></tr></table>
 
 <p>Nous avons construit les couches [metier] et [dao]. Nous allons maintenant construire la couche [ui]. Nous proposerons deux implémentations pour cette couche :</p>
 <ul>
-<li>une implémentation &quot; console &quot;</li>
+<li>une implémentation " console "</li>
 <li>une implémentation avec interface graphique</li>
 </ul>
 
