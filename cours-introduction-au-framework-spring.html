@@ -1412,58 +1412,58 @@
 <span class="normal"><a href="#__codelineno-0-49">49</a></span>
 <span class="normal"><a href="#__codelineno-0-50">50</a></span>
 <span class="normal"><a href="#__codelineno-0-51">51</a></span>
-<span class="normal"><a href="#__codelineno-0-52">52</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">istia.st.spring.core</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>package istia.st.spring.core;
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Personne</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>public class Personne {
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="c1">// champs</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">prenom</span><span class="p">;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    // champs
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    private String nom;
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    private String prenom;
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    private int age;
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="c1">// constructeurs</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Personne</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>    // constructeurs
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>    public Personne() {
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>    }
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Personne</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">prénom</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">âge</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prénom</span><span class="p">;</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">âge</span><span class="p">;</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    public Personne(String nom, String prénom, int âge) {
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>        this.nom = nom;
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>        this.prenom = prénom;
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>        this.age = âge;
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>    }
 <a id="__codelineno-0-20" name="__codelineno-0-20"></a>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="c1">// toString</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Personne[%s, %s,%d]&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">prenom</span><span class="p">,</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>    // toString
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>    public String toString() {
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>        return String.format(&quot;Personne[%s, %s,%d]&quot;, prenom, nom, age);
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>    }
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="c1">// getters et setters</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>    // getters et setters
 <a id="__codelineno-0-27" name="__codelineno-0-27"></a>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNom</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>    public String getNom() {
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>        return nom;
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>    }
 <a id="__codelineno-0-31" name="__codelineno-0-31"></a>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNom</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a>    public void setNom(String nom) {
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a>        this.nom = nom;
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a>    }
 <a id="__codelineno-0-35" name="__codelineno-0-35"></a>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getPrenom</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">prenom</span><span class="p">;</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a>    public String getPrenom() {
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a>        return prenom;
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a>    }
 <a id="__codelineno-0-39" name="__codelineno-0-39"></a>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPrenom</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">prenom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">prenom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">prenom</span><span class="p">;</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a>    public void setPrenom(String prenom) {
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a>        this.prenom = prenom;
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>    }
 <a id="__codelineno-0-43" name="__codelineno-0-43"></a>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getAge</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>    public int getAge() {
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a>        return age;
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>    }
 <a id="__codelineno-0-47" name="__codelineno-0-47"></a>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setAge</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>    public void setAge(int age) {
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a>        this.age = age;
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a>    }
 <a id="__codelineno-0-51" name="__codelineno-0-51"></a>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="p">}</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a>}
 </code></pre></div></td></tr></table></div>
 <p><strong>Note</strong> : les getters et setters peuvent être générés automatiquement de la façon suivante [1-2] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053D0000037E5236C820.png" style="display:inline-block; margin:4px;width:10.64cm;height:7.1cm;" /></td></tr></table>
@@ -1502,38 +1502,38 @@
 <span class="normal"><a href="#__codelineno-1-29">29</a></span>
 <span class="normal"><a href="#__codelineno-1-30">30</a></span>
 <span class="normal"><a href="#__codelineno-1-31">31</a></span>
-<span class="normal"><a href="#__codelineno-1-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">istia.st.spring.core</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>package istia.st.spring.core;
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Appartement</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>public class Appartement {
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="c1">// champs</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Personne</span><span class="w"> </span><span class="n">proprietaire</span><span class="p">;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">surface</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    // champs
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>    private Personne proprietaire;
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>    private int surface;
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="c1">// getters et setters</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>    // getters et setters
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Personne</span><span class="w"> </span><span class="nf">getProprietaire</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">proprietaire</span><span class="p">;</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>    public Personne getProprietaire() {
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>        return proprietaire;
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>    }
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setProprietaire</span><span class="p">(</span><span class="n">Personne</span><span class="w"> </span><span class="n">proprietaire</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">proprietaire</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">proprietaire</span><span class="p">;</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>    public void setProprietaire(Personne proprietaire) {
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>        this.proprietaire = proprietaire;
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>    }
 <a id="__codelineno-1-18" name="__codelineno-1-18"></a>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getSurface</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">surface</span><span class="p">;</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>    public int getSurface() {
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>        return surface;
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>    }
 <a id="__codelineno-1-22" name="__codelineno-1-22"></a>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setSurface</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">surface</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">surface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">surface</span><span class="p">;</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>    public void setSurface(int surface) {
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>        this.surface = surface;
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>    }
 <a id="__codelineno-1-26" name="__codelineno-1-26"></a>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">    </span><span class="c1">// toString</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Appartement[%s, %s]&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">proprietaire</span><span class="p">,</span><span class="w"> </span><span class="n">surface</span><span class="p">);</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>    // toString
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a>    public String toString() {
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a>        return String.format(&quot;Appartement[%s, %s]&quot;, proprietaire, surface);
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a>    }
 <a id="__codelineno-1-31" name="__codelineno-1-31"></a>
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="p">}</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a>}
 </code></pre></div></td></tr></table></div>
 <p><strong>Note</strong> : cette classe n'a pas de constructeur explicite. Dans ce cas, existe toujours par défaut, le constructeur sans paramètres qui ne fait rien. Lorsqu'on crée des constructeurs, ce constructeur par défaut n'existe plus implicitement. Il faut alors le définir <strong>explicitement</strong> :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -1959,48 +1959,48 @@
 <span class="normal"><a href="#__codelineno-8-39">39</a></span>
 <span class="normal"><a href="#__codelineno-8-40">40</a></span>
 <span class="normal"><a href="#__codelineno-8-41">41</a></span>
-<span class="normal"><a href="#__codelineno-8-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>istia.st.spring.core<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-core-02<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>spring-core-02<span class="nt">&lt;/name&gt;</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="nt">&lt;description&gt;</span>Introduction<span class="w"> </span>à<span class="w"> </span>Spring<span class="nt">&lt;/description&gt;</span>
+<span class="normal"><a href="#__codelineno-8-42">42</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>    &lt;groupId&gt;istia.st.spring.core&lt;/groupId&gt;
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>    &lt;artifactId&gt;spring-core-02&lt;/artifactId&gt;
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    &lt;name&gt;spring-core-02&lt;/name&gt;
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>    &lt;description&gt;Introduction à Spring&lt;/description&gt;
 <a id="__codelineno-8-9" name="__codelineno-8-9"></a>
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="nt">&lt;properties&gt;</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="nt">&lt;java.version&gt;</span>1.7<span class="nt">&lt;/java.version&gt;</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>    &lt;properties&gt;
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>        &lt;java.version&gt;1.7&lt;/java.version&gt;
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a>    &lt;/properties&gt;
 <a id="__codelineno-8-14" name="__codelineno-8-14"></a>
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">        </span><span class="cm">&lt;!-- Spring --&gt;</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-context<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">            </span><span class="nt">&lt;version&gt;</span>4.1.3.RELEASE<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
-<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">    </span><span class="cm">&lt;!-- plugins --&gt;</span>
-<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
-<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
-<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-assembly-plugin<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">                </span><span class="nt">&lt;configuration&gt;</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">                    </span><span class="nt">&lt;descriptorRefs&gt;</span>
-<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">                        </span><span class="nt">&lt;descriptorRef&gt;</span>jar-with-dependencies<span class="nt">&lt;/descriptorRef&gt;</span>
-<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">                    </span><span class="nt">&lt;/descriptorRefs&gt;</span>
-<a id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="w">                </span><span class="nt">&lt;/configuration&gt;</span>
-<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
-<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
-<a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-8-36" name="__codelineno-8-36"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-8-37" name="__codelineno-8-37"></a><span class="w">                </span><span class="nt">&lt;version&gt;</span>2.18.1<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-8-38" name="__codelineno-8-38"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
-<a id="__codelineno-8-39" name="__codelineno-8-39"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
-<a id="__codelineno-8-40" name="__codelineno-8-40"></a><span class="w">    </span><span class="nt">&lt;/build&gt;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>    &lt;dependencies&gt;
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a>        &lt;!-- Spring --&gt;
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a>        &lt;dependency&gt;
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a>            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a>            &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a>            &lt;version&gt;4.1.3.RELEASE&lt;/version&gt;
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a>        &lt;/dependency&gt;
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a>    &lt;/dependencies&gt;
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a>    &lt;!-- plugins --&gt;
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a>    &lt;build&gt;
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a>        &lt;plugins&gt;
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a>            &lt;plugin&gt;
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a>                &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a>                &lt;configuration&gt;
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a>                    &lt;descriptorRefs&gt;
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a>                        &lt;descriptorRef&gt;jar-with-dependencies&lt;/descriptorRef&gt;
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a>                    &lt;/descriptorRefs&gt;
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a>                &lt;/configuration&gt;
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a>            &lt;/plugin&gt;
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a>            &lt;plugin&gt;
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a>                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a>                &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a>                &lt;version&gt;2.18.1&lt;/version&gt;
+<a id="__codelineno-8-38" name="__codelineno-8-38"></a>            &lt;/plugin&gt;
+<a id="__codelineno-8-39" name="__codelineno-8-39"></a>        &lt;/plugins&gt;
+<a id="__codelineno-8-40" name="__codelineno-8-40"></a>    &lt;/build&gt;
 <a id="__codelineno-8-41" name="__codelineno-8-41"></a>
-<a id="__codelineno-8-42" name="__codelineno-8-42"></a><span class="nt">&lt;/project&gt;</span>
+<a id="__codelineno-8-42" name="__codelineno-8-42"></a>&lt;/project&gt;
 </code></pre></div></td></tr></table></div>
 <p>La gestion à la main des dépendances d'un projet devient un casse-tête lorsqu'on utilise des bibliothèques Java dont on ne connaît pas les dépendances. Ainsi le framework [Hibernate] qui gère l'accès aux bases de données a des dizaines de dépendances. Le projet [Maven] résoud ce problème. On nomme la dépendance dont on a besoin. Celle-ci est cherchée automatiquement dans des dépôts Maven répartis sur le net. Si la dépendance demandée a elle-même des dépendances, alors celles-ci sont automatiquement téléchargées également. Ces dépendances téléchargées sont stockées dans un dépôt local au poste. Si une autre application a besoin plus tard de la même dépendance, celle-ci ne sera pas téléchargée mais cherchée dans le dépôt local. Une dépendance est caractérisée par les éléments suivants :</p>
 <ul>
@@ -2039,15 +2039,15 @@
 <span class="normal"><a href="#__codelineno-10-6">6</a></span>
 <span class="normal"><a href="#__codelineno-10-7">7</a></span>
 <span class="normal"><a href="#__codelineno-10-8">8</a></span>
-<span class="normal"><a href="#__codelineno-10-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">                </span><span class="nt">&lt;version&gt;</span>2.18.1<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="nt">&lt;/build&gt;</span>
+<span class="normal"><a href="#__codelineno-10-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>    &lt;build&gt;
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>        &lt;plugins&gt;
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>            &lt;plugin&gt;
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a>                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a>                &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a>                &lt;version&gt;2.18.1&lt;/version&gt;
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>            &lt;/plugin&gt;
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a>        &lt;/plugins&gt;
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a>&lt;/build&gt;
 </code></pre></div></td></tr></table></div>
 <p>Elles définissent le plugin de Maven capable de générer l'artifact du projet. On procéde ensuite de la façon suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000459000004E5D819CBF0.png" style="display:inline-block; margin:4px;width:14.725cm;height:16.577cm;" /></td></tr></table>
@@ -2146,63 +2146,63 @@
 <span class="normal"><a href="#__codelineno-11-54">54</a></span>
 <span class="normal"><a href="#__codelineno-11-55">55</a></span>
 <span class="normal"><a href="#__codelineno-11-56">56</a></span>
-<span class="normal"><a href="#__codelineno-11-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>istia.st.spring.core<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spring-core-03<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">    </span><span class="nt">&lt;name&gt;</span>spring-core-03<span class="nt">&lt;/name&gt;</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">    </span><span class="nt">&lt;description&gt;</span>Introduction<span class="w"> </span>à<span class="w"> </span>Spring<span class="nt">&lt;/description&gt;</span>
+<span class="normal"><a href="#__codelineno-11-57">57</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>    &lt;groupId&gt;istia.st.spring.core&lt;/groupId&gt;
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>    &lt;artifactId&gt;spring-core-03&lt;/artifactId&gt;
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>    &lt;name&gt;spring-core-03&lt;/name&gt;
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>    &lt;description&gt;Introduction à Spring&lt;/description&gt;
 <a id="__codelineno-11-9" name="__codelineno-11-9"></a>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">    </span><span class="nt">&lt;properties&gt;</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">        </span><span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">        </span><span class="nt">&lt;java.version&gt;</span>1.8<span class="nt">&lt;/java.version&gt;</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>    &lt;properties&gt;
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>        &lt;java.version&gt;1.8&lt;/java.version&gt;
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>    &lt;/properties&gt;
 <a id="__codelineno-11-14" name="__codelineno-11-14"></a>
-<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">    </span><span class="cm">&lt;!-- projet Maven parent --&gt;</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="w">    </span><span class="nt">&lt;parent&gt;</span>
-<a id="__codelineno-11-17" name="__codelineno-11-17"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-11-18" name="__codelineno-11-18"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>1.2.3.RELEASE<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-11-20" name="__codelineno-11-20"></a><span class="w">    </span><span class="nt">&lt;/parent&gt;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a>    &lt;!-- projet Maven parent --&gt;
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a>    &lt;parent&gt;
+<a id="__codelineno-11-17" name="__codelineno-11-17"></a>        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+<a id="__codelineno-11-18" name="__codelineno-11-18"></a>        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+<a id="__codelineno-11-19" name="__codelineno-11-19"></a>        &lt;version&gt;1.2.3.RELEASE&lt;/version&gt;
+<a id="__codelineno-11-20" name="__codelineno-11-20"></a>    &lt;/parent&gt;
 <a id="__codelineno-11-21" name="__codelineno-11-21"></a>
-<a id="__codelineno-11-22" name="__codelineno-11-22"></a><span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
-<a id="__codelineno-11-23" name="__codelineno-11-23"></a><span class="w">        </span><span class="cm">&lt;!-- Spring Context --&gt;</span>
-<a id="__codelineno-11-24" name="__codelineno-11-24"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-11-25" name="__codelineno-11-25"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-11-26" name="__codelineno-11-26"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-context<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-11-27" name="__codelineno-11-27"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-11-28" name="__codelineno-11-28"></a><span class="w">        </span><span class="cm">&lt;!-- logs --&gt;</span>
-<a id="__codelineno-11-29" name="__codelineno-11-29"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-11-30" name="__codelineno-11-30"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-11-31" name="__codelineno-11-31"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-logging<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-11-32" name="__codelineno-11-32"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22"></a>    &lt;dependencies&gt;
+<a id="__codelineno-11-23" name="__codelineno-11-23"></a>        &lt;!-- Spring Context --&gt;
+<a id="__codelineno-11-24" name="__codelineno-11-24"></a>        &lt;dependency&gt;
+<a id="__codelineno-11-25" name="__codelineno-11-25"></a>            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+<a id="__codelineno-11-26" name="__codelineno-11-26"></a>            &lt;artifactId&gt;spring-context&lt;/artifactId&gt;
+<a id="__codelineno-11-27" name="__codelineno-11-27"></a>        &lt;/dependency&gt;
+<a id="__codelineno-11-28" name="__codelineno-11-28"></a>        &lt;!-- logs --&gt;
+<a id="__codelineno-11-29" name="__codelineno-11-29"></a>        &lt;dependency&gt;
+<a id="__codelineno-11-30" name="__codelineno-11-30"></a>            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+<a id="__codelineno-11-31" name="__codelineno-11-31"></a>            &lt;artifactId&gt;spring-boot-starter-logging&lt;/artifactId&gt;
+<a id="__codelineno-11-32" name="__codelineno-11-32"></a>        &lt;/dependency&gt;
 <a id="__codelineno-11-33" name="__codelineno-11-33"></a>
-<a id="__codelineno-11-34" name="__codelineno-11-34"></a><span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
+<a id="__codelineno-11-34" name="__codelineno-11-34"></a>    &lt;/dependencies&gt;
 <a id="__codelineno-11-35" name="__codelineno-11-35"></a>
-<a id="__codelineno-11-36" name="__codelineno-11-36"></a><span class="w">    </span><span class="cm">&lt;!-- plugins --&gt;</span>
-<a id="__codelineno-11-37" name="__codelineno-11-37"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
-<a id="__codelineno-11-38" name="__codelineno-11-38"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
-<a id="__codelineno-11-39" name="__codelineno-11-39"></a><span class="w">            </span><span class="cm">&lt;!-- pour la génération de l&#39;archive du projet avec ses dépendances --&gt;</span>
-<a id="__codelineno-11-40" name="__codelineno-11-40"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
-<a id="__codelineno-11-41" name="__codelineno-11-41"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-assembly-plugin<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-11-42" name="__codelineno-11-42"></a><span class="w">                </span><span class="nt">&lt;configuration&gt;</span>
-<a id="__codelineno-11-43" name="__codelineno-11-43"></a><span class="w">                    </span><span class="nt">&lt;descriptorRefs&gt;</span>
-<a id="__codelineno-11-44" name="__codelineno-11-44"></a><span class="w">                        </span><span class="nt">&lt;descriptorRef&gt;</span>jar-with-dependencies<span class="nt">&lt;/descriptorRef&gt;</span>
-<a id="__codelineno-11-45" name="__codelineno-11-45"></a><span class="w">                    </span><span class="nt">&lt;/descriptorRefs&gt;</span>
-<a id="__codelineno-11-46" name="__codelineno-11-46"></a><span class="w">                </span><span class="nt">&lt;/configuration&gt;</span>
-<a id="__codelineno-11-47" name="__codelineno-11-47"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
-<a id="__codelineno-11-48" name="__codelineno-11-48"></a><span class="w">            </span><span class="cm">&lt;!-- pour l&#39;installation de l&#39;artifact du projet dans le dépôt local Maven --&gt;</span>
-<a id="__codelineno-11-49" name="__codelineno-11-49"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
-<a id="__codelineno-11-50" name="__codelineno-11-50"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-11-51" name="__codelineno-11-51"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-11-52" name="__codelineno-11-52"></a><span class="w">                </span><span class="nt">&lt;version&gt;</span>2.18.1<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-11-53" name="__codelineno-11-53"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
-<a id="__codelineno-11-54" name="__codelineno-11-54"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
-<a id="__codelineno-11-55" name="__codelineno-11-55"></a><span class="w">    </span><span class="nt">&lt;/build&gt;</span>
+<a id="__codelineno-11-36" name="__codelineno-11-36"></a>    &lt;!-- plugins --&gt;
+<a id="__codelineno-11-37" name="__codelineno-11-37"></a>    &lt;build&gt;
+<a id="__codelineno-11-38" name="__codelineno-11-38"></a>        &lt;plugins&gt;
+<a id="__codelineno-11-39" name="__codelineno-11-39"></a>            &lt;!-- pour la génération de l&#39;archive du projet avec ses dépendances --&gt;
+<a id="__codelineno-11-40" name="__codelineno-11-40"></a>            &lt;plugin&gt;
+<a id="__codelineno-11-41" name="__codelineno-11-41"></a>                &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;
+<a id="__codelineno-11-42" name="__codelineno-11-42"></a>                &lt;configuration&gt;
+<a id="__codelineno-11-43" name="__codelineno-11-43"></a>                    &lt;descriptorRefs&gt;
+<a id="__codelineno-11-44" name="__codelineno-11-44"></a>                        &lt;descriptorRef&gt;jar-with-dependencies&lt;/descriptorRef&gt;
+<a id="__codelineno-11-45" name="__codelineno-11-45"></a>                    &lt;/descriptorRefs&gt;
+<a id="__codelineno-11-46" name="__codelineno-11-46"></a>                &lt;/configuration&gt;
+<a id="__codelineno-11-47" name="__codelineno-11-47"></a>            &lt;/plugin&gt;
+<a id="__codelineno-11-48" name="__codelineno-11-48"></a>            &lt;!-- pour l&#39;installation de l&#39;artifact du projet dans le dépôt local Maven --&gt;
+<a id="__codelineno-11-49" name="__codelineno-11-49"></a>            &lt;plugin&gt;
+<a id="__codelineno-11-50" name="__codelineno-11-50"></a>                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+<a id="__codelineno-11-51" name="__codelineno-11-51"></a>                &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+<a id="__codelineno-11-52" name="__codelineno-11-52"></a>                &lt;version&gt;2.18.1&lt;/version&gt;
+<a id="__codelineno-11-53" name="__codelineno-11-53"></a>            &lt;/plugin&gt;
+<a id="__codelineno-11-54" name="__codelineno-11-54"></a>        &lt;/plugins&gt;
+<a id="__codelineno-11-55" name="__codelineno-11-55"></a>    &lt;/build&gt;
 <a id="__codelineno-11-56" name="__codelineno-11-56"></a>
-<a id="__codelineno-11-57" name="__codelineno-11-57"></a><span class="nt">&lt;/project&gt;</span>
+<a id="__codelineno-11-57" name="__codelineno-11-57"></a>&lt;/project&gt;
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 11 : le projet est codé en UTF-8 ;</li>
@@ -2340,45 +2340,45 @@
 <span class="normal"><a href="#__codelineno-13-38">38</a></span>
 <span class="normal"><a href="#__codelineno-13-39">39</a></span>
 <span class="normal"><a href="#__codelineno-13-40">40</a></span>
-<span class="normal"><a href="#__codelineno-13-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.entities</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-13-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">package</span> <span class="n">spring</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">entities</span><span class="p">;</span>
 <a id="__codelineno-13-2" name="__codelineno-13-2"></a>
 <a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
 <a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.factory.annotation.Qualifier</span><span class="p">;</span>
 <a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.stereotype.Component</span><span class="p">;</span>
 <a id="__codelineno-13-6" name="__codelineno-13-6"></a>
 <a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="nd">@Component</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Appartement</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Appartement</span> <span class="p">{</span>
 <a id="__codelineno-13-9" name="__codelineno-13-9"></a>
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">    </span><span class="c1">// champs injectés par Spring</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">    </span><span class="nd">@Autowired</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">    </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&quot;personne_01&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Personne</span><span class="w"> </span><span class="n">propriétaire</span><span class="p">;</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>    <span class="o">//</span> <span class="n">champs</span> <span class="n">injectés</span> <span class="n">par</span> <span class="n">Spring</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>    <span class="nd">@Autowired</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>    <span class="nd">@Qualifier</span><span class="p">(</span><span class="s2">&quot;personne_01&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a>    <span class="n">private</span> <span class="n">Personne</span> <span class="n">propriétaire</span><span class="p">;</span>
 <a id="__codelineno-13-14" name="__codelineno-13-14"></a>
-<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">    </span><span class="nd">@Autowired</span>
-<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">    </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&quot;mySurface&quot;</span><span class="p">)</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">surface</span><span class="p">;</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a>    <span class="nd">@Autowired</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a>    <span class="nd">@Qualifier</span><span class="p">(</span><span class="s2">&quot;mySurface&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a>    <span class="n">private</span> <span class="nb">int</span> <span class="n">surface</span><span class="p">;</span>
 <a id="__codelineno-13-18" name="__codelineno-13-18"></a>
-<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">    </span><span class="c1">// getters et setters</span>
-<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Personne</span><span class="w"> </span><span class="nf">getPropriétaire</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">propriétaire</span><span class="p">;</span>
-<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a>    <span class="o">//</span> <span class="n">getters</span> <span class="n">et</span> <span class="n">setters</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a>    <span class="n">public</span> <span class="n">Personne</span> <span class="n">getPropriétaire</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a>        <span class="k">return</span> <span class="n">propriétaire</span><span class="p">;</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a>    <span class="p">}</span>
 <a id="__codelineno-13-23" name="__codelineno-13-23"></a>
-<a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPropriétaire</span><span class="p">(</span><span class="n">Personne</span><span class="w"> </span><span class="n">propriétaire</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-25" name="__codelineno-13-25"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">propriétaire</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">propriétaire</span><span class="p">;</span>
-<a id="__codelineno-13-26" name="__codelineno-13-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-24" name="__codelineno-13-24"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">setPropriétaire</span><span class="p">(</span><span class="n">Personne</span> <span class="n">propriétaire</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-13-25" name="__codelineno-13-25"></a>        <span class="n">this</span><span class="o">.</span><span class="n">propriétaire</span> <span class="o">=</span> <span class="n">propriétaire</span><span class="p">;</span>
+<a id="__codelineno-13-26" name="__codelineno-13-26"></a>    <span class="p">}</span>
 <a id="__codelineno-13-27" name="__codelineno-13-27"></a>
-<a id="__codelineno-13-28" name="__codelineno-13-28"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getSurface</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-29" name="__codelineno-13-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">surface</span><span class="p">;</span>
-<a id="__codelineno-13-30" name="__codelineno-13-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-28" name="__codelineno-13-28"></a>    <span class="n">public</span> <span class="nb">int</span> <span class="n">getSurface</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29"></a>        <span class="k">return</span> <span class="n">surface</span><span class="p">;</span>
+<a id="__codelineno-13-30" name="__codelineno-13-30"></a>    <span class="p">}</span>
 <a id="__codelineno-13-31" name="__codelineno-13-31"></a>
-<a id="__codelineno-13-32" name="__codelineno-13-32"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setSurface</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">surface</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-33" name="__codelineno-13-33"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">surface</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">surface</span><span class="p">;</span>
-<a id="__codelineno-13-34" name="__codelineno-13-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-32" name="__codelineno-13-32"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">setSurface</span><span class="p">(</span><span class="nb">int</span> <span class="n">surface</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-13-33" name="__codelineno-13-33"></a>        <span class="n">this</span><span class="o">.</span><span class="n">surface</span> <span class="o">=</span> <span class="n">surface</span><span class="p">;</span>
+<a id="__codelineno-13-34" name="__codelineno-13-34"></a>    <span class="p">}</span>
 <a id="__codelineno-13-35" name="__codelineno-13-35"></a>
-<a id="__codelineno-13-36" name="__codelineno-13-36"></a><span class="w">    </span><span class="c1">// toString</span>
-<a id="__codelineno-13-37" name="__codelineno-13-37"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-38" name="__codelineno-13-38"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Appartement[%s, %s]&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">propriétaire</span><span class="p">,</span><span class="w"> </span><span class="n">surface</span><span class="p">);</span>
-<a id="__codelineno-13-39" name="__codelineno-13-39"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-36" name="__codelineno-13-36"></a>    <span class="o">//</span> <span class="n">toString</span>
+<a id="__codelineno-13-37" name="__codelineno-13-37"></a>    <span class="n">public</span> <span class="n">String</span> <span class="n">toString</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-13-38" name="__codelineno-13-38"></a>        <span class="k">return</span> <span class="n">String</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Appartement[</span><span class="si">%s</span><span class="s2">, </span><span class="si">%s</span><span class="s2">]&quot;</span><span class="p">,</span> <span class="n">propriétaire</span><span class="p">,</span> <span class="n">surface</span><span class="p">);</span>
+<a id="__codelineno-13-39" name="__codelineno-13-39"></a>    <span class="p">}</span>
 <a id="__codelineno-13-40" name="__codelineno-13-40"></a>
 <a id="__codelineno-13-41" name="__codelineno-13-41"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -2436,21 +2436,21 @@
 <span class="normal"><a href="#__codelineno-15-12">12</a></span>
 <span class="normal"><a href="#__codelineno-15-13">13</a></span>
 <span class="normal"><a href="#__codelineno-15-14">14</a></span>
-<span class="normal"><a href="#__codelineno-15-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="nt">&lt;configuration&gt;</span><span class="w"> </span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>&lt;configuration&gt; 
 <a id="__codelineno-15-2" name="__codelineno-15-2"></a>
-<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">  </span><span class="nt">&lt;appender</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;STDOUT&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;ch.qos.logback.core.ConsoleAppender&quot;</span><span class="nt">&gt;</span><span class="w"> </span>
-<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="cm">&lt;!-- encoders are  by default assigned the type</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="cm">         ch.qos.logback.classic.encoder.PatternLayoutEncoder --&gt;</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">    </span><span class="nt">&lt;encoder&gt;</span>
-<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">      </span><span class="nt">&lt;pattern&gt;</span>%d{HH:mm:ss.SSS}<span class="w"> </span>[%thread]<span class="w"> </span>%-5level<span class="w"> </span>%logger{36}<span class="w"> </span>-<span class="w"> </span>%msg%n<span class="nt">&lt;/pattern&gt;</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">    </span><span class="nt">&lt;/encoder&gt;</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">  </span><span class="nt">&lt;/appender&gt;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a>  &lt;appender name=&quot;STDOUT&quot; class=&quot;ch.qos.logback.core.ConsoleAppender&quot;&gt; 
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a>    &lt;!-- encoders are  by default assigned the type
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a>         ch.qos.logback.classic.encoder.PatternLayoutEncoder --&gt;
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a>    &lt;encoder&gt;
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a>      &lt;pattern&gt;%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n&lt;/pattern&gt;
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a>    &lt;/encoder&gt;
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a>  &lt;/appender&gt;
 <a id="__codelineno-15-10" name="__codelineno-15-10"></a>
-<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">  </span><span class="cm">&lt;!-- contrôle niveau des logs --&gt;</span>
-<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">  </span><span class="nt">&lt;root</span><span class="w"> </span><span class="na">level=</span><span class="s">&quot;info&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- info, debug, warn --&gt;</span>
-<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">    </span><span class="nt">&lt;appender-ref</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;STDOUT&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">  </span><span class="nt">&lt;/root&gt;</span>
-<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="nt">&lt;/configuration&gt;</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a>  &lt;!-- contrôle niveau des logs --&gt;
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a>  &lt;root level=&quot;info&quot;&gt; &lt;!-- info, debug, warn --&gt;
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a>    &lt;appender-ref ref=&quot;STDOUT&quot; /&gt;
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a>  &lt;/root&gt;
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a>&lt;/configuration&gt;
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 12, on fixe le niveau des logs. [debug] est un niveau très détaillé, [info] beaucoup moins ;</li>
@@ -2495,23 +2495,23 @@
 <span class="normal"><a href="#__codelineno-17-14">14</a></span>
 <span class="normal"><a href="#__codelineno-17-15">15</a></span>
 <span class="normal"><a href="#__codelineno-17-16">16</a></span>
-<span class="normal"><a href="#__codelineno-17-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-assembly-plugin<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">                </span><span class="nt">&lt;configuration&gt;</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">                    </span><span class="nt">&lt;descriptorRefs&gt;</span>
-<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">                        </span><span class="nt">&lt;descriptorRef&gt;</span>jar-with-dependencies<span class="nt">&lt;/descriptorRef&gt;</span>
-<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">                    </span><span class="nt">&lt;/descriptorRefs&gt;</span>
-<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">                </span><span class="nt">&lt;/configuration&gt;</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
-<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
-<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="w">                </span><span class="nt">&lt;version&gt;</span>2.18.1<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
-<a id="__codelineno-17-16" name="__codelineno-17-16"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
-<a id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="nt">&lt;/build&gt;</span>
+<span class="normal"><a href="#__codelineno-17-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>    &lt;build&gt;
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>        &lt;plugins&gt;
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a>            &lt;plugin&gt;
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>                &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a>                &lt;configuration&gt;
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a>                    &lt;descriptorRefs&gt;
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>                        &lt;descriptorRef&gt;jar-with-dependencies&lt;/descriptorRef&gt;
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a>                    &lt;/descriptorRefs&gt;
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a>                &lt;/configuration&gt;
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a>            &lt;/plugin&gt;
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a>            &lt;plugin&gt;
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a>                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a>                &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a>                &lt;version&gt;2.18.1&lt;/version&gt;
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a>            &lt;/plugin&gt;
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a>        &lt;/plugins&gt;
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a>&lt;/build&gt;
 </code></pre></div></td></tr></table></div>
 <p>Elles définissent le plugin de Maven capable de générer l'artifact du projet avec ses dépendances. Ensuite on procède de la façon suivante [1-6] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004140000047AD0AD5777.png" style="display:inline-block; margin:4px;width:13.811cm;height:15.161cm;" /></td></tr></table>
@@ -2707,8 +2707,8 @@
 <li>que la classe [SpringCore04Application] est une classe de configuration Spring ;</li>
 <li>qu'il est demandé à Spring Boot d'opérer des configurations à partir des classes qu'il va trouver dans le Classpath du projet, donc ici dans les dépendances Maven ;</li>
 <li>d'examiner le dossier courant (celui de la classe [SpringCore04Application]) pour y trouver d'éventuels autres composants Spring ;</li>
-<li>
-<p>ligne 10 : la méthode statique [SpringApplication.run] est exécutée. Son premier paramètre est une classe de configuration Spring, ici la classe [SpringCore04Application]. Son deuxième paramètre est ici la liste des arguments passés à la méthode [main] (ligne 9). La méthode statique [SpringApplication.run] a pour rôle de créer le contexte Spring, ç-à-d créer les différents beans trouvés soit dans les classes de configuration soit dans les dossiers explorés par l'annotation [@ComponentScan]. La méthode [main] ici ne fait rien d'autre. Pour lui donner un peu plus de substance, nous allons la transformer de la façon suivante :
+<li>ligne 10 : la méthode statique [SpringApplication.run] est exécutée. Son premier paramètre est une classe de configuration Spring, ici la classe [SpringCore04Application]. Son deuxième paramètre est ici la liste des arguments passés à la méthode [main] (ligne 9). La méthode statique [SpringApplication.run] a pour rôle de créer le contexte Spring, ç-à-d créer les différents beans trouvés soit dans les classes de configuration soit dans les dossiers explorés par l'annotation [@ComponentScan]. La méthode [main] ici ne fait rien d'autre. Pour lui donner un peu plus de substance, nous allons la transformer de la façon suivante :</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
@@ -2750,11 +2750,9 @@
 <a id="__codelineno-20-19" name="__codelineno-20-19"></a><span class="w">        </span><span class="n">context</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 <a id="__codelineno-20-20" name="__codelineno-20-20"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-20-21" name="__codelineno-20-21"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p>ligne 12 : la méthode statique [SpringApplication.run] rend le contexte Spring qu'elle a construit ;</p>
-</li>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>ligne 12 : la méthode statique [SpringApplication.run] rend le contexte Spring qu'elle a construit ;</li>
 <li>lignes 15-17 : on affiche le nom de tous les beans de ce contexte ;</li>
 </ul>
 <p>On peut exécuter l'application de la façon suivante [1-3]. La méthode habituelle [Run As Java Application] est également valide.</p>
@@ -2790,36 +2788,36 @@
 <span class="normal"><a href="#__codelineno-21-27">27</a></span>
 <span class="normal"><a href="#__codelineno-21-28">28</a></span>
 <span class="normal"><a href="#__codelineno-21-29">29</a></span>
-<span class="normal"><a href="#__codelineno-21-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="w">  </span><span class="p">.</span><span class="w">   </span><span class="n">____</span><span class="w">          </span><span class="n">_</span><span class="w">            </span><span class="n">__</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="n">_</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w"> </span><span class="o">/</span><span class="err">\\</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">___</span><span class="err">&#39;</span><span class="n">_</span><span class="w"> </span><span class="n">__</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="nf">_</span><span class="p">(</span><span class="n">_</span><span class="p">)</span><span class="n">_</span><span class="w"> </span><span class="n">__</span><span class="w">  </span><span class="n">__</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="err">\</span><span class="n">___</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="err">&#39;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="err">&#39;</span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="err">&#39;</span><span class="n">_</span><span class="w"> </span><span class="err">\</span><span class="o">/</span><span class="w"> </span><span class="n">_</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w"> </span><span class="err">\\</span><span class="o">/</span><span class="w">  </span><span class="n">___</span><span class="p">)</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="n">_</span><span class="p">)</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">  </span><span class="err">&#39;</span><span class="w">  </span><span class="o">|</span><span class="n">____</span><span class="o">|</span><span class="w"> </span><span class="p">.</span><span class="na">__</span><span class="o">|</span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="n">_</span><span class="o">|</span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="n">_</span><span class="err">\</span><span class="n">__</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">/</span>
-<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w"> </span><span class="o">=========|</span><span class="n">_</span><span class="o">|==============|</span><span class="n">___</span><span class="o">/=/</span><span class="n">_</span><span class="o">/</span><span class="n">_</span><span class="o">/</span><span class="n">_</span><span class="o">/</span>
-<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w"> </span><span class="p">::</span><span class="w"> </span><span class="n">Spring</span><span class="w"> </span><span class="n">Boot</span><span class="w"> </span><span class="p">::</span><span class="w">        </span><span class="p">(</span><span class="n">v1</span><span class="mf">.2.3</span><span class="p">.</span><span class="na">RELEASE</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-21-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>  .   ____          _            __ _ _
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a> /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a>( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a> \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>  &#39;  |____| .__|_| |_|_| |_\__, | / / / /
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a> =========|_|==============|___/=/_/_/_/
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a> :: Spring Boot ::        (v1.2.3.RELEASE)
 <a id="__codelineno-21-8" name="__codelineno-21-8"></a>
-<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="mi">2015</span><span class="o">-</span><span class="mo">04</span><span class="o">-</span><span class="mi">08</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mf">38.254</span><span class="w">  </span><span class="n">INFO</span><span class="w"> </span><span class="mi">4796</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="o">[</span><span class="w">           </span><span class="n">main</span><span class="o">]</span><span class="w"> </span><span class="n">demo</span><span class="p">.</span><span class="na">SpringCore04Application</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="n">Starting</span><span class="w"> </span><span class="n">SpringCore04Application</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">Gportpers3</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">PID</span><span class="w"> </span><span class="mi">4796</span><span class="w"> </span><span class="p">(</span><span class="n">D</span><span class="p">:</span><span class="err">\</span><span class="n">data</span><span class="err">\</span><span class="n">istia</span><span class="o">-</span><span class="mi">1415</span><span class="err">\</span><span class="n">polys</span><span class="err">\</span><span class="n">istia</span><span class="err">\</span><span class="n">dvp</span><span class="o">-</span><span class="n">spring</span><span class="o">-</span><span class="n">database</span><span class="err">\</span><span class="n">codes</span><span class="err">\</span><span class="n">original</span><span class="err">\</span><span class="n">intro</span><span class="o">-</span><span class="n">spring</span><span class="o">-</span><span class="n">core</span><span class="err">\</span><span class="n">spring</span><span class="o">-</span><span class="n">core</span><span class="o">-</span><span class="mo">04</span><span class="err">\</span><span class="n">target</span><span class="err">\</span><span class="n">classes</span><span class="w"> </span><span class="n">started</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="n">ST</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">D</span><span class="p">:</span><span class="err">\</span><span class="n">data</span><span class="err">\</span><span class="n">istia</span><span class="o">-</span><span class="mi">1415</span><span class="err">\</span><span class="n">polys</span><span class="err">\</span><span class="n">istia</span><span class="err">\</span><span class="n">dvp</span><span class="o">-</span><span class="n">spring</span><span class="o">-</span><span class="n">database</span><span class="err">\</span><span class="n">codes</span><span class="err">\</span><span class="n">original</span><span class="err">\</span><span class="n">intro</span><span class="o">-</span><span class="n">spring</span><span class="o">-</span><span class="n">core</span><span class="err">\</span><span class="n">spring</span><span class="o">-</span><span class="n">core</span><span class="o">-</span><span class="mo">04</span><span class="p">)</span>
-<a id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="mi">2015</span><span class="o">-</span><span class="mo">04</span><span class="o">-</span><span class="mi">08</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mf">38.295</span><span class="w">  </span><span class="n">INFO</span><span class="w"> </span><span class="mi">4796</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="o">[</span><span class="w">           </span><span class="n">main</span><span class="o">]</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">c</span><span class="p">.</span><span class="na">a</span><span class="p">.</span><span class="na">AnnotationConfigApplicationContext</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Refreshing</span><span class="w"> </span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">AnnotationConfigApplicationContext</span><span class="err">@</span><span class="mi">64485</span><span class="n">a47</span><span class="p">:</span><span class="w"> </span><span class="n">startup</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">[</span><span class="n">Wed</span><span class="w"> </span><span class="n">Apr</span><span class="w"> </span><span class="mi">08</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mi">38</span><span class="w"> </span><span class="n">CEST</span><span class="w"> </span><span class="mi">2015</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="n">hierarchy</span>
-<a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="mi">2015</span><span class="o">-</span><span class="mo">04</span><span class="o">-</span><span class="mi">08</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mf">38.776</span><span class="w">  </span><span class="n">INFO</span><span class="w"> </span><span class="mi">4796</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="o">[</span><span class="w">           </span><span class="n">main</span><span class="o">]</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="na">s</span><span class="p">.</span><span class="na">j</span><span class="p">.</span><span class="na">e</span><span class="p">.</span><span class="na">a</span><span class="p">.</span><span class="na">AnnotationMBeanExporter</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="n">Registering</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">JMX</span><span class="w"> </span><span class="n">exposure</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">startup</span>
-<a id="__codelineno-21-12" name="__codelineno-21-12"></a><span class="mi">2015</span><span class="o">-</span><span class="mo">04</span><span class="o">-</span><span class="mi">08</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mf">38.788</span><span class="w">  </span><span class="n">INFO</span><span class="w"> </span><span class="mi">4796</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="o">[</span><span class="w">           </span><span class="n">main</span><span class="o">]</span><span class="w"> </span><span class="n">demo</span><span class="p">.</span><span class="na">SpringCore04Application</span><span class="w">             </span><span class="p">:</span><span class="w"> </span><span class="n">Started</span><span class="w"> </span><span class="n">SpringCore04Application</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="mf">0.773</span><span class="w"> </span><span class="n">seconds</span><span class="w"> </span><span class="p">(</span><span class="n">JVM</span><span class="w"> </span><span class="n">running</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="mf">1.335</span><span class="p">)</span>
-<a id="__codelineno-21-13" name="__codelineno-21-13"></a><span class="o">----------------</span><span class="w"> </span><span class="n">Liste</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span><span class="n">Spring</span>
-<a id="__codelineno-21-14" name="__codelineno-21-14"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">internalConfigurationAnnotationProcessor</span>
-<a id="__codelineno-21-15" name="__codelineno-21-15"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">internalAutowiredAnnotationProcessor</span>
-<a id="__codelineno-21-16" name="__codelineno-21-16"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">internalRequiredAnnotationProcessor</span>
-<a id="__codelineno-21-17" name="__codelineno-21-17"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">internalCommonAnnotationProcessor</span>
-<a id="__codelineno-21-18" name="__codelineno-21-18"></a><span class="n">springCore04Application</span>
-<a id="__codelineno-21-19" name="__codelineno-21-19"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">ConfigurationClassPostProcessor</span><span class="p">.</span><span class="na">importAwareProcessor</span>
-<a id="__codelineno-21-20" name="__codelineno-21-20"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">ConfigurationClassPostProcessor</span><span class="p">.</span><span class="na">enhancedConfigurationProcessor</span>
-<a id="__codelineno-21-21" name="__codelineno-21-21"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="p">.</span><span class="na">autoconfigure</span><span class="p">.</span><span class="na">AutoConfigurationPackages</span>
-<a id="__codelineno-21-22" name="__codelineno-21-22"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="p">.</span><span class="na">autoconfigure</span><span class="p">.</span><span class="na">PropertyPlaceholderAutoConfiguration</span>
-<a id="__codelineno-21-23" name="__codelineno-21-23"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="p">.</span><span class="na">autoconfigure</span><span class="p">.</span><span class="na">condition</span><span class="p">.</span><span class="na">BeanTypeRegistry</span>
-<a id="__codelineno-21-24" name="__codelineno-21-24"></a><span class="n">propertySourcesPlaceholderConfigurer</span>
-<a id="__codelineno-21-25" name="__codelineno-21-25"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="p">.</span><span class="na">autoconfigure</span><span class="p">.</span><span class="na">jmx</span><span class="p">.</span><span class="na">JmxAutoConfiguration</span>
-<a id="__codelineno-21-26" name="__codelineno-21-26"></a><span class="n">mbeanExporter</span>
-<a id="__codelineno-21-27" name="__codelineno-21-27"></a><span class="n">objectNamingStrategy</span>
-<a id="__codelineno-21-28" name="__codelineno-21-28"></a><span class="n">mbeanServer</span>
-<a id="__codelineno-21-29" name="__codelineno-21-29"></a><span class="mi">2015</span><span class="o">-</span><span class="mo">04</span><span class="o">-</span><span class="mi">08</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mf">38.789</span><span class="w">  </span><span class="n">INFO</span><span class="w"> </span><span class="mi">4796</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="o">[</span><span class="w">           </span><span class="n">main</span><span class="o">]</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="na">c</span><span class="p">.</span><span class="na">a</span><span class="p">.</span><span class="na">AnnotationConfigApplicationContext</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">Closing</span><span class="w"> </span><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">AnnotationConfigApplicationContext</span><span class="err">@</span><span class="mi">64485</span><span class="n">a47</span><span class="p">:</span><span class="w"> </span><span class="n">startup</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">[</span><span class="n">Wed</span><span class="w"> </span><span class="n">Apr</span><span class="w"> </span><span class="mi">08</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mi">38</span><span class="w"> </span><span class="n">CEST</span><span class="w"> </span><span class="mi">2015</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="n">hierarchy</span>
-<a id="__codelineno-21-30" name="__codelineno-21-30"></a><span class="mi">2015</span><span class="o">-</span><span class="mo">04</span><span class="o">-</span><span class="mi">08</span><span class="w"> </span><span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mf">38.790</span><span class="w">  </span><span class="n">INFO</span><span class="w"> </span><span class="mi">4796</span><span class="w"> </span><span class="o">---</span><span class="w"> </span><span class="o">[</span><span class="w">           </span><span class="n">main</span><span class="o">]</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="na">s</span><span class="p">.</span><span class="na">j</span><span class="p">.</span><span class="na">e</span><span class="p">.</span><span class="na">a</span><span class="p">.</span><span class="na">AnnotationMBeanExporter</span><span class="w">        </span><span class="p">:</span><span class="w"> </span><span class="n">Unregistering</span><span class="w"> </span><span class="n">JMX</span><span class="o">-</span><span class="n">exposed</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">shutdown</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>2015-04-08 11:18:38.254  INFO 4796 --- [           main] demo.SpringCore04Application             : Starting SpringCore04Application on Gportpers3 with PID 4796 (D:\data\istia-1415\polys\istia\dvp-spring-database\codes\original\intro-spring-core\spring-core-04\target\classes started by ST in D:\data\istia-1415\polys\istia\dvp-spring-database\codes\original\intro-spring-core\spring-core-04)
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a>2015-04-08 11:18:38.295  INFO 4796 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@64485a47: startup date [Wed Apr 08 11:18:38 CEST 2015]; root of context hierarchy
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a>2015-04-08 11:18:38.776  INFO 4796 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+<a id="__codelineno-21-12" name="__codelineno-21-12"></a>2015-04-08 11:18:38.788  INFO 4796 --- [           main] demo.SpringCore04Application             : Started SpringCore04Application in 0.773 seconds (JVM running for 1.335)
+<a id="__codelineno-21-13" name="__codelineno-21-13"></a>---------------- Liste des beans Spring
+<a id="__codelineno-21-14" name="__codelineno-21-14"></a>org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+<a id="__codelineno-21-15" name="__codelineno-21-15"></a>org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+<a id="__codelineno-21-16" name="__codelineno-21-16"></a>org.springframework.context.annotation.internalRequiredAnnotationProcessor
+<a id="__codelineno-21-17" name="__codelineno-21-17"></a>org.springframework.context.annotation.internalCommonAnnotationProcessor
+<a id="__codelineno-21-18" name="__codelineno-21-18"></a>springCore04Application
+<a id="__codelineno-21-19" name="__codelineno-21-19"></a>org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor
+<a id="__codelineno-21-20" name="__codelineno-21-20"></a>org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor
+<a id="__codelineno-21-21" name="__codelineno-21-21"></a>org.springframework.boot.autoconfigure.AutoConfigurationPackages
+<a id="__codelineno-21-22" name="__codelineno-21-22"></a>org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration
+<a id="__codelineno-21-23" name="__codelineno-21-23"></a>org.springframework.boot.autoconfigure.condition.BeanTypeRegistry
+<a id="__codelineno-21-24" name="__codelineno-21-24"></a>propertySourcesPlaceholderConfigurer
+<a id="__codelineno-21-25" name="__codelineno-21-25"></a>org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+<a id="__codelineno-21-26" name="__codelineno-21-26"></a>mbeanExporter
+<a id="__codelineno-21-27" name="__codelineno-21-27"></a>objectNamingStrategy
+<a id="__codelineno-21-28" name="__codelineno-21-28"></a>mbeanServer
+<a id="__codelineno-21-29" name="__codelineno-21-29"></a>2015-04-08 11:18:38.789  INFO 4796 --- [           main] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@64485a47: startup date [Wed Apr 08 11:18:38 CEST 2015]; root of context hierarchy
+<a id="__codelineno-21-30" name="__codelineno-21-30"></a>2015-04-08 11:18:38.790  INFO 4796 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 14-28 : les beans du contexte Spring. Nous ne connaissons pas leur rôle. Nous retrouvons le bean [springCore04Application] ligne 18 qui de par son annotation [@SpringBootApplication] devient automatiquement un bean Spring ;</li>
@@ -2841,21 +2839,21 @@
 <span class="normal"><a href="#__codelineno-22-12">12</a></span>
 <span class="normal"><a href="#__codelineno-22-13">13</a></span>
 <span class="normal"><a href="#__codelineno-22-14">14</a></span>
-<span class="normal"><a href="#__codelineno-22-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="nt">&lt;configuration&gt;</span><span class="w"> </span>
+<span class="normal"><a href="#__codelineno-22-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>&lt;configuration&gt; 
 <a id="__codelineno-22-2" name="__codelineno-22-2"></a>
-<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">  </span><span class="nt">&lt;appender</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;STDOUT&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;ch.qos.logback.core.ConsoleAppender&quot;</span><span class="nt">&gt;</span><span class="w"> </span>
-<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">    </span><span class="cm">&lt;!-- encoders are  by default assigned the type</span>
-<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="cm">         ch.qos.logback.classic.encoder.PatternLayoutEncoder --&gt;</span>
-<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">    </span><span class="nt">&lt;encoder&gt;</span>
-<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">      </span><span class="nt">&lt;pattern&gt;</span>%d{HH:mm:ss.SSS}<span class="w"> </span>[%thread]<span class="w"> </span>%-5level<span class="w"> </span>%logger{36}<span class="w"> </span>-<span class="w"> </span>%msg%n<span class="nt">&lt;/pattern&gt;</span>
-<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">    </span><span class="nt">&lt;/encoder&gt;</span>
-<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">  </span><span class="nt">&lt;/appender&gt;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>  &lt;appender name=&quot;STDOUT&quot; class=&quot;ch.qos.logback.core.ConsoleAppender&quot;&gt; 
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a>    &lt;!-- encoders are  by default assigned the type
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a>         ch.qos.logback.classic.encoder.PatternLayoutEncoder --&gt;
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a>    &lt;encoder&gt;
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a>      &lt;pattern&gt;%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n&lt;/pattern&gt;
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a>    &lt;/encoder&gt;
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a>  &lt;/appender&gt;
 <a id="__codelineno-22-10" name="__codelineno-22-10"></a>
-<a id="__codelineno-22-11" name="__codelineno-22-11"></a><span class="w">  </span><span class="cm">&lt;!-- contrôle niveau des logs --&gt;</span>
-<a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="w">  </span><span class="nt">&lt;root</span><span class="w"> </span><span class="na">level=</span><span class="s">&quot;warn&quot;</span><span class="nt">&gt;</span><span class="w"> </span><span class="cm">&lt;!-- info, debug, warn --&gt;</span>
-<a id="__codelineno-22-13" name="__codelineno-22-13"></a><span class="w">    </span><span class="nt">&lt;appender-ref</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;STDOUT&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
-<a id="__codelineno-22-14" name="__codelineno-22-14"></a><span class="w">  </span><span class="nt">&lt;/root&gt;</span>
-<a id="__codelineno-22-15" name="__codelineno-22-15"></a><span class="nt">&lt;/configuration&gt;</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11"></a>  &lt;!-- contrôle niveau des logs --&gt;
+<a id="__codelineno-22-12" name="__codelineno-22-12"></a>  &lt;root level=&quot;warn&quot;&gt; &lt;!-- info, debug, warn --&gt;
+<a id="__codelineno-22-13" name="__codelineno-22-13"></a>    &lt;appender-ref ref=&quot;STDOUT&quot; /&gt;
+<a id="__codelineno-22-14" name="__codelineno-22-14"></a>  &lt;/root&gt;
+<a id="__codelineno-22-15" name="__codelineno-22-15"></a>&lt;/configuration&gt;
 </code></pre></div></td></tr></table></div>
 <p>Si ligne 12 ci-dessus, on met le niveau [warn] à la place de [info], on obtient le résultat suivant :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
@@ -2881,30 +2879,30 @@
 <span class="normal"><a href="#__codelineno-23-21">21</a></span>
 <span class="normal"><a href="#__codelineno-23-22">22</a></span>
 <span class="normal"><a href="#__codelineno-23-23">23</a></span>
-<span class="normal"><a href="#__codelineno-23-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="w">  </span><span class="p">.</span><span class="w">   </span><span class="n">____</span><span class="w">          </span><span class="n">_</span><span class="w">            </span><span class="n">__</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="n">_</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w"> </span><span class="o">/</span><span class="err">\\</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">___</span><span class="err">&#39;</span><span class="n">_</span><span class="w"> </span><span class="n">__</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="nf">_</span><span class="p">(</span><span class="n">_</span><span class="p">)</span><span class="n">_</span><span class="w"> </span><span class="n">__</span><span class="w">  </span><span class="n">__</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="p">(</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="err">\</span><span class="n">___</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="err">&#39;</span><span class="n">_</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="err">&#39;</span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="err">&#39;</span><span class="n">_</span><span class="w"> </span><span class="err">\</span><span class="o">/</span><span class="w"> </span><span class="n">_</span><span class="err">`</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span><span class="w"> </span><span class="err">\</span>
-<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w"> </span><span class="err">\\</span><span class="o">/</span><span class="w">  </span><span class="n">___</span><span class="p">)</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="n">_</span><span class="p">)</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
-<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">  </span><span class="err">&#39;</span><span class="w">  </span><span class="o">|</span><span class="n">____</span><span class="o">|</span><span class="w"> </span><span class="p">.</span><span class="na">__</span><span class="o">|</span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="n">_</span><span class="o">|</span><span class="n">_</span><span class="o">|</span><span class="w"> </span><span class="o">|</span><span class="n">_</span><span class="err">\</span><span class="n">__</span><span class="p">,</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="o">/</span>
-<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w"> </span><span class="o">=========|</span><span class="n">_</span><span class="o">|==============|</span><span class="n">___</span><span class="o">/=/</span><span class="n">_</span><span class="o">/</span><span class="n">_</span><span class="o">/</span><span class="n">_</span><span class="o">/</span>
-<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w"> </span><span class="p">::</span><span class="w"> </span><span class="n">Spring</span><span class="w"> </span><span class="n">Boot</span><span class="w"> </span><span class="p">::</span><span class="w">        </span><span class="p">(</span><span class="n">v1</span><span class="mf">.2.3</span><span class="p">.</span><span class="na">RELEASE</span><span class="p">)</span>
+<span class="normal"><a href="#__codelineno-23-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>  .   ____          _            __ _ _
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a> /\\ / ___&#39;_ __ _ _(_)_ __  __ _ \ \ \ \
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a>( ( )\___ | &#39;_ | &#39;_| | &#39;_ \/ _` | \ \ \ \
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a> \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>  &#39;  |____| .__|_| |_|_| |_\__, | / / / /
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a> =========|_|==============|___/=/_/_/_/
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a> :: Spring Boot ::        (v1.2.3.RELEASE)
 <a id="__codelineno-23-8" name="__codelineno-23-8"></a>
-<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="o">----------------</span><span class="w"> </span><span class="n">Liste</span><span class="w"> </span><span class="n">des</span><span class="w"> </span><span class="n">beans</span><span class="w"> </span><span class="n">Spring</span>
-<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">internalConfigurationAnnotationProcessor</span>
-<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">internalAutowiredAnnotationProcessor</span>
-<a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">internalRequiredAnnotationProcessor</span>
-<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">internalCommonAnnotationProcessor</span>
-<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="n">springCore04Application</span>
-<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">ConfigurationClassPostProcessor</span><span class="p">.</span><span class="na">importAwareProcessor</span>
-<a id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">context</span><span class="p">.</span><span class="na">annotation</span><span class="p">.</span><span class="na">ConfigurationClassPostProcessor</span><span class="p">.</span><span class="na">enhancedConfigurationProcessor</span>
-<a id="__codelineno-23-17" name="__codelineno-23-17"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="p">.</span><span class="na">autoconfigure</span><span class="p">.</span><span class="na">AutoConfigurationPackages</span>
-<a id="__codelineno-23-18" name="__codelineno-23-18"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="p">.</span><span class="na">autoconfigure</span><span class="p">.</span><span class="na">PropertyPlaceholderAutoConfiguration</span>
-<a id="__codelineno-23-19" name="__codelineno-23-19"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="p">.</span><span class="na">autoconfigure</span><span class="p">.</span><span class="na">condition</span><span class="p">.</span><span class="na">BeanTypeRegistry</span>
-<a id="__codelineno-23-20" name="__codelineno-23-20"></a><span class="n">propertySourcesPlaceholderConfigurer</span>
-<a id="__codelineno-23-21" name="__codelineno-23-21"></a><span class="n">org</span><span class="p">.</span><span class="na">springframework</span><span class="p">.</span><span class="na">boot</span><span class="p">.</span><span class="na">autoconfigure</span><span class="p">.</span><span class="na">jmx</span><span class="p">.</span><span class="na">JmxAutoConfiguration</span>
-<a id="__codelineno-23-22" name="__codelineno-23-22"></a><span class="n">mbeanExporter</span>
-<a id="__codelineno-23-23" name="__codelineno-23-23"></a><span class="n">objectNamingStrategy</span>
-<a id="__codelineno-23-24" name="__codelineno-23-24"></a><span class="n">mbeanServer</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a>---------------- Liste des beans Spring
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a>org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a>org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a>org.springframework.context.annotation.internalRequiredAnnotationProcessor
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a>org.springframework.context.annotation.internalCommonAnnotationProcessor
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a>springCore04Application
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a>org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor
+<a id="__codelineno-23-16" name="__codelineno-23-16"></a>org.springframework.context.annotation.ConfigurationClassPostProcessor.enhancedConfigurationProcessor
+<a id="__codelineno-23-17" name="__codelineno-23-17"></a>org.springframework.boot.autoconfigure.AutoConfigurationPackages
+<a id="__codelineno-23-18" name="__codelineno-23-18"></a>org.springframework.boot.autoconfigure.PropertyPlaceholderAutoConfiguration
+<a id="__codelineno-23-19" name="__codelineno-23-19"></a>org.springframework.boot.autoconfigure.condition.BeanTypeRegistry
+<a id="__codelineno-23-20" name="__codelineno-23-20"></a>propertySourcesPlaceholderConfigurer
+<a id="__codelineno-23-21" name="__codelineno-23-21"></a>org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration
+<a id="__codelineno-23-22" name="__codelineno-23-22"></a>mbeanExporter
+<a id="__codelineno-23-23" name="__codelineno-23-23"></a>objectNamingStrategy
+<a id="__codelineno-23-24" name="__codelineno-23-24"></a>mbeanServer
 </code></pre></div></td></tr></table></div>
 <p>Les logs ont disparu. N'apparaissent que les messages de niveau [warn] et ici il n'y en pas eu.</p>
 <h3 id="553-implementation-des-differentes-couches-de-larchitecture">5.5.3. Implémentation des différentes couches de l'architecture</h3>
@@ -2919,12 +2917,12 @@
 <span class="normal"><a href="#__codelineno-24-3">3</a></span>
 <span class="normal"><a href="#__codelineno-24-4">4</a></span>
 <span class="normal"><a href="#__codelineno-24-5">5</a></span>
-<span class="normal"><a href="#__codelineno-24-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.dao</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-24-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a>package spring.core.dao;
 <a id="__codelineno-24-2" name="__codelineno-24-2"></a>
-<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IDao</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a>public interface IDao {
 <a id="__codelineno-24-4" name="__codelineno-24-4"></a>
-<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">doSomethingInDaoLayer</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="p">}</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a>    public int doSomethingInDaoLayer(int a, int b);
+<a id="__codelineno-24-6" name="__codelineno-24-6"></a>}
 </code></pre></div></td></tr></table></div>
 <p>Cette interface a deux implémentations : [Dao1] et [Dao2] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
@@ -2935,15 +2933,15 @@
 <span class="normal"><a href="#__codelineno-25-6">6</a></span>
 <span class="normal"><a href="#__codelineno-25-7">7</a></span>
 <span class="normal"><a href="#__codelineno-25-8">8</a></span>
-<span class="normal"><a href="#__codelineno-25-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.dao</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-25-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>package spring.core.dao;
 <a id="__codelineno-25-2" name="__codelineno-25-2"></a>
-<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dao1</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">IDao</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>public class Dao1 implements IDao {
 <a id="__codelineno-25-4" name="__codelineno-25-4"></a>
-<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">doSomethingInDaoLayer</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a>    public int doSomethingInDaoLayer(int a, int b) {
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a>        return a+b;
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a>    }
 <a id="__codelineno-25-8" name="__codelineno-25-8"></a>
-<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="p">}</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a>}
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
 <span class="normal"><a href="#__codelineno-26-2">2</a></span>
@@ -2953,15 +2951,15 @@
 <span class="normal"><a href="#__codelineno-26-6">6</a></span>
 <span class="normal"><a href="#__codelineno-26-7">7</a></span>
 <span class="normal"><a href="#__codelineno-26-8">8</a></span>
-<span class="normal"><a href="#__codelineno-26-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.dao</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-26-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a>package spring.core.dao;
 <a id="__codelineno-26-2" name="__codelineno-26-2"></a>
-<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Dao2</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">IDao</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a>public class Dao2 implements IDao {
 <a id="__codelineno-26-4" name="__codelineno-26-4"></a>
-<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">doSomethingInDaoLayer</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a>    public int doSomethingInDaoLayer(int a, int b) {
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a>        return a-b;
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a>    }
 <a id="__codelineno-26-8" name="__codelineno-26-8"></a>
-<a id="__codelineno-26-9" name="__codelineno-26-9"></a><span class="p">}</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9"></a>}
 </code></pre></div></td></tr></table></div>
 <p>La couche [métier] est implémentée par le package [spring.core.metier]. Elle présente l'interface [IMetier] suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
@@ -2969,12 +2967,12 @@
 <span class="normal"><a href="#__codelineno-27-3">3</a></span>
 <span class="normal"><a href="#__codelineno-27-4">4</a></span>
 <span class="normal"><a href="#__codelineno-27-5">5</a></span>
-<span class="normal"><a href="#__codelineno-27-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.metier</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-27-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a>package spring.core.metier;
 <a id="__codelineno-27-2" name="__codelineno-27-2"></a>
-<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IMetier</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a>public interface IMetier {
 <a id="__codelineno-27-4" name="__codelineno-27-4"></a>
-<a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">doSomethingInMetierLayer</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="p">}</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a>    public int doSomethingInMetierLayer(int a, int b);
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a>}
 </code></pre></div></td></tr></table></div>
 <p>Cette interface a deux implémentations : [Metier1] et [Metier2] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
@@ -2994,23 +2992,23 @@
 <span class="normal"><a href="#__codelineno-28-15">15</a></span>
 <span class="normal"><a href="#__codelineno-28-16">16</a></span>
 <span class="normal"><a href="#__codelineno-28-17">17</a></span>
-<span class="normal"><a href="#__codelineno-28-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.metier</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-28-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="n">package</span> <span class="n">spring</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">metier</span><span class="p">;</span>
 <a id="__codelineno-28-2" name="__codelineno-28-2"></a>
 <a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">spring.core.dao.IDao</span><span class="p">;</span>
 <a id="__codelineno-28-4" name="__codelineno-28-4"></a>
-<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Metier1</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">IMetier</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Metier1</span> <span class="n">implements</span> <span class="n">IMetier</span> <span class="p">{</span>
 <a id="__codelineno-28-6" name="__codelineno-28-6"></a>
-<a id="__codelineno-28-7" name="__codelineno-28-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IDao</span><span class="w"> </span><span class="n">dao</span><span class="p">;</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7"></a>    <span class="n">private</span> <span class="n">IDao</span> <span class="n">dao</span><span class="p">;</span>
 <a id="__codelineno-28-8" name="__codelineno-28-8"></a>
-<a id="__codelineno-28-9" name="__codelineno-28-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">doSomethingInMetierLayer</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-28-10" name="__codelineno-28-10"></a><span class="w">        </span><span class="n">a</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-28-11" name="__codelineno-28-11"></a><span class="w">        </span><span class="n">b</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-28-12" name="__codelineno-28-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dao</span><span class="p">.</span><span class="na">doSomethingInDaoLayer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<a id="__codelineno-28-13" name="__codelineno-28-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9"></a>    <span class="n">public</span> <span class="nb">int</span> <span class="n">doSomethingInMetierLayer</span><span class="p">(</span><span class="nb">int</span> <span class="n">a</span><span class="p">,</span> <span class="nb">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10"></a>        <span class="n">a</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11"></a>        <span class="n">b</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12"></a>        <span class="k">return</span> <span class="n">dao</span><span class="o">.</span><span class="n">doSomethingInDaoLayer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-28-13" name="__codelineno-28-13"></a>    <span class="p">}</span>
 <a id="__codelineno-28-14" name="__codelineno-28-14"></a>
-<a id="__codelineno-28-15" name="__codelineno-28-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDao</span><span class="p">(</span><span class="n">IDao</span><span class="w"> </span><span class="n">dao</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-28-16" name="__codelineno-28-16"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">dao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dao</span><span class="p">;</span>
-<a id="__codelineno-28-17" name="__codelineno-28-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-28-15" name="__codelineno-28-15"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">setDao</span><span class="p">(</span><span class="n">IDao</span> <span class="n">dao</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-28-16" name="__codelineno-28-16"></a>        <span class="n">this</span><span class="o">.</span><span class="n">dao</span> <span class="o">=</span> <span class="n">dao</span><span class="p">;</span>
+<a id="__codelineno-28-17" name="__codelineno-28-17"></a>    <span class="p">}</span>
 <a id="__codelineno-28-18" name="__codelineno-28-18"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1"> 1</a></span>
@@ -3032,23 +3030,23 @@
 <span class="normal"><a href="#__codelineno-29-17">17</a></span>
 <span class="normal"><a href="#__codelineno-29-18">18</a></span>
 <span class="normal"><a href="#__codelineno-29-19">19</a></span>
-<span class="normal"><a href="#__codelineno-29-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.metier</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-29-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="n">package</span> <span class="n">spring</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">metier</span><span class="p">;</span>
 <a id="__codelineno-29-2" name="__codelineno-29-2"></a>
 <a id="__codelineno-29-3" name="__codelineno-29-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">spring.core.dao.IDao</span><span class="p">;</span>
 <a id="__codelineno-29-4" name="__codelineno-29-4"></a>
-<a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Metier2</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">IMetier</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-29-5" name="__codelineno-29-5"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Metier2</span> <span class="n">implements</span> <span class="n">IMetier</span> <span class="p">{</span>
 <a id="__codelineno-29-6" name="__codelineno-29-6"></a>
-<a id="__codelineno-29-7" name="__codelineno-29-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IDao</span><span class="w"> </span><span class="n">dao</span><span class="p">;</span>
+<a id="__codelineno-29-7" name="__codelineno-29-7"></a>    <span class="n">private</span> <span class="n">IDao</span> <span class="n">dao</span><span class="p">;</span>
 <a id="__codelineno-29-8" name="__codelineno-29-8"></a>
-<a id="__codelineno-29-9" name="__codelineno-29-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">doSomethingInMetierLayer</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-29-10" name="__codelineno-29-10"></a><span class="w">        </span><span class="n">a</span><span class="o">--</span><span class="p">;</span>
-<a id="__codelineno-29-11" name="__codelineno-29-11"></a><span class="w">        </span><span class="n">b</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-29-12" name="__codelineno-29-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">dao</span><span class="p">.</span><span class="na">doSomethingInDaoLayer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<a id="__codelineno-29-13" name="__codelineno-29-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-29-9" name="__codelineno-29-9"></a>    <span class="n">public</span> <span class="nb">int</span> <span class="n">doSomethingInMetierLayer</span><span class="p">(</span><span class="nb">int</span> <span class="n">a</span><span class="p">,</span> <span class="nb">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-29-10" name="__codelineno-29-10"></a>        <span class="n">a</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-29-11" name="__codelineno-29-11"></a>        <span class="n">b</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-29-12" name="__codelineno-29-12"></a>        <span class="k">return</span> <span class="n">dao</span><span class="o">.</span><span class="n">doSomethingInDaoLayer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-29-13" name="__codelineno-29-13"></a>    <span class="p">}</span>
 <a id="__codelineno-29-14" name="__codelineno-29-14"></a>
-<a id="__codelineno-29-15" name="__codelineno-29-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setDao</span><span class="p">(</span><span class="n">IDao</span><span class="w"> </span><span class="n">dao</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-29-16" name="__codelineno-29-16"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">dao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dao</span><span class="p">;</span>
-<a id="__codelineno-29-17" name="__codelineno-29-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-29-15" name="__codelineno-29-15"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">setDao</span><span class="p">(</span><span class="n">IDao</span> <span class="n">dao</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-29-16" name="__codelineno-29-16"></a>        <span class="n">this</span><span class="o">.</span><span class="n">dao</span> <span class="o">=</span> <span class="n">dao</span><span class="p">;</span>
+<a id="__codelineno-29-17" name="__codelineno-29-17"></a>    <span class="p">}</span>
 <a id="__codelineno-29-18" name="__codelineno-29-18"></a>
 <a id="__codelineno-29-19" name="__codelineno-29-19"></a>
 <a id="__codelineno-29-20" name="__codelineno-29-20"></a><span class="p">}</span>
@@ -3059,12 +3057,12 @@
 <span class="normal"><a href="#__codelineno-30-3">3</a></span>
 <span class="normal"><a href="#__codelineno-30-4">4</a></span>
 <span class="normal"><a href="#__codelineno-30-5">5</a></span>
-<span class="normal"><a href="#__codelineno-30-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.ui</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-30-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a>package spring.core.ui;
 <a id="__codelineno-30-2" name="__codelineno-30-2"></a>
-<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IUi</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a>public interface IUi {
 <a id="__codelineno-30-4" name="__codelineno-30-4"></a>
-<a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">doSomethingInUiLayer</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<a id="__codelineno-30-6" name="__codelineno-30-6"></a><span class="p">}</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5"></a>    public int doSomethingInUiLayer(int a, int b);
+<a id="__codelineno-30-6" name="__codelineno-30-6"></a>}
 </code></pre></div></td></tr></table></div>
 <p>Cette interface a deux implémentations : [Ui1] et [Ui2] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1"> 1</a></span>
@@ -3085,23 +3083,23 @@
 <span class="normal"><a href="#__codelineno-31-16">16</a></span>
 <span class="normal"><a href="#__codelineno-31-17">17</a></span>
 <span class="normal"><a href="#__codelineno-31-18">18</a></span>
-<span class="normal"><a href="#__codelineno-31-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.ui</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-31-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="n">package</span> <span class="n">spring</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ui</span><span class="p">;</span>
 <a id="__codelineno-31-2" name="__codelineno-31-2"></a>
 <a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">spring.core.metier.IMetier</span><span class="p">;</span>
 <a id="__codelineno-31-4" name="__codelineno-31-4"></a>
-<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ui1</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">IUi</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Ui1</span> <span class="n">implements</span> <span class="n">IUi</span> <span class="p">{</span>
 <a id="__codelineno-31-6" name="__codelineno-31-6"></a>
-<a id="__codelineno-31-7" name="__codelineno-31-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IMetier</span><span class="w"> </span><span class="n">metier</span><span class="p">;</span>
+<a id="__codelineno-31-7" name="__codelineno-31-7"></a>    <span class="n">private</span> <span class="n">IMetier</span> <span class="n">metier</span><span class="p">;</span>
 <a id="__codelineno-31-8" name="__codelineno-31-8"></a>
-<a id="__codelineno-31-9" name="__codelineno-31-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">doSomethingInUiLayer</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-31-10" name="__codelineno-31-10"></a><span class="w">        </span><span class="n">a</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-31-11" name="__codelineno-31-11"></a><span class="w">        </span><span class="n">b</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-31-12" name="__codelineno-31-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">metier</span><span class="p">.</span><span class="na">doSomethingInMetierLayer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<a id="__codelineno-31-13" name="__codelineno-31-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-31-9" name="__codelineno-31-9"></a>    <span class="n">public</span> <span class="nb">int</span> <span class="n">doSomethingInUiLayer</span><span class="p">(</span><span class="nb">int</span> <span class="n">a</span><span class="p">,</span> <span class="nb">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-31-10" name="__codelineno-31-10"></a>        <span class="n">a</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-31-11" name="__codelineno-31-11"></a>        <span class="n">b</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-31-12" name="__codelineno-31-12"></a>        <span class="k">return</span> <span class="n">metier</span><span class="o">.</span><span class="n">doSomethingInMetierLayer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-31-13" name="__codelineno-31-13"></a>    <span class="p">}</span>
 <a id="__codelineno-31-14" name="__codelineno-31-14"></a>
-<a id="__codelineno-31-15" name="__codelineno-31-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setMetier</span><span class="p">(</span><span class="n">IMetier</span><span class="w"> </span><span class="n">metier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-31-16" name="__codelineno-31-16"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metier</span><span class="p">;</span>
-<a id="__codelineno-31-17" name="__codelineno-31-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-31-15" name="__codelineno-31-15"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">setMetier</span><span class="p">(</span><span class="n">IMetier</span> <span class="n">metier</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-31-16" name="__codelineno-31-16"></a>        <span class="n">this</span><span class="o">.</span><span class="n">metier</span> <span class="o">=</span> <span class="n">metier</span><span class="p">;</span>
+<a id="__codelineno-31-17" name="__codelineno-31-17"></a>    <span class="p">}</span>
 <a id="__codelineno-31-18" name="__codelineno-31-18"></a>
 <a id="__codelineno-31-19" name="__codelineno-31-19"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -3123,23 +3121,23 @@
 <span class="normal"><a href="#__codelineno-32-16">16</a></span>
 <span class="normal"><a href="#__codelineno-32-17">17</a></span>
 <span class="normal"><a href="#__codelineno-32-18">18</a></span>
-<span class="normal"><a href="#__codelineno-32-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.ui</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-32-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="n">package</span> <span class="n">spring</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">ui</span><span class="p">;</span>
 <a id="__codelineno-32-2" name="__codelineno-32-2"></a>
 <a id="__codelineno-32-3" name="__codelineno-32-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">spring.core.metier.IMetier</span><span class="p">;</span>
 <a id="__codelineno-32-4" name="__codelineno-32-4"></a>
-<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Ui2</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">IUi</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Ui2</span> <span class="n">implements</span> <span class="n">IUi</span> <span class="p">{</span>
 <a id="__codelineno-32-6" name="__codelineno-32-6"></a>
-<a id="__codelineno-32-7" name="__codelineno-32-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IMetier</span><span class="w"> </span><span class="n">metier</span><span class="p">;</span>
+<a id="__codelineno-32-7" name="__codelineno-32-7"></a>    <span class="n">private</span> <span class="n">IMetier</span> <span class="n">metier</span><span class="p">;</span>
 <a id="__codelineno-32-8" name="__codelineno-32-8"></a>
-<a id="__codelineno-32-9" name="__codelineno-32-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">doSomethingInUiLayer</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-32-10" name="__codelineno-32-10"></a><span class="w">        </span><span class="n">a</span><span class="o">--</span><span class="p">;</span>
-<a id="__codelineno-32-11" name="__codelineno-32-11"></a><span class="w">        </span><span class="n">b</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-32-12" name="__codelineno-32-12"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">metier</span><span class="p">.</span><span class="na">doSomethingInMetierLayer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
-<a id="__codelineno-32-13" name="__codelineno-32-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-32-9" name="__codelineno-32-9"></a>    <span class="n">public</span> <span class="nb">int</span> <span class="n">doSomethingInUiLayer</span><span class="p">(</span><span class="nb">int</span> <span class="n">a</span><span class="p">,</span> <span class="nb">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-32-10" name="__codelineno-32-10"></a>        <span class="n">a</span><span class="o">--</span><span class="p">;</span>
+<a id="__codelineno-32-11" name="__codelineno-32-11"></a>        <span class="n">b</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-32-12" name="__codelineno-32-12"></a>        <span class="k">return</span> <span class="n">metier</span><span class="o">.</span><span class="n">doSomethingInMetierLayer</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">);</span>
+<a id="__codelineno-32-13" name="__codelineno-32-13"></a>    <span class="p">}</span>
 <a id="__codelineno-32-14" name="__codelineno-32-14"></a>
-<a id="__codelineno-32-15" name="__codelineno-32-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setMetier</span><span class="p">(</span><span class="n">IMetier</span><span class="w"> </span><span class="n">metier</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-32-16" name="__codelineno-32-16"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">metier</span><span class="p">;</span>
-<a id="__codelineno-32-17" name="__codelineno-32-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-32-15" name="__codelineno-32-15"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">setMetier</span><span class="p">(</span><span class="n">IMetier</span> <span class="n">metier</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-32-16" name="__codelineno-32-16"></a>        <span class="n">this</span><span class="o">.</span><span class="n">metier</span> <span class="o">=</span> <span class="n">metier</span><span class="p">;</span>
+<a id="__codelineno-32-17" name="__codelineno-32-17"></a>    <span class="p">}</span>
 <a id="__codelineno-32-18" name="__codelineno-32-18"></a>
 <a id="__codelineno-32-19" name="__codelineno-32-19"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -3204,7 +3202,7 @@
 <span class="normal"><a href="#__codelineno-33-55">55</a></span>
 <span class="normal"><a href="#__codelineno-33-56">56</a></span>
 <span class="normal"><a href="#__codelineno-33-57">57</a></span>
-<span class="normal"><a href="#__codelineno-33-58">58</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.config</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-33-58">58</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="n">package</span> <span class="n">spring</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">config</span><span class="p">;</span>
 <a id="__codelineno-33-2" name="__codelineno-33-2"></a>
 <a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Bean</span><span class="p">;</span>
 <a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Configuration</span><span class="p">;</span>
@@ -3220,47 +3218,47 @@
 <a id="__codelineno-33-14" name="__codelineno-33-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">spring.core.ui.Ui2</span><span class="p">;</span>
 <a id="__codelineno-33-15" name="__codelineno-33-15"></a>
 <a id="__codelineno-33-16" name="__codelineno-33-16"></a><span class="nd">@Configuration</span>
-<a id="__codelineno-33-17" name="__codelineno-33-17"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Config</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-17" name="__codelineno-33-17"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Config</span> <span class="p">{</span>
 <a id="__codelineno-33-18" name="__codelineno-33-18"></a>
-<a id="__codelineno-33-19" name="__codelineno-33-19"></a><span class="w">    </span><span class="c1">// -------------- implémentation [Ui1, Metier1, Dao1]</span>
-<a id="__codelineno-33-20" name="__codelineno-33-20"></a><span class="w">    </span><span class="nd">@Bean</span>
-<a id="__codelineno-33-21" name="__codelineno-33-21"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">IDao</span><span class="w"> </span><span class="nf">dao1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-33-22" name="__codelineno-33-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dao1</span><span class="p">();</span>
-<a id="__codelineno-33-23" name="__codelineno-33-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-33-19" name="__codelineno-33-19"></a>    <span class="o">//</span> <span class="o">--------------</span> <span class="n">implémentation</span> <span class="p">[</span><span class="n">Ui1</span><span class="p">,</span> <span class="n">Metier1</span><span class="p">,</span> <span class="n">Dao1</span><span class="p">]</span>
+<a id="__codelineno-33-20" name="__codelineno-33-20"></a>    <span class="nd">@Bean</span>
+<a id="__codelineno-33-21" name="__codelineno-33-21"></a>    <span class="n">public</span> <span class="n">IDao</span> <span class="n">dao1</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-33-22" name="__codelineno-33-22"></a>        <span class="k">return</span> <span class="n">new</span> <span class="n">Dao1</span><span class="p">();</span>
+<a id="__codelineno-33-23" name="__codelineno-33-23"></a>    <span class="p">}</span>
 <a id="__codelineno-33-24" name="__codelineno-33-24"></a>
-<a id="__codelineno-33-25" name="__codelineno-33-25"></a><span class="w">    </span><span class="nd">@Bean</span>
-<a id="__codelineno-33-26" name="__codelineno-33-26"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">IMetier</span><span class="w"> </span><span class="nf">metier1</span><span class="p">(</span><span class="n">IDao</span><span class="w"> </span><span class="n">dao1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-33-27" name="__codelineno-33-27"></a><span class="w">        </span><span class="n">Metier1</span><span class="w"> </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Metier1</span><span class="p">();</span>
-<a id="__codelineno-33-28" name="__codelineno-33-28"></a><span class="w">        </span><span class="n">metier</span><span class="p">.</span><span class="na">setDao</span><span class="p">(</span><span class="n">dao1</span><span class="p">);</span>
-<a id="__codelineno-33-29" name="__codelineno-33-29"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">metier</span><span class="p">;</span>
-<a id="__codelineno-33-30" name="__codelineno-33-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-33-25" name="__codelineno-33-25"></a>    <span class="nd">@Bean</span>
+<a id="__codelineno-33-26" name="__codelineno-33-26"></a>    <span class="n">public</span> <span class="n">IMetier</span> <span class="n">metier1</span><span class="p">(</span><span class="n">IDao</span> <span class="n">dao1</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-33-27" name="__codelineno-33-27"></a>        <span class="n">Metier1</span> <span class="n">metier</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Metier1</span><span class="p">();</span>
+<a id="__codelineno-33-28" name="__codelineno-33-28"></a>        <span class="n">metier</span><span class="o">.</span><span class="n">setDao</span><span class="p">(</span><span class="n">dao1</span><span class="p">);</span>
+<a id="__codelineno-33-29" name="__codelineno-33-29"></a>        <span class="k">return</span> <span class="n">metier</span><span class="p">;</span>
+<a id="__codelineno-33-30" name="__codelineno-33-30"></a>    <span class="p">}</span>
 <a id="__codelineno-33-31" name="__codelineno-33-31"></a>
-<a id="__codelineno-33-32" name="__codelineno-33-32"></a><span class="w">    </span><span class="nd">@Bean</span>
-<a id="__codelineno-33-33" name="__codelineno-33-33"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">IUi</span><span class="w"> </span><span class="nf">ui1</span><span class="p">(</span><span class="n">IMetier</span><span class="w"> </span><span class="n">metier1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-33-34" name="__codelineno-33-34"></a><span class="w">        </span><span class="n">Ui1</span><span class="w"> </span><span class="n">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Ui1</span><span class="p">();</span>
-<a id="__codelineno-33-35" name="__codelineno-33-35"></a><span class="w">        </span><span class="n">ui</span><span class="p">.</span><span class="na">setMetier</span><span class="p">(</span><span class="n">metier1</span><span class="p">);</span>
-<a id="__codelineno-33-36" name="__codelineno-33-36"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ui</span><span class="p">;</span>
-<a id="__codelineno-33-37" name="__codelineno-33-37"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-33-32" name="__codelineno-33-32"></a>    <span class="nd">@Bean</span>
+<a id="__codelineno-33-33" name="__codelineno-33-33"></a>    <span class="n">public</span> <span class="n">IUi</span> <span class="n">ui1</span><span class="p">(</span><span class="n">IMetier</span> <span class="n">metier1</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-33-34" name="__codelineno-33-34"></a>        <span class="n">Ui1</span> <span class="n">ui</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Ui1</span><span class="p">();</span>
+<a id="__codelineno-33-35" name="__codelineno-33-35"></a>        <span class="n">ui</span><span class="o">.</span><span class="n">setMetier</span><span class="p">(</span><span class="n">metier1</span><span class="p">);</span>
+<a id="__codelineno-33-36" name="__codelineno-33-36"></a>        <span class="k">return</span> <span class="n">ui</span><span class="p">;</span>
+<a id="__codelineno-33-37" name="__codelineno-33-37"></a>    <span class="p">}</span>
 <a id="__codelineno-33-38" name="__codelineno-33-38"></a>
-<a id="__codelineno-33-39" name="__codelineno-33-39"></a><span class="w">    </span><span class="c1">// -------------- implémentation [Ui2, Metier2, Dao2]</span>
-<a id="__codelineno-33-40" name="__codelineno-33-40"></a><span class="w">    </span><span class="nd">@Bean</span>
-<a id="__codelineno-33-41" name="__codelineno-33-41"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">IDao</span><span class="w"> </span><span class="nf">dao2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-33-42" name="__codelineno-33-42"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dao2</span><span class="p">();</span>
-<a id="__codelineno-33-43" name="__codelineno-33-43"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-33-39" name="__codelineno-33-39"></a>    <span class="o">//</span> <span class="o">--------------</span> <span class="n">implémentation</span> <span class="p">[</span><span class="n">Ui2</span><span class="p">,</span> <span class="n">Metier2</span><span class="p">,</span> <span class="n">Dao2</span><span class="p">]</span>
+<a id="__codelineno-33-40" name="__codelineno-33-40"></a>    <span class="nd">@Bean</span>
+<a id="__codelineno-33-41" name="__codelineno-33-41"></a>    <span class="n">public</span> <span class="n">IDao</span> <span class="n">dao2</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-33-42" name="__codelineno-33-42"></a>        <span class="k">return</span> <span class="n">new</span> <span class="n">Dao2</span><span class="p">();</span>
+<a id="__codelineno-33-43" name="__codelineno-33-43"></a>    <span class="p">}</span>
 <a id="__codelineno-33-44" name="__codelineno-33-44"></a>
-<a id="__codelineno-33-45" name="__codelineno-33-45"></a><span class="w">    </span><span class="nd">@Bean</span>
-<a id="__codelineno-33-46" name="__codelineno-33-46"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">IMetier</span><span class="w"> </span><span class="nf">metier2</span><span class="p">(</span><span class="n">IDao</span><span class="w"> </span><span class="n">dao2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-33-47" name="__codelineno-33-47"></a><span class="w">        </span><span class="n">Metier2</span><span class="w"> </span><span class="n">metier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Metier2</span><span class="p">();</span>
-<a id="__codelineno-33-48" name="__codelineno-33-48"></a><span class="w">        </span><span class="n">metier</span><span class="p">.</span><span class="na">setDao</span><span class="p">(</span><span class="n">dao2</span><span class="p">);</span>
-<a id="__codelineno-33-49" name="__codelineno-33-49"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">metier</span><span class="p">;</span>
-<a id="__codelineno-33-50" name="__codelineno-33-50"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-33-45" name="__codelineno-33-45"></a>    <span class="nd">@Bean</span>
+<a id="__codelineno-33-46" name="__codelineno-33-46"></a>    <span class="n">public</span> <span class="n">IMetier</span> <span class="n">metier2</span><span class="p">(</span><span class="n">IDao</span> <span class="n">dao2</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-33-47" name="__codelineno-33-47"></a>        <span class="n">Metier2</span> <span class="n">metier</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Metier2</span><span class="p">();</span>
+<a id="__codelineno-33-48" name="__codelineno-33-48"></a>        <span class="n">metier</span><span class="o">.</span><span class="n">setDao</span><span class="p">(</span><span class="n">dao2</span><span class="p">);</span>
+<a id="__codelineno-33-49" name="__codelineno-33-49"></a>        <span class="k">return</span> <span class="n">metier</span><span class="p">;</span>
+<a id="__codelineno-33-50" name="__codelineno-33-50"></a>    <span class="p">}</span>
 <a id="__codelineno-33-51" name="__codelineno-33-51"></a>
-<a id="__codelineno-33-52" name="__codelineno-33-52"></a><span class="w">    </span><span class="nd">@Bean</span>
-<a id="__codelineno-33-53" name="__codelineno-33-53"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">IUi</span><span class="w"> </span><span class="nf">ui2</span><span class="p">(</span><span class="n">IMetier</span><span class="w"> </span><span class="n">metier2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-33-54" name="__codelineno-33-54"></a><span class="w">        </span><span class="n">Ui2</span><span class="w"> </span><span class="n">ui</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Ui2</span><span class="p">();</span>
-<a id="__codelineno-33-55" name="__codelineno-33-55"></a><span class="w">        </span><span class="n">ui</span><span class="p">.</span><span class="na">setMetier</span><span class="p">(</span><span class="n">metier2</span><span class="p">);</span>
-<a id="__codelineno-33-56" name="__codelineno-33-56"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">ui</span><span class="p">;</span>
-<a id="__codelineno-33-57" name="__codelineno-33-57"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-33-52" name="__codelineno-33-52"></a>    <span class="nd">@Bean</span>
+<a id="__codelineno-33-53" name="__codelineno-33-53"></a>    <span class="n">public</span> <span class="n">IUi</span> <span class="n">ui2</span><span class="p">(</span><span class="n">IMetier</span> <span class="n">metier2</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-33-54" name="__codelineno-33-54"></a>        <span class="n">Ui2</span> <span class="n">ui</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Ui2</span><span class="p">();</span>
+<a id="__codelineno-33-55" name="__codelineno-33-55"></a>        <span class="n">ui</span><span class="o">.</span><span class="n">setMetier</span><span class="p">(</span><span class="n">metier2</span><span class="p">);</span>
+<a id="__codelineno-33-56" name="__codelineno-33-56"></a>        <span class="k">return</span> <span class="n">ui</span><span class="p">;</span>
+<a id="__codelineno-33-57" name="__codelineno-33-57"></a>    <span class="p">}</span>
 <a id="__codelineno-33-58" name="__codelineno-33-58"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
@@ -3293,7 +3291,7 @@
 <span class="normal"><a href="#__codelineno-34-17">17</a></span>
 <span class="normal"><a href="#__codelineno-34-18">18</a></span>
 <span class="normal"><a href="#__codelineno-34-19">19</a></span>
-<span class="normal"><a href="#__codelineno-34-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.core.tests</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-34-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">package</span> <span class="n">spring</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">tests</span><span class="p">;</span>
 <a id="__codelineno-34-2" name="__codelineno-34-2"></a>
 <a id="__codelineno-34-3" name="__codelineno-34-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Assert</span><span class="p">;</span>
 <a id="__codelineno-34-4" name="__codelineno-34-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Test</span><span class="p">;</span>
@@ -3308,14 +3306,15 @@
 <a id="__codelineno-34-13" name="__codelineno-34-13"></a><span class="kn">import</span><span class="w"> </span><span class="nn">spring.core.metier.IMetier</span><span class="p">;</span>
 <a id="__codelineno-34-14" name="__codelineno-34-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">spring.core.ui.IUi</span><span class="p">;</span>
 <a id="__codelineno-34-15" name="__codelineno-34-15"></a>
-<a id="__codelineno-34-16" name="__codelineno-34-16"></a><span class="nd">@SpringApplicationConfiguration</span><span class="p">(</span><span class="n">classes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Config</span><span class="p">.</span><span class="na">class</span><span class="w"> </span><span class="p">})</span>
-<a id="__codelineno-34-17" name="__codelineno-34-17"></a><span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringJUnit4ClassRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
-<a id="__codelineno-34-18" name="__codelineno-34-18"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JUnitTest</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-34-19" name="__codelineno-34-19"></a><span class="p">...</span>
+<a id="__codelineno-34-16" name="__codelineno-34-16"></a><span class="nd">@SpringApplicationConfiguration</span><span class="p">(</span><span class="n">classes</span> <span class="o">=</span> <span class="p">{</span> <span class="n">Config</span><span class="o">.</span><span class="k">class</span><span class="w"> </span><span class="err">})</span>
+<a id="__codelineno-34-17" name="__codelineno-34-17"></a><span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringJUnit4ClassRunner</span><span class="o">.</span><span class="n">class</span><span class="p">)</span>
+<a id="__codelineno-34-18" name="__codelineno-34-18"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">JUnitTest</span> <span class="p">{</span>
+<a id="__codelineno-34-19" name="__codelineno-34-19"></a><span class="o">...</span>
 <a id="__codelineno-34-20" name="__codelineno-34-20"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ligne 16 : l'annotation [@SpringApplicationConfiguration] est une annotation du projet Spring Boot Test (ligne 8). Elle est amenée par la dépendance suivante du fichier [pom.xml] :
+<li>ligne 16 : l'annotation [@SpringApplicationConfiguration] est une annotation du projet Spring Boot Test (ligne 8). Elle est amenée par la dépendance suivante du fichier [pom.xml] :</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span>
 <span class="normal"><a href="#__codelineno-35-2">2</a></span>
 <span class="normal"><a href="#__codelineno-35-3">3</a></span>
@@ -3323,8 +3322,7 @@
 <a id="__codelineno-35-2" name="__codelineno-35-2"></a>            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
 <a id="__codelineno-35-3" name="__codelineno-35-3"></a>            &lt;artifactId&gt;spring-boot-starter&lt;/artifactId&gt;
 <a id="__codelineno-35-4" name="__codelineno-35-4"></a>&lt;/dependency&gt;
-</code></pre></div></td></tr></table></div></li>
-</ul>
+</code></pre></div></td></tr></table></div>
 <p>Cette annotation a pour paramètre la liste des classes de configuration à utiliser pour construire le contexte Spring nécessaire au test. Ici nous utilisons la classe de configuration [Config] déjà présentée ;</p>
 <ul>
 <li>ligne 17 : l'annotation [@RunWith] est une annotation JUnit (ligne 5). Son paramètre est la classe chargée de conduire les tests à la place de la classe par défaut du framework Junit. Cette classe est une classe Spring (ligne 9). Elle va utiliser les annotations Spring présentes dans la classe de test ;</li>
@@ -3381,58 +3379,58 @@
 <span class="normal"><a href="#__codelineno-36-49">49</a></span>
 <span class="normal"><a href="#__codelineno-36-50">50</a></span>
 <span class="normal"><a href="#__codelineno-36-51">51</a></span>
-<span class="normal"><a href="#__codelineno-36-52">52</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="p">...</span>
+<span class="normal"><a href="#__codelineno-36-52">52</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a>...
 <a id="__codelineno-36-2" name="__codelineno-36-2"></a>
-<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="nd">@SpringApplicationConfiguration</span><span class="p">(</span><span class="n">classes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">Config</span><span class="p">.</span><span class="na">class</span><span class="w"> </span><span class="p">})</span>
-<a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringJUnit4ClassRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
-<a id="__codelineno-36-5" name="__codelineno-36-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JUnitTest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a>@SpringApplicationConfiguration(classes = { Config.class })
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a>@RunWith(SpringJUnit4ClassRunner.class)
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a>public class JUnitTest {
 <a id="__codelineno-36-6" name="__codelineno-36-6"></a>
-<a id="__codelineno-36-7" name="__codelineno-36-7"></a><span class="w">    </span><span class="c1">// couche [UI]</span>
-<a id="__codelineno-36-8" name="__codelineno-36-8"></a><span class="w">    </span><span class="nd">@Autowired</span>
-<a id="__codelineno-36-9" name="__codelineno-36-9"></a><span class="w">    </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&quot;ui1&quot;</span><span class="p">)</span>
-<a id="__codelineno-36-10" name="__codelineno-36-10"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IUi</span><span class="w"> </span><span class="n">ui1</span><span class="p">;</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7"></a>    // couche [UI]
+<a id="__codelineno-36-8" name="__codelineno-36-8"></a>    @Autowired
+<a id="__codelineno-36-9" name="__codelineno-36-9"></a>    @Qualifier(&quot;ui1&quot;)
+<a id="__codelineno-36-10" name="__codelineno-36-10"></a>    private IUi ui1;
 <a id="__codelineno-36-11" name="__codelineno-36-11"></a>
-<a id="__codelineno-36-12" name="__codelineno-36-12"></a><span class="w">    </span><span class="nd">@Autowired</span>
-<a id="__codelineno-36-13" name="__codelineno-36-13"></a><span class="w">    </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&quot;ui2&quot;</span><span class="p">)</span>
-<a id="__codelineno-36-14" name="__codelineno-36-14"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IUi</span><span class="w"> </span><span class="n">ui2</span><span class="p">;</span>
+<a id="__codelineno-36-12" name="__codelineno-36-12"></a>    @Autowired
+<a id="__codelineno-36-13" name="__codelineno-36-13"></a>    @Qualifier(&quot;ui2&quot;)
+<a id="__codelineno-36-14" name="__codelineno-36-14"></a>    private IUi ui2;
 <a id="__codelineno-36-15" name="__codelineno-36-15"></a>
-<a id="__codelineno-36-16" name="__codelineno-36-16"></a><span class="w">    </span><span class="c1">// couche [métier]</span>
-<a id="__codelineno-36-17" name="__codelineno-36-17"></a><span class="w">    </span><span class="nd">@Autowired</span>
-<a id="__codelineno-36-18" name="__codelineno-36-18"></a><span class="w">    </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&quot;metier1&quot;</span><span class="p">)</span>
-<a id="__codelineno-36-19" name="__codelineno-36-19"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IMetier</span><span class="w"> </span><span class="n">metier1</span><span class="p">;</span>
+<a id="__codelineno-36-16" name="__codelineno-36-16"></a>    // couche [métier]
+<a id="__codelineno-36-17" name="__codelineno-36-17"></a>    @Autowired
+<a id="__codelineno-36-18" name="__codelineno-36-18"></a>    @Qualifier(&quot;metier1&quot;)
+<a id="__codelineno-36-19" name="__codelineno-36-19"></a>    private IMetier metier1;
 <a id="__codelineno-36-20" name="__codelineno-36-20"></a>
-<a id="__codelineno-36-21" name="__codelineno-36-21"></a><span class="w">    </span><span class="nd">@Autowired</span>
-<a id="__codelineno-36-22" name="__codelineno-36-22"></a><span class="w">    </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&quot;metier2&quot;</span><span class="p">)</span>
-<a id="__codelineno-36-23" name="__codelineno-36-23"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IMetier</span><span class="w"> </span><span class="n">metier2</span><span class="p">;</span>
+<a id="__codelineno-36-21" name="__codelineno-36-21"></a>    @Autowired
+<a id="__codelineno-36-22" name="__codelineno-36-22"></a>    @Qualifier(&quot;metier2&quot;)
+<a id="__codelineno-36-23" name="__codelineno-36-23"></a>    private IMetier metier2;
 <a id="__codelineno-36-24" name="__codelineno-36-24"></a>
-<a id="__codelineno-36-25" name="__codelineno-36-25"></a><span class="w">    </span><span class="c1">// couche [dao]</span>
-<a id="__codelineno-36-26" name="__codelineno-36-26"></a><span class="w">    </span><span class="nd">@Autowired</span>
-<a id="__codelineno-36-27" name="__codelineno-36-27"></a><span class="w">    </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&quot;dao1&quot;</span><span class="p">)</span>
-<a id="__codelineno-36-28" name="__codelineno-36-28"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IDao</span><span class="w"> </span><span class="n">dao1</span><span class="p">;</span>
+<a id="__codelineno-36-25" name="__codelineno-36-25"></a>    // couche [dao]
+<a id="__codelineno-36-26" name="__codelineno-36-26"></a>    @Autowired
+<a id="__codelineno-36-27" name="__codelineno-36-27"></a>    @Qualifier(&quot;dao1&quot;)
+<a id="__codelineno-36-28" name="__codelineno-36-28"></a>    private IDao dao1;
 <a id="__codelineno-36-29" name="__codelineno-36-29"></a>
-<a id="__codelineno-36-30" name="__codelineno-36-30"></a><span class="w">    </span><span class="nd">@Autowired</span>
-<a id="__codelineno-36-31" name="__codelineno-36-31"></a><span class="w">    </span><span class="nd">@Qualifier</span><span class="p">(</span><span class="s">&quot;dao2&quot;</span><span class="p">)</span>
-<a id="__codelineno-36-32" name="__codelineno-36-32"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IDao</span><span class="w"> </span><span class="n">dao2</span><span class="p">;</span>
+<a id="__codelineno-36-30" name="__codelineno-36-30"></a>    @Autowired
+<a id="__codelineno-36-31" name="__codelineno-36-31"></a>    @Qualifier(&quot;dao2&quot;)
+<a id="__codelineno-36-32" name="__codelineno-36-32"></a>    private IDao dao2;
 <a id="__codelineno-36-33" name="__codelineno-36-33"></a>
-<a id="__codelineno-36-34" name="__codelineno-36-34"></a><span class="w">    </span><span class="nd">@Test</span>
-<a id="__codelineno-36-35" name="__codelineno-36-35"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testDao</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-36-36" name="__codelineno-36-36"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">dao1</span><span class="p">.</span><span class="na">doSomethingInDaoLayer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">));</span>
-<a id="__codelineno-36-37" name="__codelineno-36-37"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">dao2</span><span class="p">.</span><span class="na">doSomethingInDaoLayer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">));</span>
-<a id="__codelineno-36-38" name="__codelineno-36-38"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-36-34" name="__codelineno-36-34"></a>    @Test
+<a id="__codelineno-36-35" name="__codelineno-36-35"></a>    public void testDao() {
+<a id="__codelineno-36-36" name="__codelineno-36-36"></a>        Assert.assertEquals(30, dao1.doSomethingInDaoLayer(10, 20));
+<a id="__codelineno-36-37" name="__codelineno-36-37"></a>        Assert.assertEquals(-10, dao2.doSomethingInDaoLayer(10, 20));
+<a id="__codelineno-36-38" name="__codelineno-36-38"></a>    }
 <a id="__codelineno-36-39" name="__codelineno-36-39"></a>
-<a id="__codelineno-36-40" name="__codelineno-36-40"></a><span class="w">    </span><span class="nd">@Test</span>
-<a id="__codelineno-36-41" name="__codelineno-36-41"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testMetier</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-36-42" name="__codelineno-36-42"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="n">metier1</span><span class="p">.</span><span class="na">doSomethingInMetierLayer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">));</span>
-<a id="__codelineno-36-43" name="__codelineno-36-43"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="o">-</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="n">metier2</span><span class="p">.</span><span class="na">doSomethingInMetierLayer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">));</span>
-<a id="__codelineno-36-44" name="__codelineno-36-44"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-36-40" name="__codelineno-36-40"></a>    @Test
+<a id="__codelineno-36-41" name="__codelineno-36-41"></a>    public void testMetier() {
+<a id="__codelineno-36-42" name="__codelineno-36-42"></a>        Assert.assertEquals(32, metier1.doSomethingInMetierLayer(10, 20));
+<a id="__codelineno-36-43" name="__codelineno-36-43"></a>        Assert.assertEquals(-12, metier2.doSomethingInMetierLayer(10, 20));
+<a id="__codelineno-36-44" name="__codelineno-36-44"></a>    }
 <a id="__codelineno-36-45" name="__codelineno-36-45"></a>
-<a id="__codelineno-36-46" name="__codelineno-36-46"></a><span class="w">    </span><span class="nd">@Test</span>
-<a id="__codelineno-36-47" name="__codelineno-36-47"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testUI</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-36-48" name="__codelineno-36-48"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="n">ui1</span><span class="p">.</span><span class="na">doSomethingInUiLayer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">));</span>
-<a id="__codelineno-36-49" name="__codelineno-36-49"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="o">-</span><span class="mi">14</span><span class="p">,</span><span class="w"> </span><span class="n">ui2</span><span class="p">.</span><span class="na">doSomethingInUiLayer</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">));</span>
-<a id="__codelineno-36-50" name="__codelineno-36-50"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-36-46" name="__codelineno-36-46"></a>    @Test
+<a id="__codelineno-36-47" name="__codelineno-36-47"></a>    public void testUI() {
+<a id="__codelineno-36-48" name="__codelineno-36-48"></a>        Assert.assertEquals(34, ui1.doSomethingInUiLayer(10, 20));
+<a id="__codelineno-36-49" name="__codelineno-36-49"></a>        Assert.assertEquals(-14, ui2.doSomethingInUiLayer(10, 20));
+<a id="__codelineno-36-50" name="__codelineno-36-50"></a>    }
 <a id="__codelineno-36-51" name="__codelineno-36-51"></a>
-<a id="__codelineno-36-52" name="__codelineno-36-52"></a><span class="p">}</span>
+<a id="__codelineno-36-52" name="__codelineno-36-52"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lignes 8-10 : on injecte (ligne 8) le bean nommé (ligne 9) [ui1]. On remarquera ligne 10 qu'on injecte une instance d'interface et non une instance de classe ;</li>
@@ -3532,7 +3530,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>

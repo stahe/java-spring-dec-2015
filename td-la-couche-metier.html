@@ -1115,90 +1115,88 @@
 <span class="normal"><a href="#__codelineno-0-61">61</a></span>
 <span class="normal"><a href="#__codelineno-0-62">62</a></span>
 <span class="normal"><a href="#__codelineno-0-63">63</a></span>
-<span class="normal"><a href="#__codelineno-0-64">64</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>elections-metier-dao-jdbc<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<span class="normal"><a href="#__codelineno-0-64">64</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    &lt;groupId&gt;istia.st.elections&lt;/groupId&gt;
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    &lt;artifactId&gt;elections-metier-dao-jdbc&lt;/artifactId&gt;
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;parent&gt;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-parent<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="nt">&lt;version&gt;</span>1.2.7.RELEASE<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="nt">&lt;/parent&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    &lt;parent&gt;
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>        &lt;version&gt;1.2.7.RELEASE&lt;/version&gt;
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>    &lt;/parent&gt;
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="nt">&lt;properties&gt;</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="nt">&lt;project.build.sourceEncoding&gt;</span>UTF-8<span class="nt">&lt;/project.build.sourceEncoding&gt;</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="nt">&lt;java.version&gt;</span>1.8<span class="nt">&lt;/java.version&gt;</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="nt">&lt;/properties&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>    &lt;properties&gt;
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>        &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>        &lt;java.version&gt;1.8&lt;/java.version&gt;
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>    &lt;/properties&gt;
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="cm">&lt;!-- DAO --&gt;</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>elections-dao-jdbc-01<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">            </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">        </span><span class="cm">&lt;!-- Spring Boot --&gt;</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">            </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">        </span><span class="cm">&lt;!-- Spring Boot Test --&gt;</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">            </span><span class="nt">&lt;groupId&gt;</span>org.springframework.boot<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>spring-boot-starter-test<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">            </span><span class="nt">&lt;scope&gt;</span>test<span class="nt">&lt;/scope&gt;</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>    &lt;dependencies&gt;
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>        &lt;!-- DAO --&gt;
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>        &lt;dependency&gt;
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>            &lt;groupId&gt;istia.st.elections&lt;/groupId&gt;
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>            &lt;artifactId&gt;elections-dao-jdbc-01&lt;/artifactId&gt;
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>            &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>        &lt;/dependency&gt;
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>        &lt;!-- Spring Boot --&gt;
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>        &lt;dependency&gt;
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>            &lt;artifactId&gt;spring-boot&lt;/artifactId&gt;
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>            &lt;scope&gt;test&lt;/scope&gt;
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a>        &lt;/dependency&gt;
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a>        &lt;!-- Spring Boot Test --&gt;
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a>        &lt;dependency&gt;
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a>            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a>            &lt;artifactId&gt;spring-boot-starter-test&lt;/artifactId&gt;
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a>            &lt;scope&gt;test&lt;/scope&gt;
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a>        &lt;/dependency&gt;
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a>    &lt;/dependencies&gt;
 <a id="__codelineno-0-39" name="__codelineno-0-39"></a>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">    </span><span class="cm">&lt;!-- plugins --&gt;</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="nt">&lt;build&gt;</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">        </span><span class="nt">&lt;plugins&gt;</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-assembly-plugin<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">                </span><span class="nt">&lt;configuration&gt;</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">                    </span><span class="nt">&lt;archive&gt;</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">                        </span><span class="nt">&lt;manifest&gt;</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">                            </span><span class="nt">&lt;mainClass&gt;</span>config.AppConfig<span class="nt">&lt;/mainClass&gt;</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">                        </span><span class="nt">&lt;/manifest&gt;</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">                    </span><span class="nt">&lt;/archive&gt;</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">                    </span><span class="nt">&lt;descriptorRefs&gt;</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">                        </span><span class="nt">&lt;descriptorRef&gt;</span>jar-with-dependencies<span class="nt">&lt;/descriptorRef&gt;</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">                    </span><span class="nt">&lt;/descriptorRefs&gt;</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">                </span><span class="nt">&lt;/configuration&gt;</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">            </span><span class="cm">&lt;!-- pour l&#39;installation de l&#39;artifact du projet dans le dépôt local Maven --&gt;</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">            </span><span class="nt">&lt;plugin&gt;</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">                </span><span class="nt">&lt;groupId&gt;</span>org.apache.maven.plugins<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">                </span><span class="nt">&lt;artifactId&gt;</span>maven-surefire-plugin<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">                </span><span class="nt">&lt;version&gt;</span>2.18.1<span class="nt">&lt;/version&gt;</span>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="w">            </span><span class="nt">&lt;/plugin&gt;</span>
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w">        </span><span class="nt">&lt;/plugins&gt;</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">    </span><span class="nt">&lt;/build&gt;</span>
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="nt">&lt;/project&gt;</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a>    &lt;!-- plugins --&gt;
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a>    &lt;build&gt;
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>        &lt;plugins&gt;
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a>            &lt;plugin&gt;
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a>                &lt;artifactId&gt;maven-assembly-plugin&lt;/artifactId&gt;
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a>                &lt;configuration&gt;
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>                    &lt;archive&gt;
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a>                        &lt;manifest&gt;
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>                            &lt;mainClass&gt;config.AppConfig&lt;/mainClass&gt;
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a>                        &lt;/manifest&gt;
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a>                    &lt;/archive&gt;
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a>                    &lt;descriptorRefs&gt;
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a>                        &lt;descriptorRef&gt;jar-with-dependencies&lt;/descriptorRef&gt;
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a>                    &lt;/descriptorRefs&gt;
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a>                &lt;/configuration&gt;
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a>            &lt;/plugin&gt;
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a>            &lt;!-- pour l&#39;installation de l&#39;artifact du projet dans le dépôt local Maven --&gt;
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a>            &lt;plugin&gt;
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a>                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a>                &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a>                &lt;version&gt;2.18.1&lt;/version&gt;
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a>            &lt;/plugin&gt;
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a>        &lt;/plugins&gt;
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a>    &lt;/build&gt;
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a>&lt;/project&gt;
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>
-<p>lignes 21-25 : la dépendance sur le jar du projet [elections-jdbc-01]. On prend ces lignes directement dans le fichier [pom.xml] du projet que l'on veut importer :
+<li>lignes 21-25 : la dépendance sur le jar du projet [elections-jdbc-01]. On prend ces lignes directement dans le fichier [pom.xml] du projet que l'on veut importer :</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
 <span class="normal"><a href="#__codelineno-1-5">5</a></span>
-<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0&quot;</span><span class="w"> </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span><span class="w"> </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>istia.st.elections<span class="nt">&lt;/groupId&gt;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>elections-dao-jdbc-01<span class="nt">&lt;/artifactId&gt;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>0.0.1-SNAPSHOT<span class="nt">&lt;/version&gt;</span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>    &lt;groupId&gt;istia.st.elections&lt;/groupId&gt;
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>    &lt;artifactId&gt;elections-dao-jdbc-01&lt;/artifactId&gt;
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    &lt;version&gt;0.0.1-SNAPSHOT&lt;/version&gt;
 <a id="__codelineno-1-6" name="__codelineno-1-6"></a>...
-</code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p>lignes 26-37 : les dépendances nécessaires aux tests. Bien qu'elles soient présentes dans le fichier [pom.xml] du projet [elections-jdbc-01], nous sommes obligés de les remettre car leur attribut [&lt;scope&gt;test&lt;/scope&gt;] fait qu'elles n'ont pas été incluses dans le jar mis dans le dépôt Maven local ;</p>
-</li>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>lignes 26-37 : les dépendances nécessaires aux tests. Bien qu'elles soient présentes dans le fichier [pom.xml] du projet [elections-jdbc-01], nous sommes obligés de les remettre car leur attribut [&lt;scope&gt;test&lt;/scope&gt;] fait qu'elles n'ont pas été incluses dans le jar mis dans le dépôt Maven local ;</li>
 </ul>
 <h2 id="83-configuration-spring">8.3. Configuration Spring</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001060000007DCFC8459E.png" style="display:inline-block; margin:4px;width:4.851cm;height:2.311cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1213,16 +1211,16 @@
 <span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.metier.config</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">metier</span><span class="o">.</span><span class="n">config</span><span class="p">;</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.cache.annotation.EnableCaching</span><span class="p">;</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.ComponentScan</span><span class="p">;</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Import</span><span class="p">;</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="nd">@Import</span><span class="p">({</span><span class="w"> </span><span class="n">elections</span><span class="p">.</span><span class="na">dao</span><span class="p">.</span><span class="na">config</span><span class="p">.</span><span class="na">AppConfig</span><span class="p">.</span><span class="na">class</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="nd">@Import</span><span class="p">({</span> <span class="n">elections</span><span class="o">.</span><span class="n">dao</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">AppConfig</span><span class="o">.</span><span class="k">class</span><span class="w"> </span><span class="err">})</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="nd">@EnableCaching</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nd">@ComponentScan</span><span class="p">(</span><span class="n">basePackages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;elections.metier.service&quot;</span><span class="w"> </span><span class="p">})</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MetierConfig</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nd">@ComponentScan</span><span class="p">(</span><span class="n">basePackages</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;elections.metier.service&quot;</span> <span class="p">})</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">MetierConfig</span> <span class="p">{</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
@@ -1246,19 +1244,19 @@
 <span class="normal"><a href="#__codelineno-3-10">10</a></span>
 <span class="normal"><a href="#__codelineno-3-11">11</a></span>
 <span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IElectionsMetier</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>public interface IElectionsMetier {
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">getListesElectorales</span><span class="p">();</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>    public ListeElectorale[] getListesElectorales();
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNbSiegesAPourvoir</span><span class="p">();</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>    public int getNbSiegesAPourvoir();
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSeuilElectoral</span><span class="p">();</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    public double getSeuilElectoral();
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recordResultats</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>    public void recordResultats(ListeElectorale[] listesElectorales);
 <a id="__codelineno-3-10" name="__codelineno-3-10"></a>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>    public ListeElectorale[] calculerSieges(ListeElectorale[] listesElectorales);
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="p">}</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a>}
 </code></pre></div></td></tr></table></div>
 <h2 id="85-la-classe-dimplementation-electionsmetier">8.5. La classe d'implémentation [ElectionsMetier]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000108000000944F7FEEAF.png" style="display:inline-block; margin:4px;width:4.89cm;height:2.739cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1311,7 +1309,7 @@
 <span class="normal"><a href="#__codelineno-4-45">45</a></span>
 <span class="normal"><a href="#__codelineno-4-46">46</a></span>
 <span class="normal"><a href="#__codelineno-4-47">47</a></span>
-<span class="normal"><a href="#__codelineno-4-48">48</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.metier.service</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-4-48">48</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">metier</span><span class="o">.</span><span class="n">service</span><span class="p">;</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.cache.annotation.Cacheable</span><span class="p">;</span>
@@ -1321,42 +1319,42 @@
 <a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">elections.dao.service.IElectionsDao</span><span class="p">;</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9"></a>
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="nd">@Component</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ElectionsMetier</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">IElectionsMetier</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">ElectionsMetier</span> <span class="n">implements</span> <span class="n">IElectionsMetier</span> <span class="p">{</span>
 <a id="__codelineno-4-12" name="__codelineno-4-12"></a>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="c1">// le point d&#39;accès à la couche [dao] instanciée par [Spring]</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s">&quot;unused&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="nd">@Autowired</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IElectionsDao</span><span class="w"> </span><span class="n">electionsDao</span><span class="p">;</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a>    <span class="o">//</span> <span class="n">le</span> <span class="n">point</span> <span class="n">d</span><span class="s1">&#39;accès à la couche [dao] instanciée par [Spring]</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a>    <span class="nd">@SuppressWarnings</span><span class="p">(</span><span class="s2">&quot;unused&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a>    <span class="nd">@Autowired</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a>    <span class="n">private</span> <span class="n">IElectionsDao</span> <span class="n">electionsDao</span><span class="p">;</span>
 <a id="__codelineno-4-17" name="__codelineno-4-17"></a>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">    </span><span class="c1">// calcul des sièges obtenus</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">  </span><span class="nd">@Override</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;[calculerSieges] not yet implemented&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a>    <span class="o">//</span> <span class="n">calcul</span> <span class="n">des</span> <span class="n">sièges</span> <span class="n">obtenus</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a>  <span class="nd">@Override</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a>    <span class="n">public</span> <span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">listesElectorales</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s2">&quot;[calculerSieges] not yet implemented&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a>    <span class="p">}</span>
 <a id="__codelineno-4-23" name="__codelineno-4-23"></a>
-<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="c1">// listes en compétition</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="w">  </span><span class="nd">@Override</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">getListesElectorales</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-27" name="__codelineno-4-27"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;[getListesElectorales] not yet implemented&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a>    <span class="o">//</span> <span class="n">listes</span> <span class="n">en</span> <span class="n">compétition</span>
+<a id="__codelineno-4-25" name="__codelineno-4-25"></a>  <span class="nd">@Override</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26"></a>    <span class="n">public</span> <span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">getListesElectorales</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s2">&quot;[getListesElectorales] not yet implemented&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28"></a>    <span class="p">}</span>
 <a id="__codelineno-4-29" name="__codelineno-4-29"></a>
-<a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="w">    </span><span class="c1">// sauvegarde des résultats</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31"></a><span class="w">  </span><span class="nd">@Override</span>
-<a id="__codelineno-4-32" name="__codelineno-4-32"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recordResultats</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-33" name="__codelineno-4-33"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;[recordResultats] not yet implemented&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-34" name="__codelineno-4-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30"></a>    <span class="o">//</span> <span class="n">sauvegarde</span> <span class="n">des</span> <span class="n">résultats</span>
+<a id="__codelineno-4-31" name="__codelineno-4-31"></a>  <span class="nd">@Override</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">recordResultats</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">listesElectorales</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s2">&quot;[recordResultats] not yet implemented&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34"></a>    <span class="p">}</span>
 <a id="__codelineno-4-35" name="__codelineno-4-35"></a>
-<a id="__codelineno-4-36" name="__codelineno-4-36"></a><span class="w">    </span><span class="c1">// nombre de sièges à pourvoir</span>
-<a id="__codelineno-4-37" name="__codelineno-4-37"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-4-38" name="__codelineno-4-38"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNbSiegesAPourvoir</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-39" name="__codelineno-4-39"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;[getNbSiegesAPourvoir] not yet implemented&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-40" name="__codelineno-4-40"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36"></a>    <span class="o">//</span> <span class="n">nombre</span> <span class="n">de</span> <span class="n">sièges</span> <span class="n">à</span> <span class="n">pourvoir</span>
+<a id="__codelineno-4-37" name="__codelineno-4-37"></a>    <span class="nd">@Override</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38"></a>    <span class="n">public</span> <span class="nb">int</span> <span class="n">getNbSiegesAPourvoir</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s2">&quot;[getNbSiegesAPourvoir] not yet implemented&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40"></a>    <span class="p">}</span>
 <a id="__codelineno-4-41" name="__codelineno-4-41"></a>
-<a id="__codelineno-4-42" name="__codelineno-4-42"></a><span class="w">    </span><span class="c1">// seuil électoral</span>
-<a id="__codelineno-4-43" name="__codelineno-4-43"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-4-44" name="__codelineno-4-44"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSeuilElectoral</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-45" name="__codelineno-4-45"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;[getSeuilElectoral] not yet implemented&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-46" name="__codelineno-4-46"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42"></a>    <span class="o">//</span> <span class="n">seuil</span> <span class="n">électoral</span>
+<a id="__codelineno-4-43" name="__codelineno-4-43"></a>    <span class="nd">@Override</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44"></a>    <span class="n">public</span> <span class="n">double</span> <span class="n">getSeuilElectoral</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s2">&quot;[getSeuilElectoral] not yet implemented&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46"></a>    <span class="p">}</span>
 <a id="__codelineno-4-47" name="__codelineno-4-47"></a>
 <a id="__codelineno-4-48" name="__codelineno-4-48"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -1460,7 +1458,7 @@
 <span class="normal"><a href="#__codelineno-5-87">87</a></span>
 <span class="normal"><a href="#__codelineno-5-88">88</a></span>
 <span class="normal"><a href="#__codelineno-5-89">89</a></span>
-<span class="normal"><a href="#__codelineno-5-90">90</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">tests</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-5-90">90</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">package</span> <span class="n">tests</span><span class="p">;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Test</span><span class="p">;</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.runner.RunWith</span><span class="p">;</span>
@@ -1472,83 +1470,83 @@
 <a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">dao.entities.ElectionsException</span><span class="p">;</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">metier.service.IElectionsMetier</span><span class="p">;</span>
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="nd">@SpringApplicationConfiguration</span><span class="p">(</span><span class="n">classes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MetierConfig</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
-<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringJUnit4ClassRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test01</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="nd">@SpringApplicationConfiguration</span><span class="p">(</span><span class="n">classes</span> <span class="o">=</span> <span class="n">MetierConfig</span><span class="o">.</span><span class="n">class</span><span class="p">)</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringJUnit4ClassRunner</span><span class="o">.</span><span class="n">class</span><span class="p">)</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">Test01</span> <span class="p">{</span>
 <a id="__codelineno-5-16" name="__codelineno-5-16"></a>
-<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">    </span><span class="c1">// couche [métier]</span>
-<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">    </span><span class="nd">@Autowired</span>
-<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="n">IElectionsMetier</span><span class="w"> </span><span class="n">electionsMetier</span><span class="p">;</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a>    <span class="o">//</span> <span class="n">couche</span> <span class="p">[</span><span class="n">métier</span><span class="p">]</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a>    <span class="nd">@Autowired</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a>    <span class="n">static</span> <span class="n">private</span> <span class="n">IElectionsMetier</span> <span class="n">electionsMetier</span><span class="p">;</span>
 <a id="__codelineno-5-20" name="__codelineno-5-20"></a>
-<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="cm">     * vérification 1 : méthode de calcul des sièges on fixe en dur les listes</span>
-<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="cm">     */</span>
-<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="w">    </span><span class="nd">@Test</span>
-<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calculSieges1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="w">        </span><span class="c1">// on crée le tableau des 7 listes candidates (nom, voix)</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a>    <span class="o">/**</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a>     <span class="o">*</span> <span class="n">vérification</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">méthode</span> <span class="n">de</span> <span class="n">calcul</span> <span class="n">des</span> <span class="n">sièges</span> <span class="n">on</span> <span class="n">fixe</span> <span class="n">en</span> <span class="n">dur</span> <span class="n">les</span> <span class="n">listes</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a>     <span class="o">*/</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a>    <span class="nd">@Test</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">calculSieges1</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">crée</span> <span class="n">le</span> <span class="n">tableau</span> <span class="n">des</span> <span class="mi">7</span> <span class="n">listes</span> <span class="n">candidates</span> <span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="n">voix</span><span class="p">)</span>
 <a id="__codelineno-5-27" name="__codelineno-5-27"></a>
-<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="w">        </span><span class="c1">// on calcule les sièges de chacune des listes</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">calcule</span> <span class="n">les</span> <span class="n">sièges</span> <span class="n">de</span> <span class="n">chacune</span> <span class="n">des</span> <span class="n">listes</span>
 <a id="__codelineno-5-29" name="__codelineno-5-29"></a>
-<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="w">        </span><span class="c1">// on vérifie les résultats (sièges, voix, elimine)</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">vérifie</span> <span class="n">les</span> <span class="n">résultats</span> <span class="p">(</span><span class="n">sièges</span><span class="p">,</span> <span class="n">voix</span><span class="p">,</span> <span class="n">elimine</span><span class="p">)</span>
 <a id="__codelineno-5-31" name="__codelineno-5-31"></a>
-<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="w">        </span><span class="c1">// temporaire</span>
-<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;[calculSieges1] not yet implemented&quot;</span><span class="p">);</span>
-<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a>        <span class="o">//</span> <span class="n">temporaire</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s2">&quot;[calculSieges1] not yet implemented&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a>    <span class="p">}</span>
 <a id="__codelineno-5-35" name="__codelineno-5-35"></a>
-<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="cm">     * vérification 2 : méthode de calcul des sièges on demande les listes à la</span>
-<a id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="cm">     * couche [metier] puis on fixe en dur les voix</span>
-<a id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="cm">     */</span>
-<a id="__codelineno-5-40" name="__codelineno-5-40"></a><span class="w">    </span><span class="nd">@Test</span>
-<a id="__codelineno-5-41" name="__codelineno-5-41"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calculSieges2</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="w">        </span><span class="c1">// on récupère en base le tableau des 7 listes candidates</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a>    <span class="o">/**</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a>     <span class="o">*</span> <span class="n">vérification</span> <span class="mi">2</span> <span class="p">:</span> <span class="n">méthode</span> <span class="n">de</span> <span class="n">calcul</span> <span class="n">des</span> <span class="n">sièges</span> <span class="n">on</span> <span class="n">demande</span> <span class="n">les</span> <span class="n">listes</span> <span class="n">à</span> <span class="n">la</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38"></a>     <span class="o">*</span> <span class="n">couche</span> <span class="p">[</span><span class="n">metier</span><span class="p">]</span> <span class="n">puis</span> <span class="n">on</span> <span class="n">fixe</span> <span class="n">en</span> <span class="n">dur</span> <span class="n">les</span> <span class="n">voix</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39"></a>     <span class="o">*/</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40"></a>    <span class="nd">@Test</span>
+<a id="__codelineno-5-41" name="__codelineno-5-41"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">calculSieges2</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-5-42" name="__codelineno-5-42"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">récupère</span> <span class="n">en</span> <span class="n">base</span> <span class="n">le</span> <span class="n">tableau</span> <span class="n">des</span> <span class="mi">7</span> <span class="n">listes</span> <span class="n">candidates</span>
 <a id="__codelineno-5-43" name="__codelineno-5-43"></a>
-<a id="__codelineno-5-44" name="__codelineno-5-44"></a><span class="w">        </span><span class="c1">// on fixe en dur les voix</span>
+<a id="__codelineno-5-44" name="__codelineno-5-44"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">fixe</span> <span class="n">en</span> <span class="n">dur</span> <span class="n">les</span> <span class="n">voix</span>
 <a id="__codelineno-5-45" name="__codelineno-5-45"></a>
-<a id="__codelineno-5-46" name="__codelineno-5-46"></a><span class="w">        </span><span class="c1">// on calcule les sièges obtenus par chacune des listes</span>
+<a id="__codelineno-5-46" name="__codelineno-5-46"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">calcule</span> <span class="n">les</span> <span class="n">sièges</span> <span class="n">obtenus</span> <span class="n">par</span> <span class="n">chacune</span> <span class="n">des</span> <span class="n">listes</span>
 <a id="__codelineno-5-47" name="__codelineno-5-47"></a>
-<a id="__codelineno-5-48" name="__codelineno-5-48"></a><span class="w">        </span><span class="c1">// on vérifie les résultats (sièges, voix, elimine)</span>
+<a id="__codelineno-5-48" name="__codelineno-5-48"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">vérifie</span> <span class="n">les</span> <span class="n">résultats</span> <span class="p">(</span><span class="n">sièges</span><span class="p">,</span> <span class="n">voix</span><span class="p">,</span> <span class="n">elimine</span><span class="p">)</span>
 <a id="__codelineno-5-49" name="__codelineno-5-49"></a>
-<a id="__codelineno-5-50" name="__codelineno-5-50"></a><span class="w">        </span><span class="c1">// temporaire</span>
-<a id="__codelineno-5-51" name="__codelineno-5-51"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;[calculSieges2] not yet implemented&quot;</span><span class="p">);</span>
-<a id="__codelineno-5-52" name="__codelineno-5-52"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-50" name="__codelineno-5-50"></a>        <span class="o">//</span> <span class="n">temporaire</span>
+<a id="__codelineno-5-51" name="__codelineno-5-51"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s2">&quot;[calculSieges2] not yet implemented&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-52" name="__codelineno-5-52"></a>    <span class="p">}</span>
 <a id="__codelineno-5-53" name="__codelineno-5-53"></a>
-<a id="__codelineno-5-54" name="__codelineno-5-54"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-5-55" name="__codelineno-5-55"></a><span class="cm">     * vérification 3 méthode de calcul des sièges on provoque une exception</span>
-<a id="__codelineno-5-56" name="__codelineno-5-56"></a><span class="cm">     */</span>
-<a id="__codelineno-5-57" name="__codelineno-5-57"></a><span class="w">    </span><span class="nd">@Test</span><span class="p">(</span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
-<a id="__codelineno-5-58" name="__codelineno-5-58"></a><span class="w">    </span><span class="c1">// écrire un test qui provoque une exception de type [ElectionsException]</span>
-<a id="__codelineno-5-59" name="__codelineno-5-59"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">calculSieges3</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-60" name="__codelineno-5-60"></a><span class="w">        </span><span class="c1">// on crée un tableau de 25 listes candidates avec chacune 1 voix</span>
-<a id="__codelineno-5-61" name="__codelineno-5-61"></a><span class="w">        </span><span class="c1">// les 25 listes auront le même nombre de voix (4%)</span>
+<a id="__codelineno-5-54" name="__codelineno-5-54"></a>    <span class="o">/**</span>
+<a id="__codelineno-5-55" name="__codelineno-5-55"></a>     <span class="o">*</span> <span class="n">vérification</span> <span class="mi">3</span> <span class="n">méthode</span> <span class="n">de</span> <span class="n">calcul</span> <span class="n">des</span> <span class="n">sièges</span> <span class="n">on</span> <span class="n">provoque</span> <span class="n">une</span> <span class="n">exception</span>
+<a id="__codelineno-5-56" name="__codelineno-5-56"></a>     <span class="o">*/</span>
+<a id="__codelineno-5-57" name="__codelineno-5-57"></a>    <span class="nd">@Test</span><span class="p">(</span><span class="n">expected</span> <span class="o">=</span> <span class="n">ElectionsException</span><span class="o">.</span><span class="n">class</span><span class="p">)</span>
+<a id="__codelineno-5-58" name="__codelineno-5-58"></a>    <span class="o">//</span> <span class="n">écrire</span> <span class="n">un</span> <span class="n">test</span> <span class="n">qui</span> <span class="n">provoque</span> <span class="n">une</span> <span class="n">exception</span> <span class="n">de</span> <span class="nb">type</span> <span class="p">[</span><span class="n">ElectionsException</span><span class="p">]</span>
+<a id="__codelineno-5-59" name="__codelineno-5-59"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">calculSieges3</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-5-60" name="__codelineno-5-60"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">crée</span> <span class="n">un</span> <span class="n">tableau</span> <span class="n">de</span> <span class="mi">25</span> <span class="n">listes</span> <span class="n">candidates</span> <span class="n">avec</span> <span class="n">chacune</span> <span class="mi">1</span> <span class="n">voix</span>
+<a id="__codelineno-5-61" name="__codelineno-5-61"></a>        <span class="o">//</span> <span class="n">les</span> <span class="mi">25</span> <span class="n">listes</span> <span class="n">auront</span> <span class="n">le</span> <span class="n">même</span> <span class="n">nombre</span> <span class="n">de</span> <span class="n">voix</span> <span class="p">(</span><span class="mi">4</span><span class="o">%</span><span class="p">)</span>
 <a id="__codelineno-5-62" name="__codelineno-5-62"></a>
-<a id="__codelineno-5-63" name="__codelineno-5-63"></a><span class="w">        </span><span class="c1">// calcul des sièges - normalement on doit avoir une ElectionsException</span>
-<a id="__codelineno-5-64" name="__codelineno-5-64"></a><span class="w">        </span><span class="c1">// avec un seuil électoral de 5%</span>
+<a id="__codelineno-5-63" name="__codelineno-5-63"></a>        <span class="o">//</span> <span class="n">calcul</span> <span class="n">des</span> <span class="n">sièges</span> <span class="o">-</span> <span class="n">normalement</span> <span class="n">on</span> <span class="n">doit</span> <span class="n">avoir</span> <span class="n">une</span> <span class="n">ElectionsException</span>
+<a id="__codelineno-5-64" name="__codelineno-5-64"></a>        <span class="o">//</span> <span class="n">avec</span> <span class="n">un</span> <span class="n">seuil</span> <span class="n">électoral</span> <span class="n">de</span> <span class="mi">5</span><span class="o">%</span>
 <a id="__codelineno-5-65" name="__codelineno-5-65"></a>
-<a id="__codelineno-5-66" name="__codelineno-5-66"></a><span class="w">        </span><span class="c1">// temporaire</span>
-<a id="__codelineno-5-67" name="__codelineno-5-67"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;[calculSieges3] not yet implemented&quot;</span><span class="p">);</span>
-<a id="__codelineno-5-68" name="__codelineno-5-68"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-66" name="__codelineno-5-66"></a>        <span class="o">//</span> <span class="n">temporaire</span>
+<a id="__codelineno-5-67" name="__codelineno-5-67"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s2">&quot;[calculSieges3] not yet implemented&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-68" name="__codelineno-5-68"></a>    <span class="p">}</span>
 <a id="__codelineno-5-69" name="__codelineno-5-69"></a>
-<a id="__codelineno-5-70" name="__codelineno-5-70"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-5-71" name="__codelineno-5-71"></a><span class="cm">     * enregistrement des résultats de l&#39;élection</span>
-<a id="__codelineno-5-72" name="__codelineno-5-72"></a><span class="cm">     */</span>
-<a id="__codelineno-5-73" name="__codelineno-5-73"></a><span class="w">    </span><span class="nd">@Test</span>
-<a id="__codelineno-5-74" name="__codelineno-5-74"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">ecritureResultatsElections</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-75" name="__codelineno-5-75"></a><span class="w">        </span><span class="c1">// on crée le tableau des 7 listes candidates</span>
+<a id="__codelineno-5-70" name="__codelineno-5-70"></a>    <span class="o">/**</span>
+<a id="__codelineno-5-71" name="__codelineno-5-71"></a>     <span class="o">*</span> <span class="n">enregistrement</span> <span class="n">des</span> <span class="n">résultats</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;élection</span>
+<a id="__codelineno-5-72" name="__codelineno-5-72"></a>     <span class="o">*/</span>
+<a id="__codelineno-5-73" name="__codelineno-5-73"></a>    <span class="nd">@Test</span>
+<a id="__codelineno-5-74" name="__codelineno-5-74"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">ecritureResultatsElections</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-5-75" name="__codelineno-5-75"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">crée</span> <span class="n">le</span> <span class="n">tableau</span> <span class="n">des</span> <span class="mi">7</span> <span class="n">listes</span> <span class="n">candidates</span>
 <a id="__codelineno-5-76" name="__codelineno-5-76"></a>
-<a id="__codelineno-5-77" name="__codelineno-5-77"></a><span class="w">        </span><span class="c1">// on fixe en dur les voix</span>
+<a id="__codelineno-5-77" name="__codelineno-5-77"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">fixe</span> <span class="n">en</span> <span class="n">dur</span> <span class="n">les</span> <span class="n">voix</span>
 <a id="__codelineno-5-78" name="__codelineno-5-78"></a>
-<a id="__codelineno-5-79" name="__codelineno-5-79"></a><span class="w">        </span><span class="c1">// on calcule les sièges obtenus par chacune des listes</span>
+<a id="__codelineno-5-79" name="__codelineno-5-79"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">calcule</span> <span class="n">les</span> <span class="n">sièges</span> <span class="n">obtenus</span> <span class="n">par</span> <span class="n">chacune</span> <span class="n">des</span> <span class="n">listes</span>
 <a id="__codelineno-5-80" name="__codelineno-5-80"></a>
-<a id="__codelineno-5-81" name="__codelineno-5-81"></a><span class="w">        </span><span class="c1">// on enregistre les résultats dans la base de données</span>
+<a id="__codelineno-5-81" name="__codelineno-5-81"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">enregistre</span> <span class="n">les</span> <span class="n">résultats</span> <span class="n">dans</span> <span class="n">la</span> <span class="n">base</span> <span class="n">de</span> <span class="n">données</span>
 <a id="__codelineno-5-82" name="__codelineno-5-82"></a>
-<a id="__codelineno-5-83" name="__codelineno-5-83"></a><span class="w">        </span><span class="c1">// on relit les listes en base</span>
+<a id="__codelineno-5-83" name="__codelineno-5-83"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">relit</span> <span class="n">les</span> <span class="n">listes</span> <span class="n">en</span> <span class="n">base</span>
 <a id="__codelineno-5-84" name="__codelineno-5-84"></a>
-<a id="__codelineno-5-85" name="__codelineno-5-85"></a><span class="w">        </span><span class="c1">// on vérifie les résultats (sièges, voix, elimine)</span>
+<a id="__codelineno-5-85" name="__codelineno-5-85"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">vérifie</span> <span class="n">les</span> <span class="n">résultats</span> <span class="p">(</span><span class="n">sièges</span><span class="p">,</span> <span class="n">voix</span><span class="p">,</span> <span class="n">elimine</span><span class="p">)</span>
 <a id="__codelineno-5-86" name="__codelineno-5-86"></a>
-<a id="__codelineno-5-87" name="__codelineno-5-87"></a><span class="w">        </span><span class="c1">// temporaire</span>
-<a id="__codelineno-5-88" name="__codelineno-5-88"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="s">&quot;[ecritureResultatsElections] not yet implemented&quot;</span><span class="p">);</span>
-<a id="__codelineno-5-89" name="__codelineno-5-89"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-87" name="__codelineno-5-87"></a>        <span class="o">//</span> <span class="n">temporaire</span>
+<a id="__codelineno-5-88" name="__codelineno-5-88"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">RuntimeException</span><span class="p">(</span><span class="s2">&quot;[ecritureResultatsElections] not yet implemented&quot;</span><span class="p">);</span>
+<a id="__codelineno-5-89" name="__codelineno-5-89"></a>    <span class="p">}</span>
 <a id="__codelineno-5-90" name="__codelineno-5-90"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p><strong>Travail à faire</strong> : écrivez les quatre méthodes de tests en vous aidant des commentaires. On se rappellera que lorsque ces méthodes s'exécutent, le champ [electionsMetier] de la ligne 19 a déjà été initialisé. Vérifiez que le test JUnit passe.</p>
@@ -1621,7 +1619,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>

@@ -1195,139 +1195,139 @@
 <span class="normal"><a href="#__codelineno-1-130">130</a></span>
 <span class="normal"><a href="#__codelineno-1-131">131</a></span>
 <span class="normal"><a href="#__codelineno-1-132">132</a></span>
-<span class="normal"><a href="#__codelineno-1-133">133</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">istia.st.elections</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-1-133">133</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>package istia.st.elections;
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ListeElectorale</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>public class ListeElectorale {
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="cm">     * identité de la liste</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="cm">     */</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>    /**
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>     * identité de la liste
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>     */
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>    private int id;
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="cm">     * nom de la liste</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="cm">     */</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="cm">     * nombre de voix de la liste</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="cm">     */</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">voix</span><span class="p">;</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="cm">     * nombre de sièges de la liste</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="cm">     */</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sieges</span><span class="p">;</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="cm">     * indique si la liste est éliminée ou non</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="cm">     */</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">elimine</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>    /**
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>     * nom de la liste
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>     */
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a>    private String nom;
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a>    /**
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a>     * nombre de voix de la liste
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a>     */
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a>    private int voix;
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>    /**
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a>     * nombre de sièges de la liste
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a>     */
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a>    private int sieges;
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a>    /**
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a>     * indique si la liste est éliminée ou non
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a>     */
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a>    private boolean elimine;
 <a id="__codelineno-1-26" name="__codelineno-1-26"></a>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="cm">     * constructeur par défaut</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="cm">     */</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ListeElectorale</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a>    /**
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a>     * constructeur par défaut
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a>     */
+<a id="__codelineno-1-30" name="__codelineno-1-30"></a>    public ListeElectorale() {
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a>    }
 <a id="__codelineno-1-32" name="__codelineno-1-32"></a>
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="cm">     *</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="cm">     * @param nom String : le nom de la liste</span>
-<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="cm">     * @param voix int : son nombre de voix</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="cm">     * @param sieges int : son nombre de sieges</span>
-<a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="cm">     * @param elimine boolean : son état éliminé ou non</span>
-<a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="cm">     */</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ListeElectorale</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">voix</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sieges</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">elimine</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="p">...</span>
-<a id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a>    /**
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a>     *
+<a id="__codelineno-1-35" name="__codelineno-1-35"></a>     * @param nom String : le nom de la liste
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a>     * @param voix int : son nombre de voix
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a>     * @param sieges int : son nombre de sieges
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a>     * @param elimine boolean : son état éliminé ou non
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a>     */
+<a id="__codelineno-1-40" name="__codelineno-1-40"></a>    public ListeElectorale(int id,String nom, int voix, int sieges, boolean elimine) {
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a>...
+<a id="__codelineno-1-42" name="__codelineno-1-42"></a>    }
 <a id="__codelineno-1-43" name="__codelineno-1-43"></a>
-<a id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="cm">     *</span>
-<a id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="cm">     * @return int : l&#39;identifiant de la liste</span>
-<a id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="cm">     */</span>
-<a id="__codelineno-1-48" name="__codelineno-1-48"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getId</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-49" name="__codelineno-1-49"></a><span class="p">...</span>
-<a id="__codelineno-1-50" name="__codelineno-1-50"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44"></a>    /**
+<a id="__codelineno-1-45" name="__codelineno-1-45"></a>     *
+<a id="__codelineno-1-46" name="__codelineno-1-46"></a>     * @return int : l&#39;identifiant de la liste
+<a id="__codelineno-1-47" name="__codelineno-1-47"></a>     */
+<a id="__codelineno-1-48" name="__codelineno-1-48"></a>    public int getId() {
+<a id="__codelineno-1-49" name="__codelineno-1-49"></a>...
+<a id="__codelineno-1-50" name="__codelineno-1-50"></a>    }
 <a id="__codelineno-1-51" name="__codelineno-1-51"></a>
-<a id="__codelineno-1-52" name="__codelineno-1-52"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-53" name="__codelineno-1-53"></a><span class="cm">     * initialise l&#39;identifiant de liste</span>
-<a id="__codelineno-1-54" name="__codelineno-1-54"></a><span class="cm">     * @param id int : identifiant de la liste</span>
-<a id="__codelineno-1-55" name="__codelineno-1-55"></a><span class="cm">     * @throws ElectionsException si id&lt;1</span>
-<a id="__codelineno-1-56" name="__codelineno-1-56"></a><span class="cm">     */</span>
-<a id="__codelineno-1-57" name="__codelineno-1-57"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setId</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-58" name="__codelineno-1-58"></a><span class="p">...</span>
-<a id="__codelineno-1-59" name="__codelineno-1-59"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52"></a>    /**
+<a id="__codelineno-1-53" name="__codelineno-1-53"></a>     * initialise l&#39;identifiant de liste
+<a id="__codelineno-1-54" name="__codelineno-1-54"></a>     * @param id int : identifiant de la liste
+<a id="__codelineno-1-55" name="__codelineno-1-55"></a>     * @throws ElectionsException si id&lt;1
+<a id="__codelineno-1-56" name="__codelineno-1-56"></a>     */
+<a id="__codelineno-1-57" name="__codelineno-1-57"></a>    public void setId(int id) {
+<a id="__codelineno-1-58" name="__codelineno-1-58"></a>...
+<a id="__codelineno-1-59" name="__codelineno-1-59"></a>    }
 <a id="__codelineno-1-60" name="__codelineno-1-60"></a>
-<a id="__codelineno-1-61" name="__codelineno-1-61"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-62" name="__codelineno-1-62"></a><span class="cm">     *</span>
-<a id="__codelineno-1-63" name="__codelineno-1-63"></a><span class="cm">     * @return String : le nom de la liste</span>
-<a id="__codelineno-1-64" name="__codelineno-1-64"></a><span class="cm">     */</span>
-<a id="__codelineno-1-65" name="__codelineno-1-65"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNom</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-66" name="__codelineno-1-66"></a><span class="p">...</span>
-<a id="__codelineno-1-67" name="__codelineno-1-67"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61"></a>    /**
+<a id="__codelineno-1-62" name="__codelineno-1-62"></a>     *
+<a id="__codelineno-1-63" name="__codelineno-1-63"></a>     * @return String : le nom de la liste
+<a id="__codelineno-1-64" name="__codelineno-1-64"></a>     */
+<a id="__codelineno-1-65" name="__codelineno-1-65"></a>    public String getNom() {
+<a id="__codelineno-1-66" name="__codelineno-1-66"></a>...
+<a id="__codelineno-1-67" name="__codelineno-1-67"></a>    }
 <a id="__codelineno-1-68" name="__codelineno-1-68"></a>
-<a id="__codelineno-1-69" name="__codelineno-1-69"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-70" name="__codelineno-1-70"></a><span class="cm">     * initialise le nom de la liste</span>
-<a id="__codelineno-1-71" name="__codelineno-1-71"></a><span class="cm">     * @param nom String : nom de la liste</span>
-<a id="__codelineno-1-72" name="__codelineno-1-72"></a><span class="cm">     *  @throws ElectionsException si le nom est vide ou blanc</span>
-<a id="__codelineno-1-73" name="__codelineno-1-73"></a><span class="cm">     */</span>
-<a id="__codelineno-1-74" name="__codelineno-1-74"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNom</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-75" name="__codelineno-1-75"></a><span class="p">...</span>
-<a id="__codelineno-1-76" name="__codelineno-1-76"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69"></a>    /**
+<a id="__codelineno-1-70" name="__codelineno-1-70"></a>     * initialise le nom de la liste
+<a id="__codelineno-1-71" name="__codelineno-1-71"></a>     * @param nom String : nom de la liste
+<a id="__codelineno-1-72" name="__codelineno-1-72"></a>     *  @throws ElectionsException si le nom est vide ou blanc
+<a id="__codelineno-1-73" name="__codelineno-1-73"></a>     */
+<a id="__codelineno-1-74" name="__codelineno-1-74"></a>    public void setNom(String nom) {
+<a id="__codelineno-1-75" name="__codelineno-1-75"></a>...
+<a id="__codelineno-1-76" name="__codelineno-1-76"></a>    }
 <a id="__codelineno-1-77" name="__codelineno-1-77"></a>
-<a id="__codelineno-1-78" name="__codelineno-1-78"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-79" name="__codelineno-1-79"></a><span class="cm">     *</span>
-<a id="__codelineno-1-80" name="__codelineno-1-80"></a><span class="cm">     * @return int : le nombre de voix de la liste</span>
-<a id="__codelineno-1-81" name="__codelineno-1-81"></a><span class="cm">     */</span>
-<a id="__codelineno-1-82" name="__codelineno-1-82"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getVoix</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-83" name="__codelineno-1-83"></a><span class="w"> </span><span class="p">...</span>
-<a id="__codelineno-1-84" name="__codelineno-1-84"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-78" name="__codelineno-1-78"></a>    /**
+<a id="__codelineno-1-79" name="__codelineno-1-79"></a>     *
+<a id="__codelineno-1-80" name="__codelineno-1-80"></a>     * @return int : le nombre de voix de la liste
+<a id="__codelineno-1-81" name="__codelineno-1-81"></a>     */
+<a id="__codelineno-1-82" name="__codelineno-1-82"></a>    public int getVoix() {
+<a id="__codelineno-1-83" name="__codelineno-1-83"></a> ...
+<a id="__codelineno-1-84" name="__codelineno-1-84"></a>    }
 <a id="__codelineno-1-85" name="__codelineno-1-85"></a>
-<a id="__codelineno-1-86" name="__codelineno-1-86"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-87" name="__codelineno-1-87"></a><span class="cm">     * initialise le nombre de voix de la liste</span>
-<a id="__codelineno-1-88" name="__codelineno-1-88"></a><span class="cm">     * @param voix int : le nombre de voix de la liste</span>
-<a id="__codelineno-1-89" name="__codelineno-1-89"></a><span class="cm">     */</span>
-<a id="__codelineno-1-90" name="__codelineno-1-90"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setVoix</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">voix</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-91" name="__codelineno-1-91"></a><span class="w"> </span><span class="p">...</span>
-<a id="__codelineno-1-92" name="__codelineno-1-92"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-86" name="__codelineno-1-86"></a>    /**
+<a id="__codelineno-1-87" name="__codelineno-1-87"></a>     * initialise le nombre de voix de la liste
+<a id="__codelineno-1-88" name="__codelineno-1-88"></a>     * @param voix int : le nombre de voix de la liste
+<a id="__codelineno-1-89" name="__codelineno-1-89"></a>     */
+<a id="__codelineno-1-90" name="__codelineno-1-90"></a>    public void setVoix(int voix) {
+<a id="__codelineno-1-91" name="__codelineno-1-91"></a> ...
+<a id="__codelineno-1-92" name="__codelineno-1-92"></a>    }
 <a id="__codelineno-1-93" name="__codelineno-1-93"></a>
-<a id="__codelineno-1-94" name="__codelineno-1-94"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-95" name="__codelineno-1-95"></a><span class="cm">     *</span>
-<a id="__codelineno-1-96" name="__codelineno-1-96"></a><span class="cm">     * @return int : le nombre de sièges de la liste</span>
-<a id="__codelineno-1-97" name="__codelineno-1-97"></a><span class="cm">     */</span>
-<a id="__codelineno-1-98" name="__codelineno-1-98"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getSieges</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-99" name="__codelineno-1-99"></a><span class="w"> </span><span class="p">...</span>
-<a id="__codelineno-1-100" name="__codelineno-1-100"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-94" name="__codelineno-1-94"></a>    /**
+<a id="__codelineno-1-95" name="__codelineno-1-95"></a>     *
+<a id="__codelineno-1-96" name="__codelineno-1-96"></a>     * @return int : le nombre de sièges de la liste
+<a id="__codelineno-1-97" name="__codelineno-1-97"></a>     */
+<a id="__codelineno-1-98" name="__codelineno-1-98"></a>    public int getSieges() {
+<a id="__codelineno-1-99" name="__codelineno-1-99"></a> ...
+<a id="__codelineno-1-100" name="__codelineno-1-100"></a>    }
 <a id="__codelineno-1-101" name="__codelineno-1-101"></a>
-<a id="__codelineno-1-102" name="__codelineno-1-102"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-103" name="__codelineno-1-103"></a><span class="cm">     * fixe le nombre de sièges de la liste</span>
-<a id="__codelineno-1-104" name="__codelineno-1-104"></a><span class="cm">     * @param sieges int : le nombre de sièges de la liste</span>
-<a id="__codelineno-1-105" name="__codelineno-1-105"></a><span class="cm">     */</span>
-<a id="__codelineno-1-106" name="__codelineno-1-106"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setSieges</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">sieges</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-107" name="__codelineno-1-107"></a><span class="p">...</span>
-<a id="__codelineno-1-108" name="__codelineno-1-108"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-102" name="__codelineno-1-102"></a>    /**
+<a id="__codelineno-1-103" name="__codelineno-1-103"></a>     * fixe le nombre de sièges de la liste
+<a id="__codelineno-1-104" name="__codelineno-1-104"></a>     * @param sieges int : le nombre de sièges de la liste
+<a id="__codelineno-1-105" name="__codelineno-1-105"></a>     */
+<a id="__codelineno-1-106" name="__codelineno-1-106"></a>    public void setSieges(int sieges) {
+<a id="__codelineno-1-107" name="__codelineno-1-107"></a>...
+<a id="__codelineno-1-108" name="__codelineno-1-108"></a>    }
 <a id="__codelineno-1-109" name="__codelineno-1-109"></a>
-<a id="__codelineno-1-110" name="__codelineno-1-110"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-111" name="__codelineno-1-111"></a><span class="cm">     *</span>
-<a id="__codelineno-1-112" name="__codelineno-1-112"></a><span class="cm">     * @return boolean : valeur du champ elimine</span>
-<a id="__codelineno-1-113" name="__codelineno-1-113"></a><span class="cm">     */</span>
-<a id="__codelineno-1-114" name="__codelineno-1-114"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isElimine</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-115" name="__codelineno-1-115"></a><span class="w">  </span><span class="p">...</span>
-<a id="__codelineno-1-116" name="__codelineno-1-116"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-110" name="__codelineno-1-110"></a>    /**
+<a id="__codelineno-1-111" name="__codelineno-1-111"></a>     *
+<a id="__codelineno-1-112" name="__codelineno-1-112"></a>     * @return boolean : valeur du champ elimine
+<a id="__codelineno-1-113" name="__codelineno-1-113"></a>     */
+<a id="__codelineno-1-114" name="__codelineno-1-114"></a>    public boolean isElimine() {
+<a id="__codelineno-1-115" name="__codelineno-1-115"></a>  ...
+<a id="__codelineno-1-116" name="__codelineno-1-116"></a>    }
 <a id="__codelineno-1-117" name="__codelineno-1-117"></a>
-<a id="__codelineno-1-118" name="__codelineno-1-118"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-119" name="__codelineno-1-119"></a><span class="cm">     *</span>
-<a id="__codelineno-1-120" name="__codelineno-1-120"></a><span class="cm">     * @param sieges int</span>
-<a id="__codelineno-1-121" name="__codelineno-1-121"></a><span class="cm">     */</span>
-<a id="__codelineno-1-122" name="__codelineno-1-122"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setElimine</span><span class="p">(</span><span class="kt">boolean</span><span class="w"> </span><span class="n">elimine</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-123" name="__codelineno-1-123"></a><span class="w"> </span><span class="p">...</span>
-<a id="__codelineno-1-124" name="__codelineno-1-124"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-118" name="__codelineno-1-118"></a>    /**
+<a id="__codelineno-1-119" name="__codelineno-1-119"></a>     *
+<a id="__codelineno-1-120" name="__codelineno-1-120"></a>     * @param sieges int
+<a id="__codelineno-1-121" name="__codelineno-1-121"></a>     */
+<a id="__codelineno-1-122" name="__codelineno-1-122"></a>    public void setElimine(boolean elimine) {
+<a id="__codelineno-1-123" name="__codelineno-1-123"></a> ...
+<a id="__codelineno-1-124" name="__codelineno-1-124"></a>    }
 <a id="__codelineno-1-125" name="__codelineno-1-125"></a>
-<a id="__codelineno-1-126" name="__codelineno-1-126"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-1-127" name="__codelineno-1-127"></a><span class="cm">     *</span>
-<a id="__codelineno-1-128" name="__codelineno-1-128"></a><span class="cm">     * @return String : identité de la liste électorale</span>
-<a id="__codelineno-1-129" name="__codelineno-1-129"></a><span class="cm">     */</span>
-<a id="__codelineno-1-130" name="__codelineno-1-130"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-131" name="__codelineno-1-131"></a><span class="w">   </span><span class="p">...</span>
-<a id="__codelineno-1-132" name="__codelineno-1-132"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-133" name="__codelineno-1-133"></a><span class="p">}</span>
+<a id="__codelineno-1-126" name="__codelineno-1-126"></a>    /**
+<a id="__codelineno-1-127" name="__codelineno-1-127"></a>     *
+<a id="__codelineno-1-128" name="__codelineno-1-128"></a>     * @return String : identité de la liste électorale
+<a id="__codelineno-1-129" name="__codelineno-1-129"></a>     */
+<a id="__codelineno-1-130" name="__codelineno-1-130"></a>    public String toString() {
+<a id="__codelineno-1-131" name="__codelineno-1-131"></a>   ...
+<a id="__codelineno-1-132" name="__codelineno-1-132"></a>    }
+<a id="__codelineno-1-133" name="__codelineno-1-133"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 8 : n° identifiant une liste de façon unique. N'est pas indispensable ici mais est prévu pour une utilisation future.</li>
@@ -1416,7 +1416,7 @@
 <h2 id="33-creation-dune-classe-dexception-electionsexception">3.3. Création d'une classe d'exception [ElectionsException]</h2>
 <p>Parmi les différentes classes d'exception du langage Java, il en est une appelée [RuntimeException]. Cette classe dérive de la classe [Exception], racine de toutes les classes d'exception. La particularité des instances de [RuntimeException] ou instances dérivées est que l'on n'est pas obligé de les déclarer ou de les gérer. On les appelle des <strong>exceptions non contrôlées</strong>.</p>
 <p>Prenons un premier exemple. La classe [BufferedReader] est une classe dont les instances permettent de lire des lignes de texte dans un flux de données. Elle possède une méthode [readLine] dont la signature est la suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">readLine</span><span class="p">()</span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>public String readLine()throws IOException
 </code></pre></div></td></tr></table></div>
 <p>On voit que la méthode peut lancer une exception de type [IOException]. L'arborescence de cette classe est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
@@ -1435,17 +1435,17 @@
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
 <span class="normal"><a href="#__codelineno-5-6">6</a></span>
 <span class="normal"><a href="#__codelineno-5-7">7</a></span>
-<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">BufferedReader</span><span class="w"> </span><span class="n">clavier</span><span class="o">=</span><span class="p">....;</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">String</span><span class="w"> </span><span class="n">ligne</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="k">try</span><span class="p">{</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">ligne</span><span class="o">=</span><span class="n">clavier</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="c1">// gérer l&#39;exception</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="p">....</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>BufferedReader clavier=....;
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>String ligne=null;
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>try{
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>    ligne=clavier.readLine();
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>}catch (IOException ex){
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>    // gérer l&#39;exception
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>    ....
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>}
 </code></pre></div></td></tr></table></div>
 <p>Prenons un autre exemple. Pour transformer une chaîne en entier on peut utiliser la méthode statique [Integer.parseInt] dont la signature est la suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">parseInt</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">NumberFormatException</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>public static int parseInt(String s) throws NumberFormatException
 </code></pre></div></td></tr></table></div>
 <p>L'argument [s] est la chaîne de caractères à transformer en entier. On voit que la méthode peut lancer une exception de type [NumberFormatException]. L'arborescence de cette classe est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
@@ -1469,15 +1469,15 @@
 <span class="normal"><a href="#__codelineno-8-6">6</a></span>
 <span class="normal"><a href="#__codelineno-8-7">7</a></span>
 <span class="normal"><a href="#__codelineno-8-8">8</a></span>
-<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">BufferedReader</span><span class="w"> </span><span class="n">clavier</span><span class="o">=</span><span class="p">....;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">String</span><span class="w"> </span><span class="n">ligne</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="k">try</span><span class="p">{</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="n">ligne</span><span class="o">=</span><span class="n">clavier</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="c1">// gérer l&#39;exception</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">    </span><span class="p">....</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="p">}</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="o">=</span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">ligne</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>BufferedReader clavier=....;
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>String ligne=null;
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>try{
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>    ligne=clavier.readLine();
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>}catch (IOException ex){
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>    // gérer l&#39;exception
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>    ....
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>}
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>int age=Integer.parseInt(ligne);
 </code></pre></div></td></tr></table></div>
 <p>Nous ne sommes pas obligés de mettre une clause [try - catch] pour gérer l'éventuelle exception générée par [Integer.parseInt] (ligne 9).</p>
 <p>Il y a des avantages et inconvénients à créer et utiliser des classes d'exception dérivées de [RuntimeException] :</p>
@@ -1506,37 +1506,37 @@
 <span class="normal"><a href="#__codelineno-9-18">18</a></span>
 <span class="normal"><a href="#__codelineno-9-19">19</a></span>
 <span class="normal"><a href="#__codelineno-9-20">20</a></span>
-<span class="normal"><a href="#__codelineno-9-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">istia.st.elections</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-9-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>package istia.st.elections;
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ElectionsException</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">RuntimeException</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">serialVersionUID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1L</span><span class="p">;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>public class ElectionsException extends RuntimeException {
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a>    private static final long serialVersionUID = 1L;
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ElectionsException</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">        </span><span class="kd">super</span><span class="p">();</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>    public ElectionsException() {
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a>        super();
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a>    }
 <a id="__codelineno-9-9" name="__codelineno-9-9"></a>
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ElectionsException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a>    public ElectionsException(String message) {
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a>        super(message);
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>    }
 <a id="__codelineno-9-13" name="__codelineno-9-13"></a>
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ElectionsException</span><span class="p">(</span><span class="n">Throwable</span><span class="w"> </span><span class="n">cause</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">cause</span><span class="p">);</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>    public ElectionsException(Throwable cause) {
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a>        super(cause);
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a>    }
 <a id="__codelineno-9-17" name="__codelineno-9-17"></a>
-<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ElectionsException</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">Throwable</span><span class="w"> </span><span class="n">cause</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">message</span><span class="p">,</span><span class="w"> </span><span class="n">cause</span><span class="p">);</span>
-<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="p">}</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a>    public ElectionsException(String message, Throwable cause) {
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a>        super(message, cause);
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a>    }
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : nous plaçons la classe dans le paquetage [istia.st.elections] ;</li>
 <li>ligne 3 : la classe dérive de [RuntimeException]. Elle est donc <strong>non contrôlée</strong> ;</li>
 <li>ligne 4 : un identifiant de sérialisation qu'on peut ignorer pour le moment ;</li>
 <li>nous utiliserons dans notre application deux sortes de constructeur :</li>
-<li>celui classique des lignes 15-17 comme ci-dessous :
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>throw new ElectionsException(&quot;Le nombre de sièges doit être &gt;0&quot;)
-</code></pre></div></td></tr></table></div></li>
+<li>celui classique des lignes 15-17 comme ci-dessous :</li>
 </ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>throw new ElectionsException(&quot;Le nombre de sièges doit être &gt;0&quot;)
+</code></pre></div></td></tr></table></div>
 <p>Dans ce cas, la méthode qui appelle une méthode lançant une telle exception peut la gérer comme suit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
 <span class="normal"><a href="#__codelineno-11-2">2</a></span>
@@ -1544,29 +1544,29 @@
 <span class="normal"><a href="#__codelineno-11-4">4</a></span>
 <span class="normal"><a href="#__codelineno-11-5">5</a></span>
 <span class="normal"><a href="#__codelineno-11-6">6</a></span>
-<span class="normal"><a href="#__codelineno-11-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="w">        </span><span class="c1">// test exception</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">            </span><span class="n">listeElectorale2</span><span class="p">.</span><span class="na">setSieges</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">);</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ElectionsException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;L&#39;exception suivante s&#39;est produite : [&quot;</span>
-<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">                    </span><span class="o">+</span><span class="w"> </span><span class="n">ex</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;]&quot;</span><span class="p">);</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">        </span><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-11-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>        // test exception
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>        try {
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>            listeElectorale2.setSieges(-3);
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>        } catch (ElectionsException ex) {
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>            System.err.println(&quot;L&#39;exception suivante s&#39;est produite : [&quot;
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>                    + ex.toString() + &quot;]&quot;);
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>        }
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>ou celui des lignes 14-20 destiné à faire remonter une exception déjà survenue, en l'encapsulant dans une exception de type [ElectionsException] :
+<li>ou celui des lignes 14-20 destiné à faire remonter une exception déjà survenue, en l'encapsulant dans une exception de type [ElectionsException] :</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
 <span class="normal"><a href="#__codelineno-12-2">2</a></span>
 <span class="normal"><a href="#__codelineno-12-3">3</a></span>
 <span class="normal"><a href="#__codelineno-12-4">4</a></span>
 <span class="normal"><a href="#__codelineno-12-5">5</a></span>
-<span class="normal"><a href="#__codelineno-12-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">        </span><span class="p">...;</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">            </span><span class="c1">// on encapsule l&#39;exception</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">(</span><span class="s">&quot;erreur de fermeture de la connexion à la BD&quot;</span><span class="p">,</span><span class="n">ex</span><span class="p">);</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">        </span><span class="p">}</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
+<span class="normal"><a href="#__codelineno-12-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>    try {
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>        ...;
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>        } catch (SQLException ex) {
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>            // on encapsule l&#39;exception
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>            throw new ElectionsException(&quot;erreur de fermeture de la connexion à la BD&quot;,ex);
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>        }
+</code></pre></div></td></tr></table></div>
 <p>Cette seconde méthode a l'avantage de conserver l'information que peut contenir la première exception. Dans ce cas, la méthode qui appelle une méthode lançant une telle exception peut la gérer comme suit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
@@ -1789,21 +1789,21 @@
 <span class="normal"><a href="#__codelineno-16-13">13</a></span>
 <span class="normal"><a href="#__codelineno-16-14">14</a></span>
 <span class="normal"><a href="#__codelineno-16-15">15</a></span>
-<span class="normal"><a href="#__codelineno-16-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">istia.st.elections.tests</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-16-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">package</span> <span class="n">istia</span><span class="o">.</span><span class="n">st</span><span class="o">.</span><span class="n">elections</span><span class="o">.</span><span class="n">tests</span><span class="p">;</span>
 <a id="__codelineno-16-2" name="__codelineno-16-2"></a>
 <a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Assert</span><span class="p">;</span>
 <a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.After</span><span class="p">;</span>
 <a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Before</span><span class="p">;</span>
 <a id="__codelineno-16-6" name="__codelineno-16-6"></a>
-<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JUnitEssai</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">JUnitEssai</span> <span class="p">{</span>
 <a id="__codelineno-16-8" name="__codelineno-16-8"></a>
-<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">    </span><span class="nd">@Before</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setUp</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w">        </span>
-<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a>    <span class="nd">@Before</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">setUp</span><span class="p">()</span> <span class="n">throws</span> <span class="ne">Exception</span> <span class="p">{</span>        
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a>    <span class="p">}</span>
 <a id="__codelineno-16-12" name="__codelineno-16-12"></a>
-<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="w">    </span><span class="nd">@After</span>
-<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">tearDown</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a>    <span class="nd">@After</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">tearDown</span><span class="p">()</span> <span class="n">throws</span> <span class="ne">Exception</span> <span class="p">{</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15"></a>    <span class="p">}</span>
 <a id="__codelineno-16-16" name="__codelineno-16-16"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Complétons et modifions le code précédent de la façon suivante :</p>
@@ -1942,7 +1942,7 @@
 <span class="normal"><a href="#__codelineno-19-51">51</a></span>
 <span class="normal"><a href="#__codelineno-19-52">52</a></span>
 <span class="normal"><a href="#__codelineno-19-53">53</a></span>
-<span class="normal"><a href="#__codelineno-19-54">54</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">istia.st.elections.tests</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-19-54">54</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">package</span> <span class="n">istia</span><span class="o">.</span><span class="n">st</span><span class="o">.</span><span class="n">elections</span><span class="o">.</span><span class="n">tests</span><span class="p">;</span>
 <a id="__codelineno-19-2" name="__codelineno-19-2"></a>
 <a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Assert</span><span class="p">;</span>
 <a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">istia.st.elections.ElectionsException</span><span class="p">;</span>
@@ -1950,50 +1950,50 @@
 <a id="__codelineno-19-6" name="__codelineno-19-6"></a>
 <a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Test</span><span class="p">;</span>
 <a id="__codelineno-19-8" name="__codelineno-19-8"></a>
-<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JUnitTest1ListeElectorale</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">JUnitTest1ListeElectorale</span> <span class="p">{</span>
 <a id="__codelineno-19-10" name="__codelineno-19-10"></a>
-<a id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="w">    </span><span class="nd">@Test</span>
-<a id="__codelineno-19-12" name="__codelineno-19-12"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">t1</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-13" name="__codelineno-19-13"></a><span class="w">        </span><span class="c1">// création liste électorale</span>
-<a id="__codelineno-19-14" name="__codelineno-19-14"></a><span class="w">        </span><span class="n">ListeElectorale</span><span class="w"> </span><span class="n">liste</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">32000</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
-<a id="__codelineno-19-15" name="__codelineno-19-15"></a><span class="w">        </span><span class="c1">// vérifications</span>
-<a id="__codelineno-19-16" name="__codelineno-19-16"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">liste</span><span class="p">.</span><span class="na">getNom</span><span class="p">());</span>
-<a id="__codelineno-19-17" name="__codelineno-19-17"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="mi">32000</span><span class="p">,</span><span class="w"> </span><span class="n">liste</span><span class="p">.</span><span class="na">getVoix</span><span class="p">());</span>
-<a id="__codelineno-19-18" name="__codelineno-19-18"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span><span class="w"> </span><span class="n">liste</span><span class="p">.</span><span class="na">isElimine</span><span class="p">());</span>
-<a id="__codelineno-19-19" name="__codelineno-19-19"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">liste</span><span class="p">.</span><span class="na">getSieges</span><span class="p">());</span>
-<a id="__codelineno-19-20" name="__codelineno-19-20"></a><span class="w">        </span><span class="c1">// vérification validité id</span>
-<a id="__codelineno-19-21" name="__codelineno-19-21"></a><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">erreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-19-22" name="__codelineno-19-22"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-23" name="__codelineno-19-23"></a><span class="w">            </span><span class="n">liste</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-19-24" name="__codelineno-19-24"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ElectionsException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-25" name="__codelineno-19-25"></a><span class="w">            </span><span class="n">erreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<a id="__codelineno-19-26" name="__codelineno-19-26"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-19-27" name="__codelineno-19-27"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="n">erreur</span><span class="p">);</span>
-<a id="__codelineno-19-28" name="__codelineno-19-28"></a><span class="w">        </span><span class="c1">// vérification validité nom</span>
-<a id="__codelineno-19-29" name="__codelineno-19-29"></a><span class="w">        </span><span class="n">erreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-19-30" name="__codelineno-19-30"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-31" name="__codelineno-19-31"></a><span class="w">            </span><span class="n">liste</span><span class="p">.</span><span class="na">setNom</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span>
-<a id="__codelineno-19-32" name="__codelineno-19-32"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ElectionsException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-33" name="__codelineno-19-33"></a><span class="w">            </span><span class="n">erreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<a id="__codelineno-19-34" name="__codelineno-19-34"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-19-35" name="__codelineno-19-35"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="n">erreur</span><span class="p">);</span>
-<a id="__codelineno-19-36" name="__codelineno-19-36"></a><span class="w">        </span><span class="c1">// vérification validité voix</span>
-<a id="__codelineno-19-37" name="__codelineno-19-37"></a><span class="w">        </span><span class="n">erreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-19-38" name="__codelineno-19-38"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-39" name="__codelineno-19-39"></a><span class="w">            </span><span class="n">liste</span><span class="p">.</span><span class="na">setVoix</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-19-40" name="__codelineno-19-40"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ElectionsException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-41" name="__codelineno-19-41"></a><span class="w">            </span><span class="n">erreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<a id="__codelineno-19-42" name="__codelineno-19-42"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-19-43" name="__codelineno-19-43"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="n">erreur</span><span class="p">);</span>
-<a id="__codelineno-19-44" name="__codelineno-19-44"></a><span class="w">        </span><span class="c1">// vérification validité sièges</span>
-<a id="__codelineno-19-45" name="__codelineno-19-45"></a><span class="w">        </span><span class="n">erreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-19-46" name="__codelineno-19-46"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-47" name="__codelineno-19-47"></a><span class="w">            </span><span class="n">liste</span><span class="p">.</span><span class="na">setSieges</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-19-48" name="__codelineno-19-48"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ElectionsException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-49" name="__codelineno-19-49"></a><span class="w">            </span><span class="n">erreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
-<a id="__codelineno-19-50" name="__codelineno-19-50"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-19-51" name="__codelineno-19-51"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="n">erreur</span><span class="p">);</span>
-<a id="__codelineno-19-52" name="__codelineno-19-52"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a>    <span class="nd">@Test</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">t1</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13"></a>        <span class="o">//</span> <span class="n">création</span> <span class="n">liste</span> <span class="n">électorale</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14"></a>        <span class="n">ListeElectorale</span> <span class="n">liste</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ListeElectorale</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="mi">32000</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">false</span><span class="p">);</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15"></a>        <span class="o">//</span> <span class="n">vérifications</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16"></a>        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">liste</span><span class="o">.</span><span class="n">getNom</span><span class="p">());</span>
+<a id="__codelineno-19-17" name="__codelineno-19-17"></a>        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="mi">32000</span><span class="p">,</span> <span class="n">liste</span><span class="o">.</span><span class="n">getVoix</span><span class="p">());</span>
+<a id="__codelineno-19-18" name="__codelineno-19-18"></a>        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">false</span><span class="p">,</span> <span class="n">liste</span><span class="o">.</span><span class="n">isElimine</span><span class="p">());</span>
+<a id="__codelineno-19-19" name="__codelineno-19-19"></a>        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">liste</span><span class="o">.</span><span class="n">getSieges</span><span class="p">());</span>
+<a id="__codelineno-19-20" name="__codelineno-19-20"></a>        <span class="o">//</span> <span class="n">vérification</span> <span class="n">validité</span> <span class="nb">id</span>
+<a id="__codelineno-19-21" name="__codelineno-19-21"></a>        <span class="n">boolean</span> <span class="n">erreur</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+<a id="__codelineno-19-22" name="__codelineno-19-22"></a>        <span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-19-23" name="__codelineno-19-23"></a>            <span class="n">liste</span><span class="o">.</span><span class="n">setId</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-19-24" name="__codelineno-19-24"></a>        <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">ElectionsException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-19-25" name="__codelineno-19-25"></a>            <span class="n">erreur</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+<a id="__codelineno-19-26" name="__codelineno-19-26"></a>        <span class="p">}</span>
+<a id="__codelineno-19-27" name="__codelineno-19-27"></a>        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">true</span><span class="p">,</span> <span class="n">erreur</span><span class="p">);</span>
+<a id="__codelineno-19-28" name="__codelineno-19-28"></a>        <span class="o">//</span> <span class="n">vérification</span> <span class="n">validité</span> <span class="n">nom</span>
+<a id="__codelineno-19-29" name="__codelineno-19-29"></a>        <span class="n">erreur</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+<a id="__codelineno-19-30" name="__codelineno-19-30"></a>        <span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-19-31" name="__codelineno-19-31"></a>            <span class="n">liste</span><span class="o">.</span><span class="n">setNom</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-19-32" name="__codelineno-19-32"></a>        <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">ElectionsException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-19-33" name="__codelineno-19-33"></a>            <span class="n">erreur</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+<a id="__codelineno-19-34" name="__codelineno-19-34"></a>        <span class="p">}</span>
+<a id="__codelineno-19-35" name="__codelineno-19-35"></a>        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">true</span><span class="p">,</span> <span class="n">erreur</span><span class="p">);</span>
+<a id="__codelineno-19-36" name="__codelineno-19-36"></a>        <span class="o">//</span> <span class="n">vérification</span> <span class="n">validité</span> <span class="n">voix</span>
+<a id="__codelineno-19-37" name="__codelineno-19-37"></a>        <span class="n">erreur</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+<a id="__codelineno-19-38" name="__codelineno-19-38"></a>        <span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-19-39" name="__codelineno-19-39"></a>            <span class="n">liste</span><span class="o">.</span><span class="n">setVoix</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-19-40" name="__codelineno-19-40"></a>        <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">ElectionsException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-19-41" name="__codelineno-19-41"></a>            <span class="n">erreur</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+<a id="__codelineno-19-42" name="__codelineno-19-42"></a>        <span class="p">}</span>
+<a id="__codelineno-19-43" name="__codelineno-19-43"></a>        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">true</span><span class="p">,</span> <span class="n">erreur</span><span class="p">);</span>
+<a id="__codelineno-19-44" name="__codelineno-19-44"></a>        <span class="o">//</span> <span class="n">vérification</span> <span class="n">validité</span> <span class="n">sièges</span>
+<a id="__codelineno-19-45" name="__codelineno-19-45"></a>        <span class="n">erreur</span> <span class="o">=</span> <span class="n">false</span><span class="p">;</span>
+<a id="__codelineno-19-46" name="__codelineno-19-46"></a>        <span class="k">try</span> <span class="p">{</span>
+<a id="__codelineno-19-47" name="__codelineno-19-47"></a>            <span class="n">liste</span><span class="o">.</span><span class="n">setSieges</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-19-48" name="__codelineno-19-48"></a>        <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">ElectionsException</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-19-49" name="__codelineno-19-49"></a>            <span class="n">erreur</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
+<a id="__codelineno-19-50" name="__codelineno-19-50"></a>        <span class="p">}</span>
+<a id="__codelineno-19-51" name="__codelineno-19-51"></a>        <span class="n">Assert</span><span class="o">.</span><span class="n">assertEquals</span><span class="p">(</span><span class="n">true</span><span class="p">,</span> <span class="n">erreur</span><span class="p">);</span>
+<a id="__codelineno-19-52" name="__codelineno-19-52"></a>    <span class="p">}</span>
 <a id="__codelineno-19-53" name="__codelineno-19-53"></a>
 <a id="__codelineno-19-54" name="__codelineno-19-54"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -2052,18 +2052,18 @@
 <span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-20-10">10</a></span>
 <span class="normal"><a href="#__codelineno-20-11">11</a></span>
-<span class="normal"><a href="#__codelineno-20-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="c1">// classe de comparaison de listes électorales</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="kd">class</span> <span class="nc">CompareListesElectorales</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Comparator</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-20-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a>// classe de comparaison de listes électorales
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>class CompareListesElectorales implements Comparator {
 <a id="__codelineno-20-3" name="__codelineno-20-3"></a>
-<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">    </span><span class="c1">// comparaison de deux listes électorales selon le nombre de voix</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj1</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">obj2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">        </span><span class="c1">// on récupère les listes électorales</span>
-<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">        </span><span class="n">ListeElectorale</span><span class="w"> </span><span class="n">listeElectorale1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">)</span><span class="w"> </span><span class="n">obj1</span><span class="p">;</span>
-<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="w">        </span><span class="n">ListeElectorale</span><span class="w"> </span><span class="n">listeElectorale2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">)</span><span class="w"> </span><span class="n">obj2</span><span class="p">;</span>
-<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">        </span><span class="c1">// on compare les voix de ces deux listes</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="p">....</span><span class="w">        </span>
-<a id="__codelineno-20-11" name="__codelineno-20-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-20-12" name="__codelineno-20-12"></a><span class="p">}</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a>    // comparaison de deux listes électorales selon le nombre de voix
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a>    public int compare(Object obj1, Object obj2) {
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a>        // on récupère les listes électorales
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a>        ListeElectorale listeElectorale1 = (ListeElectorale) obj1;
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a>        ListeElectorale listeElectorale2 = (ListeElectorale) obj2;
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a>        // on compare les voix de ces deux listes
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a>....        
+<a id="__codelineno-20-11" name="__codelineno-20-11"></a>    }
+<a id="__codelineno-20-12" name="__codelineno-20-12"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 2 : la classe n'est pas déclarée <strong>publique</strong>. Dans un fichier source Java, il peut y avoir plusieurs classes mais une seule peut avoir l'attribut <strong>public</strong>, celle qui porte le nom du fichier source.</li>
@@ -2077,15 +2077,15 @@
 <span class="normal"><a href="#__codelineno-21-6">6</a></span>
 <span class="normal"><a href="#__codelineno-21-7">7</a></span>
 <span class="normal"><a href="#__codelineno-21-8">8</a></span>
-<span class="normal"><a href="#__codelineno-21-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="c1">// classe de comparaison de listes électorales</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="kd">class</span> <span class="nc">CompareListesElectorales</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Comparator</span><span class="o">&lt;</span><span class="n">ListeElectorale</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-21-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>// classe de comparaison de listes électorales
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a>class CompareListesElectorales implements Comparator&lt;ListeElectorale&gt; {
 <a id="__codelineno-21-3" name="__codelineno-21-3"></a>
-<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">    </span><span class="c1">// comparaison de deux listes électorales selon le nombre de sièges</span>
-<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="w"> </span><span class="n">listeElectorale1</span><span class="p">,</span>
-<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">            </span><span class="n">ListeElectorale</span><span class="w"> </span><span class="n">listeElectorale2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="p">...</span>
-<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="p">}</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a>    // comparaison de deux listes électorales selon le nombre de sièges
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>    public int compare(ListeElectorale listeElectorale1,
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a>            ListeElectorale listeElectorale2) {
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a>...
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a>    }
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 2 : la classe implémente l'interface Comparator&lt;ListeElectorale&gt;</li>
@@ -2159,7 +2159,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>

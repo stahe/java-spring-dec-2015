@@ -1142,133 +1142,133 @@
 <span class="normal"><a href="#__codelineno-0-124">124</a></span>
 <span class="normal"><a href="#__codelineno-0-125">125</a></span>
 <span class="normal"><a href="#__codelineno-0-126">126</a></span>
-<span class="normal"><a href="#__codelineno-0-127">127</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nx">début</span><span class="o">-</span><span class="nx">programme</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="c1">// données</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nx">saisieOK</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">booléen</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nx">nbSiègesAPourvoir</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">entier</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nx">nbListes</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">entier</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nx">nomListe</span><span class="p">[]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">chaînes</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">caractères</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nx">voixListe</span><span class="p">[]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">entier</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nx">elimineListe</span><span class="p">[]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">booléen</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="nx">siegesListe</span><span class="p">[]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">entier</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="nx">moyenneListe</span><span class="p">[]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">réel</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="nx">i</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">entier</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="nx">nbVoixUtiles</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">entier</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="nx">quotientElectoral</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">réel</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="nx">nbSiègesPourvus</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">entier</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="nx">moyenneMax</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">réel</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="nx">Max</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">entier</span><span class="w"> </span><span class="nx">iSiège</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="nx">entier</span>
+<span class="normal"><a href="#__codelineno-0-127">127</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>début-programme
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>    // données
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>    saisieOK : booléen
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>    nbSiègesAPourvoir : entier
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>    nbListes : entier
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>    nomListe[] : chaînes de caractères
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    voixListe[] : entier
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    elimineListe[] : booléen
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>    siegesListe[] : entier
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>    moyenneListe[] : réel
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>    i : entier
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>    nbVoixUtiles : entier
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>    quotientElectoral : réel
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>    nbSiègesPourvus : entier
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    moyenneMax : réel
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a>    Max : entier iSiège : entier
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="c1">// code</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="c1">// nbre de sièges à pourvoir</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="nx">saisieOK</span><span class="o">&lt;-</span><span class="nx">faux</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="nx">tant</span><span class="w"> </span><span class="nx">que</span><span class="w"> </span><span class="nx">non</span><span class="w"> </span><span class="nx">saisieOK</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">        </span><span class="nx">écrire</span><span class="w"> </span><span class="s2">&quot;Nombre de sièges à pourvoir : &quot;</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">        </span><span class="nx">lire</span><span class="w"> </span><span class="nx">nbSiègesAPourvoir</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="nx">si</span><span class="w"> </span><span class="nx">nbSiègesAPourvoir</span><span class="w"> </span><span class="nx">n</span><span class="s1">&#39;est pas un entier &gt;0 alors</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="s1">            écrire &quot;Erreur : tapez un nombre entier &gt;0&quot;</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="s1">        sinon</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="s1">            saisieOK&lt;-vrai</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="s1">        finsi</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="s1">    fintantque</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="s1">    // nbre de listes en compétition</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="s1">    saisieOK&lt;-faux</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="s1">    tant que non saisieOK</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="s1">        écrire &quot;Nombre de listes en compétition : &quot;</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="s1">        lire nbListes</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="s1">        si nbListes n&#39;</span><span class="nx">est</span><span class="w"> </span><span class="nx">pas</span><span class="w"> </span><span class="nx">un</span><span class="w"> </span><span class="nx">entier</span><span class="w"> </span><span class="o">&gt;</span><span class="mf">0</span><span class="w"> </span><span class="nx">alors</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">            </span><span class="nx">écrire</span><span class="w"> </span><span class="s2">&quot;Erreur : tapez un nombre entier &gt;0&quot;</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">        </span><span class="nx">sinon</span>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">            </span><span class="nx">saisieOK</span><span class="o">&lt;-</span><span class="nx">vrai</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">        </span><span class="nx">finsi</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">    </span><span class="nx">fintantque</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>    // code
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>    // nbre de sièges à pourvoir
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>    saisieOK&lt;-faux
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>    tant que non saisieOK
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a>        écrire &quot;Nombre de sièges à pourvoir : &quot;
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>        lire nbSiègesAPourvoir
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a>        si nbSiègesAPourvoir n&#39;est pas un entier &gt;0 alors
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>            écrire &quot;Erreur : tapez un nombre entier &gt;0&quot;
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a>        sinon
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a>            saisieOK&lt;-vrai
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a>        finsi
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a>    fintantque
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a>    // nbre de listes en compétition
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a>    saisieOK&lt;-faux
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a>    tant que non saisieOK
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a>        écrire &quot;Nombre de listes en compétition : &quot;
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a>        lire nbListes
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a>        si nbListes n&#39;est pas un entier &gt;0 alors
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a>            écrire &quot;Erreur : tapez un nombre entier &gt;0&quot;
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a>        sinon
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a>            saisieOK&lt;-vrai
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a>        finsi
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a>    fintantque
 <a id="__codelineno-0-41" name="__codelineno-0-41"></a>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">    </span><span class="c1">// dimensionnement des tableaux</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">    </span><span class="nx">dimensionner</span><span class="w"> </span><span class="nx">les</span><span class="w"> </span><span class="nx">tableau</span><span class="w"> </span><span class="nx">nomListe</span><span class="p">,</span><span class="w"> </span><span class="nx">voixListe</span><span class="p">,</span><span class="w"> </span><span class="nx">elimineListe</span><span class="p">,</span><span class="w"> </span><span class="nx">siegesListe</span><span class="p">,</span><span class="w"> </span><span class="nx">moyenneListe</span><span class="w"> </span><span class="nx">à</span><span class="w"> </span><span class="nx">nbListes</span><span class="w"> </span><span class="nx">éléments</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a>    // dimensionnement des tableaux
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a>    dimensionner les tableau nomListe, voixListe, elimineListe, siegesListe, moyenneListe à nbListes éléments
 <a id="__codelineno-0-44" name="__codelineno-0-44"></a>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">    </span><span class="c1">// saisie des noms et voix des listes</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">    </span><span class="nx">totalVoix</span><span class="o">&lt;-</span><span class="mf">0</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">    </span><span class="nx">pour</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="nx">variant</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="nx">à</span><span class="w"> </span><span class="nx">nbListes</span><span class="o">-</span><span class="mf">1</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">        </span><span class="c1">// saisie du nom de la liste i</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">        </span><span class="nx">saisieOK</span><span class="o">&lt;-</span><span class="nx">faux</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">        </span><span class="nx">tantque</span><span class="w"> </span><span class="nx">non</span><span class="w"> </span><span class="nx">saisieOK</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">        </span><span class="nx">écrire</span><span class="w"> </span><span class="s2">&quot;Nom de la liste n° &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; : &quot;</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">        </span><span class="nx">lire</span><span class="w"> </span><span class="nx">nomListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">        </span><span class="nx">si</span><span class="w"> </span><span class="nx">nomListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="nx">est</span><span class="w"> </span><span class="nx">vide</span><span class="w"> </span><span class="nx">alors</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">            </span><span class="nx">écrire</span><span class="w"> </span><span class="s2">&quot;Erreur : Tapez un nom non vide&quot;</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">        </span><span class="nx">sinon</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">            </span><span class="nx">saisieOK</span><span class="o">&lt;-</span><span class="nx">vrai</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">        </span><span class="nx">finsi</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">    </span><span class="nx">fintantque</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">    </span><span class="c1">// saisie du nombre de voix de la liste i</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">    </span><span class="nx">saisieOK</span><span class="o">&lt;-</span><span class="nx">faux</span>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="w">    </span><span class="nx">tantque</span><span class="w"> </span><span class="nx">non</span><span class="w"> </span><span class="nx">saisieOK</span>
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w">        </span><span class="nx">écrire</span><span class="w"> </span><span class="s2">&quot;Nombre de voix de la liste &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nomListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s2">&quot; : &quot;</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">        </span><span class="nx">lire</span><span class="w"> </span><span class="nx">voixListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="w">        </span><span class="nx">si</span><span class="w"> </span><span class="nx">voixListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="nx">n</span><span class="err">&#39;</span><span class="nx">est</span><span class="w"> </span><span class="nx">pas</span><span class="w"> </span><span class="nx">un</span><span class="w"> </span><span class="nx">nombre</span><span class="w"> </span><span class="nx">entier</span><span class="w"> </span><span class="o">&gt;=</span><span class="mf">0</span><span class="w"> </span><span class="nx">alors</span>
-<a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">            </span><span class="nx">écrire</span><span class="w"> </span><span class="s2">&quot;Erreur : tapez un nombre entier &gt;=0&quot;</span>
-<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="w">        </span><span class="nx">sinon</span>
-<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="w">            </span><span class="nx">saisieOK</span><span class="o">&lt;-</span><span class="nx">vrai</span>
-<a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="w">        </span><span class="nx">finsi</span>
-<a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="w">    </span><span class="nx">fintantque</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a>    // saisie des noms et voix des listes
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a>    totalVoix&lt;-0
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a>    pour i variant de 0 à nbListes-1
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a>        // saisie du nom de la liste i
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a>        saisieOK&lt;-faux
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a>        tantque non saisieOK
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a>        écrire &quot;Nom de la liste n° &quot;, i, &quot; : &quot;
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a>        lire nomListe[i]
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a>        si nomListe[i] est vide alors
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a>            écrire &quot;Erreur : Tapez un nom non vide&quot;
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a>        sinon
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a>            saisieOK&lt;-vrai
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a>        finsi
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a>    fintantque
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a>    // saisie du nombre de voix de la liste i
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a>    saisieOK&lt;-faux
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a>    tantque non saisieOK
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a>        écrire &quot;Nombre de voix de la liste &quot;, nomListe[i] , &quot; : &quot;
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a>        lire voixListe[i]
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a>        si voixListe[i] n&#39;est pas un nombre entier &gt;=0 alors
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a>            écrire &quot;Erreur : tapez un nombre entier &gt;=0&quot;
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a>        sinon
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a>            saisieOK&lt;-vrai
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a>        finsi
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a>    fintantque
 <a id="__codelineno-0-70" name="__codelineno-0-70"></a>
-<a id="__codelineno-0-71" name="__codelineno-0-71"></a><span class="w">    </span><span class="c1">// on incrémente le total des voix</span>
-<a id="__codelineno-0-72" name="__codelineno-0-72"></a><span class="w">    </span><span class="nx">totalVoix</span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">totalVoix</span><span class="o">+</span><span class="nx">voixListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="mf">79.</span><span class="nx">finpour</span><span class="w"> </span><span class="mf">80.</span>
-<a id="__codelineno-0-73" name="__codelineno-0-73"></a><span class="w">    </span><span class="c1">// calcul des voix utiles</span>
-<a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="w">    </span><span class="nx">nbVoixUtiles</span><span class="o">&lt;-</span><span class="mf">0</span>
-<a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="w">    </span><span class="nx">pour</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="nx">variant</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="nx">à</span><span class="w"> </span><span class="nx">nbListes</span><span class="o">-</span><span class="mf">1</span>
-<a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="w">        </span><span class="nx">si</span><span class="w"> </span><span class="p">(</span><span class="nx">voixListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">/</span><span class="nx">totalVoix</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.05</span><span class="w"> </span><span class="nx">alors</span>
-<a id="__codelineno-0-77" name="__codelineno-0-77"></a><span class="w">            </span><span class="nx">elimineListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">&lt;-</span><span class="nx">vrai</span>
-<a id="__codelineno-0-78" name="__codelineno-0-78"></a><span class="w">        </span><span class="nx">sinon</span>
-<a id="__codelineno-0-79" name="__codelineno-0-79"></a><span class="w">            </span><span class="nx">elimineListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">&lt;-</span><span class="nx">faux</span>
-<a id="__codelineno-0-80" name="__codelineno-0-80"></a><span class="w">            </span><span class="nx">nbVoixUtiles</span><span class="o">&lt;-</span><span class="nx">nbVoixUtiles</span><span class="o">+</span><span class="nx">voixListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-<a id="__codelineno-0-81" name="__codelineno-0-81"></a><span class="w">        </span><span class="nx">finsi</span>
-<a id="__codelineno-0-82" name="__codelineno-0-82"></a><span class="w">    </span><span class="nx">finpour</span>
-<a id="__codelineno-0-83" name="__codelineno-0-83"></a><span class="w">    </span><span class="c1">// y-a-t-il des listes non éliminées ?</span>
-<a id="__codelineno-0-84" name="__codelineno-0-84"></a><span class="w">    </span><span class="nx">si</span><span class="w"> </span><span class="nx">nbVoixUtiles</span><span class="o">=</span><span class="mf">0</span><span class="w"> </span><span class="nx">alors</span>
-<a id="__codelineno-0-85" name="__codelineno-0-85"></a><span class="w">        </span><span class="nx">écrire</span><span class="w"> </span><span class="s2">&quot;Erreur : toutes les listes ont été éliminées&quot;</span>
-<a id="__codelineno-0-86" name="__codelineno-0-86"></a><span class="w">        </span><span class="nx">arrêt</span><span class="w"> </span><span class="nx">du</span><span class="w"> </span><span class="nx">programme</span>
-<a id="__codelineno-0-87" name="__codelineno-0-87"></a><span class="w">    </span><span class="nx">finsi</span>
-<a id="__codelineno-0-88" name="__codelineno-0-88"></a><span class="w">    </span><span class="c1">// répartition des sièges au quotient</span>
-<a id="__codelineno-0-89" name="__codelineno-0-89"></a><span class="w">    </span><span class="nx">quotientElectoral</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">nbVoixUtiles</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="nx">nbSiègesAPourvoir</span>
-<a id="__codelineno-0-90" name="__codelineno-0-90"></a><span class="w">    </span><span class="nx">nbSiègesPourvus</span><span class="o">&lt;-</span><span class="w"> </span><span class="mf">0</span>
-<a id="__codelineno-0-91" name="__codelineno-0-91"></a><span class="w">    </span><span class="nx">pour</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="nx">variant</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="nx">à</span><span class="w"> </span><span class="nx">nbListes</span><span class="o">-</span><span class="mf">1</span>
-<a id="__codelineno-0-92" name="__codelineno-0-92"></a><span class="w">        </span><span class="nx">si</span><span class="w"> </span><span class="nx">non</span><span class="w"> </span><span class="nx">elimineListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="nx">alors</span>
-<a id="__codelineno-0-93" name="__codelineno-0-93"></a><span class="w">            </span><span class="nx">siegesListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">partie</span><span class="w"> </span><span class="nx">entière</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="p">(</span><span class="nx">voixListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">/</span><span class="nx">quotientElectoral</span><span class="p">)</span>
-<a id="__codelineno-0-94" name="__codelineno-0-94"></a><span class="w">            </span><span class="nx">moyenneListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">voixListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="nx">siegesListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">+</span><span class="mf">1</span><span class="p">)</span>
-<a id="__codelineno-0-95" name="__codelineno-0-95"></a><span class="w">            </span><span class="nx">nbSiègesPourvus</span><span class="o">&lt;-</span><span class="nx">nbSiègesPourvus</span><span class="o">+</span><span class="nx">siegesListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-<a id="__codelineno-0-96" name="__codelineno-0-96"></a><span class="w">        </span><span class="nx">sinon</span>
-<a id="__codelineno-0-97" name="__codelineno-0-97"></a><span class="w">            </span><span class="nx">siegesListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="o">&lt;-</span><span class="mf">0</span>
-<a id="__codelineno-0-98" name="__codelineno-0-98"></a><span class="w">        </span><span class="nx">finsi</span>
-<a id="__codelineno-0-99" name="__codelineno-0-99"></a><span class="w">    </span><span class="nx">finpour</span>
-<a id="__codelineno-0-100" name="__codelineno-0-100"></a><span class="w">    </span><span class="c1">// répartition des sièges restants à la plus forte moyenne</span>
-<a id="__codelineno-0-101" name="__codelineno-0-101"></a><span class="w">    </span><span class="c1">// 1 siège est attribué à chaque tour de boucle</span>
-<a id="__codelineno-0-102" name="__codelineno-0-102"></a><span class="w">    </span><span class="nx">pour</span><span class="w"> </span><span class="nx">iSiège</span><span class="w"> </span><span class="nx">variant</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="nx">à</span><span class="w"> </span><span class="nx">nbSiègesAPourvoir</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">nbSiègesPourvus</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span>
-<a id="__codelineno-0-103" name="__codelineno-0-103"></a><span class="w">        </span><span class="c1">// recherche de la liste ayant la + forte moyenne</span>
-<a id="__codelineno-0-104" name="__codelineno-0-104"></a><span class="w">        </span><span class="nx">moyenneMax</span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="mf">1</span><span class="p">)</span>
-<a id="__codelineno-0-105" name="__codelineno-0-105"></a><span class="w">        </span><span class="nx">pour</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="nx">variant</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="nx">à</span><span class="w"> </span><span class="nx">nbListes</span><span class="o">-</span><span class="mf">1</span>
-<a id="__codelineno-0-106" name="__codelineno-0-106"></a><span class="w">            </span><span class="nx">si</span><span class="w"> </span><span class="nx">non</span><span class="w"> </span><span class="nx">elimineListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="nx">alors</span>
-<a id="__codelineno-0-107" name="__codelineno-0-107"></a><span class="w">                </span><span class="nx">si</span><span class="w"> </span><span class="nx">moyenneListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="nx">moyenneMax</span><span class="w"> </span><span class="nx">alors</span>
-<a id="__codelineno-0-108" name="__codelineno-0-108"></a><span class="w">                    </span><span class="nx">moyenneMax</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">moyenneListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span>
-<a id="__codelineno-0-109" name="__codelineno-0-109"></a><span class="w">                    </span><span class="nx">iMax</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">i</span>
-<a id="__codelineno-0-110" name="__codelineno-0-110"></a><span class="w">                </span><span class="nx">finsi</span>
-<a id="__codelineno-0-111" name="__codelineno-0-111"></a><span class="w">            </span><span class="nx">finsi</span>
-<a id="__codelineno-0-112" name="__codelineno-0-112"></a><span class="w">        </span><span class="nx">finpour</span>
-<a id="__codelineno-0-113" name="__codelineno-0-113"></a><span class="w">        </span><span class="c1">// on attribue 1 siège à la liste de + forte moyenne</span>
-<a id="__codelineno-0-114" name="__codelineno-0-114"></a><span class="w">        </span><span class="nx">siegeListe</span><span class="p">[</span><span class="nx">iMax</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">siegeListe</span><span class="p">[</span><span class="nx">iMax</span><span class="p">]</span><span class="o">+</span><span class="mf">1</span>
-<a id="__codelineno-0-115" name="__codelineno-0-115"></a><span class="w">        </span><span class="c1">// et on change sa moyenne</span>
-<a id="__codelineno-0-116" name="__codelineno-0-116"></a><span class="w">        </span><span class="nx">moyenneListe</span><span class="p">[</span><span class="nx">iMax</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nx">voixListe</span><span class="p">[</span><span class="nx">iMax</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="nx">siegeListe</span><span class="p">[</span><span class="nx">iMax</span><span class="p">]</span><span class="o">+</span><span class="mf">1</span><span class="p">)</span>
-<a id="__codelineno-0-117" name="__codelineno-0-117"></a><span class="w">    </span><span class="nx">finpour</span>
-<a id="__codelineno-0-118" name="__codelineno-0-118"></a><span class="w">    </span><span class="c1">// affichage résultats sans tri</span>
-<a id="__codelineno-0-119" name="__codelineno-0-119"></a><span class="w">    </span><span class="nx">pour</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="nx">variant</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="nx">à</span><span class="w"> </span><span class="nx">nbListes</span><span class="o">-</span><span class="mf">1</span>
-<a id="__codelineno-0-120" name="__codelineno-0-120"></a><span class="w">        </span><span class="nx">si</span><span class="w"> </span><span class="nx">elimineListe</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span><span class="w"> </span><span class="nx">alors</span>
-<a id="__codelineno-0-121" name="__codelineno-0-121"></a><span class="w">            </span><span class="nx">écrire</span><span class="w"> </span><span class="s2">&quot;La liste &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nomListe</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot; a été éliminée&quot;</span>
-<a id="__codelineno-0-122" name="__codelineno-0-122"></a><span class="w">        </span><span class="nx">sinon</span>
-<a id="__codelineno-0-123" name="__codelineno-0-123"></a><span class="w">            </span><span class="nx">écrire</span><span class="w"> </span><span class="s2">&quot;La liste &quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nomListe</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot; a obtenu &quot;</span><span class="p">,</span>
-<a id="__codelineno-0-124" name="__codelineno-0-124"></a><span class="w">            </span><span class="nx">siegesListe</span><span class="p">[</span><span class="nx">i</span><span class="p">],</span><span class="w"> </span><span class="s2">&quot; siège(s)&quot;</span>
-<a id="__codelineno-0-125" name="__codelineno-0-125"></a><span class="w">        </span><span class="nx">finsi</span>
-<a id="__codelineno-0-126" name="__codelineno-0-126"></a><span class="w">    </span><span class="nx">finpour</span>
-<a id="__codelineno-0-127" name="__codelineno-0-127"></a><span class="nx">fin</span><span class="o">-</span><span class="nx">programme</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a>    // on incrémente le total des voix
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a>    totalVoix&lt;- totalVoix+voixListe[i]79.finpour 80.
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a>    // calcul des voix utiles
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a>    nbVoixUtiles&lt;-0
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a>    pour i variant de 0 à nbListes-1
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a>        si (voixListe[i]/totalVoix)&lt;0.05 alors
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a>            elimineListe[i]&lt;-vrai
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a>        sinon
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a>            elimineListe[i]&lt;-faux
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a>            nbVoixUtiles&lt;-nbVoixUtiles+voixListe[i]
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a>        finsi
+<a id="__codelineno-0-82" name="__codelineno-0-82"></a>    finpour
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a>    // y-a-t-il des listes non éliminées ?
+<a id="__codelineno-0-84" name="__codelineno-0-84"></a>    si nbVoixUtiles=0 alors
+<a id="__codelineno-0-85" name="__codelineno-0-85"></a>        écrire &quot;Erreur : toutes les listes ont été éliminées&quot;
+<a id="__codelineno-0-86" name="__codelineno-0-86"></a>        arrêt du programme
+<a id="__codelineno-0-87" name="__codelineno-0-87"></a>    finsi
+<a id="__codelineno-0-88" name="__codelineno-0-88"></a>    // répartition des sièges au quotient
+<a id="__codelineno-0-89" name="__codelineno-0-89"></a>    quotientElectoral &lt;- nbVoixUtiles / nbSiègesAPourvoir
+<a id="__codelineno-0-90" name="__codelineno-0-90"></a>    nbSiègesPourvus&lt;- 0
+<a id="__codelineno-0-91" name="__codelineno-0-91"></a>    pour i variant de 0 à nbListes-1
+<a id="__codelineno-0-92" name="__codelineno-0-92"></a>        si non elimineListe[i] alors
+<a id="__codelineno-0-93" name="__codelineno-0-93"></a>            siegesListe[i]&lt;- partie entière de (voixListe[i]/quotientElectoral)
+<a id="__codelineno-0-94" name="__codelineno-0-94"></a>            moyenneListe[i] &lt;- voixListe[i] / (siegesListe[i]+1)
+<a id="__codelineno-0-95" name="__codelineno-0-95"></a>            nbSiègesPourvus&lt;-nbSiègesPourvus+siegesListe[i]
+<a id="__codelineno-0-96" name="__codelineno-0-96"></a>        sinon
+<a id="__codelineno-0-97" name="__codelineno-0-97"></a>            siegesListe[i]&lt;-0
+<a id="__codelineno-0-98" name="__codelineno-0-98"></a>        finsi
+<a id="__codelineno-0-99" name="__codelineno-0-99"></a>    finpour
+<a id="__codelineno-0-100" name="__codelineno-0-100"></a>    // répartition des sièges restants à la plus forte moyenne
+<a id="__codelineno-0-101" name="__codelineno-0-101"></a>    // 1 siège est attribué à chaque tour de boucle
+<a id="__codelineno-0-102" name="__codelineno-0-102"></a>    pour iSiège variant de 0 à nbSiègesAPourvoir - nbSiègesPourvus - 1
+<a id="__codelineno-0-103" name="__codelineno-0-103"></a>        // recherche de la liste ayant la + forte moyenne
+<a id="__codelineno-0-104" name="__codelineno-0-104"></a>        moyenneMax&lt;- (-1)
+<a id="__codelineno-0-105" name="__codelineno-0-105"></a>        pour i variant de 0 à nbListes-1
+<a id="__codelineno-0-106" name="__codelineno-0-106"></a>            si non elimineListe[i] alors
+<a id="__codelineno-0-107" name="__codelineno-0-107"></a>                si moyenneListe[i] &gt; moyenneMax alors
+<a id="__codelineno-0-108" name="__codelineno-0-108"></a>                    moyenneMax &lt;- moyenneListe[i]
+<a id="__codelineno-0-109" name="__codelineno-0-109"></a>                    iMax &lt;- i
+<a id="__codelineno-0-110" name="__codelineno-0-110"></a>                finsi
+<a id="__codelineno-0-111" name="__codelineno-0-111"></a>            finsi
+<a id="__codelineno-0-112" name="__codelineno-0-112"></a>        finpour
+<a id="__codelineno-0-113" name="__codelineno-0-113"></a>        // on attribue 1 siège à la liste de + forte moyenne
+<a id="__codelineno-0-114" name="__codelineno-0-114"></a>        siegeListe[iMax] &lt;- siegeListe[iMax]+1
+<a id="__codelineno-0-115" name="__codelineno-0-115"></a>        // et on change sa moyenne
+<a id="__codelineno-0-116" name="__codelineno-0-116"></a>        moyenneListe[iMax] &lt;- voixListe[iMax]/(siegeListe[iMax]+1)
+<a id="__codelineno-0-117" name="__codelineno-0-117"></a>    finpour
+<a id="__codelineno-0-118" name="__codelineno-0-118"></a>    // affichage résultats sans tri
+<a id="__codelineno-0-119" name="__codelineno-0-119"></a>    pour i variant de 0 à nbListes-1
+<a id="__codelineno-0-120" name="__codelineno-0-120"></a>        si elimineListe[i] alors
+<a id="__codelineno-0-121" name="__codelineno-0-121"></a>            écrire &quot;La liste &quot;, nomListe[i], &quot; a été éliminée&quot;
+<a id="__codelineno-0-122" name="__codelineno-0-122"></a>        sinon
+<a id="__codelineno-0-123" name="__codelineno-0-123"></a>            écrire &quot;La liste &quot;, nomListe[i], &quot; a obtenu &quot;,
+<a id="__codelineno-0-124" name="__codelineno-0-124"></a>            siegesListe[i], &quot; siège(s)&quot;
+<a id="__codelineno-0-125" name="__codelineno-0-125"></a>        finsi
+<a id="__codelineno-0-126" name="__codelineno-0-126"></a>    finpour
+<a id="__codelineno-0-127" name="__codelineno-0-127"></a>fin-programme
 </code></pre></div></td></tr></table></div>
 <h2 id="24-travail-a-faire">2.4. Travail à faire</h2>
 <p><strong>Q1</strong> : traduire l'algorithme en C#. Le mettre en oeuvre avec Visual Studio.</p>
@@ -1338,7 +1338,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>

@@ -1158,16 +1158,16 @@
 <span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IElectionsDao</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>public interface IElectionsDao {
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSeuilElectoral</span><span class="p">();</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>  public double getSeuilElectoral();
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNbSiegesAPourvoir</span><span class="p">();</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>  public int getNbSiegesAPourvoir();
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">getListesElectorales</span><span class="p">();</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>  public ListeElectorale[] getListesElectorales();
 <a id="__codelineno-4-8" name="__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setListesElectorales</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="p">}</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a>  public void setListesElectorales(ListeElectorale[] listesElectorales);
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 1 : l'interface s'appelle [IElectionsDao]. Elle définit quatre méthodes :</li>
@@ -1197,19 +1197,19 @@
 <span class="normal"><a href="#__codelineno-5-10">10</a></span>
 <span class="normal"><a href="#__codelineno-5-11">11</a></span>
 <span class="normal"><a href="#__codelineno-5-12">12</a></span>
-<span class="normal"><a href="#__codelineno-5-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IElectionsMetier</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>public interface IElectionsMetier {
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">getListesElectorales</span><span class="p">();</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>    public ListeElectorale[] getListesElectorales();
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNbSiegesAPourvoir</span><span class="p">();</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    public int getNbSiegesAPourvoir();
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSeuilElectoral</span><span class="p">();</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>    public double getSeuilElectoral();
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recordResultats</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>    public void recordResultats(ListeElectorale[] listesElectorales);
 <a id="__codelineno-5-10" name="__codelineno-5-10"></a>
-<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a>    public ListeElectorale[] calculerSieges(ListeElectorale[] listesElectorales);
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a>
-<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="p">}</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 51: l'interface s'appelle [IElectionsMetier]. Elle définit les méthodes suivantes :</li>
@@ -1247,14 +1247,12 @@
 <li>la couche [ui] fait appel à la méthode calculerSieges de la couche [métier] en lui passant le paramètre [ListeElectorale[] listesElectorales1] ;</li>
 <li>ce paramètre est en fait passé à la couche d'émission [2]. Celle-ci va transmettre sur le réseau, la <strong>valeur</strong> du paramètre listesElectorales1 et non sa <strong>référence</strong>. La forme exacte de cette valeur dépend du protocole de communication utilisé ;</li>
 <li>la couche de réception [3] va récupérer cette valeur et reconstruire à partir d'elle un objet [ListeElectorale[] listesElectorales2] image du paramètre initial envoyé par la couche [metier]. On a maintenant deux objets identiques (au sens de contenu) dans deux JVM différentes : listesElectorales1 et listesElectorales2.</li>
-<li>
-<p>la couche de réception va passer l'objet listesElectorales2 à la méthode calculerSieges de la couche [métier] ; qui va le persister en base de données. Après cette opération, la référence listesElectorales2 pointe sur un tableau d'objets [ListeElectorale] ayant leurs champs [sieges, elimine] initialisés. . Ce n'est pas le cas de l'objet listesElectorales1 sur lequel la couche [ui] a une référence. Si on veut que la couche [ui] ait une référence sur l'objet listesElectorales2, il faut lui envoyer celui-ci. Aussi est-on amenés à utiliser la signature suivante pour la méthode [calculerSieges] :
+<li>la couche de réception va passer l'objet listesElectorales2 à la méthode calculerSieges de la couche [métier] ; qui va le persister en base de données. Après cette opération, la référence listesElectorales2 pointe sur un tableau d'objets [ListeElectorale] ayant leurs champs [sieges, elimine] initialisés. . Ce n'est pas le cas de l'objet listesElectorales1 sur lequel la couche [ui] a une référence. Si on veut que la couche [ui] ait une référence sur l'objet listesElectorales2, il faut lui envoyer celui-ci. Aussi est-on amenés à utiliser la signature suivante pour la méthode [calculerSieges] :</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>public ListeElectorale[] calculerSieges(ListeElectorale[] listesElectorales);
-</code></pre></div></td></tr></table></div></p>
-</li>
-<li>
-<p>avec cette signature, la méthode calculerSieges va rendre comme résultat la référence listesElectorales2. Ce résultat est rendu à la couche de réception [3] qui avait appelé la couche [métier]. Celle-ci va rendre la <strong>valeur</strong> (et non la <strong>référence</strong>) de listesElectorales2 à la couche d'émission [2] ;</p>
-</li>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>avec cette signature, la méthode calculerSieges va rendre comme résultat la référence listesElectorales2. Ce résultat est rendu à la couche de réception [3] qui avait appelé la couche [métier]. Celle-ci va rendre la <strong>valeur</strong> (et non la <strong>référence</strong>) de listesElectorales2 à la couche d'émission [2] ;</li>
 <li>la couche d'émission [2] va récupérer cette valeur et reconstruire à partir d'elle un objet [ListeElectorale[] listesElectorales3] image du résultat rendu par la méthode calculerSieges de la couche [métier].</li>
 <li>l'objet [ListeElectorale[] listesElectorales3] est rendu à la méthode de la couche [ui] dont l'appel à la méthode calculerSieges de la couche [DAO] avait initié tout ce mécanisme ;</li>
 </ul>
@@ -1265,8 +1263,8 @@
 </ul>
 <p>Pour qu'un objet puisse subir cette sérialisation / désérialisation, certains protocoles exigent que l'objet implémente l'interface [Serializable]. Cette interface est juste un marqueur. Il n'y a pas de méthodes à implémenter. Aussi la classe [ListeElectorale] sera-t-elle désormais déclarée de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
-<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ListeElectorale</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">serialVersionUID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1L</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>public abstract class ListeElectorale implements Serializable {
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>    private static final long serialVersionUID = 1L;
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>le champ de la ligne 2 est imposé. On peut le conserver tel quel et l'utiliser pour toute classe de type [Serializable].</li>
@@ -1284,16 +1282,16 @@
 <span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-11-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IElectionsDao</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>public interface IElectionsDao {
 <a id="__codelineno-11-2" name="__codelineno-11-2"></a>
-<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSeuilElectoral</span><span class="p">();</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>  public double getSeuilElectoral();
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a>
-<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNbSiegesAPourvoir</span><span class="p">();</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>  public int getNbSiegesAPourvoir();
 <a id="__codelineno-11-6" name="__codelineno-11-6"></a>
-<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">getListesElectorales</span><span class="p">();</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>  public ListeElectorale[] getListesElectorales();
 <a id="__codelineno-11-8" name="__codelineno-11-8"></a>
-<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setListesElectorales</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="p">}</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>  public void setListesElectorales(ListeElectorale[] listesElectorales);
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>}
 </code></pre></div></td></tr></table></div>
 <p>Ces méthodes travaillent avec une base de données et peuvent rencontrer diverses erreurs, par exemple un SGBD non disponible. Lorsqu'on écrit une méthode, il faut toujours prévoir les cas d'erreur. Celles-ci sont signalées classiquement par une exception. Nous avons déjà rencontré la classe [ElectionsException] au paragraphe 3.3, page 22. Nous allons continuer à l'utiliser mais en l'enrichissant de la façon suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
@@ -1467,18 +1465,18 @@
 <li>ligne 24 : <strong>ElectionsException</strong>(<strong>int</strong> code, Throwable e) : le second paramètre est un type [Throwable] qui est la classe parente de la classe [Exception]. Ce constructeur permet d'encapsuler l'exception <strong>e</strong> avec un code d'erreur. Le type [Throwable] (et donc le type Exception) permet d'encapsuler une ou plusieurs exceptions. L'idée est :</li>
 <li>d'arrêter (catch) une exception qui se produit ;</li>
 <li>de l'enrichir d'un message en l'encapsulant dans une nouvelle exception ;</li>
-<li>de relancer la nouvelle exception ;
+<li>de relancer la nouvelle exception ;</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
 <span class="normal"><a href="#__codelineno-13-2">2</a></span>
 <span class="normal"><a href="#__codelineno-13-3">3</a></span>
 <span class="normal"><a href="#__codelineno-13-4">4</a></span>
-<span class="normal"><a href="#__codelineno-13-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="k">try</span><span class="p">{</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="p">...</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception1</span><span class="w"> </span><span class="n">e1</span><span class="p">){</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Exception2</span><span class="p">(</span><span class="err">«</span><span class="n">un</span><span class="w"> </span><span class="n">message</span><span class="err">»</span><span class="p">,</span><span class="n">e1</span><span class="p">);</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div></li>
-</ul>
+<span class="normal"><a href="#__codelineno-13-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>try{
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a>...
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a>}catch (Exception1 e1){
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a>   throw new Exception2(«un message»,e1);
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a>}
+</code></pre></div></td></tr></table></div>
 <p>L'encapsulation a lieu ligne 34 par l'instruction [<strong>super</strong>(message,e)]. Ce processus d'encapsulation peut être répété et l'exception initiale enrichie de différents messages. On dit alors qu'on a une pile d'exceptions. La méthode [<strong>private</strong> List&lt;String&gt; getErreursForException(Throwable th)] permet d'obtenir les différents messages associés aux exceptions encapsulées :</p>
 <ul>
 <li>l'exception encapsulée est obtenue par la méthode Throwable [Throwable].getCause() ;</li>
@@ -1493,11 +1491,11 @@
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
 <span class="normal"><a href="#__codelineno-14-3">3</a></span>
 <span class="normal"><a href="#__codelineno-14-4">4</a></span>
-<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="k">try</span><span class="p">{</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="p">...</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception1</span><span class="w"> </span><span class="n">e1</span><span class="p">){</span>
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">(</span><span class="n">un_code</span><span class="p">,</span><span class="n">un_message</span><span class="p">,</span><span class="n">e1</span><span class="p">);</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>try{
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>...
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>}catch (Exception1 e1){
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>   throw new ElectionsException(un_code,un_message,e1);
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>}
 </code></pre></div></td></tr></table></div>
 <p>où le message sera ou non présent. Une fois créée, l'exception [ElectionsException] n'a pas vocation à encapsuler de nouvelles exceptions. Ci-dessus, elle encapsule l'exception e1 et les exceptions que e1 encapsule. Il n'y a ensuite, plus de nouvelles encapsulations.</p>
 <p>La classe [ElectionsException] pourra être également utilisée de la façon suivante :</p>
@@ -1566,7 +1564,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
