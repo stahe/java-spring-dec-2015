@@ -65,14 +65,10 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
-    // CORRECTION ICI : Utilisation de guillemets doubles pour entourer le titre qui contient une apostrophe
     var siteName = "Introduction au langage Java et à l'écosystème Spring au travers d'une étude de cas";
-
     gtag('config', 'G-EBZC3JVJNR', {
         'page_title': siteName
     });
-    console.log("[GA Debug] page_title forced to: " + siteName);
   </script>
 
     
@@ -1131,26 +1127,26 @@
 <span class="normal"><a href="#__codelineno-0-19">19</a></span>
 <span class="normal"><a href="#__codelineno-0-20">20</a></span>
 <span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">metier</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.client.metier</span><span class="p">;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">elections.client.entities.ListeElectorale</span><span class="p">;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">public</span> <span class="n">interface</span> <span class="n">IElectionsMetier</span> <span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IElectionsMetier</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a>    <span class="o">//</span> <span class="n">obtenir</span> <span class="n">les</span> <span class="n">listes</span> <span class="n">en</span> <span class="n">compétition</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a>    <span class="n">public</span> <span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">getListesElectorales</span><span class="p">();</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="c1">// obtenir les listes en compétition</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">getListesElectorales</span><span class="p">();</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a>    <span class="o">//</span> <span class="n">le</span> <span class="n">nombre</span> <span class="n">de</span> <span class="n">sièges</span> <span class="n">à</span> <span class="n">pourvoir</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>    <span class="n">public</span> <span class="nb">int</span> <span class="n">getNbSiegesAPourvoir</span><span class="p">();</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="c1">// le nombre de sièges à pourvoir</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNbSiegesAPourvoir</span><span class="p">();</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a>    <span class="o">//</span> <span class="n">le</span> <span class="n">seuil</span> <span class="n">électoral</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>    <span class="n">public</span> <span class="n">double</span> <span class="n">getSeuilElectoral</span><span class="p">();</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="c1">// le seuil électoral</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSeuilElectoral</span><span class="p">();</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a>    <span class="o">//</span> <span class="n">l</span><span class="s1">&#39;enregistrement des résultats</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">recordResultats</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">listesElectorales</span><span class="p">);</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="c1">// l&#39;enregistrement des résultats</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recordResultats</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="o">//</span> <span class="n">le</span> <span class="n">calcul</span> <span class="n">des</span> <span class="n">sièges</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a>    <span class="n">public</span> <span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">listesElectorales</span><span class="p">);</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="c1">// le calcul des sièges</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
 <a id="__codelineno-0-21" name="__codelineno-0-21"></a>
 <a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -1162,9 +1158,9 @@
 <p>Le projet Eclipse est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010A000000D486D12D00.png" style="display:inline-block; margin:4px;width:4.93cm;height:3.93cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C400000083E6D8B180.png" style="display:inline-block; margin:4px;width:3.63cm;height:2.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010D000000934C9BF7F1.png" style="display:inline-block; margin:4px;width:4.979cm;height:2.72cm;" /></td></tr></table>
 
-<p>Cette structure reprend celle du projet exemple du paragraphe 13.6.1, page 246. Nous allons suivre la même démarche.</p>
+<p>Cette structure reprend celle du projet exemple du paragraphe 13.6.1, page 245. Nous allons suivre la même démarche.</p>
 <h2 id="154-configuration-maven">15.4. Configuration Maven</h2>
-<p>C&#x27;est celle décrite au paragraphe 13.6.2, page 247.</p>
+<p>C&#x27;est celle décrite au paragraphe 13.6.2, page 246.</p>
 <h2 id="155-implementation-de-la-couche-dao">15.5. Implémentation de la couche [DAO]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035100000167C91D7514.png" style="display:inline-block; margin:4px;width:11.232cm;height:4.75cm;" /></td></tr></table>
 
@@ -1227,7 +1223,7 @@
 <span class="normal"><a href="#__codelineno-1-44">44</a></span>
 <span class="normal"><a href="#__codelineno-1-45">45</a></span>
 <span class="normal"><a href="#__codelineno-1-46">46</a></span>
-<span class="normal"><a href="#__codelineno-1-47">47</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">config</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-1-47">47</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.client.config</span><span class="p">;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.factory.config.ConfigurableBeanFactory</span><span class="p">;</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Bean</span><span class="p">;</span>
@@ -1238,44 +1234,44 @@
 <a id="__codelineno-1-9" name="__codelineno-1-9"></a>
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.fasterxml.jackson.databind.ObjectMapper</span><span class="p">;</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nd">@ComponentScan</span><span class="p">({</span> <span class="s2">&quot;elections.client.dao&quot;</span><span class="p">,</span><span class="s2">&quot;elections.client.metier&quot;</span> <span class="p">})</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">MetierConfig</span> <span class="p">{</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="nd">@ComponentScan</span><span class="p">({</span><span class="w"> </span><span class="s">&quot;elections.client.dao&quot;</span><span class="p">,</span><span class="s">&quot;elections.client.metier&quot;</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MetierConfig</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>    <span class="o">//</span> <span class="n">constantes</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a>    <span class="n">static</span> <span class="n">private</span> <span class="n">final</span> <span class="nb">int</span> <span class="n">TIMEOUT</span> <span class="o">=</span> <span class="mi">1000</span><span class="p">;</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a>    <span class="n">static</span> <span class="n">private</span> <span class="n">final</span> <span class="n">String</span> <span class="n">URL_WEBJSON</span> <span class="o">=</span> <span class="s2">&quot;http://localhost:8080&quot;</span><span class="p">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="c1">// constantes</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">TIMEOUT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">URL_WEBJSON</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;http://localhost:8080&quot;</span><span class="p">;</span>
 <a id="__codelineno-1-18" name="__codelineno-1-18"></a>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a>    <span class="nd">@Bean</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a>    <span class="n">public</span> <span class="n">RestTemplate</span> <span class="n">restTemplate</span><span class="p">(</span><span class="nb">int</span> <span class="n">timeout</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a>        <span class="o">//</span> <span class="n">création</span> <span class="n">du</span> <span class="n">composant</span> <span class="n">RestTemplate</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a>        <span class="n">HttpComponentsClientHttpRequestFactory</span> <span class="n">factory</span> <span class="o">=</span> <span class="n">new</span> <span class="n">HttpComponentsClientHttpRequestFactory</span><span class="p">();</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a>        <span class="n">RestTemplate</span> <span class="n">restTemplate</span> <span class="o">=</span> <span class="n">new</span> <span class="n">RestTemplate</span><span class="p">(</span><span class="n">factory</span><span class="p">);</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a>        <span class="o">//</span> <span class="n">timeout</span> <span class="n">des</span> <span class="n">échanges</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a>        <span class="n">factory</span><span class="o">.</span><span class="n">setConnectTimeout</span><span class="p">(</span><span class="n">timeout</span><span class="p">);</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a>        <span class="n">factory</span><span class="o">.</span><span class="n">setReadTimeout</span><span class="p">(</span><span class="n">timeout</span><span class="p">);</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a>        <span class="o">//</span> <span class="n">résultat</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a>        <span class="k">return</span> <span class="n">restTemplate</span><span class="p">;</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a>    <span class="p">}</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="nd">@Bean</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">RestTemplate</span><span class="w"> </span><span class="nf">restTemplate</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">timeout</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">        </span><span class="c1">// création du composant RestTemplate</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span><span class="n">HttpComponentsClientHttpRequestFactory</span><span class="w"> </span><span class="n">factory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpComponentsClientHttpRequestFactory</span><span class="p">();</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">        </span><span class="n">RestTemplate</span><span class="w"> </span><span class="n">restTemplate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RestTemplate</span><span class="p">(</span><span class="n">factory</span><span class="p">);</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">        </span><span class="c1">// timeout des échanges</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">        </span><span class="n">factory</span><span class="p">.</span><span class="na">setConnectTimeout</span><span class="p">(</span><span class="n">timeout</span><span class="p">);</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">        </span><span class="n">factory</span><span class="p">.</span><span class="na">setReadTimeout</span><span class="p">(</span><span class="n">timeout</span><span class="p">);</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">        </span><span class="c1">// résultat</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">restTemplate</span><span class="p">;</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-30" name="__codelineno-1-30"></a>
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a>    <span class="nd">@Bean</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a>    <span class="n">public</span> <span class="nb">int</span> <span class="n">timeout</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a>        <span class="k">return</span> <span class="n">TIMEOUT</span><span class="p">;</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a>    <span class="p">}</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">    </span><span class="nd">@Bean</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">timeout</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">TIMEOUT</span><span class="p">;</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-35" name="__codelineno-1-35"></a>
-<a id="__codelineno-1-36" name="__codelineno-1-36"></a>    <span class="nd">@Bean</span>
-<a id="__codelineno-1-37" name="__codelineno-1-37"></a>    <span class="n">public</span> <span class="n">String</span> <span class="n">urlWebJson</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-1-38" name="__codelineno-1-38"></a>        <span class="k">return</span> <span class="n">URL_WEBJSON</span><span class="p">;</span>
-<a id="__codelineno-1-39" name="__codelineno-1-39"></a>    <span class="p">}</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="w">    </span><span class="nd">@Bean</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">urlWebJson</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">URL_WEBJSON</span><span class="p">;</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-40" name="__codelineno-1-40"></a>
-<a id="__codelineno-1-41" name="__codelineno-1-41"></a>    <span class="o">//</span> <span class="n">mappeur</span> <span class="n">jSON</span>
-<a id="__codelineno-1-42" name="__codelineno-1-42"></a>    <span class="nd">@Bean</span>
-<a id="__codelineno-1-43" name="__codelineno-1-43"></a>    <span class="nd">@Scope</span><span class="p">(</span><span class="n">value</span> <span class="o">=</span> <span class="n">ConfigurableBeanFactory</span><span class="o">.</span><span class="n">SCOPE_PROTOTYPE</span><span class="p">)</span>
-<a id="__codelineno-1-44" name="__codelineno-1-44"></a>    <span class="n">public</span> <span class="n">ObjectMapper</span> <span class="n">jsonMapper</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-1-45" name="__codelineno-1-45"></a>        <span class="k">return</span> <span class="n">new</span> <span class="n">ObjectMapper</span><span class="p">();</span>
-<a id="__codelineno-1-46" name="__codelineno-1-46"></a>    <span class="p">}</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41"></a><span class="w">    </span><span class="c1">// mappeur jSON</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42"></a><span class="w">    </span><span class="nd">@Bean</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43"></a><span class="w">    </span><span class="nd">@Scope</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConfigurableBeanFactory</span><span class="p">.</span><span class="na">SCOPE_PROTOTYPE</span><span class="p">)</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ObjectMapper</span><span class="w"> </span><span class="nf">jsonMapper</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectMapper</span><span class="p">();</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-47" name="__codelineno-1-47"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Ce code a été expliqué au paragraphe 13.6.3.1, page 249. Il est plus simple car il n&#x27;y a pas ici de filtres jSON à gérer.</p>
+<p>Ce code a été expliqué au paragraphe 13.6.3.1, page 248. Il est plus simple car il n&#x27;y a pas ici de filtres jSON à gérer.</p>
 <h3 id="1552-les-entites">15.5.2. Les entités</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010F000000EEE269C67D.png" style="display:inline-block; margin:4px;width:5.02cm;height:4.41cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1321,46 +1317,46 @@
 <span class="normal"><a href="#__codelineno-2-38">38</a></span>
 <span class="normal"><a href="#__codelineno-2-39">39</a></span>
 <span class="normal"><a href="#__codelineno-2-40">40</a></span>
-<span class="normal"><a href="#__codelineno-2-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">package</span> <span class="n">spring</span><span class="o">.</span><span class="n">webjson</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">entities</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-2-41">41</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">spring.webjson.client.entities</span><span class="p">;</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="n">public</span> <span class="n">abstract</span> <span class="k">class</span><span class="w"> </span><span class="nc">AbstractEntity</span> <span class="p">{</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="o">//</span> <span class="n">propriétés</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a>    <span class="n">protected</span> <span class="n">Long</span> <span class="nb">id</span><span class="p">;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>    <span class="n">protected</span> <span class="n">Long</span> <span class="n">version</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractEntity</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="c1">// propriétés</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">version</span><span class="p">;</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>    <span class="o">//</span> <span class="n">constructeurs</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a>    <span class="n">public</span> <span class="n">AbstractEntity</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="c1">// constructeurs</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">AbstractEntity</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a>    <span class="p">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13"></a>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a>    <span class="n">public</span> <span class="n">AbstractEntity</span><span class="p">(</span><span class="n">Long</span> <span class="nb">id</span><span class="p">,</span> <span class="n">Long</span> <span class="n">version</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a>        <span class="n">this</span><span class="o">.</span><span class="n">id</span> <span class="o">=</span> <span class="nb">id</span><span class="p">;</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a>        <span class="n">this</span><span class="o">.</span><span class="n">version</span> <span class="o">=</span> <span class="n">version</span><span class="p">;</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a>    <span class="p">}</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">AbstractEntity</span><span class="p">(</span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">version</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">version</span><span class="p">;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-18" name="__codelineno-2-18"></a>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a>    <span class="o">//</span> <span class="n">redéfinition</span> <span class="p">[</span><span class="n">equals</span><span class="p">]</span> <span class="n">et</span> <span class="p">[</span><span class="n">hashcode</span><span class="p">]</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a>    <span class="nd">@Override</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a>    <span class="n">public</span> <span class="nb">int</span> <span class="n">hashCode</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a>        <span class="k">return</span> <span class="p">(</span><span class="nb">id</span> <span class="o">!=</span> <span class="n">null</span> <span class="err">?</span> <span class="nb">id</span><span class="o">.</span><span class="n">hashCode</span><span class="p">()</span> <span class="p">:</span> <span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a>    <span class="p">}</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">    </span><span class="c1">// redéfinition [equals] et [hashcode]</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">hashCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">id</span><span class="p">.</span><span class="na">hashCode</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-24" name="__codelineno-2-24"></a>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a>    <span class="nd">@Override</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a>    <span class="n">public</span> <span class="n">boolean</span> <span class="n">equals</span><span class="p">(</span><span class="n">Object</span> <span class="n">entity</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a>        <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="p">(</span><span class="n">entity</span> <span class="n">instanceof</span> <span class="n">AbstractEntity</span><span class="p">))</span> <span class="p">{</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a>            <span class="k">return</span> <span class="n">false</span><span class="p">;</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29"></a>        <span class="p">}</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30"></a>        <span class="n">String</span> <span class="n">class1</span> <span class="o">=</span> <span class="n">this</span><span class="o">.</span><span class="n">getClass</span><span class="p">()</span><span class="o">.</span><span class="n">getName</span><span class="p">();</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31"></a>        <span class="n">String</span> <span class="n">class2</span> <span class="o">=</span> <span class="n">entity</span><span class="o">.</span><span class="n">getClass</span><span class="p">()</span><span class="o">.</span><span class="n">getName</span><span class="p">();</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a>        <span class="k">if</span> <span class="p">(</span><span class="err">!</span><span class="n">class2</span><span class="o">.</span><span class="n">equals</span><span class="p">(</span><span class="n">class1</span><span class="p">))</span> <span class="p">{</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33"></a>            <span class="k">return</span> <span class="n">false</span><span class="p">;</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34"></a>        <span class="p">}</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35"></a>        <span class="n">AbstractEntity</span> <span class="n">other</span> <span class="o">=</span> <span class="p">(</span><span class="n">AbstractEntity</span><span class="p">)</span> <span class="n">entity</span><span class="p">;</span>
-<a id="__codelineno-2-36" name="__codelineno-2-36"></a>        <span class="k">return</span> <span class="nb">id</span> <span class="o">!=</span> <span class="n">null</span> <span class="o">&amp;&amp;</span> <span class="n">this</span><span class="o">.</span><span class="n">id</span> <span class="o">==</span> <span class="n">other</span><span class="o">.</span><span class="n">id</span><span class="o">.</span><span class="n">longValue</span><span class="p">();</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37"></a>    <span class="p">}</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">entity</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">entity</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">AbstractEntity</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">class1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getName</span><span class="p">();</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">class2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entity</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getName</span><span class="p">();</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">class2</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">class1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="w">        </span><span class="n">AbstractEntity</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">AbstractEntity</span><span class="p">)</span><span class="w"> </span><span class="n">entity</span><span class="p">;</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">longValue</span><span class="p">();</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-38" name="__codelineno-2-38"></a>
-<a id="__codelineno-2-39" name="__codelineno-2-39"></a>    <span class="o">//</span> <span class="n">getters</span> <span class="n">et</span> <span class="n">setters</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40"></a>    <span class="o">...</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39"></a><span class="w">    </span><span class="c1">// getters et setters</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40"></a><span class="w">    </span><span class="p">...</span>
 <a id="__codelineno-2-41" name="__codelineno-2-41"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>[ElectionsConfig]</p>
@@ -1385,27 +1381,27 @@
 <span class="normal"><a href="#__codelineno-3-19">19</a></span>
 <span class="normal"><a href="#__codelineno-3-20">20</a></span>
 <span class="normal"><a href="#__codelineno-3-21">21</a></span>
-<span class="normal"><a href="#__codelineno-3-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">webjson</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">entities</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.webjson.client.entities</span><span class="p">;</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">ElectionsConfig</span> <span class="n">extends</span> <span class="n">AbstractEntity</span> <span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ElectionsConfig</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractEntity</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    <span class="o">//</span> <span class="n">champs</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    <span class="n">private</span> <span class="nb">int</span> <span class="n">nbSiegesAPourvoir</span><span class="p">;</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>    <span class="n">private</span> <span class="n">double</span> <span class="n">seuilElectoral</span><span class="p">;</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="c1">// champs</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nbSiegesAPourvoir</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">seuilElectoral</span><span class="p">;</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>    <span class="o">//</span> <span class="n">constructeurs</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a>    <span class="n">public</span> <span class="n">ElectionsConfig</span><span class="p">()</span> <span class="p">{</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="c1">// constructeurs</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ElectionsConfig</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a>    <span class="p">}</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-3-14" name="__codelineno-3-14"></a>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a>    <span class="n">public</span> <span class="n">ElectionsConfig</span><span class="p">(</span><span class="nb">int</span> <span class="n">nbSiegesAPourvoir</span><span class="p">,</span> <span class="n">double</span> <span class="n">seuilElectoral</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a>        <span class="n">this</span><span class="o">.</span><span class="n">nbSiegesAPourvoir</span> <span class="o">=</span> <span class="n">nbSiegesAPourvoir</span><span class="p">;</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a>        <span class="n">this</span><span class="o">.</span><span class="n">seuilElectoral</span> <span class="o">=</span> <span class="n">seuilElectoral</span><span class="p">;</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a>    <span class="p">}</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ElectionsConfig</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nbSiegesAPourvoir</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">seuilElectoral</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nbSiegesAPourvoir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nbSiegesAPourvoir</span><span class="p">;</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">seuilElectoral</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seuilElectoral</span><span class="p">;</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-3-19" name="__codelineno-3-19"></a>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a>    <span class="o">//</span> <span class="n">getters</span> <span class="n">et</span> <span class="n">setters</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a>    <span class="o">...</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="c1">// getters et setters</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">    </span><span class="p">...</span>
 <a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>[ListeElectorale]</p>
@@ -1433,30 +1429,30 @@
 <span class="normal"><a href="#__codelineno-4-22">22</a></span>
 <span class="normal"><a href="#__codelineno-4-23">23</a></span>
 <span class="normal"><a href="#__codelineno-4-24">24</a></span>
-<span class="normal"><a href="#__codelineno-4-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">webjson</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">entities</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-4-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.webjson.client.entities</span><span class="p">;</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">ListeElectorale</span> <span class="n">extends</span> <span class="n">AbstractEntity</span> <span class="p">{</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ListeElectorale</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">AbstractEntity</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>    <span class="o">//</span> <span class="n">champs</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>    <span class="n">private</span> <span class="n">String</span> <span class="n">nom</span><span class="p">;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a>    <span class="n">private</span> <span class="nb">int</span> <span class="n">voix</span><span class="p">;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a>    <span class="n">private</span> <span class="nb">int</span> <span class="n">sieges</span><span class="p">;</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a>    <span class="n">private</span> <span class="n">boolean</span> <span class="n">elimine</span><span class="p">;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="c1">// champs</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">voix</span><span class="p">;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sieges</span><span class="p">;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">elimine</span><span class="p">;</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11"></a>
-<a id="__codelineno-4-12" name="__codelineno-4-12"></a>    <span class="o">//</span> <span class="n">constructeurs</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13"></a>    <span class="n">public</span> <span class="n">ListeElectorale</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14"></a>    <span class="p">}</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span><span class="c1">// constructeurs</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ListeElectorale</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-4-15" name="__codelineno-4-15"></a>
-<a id="__codelineno-4-16" name="__codelineno-4-16"></a>    <span class="n">public</span> <span class="n">ListeElectorale</span><span class="p">(</span><span class="n">String</span> <span class="n">nom</span><span class="p">,</span> <span class="nb">int</span> <span class="n">voix</span><span class="p">,</span> <span class="nb">int</span> <span class="n">sieges</span><span class="p">,</span> <span class="n">boolean</span> <span class="n">elimine</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17"></a>        <span class="n">setNom</span><span class="p">(</span><span class="n">nom</span><span class="p">);</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18"></a>        <span class="n">setVoix</span><span class="p">(</span><span class="n">voix</span><span class="p">);</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19"></a>        <span class="n">setSieges</span><span class="p">(</span><span class="n">sieges</span><span class="p">);</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20"></a>        <span class="n">setElimine</span><span class="p">(</span><span class="n">elimine</span><span class="p">);</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21"></a>    <span class="p">}</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ListeElectorale</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">voix</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sieges</span><span class="p">,</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="n">elimine</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">        </span><span class="n">setNom</span><span class="p">(</span><span class="n">nom</span><span class="p">);</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">        </span><span class="n">setVoix</span><span class="p">(</span><span class="n">voix</span><span class="p">);</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">        </span><span class="n">setSieges</span><span class="p">(</span><span class="n">sieges</span><span class="p">);</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">        </span><span class="n">setElimine</span><span class="p">(</span><span class="n">elimine</span><span class="p">);</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-4-22" name="__codelineno-4-22"></a>
-<a id="__codelineno-4-23" name="__codelineno-4-23"></a>    <span class="o">//</span> <span class="n">getters</span> <span class="n">et</span> <span class="n">setters</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24"></a>    <span class="o">...</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="w">    </span><span class="c1">// getters et setters</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24"></a><span class="w">    </span><span class="p">...</span>
 <a id="__codelineno-4-25" name="__codelineno-4-25"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="1553-linterface-de-la-couche-dao">15.5.3. L&#x27;interface de la couche [DAO]</h3>
@@ -1470,20 +1466,20 @@
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
 <span class="normal"><a href="#__codelineno-5-6">6</a></span>
 <span class="normal"><a href="#__codelineno-5-7">7</a></span>
-<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">dao</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.client.dao</span><span class="p">;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="n">public</span> <span class="n">interface</span> <span class="n">IClientDao</span> <span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IClientDao</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>    <span class="o">//</span> <span class="n">requête</span> <span class="n">générique</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>    <span class="n">String</span> <span class="n">getResponse</span><span class="p">(</span><span class="n">String</span> <span class="n">url</span><span class="p">,</span> <span class="n">String</span> <span class="n">jsonPost</span><span class="p">);</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="c1">// requête générique</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">getResponse</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">jsonPost</span><span class="p">);</span>
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a>
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>L&#x27;interface n&#x27;a qu&#x27;une unique méthode [getResponse] :</p>
 <ul>
 <li>le 1er paramètre est l&#x27;URL du serveur à interroger ;</li>
-<li>le second paramètre est la valeur jSON de la valeur à poster, null s&#x27;il n&#x27;y a rien à poster ;</li>
-<li>le résultat est la chaîne jSON d&#x27;un objet [Response&lt;T&gt;] où la classe [Response] a été décrite au paragraphe 14.7, page 270 ;</li>
+<li>le second paramètre est la valeur jSON de la valeur à poster, <em>null</em> s&#x27;il n&#x27;y a rien à poster ;</li>
+<li>le résultat est la chaîne jSON d&#x27;un objet [Response&lt;T&gt;] où la classe [Response] a été décrite au paragraphe 14.7, page 269 ;</li>
 </ul>
 <h3 id="1554-implementation-des-echanges-avec-le-service-web-json">15.5.4. Implémentation des échanges avec le service web / jSON</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000117000000CA2AEDA8C2.png" style="display:inline-block; margin:4px;width:5.159cm;height:3.739cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1540,7 +1536,7 @@
 <span class="normal"><a href="#__codelineno-6-49">49</a></span>
 <span class="normal"><a href="#__codelineno-6-50">50</a></span>
 <span class="normal"><a href="#__codelineno-6-51">51</a></span>
-<span class="normal"><a href="#__codelineno-6-52">52</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">dao</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-6-52">52</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.client.dao</span><span class="p">;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.net.URI</span><span class="p">;</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.net.URISyntaxException</span><span class="p">;</span>
@@ -1555,45 +1551,45 @@
 <a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="kn">import</span><span class="w"> </span><span class="nn">elections.client.entities.ElectionsException</span><span class="p">;</span>
 <a id="__codelineno-6-14" name="__codelineno-6-14"></a>
 <a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="nd">@Component</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">ClientDao</span> <span class="n">implements</span> <span class="n">IClientDao</span> <span class="p">{</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ClientDao</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">IClientDao</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-17" name="__codelineno-6-17"></a>
-<a id="__codelineno-6-18" name="__codelineno-6-18"></a>    <span class="o">//</span> <span class="n">data</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a>    <span class="nd">@Autowired</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20"></a>    <span class="n">protected</span> <span class="n">RestTemplate</span> <span class="n">restTemplate</span><span class="p">;</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21"></a>    <span class="nd">@Autowired</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22"></a>    <span class="n">protected</span> <span class="n">String</span> <span class="n">urlServiceWebJson</span><span class="p">;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">    </span><span class="c1">// data</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">RestTemplate</span><span class="w"> </span><span class="n">restTemplate</span><span class="p">;</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">urlServiceWebJson</span><span class="p">;</span>
 <a id="__codelineno-6-23" name="__codelineno-6-23"></a>
-<a id="__codelineno-6-24" name="__codelineno-6-24"></a>    <span class="o">//</span> <span class="n">requête</span> <span class="n">générique</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25"></a>    <span class="nd">@Override</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26"></a>    <span class="n">public</span> <span class="n">String</span> <span class="n">getResponse</span><span class="p">(</span><span class="n">String</span> <span class="n">url</span><span class="p">,</span> <span class="n">String</span> <span class="n">jsonPost</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="w">    </span><span class="c1">// requête générique</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getResponse</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">jsonPost</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-27" name="__codelineno-6-27"></a>
-<a id="__codelineno-6-28" name="__codelineno-6-28"></a>        <span class="k">try</span> <span class="p">{</span>
-<a id="__codelineno-6-29" name="__codelineno-6-29"></a>            <span class="o">//</span> <span class="n">url</span> <span class="p">:</span> <span class="n">URL</span> <span class="n">à</span> <span class="n">contacter</span>
-<a id="__codelineno-6-30" name="__codelineno-6-30"></a>            <span class="o">//</span> <span class="n">jsonPost</span> <span class="p">:</span> <span class="n">la</span> <span class="n">valeur</span> <span class="n">jSON</span> <span class="n">à</span> <span class="n">poster</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a><span class="w">            </span><span class="c1">// url : URL à contacter</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a><span class="w">            </span><span class="c1">// jsonPost : la valeur jSON à poster</span>
 <a id="__codelineno-6-31" name="__codelineno-6-31"></a>
-<a id="__codelineno-6-32" name="__codelineno-6-32"></a>            <span class="o">//</span> <span class="n">exécution</span> <span class="n">requête</span>
-<a id="__codelineno-6-33" name="__codelineno-6-33"></a>            <span class="n">RequestEntity</span><span class="o">&lt;</span><span class="err">?</span><span class="o">&gt;</span> <span class="n">request</span><span class="p">;</span>
-<a id="__codelineno-6-34" name="__codelineno-6-34"></a>            <span class="k">if</span> <span class="p">(</span><span class="n">jsonPost</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-6-35" name="__codelineno-6-35"></a>                <span class="o">//</span> <span class="n">requête</span> <span class="n">POST</span>
-<a id="__codelineno-6-36" name="__codelineno-6-36"></a>                <span class="n">request</span> <span class="o">=</span> <span class="n">RequestEntity</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">new</span> <span class="n">URI</span><span class="p">(</span><span class="n">String</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">urlServiceWebJson</span><span class="p">,</span> <span class="n">url</span><span class="p">)))</span>
-<a id="__codelineno-6-37" name="__codelineno-6-37"></a>                        <span class="o">.</span><span class="n">header</span><span class="p">(</span><span class="s2">&quot;Content-Type&quot;</span><span class="p">,</span> <span class="s2">&quot;application/json&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">MediaType</span><span class="o">.</span><span class="n">APPLICATION_JSON</span><span class="p">)</span><span class="o">.</span><span class="n">body</span><span class="p">(</span><span class="n">jsonPost</span><span class="p">);</span>
-<a id="__codelineno-6-38" name="__codelineno-6-38"></a>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<a id="__codelineno-6-39" name="__codelineno-6-39"></a>                <span class="o">//</span> <span class="n">requête</span> <span class="n">GET</span>
-<a id="__codelineno-6-40" name="__codelineno-6-40"></a>                <span class="n">request</span> <span class="o">=</span> <span class="n">RequestEntity</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">new</span> <span class="n">URI</span><span class="p">(</span><span class="n">String</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s%s</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">urlServiceWebJson</span><span class="p">,</span> <span class="n">url</span><span class="p">)))</span>
-<a id="__codelineno-6-41" name="__codelineno-6-41"></a>                        <span class="o">.</span><span class="n">accept</span><span class="p">(</span><span class="n">MediaType</span><span class="o">.</span><span class="n">APPLICATION_JSON</span><span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">();</span>
-<a id="__codelineno-6-42" name="__codelineno-6-42"></a>            <span class="p">}</span>
-<a id="__codelineno-6-43" name="__codelineno-6-43"></a>            <span class="o">//</span> <span class="n">on</span> <span class="n">exécute</span> <span class="n">la</span> <span class="n">requête</span>
-<a id="__codelineno-6-44" name="__codelineno-6-44"></a>            <span class="k">return</span> <span class="n">restTemplate</span><span class="o">.</span><span class="n">exchange</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">new</span> <span class="n">ParameterizedTypeReference</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-6-45" name="__codelineno-6-45"></a>            <span class="p">})</span><span class="o">.</span><span class="n">getBody</span><span class="p">();</span>
-<a id="__codelineno-6-46" name="__codelineno-6-46"></a>        <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">URISyntaxException</span> <span class="n">e1</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-6-47" name="__codelineno-6-47"></a>            <span class="n">throw</span> <span class="n">new</span> <span class="n">ElectionsException</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="n">e1</span><span class="p">);</span>
-<a id="__codelineno-6-48" name="__codelineno-6-48"></a>        <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">RuntimeException</span> <span class="n">e2</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-6-49" name="__codelineno-6-49"></a>            <span class="n">throw</span> <span class="n">new</span> <span class="n">ElectionsException</span><span class="p">(</span><span class="mi">201</span><span class="p">,</span> <span class="n">e2</span><span class="p">);</span>
-<a id="__codelineno-6-50" name="__codelineno-6-50"></a>        <span class="p">}</span>
-<a id="__codelineno-6-51" name="__codelineno-6-51"></a>    <span class="p">}</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32"></a><span class="w">            </span><span class="c1">// exécution requête</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33"></a><span class="w">            </span><span class="n">RequestEntity</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">request</span><span class="p">;</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">jsonPost</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35"></a><span class="w">                </span><span class="c1">// requête POST</span>
+<a id="__codelineno-6-36" name="__codelineno-6-36"></a><span class="w">                </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RequestEntity</span><span class="p">.</span><span class="na">post</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">URI</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%s%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">urlServiceWebJson</span><span class="p">,</span><span class="w"> </span><span class="n">url</span><span class="p">)))</span>
+<a id="__codelineno-6-37" name="__codelineno-6-37"></a><span class="w">                        </span><span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">).</span><span class="na">accept</span><span class="p">(</span><span class="n">MediaType</span><span class="p">.</span><span class="na">APPLICATION_JSON</span><span class="p">).</span><span class="na">body</span><span class="p">(</span><span class="n">jsonPost</span><span class="p">);</span>
+<a id="__codelineno-6-38" name="__codelineno-6-38"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-39" name="__codelineno-6-39"></a><span class="w">                </span><span class="c1">// requête GET</span>
+<a id="__codelineno-6-40" name="__codelineno-6-40"></a><span class="w">                </span><span class="n">request</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RequestEntity</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">URI</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;%s%s&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">urlServiceWebJson</span><span class="p">,</span><span class="w"> </span><span class="n">url</span><span class="p">)))</span>
+<a id="__codelineno-6-41" name="__codelineno-6-41"></a><span class="w">                        </span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="n">MediaType</span><span class="p">.</span><span class="na">APPLICATION_JSON</span><span class="p">).</span><span class="na">build</span><span class="p">();</span>
+<a id="__codelineno-6-42" name="__codelineno-6-42"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-6-43" name="__codelineno-6-43"></a><span class="w">            </span><span class="c1">// on exécute la requête</span>
+<a id="__codelineno-6-44" name="__codelineno-6-44"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">restTemplate</span><span class="p">.</span><span class="na">exchange</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ParameterizedTypeReference</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-45" name="__codelineno-6-45"></a><span class="w">            </span><span class="p">}).</span><span class="na">getBody</span><span class="p">();</span>
+<a id="__codelineno-6-46" name="__codelineno-6-46"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">URISyntaxException</span><span class="w"> </span><span class="n">e1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-47" name="__codelineno-6-47"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="n">e1</span><span class="p">);</span>
+<a id="__codelineno-6-48" name="__codelineno-6-48"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">RuntimeException</span><span class="w"> </span><span class="n">e2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-49" name="__codelineno-6-49"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">(</span><span class="mi">201</span><span class="p">,</span><span class="w"> </span><span class="n">e2</span><span class="p">);</span>
+<a id="__codelineno-6-50" name="__codelineno-6-50"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-51" name="__codelineno-6-51"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-6-52" name="__codelineno-6-52"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Ce code a été décrit page 255.</p>
+<p>Ce code a été décrit page 254.</p>
 <h2 id="156-implementation-de-la-couche-metier">15.6. Implémentation de la couche [métier]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E7000000E0762A1E55.png" style="display:inline-block; margin:4px;width:4.279cm;height:4.15cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1619,26 +1615,26 @@
 <span class="normal"><a href="#__codelineno-7-19">19</a></span>
 <span class="normal"><a href="#__codelineno-7-20">20</a></span>
 <span class="normal"><a href="#__codelineno-7-21">21</a></span>
-<span class="normal"><a href="#__codelineno-7-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">metier</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.client.metier</span><span class="p">;</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">elections.client.entities.ListeElectorale</span><span class="p">;</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a>
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="n">public</span> <span class="n">interface</span> <span class="n">IElectionsMetier</span> <span class="p">{</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IElectionsMetier</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-6" name="__codelineno-7-6"></a>
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a>    <span class="o">//</span> <span class="n">obtenir</span> <span class="n">les</span> <span class="n">listes</span> <span class="n">en</span> <span class="n">compétition</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a>    <span class="n">public</span> <span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">getListesElectorales</span><span class="p">();</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="c1">// obtenir les listes en compétition</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">getListesElectorales</span><span class="p">();</span>
 <a id="__codelineno-7-9" name="__codelineno-7-9"></a>
-<a id="__codelineno-7-10" name="__codelineno-7-10"></a>    <span class="o">//</span> <span class="n">le</span> <span class="n">nombre</span> <span class="n">de</span> <span class="n">sièges</span> <span class="n">à</span> <span class="n">pourvoir</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a>    <span class="n">public</span> <span class="nb">int</span> <span class="n">getNbSiegesAPourvoir</span><span class="p">();</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">    </span><span class="c1">// le nombre de sièges à pourvoir</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNbSiegesAPourvoir</span><span class="p">();</span>
 <a id="__codelineno-7-12" name="__codelineno-7-12"></a>
-<a id="__codelineno-7-13" name="__codelineno-7-13"></a>    <span class="o">//</span> <span class="n">le</span> <span class="n">seuil</span> <span class="n">électoral</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14"></a>    <span class="n">public</span> <span class="n">double</span> <span class="n">getSeuilElectoral</span><span class="p">();</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">    </span><span class="c1">// le seuil électoral</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSeuilElectoral</span><span class="p">();</span>
 <a id="__codelineno-7-15" name="__codelineno-7-15"></a>
-<a id="__codelineno-7-16" name="__codelineno-7-16"></a>    <span class="o">//</span> <span class="n">l</span><span class="s1">&#39;enregistrement des résultats</span>
-<a id="__codelineno-7-17" name="__codelineno-7-17"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">recordResultats</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">listesElectorales</span><span class="p">);</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">    </span><span class="c1">// l&#39;enregistrement des résultats</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recordResultats</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
 <a id="__codelineno-7-18" name="__codelineno-7-18"></a>
-<a id="__codelineno-7-19" name="__codelineno-7-19"></a>    <span class="o">//</span> <span class="n">le</span> <span class="n">calcul</span> <span class="n">des</span> <span class="n">sièges</span>
-<a id="__codelineno-7-20" name="__codelineno-7-20"></a>    <span class="n">public</span> <span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">listesElectorales</span><span class="p">);</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="c1">// le calcul des sièges</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
 <a id="__codelineno-7-21" name="__codelineno-7-21"></a>
 <a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -1740,7 +1736,7 @@
 <span class="normal"><a href="#__codelineno-8-95">95</a></span>
 <span class="normal"><a href="#__codelineno-8-96">96</a></span>
 <span class="normal"><a href="#__codelineno-8-97">97</a></span>
-<span class="normal"><a href="#__codelineno-8-98">98</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">metier</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-8-98">98</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.client.metier</span><span class="p">;</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a>
 <a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
@@ -1760,87 +1756,87 @@
 <a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="kn">import</span><span class="w"> </span><span class="nn">elections.client.entities.ListeElectorale</span><span class="p">;</span>
 <a id="__codelineno-8-19" name="__codelineno-8-19"></a>
 <a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="nd">@Component</span>
-<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">ElectionsMetier</span> <span class="n">implements</span> <span class="n">IElectionsMetier</span> <span class="p">{</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ElectionsMetier</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">IElectionsMetier</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-8-22" name="__codelineno-8-22"></a>
-<a id="__codelineno-8-23" name="__codelineno-8-23"></a>    <span class="nd">@Autowired</span>
-<a id="__codelineno-8-24" name="__codelineno-8-24"></a>    <span class="n">private</span> <span class="n">IClientDao</span> <span class="n">dao</span><span class="p">;</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25"></a>    <span class="nd">@Autowired</span>
-<a id="__codelineno-8-26" name="__codelineno-8-26"></a>    <span class="n">private</span> <span class="n">ApplicationContext</span> <span class="n">context</span><span class="p">;</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IClientDao</span><span class="w"> </span><span class="n">dao</span><span class="p">;</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">    </span><span class="nd">@Autowired</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ApplicationContext</span><span class="w"> </span><span class="n">context</span><span class="p">;</span>
 <a id="__codelineno-8-27" name="__codelineno-8-27"></a>
-<a id="__codelineno-8-28" name="__codelineno-8-28"></a>    <span class="o">//</span> <span class="n">configuration</span> <span class="n">de</span> <span class="n">l</span><span class="s1">&#39;élection</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29"></a>    <span class="n">private</span> <span class="n">ElectionsConfig</span> <span class="n">electionsConfig</span><span class="p">;</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a><span class="w">    </span><span class="c1">// configuration de l&#39;élection</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">ElectionsConfig</span><span class="w"> </span><span class="n">electionsConfig</span><span class="p">;</span>
 <a id="__codelineno-8-30" name="__codelineno-8-30"></a>
-<a id="__codelineno-8-31" name="__codelineno-8-31"></a>    <span class="nd">@PostConstruct</span>
-<a id="__codelineno-8-32" name="__codelineno-8-32"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">init</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-8-33" name="__codelineno-8-33"></a>        <span class="o">//</span> <span class="n">mappeurs</span> <span class="n">jSON</span>
-<a id="__codelineno-8-34" name="__codelineno-8-34"></a>        <span class="n">ObjectMapper</span> <span class="n">mapperResponse</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">getBean</span><span class="p">(</span><span class="n">ObjectMapper</span><span class="o">.</span><span class="n">class</span><span class="p">);</span>
-<a id="__codelineno-8-35" name="__codelineno-8-35"></a>        <span class="k">try</span> <span class="p">{</span>
-<a id="__codelineno-8-36" name="__codelineno-8-36"></a>            <span class="o">//</span> <span class="n">requête</span>
-<a id="__codelineno-8-37" name="__codelineno-8-37"></a>            <span class="n">Response</span><span class="o">&lt;</span><span class="n">ElectionsConfig</span><span class="o">&gt;</span> <span class="n">response</span> <span class="o">=</span> <span class="n">mapperResponse</span><span class="o">.</span><span class="n">readValue</span><span class="p">(</span><span class="n">dao</span><span class="o">.</span><span class="n">getResponse</span><span class="p">(</span><span class="s2">&quot;/getElectionsConfig&quot;</span><span class="p">,</span> <span class="n">null</span><span class="p">),</span>
-<a id="__codelineno-8-38" name="__codelineno-8-38"></a>                    <span class="n">new</span> <span class="n">TypeReference</span><span class="o">&lt;</span><span class="n">Response</span><span class="o">&lt;</span><span class="n">ElectionsConfig</span><span class="o">&gt;&gt;</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-8-39" name="__codelineno-8-39"></a>                    <span class="p">});</span>
-<a id="__codelineno-8-40" name="__codelineno-8-40"></a>            <span class="o">//</span> <span class="n">erreur</span> <span class="err">?</span>
-<a id="__codelineno-8-41" name="__codelineno-8-41"></a>            <span class="k">if</span> <span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">getStatus</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-8-42" name="__codelineno-8-42"></a>                <span class="o">//</span> <span class="n">on</span> <span class="n">lance</span> <span class="mi">1</span> <span class="n">exception</span>
-<a id="__codelineno-8-43" name="__codelineno-8-43"></a>                <span class="n">throw</span> <span class="n">new</span> <span class="n">ElectionsException</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">getStatus</span><span class="p">(),</span> <span class="n">response</span><span class="o">.</span><span class="n">getMessages</span><span class="p">());</span>
-<a id="__codelineno-8-44" name="__codelineno-8-44"></a>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<a id="__codelineno-8-45" name="__codelineno-8-45"></a>                <span class="n">electionsConfig</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">getBody</span><span class="p">();</span>
-<a id="__codelineno-8-46" name="__codelineno-8-46"></a>            <span class="p">}</span>
-<a id="__codelineno-8-47" name="__codelineno-8-47"></a>        <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">ElectionsException</span> <span class="n">e1</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-8-48" name="__codelineno-8-48"></a>            <span class="n">throw</span> <span class="n">e1</span><span class="p">;</span>
-<a id="__codelineno-8-49" name="__codelineno-8-49"></a>        <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="ne">Exception</span> <span class="n">e2</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-8-50" name="__codelineno-8-50"></a>            <span class="n">throw</span> <span class="n">new</span> <span class="n">ElectionsException</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="n">getMessagesForException</span><span class="p">(</span><span class="n">e2</span><span class="p">));</span>
-<a id="__codelineno-8-51" name="__codelineno-8-51"></a>        <span class="p">}</span>
-<a id="__codelineno-8-52" name="__codelineno-8-52"></a>    <span class="p">}</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">    </span><span class="nd">@PostConstruct</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="w">        </span><span class="c1">// mappeurs jSON</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="w">        </span><span class="n">ObjectMapper</span><span class="w"> </span><span class="n">mapperResponse</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">context</span><span class="p">.</span><span class="na">getBean</span><span class="p">(</span><span class="n">ObjectMapper</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a><span class="w">            </span><span class="c1">// requête</span>
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a><span class="w">            </span><span class="n">Response</span><span class="o">&lt;</span><span class="n">ElectionsConfig</span><span class="o">&gt;</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mapperResponse</span><span class="p">.</span><span class="na">readValue</span><span class="p">(</span><span class="n">dao</span><span class="p">.</span><span class="na">getResponse</span><span class="p">(</span><span class="s">&quot;/getElectionsConfig&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">),</span>
+<a id="__codelineno-8-38" name="__codelineno-8-38"></a><span class="w">                    </span><span class="k">new</span><span class="w"> </span><span class="n">TypeReference</span><span class="o">&lt;</span><span class="n">Response</span><span class="o">&lt;</span><span class="n">ElectionsConfig</span><span class="o">&gt;&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-39" name="__codelineno-8-39"></a><span class="w">                    </span><span class="p">});</span>
+<a id="__codelineno-8-40" name="__codelineno-8-40"></a><span class="w">            </span><span class="c1">// erreur ?</span>
+<a id="__codelineno-8-41" name="__codelineno-8-41"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">getStatus</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-42" name="__codelineno-8-42"></a><span class="w">                </span><span class="c1">// on lance 1 exception</span>
+<a id="__codelineno-8-43" name="__codelineno-8-43"></a><span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="na">getStatus</span><span class="p">(),</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">getMessages</span><span class="p">());</span>
+<a id="__codelineno-8-44" name="__codelineno-8-44"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-45" name="__codelineno-8-45"></a><span class="w">                </span><span class="n">electionsConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">getBody</span><span class="p">();</span>
+<a id="__codelineno-8-46" name="__codelineno-8-46"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-47" name="__codelineno-8-47"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ElectionsException</span><span class="w"> </span><span class="n">e1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-48" name="__codelineno-8-48"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="n">e1</span><span class="p">;</span>
+<a id="__codelineno-8-49" name="__codelineno-8-49"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-50" name="__codelineno-8-50"></a><span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="n">getMessagesForException</span><span class="p">(</span><span class="n">e2</span><span class="p">));</span>
+<a id="__codelineno-8-51" name="__codelineno-8-51"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-52" name="__codelineno-8-52"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-8-53" name="__codelineno-8-53"></a>
-<a id="__codelineno-8-54" name="__codelineno-8-54"></a>    <span class="nd">@Override</span>
-<a id="__codelineno-8-55" name="__codelineno-8-55"></a>    <span class="n">public</span> <span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">getListesElectorales</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-8-56" name="__codelineno-8-56"></a>        <span class="o">...</span>
-<a id="__codelineno-8-57" name="__codelineno-8-57"></a>    <span class="p">}</span>
+<a id="__codelineno-8-54" name="__codelineno-8-54"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-8-55" name="__codelineno-8-55"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">getListesElectorales</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-56" name="__codelineno-8-56"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-8-57" name="__codelineno-8-57"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-8-58" name="__codelineno-8-58"></a>
-<a id="__codelineno-8-59" name="__codelineno-8-59"></a>    <span class="nd">@Override</span>
-<a id="__codelineno-8-60" name="__codelineno-8-60"></a>    <span class="n">public</span> <span class="nb">int</span> <span class="n">getNbSiegesAPourvoir</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-8-61" name="__codelineno-8-61"></a>        <span class="k">return</span> <span class="n">electionsConfig</span><span class="o">.</span><span class="n">getNbSiegesAPourvoir</span><span class="p">();</span>
-<a id="__codelineno-8-62" name="__codelineno-8-62"></a>    <span class="p">}</span>
+<a id="__codelineno-8-59" name="__codelineno-8-59"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-8-60" name="__codelineno-8-60"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNbSiegesAPourvoir</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-61" name="__codelineno-8-61"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">electionsConfig</span><span class="p">.</span><span class="na">getNbSiegesAPourvoir</span><span class="p">();</span>
+<a id="__codelineno-8-62" name="__codelineno-8-62"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-8-63" name="__codelineno-8-63"></a>
-<a id="__codelineno-8-64" name="__codelineno-8-64"></a>    <span class="nd">@Override</span>
-<a id="__codelineno-8-65" name="__codelineno-8-65"></a>    <span class="n">public</span> <span class="n">double</span> <span class="n">getSeuilElectoral</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-8-66" name="__codelineno-8-66"></a>        <span class="k">return</span> <span class="n">electionsConfig</span><span class="o">.</span><span class="n">getSeuilElectoral</span><span class="p">();</span>
-<a id="__codelineno-8-67" name="__codelineno-8-67"></a>    <span class="p">}</span>
+<a id="__codelineno-8-64" name="__codelineno-8-64"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-8-65" name="__codelineno-8-65"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">getSeuilElectoral</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-66" name="__codelineno-8-66"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">electionsConfig</span><span class="p">.</span><span class="na">getSeuilElectoral</span><span class="p">();</span>
+<a id="__codelineno-8-67" name="__codelineno-8-67"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-8-68" name="__codelineno-8-68"></a>
-<a id="__codelineno-8-69" name="__codelineno-8-69"></a>    <span class="nd">@Override</span>
-<a id="__codelineno-8-70" name="__codelineno-8-70"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">recordResultats</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">listesElectorales</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-8-71" name="__codelineno-8-71"></a>    <span class="o">...</span>
-<a id="__codelineno-8-72" name="__codelineno-8-72"></a>    <span class="p">}</span>
+<a id="__codelineno-8-69" name="__codelineno-8-69"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-8-70" name="__codelineno-8-70"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recordResultats</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-71" name="__codelineno-8-71"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-8-72" name="__codelineno-8-72"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-8-73" name="__codelineno-8-73"></a>
-<a id="__codelineno-8-74" name="__codelineno-8-74"></a>    <span class="nd">@Override</span>
-<a id="__codelineno-8-75" name="__codelineno-8-75"></a>    <span class="n">public</span> <span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">[]</span> <span class="n">listesElectorales</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-8-76" name="__codelineno-8-76"></a><span class="o">...</span>
-<a id="__codelineno-8-77" name="__codelineno-8-77"></a>    <span class="p">}</span>
+<a id="__codelineno-8-74" name="__codelineno-8-74"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-8-75" name="__codelineno-8-75"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">calculerSieges</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-76" name="__codelineno-8-76"></a><span class="p">...</span>
+<a id="__codelineno-8-77" name="__codelineno-8-77"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-8-78" name="__codelineno-8-78"></a>
-<a id="__codelineno-8-79" name="__codelineno-8-79"></a>    <span class="o">//</span> <span class="n">liste</span> <span class="n">des</span> <span class="n">messages</span> <span class="n">d</span><span class="s1">&#39;erreur d&#39;</span><span class="n">une</span> <span class="n">exception</span>
-<a id="__codelineno-8-80" name="__codelineno-8-80"></a>    <span class="n">private</span> <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">getMessagesForException</span><span class="p">(</span><span class="ne">Exception</span> <span class="n">exception</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-8-81" name="__codelineno-8-81"></a>        <span class="o">//</span> <span class="n">on</span> <span class="n">récupère</span> <span class="n">la</span> <span class="n">liste</span> <span class="n">des</span> <span class="n">messages</span> <span class="n">d</span><span class="s1">&#39;erreur de l&#39;</span><span class="n">exception</span>
-<a id="__codelineno-8-82" name="__codelineno-8-82"></a>        <span class="n">Throwable</span> <span class="n">cause</span> <span class="o">=</span> <span class="n">exception</span><span class="p">;</span>
-<a id="__codelineno-8-83" name="__codelineno-8-83"></a>        <span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">erreurs</span> <span class="o">=</span> <span class="n">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
-<a id="__codelineno-8-84" name="__codelineno-8-84"></a>        <span class="k">while</span> <span class="p">(</span><span class="n">cause</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-8-85" name="__codelineno-8-85"></a>            <span class="o">//</span> <span class="n">on</span> <span class="n">récupère</span> <span class="n">le</span> <span class="n">message</span> <span class="n">seulement</span> <span class="n">s</span><span class="s1">&#39;il est !=null et non blanc</span>
-<a id="__codelineno-8-86" name="__codelineno-8-86"></a>            <span class="n">String</span> <span class="n">message</span> <span class="o">=</span> <span class="n">cause</span><span class="o">.</span><span class="n">getMessage</span><span class="p">();</span>
-<a id="__codelineno-8-87" name="__codelineno-8-87"></a>            <span class="k">if</span> <span class="p">(</span><span class="n">message</span> <span class="o">!=</span> <span class="n">null</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-8-88" name="__codelineno-8-88"></a>                <span class="n">message</span> <span class="o">=</span> <span class="n">message</span><span class="o">.</span><span class="n">trim</span><span class="p">();</span>
-<a id="__codelineno-8-89" name="__codelineno-8-89"></a>                <span class="k">if</span> <span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">length</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-8-90" name="__codelineno-8-90"></a>                    <span class="n">erreurs</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
-<a id="__codelineno-8-91" name="__codelineno-8-91"></a>                <span class="p">}</span>
-<a id="__codelineno-8-92" name="__codelineno-8-92"></a>            <span class="p">}</span>
-<a id="__codelineno-8-93" name="__codelineno-8-93"></a>            <span class="o">//</span> <span class="n">cause</span> <span class="n">suivante</span>
-<a id="__codelineno-8-94" name="__codelineno-8-94"></a>            <span class="n">cause</span> <span class="o">=</span> <span class="n">cause</span><span class="o">.</span><span class="n">getCause</span><span class="p">();</span>
-<a id="__codelineno-8-95" name="__codelineno-8-95"></a>        <span class="p">}</span>
-<a id="__codelineno-8-96" name="__codelineno-8-96"></a>        <span class="k">return</span> <span class="n">erreurs</span><span class="p">;</span>
-<a id="__codelineno-8-97" name="__codelineno-8-97"></a>    <span class="p">}</span>
+<a id="__codelineno-8-79" name="__codelineno-8-79"></a><span class="w">    </span><span class="c1">// liste des messages d&#39;erreur d&#39;une exception</span>
+<a id="__codelineno-8-80" name="__codelineno-8-80"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">getMessagesForException</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">exception</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-81" name="__codelineno-8-81"></a><span class="w">        </span><span class="c1">// on récupère la liste des messages d&#39;erreur de l&#39;exception</span>
+<a id="__codelineno-8-82" name="__codelineno-8-82"></a><span class="w">        </span><span class="n">Throwable</span><span class="w"> </span><span class="n">cause</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">exception</span><span class="p">;</span>
+<a id="__codelineno-8-83" name="__codelineno-8-83"></a><span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="w"> </span><span class="n">erreurs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span><span class="p">();</span>
+<a id="__codelineno-8-84" name="__codelineno-8-84"></a><span class="w">        </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">cause</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-85" name="__codelineno-8-85"></a><span class="w">            </span><span class="c1">// on récupère le message seulement s&#39;il est !=null et non blanc</span>
+<a id="__codelineno-8-86" name="__codelineno-8-86"></a><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cause</span><span class="p">.</span><span class="na">getMessage</span><span class="p">();</span>
+<a id="__codelineno-8-87" name="__codelineno-8-87"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-88" name="__codelineno-8-88"></a><span class="w">                </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="na">trim</span><span class="p">();</span>
+<a id="__codelineno-8-89" name="__codelineno-8-89"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-90" name="__codelineno-8-90"></a><span class="w">                    </span><span class="n">erreurs</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<a id="__codelineno-8-91" name="__codelineno-8-91"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-8-92" name="__codelineno-8-92"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-93" name="__codelineno-8-93"></a><span class="w">            </span><span class="c1">// cause suivante</span>
+<a id="__codelineno-8-94" name="__codelineno-8-94"></a><span class="w">            </span><span class="n">cause</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cause</span><span class="p">.</span><span class="na">getCause</span><span class="p">();</span>
+<a id="__codelineno-8-95" name="__codelineno-8-95"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-96" name="__codelineno-8-96"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">erreurs</span><span class="p">;</span>
+<a id="__codelineno-8-97" name="__codelineno-8-97"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-8-98" name="__codelineno-8-98"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Le type [Response] utilisé ligne 37 est la réponse du serveur web / jSON décrite au paragraphe 14.7, page 270 ;</p>
-<p><strong>Travail à faire</strong> : en suivant le paragraphe 13.6.3.7, page 256, complétez la classe [ElectionsMetier] ;</p>
+<p>Le type [Response] utilisé ligne 37 est la réponse du serveur web / jSON décrite au paragraphe 14.7, page 269 ;</p>
+<p><strong>Travail à faire</strong> : en suivant le paragraphe 13.6.3.7, page 255, complétez la classe [ElectionsMetier] ;</p>
 <h2 id="157-le-test-junit">15.7. Le test Junit</h2>
 <p>Revenons à l&#x27;architecture client / serveur en cours de construction :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B2000002ED88B9ECD2.png" style="display:inline-block; margin:4px;width:15.901cm;height:9.91cm;" /></td></tr></table>
@@ -1856,7 +1852,7 @@
 <p>Maintenant que la couche [métier] [2] a été construite et testée, nous pouvons construire la couche [ui] [1].</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000043C0000017F8A6B716E.png" style="display:inline-block; margin:4px;width:14.34cm;height:5.068cm;" /></td></tr></table>
 
-<p>Comme l&#x27;interface [IElectionsMetier] de la couche [métier] est identique à celle du projet décrit au paragraphe 8, page 125, nous pouvons en [3], copier le projet de la couches [ui] du paragraphe 10, page 140. Ce projet était un projet Netbeans. Il suffit de faire un copier / coller des classes Java concernées de Netbeans vers Eclipse. Ceci fait, il y a des ajustements de packages et d&#x27;imports à faire.</p>
+<p>Comme l&#x27;interface [IElectionsMetier] de la couche [métier] est identique à celle du projet décrit au paragraphe 8, page 125, nous pouvons en [3], copier le projet de la couches [ui] du paragraphe 10, page 139. Ce projet était un projet Netbeans. Il suffit de faire un copier / coller des classes Java concernées de Netbeans vers Eclipse. Ceci fait, il y a des ajustements de packages et d&#x27;imports à faire.</p>
 <p>On fera de même pour les classes exécutables du package [elections.client.boot] [4].</p>
 <p>La classe [AbstractBootElections] est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
@@ -1881,7 +1877,7 @@
 <span class="normal"><a href="#__codelineno-9-20">20</a></span>
 <span class="normal"><a href="#__codelineno-9-21">21</a></span>
 <span class="normal"><a href="#__codelineno-9-22">22</a></span>
-<span class="normal"><a href="#__codelineno-9-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">boot</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-9-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.client.boot</span><span class="p">;</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2"></a>
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.AnnotationConfigApplicationContext</span><span class="p">;</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a>
@@ -1889,21 +1885,21 @@
 <a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">elections.client.entities.ElectionsException</span><span class="p">;</span>
 <a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">elections.client.ui.IElectionsUI</span><span class="p">;</span>
 <a id="__codelineno-9-8" name="__codelineno-9-8"></a>
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="n">public</span> <span class="n">abstract</span> <span class="k">class</span><span class="w"> </span><span class="nc">AbstractBootElections</span> <span class="p">{</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractBootElections</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-10" name="__codelineno-9-10"></a>
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a>    <span class="o">//</span> <span class="n">récupération</span> <span class="n">du</span> <span class="n">contexte</span> <span class="n">Spring</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a>    <span class="n">protected</span> <span class="n">AnnotationConfigApplicationContext</span> <span class="n">ctx</span><span class="p">;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">    </span><span class="c1">// récupération du contexte Spring</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">AnnotationConfigApplicationContext</span><span class="w"> </span><span class="n">ctx</span><span class="p">;</span>
 <a id="__codelineno-9-13" name="__codelineno-9-13"></a>
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a>    <span class="n">public</span> <span class="n">void</span> <span class="n">run</span><span class="p">()</span> <span class="p">{</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a>        <span class="o">//</span> <span class="n">instanciation</span> <span class="n">couche</span> <span class="p">[</span><span class="n">ui</span><span class="p">]</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a>        <span class="n">IElectionsUI</span> <span class="n">electionsUI</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span>
-<a id="__codelineno-9-17" name="__codelineno-9-17"></a>        <span class="k">try</span> <span class="p">{</span>
-<a id="__codelineno-9-18" name="__codelineno-9-18"></a>            <span class="o">//</span> <span class="n">récupération</span> <span class="n">du</span> <span class="n">contexte</span> <span class="n">Spring</span>
-<a id="__codelineno-9-19" name="__codelineno-9-19"></a>            <span class="n">ctx</span> <span class="o">=</span> <span class="n">new</span> <span class="n">AnnotationConfigApplicationContext</span><span class="p">(</span><span class="n">UiConfig</span><span class="o">.</span><span class="n">class</span><span class="p">);</span>
-<a id="__codelineno-9-20" name="__codelineno-9-20"></a>            <span class="o">//</span> <span class="n">récupération</span> <span class="n">de</span> <span class="n">la</span> <span class="n">couche</span> <span class="p">[</span><span class="n">ui</span><span class="p">]</span>
-<a id="__codelineno-9-21" name="__codelineno-9-21"></a>            <span class="n">electionsUI</span> <span class="o">=</span> <span class="n">getUI</span><span class="p">();</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">run</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">        </span><span class="c1">// instanciation couche [ui]</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">        </span><span class="n">IElectionsUI</span><span class="w"> </span><span class="n">electionsUI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">            </span><span class="c1">// récupération du contexte Spring</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">            </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AnnotationConfigApplicationContext</span><span class="p">(</span><span class="n">UiConfig</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">            </span><span class="c1">// récupération de la couche [ui]</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">            </span><span class="n">electionsUI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getUI</span><span class="p">();</span>
 <a id="__codelineno-9-22" name="__codelineno-9-22"></a>
-<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="o">...</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="p">...</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 19 : le contexte Spring défini par la classe de configuration [UiConfig] est instancié. Cette classe est la suivante :</li>
@@ -1919,21 +1915,21 @@
 <span class="normal"><a href="#__codelineno-10-6">6</a></span>
 <span class="normal"><a href="#__codelineno-10-7">7</a></span>
 <span class="normal"><a href="#__codelineno-10-8">8</a></span>
-<span class="normal"><a href="#__codelineno-10-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">package</span> <span class="n">elections</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">config</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-10-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.client.config</span><span class="p">;</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2"></a>
 <a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.ComponentScan</span><span class="p">;</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.Import</span><span class="p">;</span>
 <a id="__codelineno-10-5" name="__codelineno-10-5"></a>
-<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="nd">@Import</span><span class="p">(</span><span class="n">MetierConfig</span><span class="o">.</span><span class="n">class</span><span class="p">)</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="nd">@ComponentScan</span><span class="p">(</span><span class="n">basePackages</span> <span class="o">=</span> <span class="p">{</span> <span class="s2">&quot;elections.client.ui&quot;</span> <span class="p">})</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">UiConfig</span> <span class="p">{</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="nd">@Import</span><span class="p">(</span><span class="n">MetierConfig</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="nd">@ComponentScan</span><span class="p">(</span><span class="n">basePackages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;elections.client.ui&quot;</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UiConfig</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 6 : on importe les beans de la couche [métier] ;</li>
-<li>ligne 7 : on indique qu&#x27;il y des beans Spring dans le package [elections.client.ui] ;
-<strong>Travail à faire</strong> : vérifiez que les versions console et swing de la couche [ui] fonctionnent.</li>
+<li>ligne 7 : on indique qu&#x27;il y des beans Spring dans le package [elections.client.ui] ;</li>
 </ul>
+<p><strong>Travail à faire</strong> : vérifiez que les versions console et swing de la couche [ui] fonctionnent.</p>
 
 
 
@@ -1973,7 +1969,7 @@
           https://tahe.developpez.com
         </a>
         <br>
-        Ce cours tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
+        Ce cours-tutoriel écrit par <strong>Serge Tahé</strong> est mis à disposition du public selon les termes de la
         <em>Licence Creative Commons Attribution – Pas d’Utilisation Commerciale –
         Partage dans les Mêmes Conditions 3.0 non transposé</em>.
       </div>
