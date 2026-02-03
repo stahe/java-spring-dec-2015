@@ -438,14 +438,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-introduction-a-lx27api-jdbc.html" class="md-nav__link">
+      <a href="cours-introduction-a-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. [Cours] : Introduction à l&#x27;API JDBC
+    6. [Cours] : Introduction à l'API JDBC
   
 
     
@@ -465,14 +465,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-implementation-de-la-couche-dao-du-td-avec-lx27api-jdbc.html" class="md-nav__link">
+      <a href="td-implementation-de-la-couche-dao-du-td-avec-lapi-jdbc.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. [TD] : Implémentation de la couche [DAO] du TD avec l&#x27;API JDBC
+    7. [TD] : Implémentation de la couche [DAO] du TD avec l'API JDBC
   
 
     
@@ -877,14 +877,14 @@
   
   
     <li class="md-nav__item">
-      <a href="td-creation-dx27un-client-pour-le-service-web.html" class="md-nav__link">
+      <a href="td-creation-dun-client-pour-le-service-web.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. [TD] : création d&#x27;un client pour le service web
+    15. [TD] : création d'un client pour le service web
   
 
     
@@ -904,14 +904,14 @@
   
   
     <li class="md-nav__item">
-      <a href="cours-securiser-lx27acces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
+      <a href="cours-securiser-lacces-a-un-service-web-avec-spring-security.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    16. [Cours] : Sécuriser l&#x27;accès à un service web avec Spring Security
+    16. [Cours] : Sécuriser l'accès à un service web avec Spring Security
   
 
     
@@ -1106,15 +1106,18 @@
   
 
 
+<p><a id="refheading2192602014630537"></a></p>
 <h1 id="12-td-implementation-de-la-couche-dao-du-td-avec-spring-data">12. [TD] : Implémentation de la couche [DAO] du TD avec [Spring Data]</h1>
 <p><strong>Mots clés</strong> : architecture multicouche, Spring, injection de dépendances, API JPA (Java Persistence API), Spring Data.</p>
 <p>Nous allons suivre la même démarche que précédemment pour implémenter la couche [DAO] du TD.</p>
+<p><a id="refheading1217161037674463"></a></p>
 <h2 id="121-support">12.1. Support</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015F000000BCA205EC53.png" style="display:inline-block; margin:4px;width:4.644cm;height:2.487cm;" /></td></tr></table>
 
 <ul>
 <li>en [1], le dossier [support / chap-12] contient le projet Eclipse de ce chapitre ;</li>
 </ul>
+<p><a id="refheading2192622014630537"></a></p>
 <h2 id="122-le-projet-eclipse">12.2. Le projet Eclipse</h2>
 <p>Le projet Eclipse sera le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F70000014EC15FE9D3.png" style="display:inline-block; margin:4px;width:4.57cm;height:6.181cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1131,8 +1134,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000438000000FAD9AFB415.png" style="display:inline-block; margin:4px;width:14.288cm;height:3.307cm;" /></td></tr></table>
 
 <p>La couche [DAO] ne voit que la couche implémentée par [Spring Data].</p>
+<p><a id="refheading226302014630537"></a></p>
 <h2 id="123-configuration-maven">12.3. Configuration Maven</h2>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : construisez le fichier [pom.xml] du projet.</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<p><a id="refheading2192642014630537"></a></p>
 <h2 id="124-les-entites-de-la-couche-jpa">12.4. Les entités de la couche [JPA]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000430000000F2A20C3FB2.png" style="display:inline-block; margin:4px;width:14.182cm;height:3.201cm;" /></td></tr></table>
 
@@ -1144,491 +1151,305 @@
 <li>[AbstactEntity] est la classe parent des deux classes précédentes. Elle factorise les champs [id, version] communs aux deux classes ;</li>
 <li>[ElectionsException] est la classe d&#x27;exception du projet ;</li>
 </ul>
+<p><a id="refheading226835658489731"></a></p>
 <h3 id="1241-la-classe-electionsexception">12.4.1. La classe [ElectionsException]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D10000005A1EDAED12.png" style="display:inline-block; margin:4px;width:3.87cm;height:1.67cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<p>La classe [ElectionsException] est l&#x27;exception non contrôlée décrite au paragraphe 4.3, page 39.</p>
+<p>La classe [ElectionsException] est l&#x27;exception non contrôlée décrite au paragraphe <a href="td-architectures-en-couches.html#refheading1626141501930048">4.3</a>.</p>
+<p><a id="refheading226855658489731"></a></p>
 <h3 id="1242-la-classe-abstractentity">12.4.2. La classe [AbstractEntity]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D10000005AAC8C257E.png" style="display:inline-block; margin:4px;width:3.87cm;height:1.67cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [AbstractEntity] est la suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span>
-<span class="normal"><a href="#__codelineno-0-31">31</a></span>
-<span class="normal"><a href="#__codelineno-0-32">32</a></span>
-<span class="normal"><a href="#__codelineno-0-33">33</a></span>
-<span class="normal"><a href="#__codelineno-0-34">34</a></span>
-<span class="normal"><a href="#__codelineno-0-35">35</a></span>
-<span class="normal"><a href="#__codelineno-0-36">36</a></span>
-<span class="normal"><a href="#__codelineno-0-37">37</a></span>
-<span class="normal"><a href="#__codelineno-0-38">38</a></span>
-<span class="normal"><a href="#__codelineno-0-39">39</a></span>
-<span class="normal"><a href="#__codelineno-0-40">40</a></span>
-<span class="normal"><a href="#__codelineno-0-41">41</a></span>
-<span class="normal"><a href="#__codelineno-0-42">42</a></span>
-<span class="normal"><a href="#__codelineno-0-43">43</a></span>
-<span class="normal"><a href="#__codelineno-0-44">44</a></span>
-<span class="normal"><a href="#__codelineno-0-45">45</a></span>
-<span class="normal"><a href="#__codelineno-0-46">46</a></span>
-<span class="normal"><a href="#__codelineno-0-47">47</a></span>
-<span class="normal"><a href="#__codelineno-0-48">48</a></span>
-<span class="normal"><a href="#__codelineno-0-49">49</a></span>
-<span class="normal"><a href="#__codelineno-0-50">50</a></span>
-<span class="normal"><a href="#__codelineno-0-51">51</a></span>
-<span class="normal"><a href="#__codelineno-0-52">52</a></span>
-<span class="normal"><a href="#__codelineno-0-53">53</a></span>
-<span class="normal"><a href="#__codelineno-0-54">54</a></span>
-<span class="normal"><a href="#__codelineno-0-55">55</a></span>
-<span class="normal"><a href="#__codelineno-0-56">56</a></span>
-<span class="normal"><a href="#__codelineno-0-57">57</a></span>
-<span class="normal"><a href="#__codelineno-0-58">58</a></span>
-<span class="normal"><a href="#__codelineno-0-59">59</a></span>
-<span class="normal"><a href="#__codelineno-0-60">60</a></span>
-<span class="normal"><a href="#__codelineno-0-61">61</a></span>
-<span class="normal"><a href="#__codelineno-0-62">62</a></span>
-<span class="normal"><a href="#__codelineno-0-63">63</a></span>
-<span class="normal"><a href="#__codelineno-0-64">64</a></span>
-<span class="normal"><a href="#__codelineno-0-65">65</a></span>
-<span class="normal"><a href="#__codelineno-0-66">66</a></span>
-<span class="normal"><a href="#__codelineno-0-67">67</a></span>
-<span class="normal"><a href="#__codelineno-0-68">68</a></span>
-<span class="normal"><a href="#__codelineno-0-69">69</a></span>
-<span class="normal"><a href="#__codelineno-0-70">70</a></span>
-<span class="normal"><a href="#__codelineno-0-71">71</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">elections.dao.entities</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.Serializable</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.Column</span><span class="p">;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.GeneratedValue</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.GenerationType</span><span class="p">;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.Id</span><span class="p">;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.MappedSuperclass</span><span class="p">;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javax.persistence.Version</span><span class="p">;</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.fasterxml.jackson.core.JsonProcessingException</span><span class="p">;</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="kn">import</span><span class="w"> </span><span class="nn">com.fasterxml.jackson.databind.ObjectMapper</span><span class="p">;</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="nd">@MappedSuperclass</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractEntity</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Serializable</span><span class="p">{</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">serialVersionUID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1L</span><span class="p">;</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="c1">// propriétés</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">    </span><span class="nd">@Id</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="nd">@GeneratedValue</span><span class="p">(</span><span class="n">strategy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GenerationType</span><span class="p">.</span><span class="na">IDENTITY</span><span class="p">)</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="nd">@Column</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ID&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="nd">@Version</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="nd">@Column</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;VERSION&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">version</span><span class="p">;</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="c1">// constructeurs</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">AbstractEntity</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a>
-<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-32" name="__codelineno-0-32"></a>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">AbstractEntity</span><span class="p">(</span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">version</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">version</span><span class="p">;</span>
-<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a>
-<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">    </span><span class="c1">// redéfinition [equals] et [hashcode]</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">hashCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">id</span><span class="p">.</span><span class="na">hashCode</span><span class="p">()</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-43" name="__codelineno-0-43"></a>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">entity</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="p">(</span><span class="n">entity</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">AbstractEntity</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">class1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getName</span><span class="p">();</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">class2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">entity</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getName</span><span class="p">();</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">class2</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">class1</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">        </span><span class="n">AbstractEntity</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">AbstractEntity</span><span class="p">)</span><span class="w"> </span><span class="n">entity</span><span class="p">;</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="na">id</span><span class="p">;</span>
-<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">    </span><span class="c1">// signature jSON</span>
-<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">        </span><span class="n">ObjectMapper</span><span class="w"> </span><span class="n">mapper</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ObjectMapper</span><span class="p">();</span>
-<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">mapper</span><span class="p">.</span><span class="na">writeValueAsString</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">JsonProcessingException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
-<a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-68" name="__codelineno-0-68"></a>
-<a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="w">    </span><span class="c1">// getters et setters</span>
-<a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="p">...</span>
-<a id="__codelineno-0-71" name="__codelineno-0-71"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<p>C&#x27;est la classe décrite au paragraphe 11.3.5.2, page 188, sans les filtres jSON. Ici en effet, les tables [CONF] et [LISTES] ne sont pas liées par une relation de clé étrangère. Or c&#x27;est l&#x27;existence d&#x27;une telle relation avec le mode [lazy loading] qui induit la nécessité de filtres jSON.</p>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.dao.entities;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.Serializable;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.persistence.Column;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.persistence.GeneratedValue;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.persistence.GenerationType;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.persistence.Id;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.persistence.MappedSuperclass;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.persistence.Version;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.fasterxml.jackson.core.JsonProcessingException;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.fasterxml.jackson.databind.ObjectMapper;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">@MappedSuperclass</span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">abstract</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> AbstractEntity </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> Serializable{</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">final</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">long</span><span style="color:#000000"> </span><span style="font-weight:bold;font-style:italic;color:#0000c0">serialVersionUID</span><span style="color:#000000"> = 1L;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// propriétés</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@Id</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@GeneratedValue</span><span style="color:#000000">(strategy = GenerationType.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">IDENTITY</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@Column</span><span style="color:#000000">(name = </span><span style="color:#2a00ff">&quot;ID&quot;</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">protected</span><span style="color:#000000"> Long </span><span style="color:#0000c0">id</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@Version</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@Column</span><span style="color:#000000">(name = </span><span style="color:#2a00ff">&quot;VERSION&quot;</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">protected</span><span style="color:#000000"> Long </span><span style="color:#0000c0">version</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// constructeurs</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> AbstractEntity() {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> AbstractEntity(Long </span><span style="color:#6a3e3e">id</span><span style="color:#000000">, Long </span><span style="color:#6a3e3e">version</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.</span><span style="color:#0000c0">id</span><span style="color:#000000"> = </span><span style="color:#6a3e3e">id</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.</span><span style="color:#0000c0">version</span><span style="color:#000000"> = </span><span style="color:#6a3e3e">version</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// redéfinition [equals] et [hashcode]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@Override</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> hashCode() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> (</span><span style="color:#0000c0">id</span><span style="color:#000000"> != </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000"> ? </span><span style="color:#0000c0">id</span><span style="color:#000000">.hashCode() : 0);</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@Override</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">boolean</span><span style="color:#000000"> equals(Object </span><span style="color:#6a3e3e">entity</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (!(</span><span style="color:#6a3e3e">entity</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">instanceof</span><span style="color:#000000"> AbstractEntity)) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">        }</span>
+<span class="odt-code-line"><span style="color:#000000">        String </span><span style="color:#6a3e3e">class1</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.getClass().getName();</span></span>
+<span class="odt-code-line"><span style="color:#000000">        String </span><span style="color:#6a3e3e">class2</span><span style="color:#000000"> = </span><span style="color:#6a3e3e">entity</span><span style="color:#000000">.getClass().getName();</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (!</span><span style="color:#6a3e3e">class2</span><span style="color:#000000">.equals(</span><span style="color:#6a3e3e">class1</span><span style="color:#000000">)) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">        }</span>
+<span class="odt-code-line"><span style="color:#000000">        AbstractEntity </span><span style="color:#6a3e3e">other</span><span style="color:#000000"> = (AbstractEntity) </span><span style="color:#6a3e3e">entity</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> </span><span style="color:#0000c0">id</span><span style="color:#000000"> != </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000"> &amp;&amp; </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.</span><span style="color:#0000c0">id</span><span style="color:#000000"> == </span><span style="color:#6a3e3e">other</span><span style="color:#000000">.</span><span style="color:#0000c0">id</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// signature jSON</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> String toString() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        ObjectMapper </span><span style="color:#6a3e3e">mapper</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> ObjectMapper();</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">try</span><span style="color:#000000"> {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> </span><span style="color:#6a3e3e">mapper</span><span style="color:#000000">.writeValueAsString(</span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        } </span><span style="font-weight:bold;color:#7f0055">catch</span><span style="color:#000000"> (JsonProcessingException </span><span style="color:#6a3e3e">e</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">e</span><span style="color:#000000">.printStackTrace();</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="font-weight:bold;color:#7f0055">return</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">        }</span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// getters et setters</span></span>
+<span class="odt-code-line">...</span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<p>C&#x27;est la classe décrite au paragraphe <a href="cours-gestion-des-bases-de-donnees-relationnelles-avec-spring-data.html#refheading1961161114084373">11.3.5.2</a>, sans les filtres jSON. Ici en effet, les tables [CONF] et [LISTES] ne sont pas liées par une relation de clé étrangère. Or c&#x27;est l&#x27;existence d&#x27;une telle relation avec le mode [lazy loading] qui induit la nécessité de filtres jSON.</p>
+<p><a id="refheading226875658489731"></a></p>
 <h3 id="1243-la-classe-electionsconfig">12.4.3. La classe [ElectionsConfig]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D10000005A7D0E977A.png" style="display:inline-block; margin:4px;width:3.87cm;height:1.67cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ElectionsConfig] est l&#x27;entité JPA associée à la table [CONF] ;</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : construisez la classe [ElectionsConfig].</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<p><a id="refheading226895658489731"></a></p>
 <h3 id="1244-la-classe-listeelectorale">12.4.4. La classe [ListeElectorale]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D10000005AF6FF4979.png" style="display:inline-block; margin:4px;width:3.87cm;height:1.67cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ListeElectorale] est l&#x27;entité JPA associée à la table [LISTES] ;</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : construisez la classe [ListeElectorale].</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<p><a id="refheading2192662014630537"></a></p>
 <h2 id="125-la-couche-spring-data">12.5. La couche [Spring Data]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000431000000F69F141679.png" style="display:inline-block; margin:4px;width:14.196cm;height:3.254cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000ED00000037CB1E9CA7.png" style="display:inline-block; margin:4px;width:4.39cm;height:1.02cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : écrivez les deux interfaces de [Spring Data] pour gérer les deux tables [CONF] et [LISTES] ;</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<p><a id="refheading2192682014630537"></a></p>
 <h2 id="126-la-couche-dao">12.6. La couche [DAO]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042A000000F51E420498.png" style="display:inline-block; margin:4px;width:14.102cm;height:3.242cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B3000000391442EF3F.png" style="display:inline-block; margin:4px;width:3.311cm;height:1.05cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface [IElectionsDao] de la couche [DAO] est la suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-1-10">10</a></span>
-<span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">dao.service</span><span class="p">;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">dao.entities.ElectionsConfig</span><span class="p">;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">dao.entities.ListeElectorale</span><span class="p">;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">IElectionsDao</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="c1">// configuration de l&#39;élection</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ElectionsConfig</span><span class="w"> </span><span class="nf">getElectionsConfig</span><span class="p">();</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="c1">// listes candidates</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="nf">getListesElectorales</span><span class="p">();</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="c1">// mise à jour des listes candidates</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setListesElectorales</span><span class="p">(</span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales</span><span class="p">);</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> dao.service;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> dao.entities.ElectionsConfig;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> dao.entities.ListeElectorale;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">interface</span><span style="color:#000000"> IElectionsDao {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// configuration de l&#x27;élection</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> ElectionsConfig getElectionsConfig();</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// listes candidates</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> ListeElectorale[] getListesElectorales();</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// mise à jour des listes candidates</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> setListesElectorales(ListeElectorale[] </span><span style="color:#6a3e3e">listesElectorales</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : écrivez l&#x27;implémentation [ElectionsDaoJpa] de l&#x27;interface [IElectionsDao].</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<p><a id="refheading2192702014630537"></a></p>
 <h2 id="127-configuration-du-projet-spring">12.7. Configuration du projet Spring</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000AA00000029F949FB68.png" style="display:inline-block; margin:4px;width:3.15cm;height:0.76cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [DaoConfig] configure le projet Spring.</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : écrivez la classe [DaoConfig]</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<p><a id="refheading2192722014630537"></a></p>
 <h2 id="128-la-couche-console">12.8. La couche [console]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042A000000F926691E50.png" style="display:inline-block; margin:4px;width:14.102cm;height:3.295cm;" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C60000005F76FEDE2E.png" style="display:inline-block; margin:4px;width:3.671cm;height:1.76cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Main] est la classe exécutable suivante :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-2-10">10</a></span>
-<span class="normal"><a href="#__codelineno-2-11">11</a></span>
-<span class="normal"><a href="#__codelineno-2-12">12</a></span>
-<span class="normal"><a href="#__codelineno-2-13">13</a></span>
-<span class="normal"><a href="#__codelineno-2-14">14</a></span>
-<span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span>
-<span class="normal"><a href="#__codelineno-2-17">17</a></span>
-<span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span>
-<span class="normal"><a href="#__codelineno-2-20">20</a></span>
-<span class="normal"><a href="#__codelineno-2-21">21</a></span>
-<span class="normal"><a href="#__codelineno-2-22">22</a></span>
-<span class="normal"><a href="#__codelineno-2-23">23</a></span>
-<span class="normal"><a href="#__codelineno-2-24">24</a></span>
-<span class="normal"><a href="#__codelineno-2-25">25</a></span>
-<span class="normal"><a href="#__codelineno-2-26">26</a></span>
-<span class="normal"><a href="#__codelineno-2-27">27</a></span>
-<span class="normal"><a href="#__codelineno-2-28">28</a></span>
-<span class="normal"><a href="#__codelineno-2-29">29</a></span>
-<span class="normal"><a href="#__codelineno-2-30">30</a></span>
-<span class="normal"><a href="#__codelineno-2-31">31</a></span>
-<span class="normal"><a href="#__codelineno-2-32">32</a></span>
-<span class="normal"><a href="#__codelineno-2-33">33</a></span>
-<span class="normal"><a href="#__codelineno-2-34">34</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">dao.console</span><span class="p">;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.context.annotation.AnnotationConfigApplicationContext</span><span class="p">;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">dao.config.AppConfig</span><span class="p">;</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">dao.entities.ElectionsConfig</span><span class="p">;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">dao.entities.ListeElectorale</span><span class="p">;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">dao.service.IElectionsDao</span><span class="p">;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="c1">// source de données</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">IElectionsDao</span><span class="w"> </span><span class="n">dao</span><span class="p">;</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">        </span><span class="c1">// récupération du contexte Spring</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">        </span><span class="n">AnnotationConfigApplicationContext</span><span class="w"> </span><span class="n">ctx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AnnotationConfigApplicationContext</span><span class="p">(</span><span class="n">AppConfig</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="c1">// récupération de la source de données</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">        </span><span class="n">dao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ctx</span><span class="p">.</span><span class="na">getBean</span><span class="p">(</span><span class="n">IElectionsDao</span><span class="p">.</span><span class="na">class</span><span class="p">);</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">        </span><span class="c1">// contenu des deux tables</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">        </span><span class="n">ElectionsConfig</span><span class="w"> </span><span class="n">electionsConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dao</span><span class="p">.</span><span class="na">getElectionsConfig</span><span class="p">();</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">        </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dao</span><span class="p">.</span><span class="na">getListesElectorales</span><span class="p">();</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">        </span><span class="c1">// affichage</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Nombre de sièges à pourvoir : %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">electionsConfig</span><span class="p">.</span><span class="na">getNbSiegesAPourvoir</span><span class="p">()));</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;Seuil électoral : %5.2f&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">electionsConfig</span><span class="p">.</span><span class="na">getSeuilElectoral</span><span class="p">()));</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Listes candidates----------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ListeElectorale</span><span class="w"> </span><span class="n">liste</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">listes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">liste</span><span class="p">);</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">        </span><span class="c1">// fermeture contexte Spring</span>
-<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">        </span><span class="n">ctx</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-33" name="__codelineno-2-33"></a>
-<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> dao.console;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.context.annotation.AnnotationConfigApplicationContext;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> dao.config.AppConfig;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> dao.entities.ElectionsConfig;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> dao.entities.ListeElectorale;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> dao.service.IElectionsDao;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Main {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// source de données</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> IElectionsDao </span><span style="font-style:italic;color:#0000c0">dao</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> main(String[] </span><span style="color:#6a3e3e">args</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// récupération du contexte Spring</span></span>
+<span class="odt-code-line"><span style="color:#000000">        AnnotationConfigApplicationContext </span><span style="color:#6a3e3e">ctx</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> AnnotationConfigApplicationContext(AppConfig.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// récupération de la source de données</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-style:italic;color:#0000c0">dao</span><span style="color:#000000"> = </span><span style="color:#6a3e3e">ctx</span><span style="color:#000000">.getBean(IElectionsDao.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// contenu des deux tables</span></span>
+<span class="odt-code-line"><span style="color:#000000">        ElectionsConfig </span><span style="color:#6a3e3e">electionsConfig</span><span style="color:#000000"> = </span><span style="font-style:italic;color:#0000c0">dao</span><span style="color:#000000">.getElectionsConfig();</span></span>
+<span class="odt-code-line"><span style="color:#000000">        ListeElectorale[] </span><span style="color:#6a3e3e">listes</span><span style="color:#000000"> = </span><span style="font-style:italic;color:#0000c0">dao</span><span style="color:#000000">.getListesElectorales();</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// affichage</span></span>
+<span class="odt-code-line"><span style="color:#000000">        System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(String.</span><span style="font-style:italic;color:#000000">format</span><span style="color:#000000">(</span><span style="color:#2a00ff">&quot;Nombre de sièges à pourvoir : %d&quot;</span><span style="color:#000000">, </span><span style="color:#6a3e3e">electionsConfig</span><span style="color:#000000">.getNbSiegesAPourvoir()));</span></span>
+<span class="odt-code-line"><span style="color:#000000">        System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(String.</span><span style="font-style:italic;color:#000000">format</span><span style="color:#000000">(</span><span style="color:#2a00ff">&quot;Seuil électoral : %5.2f&quot;</span><span style="color:#000000">, </span><span style="color:#6a3e3e">electionsConfig</span><span style="color:#000000">.getSeuilElectoral()));</span></span>
+<span class="odt-code-line"><span style="color:#000000">        System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(</span><span style="color:#2a00ff">&quot;Listes candidates----------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">for</span><span style="color:#000000"> (ListeElectorale </span><span style="color:#6a3e3e">liste</span><span style="color:#000000"> : </span><span style="color:#6a3e3e">listes</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(</span><span style="color:#6a3e3e">liste</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">        }</span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// fermeture contexte Spring</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#6a3e3e">ctx</span><span style="color:#000000">.close();</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
 <p>La classe [Test01] est un test JUnit :</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span>
-<span class="normal"><a href="#__codelineno-3-19">19</a></span>
-<span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span>
-<span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span>
-<span class="normal"><a href="#__codelineno-3-24">24</a></span>
-<span class="normal"><a href="#__codelineno-3-25">25</a></span>
-<span class="normal"><a href="#__codelineno-3-26">26</a></span>
-<span class="normal"><a href="#__codelineno-3-27">27</a></span>
-<span class="normal"><a href="#__codelineno-3-28">28</a></span>
-<span class="normal"><a href="#__codelineno-3-29">29</a></span>
-<span class="normal"><a href="#__codelineno-3-30">30</a></span>
-<span class="normal"><a href="#__codelineno-3-31">31</a></span>
-<span class="normal"><a href="#__codelineno-3-32">32</a></span>
-<span class="normal"><a href="#__codelineno-3-33">33</a></span>
-<span class="normal"><a href="#__codelineno-3-34">34</a></span>
-<span class="normal"><a href="#__codelineno-3-35">35</a></span>
-<span class="normal"><a href="#__codelineno-3-36">36</a></span>
-<span class="normal"><a href="#__codelineno-3-37">37</a></span>
-<span class="normal"><a href="#__codelineno-3-38">38</a></span>
-<span class="normal"><a href="#__codelineno-3-39">39</a></span>
-<span class="normal"><a href="#__codelineno-3-40">40</a></span>
-<span class="normal"><a href="#__codelineno-3-41">41</a></span>
-<span class="normal"><a href="#__codelineno-3-42">42</a></span>
-<span class="normal"><a href="#__codelineno-3-43">43</a></span>
-<span class="normal"><a href="#__codelineno-3-44">44</a></span>
-<span class="normal"><a href="#__codelineno-3-45">45</a></span>
-<span class="normal"><a href="#__codelineno-3-46">46</a></span>
-<span class="normal"><a href="#__codelineno-3-47">47</a></span>
-<span class="normal"><a href="#__codelineno-3-48">48</a></span>
-<span class="normal"><a href="#__codelineno-3-49">49</a></span>
-<span class="normal"><a href="#__codelineno-3-50">50</a></span>
-<span class="normal"><a href="#__codelineno-3-51">51</a></span>
-<span class="normal"><a href="#__codelineno-3-52">52</a></span>
-<span class="normal"><a href="#__codelineno-3-53">53</a></span>
-<span class="normal"><a href="#__codelineno-3-54">54</a></span>
-<span class="normal"><a href="#__codelineno-3-55">55</a></span>
-<span class="normal"><a href="#__codelineno-3-56">56</a></span>
-<span class="normal"><a href="#__codelineno-3-57">57</a></span>
-<span class="normal"><a href="#__codelineno-3-58">58</a></span>
-<span class="normal"><a href="#__codelineno-3-59">59</a></span>
-<span class="normal"><a href="#__codelineno-3-60">60</a></span>
-<span class="normal"><a href="#__codelineno-3-61">61</a></span>
-<span class="normal"><a href="#__codelineno-3-62">62</a></span>
-<span class="normal"><a href="#__codelineno-3-63">63</a></span>
-<span class="normal"><a href="#__codelineno-3-64">64</a></span>
-<span class="normal"><a href="#__codelineno-3-65">65</a></span>
-<span class="normal"><a href="#__codelineno-3-66">66</a></span>
-<span class="normal"><a href="#__codelineno-3-67">67</a></span>
-<span class="normal"><a href="#__codelineno-3-68">68</a></span>
-<span class="normal"><a href="#__codelineno-3-69">69</a></span>
-<span class="normal"><a href="#__codelineno-3-70">70</a></span>
-<span class="normal"><a href="#__codelineno-3-71">71</a></span>
-<span class="normal"><a href="#__codelineno-3-72">72</a></span>
-<span class="normal"><a href="#__codelineno-3-73">73</a></span>
-<span class="normal"><a href="#__codelineno-3-74">74</a></span>
-<span class="normal"><a href="#__codelineno-3-75">75</a></span>
-<span class="normal"><a href="#__codelineno-3-76">76</a></span>
-<span class="normal"><a href="#__codelineno-3-77">77</a></span>
-<span class="normal"><a href="#__codelineno-3-78">78</a></span>
-<span class="normal"><a href="#__codelineno-3-79">79</a></span>
-<span class="normal"><a href="#__codelineno-3-80">80</a></span>
-<span class="normal"><a href="#__codelineno-3-81">81</a></span>
-<span class="normal"><a href="#__codelineno-3-82">82</a></span>
-<span class="normal"><a href="#__codelineno-3-83">83</a></span>
-<span class="normal"><a href="#__codelineno-3-84">84</a></span>
-<span class="normal"><a href="#__codelineno-3-85">85</a></span>
-<span class="normal"><a href="#__codelineno-3-86">86</a></span>
-<span class="normal"><a href="#__codelineno-3-87">87</a></span>
-<span class="normal"><a href="#__codelineno-3-88">88</a></span>
-<span class="normal"><a href="#__codelineno-3-89">89</a></span>
-<span class="normal"><a href="#__codelineno-3-90">90</a></span>
-<span class="normal"><a href="#__codelineno-3-91">91</a></span>
-<span class="normal"><a href="#__codelineno-3-92">92</a></span>
-<span class="normal"><a href="#__codelineno-3-93">93</a></span>
-<span class="normal"><a href="#__codelineno-3-94">94</a></span>
-<span class="normal"><a href="#__codelineno-3-95">95</a></span>
-<span class="normal"><a href="#__codelineno-3-96">96</a></span>
-<span class="normal"><a href="#__codelineno-3-97">97</a></span>
-<span class="normal"><a href="#__codelineno-3-98">98</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">dao.tests</span><span class="p">;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Assert</span><span class="p">;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Before</span><span class="p">;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.Test</span><span class="p">;</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.junit.runner.RunWith</span><span class="p">;</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.beans.factory.annotation.Autowired</span><span class="p">;</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.boot.test.SpringApplicationConfiguration</span><span class="p">;</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="kn">import</span><span class="w"> </span><span class="nn">org.springframework.test.context.junit4.SpringJUnit4ClassRunner</span><span class="p">;</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="kn">import</span><span class="w"> </span><span class="nn">dao.config.AppConfig</span><span class="p">;</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="kn">import</span><span class="w"> </span><span class="nn">dao.entities.ElectionsConfig</span><span class="p">;</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="kn">import</span><span class="w"> </span><span class="nn">dao.entities.ListeElectorale</span><span class="p">;</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="kn">import</span><span class="w"> </span><span class="nn">dao.service.IElectionsDao</span><span class="p">;</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="nd">@SpringApplicationConfiguration</span><span class="p">(</span><span class="n">classes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AppConfig</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="nd">@RunWith</span><span class="p">(</span><span class="n">SpringJUnit4ClassRunner</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test01</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="c1">// couche [DAO]</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">    </span><span class="nd">@Autowired</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">IElectionsDao</span><span class="w"> </span><span class="n">electionsDao</span><span class="p">;</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">    </span><span class="nd">@Before</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">        </span><span class="c1">// on nettoie la table [LISTES]</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">        </span><span class="c1">// listes en compétition</span>
-<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">        </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">electionsDao</span><span class="p">.</span><span class="na">getListesElectorales</span><span class="p">();</span>
-<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">        </span><span class="c1">// on met à 0 les voix et sièges et elimine à false</span>
-<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">voix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sièges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">elimine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ListeElectorale</span><span class="w"> </span><span class="n">liste</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">listes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">            </span><span class="n">liste</span><span class="p">.</span><span class="na">setVoix</span><span class="p">(</span><span class="n">voix</span><span class="p">);</span>
-<a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">            </span><span class="n">liste</span><span class="p">.</span><span class="na">setSieges</span><span class="p">(</span><span class="n">sièges</span><span class="p">);</span>
-<a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="w">            </span><span class="n">liste</span><span class="p">.</span><span class="na">setElimine</span><span class="p">(</span><span class="n">elimine</span><span class="p">);</span>
-<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">        </span><span class="c1">// on rend ces données persistantes grâce à la couche [dao]</span>
-<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">        </span><span class="n">electionsDao</span><span class="p">.</span><span class="na">setListesElectorales</span><span class="p">(</span><span class="n">listes</span><span class="p">);</span>
-<a id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-41" name="__codelineno-3-41"></a>
-<a id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="w">    </span><span class="nd">@Test</span>
-<a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testElections01</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;testElections01-------------------------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="w">        </span><span class="c1">// récupération de la configuration des élections</span>
-<a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">        </span><span class="n">ElectionsConfig</span><span class="w"> </span><span class="n">electionsConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">electionsDao</span><span class="p">.</span><span class="na">getElectionsConfig</span><span class="p">();</span>
-<a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">nbSiegesAPourvoir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">electionsConfig</span><span class="p">.</span><span class="na">getNbSiegesAPourvoir</span><span class="p">();</span>
-<a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">seuilElectoral</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">electionsConfig</span><span class="p">.</span><span class="na">getSeuilElectoral</span><span class="p">();</span>
-<a id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="n">nbSiegesAPourvoir</span><span class="p">);</span>
-<a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span><span class="w"> </span><span class="n">seuilElectoral</span><span class="p">,</span><span class="w"> </span><span class="mf">1E-6</span><span class="p">);</span>
-<a id="__codelineno-3-51" name="__codelineno-3-51"></a>
-<a id="__codelineno-3-52" name="__codelineno-3-52"></a><span class="w">        </span><span class="c1">// listes en compétition</span>
-<a id="__codelineno-3-53" name="__codelineno-3-53"></a><span class="w">        </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">electionsDao</span><span class="p">.</span><span class="na">getListesElectorales</span><span class="p">();</span>
-<a id="__codelineno-3-54" name="__codelineno-3-54"></a><span class="w">        </span><span class="c1">// affichage valeurs lues</span>
-<a id="__codelineno-3-55" name="__codelineno-3-55"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nombre de sièges à pourvoir : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nbSiegesAPourvoir</span><span class="p">);</span>
-<a id="__codelineno-3-56" name="__codelineno-3-56"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Seuil électoral : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">seuilElectoral</span><span class="p">);</span>
-<a id="__codelineno-3-57" name="__codelineno-3-57"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Listes en compétition ---------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-3-58" name="__codelineno-3-58"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">listes</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-59" name="__codelineno-3-59"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">listes</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
-<a id="__codelineno-3-60" name="__codelineno-3-60"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-61" name="__codelineno-3-61"></a>
-<a id="__codelineno-3-62" name="__codelineno-3-62"></a><span class="w">        </span><span class="c1">// on affecte des voix et des sièges aux listes</span>
-<a id="__codelineno-3-63" name="__codelineno-3-63"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">voix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-3-64" name="__codelineno-3-64"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">sièges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-3-65" name="__codelineno-3-65"></a><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">elimine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-3-66" name="__codelineno-3-66"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ListeElectorale</span><span class="w"> </span><span class="n">liste</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">listes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-67" name="__codelineno-3-67"></a><span class="w">            </span><span class="n">liste</span><span class="p">.</span><span class="na">setVoix</span><span class="p">(</span><span class="n">voix</span><span class="p">);</span>
-<a id="__codelineno-3-68" name="__codelineno-3-68"></a><span class="w">            </span><span class="n">liste</span><span class="p">.</span><span class="na">setSieges</span><span class="p">(</span><span class="n">sièges</span><span class="p">);</span>
-<a id="__codelineno-3-69" name="__codelineno-3-69"></a><span class="w">            </span><span class="n">liste</span><span class="p">.</span><span class="na">setElimine</span><span class="p">(</span><span class="n">elimine</span><span class="p">);</span>
-<a id="__codelineno-3-70" name="__codelineno-3-70"></a><span class="w">            </span><span class="n">voix</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<a id="__codelineno-3-71" name="__codelineno-3-71"></a><span class="w">            </span><span class="n">sièges</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-3-72" name="__codelineno-3-72"></a><span class="w">            </span><span class="n">elimine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">elimine</span><span class="p">;</span>
-<a id="__codelineno-3-73" name="__codelineno-3-73"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-74" name="__codelineno-3-74"></a>
-<a id="__codelineno-3-75" name="__codelineno-3-75"></a><span class="w">        </span><span class="c1">// on rend ces données persistantes grâce à la couche [dao]</span>
-<a id="__codelineno-3-76" name="__codelineno-3-76"></a><span class="w">        </span><span class="n">electionsDao</span><span class="p">.</span><span class="na">setListesElectorales</span><span class="p">(</span><span class="n">listes</span><span class="p">);</span>
-<a id="__codelineno-3-77" name="__codelineno-3-77"></a>
-<a id="__codelineno-3-78" name="__codelineno-3-78"></a><span class="w">        </span><span class="c1">// on relit les données</span>
-<a id="__codelineno-3-79" name="__codelineno-3-79"></a><span class="w">        </span><span class="n">ListeElectorale</span><span class="o">[]</span><span class="w"> </span><span class="n">listesElectorales2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">electionsDao</span><span class="p">.</span><span class="na">getListesElectorales</span><span class="p">();</span>
-<a id="__codelineno-3-80" name="__codelineno-3-80"></a><span class="w">        </span><span class="c1">// on vérifie les données lues</span>
-<a id="__codelineno-3-81" name="__codelineno-3-81"></a><span class="w">        </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="n">listesElectorales2</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>
-<a id="__codelineno-3-82" name="__codelineno-3-82"></a><span class="w">        </span><span class="n">voix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-3-83" name="__codelineno-3-83"></a><span class="w">        </span><span class="n">sièges</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-3-84" name="__codelineno-3-84"></a><span class="w">        </span><span class="n">elimine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-3-85" name="__codelineno-3-85"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">ListeElectorale</span><span class="w"> </span><span class="n">liste</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">listes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-86" name="__codelineno-3-86"></a><span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="n">voix</span><span class="p">,</span><span class="w"> </span><span class="n">liste</span><span class="p">.</span><span class="na">getVoix</span><span class="p">());</span>
-<a id="__codelineno-3-87" name="__codelineno-3-87"></a><span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="n">sièges</span><span class="p">,</span><span class="w"> </span><span class="n">liste</span><span class="p">.</span><span class="na">getSieges</span><span class="p">());</span>
-<a id="__codelineno-3-88" name="__codelineno-3-88"></a><span class="w">            </span><span class="n">Assert</span><span class="p">.</span><span class="na">assertEquals</span><span class="p">(</span><span class="n">elimine</span><span class="p">,</span><span class="w"> </span><span class="n">liste</span><span class="p">.</span><span class="na">isElimine</span><span class="p">());</span>
-<a id="__codelineno-3-89" name="__codelineno-3-89"></a><span class="w">            </span><span class="n">voix</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<a id="__codelineno-3-90" name="__codelineno-3-90"></a><span class="w">            </span><span class="n">sièges</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<a id="__codelineno-3-91" name="__codelineno-3-91"></a><span class="w">            </span><span class="n">elimine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">!</span><span class="n">elimine</span><span class="p">;</span>
-<a id="__codelineno-3-92" name="__codelineno-3-92"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-93" name="__codelineno-3-93"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Listes en compétition ---------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-3-94" name="__codelineno-3-94"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">listes</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-95" name="__codelineno-3-95"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">listes</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
-<a id="__codelineno-3-96" name="__codelineno-3-96"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-3-97" name="__codelineno-3-97"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-98" name="__codelineno-3-98"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> dao.tests;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.junit.Assert;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.junit.Before;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.junit.Test;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.junit.runner.RunWith;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.beans.factory.annotation.Autowired;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.boot.test.SpringApplicationConfiguration;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.test.context.junit4.SpringJUnit4ClassRunner;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> dao.config.AppConfig;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> dao.entities.ElectionsConfig;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> dao.entities.ListeElectorale;</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> dao.service.IElectionsDao;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#646464">@SpringApplicationConfiguration</span><span style="color:#000000">(classes = AppConfig.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="color:#646464">@RunWith</span><span style="color:#000000">(SpringJUnit4ClassRunner.</span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000">)</span></span>
+<span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> Test01 {</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// couche [DAO]</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@Autowired</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> IElectionsDao </span><span style="color:#0000c0">electionsDao</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@Before</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> init() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// on nettoie la table [LISTES]</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// listes en compétition</span></span>
+<span class="odt-code-line"><span style="color:#000000">        ListeElectorale[] </span><span style="color:#6a3e3e">listes</span><span style="color:#000000"> = </span><span style="color:#0000c0">electionsDao</span><span style="color:#000000">.getListesElectorales();</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// on met à 0 les voix et sièges et elimine à false</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> </span><span style="color:#6a3e3e">voix</span><span style="color:#000000"> = 0;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> </span><span style="color:#6a3e3e">sièges</span><span style="color:#000000"> = 0;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">boolean</span><span style="color:#000000"> </span><span style="color:#6a3e3e">elimine</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">for</span><span style="color:#000000"> (ListeElectorale </span><span style="color:#6a3e3e">liste</span><span style="color:#000000"> : </span><span style="color:#6a3e3e">listes</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">liste</span><span style="color:#000000">.setVoix(</span><span style="color:#6a3e3e">voix</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">liste</span><span style="color:#000000">.setSieges(</span><span style="color:#6a3e3e">sièges</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">liste</span><span style="color:#000000">.setElimine(</span><span style="color:#6a3e3e">elimine</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">        }</span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// on rend ces données persistantes grâce à la couche [dao]</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000c0">electionsDao</span><span style="color:#000000">.setListesElectorales(</span><span style="color:#6a3e3e">listes</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@Test</span></span>
+<span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> testElections01() {</span></span>
+<span class="odt-code-line"><span style="color:#000000">        System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(</span><span style="color:#2a00ff">&quot;testElections01-------------------------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// récupération de la configuration des élections</span></span>
+<span class="odt-code-line"><span style="color:#000000">        ElectionsConfig </span><span style="color:#6a3e3e">electionsConfig</span><span style="color:#000000"> = </span><span style="color:#0000c0">electionsDao</span><span style="color:#000000">.getElectionsConfig();</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> </span><span style="color:#6a3e3e">nbSiegesAPourvoir</span><span style="color:#000000"> = </span><span style="color:#6a3e3e">electionsConfig</span><span style="color:#000000">.getNbSiegesAPourvoir();</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">double</span><span style="color:#000000"> </span><span style="color:#6a3e3e">seuilElectoral</span><span style="color:#000000"> = </span><span style="color:#6a3e3e">electionsConfig</span><span style="color:#000000">.getSeuilElectoral();</span></span>
+<span class="odt-code-line"><span style="color:#000000">        Assert.</span><span style="font-style:italic;color:#000000">assertEquals</span><span style="color:#000000">(6, </span><span style="color:#6a3e3e">nbSiegesAPourvoir</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        Assert.</span><span style="font-style:italic;color:#000000">assertEquals</span><span style="color:#000000">(0.05, </span><span style="color:#6a3e3e">seuilElectoral</span><span style="color:#000000">, 1E-6);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// listes en compétition</span></span>
+<span class="odt-code-line"><span style="color:#000000">        ListeElectorale[] </span><span style="color:#6a3e3e">listes</span><span style="color:#000000"> = </span><span style="color:#0000c0">electionsDao</span><span style="color:#000000">.getListesElectorales();</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// affichage valeurs lues</span></span>
+<span class="odt-code-line"><span style="color:#000000">        System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(</span><span style="color:#2a00ff">&quot;Nombre de sièges à pourvoir : &quot;</span><span style="color:#000000"> + </span><span style="color:#6a3e3e">nbSiegesAPourvoir</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(</span><span style="color:#2a00ff">&quot;Seuil électoral : &quot;</span><span style="color:#000000"> + </span><span style="color:#6a3e3e">seuilElectoral</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(</span><span style="color:#2a00ff">&quot;Listes en compétition ---------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">for</span><span style="color:#000000"> (</span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> </span><span style="color:#6a3e3e">i</span><span style="color:#000000"> = 0; </span><span style="color:#6a3e3e">i</span><span style="color:#000000"> &lt; </span><span style="color:#6a3e3e">listes</span><span style="color:#000000">.</span><span style="color:#0000c0">length</span><span style="color:#000000">; </span><span style="color:#6a3e3e">i</span><span style="color:#000000">++) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(</span><span style="color:#6a3e3e">listes</span><span style="color:#000000">[</span><span style="color:#6a3e3e">i</span><span style="color:#000000">]);</span></span>
+<span class="odt-code-line">        }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// on affecte des voix et des sièges aux listes</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> </span><span style="color:#6a3e3e">voix</span><span style="color:#000000"> = 0;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> </span><span style="color:#6a3e3e">sièges</span><span style="color:#000000"> = 0;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">boolean</span><span style="color:#000000"> </span><span style="color:#6a3e3e">elimine</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">for</span><span style="color:#000000"> (ListeElectorale </span><span style="color:#6a3e3e">liste</span><span style="color:#000000"> : </span><span style="color:#6a3e3e">listes</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">liste</span><span style="color:#000000">.setVoix(</span><span style="color:#6a3e3e">voix</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">liste</span><span style="color:#000000">.setSieges(</span><span style="color:#6a3e3e">sièges</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">liste</span><span style="color:#000000">.setElimine(</span><span style="color:#6a3e3e">elimine</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">voix</span><span style="color:#000000"> += 10;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">sièges</span><span style="color:#000000"> += 1;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">elimine</span><span style="color:#000000"> = !</span><span style="color:#6a3e3e">elimine</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">        }</span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// on rend ces données persistantes grâce à la couche [dao]</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#0000c0">electionsDao</span><span style="color:#000000">.setListesElectorales(</span><span style="color:#6a3e3e">listes</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// on relit les données</span></span>
+<span class="odt-code-line"><span style="color:#000000">        ListeElectorale[] </span><span style="color:#6a3e3e">listesElectorales2</span><span style="color:#000000"> = </span><span style="color:#0000c0">electionsDao</span><span style="color:#000000">.getListesElectorales();</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// on vérifie les données lues</span></span>
+<span class="odt-code-line"><span style="color:#000000">        Assert.</span><span style="font-style:italic;color:#000000">assertEquals</span><span style="color:#000000">(7, </span><span style="color:#6a3e3e">listesElectorales2</span><span style="color:#000000">.</span><span style="color:#0000c0">length</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#6a3e3e">voix</span><span style="color:#000000"> = 0;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#6a3e3e">sièges</span><span style="color:#000000"> = 0;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#6a3e3e">elimine</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">false</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">for</span><span style="color:#000000"> (ListeElectorale </span><span style="color:#6a3e3e">liste</span><span style="color:#000000"> : </span><span style="color:#6a3e3e">listes</span><span style="color:#000000">) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            Assert.</span><span style="font-style:italic;color:#000000">assertEquals</span><span style="color:#000000">(</span><span style="color:#6a3e3e">voix</span><span style="color:#000000">, </span><span style="color:#6a3e3e">liste</span><span style="color:#000000">.getVoix());</span></span>
+<span class="odt-code-line"><span style="color:#000000">            Assert.</span><span style="font-style:italic;color:#000000">assertEquals</span><span style="color:#000000">(</span><span style="color:#6a3e3e">sièges</span><span style="color:#000000">, </span><span style="color:#6a3e3e">liste</span><span style="color:#000000">.getSieges());</span></span>
+<span class="odt-code-line"><span style="color:#000000">            Assert.</span><span style="font-style:italic;color:#000000">assertEquals</span><span style="color:#000000">(</span><span style="color:#6a3e3e">elimine</span><span style="color:#000000">, </span><span style="color:#6a3e3e">liste</span><span style="color:#000000">.isElimine());</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">voix</span><span style="color:#000000"> += 10;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">sièges</span><span style="color:#000000"> += 1;</span></span>
+<span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#6a3e3e">elimine</span><span style="color:#000000"> = !</span><span style="color:#6a3e3e">elimine</span><span style="color:#000000">;</span></span>
+<span class="odt-code-line">        }</span>
+<span class="odt-code-line"><span style="color:#000000">        System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(</span><span style="color:#2a00ff">&quot;Listes en compétition ---------------------&quot;</span><span style="color:#000000">);</span></span>
+<span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">for</span><span style="color:#000000"> (</span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> </span><span style="color:#6a3e3e">i</span><span style="color:#000000"> = 0; </span><span style="color:#6a3e3e">i</span><span style="color:#000000"> &lt; </span><span style="color:#6a3e3e">listes</span><span style="color:#000000">.</span><span style="color:#0000c0">length</span><span style="color:#000000">; </span><span style="color:#6a3e3e">i</span><span style="color:#000000">++) {</span></span>
+<span class="odt-code-line"><span style="color:#000000">            System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(</span><span style="color:#6a3e3e">listes</span><span style="color:#000000">[</span><span style="color:#6a3e3e">i</span><span style="color:#000000">]);</span></span>
+<span class="odt-code-line">        }</span>
+<span class="odt-code-line">    }</span>
+<span class="odt-code-line">}</span>
+</code></pre></div>
+
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : passez les tests [console] et [JUnit] sur votre couche [DAO].</p>
+<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<p><a id="refheading165821515544210"></a></p>
 <h2 id="129-generation-de-larchive-maven-du-projet">12.9. Génération de l&#x27;archive Maven du projet</h2>
-<p>En suivant l&#x27;exemple du paragraphe 11.3.12, page 205, générez l&#x27;archive Maven du projet.</p>
+<p>En suivant l&#x27;exemple du paragraphe <a href="cours-gestion-des-bases-de-donnees-relationnelles-avec-spring-data.html#refheading165801515544210">11.3.12</a>, générez l&#x27;archive Maven du projet.</p>
 
 
 
@@ -1686,7 +1507,7 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.sections", "navigation.indexes", "navigation.expand", "toc.integrate", "navigation.top"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
