@@ -1143,12 +1143,12 @@
 <h1 id="7-td-implementation-de-la-couche-dao-du-td-avec-lapi-jdbc">7. [TD] : Implémentation de la couche [DAO] du TD avec l&#x27;API JDBC</h1>
 <p><strong>Mots clés</strong> : bases de données relationnelles, API JDBC, SQLException.</p>
 <p>Revenons sur l&#x27;architecture en couches de notre application :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005270000010B3CF3EB8F.png" style="display:inline-block; margin:4px;width:17.45cm;height:3.533cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005270000010B3CF3EB8F.png" style="display:inline-block; margin:4px;width:17.45cm;height:3.533cm;" class="odt-zoomable" data-zoom-src="images/10000000000005270000010B3CF3EB8F.png" /></td></tr></table>
 
 <p>Les données nécessaires à l&#x27;élection sont enregistrées dans une base de données MySQL [dbelections]</p>
 <p><a id="refheading17454669506693"></a></p>
 <h2 id="71-support">7.1. Support</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000543000001F8AA1FCF5F.png" style="display:inline-block; margin:4px;width:17.821cm;height:6.668cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000543000001F8AA1FCF5F.png" style="display:inline-block; margin:4px;width:17.821cm;height:6.668cm;" class="odt-zoomable" data-zoom-src="images/1000000000000543000001F8AA1FCF5F.png" /></td></tr></table>
 
 <p><a id="dbelections1"></a>Le dossier [support / chap-07] [1] contient :</p>
 <ul>
@@ -1162,10 +1162,10 @@
 <p><strong>Travail à faire</strong> : créez la base MySQL [dblelections] en suivant la procédure suivie au paragraphe <a href="cours-introduction-a-lapi-jdbc.html#refheading59391820156038">6.4.2</a>.</p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p>La base [dbelections] est une base MySQL avec deux tables :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A60000004FE55D3DA1.png" style="display:inline-block; margin:4px;width:3.069cm;height:1.461cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A60000004FE55D3DA1.png" style="display:inline-block; margin:4px;width:3.069cm;height:1.461cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A60000004FE55D3DA1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La table [conf] contient les informations de configuration de l&#x27;élection :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000239000000BFCE24760F.png" style="display:inline-block; margin:4px;width:10.539cm;height:3.54cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000239000000BFCE24760F.png" style="display:inline-block; margin:4px;width:10.539cm;height:3.54cm;" class="odt-zoomable" data-zoom-src="images/1000000000000239000000BFCE24760F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li>[id] : clé primaire auto-incrémentée ;</li>
@@ -1174,10 +1174,10 @@
 <li>[seuilelectoral] : la barre au-dessous de laquelle une liste est éliminée ;</li>
 </ul>
 <p>Son contenu est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BE000000518D5261E4.png" style="display:inline-block; margin:4px;width:8.26cm;height:1.499cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BE000000518D5261E4.png" style="display:inline-block; margin:4px;width:8.26cm;height:1.499cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BE000000518D5261E4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La table [listes] contient les listes candidates de l&#x27;élection :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000224000000EFED15390F.png" style="display:inline-block; margin:4px;width:10.149cm;height:4.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000224000000EFED15390F.png" style="display:inline-block; margin:4px;width:10.149cm;height:4.431cm;" class="odt-zoomable" data-zoom-src="images/1000000000000224000000EFED15390F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li>[id] : clé primaire auto-incrémentée ;</li>
@@ -1188,7 +1188,7 @@
 <li>[elimine] : à 1 si la liste est éliminée, à 0 sinon - n&#x27;est connu qu&#x27;après calcul de la couche [métier] ;</li>
 </ul>
 <p>Le contenu de la table [listes] est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000CD7E60F518.png" style="display:inline-block; margin:4px;width:4.761cm;height:3.799cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000CD7E60F518.png" style="display:inline-block; margin:4px;width:4.761cm;height:3.799cm;" class="odt-zoomable" data-zoom-src="images/1000000000000101000000CD7E60F518.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le script SQL pour générer la base [dbelections] s&#x27;appelle [dbelections.sql] et est sur le serveur. Son code est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
@@ -1274,10 +1274,10 @@
 
 <p><a id="refheading22677565848973"></a></p>
 <h2 id="73-le-projet-eclipse">7.3. Le projet Eclipse</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005250000011170996311.png" style="display:inline-block; margin:4px;width:17.424cm;height:3.612cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005250000011170996311.png" style="display:inline-block; margin:4px;width:17.424cm;height:3.612cm;" class="odt-zoomable" data-zoom-src="images/10000000000005250000011170996311.png" /></td></tr></table>
 
 <p>Le projet Eclipse de la couche [DAO] sera le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B0000013B850721FB.png" style="display:inline-block; margin:4px;width:5.83cm;height:5.83cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B0000013B850721FB.png" style="display:inline-block; margin:4px;width:5.83cm;height:5.83cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B0000013B850721FB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li>le package [elections.dao.entities] contient les objets manipulés par la couche [DAO] ;</li>
@@ -1288,7 +1288,7 @@
 </ul>
 <p><a id="refheading22679565848973"></a></p>
 <h2 id="74-configuration-du-projet-maven">7.4. Configuration du projet Maven</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000142000000E016C40EC7.png" style="display:inline-block; margin:4px;width:5.96cm;height:4.15cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000142000000E016C40EC7.png" style="display:inline-block; margin:4px;width:5.96cm;height:4.15cm;" class="odt-zoomable" data-zoom-src="images/1000000000000142000000E016C40EC7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le fichier [pom.xml] qui configure le projet Maven est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -1390,7 +1390,7 @@
 </ul>
 <p><a id="refheading22681565848973"></a></p>
 <h2 id="75-les-entites-de-la-couche-dao">7.5. Les entités de la couche [DAO]</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBA7F86E43.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.761cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBA7F86E43.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.761cm;" class="odt-zoomable" data-zoom-src="images/1000000000000128000000CBA7F86E43.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li>[ElectionsConfig] est le modèle objet associé à une ligne de la table [CONF] ;</li>
@@ -1400,7 +1400,7 @@
 </ul>
 <p><a id="refheading22683565848973"></a></p>
 <h3 id="751-la-classe-electionsexception">7.5.1. La classe [ElectionsException]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CB4ED74EBE.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.761cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CB4ED74EBE.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.761cm;" class="odt-zoomable" data-zoom-src="images/1000000000000128000000CB4ED74EBE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ElectionsException] a été décrite au paragraphe <a href="td-architectures-en-couches.html#refheading1626141501930048">4.3</a>. Nous redonnons son code :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1495,7 +1495,7 @@
 </ul>
 <p><a id="refheading22685565848973"></a></p>
 <h3 id="752-la-classe-abstractentity">7.5.2. La classe [AbstractEntity]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBC48C394C.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.759cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBC48C394C.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.759cm;" class="odt-zoomable" data-zoom-src="images/1000000000000128000000CBC48C394C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [AbstractEntity] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1546,7 +1546,7 @@
 </ul>
 <p><a id="refheading22687565848973"></a></p>
 <h3 id="753-la-classe-electionsconfig">7.5.3. La classe [ElectionsConfig]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBD98166F6.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.759cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBD98166F6.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.759cm;" class="odt-zoomable" data-zoom-src="images/1000000000000128000000CBD98166F6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ElectionsConfig] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1583,7 +1583,7 @@
 </ul>
 <p><a id="refheading22689565848973"></a></p>
 <h3 id="754-la-classe-listeelectorale">7.5.4. La classe [ListeElectorale]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBABF9AE30.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.759cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBABF9AE30.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.759cm;" class="odt-zoomable" data-zoom-src="images/1000000000000128000000CBABF9AE30.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ListeElectorale] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1686,9 +1686,9 @@
 </ul>
 <p><a id="refheading22691565848973"></a></p>
 <h2 id="76-configuration-spring-de-la-couche-dao">7.6. Configuration Spring de la couche [DAO]</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005170000010DBE71959B.png" style="display:inline-block; margin:4px;width:17.238cm;height:3.56cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005170000010DBE71959B.png" style="display:inline-block; margin:4px;width:17.238cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000005170000010DBE71959B.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B000000C19F3287BB.png" style="display:inline-block; margin:4px;width:5.83cm;height:3.57cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B000000C19F3287BB.png" style="display:inline-block; margin:4px;width:5.83cm;height:3.57cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B000000C19F3287BB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [AppConfig] est une classe de configuration Spring qui configure l&#x27;accès à la base de données de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1751,7 +1751,7 @@
 </ul>
 <p><a id="refheading106239108242770"></a></p>
 <h2 id="77-configuration-des-logs">7.7. Configuration des logs</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AD000001B9F417F917.png" style="display:inline-block; margin:4px;width:5.676cm;height:5.835cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AD000001B9F417F917.png" style="display:inline-block; margin:4px;width:5.676cm;height:5.835cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AD000001B9F417F917.png" /></td></tr></table>
 
 <p>Les bibliothèques de logs sont définies par la dépendance suivante dans [pom.xml] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -1763,7 +1763,7 @@
 </code></pre></div>
 
 <p>Cette dépendance amène les bibliothèques suivantes :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000819DA6E3AA.png" style="display:inline-block; margin:4px;width:5.611cm;height:2.487cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000819DA6E3AA.png" style="display:inline-block; margin:4px;width:5.611cm;height:2.487cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000819DA6E3AA.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>C&#x27;est la bibliothèque [logback] qui va assurer les logs. Elle est configurée par deux fichiers :</p>
 <ul>
@@ -1804,9 +1804,9 @@
 <p>Passez en mode [debug] dès que des erreurs apparaissent à l&#x27;exécution.</p>
 <p><a id="refheading22693565848973"></a></p>
 <h2 id="78-implementation-de-la-couche-dao">7.8. Implémentation de la couche [DAO]</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052300000111576A9DF3.png" style="display:inline-block; margin:4px;width:17.397cm;height:3.612cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052300000111576A9DF3.png" style="display:inline-block; margin:4px;width:17.397cm;height:3.612cm;" class="odt-zoomable" data-zoom-src="images/100000000000052300000111576A9DF3.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FD000000B8EDB337F3.png" style="display:inline-block; margin:4px;width:4.68cm;height:3.41cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FD000000B8EDB337F3.png" style="display:inline-block; margin:4px;width:4.68cm;height:3.41cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FD000000B8EDB337F3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface [IDao] de la couche [DAO] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1928,9 +1928,9 @@
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><a id="refheading22695565848973"></a></p>
 <h2 id="79-la-classe-de-test-main">7.9. La classe de test [Main]</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005120000010C2BC21605.png" style="display:inline-block; margin:4px;width:17.171cm;height:3.545cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005120000010C2BC21605.png" style="display:inline-block; margin:4px;width:17.171cm;height:3.545cm;" class="odt-zoomable" data-zoom-src="images/10000000000005120000010C2BC21605.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E9000000DC13348C3A.png" style="display:inline-block; margin:4px;width:4.309cm;height:4.069cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E9000000DC13348C3A.png" style="display:inline-block; margin:4px;width:4.309cm;height:4.069cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E9000000DC13348C3A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Main] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2113,9 +2113,9 @@
 <p><a id="refheading318051812363491"></a>
 <a id="tests-dao-jdbc"></a></p>
 <h2 id="710-tests-junit-de-la-classe-electionsdaojdbc">7.10. Tests JUnit de la classe [ElectionsDaoJdbc]</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000504000001051711870E.png" style="display:inline-block; margin:4px;width:16.986cm;height:3.454cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000504000001051711870E.png" style="display:inline-block; margin:4px;width:16.986cm;height:3.454cm;" class="odt-zoomable" data-zoom-src="images/1000000000000504000001051711870E.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000000DD8B3B1641.png" style="display:inline-block; margin:4px;width:4.56cm;height:4.09cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000000DD8B3B1641.png" style="display:inline-block; margin:4px;width:4.56cm;height:4.09cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000000DD8B3B1641.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Test01] est la classe de test [JUnit] suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2333,12 +2333,12 @@
 <li>lignes 35-42 : le contenu de la table [LISTES] après affectation de valeurs aux champs [voix, sieges, elimine] ;</li>
 </ul>
 <p>Par ailleurs le test JUnit réussit :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015C000000CBF66E50FE.png" style="display:inline-block; margin:4px;width:6.44cm;height:3.761cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015C000000CBF66E50FE.png" style="display:inline-block; margin:4px;width:6.44cm;height:3.761cm;" class="odt-zoomable" data-zoom-src="images/100000000000015C000000CBF66E50FE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading318151812363491"></a></p>
 <h2 id="711-creation-de-larchive-with-dependencies-de-la-couche-dao">7.11. Création de l&#x27;archive [with-dependencies] de la couche [dao]</h2>
 <p>Le projet final a l&#x27;architecture suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052200000109068314C5.png" style="display:inline-block; margin:4px;width:17.383cm;height:3.507cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000052200000109068314C5.png" style="display:inline-block; margin:4px;width:17.383cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/100000000000052200000109068314C5.png" /></td></tr></table>
 
 <p>Rappelons la configuration Maven du projet :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -2422,7 +2422,7 @@
 <span class="odt-code-line"><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">project</span><span style="color:#008080">&gt;</span></span>
 </code></pre></div>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000110000001949B862F61.png" style="display:inline-block; margin:4px;width:5.611cm;height:8.334cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000110000001949B862F61.png" style="display:inline-block; margin:4px;width:5.611cm;height:8.334cm;" class="odt-zoomable" data-zoom-src="images/1000000000000110000001949B862F61.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Nous allons générer un unique jar qui contiendra les classes de tous les jars ci-dessus plus celles du projet de la couche [DAO]. Cela se fait à l&#x27;aide d&#x27;une modification dans le fichier [pom.xml] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -2473,9 +2473,9 @@
 <li>ligne 15 : indique la version de Java à utiliser pour la compilation ;</li>
 </ul>
 <p>Une fois cette modification faite, on peut générer le jar de la façon suivante [1-10] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E5000002EDF261F0B0.png" style="display:inline-block; margin:4px;width:16.577cm;height:9.91cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E5000002EDF261F0B0.png" style="display:inline-block; margin:4px;width:16.577cm;height:9.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E5000002EDF261F0B0.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DF00000141E7C0DBB7.png" style="display:inline-block; margin:4px;width:13.111cm;height:4.247cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DF00000141E7C0DBB7.png" style="display:inline-block; margin:4px;width:13.111cm;height:4.247cm;" class="odt-zoomable" data-zoom-src="images/10000000000003DF00000141E7C0DBB7.png" /></td></tr></table>
 
 <ul>
 <li>en [5], mettre le dossier du projet en utilisant le bouton [6] ;</li>
@@ -2487,42 +2487,42 @@
 </ul>
 </li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004640000016A4EBC4A4F.png" style="display:inline-block; margin:4px;width:14.87cm;height:4.789cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004640000016A4EBC4A4F.png" style="display:inline-block; margin:4px;width:14.87cm;height:4.789cm;" class="odt-zoomable" data-zoom-src="images/10000000000004640000016A4EBC4A4F.png" /></td></tr></table>
 
 <ul>
 <li>en [9-10], vérifiez que vous avez un <strong>JDK</strong> (Java Development Kit) et non un <strong>JRE</strong> (Java Runtime Environment). La différence est que le JDK a un compilateur et pas le JRE. Si vous n&#x27;avez pas un JDK, il vous faut en ajouter un dans [10] avec [11]. Pour cela, suivre la procédure décrite au paragraphe <a href="td-classes.html#refheading17454269506693">3.1</a> ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F2000000EE9C7D9767.png" style="display:inline-block; margin:4px;width:16.748cm;height:3.149cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F2000000EE9C7D9767.png" style="display:inline-block; margin:4px;width:16.748cm;height:3.149cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F2000000EE9C7D9767.png" /></td></tr></table>
 
 <ul>
 <li>en [17], exécutez la configuration d&#x27;exécution ;</li>
 <li>en [13], l&#x27;archive générée ;</li>
 </ul>
 <p>On peut ouvrir cette archive avec un dézippeur :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013500000180C2689868.png" style="display:inline-block; margin:4px;width:5.72cm;height:7.11cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013500000180C2689868.png" style="display:inline-block; margin:4px;width:5.72cm;height:7.11cm;" class="odt-zoomable" data-zoom-src="images/100000000000013500000180C2689868.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading22697565848973"></a></p>
 <h2 id="712-test-de-larchive-de-la-couche-dao">7.12. Test de l&#x27;archive de la couche [DAO]</h2>
 <p>Créons un projet Eclipse standard (pas Maven) [1] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D5000000BFFAF27BA0.png" style="display:inline-block; margin:4px;width:9.592cm;height:2.528cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002D5000000BFFAF27BA0.png" style="display:inline-block; margin:4px;width:9.592cm;height:2.528cm;" class="odt-zoomable" data-zoom-src="images/10000000000002D5000000BFFAF27BA0.png" /></td></tr></table>
 
 <p>Faisons un copier / coller du package [dao.console] du projet [elections-dao-jdbc-01] dans le projet [elections-dao-jdbc-02] [2]. De nombreuses erreurs apparaissent car la classe [Main] référence des classes qui ne sont pas dans son [Classpath]. Nous allons modifier celui-ci.</p>
 <p>Nous créons tout d&#x27;abord [2-8] un dossier [lib] dans le nouveau projet :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AF0000028393526CB7.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.953cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AF0000028393526CB7.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.953cm;" class="odt-zoomable" data-zoom-src="images/10000000000005AF0000028393526CB7.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B9000001363273150F.png" style="display:inline-block; margin:4px;width:15.995cm;height:4.101cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B9000001363273150F.png" style="display:inline-block; margin:4px;width:15.995cm;height:4.101cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B9000001363273150F.png" /></td></tr></table>
 
 <p>En [9], nous mettons l&#x27;archive créée à l&#x27;étape précédente dans le dossier [lib] puis nous modifions le Build Path du projet :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000446000001E12F4F0629.png" style="display:inline-block; margin:4px;width:14.473cm;height:6.364cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000446000001E12F4F0629.png" style="display:inline-block; margin:4px;width:14.473cm;height:6.364cm;" class="odt-zoomable" data-zoom-src="images/1000000000000446000001E12F4F0629.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004690000016F69FAE278.png" style="display:inline-block; margin:4px;width:14.937cm;height:4.856cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004690000016F69FAE278.png" style="display:inline-block; margin:4px;width:14.937cm;height:4.856cm;" class="odt-zoomable" data-zoom-src="images/10000000000004690000016F69FAE278.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000590000002ABEFCC8920.png" style="display:inline-block; margin:4px;width:17.999cm;height:8.632cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000590000002ABEFCC8920.png" style="display:inline-block; margin:4px;width:17.999cm;height:8.632cm;" class="odt-zoomable" data-zoom-src="images/1000000000000590000002ABEFCC8920.png" /></td></tr></table>
 
 <ul>
 <li>en [18], on a importé l&#x27;archive de la couche [DAO] créée précédemment ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000307000000DBE24C6827.png" style="display:inline-block; margin:4px;width:10.253cm;height:2.898cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000307000000DBE24C6827.png" style="display:inline-block; margin:4px;width:10.253cm;height:2.898cm;" class="odt-zoomable" data-zoom-src="images/1000000000000307000000DBE24C6827.png" /></td></tr></table>
 
 <ul>
 <li>en [19], le projet ne présente plus d&#x27;erreurs ;</li>

@@ -1061,7 +1061,7 @@
 </ul>
 <p>Seule la phase 2 est vraiment constante. La phase 1 peut varier : les données peuvent venir du clavier comme dans les exemples étudiés, d&#x27;un fichier texte, d&#x27;une interface graphique, d&#x27;une base de données, du réseau, ... De même il y a de multiples façons de restituer les résultats dans la phase 3 : les afficher à l&#x27;écran comme cela a été fait dans les exemples étudiés, les enregistrer dans un fichier, dans une base de données, les envoyer sur le réseau, ...</p>
 <p>De façon plus générale, une application peut souvent être modélisée en trois couches ayant chacune un rôle bien défini :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E80000018177EC9E34.png" style="display:inline-block; margin:4px;width:16.371cm;height:3.56cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E80000018177EC9E34.png" style="display:inline-block; margin:4px;width:16.371cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000006E80000018177EC9E34.png" /></td></tr></table>
 
 <p>On appelle également cette architecture, &quot;<strong>architecture trois tiers</strong>&quot;, traduction de l&#x27;anglais &quot;three tier architecture&quot;. Le terme &quot;trois tiers&quot; désigne normalement une architecture où chaque tier est sur une machine différente. Lorsque les tiers sont sur une même machine, l&#x27;architecture devient une architecture &quot;<strong>trois couches</strong>&quot;.</p>
 <ul>
@@ -1089,7 +1089,7 @@
 <h2 id="42-les-interfaces-de-lapplication-elections">4.2. Les interfaces de l&#x27;application [Elections]</h2>
 <p>Rappelons qu&#x27;une interface définit un ensemble de signatures de méthodes. Les classes implémentant l&#x27;interface donnent un contenu à ces méthodes.</p>
 <p>Revenons à l&#x27;architecture 3 couches de notre application :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E80000018177EC9E34.png" style="display:inline-block; margin:4px;width:16.371cm;height:3.56cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E80000018177EC9E34.png" style="display:inline-block; margin:4px;width:16.371cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000006E80000018177EC9E34.png" /></td></tr></table>
 
 <p>Dans ce type d&#x27;architecture, c&#x27;est souvent l&#x27;utilisateur qui prend les initiatives. Il fait une demande en [1] et reçoit une réponse en [8]. On appelle cela le cycle demande - réponse. Prenons l&#x27;exemple du calcul des sièges obtenus au soir des élections. Celui-ci va nécessiter plusieurs étapes :</p>
 <ol>
@@ -1104,7 +1104,7 @@
 <li>on peut imaginer que ces résultats doivent être mémorisés dans un fichier ou une base de données. Cela peut être fait de façon automatique. Dans ce cas, après l&#x27;opération (f), la couche [metier] va demander à la couche [dao] d&#x27;enregistrer les résultats. Ce sera le chemin [3, 4, 5, 6]. Cela peut être fait également seulement sur demande de l&#x27;utilisateur. Ce sera le chemin [1-8] qui sera utilisé par le cycle demande - réponse.</li>
 </ol>
 <p>On voit dans cette description qu&#x27;une couche est amenée à utiliser les ressources de la couche qui est à sa droite, jamais de celle qui est à sa gauche. Considérons deux couches contigües :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D5000000F627965266.png" style="display:inline-block; margin:4px;width:11.449cm;height:2.281cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D5000000F627965266.png" style="display:inline-block; margin:4px;width:11.449cm;height:2.281cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D5000000F627965266.png" /></td></tr></table>
 
 <p>La couche [A] fait des demandes à la couche [B]. Dans les cas les plus simples, une couche est implémentée par une unique classe. Une application évolue au cours du temps. Ainsi la couche [B] peut avoir des classes d&#x27;implémentation différentes [B1, B2, ...]. Si la couche [B] est la couche [dao], celle-ci peut avoir une première implémentation [B1] qui va chercher des données dans un fichier. Quelques années plus tard, on peut vouloir mettre les données dans une base de données.  On va alors construire une seconde classe d&#x27;implémentation [B2]. Si dans l&#x27;application initiale, la couche [A] travaillait directement avec la classe [B1] on est obligés de réécrire partiellement le code de la couche [A]. Supposons par exemple qu&#x27;on ait écrit dans la couche [A] quelque chose comme suit :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
@@ -1119,7 +1119,7 @@
 </ul>
 <p>Si on suppose, que la nouvelle classe d&#x27;implémentation [B2] utilise des méthodes de même signature que celle de la classe [B1], il faudra changer tous les [B1] en [B2]. Ca, c&#x27;est le cas très favorable et assez improbable si on n&#x27;a pas prêté attention à ces signatures de méthodes. Dans la pratique, il est fréquent que les classes [B1] et [B2] n&#x27;aient pas les mêmes signatures de méthodes et que donc une bonne partie de la couche [A] doive être totalement réécrite.</p>
 <p>On peut améliorer les choses si on met une interface entre les couches [A] et [B]. Cela signifie qu&#x27;on fige dans une interface les signatures des méthodes présentées par la couche [B] à la couche [A]. Le schéma précédent devient alors le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DF0000011E86BFD530.png" style="display:inline-block; margin:4px;width:11.55cm;height:2.649cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DF0000011E86BFD530.png" style="display:inline-block; margin:4px;width:11.55cm;height:2.649cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DF0000011E86BFD530.png" /></td></tr></table>
 
 <p>La couche [A] ne s&#x27;adresse désormais plus directement à la couche [B] mais à son interface [IB]. Ainsi dans le code de la couche [A], la classe d&#x27;implémentation [Bi] de la couche [B] n&#x27;apparaît qu&#x27;une fois, au moment de l&#x27;implémentation de l&#x27;interface [IB]. Ceci fait, c&#x27;est l&#x27;interface [IB] et non sa classe d&#x27;implémentation qui est utilisée dans le code. Le code précédent devient celui-ci :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
@@ -1135,7 +1135,7 @@
 <p>Désormais si on remplace l&#x27;implémentation [B1] de la couche [B] par une implémentation [B2], et que ces deux implémentations respectent la même interface [IB], alors seule la ligne 1 de la couche [A] doit être modifiée et aucune autre. C&#x27;est un grand avantage qui à lui seul justifie l&#x27;usage systématique des interfaces entre deux couches.</p>
 <p>On peut aller encore plus loin et rendre la couche [A] totalement indépendante de la couche [B]. Dans le code ci-dessus, la ligne 1 pose problème parce qu&#x27;elle référence en dur la classe [B1]. L&#x27;idéal serait que la couche [A] puisse disposer d&#x27;une implémentation de l&#x27;interface [IB] sans avoir à nommer de classe. Ce serait cohérent avec notre schéma ci-dessus. On y voit que la couche [A] s&#x27;adresse à l&#x27;interface [IB] et on ne voit pas pourquoi elle aurait besoin de connaître le nom de la classe qui implémente cette interface. Ce détail n&#x27;est pas utile à la couche [A].</p>
 <p>Le framework Spring (http://www.springframework.org) permet d&#x27;obtenir ce résultat. L&#x27;architecture précédente évolue de la façon suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050800000175AF8E87D4.png" style="display:inline-block; margin:4px;width:10.22cm;height:2.96cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000050800000175AF8E87D4.png" style="display:inline-block; margin:4px;width:10.22cm;height:2.96cm;" class="odt-zoomable" data-zoom-src="images/100000000000050800000175AF8E87D4.png" /></td></tr></table>
 
 <p>La couche transversale [Spring] va permettre à une couche d&#x27;obtenir par configuration une référence sur la couche située à sa droite sans avoir à connaître le nom de la classe d&#x27;implémentation de la couche. Ce nom sera dans les fichiers de configuration et non pas dans le code Java. Le code Java de la couche [A] prend alors la forme suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -1155,7 +1155,7 @@
 <p>On voit maintenant que, la classe d&#x27;implémentation [B1] de la couche B n&#x27;apparaît nulle part dans le code de la couche [A]. Lorsque l&#x27;implémentation [B1] sera remplacée par une nouvelle implémentation [B2], rien ne changera dans le code de la classe [A]. On changera simplement les fichiers de configuration de Spring pour instancier [B2] au lieu de [B1].</p>
 <p>Le couple <strong>Spring</strong> et <strong>interfaces</strong> <strong>Java</strong> apporte une amélioration décisive à la maintenance d&#x27;applications en rendant les couches de celles-ci étanches entre elles. C&#x27;est cette solution que nous utiliserons pour l&#x27;application [Elections].</p>
 <p>Revenons à l&#x27;architecture trois couches de notre application :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D90000017E26BC8CF3.png" style="display:inline-block; margin:4px;width:13.91cm;height:3.03cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D90000017E26BC8CF3.png" style="display:inline-block; margin:4px;width:13.91cm;height:3.03cm;" class="odt-zoomable" data-zoom-src="images/10000000000006D90000017E26BC8CF3.png" /></td></tr></table>
 
 <p>Dans les cas simples, on peut partir de la couche [metier] pour découvrir les interfaces de l&#x27;application. Pour travailler, elle a besoin de données :</p>
 <ul>
@@ -1191,7 +1191,7 @@
 </li>
 </ul>
 <p>Revenons à l&#x27;architecture trois couches de notre application :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D90000017E26BC8CF3.png" style="display:inline-block; margin:4px;width:13.91cm;height:3.03cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D90000017E26BC8CF3.png" style="display:inline-block; margin:4px;width:13.91cm;height:3.03cm;" class="odt-zoomable" data-zoom-src="images/10000000000006D90000017E26BC8CF3.png" /></td></tr></table>
 
 <p>Quelle interface la couche [metier] doit-elle présenter à la couche [ui] ? Examinons les interactions possibles entre ces deux couches.</p>
 <ol>
@@ -1249,11 +1249,11 @@
 </code></pre></div>
 
 <p>Lorsqu&#x27;on écrit une interface, il est bon de se rappeler qu&#x27;elle peut être utilisée dans deux contextes différents : <a id="interface-locale-distante"></a><em>local</em> et <em>distant</em>. Dans le contexte <em>local</em>, la méthode appelante et la méthode appelée sont exécutées dans la même JVM (Java Virtual Machine) :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D90000017E26BC8CF3.png" style="display:inline-block; margin:4px;width:13.91cm;height:3.03cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006D90000017E26BC8CF3.png" style="display:inline-block; margin:4px;width:13.91cm;height:3.03cm;" class="odt-zoomable" data-zoom-src="images/10000000000006D90000017E26BC8CF3.png" /></td></tr></table>
 
 <p>Si la couche [ui] fait appel à la méthode <em><span style="color: #000000">calculerSieges</span></em> de la couche [DAO], elle a bien une référence sur le paramètre [<span style="color: #000000">ListeElectorale[] </span><span style="color: #6a3e3e">listesElectorales</span>] qu&#x27;elle passe à la méthode.</p>
 <p>Dans le contexte <em>distant</em>, la méthode appelante et la méthode appelée sont exécutées dans des JVM différentes :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000070000000191104E68B3.png" style="display:inline-block; margin:4px;width:14.22cm;height:3.18cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000070000000191104E68B3.png" style="display:inline-block; margin:4px;width:14.22cm;height:3.18cm;" class="odt-zoomable" data-zoom-src="images/100000000000070000000191104E68B3.png" /></td></tr></table>
 
 <p>Ci-dessus, la couche [ui] s&#x27;exécute dans la JVM 1 et la couche [métier] dans la JVM 2 sur deux machines différentes. Les deux couches ne communiquent pas directement. Entre-elles  s&#x27;intercale une couche qu&#x27;on appellera couche de communication [1]. Celle-ci est composée d&#x27;une couche d&#x27;émission [2] et d&#x27;une couche de réception [3]. Le développeur n&#x27;a en général pas à écrire ces couches de communication. Elles sont générées automatiquement par des outils logiciels. La couche [metier] est écrite comme si elle s&#x27;exécutait dans la même JVM que la couche [DAO]. Il n&#x27;y a donc aucune modification de code.</p>
 <p>Le mécanisme de communication entre la couche [ui] et la couche [métier] est le suivant :</p>
@@ -1289,7 +1289,7 @@
 <p><a id="refheading1626141501930048"></a></p>
 <h2 id="43-la-classe-dexception">4.3. La classe d&#x27;exception</h2>
 <p>Revenons à l&#x27;interface de la couche [DAO] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E600000186C15E5B12.png" style="display:inline-block; margin:4px;width:14.019cm;height:3.099cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000006E600000186C15E5B12.png" style="display:inline-block; margin:4px;width:14.019cm;height:3.099cm;" class="odt-zoomable" data-zoom-src="images/10000000000006E600000186C15E5B12.png" /></td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">interface</span><span style="color:#000000"> </span><a id="ielectionsdao1"></a><span style="color:#000000">IElectionsDao</span><span style="color:#000000"> {</span></span>

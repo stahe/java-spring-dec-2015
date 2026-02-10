@@ -1215,27 +1215,27 @@
 <a id="application-swing"></a></p>
 <h1 id="10-td-implementation-de-la-couche-ui-avec-une-interface-swing">10. [TD] : Implémentation de la couche [ui] avec une interface Swing</h1>
 <p><strong>Mots clés</strong> : architecture multicouche, Spring, injection de dépendances, bibliothèque de composants Swing.</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051B000000FD768FBF48.png" style="display:inline-block; margin:4px;width:17.291cm;height:3.348cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051B000000FD768FBF48.png" style="display:inline-block; margin:4px;width:17.291cm;height:3.348cm;" class="odt-zoomable" data-zoom-src="images/100000000000051B000000FD768FBF48.png" /></td></tr></table>
 
 <p><a id="refheading98770873157090"></a></p>
 <h2 id="101-support">10.1. Support</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000578000001AE3C23F928.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.528cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000578000001AE3C23F928.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.528cm;" class="odt-zoomable" data-zoom-src="images/1000000000000578000001AE3C23F928.png" /></td></tr></table>
 
 <p>Dans la couche [UI], on veut construire une interface graphique Swing. Netbeans a un outil [Matisse] pour construire ces interfaces Swing qui est supérieur à ce que peut proposer Eclipse. Les interfaces Swing tendent à être remplacées par des interfaces JavaFx. Netbeans et Eclipse utilisent le même outil pour construire ces dernières. Si donc, on construit des  interfaces JavaFx, on peut garder Eclipse de bout en bout de l&#x27;architecture en couches.</p>
 <p>Netbeans peut ouvrir n&#x27;importe quel projet Maven. On va donc utiliser le projet Maven précédent et lui ajouter une interface Swing. En [2], on charge (File / Open project) les projets Maven des trois couches que nous avons construites avec Eclipse. Puis, on construit leurs binaires [3]. Les options [Build] et [Clean and Build] construisent le binaire du prjet sur lequel elles sont appliquées. Ces binaires sont placés dans le dossier [target] [4-5] du projet :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BB000001BC4D20CB45.png" style="display:inline-block; margin:4px;width:5.861cm;height:5.874cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BB000001BC4D20CB45.png" style="display:inline-block; margin:4px;width:5.861cm;height:5.874cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BB000001BC4D20CB45.png" /></td></tr></table>
 
 <p>L&#x27;option [Clean] supprime ce dossier [target]. L&#x27;option [Build] le reconstruit. L&#x27;expérience montre que lorsqu&#x27;on rencontre des problèmes inattendus, la première chose à faire est un [Clean and Build] sur le projet pour être sûr qu&#x27;on travaille bien avec la dernière version de celui-ci. C&#x27;est notamment nécessaire lorsqu&#x27;on a des fichiers de configuration qui s&#x27;ils sont modifiés ne provoquent pas une recompilation automatique lorsqu&#x27;on exécute le projet. Il faut alors forcer cette recompilation par un [Clean and Build] pour que leurs nouvelles versions soient installées dans le dossier [target].</p>
 <p><a id="refheading318591812363491"></a></p>
 <h2 id="102-fonctionnement-de-lapplication">10.2. Fonctionnement de l&#x27;application</h2>
 <p>Revenons à l&#x27;architecture globale de l&#x27;application [Elections] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BB000000FF2B1C6207.png" style="display:inline-block; margin:4px;width:16.021cm;height:3.374cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BB000000FF2B1C6207.png" style="display:inline-block; margin:4px;width:16.021cm;height:3.374cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BB000000FF2B1C6207.png" /></td></tr></table>
 
 <p>Nous nous intéressons maintenant à une nouvelle implémentation de la couche [ui]. L&#x27;unique implémentation réalisée pour le moment est une interface console. Nous créons maintenant une interface graphique.</p>
 <p>L&#x27;utilisateur disposera de l&#x27;interface suivante pour interagir avec l&#x27;application [Elections] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003A90000035363325D82.png" style="display:inline-block; margin:4px;width:12.397cm;height:11.259cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003A90000035363325D82.png" style="display:inline-block; margin:4px;width:12.397cm;height:11.259cm;" class="odt-zoomable" data-zoom-src="images/10000000000003A90000035363325D82.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001C0000001A0CEDB96B1.png" style="display:inline-block; margin:4px;width:9.479cm;height:8.811cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001C0000001A0CEDB96B1.png" style="display:inline-block; margin:4px;width:9.479cm;height:8.811cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C0000001A0CEDB96B1.png" /></td></tr></table>
 
 <p>L&#x27;interface graphique se trouve dans la couche [ui]. C&#x27;est elle qui interagit avec l&#x27;utilisateur.</p>
 <ul>
@@ -1254,11 +1254,11 @@
 <p>l&#x27;utilisateur affecte alors à chaque liste candidate son nombre de voix à l&#x27;aide des champs 4 (id - nom), 5 (voix), 6 (pour ajouter).</p>
 </li>
 </ul>
-<p><img src="images/10000000000001AC000000775D50E179.png" style="width:9.059cm;height:2.521cm;" alt="Image" /></p>
+<p><img src="images/10000000000001AC000000775D50E179.png" style="width:9.059cm;height:2.521cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AC000000775D50E179.png" /></p>
 <ul>
 <li>on peut alors utiliser le lien (10) pour calculer les sièges :</li>
 </ul>
-<p><img src="images/10000000000000BF0000006B6F7C0BD3.png" style="width:3.54cm;height:1.981cm;" alt="Image" /></p>
+<p><img src="images/10000000000000BF0000006B6F7C0BD3.png" style="width:3.54cm;height:1.981cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000BF0000006B6F7C0BD3.png" /></p>
 <ul>
 <li>le lien [Enregistrer] (12) permet d&#x27;enregistrer les résultats dans la source de données.</li>
 </ul>
@@ -1268,32 +1268,32 @@
 <h3 id="1031-le-projet-netbeans">10.3.1. Le projet Netbeans</h3>
 <p><strong>Note</strong> : Le paragraphe <a href="annexes.html#refheading78364566070260">22.4</a>, indique comment se procurer Netbeans. </p>
 <p>Le projet Netbeans final de l&#x27;application aura la forme suivante [1]. Construisez-le en suivant les étape [2-5] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AF000001E776D49C18.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.024cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005AF000001E776D49C18.png" style="display:inline-block; margin:4px;width:17.999cm;height:6.024cm;" class="odt-zoomable" data-zoom-src="images/10000000000005AF000001E776D49C18.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000245000001A2D2801BB9.png" style="display:inline-block; margin:4px;width:7.687cm;height:5.53cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000245000001A2D2801BB9.png" style="display:inline-block; margin:4px;width:7.687cm;height:5.53cm;" class="odt-zoomable" data-zoom-src="images/1000000000000245000001A2D2801BB9.png" /></td></tr></table>
 
 <p>On s&#x27;assurera que le projet est configuré pour être compilé par un JDK 1.8 [1-6] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005980000048CDB9BF98C.png" style="display:inline-block; margin:4px;width:17.999cm;height:14.63cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005980000048CDB9BF98C.png" style="display:inline-block; margin:4px;width:17.999cm;height:14.63cm;" class="odt-zoomable" data-zoom-src="images/10000000000005980000048CDB9BF98C.png" /></td></tr></table>
 
 <p><a id="refheading1217141037674463"></a></p>
 <h3 id="1032-configuration-maven">10.3.2. Configuration Maven</h3>
 <p>Le nouveau projet [elections-swing-metier-dao-jdbc] va s&#x27;appuyer sur le précédent projet [elections-console-metier-dao-jdbc]. Pour cela, on ajoute une dépendance Maven de la façon suivante [1-3] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000700000002C8B7BB149D.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.151cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000700000002C8B7BB149D.png" style="display:inline-block; margin:4px;width:17.999cm;height:7.151cm;" class="odt-zoomable" data-zoom-src="images/1000000000000700000002C8B7BB149D.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022A0000019CCFCECBD1.png" style="display:inline-block; margin:4px;width:7.329cm;height:5.45cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022A0000019CCFCECBD1.png" style="display:inline-block; margin:4px;width:7.329cm;height:5.45cm;" class="odt-zoomable" data-zoom-src="images/100000000000022A0000019CCFCECBD1.png" /></td></tr></table>
 
 <p><a id="refheading318651812363491"></a></p>
 <h3 id="1033-construction-de-linterface-graphique">10.3.3. Construction de l&#x27;interface graphique</h3>
 <p>Pour créer l&#x27;interface graphique, nous pouvons procéder comme suit :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037100000158A562DFA9.png" style="display:inline-block; margin:4px;width:11.656cm;height:4.551cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037100000158A562DFA9.png" style="display:inline-block; margin:4px;width:11.656cm;height:4.551cm;" class="odt-zoomable" data-zoom-src="images/100000000000037100000158A562DFA9.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002B1000001E0D373F464.png" style="display:inline-block; margin:4px;width:9.116cm;height:6.35cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002B1000001E0D373F464.png" style="display:inline-block; margin:4px;width:9.116cm;height:6.35cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B1000001E0D373F464.png" /></td></tr></table>
 
 <ul>
 <li>[1] : ajout d&#x27;un objet au paquetage [elections.ui.service]</li>
 <li>[2] : choix de l&#x27;option [JFrame Form] dans la catégorie [Swing GUI Forms]</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F60000017F755E9FA4.png" style="display:inline-block; margin:4px;width:16.801cm;height:5.068cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F60000017F755E9FA4.png" style="display:inline-block; margin:4px;width:16.801cm;height:5.068cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F60000017F755E9FA4.png" /></td></tr></table>
 
 <ul>
 <li>[4] : donner un nom à la classe</li>
@@ -1301,40 +1301,40 @@
 <li>Terminer l&#x27;assistant.</li>
 <li>[6] : la classe générée</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000054E00000126B251AB47.png" style="display:inline-block; margin:4px;width:17.965cm;height:3.889cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000054E00000126B251AB47.png" style="display:inline-block; margin:4px;width:17.965cm;height:3.889cm;" class="odt-zoomable" data-zoom-src="images/100000000000054E00000126B251AB47.png" /></td></tr></table>
 
 <ul>
 <li>[7] : la classe [AbstractElectionsSwing] en mode [Design]</li>
 <li>[8] : l&#x27;onglet [Navigator] qui affiche l&#x27;arbre [9] des composants de la fenêtre</li>
 <li>[10] : l&#x27;onglet [Properties] qui affiche les propriétés du composant [jFrame] sélectionné en [9]</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028E0000012158B404C5.png" style="display:inline-block; margin:4px;width:8.652cm;height:3.824cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028E0000012158B404C5.png" style="display:inline-block; margin:4px;width:8.652cm;height:3.824cm;" class="odt-zoomable" data-zoom-src="images/100000000000028E0000012158B404C5.png" /></td></tr></table>
 
 <ul>
 <li>[11] : [JFrame] est un conteneur de composants. Ceux-ci peuvent être disposés dans le conteneur selon diverses règles de positionnement appelées <em>layouts</em>. Ici, nous choisissons le <em>layout</em> [Free Design] [14] qui permet de positionner des composants de façon libre dans le conteneur.</li>
 </ul>
 <p>Nous trouvons les composants dans la barre d&#x27;outils appelée <em>Palette</em> :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000594000001925C114E9C.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.066cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000594000001925C114E9C.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.066cm;" class="odt-zoomable" data-zoom-src="images/1000000000000594000001925C114E9C.png" /></td></tr></table>
 
 <ul>
 <li>[1] : la palette</li>
 <li>[2] : un composant JLabel est déposé dans le conteneur de composants</li>
 <li>avec un clic droit dessus, on a accès à diverses propriétés : son nom [4], son texte [3] ou bien ses gestionnaires d&#x27;événements [5]. Nous utilisons [3] pour fixer le texte [6].</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000252000001F4BB8FBB0F.png" style="display:inline-block; margin:4px;width:7.858cm;height:6.615cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000252000001F4BB8FBB0F.png" style="display:inline-block; margin:4px;width:7.858cm;height:6.615cm;" class="odt-zoomable" data-zoom-src="images/1000000000000252000001F4BB8FBB0F.png" /></td></tr></table>
 
 <ul>
 <li>[1] : l&#x27;onglet [Properties] du composant [JLabel] donne accès aux propriétés de celui-ci : son positionnement horizontal [2], vertical [3], la police de caractères du texte [4], le texte [5].</li>
 </ul>
 <p>Lorsqu&#x27;un composant est déposé et configuré sur l&#x27;interface graphique et qu&#x27;on sauvegarde (Ctrl-S) le travail fait, du code est généré dans la classe [AbstractElectionsSwing] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000264000000CF3DE1D0AD.png" style="display:inline-block; margin:4px;width:11.329cm;height:3.829cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000264000000CF3DE1D0AD.png" style="display:inline-block; margin:4px;width:11.329cm;height:3.829cm;" class="odt-zoomable" data-zoom-src="images/1000000000000264000000CF3DE1D0AD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002850000010FB89AC9E7.png" style="display:inline-block; margin:4px;width:11.94cm;height:5.02cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002850000010FB89AC9E7.png" style="display:inline-block; margin:4px;width:11.94cm;height:5.02cm;" class="odt-zoomable" data-zoom-src="images/10000000000002850000010FB89AC9E7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Il ne faut pas modifier ce code grisé car il est supprimé et régénéré lors de la sauvegarde suivante. Les modifications faites seraient alors perdues.</p>
 <p>On trouvera un tutoriel de création d&#x27;une interface graphique avec Netbeans à l&#x27;URL [<a href="https://netbeans.org/kb/docs/java/quickstart-gui.html?print=yes#design">https://netbeans.org/kb/docs/java/quickstart-gui.html?print=yes#design</a>] (novembre 2015).</p>
 <p>Nous construisons maintenant l&#x27;interface suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000394000003415B3742BA.png" style="display:inline-block; margin:4px;width:12.118cm;height:11.021cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000394000003415B3742BA.png" style="display:inline-block; margin:4px;width:12.118cm;height:11.021cm;" class="odt-zoomable" data-zoom-src="images/1000000000000394000003415B3742BA.png" /></td></tr></table>
 
 <p>Les composants de l&#x27;interface sont les suivants :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>n°</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>nom</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -1380,7 +1380,7 @@
 
 <p>L&#x27;annotation (JScrollPane, JList) [13-14] est là pour indiquer que lorsqu&#x27;on dépose un composant [JList] dans la fenêtre, il est automatiquement inséré dans un composant [JScrollPane] qui permet le défilement de la liste. C&#x27;est le composant [JScrollPane] qui permet de voir tous les éléments de la liste alors que seul un nombre restreint d&#x27;entre-eux n&#x27;est visible à un moment donné. Il en est de même pour le composant [JTextPane] [15-16].</p>
 <p>Le menu pourra être créé de la façon suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059F00000189AD148B2E.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.916cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059F00000189AD148B2E.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.916cm;" class="odt-zoomable" data-zoom-src="images/100000000000059F00000189AD148B2E.png" /></td></tr></table>
 
 <ul>
 <li>[1, 2] : un composant [Menu Bar] est déposé sur la fenêtre</li>
@@ -1396,10 +1396,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>niveau 1</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>niveau 2</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Elections</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Quitter</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Listes</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Ajouter</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Supprimer</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Résultats</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Calculer</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Effacer</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Enregistrer</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>A propos</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>On peut tester l&#x27;interface graphique à tout moment :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000113000000618FF501BE.png" style="display:inline-block; margin:4px;width:5.091cm;height:1.799cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000113000000618FF501BE.png" style="display:inline-block; margin:4px;width:5.091cm;height:1.799cm;" class="odt-zoomable" data-zoom-src="images/1000000000000113000000618FF501BE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Lors de la construction de l&#x27;interface, il faut associer un gestionnaire d&#x27;événement sur certains labels et menus [Ajouter, Effacer, ...]. Voici comment faire :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F50000020F1187B4BD.png" style="display:inline-block; margin:4px;width:16.789cm;height:6.973cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F50000020F1187B4BD.png" style="display:inline-block; margin:4px;width:16.789cm;height:6.973cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F50000020F1187B4BD.png" /></td></tr></table>
 
 <ul>
 <li>[1] : cliquer droit sur le composant dont on veut gérer un événement</li>
@@ -1424,7 +1424,7 @@
 <ul>
 <li>lignes 1-5 : un gestionnaire d&#x27;événement est ajouté au composant <em>jLabelCalculer</em>. La méthode <strong>addMouseListener</strong> attend comme paramètre une classe implémentant l&#x27;interface <strong>MouseListener</strong> suivante :</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FC0000012674E252F1.png" style="display:inline-block; margin:4px;width:8.64cm;height:4.999cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FC0000012674E252F1.png" style="display:inline-block; margin:4px;width:8.64cm;height:4.999cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FC0000012674E252F1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface <em>MouseListener</em> est implémentée par différentes classes dont la classe <em>MouseAdapter</em>. Celle-ci implémente les cinq méthodes de l&#x27;interface <em>MouseListener</em> mais ces méthodes ne font rien. Aussi faut-il dériver cette classe pour implémenter la ou les méthodes de son choix. Ce qui est fait dans le code ci-dessus et repris ci-dessous :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1453,7 +1453,7 @@
 </code></pre></div>
 
 <p>Si on exécute l&#x27;interface graphique et qu&#x27;on clique sur le lien [Calculer] on obtient un message sur la console :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E0000000A3C39FEEDD.png" style="display:inline-block; margin:4px;width:16.51cm;height:2.157cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E0000000A3C39FEEDD.png" style="display:inline-block; margin:4px;width:16.51cm;height:2.157cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E0000000A3C39FEEDD.png" /></td></tr></table>
 
 <ul>
 <li>[1] : on clique deux fois sur le label [Calculer]</li>
@@ -1474,12 +1474,12 @@
 </code></pre></div>
 
 <p>On obtient ce résultat en modifiant l&#x27;une des propriétés du composant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E40000010AD78B4217.png" style="display:inline-block; margin:4px;width:6.403cm;height:3.519cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001E40000010AD78B4217.png" style="display:inline-block; margin:4px;width:6.403cm;height:3.519cm;" class="odt-zoomable" data-zoom-src="images/10000000000001E40000010AD78B4217.png" /></td></tr></table>
 
 <p><a id="refheading318671812363491"></a></p>
 <h3 id="1034-separation-du-code">10.3.4. Séparation du code</h3>
 <p>Revenons à la structure de notre application :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BE000000FD68310DE1.png" style="display:inline-block; margin:4px;width:16.06cm;height:3.348cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BE000000FD68310DE1.png" style="display:inline-block; margin:4px;width:16.06cm;height:3.348cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BE000000FD68310DE1.png" /></td></tr></table>
 
 <p>La classe [AbstractElectionsSwing] doit implémenter la couche [ui] ci-dessus. Son code généré par Netbeans ne contient pour l&#x27;instant que du code de gestion de la fenêtre et des gestionnaires d&#x27;événement qui pour l&#x27;instant ne font rien. Ci-dessus, on voit que la classe [AbstractElectionsSwing] devra gérer des échanges avec la couche [métier]. Cette gestion se fera dans les gestionnaires d&#x27;événement. Pour clarifier la structure du code, on décide de le placer dans deux classes :</p>
 <ul>
@@ -1487,7 +1487,7 @@
 <li>[ElectionsSwing], classe dérivée de [AbstractElectionsSwing] qui implémentera tous les gestionnaires d&#x27;événement.</li>
 </ul>
 <p>Ce type de séparation n&#x27;est pas inhabituel. On le trouve par exemple dans les pages web ASP.NET (version non MVC). Le projet Netbeans évolue comme suit :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000108000000B031B76F2A.png" style="display:inline-block; margin:4px;width:4.89cm;height:3.26cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000108000000B031B76F2A.png" style="display:inline-block; margin:4px;width:4.89cm;height:3.26cm;" class="odt-zoomable" data-zoom-src="images/1000000000000108000000B031B76F2A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le code de la classe [AbstractElectionsSwing] lui, évolue de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1602,7 +1602,7 @@
 </code></pre></div>
 
 <p>Pour résoudre ce problème, on fera en sorte que la portée des composants de l&#x27;interface graphique soit [<strong>protected</strong>] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000057B0000019C18CB4098.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.285cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000057B0000019C18CB4098.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.285cm;" class="odt-zoomable" data-zoom-src="images/100000000000057B0000019C18CB4098.png" /></td></tr></table>
 
 <ul>
 <li>mettre en [3], l&#x27;attribut [protected] ;</li>
@@ -1610,7 +1610,7 @@
 <p><a id="refheading318691812363491"></a></p>
 <h3 id="1035-implementation-de-linterface-ielectionsui">10.3.5. Implémentation de l&#x27;interface [IElectionsUI]</h3>
 <p>Revenons à la structure de notre application :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AF000000FEFC7607C9.png" style="display:inline-block; margin:4px;width:15.863cm;height:3.36cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AF000000FEFC7607C9.png" style="display:inline-block; margin:4px;width:15.863cm;height:3.36cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AF000000FEFC7607C9.png" /></td></tr></table>
 
 <p>Ci-dessus la couche [ui] doit présenter l&#x27;interface [IElectionsUI] à l&#x27;objet [main] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1724,7 +1724,7 @@
 <p><a id="refheading318711812363491"></a></p>
 <h3 id="1036-la-classe-executable">10.3.6. La classe exécutable</h3>
 <p>Revenons à la structure de notre application :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B10000010765176D5C.png" style="display:inline-block; margin:4px;width:15.889cm;height:3.48cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B10000010765176D5C.png" style="display:inline-block; margin:4px;width:15.889cm;height:3.48cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B10000010765176D5C.png" /></td></tr></table>
 
 <p>Nous voudrions que Spring instancie la couche [ui] comme il a été fait lorsque celle-ci était implémentée par une application <em>console</em>. Pour cela, il faut que la classe d&#x27;implémentation [ElectionsSwing] ait une référence sur la couche [métier] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1742,7 +1742,7 @@
 <li>lignes 5-6 : injection par Spring d&#x27;une référence sur la couche [métier] ;</li>
 </ul>
 <p>L&#x27;interface graphique est lancée par l&#x27;exécution de la classe [BootElectionsSwing] suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FE000000941C25FA12.png" style="display:inline-block; margin:4px;width:4.701cm;height:2.739cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FE000000941C25FA12.png" style="display:inline-block; margin:4px;width:4.701cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FE000000941C25FA12.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.ui.boot;</span></span>
@@ -1765,7 +1765,7 @@
 <p><a id="refheading318751812363491"></a></p>
 <h3 id="1037-initialisation-de-linterface-graphique">10.3.7. Initialisation de l&#x27;interface graphique</h3>
 <p>Lorsque l&#x27;interface graphique est affichée, certains de ses composants ont été initialisés :</p>
-<p><img src="images/10000000000002520000021987E754B8.png" style="width:11cm;height:9.94cm;" alt="Image" /></p>
+<p><img src="images/10000000000002520000021987E754B8.png" style="width:11cm;height:9.94cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002520000021987E754B8.png" /></p>
 <p>On voit ci-dessus : </p>
 <ul>
 <li>que le combo a été rempli avec les noms des listes ;</li>
@@ -1828,7 +1828,7 @@
 <p><a id="refheading318771812363491"></a></p>
 <h3 id="1038-la-classe-utilitaires">10.3.8. La classe [Utilitaires]</h3>
 <p>Un certain nombre de méthodes utilitaires statiques ont été rassemblées dans la classe [Utilitaires] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010500000094F3639E55.png" style="display:inline-block; margin:4px;width:4.83cm;height:2.739cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010500000094F3639E55.png" style="display:inline-block; margin:4px;width:4.83cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/100000000000010500000094F3639E55.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Utilitaires] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1933,7 +1933,7 @@
 <p><a id="refheading318811812363491"></a></p>
 <h4 id="10391-la-methode-init">10.3.9.1. La méthode [init]</h4>
 <p>Revenons sur l&#x27;interface graphique :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003AE00000355C8476B5D.png" style="display:inline-block; margin:4px;width:12.462cm;height:11.285cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003AE00000355C8476B5D.png" style="display:inline-block; margin:4px;width:12.462cm;height:11.285cm;" class="odt-zoomable" data-zoom-src="images/10000000000003AE00000355C8476B5D.png" /></td></tr></table>
 
 <p>La méthode [init] a pour objectifs :</p>
 <ul>
@@ -2081,9 +2081,9 @@
 <li>validation par un clic sur le lien [Ajouter]</li>
 </ul>
 <p>Les erreurs de saisie sont signalées comme le montre l&#x27;exemple suivant :</p>
-<p><img src="images/10000000000001F50000007952FDAE3C.png" style="width:9.28cm;height:2.24cm;" alt="Image" /></p>
+<p><img src="images/10000000000001F50000007952FDAE3C.png" style="width:9.28cm;height:2.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F50000007952FDAE3C.png" /></p>
 <p>Si le nombre de voix est correct, la liste est ajoutée dans le composant (8), le nombre de voix effacé et le lien [Ajouter] éteint :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010700000050C8319E8A.png" style="display:inline-block; margin:4px;width:4.87cm;height:1.48cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A700000086A5A768BE.png" style="display:inline-block; margin:4px;width:7.83cm;height:2.48cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010700000050C8319E8A.png" style="display:inline-block; margin:4px;width:4.87cm;height:1.48cm;" class="odt-zoomable" data-zoom-src="images/100000000000010700000050C8319E8A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A700000086A5A768BE.png" style="display:inline-block; margin:4px;width:7.83cm;height:2.48cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A700000086A5A768BE.png" /></td></tr></table>
 
 <p>Dans la classe [AbstractElectionsSwing], le gestionnaire qui gère le clic sur le lien [Ajouter] est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2160,7 +2160,7 @@
 <p><a id="refheading318891812363491"></a></p>
 <h4 id="10395-supprimer-une-liste-candidate">10.3.9.5. Supprimer une liste candidate</h4>
 <p>Le lien [Supprimer] [9] permet de supprimer le couple (nom,voix) sélectionné dans (8). Une fois la suppression opérée, le lien [Supprimer] est éteint. Il ne sera rallumé que sur sélection d&#x27;une nouvelle liste dans (8).</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A4000000818CF2F26E.png" style="display:inline-block; margin:4px;width:3.47cm;height:2.731cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A60000007D7A7AA404.png" style="display:inline-block; margin:4px;width:3.51cm;height:2.649cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A4000000818CF2F26E.png" style="display:inline-block; margin:4px;width:3.47cm;height:2.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A4000000818CF2F26E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A60000007D7A7AA404.png" style="display:inline-block; margin:4px;width:3.51cm;height:2.649cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A60000007D7A7AA404.png" /></td></tr></table>
 
 <p>Dans la classe [AbstractElectionsSwing], le gestionnaire qui réagit au clic sur le lien [Supprimer] est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">

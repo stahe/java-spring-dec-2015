@@ -1110,23 +1110,23 @@
 <h1 id="14-td-exposition-sur-le-web-de-la-couche-metier">14. [TD] : Exposition sur le web de la couche [metier]</h1>
 <p><strong>Mots clés</strong> : architecture multicouche, Spring, injection de dépendances, service web / jSON, client / serveur.</p>
 <p>Revenons à l&#x27;architecture actuelle de l&#x27;application du TD :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D20000010079CD4A52.png" style="display:inline-block; margin:4px;width:16.325cm;height:3.387cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D20000010079CD4A52.png" style="display:inline-block; margin:4px;width:16.325cm;height:3.387cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D20000010079CD4A52.png" /></td></tr></table>
 
 <p>Nous allons faire évoluer cette architecture vers la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D8000001138084BFB3.png" style="display:inline-block; margin:4px;width:16.404cm;height:3.639cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004D8000001138084BFB3.png" style="display:inline-block; margin:4px;width:16.404cm;height:3.639cm;" class="odt-zoomable" data-zoom-src="images/10000000000004D8000001138084BFB3.png" /></td></tr></table>
 
 <p>afin d&#x27;exposer sur le web l&#x27;interface [IMetier] de la couche métier. Pour cela nous allons suivre la méthodologie décrite au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading416278986338762">13.5</a>.</p>
 <p><a id="refheading1217181037674463"></a></p>
 <h2 id="141-support">14.1. Support</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001060000007DF83B60DF.png" style="display:inline-block; margin:4px;width:4.851cm;height:2.311cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001060000007DF83B60DF.png" style="display:inline-block; margin:4px;width:4.851cm;height:2.311cm;" class="odt-zoomable" data-zoom-src="images/10000000000001060000007DF83B60DF.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading987748731570901"></a></p>
 <p>Les projets de ce chapitre seront trouvés dans le dossier [support / chap-14].</p>
 <p><a id="refheading180302656793311"></a></p>
 <h2 id="142-le-projet-eclipse-de-la-couche-metier">14.2. Le projet Eclipse de la couche [métier]</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DA000000FB45BFD6B4.png" style="display:inline-block; margin:4px;width:16.431cm;height:3.321cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DA000000FB45BFD6B4.png" style="display:inline-block; margin:4px;width:16.431cm;height:3.321cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DA000000FB45BFD6B4.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000118000000EA47979940.png" style="display:inline-block; margin:4px;width:5.181cm;height:4.33cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000118000000EA47979940.png" style="display:inline-block; margin:4px;width:5.181cm;height:4.33cm;" class="odt-zoomable" data-zoom-src="images/1000000000000118000000EA47979940.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading251900391218965"></a></p>
 <h3 id="1421-configuration-maven">14.2.1. Configuration Maven</h3>
@@ -1192,7 +1192,7 @@
 </ul>
 <p><a id="refheading251902391218965"></a></p>
 <h3 id="1422-configuration-spring">14.2.2. Configuration Spring</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011700000083837432B9.png" style="display:inline-block; margin:4px;width:5.181cm;height:2.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011700000083837432B9.png" style="display:inline-block; margin:4px;width:5.181cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/100000000000011700000083837432B9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le projet de la couche [métier] est un projet Spring configuré par le fichier [MetierConfig] suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1216,12 +1216,12 @@
 </ul>
 <p><a id="refheading251904391218965"></a></p>
 <h3 id="1423-implementation-de-la-couche-metier">14.2.3. Implémentation de la couche [métier]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010C0000008FFD111688.png" style="display:inline-block; margin:4px;width:4.96cm;height:2.649cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010C0000008FFD111688.png" style="display:inline-block; margin:4px;width:4.96cm;height:2.649cm;" class="odt-zoomable" data-zoom-src="images/100000000000010C0000008FFD111688.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;implémentation de la couche [métier] est celle qui a été définie au paragraphe <a href="td-la-couche-metier.html#refheading318251812363491">8.5</a>.</p>
 <p><a id="refheading251906391218965"></a></p>
 <h3 id="1424-le-test-de-la-couche-metier">14.2.4. Le test de la couche [métier]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010500000096106C9004.png" style="display:inline-block; margin:4px;width:4.83cm;height:2.78cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010500000096106C9004.png" style="display:inline-block; margin:4px;width:4.83cm;height:2.78cm;" class="odt-zoomable" data-zoom-src="images/100000000000010500000096106C9004.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe de test est celle décrite au paragraphe <a href="td-la-couche-metier.html#refheading318231812363491">8.6</a>.</p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
@@ -1229,13 +1229,13 @@
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><a id="refheading18030265679331"></a></p>
 <h2 id="143-le-projet-eclipse-de-la-couche-web">14.3. Le projet Eclipse de la couche [web]</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E700000109B8AD6479.png" style="display:inline-block; margin:4px;width:16.603cm;height:3.507cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E700000109B8AD6479.png" style="display:inline-block; margin:4px;width:16.603cm;height:3.507cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E700000109B8AD6479.png" /></td></tr></table>
 
 <p>La couche web est une couche Spring MVC :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046A000001643A4134AE.png" style="display:inline-block; margin:4px;width:14.949cm;height:4.71cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000046A000001643A4134AE.png" style="display:inline-block; margin:4px;width:14.949cm;height:4.71cm;" class="odt-zoomable" data-zoom-src="images/100000000000046A000001643A4134AE.png" /></td></tr></table>
 
 <p>Le projet Eclipse a la structure suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000144000000DF0DF25CC2.png" style="display:inline-block; margin:4px;width:6.001cm;height:4.129cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E2000000AAC294C278.png" style="display:inline-block; margin:4px;width:4.189cm;height:3.15cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000144000000DF0DF25CC2.png" style="display:inline-block; margin:4px;width:6.001cm;height:4.129cm;" class="odt-zoomable" data-zoom-src="images/1000000000000144000000DF0DF25CC2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E2000000AAC294C278.png" style="display:inline-block; margin:4px;width:4.189cm;height:3.15cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E2000000AAC294C278.png" /></td></tr></table>
 
 <ul>
 <li>[Boot.java] est la classe qui lance le service web ;</li>
@@ -1301,7 +1301,7 @@
 </ul>
 <p><a id="refheading18034265679331"></a></p>
 <h2 id="145-configuration-spring">14.5. Configuration Spring</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014100000093208C1DB3.png" style="display:inline-block; margin:4px;width:5.941cm;height:2.72cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014100000093208C1DB3.png" style="display:inline-block; margin:4px;width:5.941cm;height:2.72cm;" class="odt-zoomable" data-zoom-src="images/100000000000014100000093208C1DB3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [WebConfig] configure le service web :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1365,7 +1365,7 @@
 </ul>
 <p><a id="refheading18036265679331"></a></p>
 <h2 id="146-la-classe-de-lancement-du-service-web">14.6. La classe de lancement du service web</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000009220D29527.png" style="display:inline-block; margin:4px;width:5.791cm;height:2.701cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000009220D29527.png" style="display:inline-block; margin:4px;width:5.791cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000001390000009220D29527.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Boot] lance le service web de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1388,7 +1388,7 @@
 </ul>
 <p><a id="refheading18038265679331"></a></p>
 <h2 id="147-la-reponse-des-url-du-service-web">14.7. La réponse des URL du service web</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000A451BFCA3B.png" style="display:inline-block; margin:4px;width:6.04cm;height:3.039cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000A451BFCA3B.png" style="display:inline-block; margin:4px;width:6.04cm;height:3.039cm;" class="odt-zoomable" data-zoom-src="images/1000000000000146000000A451BFCA3B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Toutes les URL du service web / jSON envoient le même type de réponse :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1425,7 +1425,7 @@
 <p>Cette classe a été présentée et étudiée au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading399246986338762">13.5.5.3</a>.</p>
 <p><a id="refheading18040265679331"></a></p>
 <h2 id="148-limplementation-du-service-web-json">14.8. L&#x27;implémentation du service web / jSON</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000A451BFCA3B.png" style="display:inline-block; margin:4px;width:6.04cm;height:3.039cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000A451BFCA3B.png" style="display:inline-block; margin:4px;width:6.04cm;height:3.039cm;" class="odt-zoomable" data-zoom-src="images/1000000000000146000000A451BFCA3B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le service web / jSON est implémenté par la classe [ElectionsController] suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1532,35 +1532,35 @@
 <p><a id="refheading18042265679331"></a></p>
 <h2 id="149-tests">14.9. Tests</h2>
 <p>Aorès avoir lancé le service web, vous ferez les tests suivants pour vous assurer du bon fonctionnement du service web avec l&#x27;utilitaire [Advanced Rest Client] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004740000019153345254.png" style="display:inline-block; margin:4px;width:15.081cm;height:5.306cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004740000019153345254.png" style="display:inline-block; margin:4px;width:15.081cm;height:5.306cm;" class="odt-zoomable" data-zoom-src="images/10000000000004740000019153345254.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La réponse jSON à la demande précédente est la suivante [1] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004EE0000010E9AF4E549.png" style="display:inline-block; margin:4px;width:16.695cm;height:3.572cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004EE0000010E9AF4E549.png" style="display:inline-block; margin:4px;width:16.695cm;height:3.572cm;" class="odt-zoomable" data-zoom-src="images/10000000000004EE0000010E9AF4E549.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b></p><img src="images/100000000000020E0000009B405BC0BA.png" style="display:inline-block; margin:4px;width:8.641cm;height:2.545cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>2</b></p><img src="images/10000000000001660000009D582D7FD4.png" style="display:inline-block; margin:4px;width:6.63cm;height:2.91cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b></p><img src="images/100000000000020E0000009B405BC0BA.png" style="display:inline-block; margin:4px;width:8.641cm;height:2.545cm;" class="odt-zoomable" data-zoom-src="images/100000000000020E0000009B405BC0BA.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>2</b></p><img src="images/10000000000001660000009D582D7FD4.png" style="display:inline-block; margin:4px;width:6.63cm;height:2.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001660000009D582D7FD4.png" /></td></tr></table>
 
 <p>En [2], copier la réponse dans le presse-papiers puis copiez celui-ci dans un éditeur de texte quelconque [3] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DB000000B345A6C2CD.png" style="display:inline-block; margin:4px;width:16.445cm;height:2.369cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DB000000B345A6C2CD.png" style="display:inline-block; margin:4px;width:16.445cm;height:2.369cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DB000000B345A6C2CD.png" /></td></tr></table>
 
 <p>Isolez la valeur du champ [body] et changez par exemple les voix des listes. Ci-dessous [4], on passe à 100 les voix de toutes les listes :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005350000009F9BBD92F1.png" style="display:inline-block; margin:4px;width:17.635cm;height:2.104cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005350000009F9BBD92F1.png" style="display:inline-block; margin:4px;width:17.635cm;height:2.104cm;" class="odt-zoomable" data-zoom-src="images/10000000000005350000009F9BBD92F1.png" /></td></tr></table>
 
 <p>Vérifiez que votre chaîne jSON commence par [ et se termine par ]. Ces caractères servent à délimiter un tableau jSON. En [5], collez la chaîne jSON ci-dessus. Ce sera la valeur postée pour la prochaine URL. Pour cela, il faut sélectionner la méthode HTTP [POST] [7].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000389000002951E58C4B7.png" style="display:inline-block; margin:4px;width:11.973cm;height:8.745cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000389000002951E58C4B7.png" style="display:inline-block; margin:4px;width:11.973cm;height:8.745cm;" class="odt-zoomable" data-zoom-src="images/1000000000000389000002951E58C4B7.png" /></td></tr></table>
 
 <ul>
 <li>en [6], demandez l&#x27;URL [setListesElectorales]. Cette URL se demande avec un POST. La valeur postée est le tableau jSON des listes en compétition dont il faut enregistrer les résultats en base ;</li>
 </ul>
 <p>On obtient le résultat suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000AAEFA1BA96.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.15cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000AAEFA1BA96.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.15cm;" class="odt-zoomable" data-zoom-src="images/100000000000012D000000AAEFA1BA96.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le champ [status=0] indique qu&#x27;il n&#x27;y a pas eu d&#x27;erreur. Pour le vérifier, redemandez les listes en compétition et vérifiez que les modifications que vous aviez faites sur les listes ont été prises en compte :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047B000002A09AA33DAB.png" style="display:inline-block; margin:4px;width:15.175cm;height:8.89cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000047B000002A09AA33DAB.png" style="display:inline-block; margin:4px;width:15.175cm;height:8.89cm;" class="odt-zoomable" data-zoom-src="images/100000000000047B000002A09AA33DAB.png" /></td></tr></table>
 
 <p>On refait un [POST] pour calculer les sièges obtenus par les listes :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000036B0000026DEF80E326.png" style="display:inline-block; margin:4px;width:11.576cm;height:8.216cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000036B0000026DEF80E326.png" style="display:inline-block; margin:4px;width:11.576cm;height:8.216cm;" class="odt-zoomable" data-zoom-src="images/100000000000036B0000026DEF80E326.png" /></td></tr></table>
 
 <ul>
 <li>en [1] : l&#x27;URL du calcul des sièges ;</li>
@@ -1568,7 +1568,7 @@
 <li>en [3] : les listes en compétition. On donne au champ [voix] les valeurs du TD, tous les [sieges] sont à 0, tous les champs [elimine] sont à false ;</li>
 </ul>
 <p>Le résultat obtenu est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010E00000280D0177E14.png" style="display:inline-block; margin:4px;width:5.001cm;height:11.85cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010E00000280D0177E14.png" style="display:inline-block; margin:4px;width:5.001cm;height:11.85cm;" class="odt-zoomable" data-zoom-src="images/100000000000010E00000280D0177E14.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 
 

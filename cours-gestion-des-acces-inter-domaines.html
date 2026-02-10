@@ -1177,7 +1177,7 @@
 <p><strong>Mots clés</strong> : CORS (Cross-Origin Resource Sharing).</p>
 <p>Ce chapitre est un peu à l&#x27;écart du TD. Il a été gardé parce qu&#x27;il introduit la programmation web et la programmation Javascript. Il faut se rappeler ici que l&#x27;un des objectifs de ce TD est de présenter les concepts fréquemment utilisés dans le dévelopement JEE, ç-à-d le développement web s&#x27;appuyant sur des frameworks Java. On complète ici, le serveur web utilisé dans l&#x27;étude de la base de données de produits et de catégories pour lui permettre d&#x27;accepter des requêtes inter-domaines.</p>
 <p>Dans le <span style="color: #000000">document [</span><a href="http://tahe.developpez.com/angularjs-spring4">Tutoriel AngularJS / Spring 4</a><span style="color: #000000">], on développe une application client / serveur où le client est une application AngularJS :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003B70000035CAC4B5101.png" style="display:inline-block; margin:4px;width:12.582cm;height:11.377cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003B70000035CAC4B5101.png" style="display:inline-block; margin:4px;width:12.582cm;height:11.377cm;" class="odt-zoomable" data-zoom-src="images/10000000000003B70000035CAC4B5101.png" /></td></tr></table>
 
 <ul>
 <li>les pages HTML / CSS / JS de l&#x27;application Angular viennent du serveur [1] ;</li>
@@ -1185,7 +1185,7 @@
 </ul>
 <p>En fait, il est inexact de dire que le navigateur interdit à l&#x27;application Angular d&#x27;interroger le serveur [2]. Elle l&#x27;interroge en fait pour lui demander s&#x27;il autorise un client qui ne vient pas de chez lui à l&#x27;interroger. On appelle cette technique de partage, le <strong>CORS</strong> (Cross-Origin Resource Sharing). Le serveur [2] donne son accord en envoyant des entêtes HTTP précis.</p>
 <p><span style="color: #000000">Nous allons créer l&#x27;architecture suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C20000027F7259DF97.png" style="display:inline-block; margin:4px;width:16.113cm;height:8.454cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C20000027F7259DF97.png" style="display:inline-block; margin:4px;width:16.113cm;height:8.454cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C20000027F7259DF97.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1], une application web délivre des pages HTML / jS ;</span></li>
@@ -1193,13 +1193,13 @@
 </ul>
 <p><a id="refheading1217261037674463"></a></p>
 <h2 id="181-support">18.1. Support</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E000000086360FDC72.png" style="display:inline-block; margin:4px;width:4.17cm;height:2.48cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E000000086360FDC72.png" style="display:inline-block; margin:4px;width:4.17cm;height:2.48cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E000000086360FDC72.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Les projets de ce chapitre seront trouvés dans le dossier [support / chap-18].</span></p>
 <p><a id="refheading196717811596012"></a></p>
 <h2 id="182-le-projet-du-client">18.2. Le projet du client</h2>
 <p>On crée le projet Eclipse suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001030000016B79E096AF.png" style="display:inline-block; margin:4px;width:4.8cm;height:6.72cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001030000016B79E096AF.png" style="display:inline-block; margin:4px;width:4.8cm;height:6.72cm;" class="odt-zoomable" data-zoom-src="images/10000000000001030000016B79E096AF.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading4845838046689"></a></p>
 <h2 id="183-configuration-maven">18.3. Configuration Maven</h2>
@@ -1256,7 +1256,7 @@
 </ul>
 <p><a id="refheading1184671799226695"></a></p>
 <h2 id="184-configuration-spring">18.4. Configuration Spring</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E3000000708D6932EB.png" style="display:inline-block; margin:4px;width:4.2cm;height:2.071cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E3000000708D6932EB.png" style="display:inline-block; margin:4px;width:4.2cm;height:2.071cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E3000000708D6932EB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">La classe [WebConfig] qui configure le projet Spring est la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1313,15 +1313,15 @@
 <li><span style="color: #000000">ligne 40 : toute requête d&#x27;une ressource ayant un suffixe .html aura pour réponse le fichier demandé par la requête et trouvé dans le dossier [static] du Classpath du projet ;</span></li>
 <li><span style="color: #000000">ligne 41 : toute requête d&#x27;une ressource ayant un suffixe .js aura pour réponse le fichier Javascript demandé par la requête et trouvé dans le dossier [static/js] du Classpath du projet ;</span></li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F400000103E8BCB7A6.png" style="display:inline-block; margin:4px;width:4.521cm;height:4.8cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F400000103E8BCB7A6.png" style="display:inline-block; margin:4px;width:4.521cm;height:4.8cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F400000103E8BCB7A6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading4847838046689"></a></p>
 <h2 id="185-rudiments-de-jquery-et-de-javascript">18.5. Rudiments de jQuery et de Javascript</h2>
 <p><span style="color: #000000">La page HTML du client sera la suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023800000179B7AE4412.png" style="display:inline-block; margin:4px;width:10.52cm;height:6.98cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000023800000179B7AE4412.png" style="display:inline-block; margin:4px;width:10.52cm;height:6.98cm;" class="odt-zoomable" data-zoom-src="images/100000000000023800000179B7AE4412.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Elle embarquera avec elle du code Javascript (jS) exécuté dans le navigateur. Nous allons présenter quelques rudiments de Javascript qui vont nous permettre de comprendre le code. </span><span style="color: #000000">Le client va faire des appels HTTP à l&#x27;aide de la bibliothèque jQuery [https://jquery.com/] qui apporte de nombreuses fonctions facilitant le développement Javascript. Nous créons un fichier statique HTML [jQuery.html] que l&#x27;on place dans le dossier [static] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F40000010355AA616F.png" style="display:inline-block; margin:4px;width:4.521cm;height:4.8cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F40000010355AA616F.png" style="display:inline-block; margin:4px;width:4.521cm;height:4.8cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F40000010355AA616F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Ce fichier aura le contenu suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1344,10 +1344,10 @@
 <li><span style="color: #000000">lignes 10-12 : un élément de la page d&#x27;<strong>id</strong> [element1]. Nous allons jouer avec cet élément.</span></li>
 </ul>
 <p><span style="color: #000000">Il nous faut télécharger le fichier [<em><span style="color: #2a00ff">jquery-2.1.3.min.js</span></em>]. On trouvera la dernière version de jQuery à l&#x27;URL [<a href="http://jquery.com/download/">http://jquery.com/download/</a>] :</span></p>
-<p><img src="images/10000000000003CC00000103F6C4BFF9.png" style="width:18cm;height:4.8cm;" alt="Image" /></p>
+<p><img src="images/10000000000003CC00000103F6C4BFF9.png" style="width:18cm;height:4.8cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003CC00000103F6C4BFF9.png" /></p>
 <p><span style="color: #000000">On placera le fichier téléchargé dans le dossier [static / js] et on changera la ligne 6 du fichier HTML en fonction de la version installée.</span></p>
 <p><span style="color: #000000">Ceci fait, on demande la vue statique [jQuery.html] avec Chrome [1-2] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005000000011532206D4D.png" style="display:inline-block; margin:4px;width:16.933cm;height:3.665cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005000000011532206D4D.png" style="display:inline-block; margin:4px;width:16.933cm;height:3.665cm;" class="odt-zoomable" data-zoom-src="images/10000000000005000000011532206D4D.png" /></td></tr></table>
 
 <p><span style="color: #000000">Avec Google Chrome, faire [Ctrl-Maj-I] pour faire apparaître les outils de développement [3]. L&#x27;onglet [Console] [4] permet d&#x27;exécuter du code Javascript. Nous donnons dans ce qui suit des commandes Javascript à taper et nous en donnons une explication.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -1359,39 +1359,39 @@
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$(&quot;#element1&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: rend la collection de tous les éléments d&#x27;<b>id</b> [element1],</p><p style="margin:0;">donc normalement une collection de 0 ou 1 élément</p><p style="margin:0;">parce qu&#x27;on ne peut avoir deux <b>id</b> identiques dans une page HTML.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B60000008356BBD730.png" style="display:inline-block; margin:4px;width:3.371cm;height:2.431cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">: rend la collection de tous les éléments d&#x27;<b>id</b> [element1],</p><p style="margin:0;">donc normalement une collection de 0 ou 1 élément</p><p style="margin:0;">parce qu&#x27;on ne peut avoir deux <b>id</b> identiques dans une page HTML.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B60000008356BBD730.png" style="display:inline-block; margin:4px;width:3.371cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B60000008356BBD730.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$(&quot;#element1&quot;).text(&quot;blabla&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: affecte le texte [blabla] à tous les éléments</p><p style="margin:0;">de la collection. Ceci a pour effet de changer le</p><p style="margin:0;">contenu affiché par la page</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000253B59BD93.png" style="display:inline-block; margin:4px;width:4.761cm;height:0.681cm;" /><img src="images/10000000000000EF000000B740C0BE12.png" style="display:inline-block; margin:4px;width:4.431cm;height:3.39cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">: affecte le texte [blabla] à tous les éléments</p><p style="margin:0;">de la collection. Ceci a pour effet de changer le</p><p style="margin:0;">contenu affiché par la page</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000253B59BD93.png" style="display:inline-block; margin:4px;width:4.761cm;height:0.681cm;" class="odt-zoomable" data-zoom-src="images/1000000000000101000000253B59BD93.png" /><img src="images/10000000000000EF000000B740C0BE12.png" style="display:inline-block; margin:4px;width:4.431cm;height:3.39cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EF000000B740C0BE12.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$(&quot;#element1&quot;).hide()
 </code></pre></div>
-</div><p style="margin:0;">cache les éléments de la collection.</p><p style="margin:0;">Le texte [blabla] n&#x27;est plus affiché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FD0000001F991499F4.png" style="display:inline-block; margin:4px;width:4.68cm;height:0.57cm;" /><img src="images/10000000000000DE000000987D612336.png" style="display:inline-block; margin:4px;width:4.11cm;height:2.82cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">cache les éléments de la collection.</p><p style="margin:0;">Le texte [blabla] n&#x27;est plus affiché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FD0000001F991499F4.png" style="display:inline-block; margin:4px;width:4.68cm;height:0.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FD0000001F991499F4.png" /><img src="images/10000000000000DE000000987D612336.png" style="display:inline-block; margin:4px;width:4.11cm;height:2.82cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE000000987D612336.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$(&quot;#element1&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: affiche de nouveau la collection. Cela nous</p><p style="margin:0;">permet de voir que l&#x27;élément d&#x27;id [element1] a</p><p style="margin:0;">l&#x27;attribut CSS <b>style=&#x27;display : none;&#x27;</b> qui fait</p><p style="margin:0;">que l&#x27;élément est caché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019B0000002A4792CCDD.png" style="display:inline-block; margin:4px;width:7.609cm;height:0.78cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">: affiche de nouveau la collection. Cela nous</p><p style="margin:0;">permet de voir que l&#x27;élément d&#x27;id [element1] a</p><p style="margin:0;">l&#x27;attribut CSS <b>style=&#x27;display : none;&#x27;</b> qui fait</p><p style="margin:0;">que l&#x27;élément est caché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019B0000002A4792CCDD.png" style="display:inline-block; margin:4px;width:7.609cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/100000000000019B0000002A4792CCDD.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$(&quot;#element1&quot;).show()
 </code></pre></div>
-</div><p style="margin:0;">: affiche les éléments de la collection. Le texte</p><p style="margin:0;">[blabla] apparaît de nouveau. C&#x27;est l&#x27;attribut</p><p style="margin:0;">CSS <b>style=&#x27;display : block;&#x27;</b> qui assure cet</p><p style="margin:0;">affichage.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A500000026083A7878.png" style="display:inline-block; margin:4px;width:7.789cm;height:0.7cm;" /><img src="images/10000000000000F9000000C13449EDE1.png" style="display:inline-block; margin:4px;width:4.611cm;height:3.57cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">: affiche les éléments de la collection. Le texte</p><p style="margin:0;">[blabla] apparaît de nouveau. C&#x27;est l&#x27;attribut</p><p style="margin:0;">CSS <b>style=&#x27;display : block;&#x27;</b> qui assure cet</p><p style="margin:0;">affichage.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A500000026083A7878.png" style="display:inline-block; margin:4px;width:7.789cm;height:0.7cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A500000026083A7878.png" /><img src="images/10000000000000F9000000C13449EDE1.png" style="display:inline-block; margin:4px;width:4.611cm;height:3.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F9000000C13449EDE1.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$(&quot;#element1&quot;).attr(&#39;style&#39;,&#39;color: red&#39;)
 </code></pre></div>
-</div><p style="margin:0;">: fixe un attribut à tous les éléments de la</p><p style="margin:0;">collection. L&#x27;attribut est ici [style] et sa valeur</p><p style="margin:0;">[color: red]. Le texte [blabla] passe en rouge.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018B000000231B4940BC.png" style="display:inline-block; margin:4px;width:7.31cm;height:0.651cm;" /><img src="images/10000000000000F7000000BF541DB4ED.png" style="display:inline-block; margin:4px;width:4.57cm;height:3.54cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div><p style="margin:0;">: fixe un attribut à tous les éléments de la</p><p style="margin:0;">collection. L&#x27;attribut est ici [style] et sa valeur</p><p style="margin:0;">[color: red]. Le texte [blabla] passe en rouge.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018B000000231B4940BC.png" style="display:inline-block; margin:4px;width:7.31cm;height:0.651cm;" class="odt-zoomable" data-zoom-src="images/100000000000018B000000231B4940BC.png" /><img src="images/10000000000000F7000000BF541DB4ED.png" style="display:inline-block; margin:4px;width:4.57cm;height:3.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000BF541DB4ED.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Tableau
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EE0000011645A3961D.png" style="display:inline-block; margin:4px;width:4.41cm;height:5.151cm;" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EE0000011645A3961D.png" style="display:inline-block; margin:4px;width:4.41cm;height:5.151cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EE0000011645A3961D.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Dictionnaire
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A0000000F3CAFDC489.png" style="display:inline-block; margin:4px;width:7.699cm;height:4.5cm;" /></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A0000000F3CAFDC489.png" style="display:inline-block; margin:4px;width:7.699cm;height:4.5cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A0000000F3CAFDC489.png" /></td></tr></table>
 
 <p><span style="color: #000000">On notera que l&#x27;URL du navigateur n&#x27;a pas changé pendant toutes ces manipulations. Il n&#x27;y a pas eu d&#x27;échanges avec le serveur web. Tout se passe à l&#x27;intérieur du navigateur. Maintenant, visualisons le code source de la page :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C00000110E221A43B.png" style="display:inline-block; margin:4px;width:7.082cm;height:4.863cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000021A000000F83354847E.png" style="display:inline-block; margin:4px;width:9.961cm;height:4.59cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018C00000110E221A43B.png" style="display:inline-block; margin:4px;width:7.082cm;height:4.863cm;" class="odt-zoomable" data-zoom-src="images/100000000000018C00000110E221A43B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000021A000000F83354847E.png" style="display:inline-block; margin:4px;width:9.961cm;height:4.59cm;" class="odt-zoomable" data-zoom-src="images/100000000000021A000000F83354847E.png" /></td></tr></table>
 
 <p><span style="color: #000000">C&#x27;est le texte initial. Il ne reflète en rien les manipulations que l&#x27;on a faites sur l&#x27;élément des lignes 10-12. Il est important de s&#x27;en souvenir lorsqu&#x27;on fait du débogage Javascript. Il est alors souvent inutile de visualiser le code source de la page affichée.</span></p>
 <p><a id="refheading4849838046689"></a></p>
 <h2 id="186-le-code-javascript-de-lapplication">18.6. Le code Javascript de l&#x27;application</h2>
 <p><span style="color: #000000">Revenons à la page de l&#x27;application cliente qui va interroger le service web / jSON :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EA000001116E9B5DCF.png" style="display:inline-block; margin:4px;width:4.33cm;height:5.05cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EA000001116E9B5DCF.png" style="display:inline-block; margin:4px;width:4.33cm;height:5.05cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EA000001116E9B5DCF.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016F0000018E748E7816.png" style="display:inline-block; margin:4px;width:6.789cm;height:7.37cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000016F0000018E748E7816.png" style="display:inline-block; margin:4px;width:6.789cm;height:7.37cm;" class="odt-zoomable" data-zoom-src="images/100000000000016F0000018E748E7816.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">Le code HTML de cette page est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
@@ -1574,7 +1574,7 @@
 <p><a id="refheading4851838046689"></a></p>
 <h2 id="187-execution-du-client">18.7. Exécution du client</h2>
 <p><span style="color: #000000">L&#x27;application cliente est une application Spring Boot lancée par la classe exécutable [Boot] suivante :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DF0000008481AE615B.png" style="display:inline-block; margin:4px;width:4.129cm;height:2.439cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DF0000008481AE615B.png" style="display:inline-block; margin:4px;width:4.129cm;height:2.439cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DF0000008481AE615B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span> spring.cors.client.boot;</span>
@@ -1602,13 +1602,13 @@
 <li><span style="color: #000000">le client de ce serveur sur le port 8081 ;</span></li>
 </ul>
 <p><span style="color: #000000">puis nous demandons l&#x27;URL [http://localhost:8081/client.html] [1] :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F500000239E2064DDE.png" style="display:inline-block; margin:4px;width:16.789cm;height:7.528cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F500000239E2064DDE.png" style="display:inline-block; margin:4px;width:16.789cm;height:7.528cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F500000239E2064DDE.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [2], nous faisons un GET sur l&#x27;URL [http://localhost:8080/getAllCategories];</span></li>
 </ul>
 <p><span style="color: #000000">Nous n&#x27;obtenons pas de réponse du serveur. Lorsqu&#x27;on regarde la console de développement de Chrome (Ctrl-Maj-I) on découvre une erreur :</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042D00000440D640C30B.png" style="display:inline-block; margin:4px;width:14.143cm;height:14.393cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042D00000440D640C30B.png" style="display:inline-block; margin:4px;width:14.143cm;height:14.393cm;" class="odt-zoomable" data-zoom-src="images/100000000000042D00000440D640C30B.png" /></td></tr></table>
 
 <ul>
 <li><span style="color: #000000">en [1], on est dans l&#x27;onglet [Network] ;</span></li>
@@ -1624,7 +1624,7 @@
 <p><a id="refheading4853838046689"></a></p>
 <h2 id="189-le-nouveau-service-web-json">18.9. Le nouveau service web / json</h2>
 <p>Nous créons un nouveau projet Maven [intro-spring-cors-server-jpa] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E7000000C4577E8D45.png" style="display:inline-block; margin:4px;width:4.3cm;height:3.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000179000000B7366183FA.png" style="display:inline-block; margin:4px;width:6.98cm;height:3.39cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E7000000C4577E8D45.png" style="display:inline-block; margin:4px;width:4.3cm;height:3.63cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E7000000C4577E8D45.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000179000000B7366183FA.png" style="display:inline-block; margin:4px;width:6.98cm;height:3.39cm;" class="odt-zoomable" data-zoom-src="images/1000000000000179000000B7366183FA.png" /></td></tr></table>
 
 <p><a id="refheading1184691799226695"></a></p>
 <h3 id="1891-configuration-maven">18.9.1. Configuration Maven</h3>
@@ -1683,7 +1683,7 @@
 <p><a id="refheading1184711799226695"></a></p>
 <h3 id="1892-configuration-spring">18.9.2. Configuration Spring</h3>
 <p>La classe de configuration [AppConfig] est la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DE000000805BA1CB1B.png" style="display:inline-block; margin:4px;width:4.11cm;height:2.371cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DE000000805BA1CB1B.png" style="display:inline-block; margin:4px;width:4.11cm;height:2.371cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE000000805BA1CB1B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.cors.server.config;</span></span>
@@ -1716,7 +1716,7 @@
 <p><a id="refheading1184731799226695"></a></p>
 <h3 id="1893-la-classe-abstractcorscontroller">18.9.3. La classe [AbstractCorsController]</h3>
 <p>La classe [AbstractCorsController] qui sera la classe parente de tous les contrôleurs de cette application :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000CF43922F2F.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.829cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000CF43922F2F.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.829cm;" class="odt-zoomable" data-zoom-src="images/100000000000012D000000CF43922F2F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Son code est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1785,7 +1785,7 @@
 <h3 id="1894-le-controleur-mycontrollerwithhttpoptions">18.9.4. Le contrôleur [MyControllerWithHttpOptions]</h3>
 <p>Afin de ne pas avoir à modifier le serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17986265679331">13.5.3</a>, nous allons créer un nouveau contrôleur qui là où le serveur non sécurisé traite l&#x27;URL [/url], le nouveau contrôleur traitera l&#x27;URL [/cors-url] et cette URL acceptera les requêtes inter-domaines.</p>
 <p>La classe [MyControllerWithHttpOptions] est le contrôleur qui va traiter les requêtes HTTP de type [OPTIONS] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000CF59FC9B0F.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.829cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000CF59FC9B0F.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.829cm;" class="odt-zoomable" data-zoom-src="images/100000000000012D000000CF59FC9B0F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.cors.server.service;</span></span>
@@ -1827,7 +1827,7 @@
 <p>Il est fait ainsi pour toutes les URL exposées par le serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17986265679331">13.5.3</a>. Lorsque ce service expose l&#x27;URL [/url], la classe [<span style="color: #000000">MyControllerWithHttpOptions</span>] ci-dessus expose l&#x27;URL [/<strong>cors-</strong>url].</p>
 <p><a id="refheading1184771799226695"></a></p>
 <h3 id="1895-le-controleur-mycontrollerwithcors">18.9.5. Le contrôleur [MyControllerWithCors]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000CF2C6ABD45.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.829cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000CF2C6ABD45.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.829cm;" class="odt-zoomable" data-zoom-src="images/100000000000012D000000CF2C6ABD45.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [MyControllerWithCors] est le contrôleur qui va traiter les requêtes HTTP de type [GET] et [POST] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1887,7 +1887,7 @@
 <p><a id="refheading1184791799226695"></a></p>
 <h3 id="1896-tests">18.9.6. Tests</h3>
 <p>La classe de boot du projet [intro-spring-cors-server-jpa] est la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F10000007F52D83E51.png" style="display:inline-block; margin:4px;width:4.461cm;height:2.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F10000007F52D83E51.png" style="display:inline-block; margin:4px;width:4.461cm;height:2.35cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F10000007F52D83E51.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.cors.server.boot;</span></span>
@@ -1927,7 +1927,7 @@
 </code></pre></div>
 
 <p>Après quelques recherches, on découvre que par défaut Spring MVC traite lui-même les commandes HTTP [OPTIONS]. Aussi c&#x27;est toujours Spring qui répond et jamais la méthode [<span style="color: #000000">getAllCategories</span>] de la ligne 5 ci-dessus. Ce comportement par défaut de Spring MVC peut être changé. Nous modifions la classe  [AppConfig] existante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EF000000920FA8B00D.png" style="display:inline-block; margin:4px;width:4.431cm;height:2.701cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EF000000920FA8B00D.png" style="display:inline-block; margin:4px;width:4.431cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EF000000920FA8B00D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.cors.server.config;</span></span>
@@ -1971,7 +1971,7 @@
 <li>ligne 31 : on configure le bean [dispatcherServlet] pour qu&#x27;il laisse l&#x27;application web traiter elle-même les commandes HTTP [OPTIONS] ;</li>
 </ul>
 <p>Nous refaisons les tests avec cette nouvelle configuration. On obtient le résultat suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051D0000039B3DDD374B.png" style="display:inline-block; margin:4px;width:17.318cm;height:12.211cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051D0000039B3DDD374B.png" style="display:inline-block; margin:4px;width:17.318cm;height:12.211cm;" class="odt-zoomable" data-zoom-src="images/100000000000051D0000039B3DDD374B.png" /></td></tr></table>
 
 <ul>
 <li>en [1], nous voyons qu&#x27;il y a deux requêtes HTTP vers l&#x27;URL [http://localhost:8080/cors-getAllCategories];</li>
@@ -1979,7 +1979,7 @@
 <li>en [3], les trois entêtes HTTP que nous venons de configurer dans la réponse du serveur ;</li>
 </ul>
 <p>Examinons maintenant la seconde requête :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051E000003C11F3B3495.png" style="display:inline-block; margin:4px;width:17.33cm;height:12.714cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051E000003C11F3B3495.png" style="display:inline-block; margin:4px;width:17.33cm;height:12.714cm;" class="odt-zoomable" data-zoom-src="images/100000000000051E000003C11F3B3495.png" /></td></tr></table>
 
 <ul>
 <li>en [1], la requête examinée ;</li>
@@ -2007,7 +2007,7 @@
 <li>ligne 6 :  les entêtes nécessaires aux requêtes inter-domaines sont inclus dans la réponse ;</li>
 </ul>
 <p>Après cette modification, les résultats sont les suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000344000001B12C453CD6.png" style="display:inline-block; margin:4px;width:15.48cm;height:8.02cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000344000001B12C453CD6.png" style="display:inline-block; margin:4px;width:15.48cm;height:8.02cm;" class="odt-zoomable" data-zoom-src="images/1000000000000344000001B12C453CD6.png" /></td></tr></table>
 
 <p>Nous avons bien obtenu la liste des catégories.</p>
 <p><a id="refheading196721811596012"></a></p>
@@ -2037,12 +2037,12 @@
 </code></pre></div>
 
 <p>Le résultat obenu est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037C0000024BEFB99290.png" style="display:inline-block; margin:4px;width:16.48cm;height:10.871cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037C0000024BEFB99290.png" style="display:inline-block; margin:4px;width:16.48cm;height:10.871cm;" class="odt-zoomable" data-zoom-src="images/100000000000037C0000024BEFB99290.png" /></td></tr></table>
 
 <p><a id="refheading196723811596012"></a></p>
 <h2 id="1811-les-url-post">18.11. Les URL [POST]</h2>
 <p>Examinons le cas suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000347000002364D26D28E.png" style="display:inline-block; margin:4px;width:11.1cm;height:7.488cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000347000002364D26D28E.png" style="display:inline-block; margin:4px;width:11.1cm;height:7.488cm;" class="odt-zoomable" data-zoom-src="images/1000000000000347000002364D26D28E.png" /></td></tr></table>
 
 <ul>
 <li>on fait un POST [1] vers l&#x27;URL [2] ;</li>
@@ -2050,7 +2050,7 @@
 <li>au total, on cherche à créer une catégorie appelée [categorie2] ;</li>
 </ul>
 <p>Nous ne modifions pour l&#x27;instant aucun code. Le résultat obtenu est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E4000003F5B1DD62CA.png" style="display:inline-block; margin:4px;width:16.563cm;height:13.402cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E4000003F5B1DD62CA.png" style="display:inline-block; margin:4px;width:16.563cm;height:13.402cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E4000003F5B1DD62CA.png" /></td></tr></table>
 
 <ul>
 <li>en [1], comme pour les requêtes [GET], une requête [OPTIONS] est faite par le navigateur ;</li>
@@ -2118,12 +2118,12 @@
 </code></pre></div>
 
 <p>Le résultat obtenu est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028A000001B0983BB733.png" style="display:inline-block; margin:4px;width:12.04cm;height:7.999cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028A000001B0983BB733.png" style="display:inline-block; margin:4px;width:12.04cm;height:7.999cm;" class="odt-zoomable" data-zoom-src="images/100000000000028A000001B0983BB733.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La catégorie [categorie2] a bien été ajoutée dans la base de données. Le SGBD lui a attribué la clé primaire 1729.</p>
 <p><a id="refheading1190181799226695"></a></p>
 <h2 id="1812-le-controleur-authenticatecorscontroller">18.12. Le contrôleur [<span style="color: #000000">AuthenticateCorsController</span>]</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000CFEA3F395F.png" style="display:inline-block; margin:4px;width:5.611cm;height:3.859cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000CFEA3F395F.png" style="display:inline-block; margin:4px;width:5.611cm;height:3.859cm;" class="odt-zoomable" data-zoom-src="images/100000000000012D000000CFEA3F395F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le contrôleur [<span style="color: #000000">AuthenticateCorsController</span>] est là pour fournir l&#x27;URL [/cors-authenticate] qui permet d&#x27;appeler l&#x27;URL [/authenticate] déjà existante, avec une requête inter-domaines. Son code est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2168,7 +2168,7 @@
 </code></pre></div>
 
 <p>Voici deux exemples :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004EE0000029608FC6559.png" style="display:inline-block; margin:4px;width:16.695cm;height:8.758cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004EE0000029608FC6559.png" style="display:inline-block; margin:4px;width:16.695cm;height:8.758cm;" class="odt-zoomable" data-zoom-src="images/10000000000004EE0000029608FC6559.png" /></td></tr></table>
 
 <ul>
 <li>les réponses affichées le sont par le code jS suivant :</li>

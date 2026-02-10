@@ -1243,12 +1243,12 @@
 <h1 id="11-cours-gestion-des-bases-de-donnees-relationnelles-avec-spring-data">11. [Cours] : Gestion des bases de données relationnelles avec Spring Data</h1>
 <p><strong>Mots clés</strong> : architecture multicouche, Spring, injection de dépendances, API JPA (Java Persistence API), Spring Data.</p>
 <p><a id="refheading1622651200878134"></a>Nous allons implémenter la couche [DAO] du TD avec [Spring Data], une branche de l&#x27;écosystème Spring. [Spring Data] s&#x27;appuie sur une couche JPA (Java Persistence API) qui permet à la couche [DAO] de manipuler des objets plutôt que des ordres SQL. Au final, la couche [DAO] ignore qu&#x27;elle dialogue avec une base de données. Elle ne connaît que l&#x27;interface de la couche [Spring Data].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004960000011254B543CA.png" style="display:inline-block; margin:4px;width:15.531cm;height:3.625cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004960000011254B543CA.png" style="display:inline-block; margin:4px;width:15.531cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/10000000000004960000011254B543CA.png" /></td></tr></table>
 
 <p>Nous allons d&#x27;abord découvrir [Spring Data] sur deux exemples.</p>
 <p><a id="refheading98772873157090"></a></p>
 <h2 id="111-support">11.1. Support</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037F0000011E3930C6BE.png" style="display:inline-block; margin:4px;width:11.841cm;height:3.784cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037F0000011E3930C6BE.png" style="display:inline-block; margin:4px;width:11.841cm;height:3.784cm;" class="odt-zoomable" data-zoom-src="images/100000000000037F0000011E3930C6BE.png" /></td></tr></table>
 
 <ul>
 <li>en [1], le dossier [support / chap-11] contient trois projets Eclipse ;</li>
@@ -1257,12 +1257,12 @@
 <p><a id="refheading2192302014630537"></a></p>
 <h2 id="112-exemple-1">11.2. Exemple 1</h2>
 <p>Sur le site de Spring existent de nombreux tutoriels pour démarrer avec Spring [<a href="http://spring.io/guides">http://spring.io/guides</a>]. Nous allons utiliser l&#x27;un d&#x27;eux pour introduire Spring Data. Nous utilisons pour cela Spring Tool Suite (STS).</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003D20000015DA19B7E0B.png" style="display:inline-block; margin:4px;width:12.938cm;height:4.618cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003D20000015DA19B7E0B.png" style="display:inline-block; margin:4px;width:12.938cm;height:4.618cm;" class="odt-zoomable" data-zoom-src="images/10000000000003D20000015DA19B7E0B.png" /></td></tr></table>
 
 <ul>
 <li>en [1], nous importons l&#x27;un des tutoriels de [spring.io/guides] ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005340000032B0ABEBB8F.png" style="display:inline-block; margin:4px;width:17.621cm;height:10.73cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005340000032B0ABEBB8F.png" style="display:inline-block; margin:4px;width:17.621cm;height:10.73cm;" class="odt-zoomable" data-zoom-src="images/10000000000005340000032B0ABEBB8F.png" /></td></tr></table>
 
 <ul>
 <li>en [2], on choisit le tutoriel [Accessing Data Jpa] qui montre comment accéder à une base de données avec Spring Data ;</li>
@@ -1311,7 +1311,7 @@
 <li>lignes 16-19 : définissent une dépendance sur le SGBD H2 qui permet de créer et gérer des bases de données en mémoire.</li>
 </ul>
 <p>Regardons les classes amenées par ces dépendances :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014F00000173C684B02E.png" style="display:inline-block; margin:4px;width:5.609cm;height:6.071cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F70000010C4CA71FE9.png" style="display:inline-block; margin:4px;width:4.57cm;height:4.96cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000114000000BD1D144A05.png" style="display:inline-block; margin:4px;width:5.11cm;height:3.5cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014F00000173C684B02E.png" style="display:inline-block; margin:4px;width:5.609cm;height:6.071cm;" class="odt-zoomable" data-zoom-src="images/100000000000014F00000173C684B02E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F70000010C4CA71FE9.png" style="display:inline-block; margin:4px;width:4.57cm;height:4.96cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F70000010C4CA71FE9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000114000000BD1D144A05.png" style="display:inline-block; margin:4px;width:5.11cm;height:3.5cm;" class="odt-zoomable" data-zoom-src="images/1000000000000114000000BD1D144A05.png" /></td></tr></table>
 
 <p>Elles sont très nombreuses :</p>
 <ul>
@@ -1345,9 +1345,9 @@
 <p><a id="refheading2192342014630537"></a></p>
 <h3 id="1122-la-couche-jpa">11.2.2. La couche [JPA]</h3>
 <p><a id="refheading1622691200878134"></a>L&#x27;accès à la base de données se fait au travers d&#x27;une couche [JPA], Java Persistence API :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004A20000011020A14249.png" style="display:inline-block; margin:4px;width:15.69cm;height:3.598cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004A20000011020A14249.png" style="display:inline-block; margin:4px;width:15.69cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/10000000000004A20000011020A14249.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB00000077D50ECFCE.png" style="display:inline-block; margin:4px;width:4.35cm;height:2.2cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB00000077D50ECFCE.png" style="display:inline-block; margin:4px;width:4.35cm;height:2.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EB00000077D50ECFCE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;application est basique et gère des clients [Customer]. La classe [Customer] fait partie de la couche [JPA] et est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1397,9 +1397,9 @@
 <p><a id="refheading2192362014630537"></a></p>
 <h3 id="1123-la-couche-spring-data">11.2.3. La couche [Spring Data]</h3>
 <p><a id="refheading1622711200878134"></a>La classe [CustomerRepository] implémente la couche d&#x27;accès à la table [Customer]. Son code est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004A1000001188C053E0A.png" style="display:inline-block; margin:4px;width:15.677cm;height:3.704cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004A1000001188C053E0A.png" style="display:inline-block; margin:4px;width:15.677cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/10000000000004A1000001188C053E0A.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB00000077BA57F747.png" style="display:inline-block; margin:4px;width:4.35cm;height:2.2cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB00000077BA57F747.png" style="display:inline-block; margin:4px;width:4.35cm;height:2.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EB00000077BA57F747.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> hello;</span></span>
@@ -1494,10 +1494,10 @@
 <p>En conclusion, dans les cas simples, Spring Data nous permet d&#x27;implémenter la couche [DAO] avec une simple interface.</p>
 <p><a id="refheading2192382014630537"></a></p>
 <h3 id="1124-la-couche-console">11.2.4. La couche [console]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004980000010700ABFB59.png" style="display:inline-block; margin:4px;width:15.558cm;height:3.48cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004980000010700ABFB59.png" style="display:inline-block; margin:4px;width:15.558cm;height:3.48cm;" class="odt-zoomable" data-zoom-src="images/10000000000004980000010700ABFB59.png" /></td></tr></table>
 
 <p><a id="refheading569911429907001"></a></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB00000077E52D8FD9.png" style="display:inline-block; margin:4px;width:4.35cm;height:2.2cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB00000077E52D8FD9.png" style="display:inline-block; margin:4px;width:4.35cm;height:2.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EB00000077E52D8FD9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Application] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1673,7 +1673,7 @@
 <h3 id="1125-configuration-manuelle-du-projet-spring-data">11.2.5. Configuration manuelle du projet Spring Data</h3>
 <p><a id="refheading1622751200878134"></a>Nous dupliquons le projet précédent dans le projet [gs-accessing-data-jpa-02] :</p>
 <p><a id="refheading569931429907001"></a></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F80000015BACE9B961.png" style="display:inline-block; margin:4px;width:4.59cm;height:6.421cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F80000015BACE9B961.png" style="display:inline-block; margin:4px;width:4.59cm;height:6.421cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F80000015BACE9B961.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Dans ce nouveau projet, nous n&#x27;allons pas nous reposer sur la configuration automatique faite par Spring Boot. Nous allons la faire manuellement. Cela peut être utile si les configurations par défaut ne nous conviennent pas.</p>
 <p>Tout d&#x27;abord, nous allons expliciter les dépendances nécessaires dans le fichier [pom.xml] :</p>
@@ -1767,7 +1767,7 @@
 <li>[Config] qui sera la classe de configuration :</li>
 <li>[Main] qui sera la classe exécutable ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E80000009FB5A3B942.png" style="display:inline-block; margin:4px;width:4.3cm;height:2.94cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E80000009FB5A3B942.png" style="display:inline-block; margin:4px;width:4.3cm;height:2.94cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E80000009FB5A3B942.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe exécutable [Application] est désormais la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1898,12 +1898,12 @@
 </ul>
 <p>Les méthodes précédentes peuvent être définies dans un ordre quelconque.</p>
 <p>L&#x27;exécution du projet donne les mêmes résultats. Un nouveau fichier apparaît dans le dossier du projet, celui de la base de données H2 :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F1000000D6F0EB16BE.png" style="display:inline-block; margin:4px;width:4.461cm;height:3.96cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F1000000D6F0EB16BE.png" style="display:inline-block; margin:4px;width:4.461cm;height:3.96cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F1000000D6F0EB16BE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading2192402014630537"></a></p>
 <h3 id="1126-creation-dune-archive-executable">11.2.6. Création d&#x27;une archive exécutable</h3>
 <p><a id="refheading1622771200878134"></a>Pour créer une archive exécutable du projet, on peut procéder ainsi :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005870000018D0FFF267A.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.05cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005870000018D0FFF267A.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.05cm;" class="odt-zoomable" data-zoom-src="images/10000000000005870000018D0FFF267A.png" /></td></tr></table>
 
 <ul>
 <li>en [1] : on crée une configuration d&#x27;exécution ;</li>
@@ -1912,7 +1912,7 @@
 <li>en [4] : désigne la classe à exécuter ;</li>
 <li>en [5] : le nom de la configuration d&#x27;exécution – peut être quelconque ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000595000002955D9CFE45.png" style="display:inline-block; margin:4px;width:17.999cm;height:8.326cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000595000002955D9CFE45.png" style="display:inline-block; margin:4px;width:17.999cm;height:8.326cm;" class="odt-zoomable" data-zoom-src="images/1000000000000595000002955D9CFE45.png" /></td></tr></table>
 
 <ul>
 <li>en [6] : on exporte le projet ;</li>
@@ -1920,7 +1920,7 @@
 <li>en [8] : indique le chemin et le nom du fichier exécutable à créer ;</li>
 <li>en [9] : le nom de la configuration d&#x27;exécution créée en [5] ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A60000019938FC06CE.png" style="display:inline-block; margin:4px;width:5.583cm;height:5.412cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A60000019938FC06CE.png" style="display:inline-block; margin:4px;width:5.583cm;height:5.412cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A60000019938FC06CE.png" /></td></tr></table>
 
 <ul>
 <li>en [10], l&#x27;archive créée ;</li>
@@ -2038,10 +2038,10 @@
 <p><a id="refheading2192442014630537"></a></p>
 <h3 id="1131-introduction">11.3.1. Introduction</h3>
 <p>Nous allons reprendre l&#x27;exemple de la table de produits que nous avons utilisée pour introduire l&#x27;API JDBC et créer l&#x27;architecture suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049A0000011056D6AA7D.png" style="display:inline-block; margin:4px;width:15.584cm;height:3.598cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049A0000011056D6AA7D.png" style="display:inline-block; margin:4px;width:15.584cm;height:3.598cm;" class="odt-zoomable" data-zoom-src="images/100000000000049A0000011056D6AA7D.png" /></td></tr></table>
 
 <p>La base de données [dbintrospringjpa] a deux tables [PRODUITS] et [CATEGORIES]. La table [CATEGORIES] est la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000219000000692D8D8733.png" style="display:inline-block; margin:4px;width:9.94cm;height:1.94cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000219000000692D8D8733.png" style="display:inline-block; margin:4px;width:9.94cm;height:1.94cm;" class="odt-zoomable" data-zoom-src="images/1000000000000219000000692D8D8733.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li>[ID] : clé primaire en mode AUTO_INCREMENT ;</li>
@@ -2049,7 +2049,7 @@
 <li>[NOM] : nom de la catégorie - unique ;</li>
 </ul>
 <p>La table [PRODUITS] est la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024F000000AC2E1845DE.png" style="display:inline-block; margin:4px;width:10.94cm;height:3.191cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024F000000AC2E1845DE.png" style="display:inline-block; margin:4px;width:10.94cm;height:3.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000024F000000AC2E1845DE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li>[ID] : clé primaire en mode AUTO_INCREMENT ;</li>
@@ -2065,7 +2065,7 @@
 <p><a id="refheading2192462014630537"></a></p>
 <h3 id="1132-creation-du-projet-maven">11.3.2. Création du projet Maven</h3>
 <p><a id="refheading1622791200878134"></a>Pour créer un squelette de projet Spring Data, on peut procéder de la façon suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053B0000037FB182922E.png" style="display:inline-block; margin:4px;width:17.715cm;height:11.841cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053B0000037FB182922E.png" style="display:inline-block; margin:4px;width:17.715cm;height:11.841cm;" class="odt-zoomable" data-zoom-src="images/100000000000053B0000037FB182922E.png" /></td></tr></table>
 
 <ul>
 <li>en [1], on crée un nouveau projet ;</li>
@@ -2075,13 +2075,13 @@
 <li>en [5] : le nom Eclipse du projet – peut être quelconque (n&#x27;a pas à être identique à [4]) ;</li>
 <li>en [7] : on indique qu&#x27;on va créer un projet ayant une couche [JPA] avec le SGBD MySQL. Les dépendances nécessaires à un tel projet vont alors être incluses dans le fichier [pom.xml] ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035100000366DD79C834.png" style="display:inline-block; margin:4px;width:11.232cm;height:11.509cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035100000366DD79C834.png" style="display:inline-block; margin:4px;width:11.232cm;height:11.509cm;" class="odt-zoomable" data-zoom-src="images/100000000000035100000366DD79C834.png" /></td></tr></table>
 
 <ul>
 <li>en [8], donner le nom du dossier du projet ;</li>
 <li>en [9], terminer l&#x27;assistant ;</li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002300000018C3796C846.png" style="display:inline-block; margin:4px;width:7.408cm;height:5.239cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002300000018C3796C846.png" style="display:inline-block; margin:4px;width:7.408cm;height:5.239cm;" class="odt-zoomable" data-zoom-src="images/10000000000002300000018C3796C846.png" /></td></tr></table>
 
 <ul>
 <li>en [10] : le projet créé ;</li>
@@ -2196,7 +2196,7 @@
 <p><a id="refheading2192482014630537"></a></p>
 <h3 id="1133-le-projet-eclipse">11.3.3. Le projet Eclipse</h3>
 <p>Nous faisons évoluer le projet précédent de la façon suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000002024FC5FC8F.png" style="display:inline-block; margin:4px;width:4.56cm;height:9.52cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000002024FC5FC8F.png" style="display:inline-block; margin:4px;width:4.56cm;height:9.52cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000002024FC5FC8F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
 <li>[AppConfig.java] : la classe de configuration du projet Spring ;</li>
@@ -2211,7 +2211,7 @@
 <li>[pom.xml] : le fichier de configuration du projet Maven ;</li>
 </ul>
 <p>Ce projet implémente l&#x27;architecture suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049B00000112C905184C.png" style="display:inline-block; margin:4px;width:15.598cm;height:3.625cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049B00000112C905184C.png" style="display:inline-block; margin:4px;width:15.598cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/100000000000049B00000112C905184C.png" /></td></tr></table>
 
 <p>La couche [DAO] ne voit que la couche implémentée par [Spring Data].</p>
 <p><a id="refheading226282014630537"></a></p>
@@ -2321,7 +2321,7 @@
 <p><a id="refheading2192502014630537"></a></p>
 <h3 id="1135-les-entites-de-la-couche-jpa">11.3.5. Les entités de la couche [JPA]</h3>
 <p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DB000000CFBC5B5629.png" style="display:inline-block; margin:4px;width:4.06cm;height:3.829cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DB000000CFBC5B5629.png" style="display:inline-block; margin:4px;width:4.06cm;height:3.829cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DB000000CFBC5B5629.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading1961141114084373"></a></p>
 <h4 id="11351-la-classe-abstractentity">11.3.5.1. La classe [AbstractEntity]</h4>
@@ -2412,7 +2412,7 @@
 <p><a id="refheading1961161114084373"></a></p>
 <h4 id="11352-lentite-jpa-produit">11.3.5.2. L&#x27;entité JPA [Produit]</h4>
 <p>La classe [Produit] est une entité JPA associée à une ligne de la table [PRODUITS] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024F000000AC2E1845DE.png" style="display:inline-block; margin:4px;width:11.299cm;height:3.24cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024F000000AC2E1845DE.png" style="display:inline-block; margin:4px;width:11.299cm;height:3.24cm;" class="odt-zoomable" data-zoom-src="images/100000000000024F000000AC2E1845DE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.entities;</span></span>
@@ -2477,7 +2477,7 @@
 <p><a id="refheading1961181114084373"></a></p>
 <h4 id="11353-lentite-jpa-categorie">11.3.5.3. L&#x27;entité JPA [Categorie]</h4>
 <p>La classe [Categorie] est une entité JPA associée à une ligne de la table [CATEGORIES] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000219000000692D8D8733.png" style="display:inline-block; margin:4px;width:9.94cm;height:1.94cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000219000000692D8D8733.png" style="display:inline-block; margin:4px;width:9.94cm;height:1.94cm;" class="odt-zoomable" data-zoom-src="images/1000000000000219000000692D8D8733.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Son code est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2541,7 +2541,7 @@
 <p><a id="refheading2192522014630537"></a></p>
 <h3 id="1136-la-couche-spring-data">11.3.6. La couche [Spring Data]</h3>
 <p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010000000139D8D8F9D3.png" style="display:inline-block; margin:4px;width:4.74cm;height:5.791cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010000000139D8D8F9D3.png" style="display:inline-block; margin:4px;width:4.74cm;height:5.791cm;" class="odt-zoomable" data-zoom-src="images/100000000000010000000139D8D8F9D3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface [CategoriesRepository] gère les accès à la table [CATEGORIES] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -2609,7 +2609,7 @@
 <p><a id="refheading2192542014630537"></a></p>
 <h3 id="1137-la-couche-dao">11.3.7. La couche [DAO]</h3>
 <p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D7000000C851D05EDC.png" style="display:inline-block; margin:4px;width:3.979cm;height:3.679cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D7000000C851D05EDC.png" style="display:inline-block; margin:4px;width:3.979cm;height:3.679cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D7000000C851D05EDC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface [IDao] de la couche [DAO] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2949,7 +2949,7 @@
 </ul>
 <p><a id="refheading2189872014630537"></a></p>
 <h3 id="1138-configuration-du-projet-spring">11.3.8. Configuration du projet Spring</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB000000C97BBACDD4.png" style="display:inline-block; margin:4px;width:4.35cm;height:3.72cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB000000C97BBACDD4.png" style="display:inline-block; margin:4px;width:4.35cm;height:3.72cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EB000000C97BBACDD4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [DaoConfig] configure la couche [DAO] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -3124,7 +3124,7 @@
 <p><a id="refheading2192562014630537"></a></p>
 <h3 id="1139-la-couche-console">11.3.9. La couche [console]</h3>
 <p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D7000000CA3A9BDE61.png" style="display:inline-block; margin:4px;width:3.979cm;height:3.739cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D7000000CA3A9BDE61.png" style="display:inline-block; margin:4px;width:3.979cm;height:3.739cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D7000000CA3A9BDE61.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Main] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -3350,9 +3350,9 @@
 </ul>
 <p><a id="refheading251892391218965"></a></p>
 <h3 id="11310-le-test-unitaire-junit">11.3.10. Le test unitaire JUnit</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049300000118B0C0B6D1.png" style="display:inline-block; margin:4px;width:15.492cm;height:3.704cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049300000118B0C0B6D1.png" style="display:inline-block; margin:4px;width:15.492cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/100000000000049300000118B0C0B6D1.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C40000008E249C2D8E.png" style="display:inline-block; margin:4px;width:3.63cm;height:2.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C40000008E249C2D8E.png" style="display:inline-block; margin:4px;width:3.63cm;height:2.63cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C40000008E249C2D8E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Test01] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -3562,7 +3562,7 @@
 <p><a id="refheading251894391218965"></a></p>
 <h3 id="11311-gestion-des-logs">11.3.11. Gestion des logs</h3>
 <p><a id="refheading180262656793311"></a>Les logs de l&#x27;application console ou du test JUnit sont configurés par le fichier [logback.xml] suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000ED000000CC76F2BE04.png" style="display:inline-block; margin:4px;width:4.39cm;height:3.78cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000ED000000CC76F2BE04.png" style="display:inline-block; margin:4px;width:4.39cm;height:3.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000000ED000000CC76F2BE04.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le fichier doit s&#x27;appeler [logback.xml] et être dans le Classpath du projet. Pour cela, il a été placé ici dans le dossier [src/main/resources] qui fait partie du Classpath. Son contenu est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -3597,7 +3597,7 @@
 <p><a id="refheading165801515544210"></a></p>
 <h3 id="11312-generation-de-larchive-maven-du-projet">11.3.12. Génération de l&#x27;archive Maven du projet</h3>
 <p>Pour installer l&#x27;archive du projet dans le dépôt local Maven, procédez comme suit [1-3] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000405000004CAD7507622.png" style="display:inline-block; margin:4px;width:13.614cm;height:16.219cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000405000004CAD7507622.png" style="display:inline-block; margin:4px;width:13.614cm;height:16.219cm;" class="odt-zoomable" data-zoom-src="images/1000000000000405000004CAD7507622.png" /></td></tr></table>
 
 <p>L&#x27;archive va être générée avec les identifiants trouvés dans le fichier [pom.xml] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -3608,10 +3608,10 @@
 </code></pre></div>
 
 <p>La localisation du dépôt local Maven peut être trouvé dans la configuration d&#x27;Eclipse :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024B00000200824CCAC4.png" style="display:inline-block; margin:4px;width:10.871cm;height:9.479cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024B00000200824CCAC4.png" style="display:inline-block; margin:4px;width:10.871cm;height:9.479cm;" class="odt-zoomable" data-zoom-src="images/100000000000024B00000200824CCAC4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Il est alors possible de vérifier la bonne installation de l&#x27;artifact Maven :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022F0000009B72132AEB.png" style="display:inline-block; margin:4px;width:10.351cm;height:2.87cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000022F0000009B72132AEB.png" style="display:inline-block; margin:4px;width:10.351cm;height:2.87cm;" class="odt-zoomable" data-zoom-src="images/100000000000022F0000009B72132AEB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Désormais, un autre projet Maven local pourra utiliser cette archive.</p>
 

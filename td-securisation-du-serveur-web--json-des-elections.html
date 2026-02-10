@@ -1210,7 +1210,7 @@
 <h1 id="17-td-securisation-du-serveur-web-json-des-elections">17. [TD] : sécurisation du serveur web / jSON des élections</h1>
 <p><strong>Mots clés</strong> : architecture multicouche, Spring, injection de dépendances, service web / jSON sécurisé, client / serveur</p>
 <p>Nous appliquons maintenant ce que nous avons appris dans le chapitre précédent au TD des élections. L&#x27;architecture sera la suivante :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000485000002EDCB27EACE.png" style="display:inline-block; margin:4px;width:15.307cm;height:9.91cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000485000002EDCB27EACE.png" style="display:inline-block; margin:4px;width:15.307cm;height:9.91cm;" class="odt-zoomable" data-zoom-src="images/1000000000000485000002EDCB27EACE.png" /></td></tr></table>
 
 <p>La progession se fera de la façon suivante :</p>
 <ul>
@@ -1220,19 +1220,19 @@
 </ul>
 <p><a id="refheading1217241037674463"></a></p>
 <h2 id="171-support">17.1. Support</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000C90A649EAC.png" style="display:inline-block; margin:4px;width:5.791cm;height:3.72cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DE0000006B5C473BFD.png" style="display:inline-block; margin:4px;width:4.11cm;height:1.981cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000C90A649EAC.png" style="display:inline-block; margin:4px;width:5.791cm;height:3.72cm;" class="odt-zoomable" data-zoom-src="images/1000000000000139000000C90A649EAC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DE0000006B5C473BFD.png" style="display:inline-block; margin:4px;width:4.11cm;height:1.981cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE0000006B5C473BFD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Les projets de ce chapitre seront trouvés dans le dossier [support / chap-17]. Le script SQL sert à générer la base de données nécessaire aux tests.</p>
 <p><a id="refheading251523391218965"></a></p>
 <h2 id="172-la-base-de-donnees">17.2. La base de données</h2>
 <p>La base de données du serveur sécurisé doit maintenant comporter les tables [USERS], [ROLES] et [USERS_ROLES] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B20000008EDE1C2B32.png" style="display:inline-block; margin:4px;width:3.3cm;height:2.63cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D40000005D8745EF19.png" style="display:inline-block; margin:4px;width:3.93cm;height:1.72cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B20000008EDE1C2B32.png" style="display:inline-block; margin:4px;width:3.3cm;height:2.63cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B20000008EDE1C2B32.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D40000005D8745EF19.png" style="display:inline-block; margin:4px;width:3.93cm;height:1.72cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D40000005D8745EF19.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le script SQL de la génération de la base est disponible dans le support du document.</p>
 <p><a id="refheading251525391218965"></a></p>
 <h2 id="173-le-serveur-securise">17.3. Le serveur sécurisé</h2>
 <p>Pour mettre en place le serveur sécurisé des élections, nous nous contentons de faire un copy / paste du projet exemple [intro-spring-security-server-01] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049C0000015EDC1CA3CF.png" style="display:inline-block; margin:4px;width:15.61cm;height:4.63cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049C0000015EDC1CA3CF.png" style="display:inline-block; margin:4px;width:15.61cm;height:4.63cm;" class="odt-zoomable" data-zoom-src="images/100000000000049C0000015EDC1CA3CF.png" /></td></tr></table>
 
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : renommez les packages comme montré en [1].</p>
@@ -1334,21 +1334,21 @@
 <li>ligne 6 : changez le nom du package ;</li>
 </ul>
 <p>C&#x27;est tout. Faites un premier test en exécutant le test JUnit [] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C9000000608400FFD5.png" style="display:inline-block; margin:4px;width:3.72cm;height:1.78cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C9000000608400FFD5.png" style="display:inline-block; margin:4px;width:3.72cm;height:1.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C9000000608400FFD5.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Exécutez la classe de boot [Boot] puis avec l&#x27;extension Chrome [Advanced Rest Client] faites le test suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B200000335949105CD.png" style="display:inline-block; margin:4px;width:15.901cm;height:10.862cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B200000335949105CD.png" style="display:inline-block; margin:4px;width:15.901cm;height:10.862cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B200000335949105CD.png" /></td></tr></table>
 
 <p>En [1], la demande. En [3], la réponse. En [2], l&#x27;entête HTTP est l&#x27;entête d&#x27;authentification de l&#x27;utilisateur [admin, admin] : <strong>Authorization:Basic YWRtaW46YWRtaW4=</strong></p>
 <p>Demandez maintenant, les listes en compétition :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000489000003FC6AA66833.png" style="display:inline-block; margin:4px;width:15.36cm;height:13.494cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000489000003FC6AA66833.png" style="display:inline-block; margin:4px;width:15.36cm;height:13.494cm;" class="odt-zoomable" data-zoom-src="images/1000000000000489000003FC6AA66833.png" /></td></tr></table>
 
 <p><a id="refheading110174391218965"></a></p>
 <h2 id="174-le-client-du-serveur-securise-sans-la-couche-ui">17.4. Le client du serveur sécurisé sans la couche [ui]</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B7000002F2D08275D5.png" style="display:inline-block; margin:4px;width:15.968cm;height:9.975cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B7000002F2D08275D5.png" style="display:inline-block; margin:4px;width:15.968cm;height:9.975cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B7000002F2D08275D5.png" /></td></tr></table>
 
 <p>Faites un copy / paste du projet [elections-ui-metier-dao-webjson] dans le projet [elections-metier-dao-security-webjson].</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002B2000002B9BF021CEB.png" style="display:inline-block; margin:4px;width:9.128cm;height:9.222cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002B2000002B9BF021CEB.png" style="display:inline-block; margin:4px;width:9.128cm;height:9.222cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B2000002B9BF021CEB.png" /></td></tr></table>
 
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : en [1], renommez les packages si nécessaire et supprimez ceux de la couche [ui] et des classes de démarrage [boot].</p>
@@ -1371,7 +1371,7 @@
 
 <p><a id="refheading251910391218965"></a></p>
 <h3 id="1742-refactorisation-de-la-couche-metier">17.4.2. Refactorisation de la couche [métier]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000106000000A6331D601E.png" style="display:inline-block; margin:4px;width:4.851cm;height:3.069cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000106000000A6331D601E.png" style="display:inline-block; margin:4px;width:4.851cm;height:3.069cm;" class="odt-zoomable" data-zoom-src="images/1000000000000106000000A6331D601E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface [IElectionsMetier] évolue de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1497,7 +1497,7 @@
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><a id="refheading251912391218965"></a></p>
 <h3 id="1743-configuration-spring">17.4.3. Configuration Spring</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000102000000836B55FF70.png" style="display:inline-block; margin:4px;width:4.78cm;height:2.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000102000000836B55FF70.png" style="display:inline-block; margin:4px;width:4.78cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/1000000000000102000000836B55FF70.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [MetierConfig] évolue comme suit :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1512,7 +1512,7 @@
 <p>Ligne 5, les packages à explorer doivent être mis à jour.</p>
 <p><a id="refheading251914391218965"></a></p>
 <h3 id="1744-le-test-junit-de-la-couche-metier">17.4.4. Le test JUnit de la couche [métier]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001220000008C545EB71D.png" style="display:inline-block; margin:4px;width:5.369cm;height:2.589cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001220000008C545EB71D.png" style="display:inline-block; margin:4px;width:5.369cm;height:2.589cm;" class="odt-zoomable" data-zoom-src="images/10000000000001220000008C545EB71D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe de test [Test01] évolue de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1731,13 +1731,13 @@
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><a id="refheading110868391218965"></a></p>
 <h2 id="175-le-client-du-serveur-securise-avec-une-couche-console">17.5. Le client du serveur sécurisé avec une couche [console]</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BC000002E7C848F928.png" style="display:inline-block; margin:4px;width:16.034cm;height:9.83cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004BC000002E7C848F928.png" style="display:inline-block; margin:4px;width:16.034cm;height:9.83cm;" class="odt-zoomable" data-zoom-src="images/10000000000004BC000002E7C848F928.png" /></td></tr></table>
 
 <p>Avec <strong>Netbeans</strong>, nous ouvrons les projets Maven [elections-metier-dao-security-webjson] et [elections-ui-metier-dao-webjson] puis nous construisons un nouveau projet  [elections-console-metier-dao-security-webjson] par un copy / paste du projet [elections-ui-metier-dao-webjson] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020C0000009DE47FA86B.png" style="display:inline-block; margin:4px;width:6.932cm;height:2.078cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020C0000009DE47FA86B.png" style="display:inline-block; margin:4px;width:6.932cm;height:2.078cm;" class="odt-zoomable" data-zoom-src="images/100000000000020C0000009DE47FA86B.png" /></td></tr></table>
 
 <p>La plupart des classes du nouveau projet [3] proviennent du projet [elections-ui-metier-dao-webjson] [2] qui était le client du serveur web / jSON non sécurisé :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000482000001E004587F70.png" style="display:inline-block; margin:4px;width:15.266cm;height:6.35cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000482000001E004587F70.png" style="display:inline-block; margin:4px;width:15.266cm;height:6.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000482000001E004587F70.png" /></td></tr></table>
 
 <p>Procédez ainsi pour construire le nouveau projet Maven :</p>
 <ul>
@@ -1802,7 +1802,7 @@
 </ul>
 <p><a id="refheading111102391218965"></a></p>
 <h3 id="1752-configuration-spring">17.5.2. Configuration Spring</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000000E555E1FEA0.png" style="display:inline-block; margin:4px;width:4.56cm;height:4.24cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000000E555E1FEA0.png" style="display:inline-block; margin:4px;width:4.56cm;height:4.24cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000000E555E1FEA0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [UiConfig] est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1835,7 +1835,7 @@
 </ul>
 <p><a id="refheading251918391218965"></a></p>
 <h3 id="1753-lapplication-de-boot-de-la-console">17.5.3. L&#x27;application de boot de la console</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000105000000A3E63A28B1.png" style="display:inline-block; margin:4px;width:4.83cm;height:3.02cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000105000000A3E63A28B1.png" style="display:inline-block; margin:4px;width:4.83cm;height:3.02cm;" class="odt-zoomable" data-zoom-src="images/1000000000000105000000A3E63A28B1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ElectionsConsole] évolue de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -1928,10 +1928,10 @@
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><a id="refheading251527391218965"></a></p>
 <h2 id="176-le-client-du-serveur-securise-avec-une-couche-swing">17.6. Le client du serveur sécurisé avec une couche [swing]</h2>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C3000002EF3F2B3A54.png" style="display:inline-block; margin:4px;width:16.127cm;height:9.936cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C3000002EF3F2B3A54.png" style="display:inline-block; margin:4px;width:16.127cm;height:9.936cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C3000002EF3F2B3A54.png" /></td></tr></table>
 
 <p>Nous créons un nouveau projet Netbeans [elections-swing-metier-dao-security-webjson] par un copy / paste du projet [elections-ui-metier-dao-webjson] :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000498000001F139049F43.png" style="display:inline-block; margin:4px;width:15.558cm;height:6.576cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000498000001F139049F43.png" style="display:inline-block; margin:4px;width:15.558cm;height:6.576cm;" class="odt-zoomable" data-zoom-src="images/1000000000000498000001F139049F43.png" /></td></tr></table>
 
 <p>Dans le nouveau projet [2] :</p>
 <ul>
@@ -1996,10 +1996,10 @@
 <p>Ce projet utilise la configuration Spring du projet console qu&#x27;il importe (cf paragraphe <a href="#refheading111102391218965">17.5.2</a>).</p>
 <p><a id="refheading251924391218965"></a></p>
 <h3 id="1763-les-vues-de-lapplication-swing">17.6.3. Les vues de l&#x27;application Swing</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000B9393BA944.png" style="display:inline-block; margin:4px;width:5.519cm;height:3.431cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012A000000B9393BA944.png" style="display:inline-block; margin:4px;width:5.519cm;height:3.431cm;" class="odt-zoomable" data-zoom-src="images/100000000000012A000000B9393BA944.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Ce projet va utiliser deux vues :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005380000024F96777603.png" style="display:inline-block; margin:4px;width:17.674cm;height:7.819cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005380000024F96777603.png" style="display:inline-block; margin:4px;width:17.674cm;height:7.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000005380000024F96777603.png" /></td></tr></table>
 
 <ul>
 <li>la vue [1] de connexion est nouvelle. Elle sert à authentifier l&#x27;utilisateur qui veut utiliser l&#x27;application. Elle utilise les classes :<ul>
@@ -2015,7 +2015,7 @@
 </ul>
 <p><a id="refheading251926391218965"></a></p>
 <h3 id="1764-la-session">17.6.4. La session</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B58BE6BCD8.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B58BE6BCD8.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000B58BE6BCD8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Lorsqu&#x27;une application Swing a plusieurs vues, il faut trouver un moyen pour qu&#x27;une vue puisse passer de l&#x27;information à une autre vue. Nous utilisons un concept utilisé en développement web : la session qui permet aux vues associées à un utilisateur précis de  partager de l&#x27;information. Ce concept sera implémenté ici à l&#x27;aide d&#x27;un singleton Spring qui sera injecté dans les deux classes qui gèrent les événements des deux vues :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2041,7 +2041,7 @@
 </ul>
 <p><a id="refheading251928391218965"></a></p>
 <h3 id="1765-la-classe-de-boot">17.6.5. La classe de boot</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001170000006EEE4D1884.png" style="display:inline-block; margin:4px;width:5.159cm;height:2.041cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001170000006EEE4D1884.png" style="display:inline-block; margin:4px;width:5.159cm;height:2.041cm;" class="odt-zoomable" data-zoom-src="images/10000000000001170000006EEE4D1884.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe de boot de l&#x27;application graphique est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2199,15 +2199,15 @@
 </ul>
 <p><a id="refheading251932391218965"></a></p>
 <h3 id="1767-la-vue-abstractelectionsconnectform">17.6.7. La vue [AbstractElectionsConnectForm]</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B510C58FFE.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B510C58FFE.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000B510C58FFE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Construisez avec Netbeans le formulaire suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020A0000012673B4D7F0.png" style="display:inline-block; margin:4px;width:8.28cm;height:4.671cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020A0000012673B4D7F0.png" style="display:inline-block; margin:4px;width:8.28cm;height:4.671cm;" class="odt-zoomable" data-zoom-src="images/100000000000020A0000012673B4D7F0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe n&#x27;implémentera pas elle-même la méthode gérant le clic sur l&#x27;option de menu [Connexion]. Elle fera appel à une méthode [doConnecter] déclarée abstraite et la classe de la vue sera elle-même déclarée abstraite. On supprimera la méthode statique [main] qui a été générée automatiquement.</p>
 <p><a id="refheading251934391218965"></a></p>
 <h3 id="1768-la-gestion-des-evenements-de-la-vue-de-connexion">17.6.8. La gestion des événements de la vue de connexion</h3>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B552B2A441.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B552B2A441.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000B552B2A441.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ElectionsConnectForm] implémente la gestion des événements de la vue de connexion de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
@@ -2319,9 +2319,9 @@
 </ul>
 </li>
 </ul>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012AA6F09D99.png" style="display:inline-block; margin:4px;width:8.641cm;height:4.895cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A6F32C14F.png" style="display:inline-block; margin:4px;width:8.839cm;height:5.006cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012AA6F09D99.png" style="display:inline-block; margin:4px;width:8.641cm;height:4.895cm;" class="odt-zoomable" data-zoom-src="images/100000000000020E0000012AA6F09D99.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A6F32C14F.png" style="display:inline-block; margin:4px;width:8.839cm;height:5.006cm;" class="odt-zoomable" data-zoom-src="images/100000000000020E0000012A6F32C14F.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A404BE896.png" style="display:inline-block; margin:4px;width:8.641cm;height:4.895cm;" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A0B2E7A39.png" style="display:inline-block; margin:4px;width:8.839cm;height:5.006cm;" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A404BE896.png" style="display:inline-block; margin:4px;width:8.641cm;height:4.895cm;" class="odt-zoomable" data-zoom-src="images/100000000000020E0000012A404BE896.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A0B2E7A39.png" style="display:inline-block; margin:4px;width:8.839cm;height:5.006cm;" class="odt-zoomable" data-zoom-src="images/100000000000020E0000012A0B2E7A39.png" /></td></tr></table>
 
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : complétez le code de la classe.</p>
