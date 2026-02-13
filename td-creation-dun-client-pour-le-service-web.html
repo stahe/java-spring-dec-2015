@@ -1109,7 +1109,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000461000002E4615022DB.png" style="display:inline-block; margin:4px;width:14.831cm;height:9.79cm;" class="odt-zoomable" data-zoom-src="images/1000000000000461000002E4615022DB.png" /></td></tr></table>
 
 <p>La couche [ui] sera celle déjà développée aux paragraphes <a href="td-implementation-de-la-couche-ui-avec-un-programme-console.html#refheading318371812363491">9</a> et <a href="td-implementation-de-la-couche-ui-avec-une-interface-swing.html#refheading318571812363491">10</a>. Cela sera possible parce que la couche [métier] ci-dessus implémentera la même interface [IElectionsMetier] que la couche [métier] du paragraphe <a href="td-la-couche-metier.html#refheading318191812363491">8</a> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.client.metier;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.client.entities.ListeElectorale;</span></span>
@@ -1166,7 +1166,7 @@
 
 <p><a id="refheading180102656793311"></a></p>
 <p>La classe [MetierConfig] fait la configuration Spring de la couche [métier]. Son code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.client.config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.beans.factory.config.ConfigurableBeanFactory;</span></span>
@@ -1223,7 +1223,7 @@
 
 <p>Les entités manipulées par les couches [DAO] et [métier] sont celles qu&#x27;elles échangent avec le service web / jSON. Ce sont les objets de type [ElectionsConfig] et [ListeElectorale]. Côté serveur, ces entités avaient des annotations de persistence JPA. Ici, ces annotations ont été enlevées. Nous redonnons le code des entités pour rappel :</p>
 <p>[AbstractEntity]</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.webjson.client.entities;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"></span>
@@ -1268,7 +1268,7 @@
 </code></pre></div>
 
 <p>[ElectionsConfig]</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.webjson.client.entities;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"></span>
@@ -1294,7 +1294,7 @@
 </code></pre></div>
 
 <p>[ListeElectorale]</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.webjson.client.entities;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"></span>
@@ -1327,7 +1327,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010A000000D19F1A04FD.png" style="display:inline-block; margin:4px;width:4.93cm;height:3.87cm;" class="odt-zoomable" data-zoom-src="images/100000000000010A000000D19F1A04FD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La couche [DAO] présente l&#x27;interface [IClientDao] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.client.dao;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">interface</span><span style="color:#000000"> IClientDao {</span></span>
@@ -1349,7 +1349,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000117000000CA2AEDA8C2.png" style="display:inline-block; margin:4px;width:5.159cm;height:3.739cm;" class="odt-zoomable" data-zoom-src="images/1000000000000117000000CA2AEDA8C2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ClientDao] implémente l&#x27;interface [IClientDao] de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.client.dao;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.net.URI;</span></span>
@@ -1410,7 +1410,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E7000000E0762A1E55.png" style="display:inline-block; margin:4px;width:4.279cm;height:4.15cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E7000000E0762A1E55.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Comme il a été dit, la couche [métier] présente la même interface [IElectionsMetier] que dans le paragraphe <a href="td-la-couche-metier.html#refheading318211812363491">8.4</a> :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.client.metier;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.client.entities.ListeElectorale;</span></span>
@@ -1436,7 +1436,7 @@
 </code></pre></div>
 
 <p>Cette interface est implémentée par la classe [ElectionsMetier] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.client.metier;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.ArrayList;</span></span>
@@ -1564,7 +1564,7 @@
 <p>Comme l&#x27;interface [IElectionsMetier] de la couche [métier] est identique à celle du projet décrit au paragraphe<a href="td-la-couche-metier.html#refheading318191812363491">8</a>, nous pouvons en [3], copier le projet de la couches [ui] du paragraphe <a href="td-implementation-de-la-couche-ui-avec-une-interface-swing.html#refheading318571812363491">10</a>. Ce projet était un projet Netbeans. Il suffit de faire un copier / coller des classes Java concernées de Netbeans vers Eclipse. Ceci fait, il y a des ajustements de packages et d&#x27;imports à faire.</p>
 <p>On fera de même pour les classes exécutables du package [elections.client.boot] [4].</p>
 <p>La classe [AbstractBootElections] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.client.boot;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.context.annotation.AnnotationConfigApplicationContext;</span></span>
@@ -1596,7 +1596,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011B000000D01E906E73.png" style="display:inline-block; margin:4px;width:5.241cm;height:3.851cm;" class="odt-zoomable" data-zoom-src="images/100000000000011B000000D01E906E73.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [UiConfig] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.client.config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.context.annotation.ComponentScan;</span></span>

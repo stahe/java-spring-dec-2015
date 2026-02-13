@@ -1293,7 +1293,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001240000011A86638049.png" style="display:inline-block; margin:4px;width:5.41cm;height:5.219cm;" class="odt-zoomable" data-zoom-src="images/10000000000001240000011A86638049.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface [IRxElectionsMetier] est l&#x27;interface asynchrone de la couche [RxJava, métier]. Son code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.metier;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.entities.ListeElectorale;</span></span>
@@ -1331,7 +1331,7 @@
 </ul>
 <p>Tant que la méthode [Observable.subscribe] n&#x27;est pas appelée, l&#x27;opération asynchrone liée à l&#x27;observable n&#x27;est pas lancée. Le code qui appelle une méthode M de l&#x27;interface [IRxElectionsMetier] n&#x27;obtient pas le résultat T attendu, mais un type Observable&lt;T&gt; qui lui permettra ultérieurement d&#x27;obtenir le résultat T en appelant la méthode [Observable.subscribe].</p>
 <p>L&#x27;implémentation [RxElectionsMetier] de l&#x27;interface [IRxElectionsMetier] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.metier;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.entities.ListeElectorale;</span></span>
@@ -1418,7 +1418,7 @@
 </ul>
 <p>On se rappellera bien que la méthode [RxElectionsMetier] rend un type Observable&lt;ListeElectorale[]&gt; et non le type ListeElectorale[] lui-même. Il faudra que le code appelant appelle la méthode Observable&lt;ListeElectorale[]&gt;.<strong>subscribe</strong> pour que le code des lignes 23-33 soit exécuté et rende les listes électorales au moyen de la ligne 25.</p>
 <p>Le code des autres méthodes est analogue :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.metier;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.entities.ListeElectorale;</span></span>
@@ -1536,7 +1536,7 @@
 <p><a id="refheading127476149879088"></a></p>
 <h4 id="20141-test01">20.1.4.1. Test01</h4>
 <p>Nous reprenons le test unitaire [Test01] étudié au paragraphe <a href="td-securisation-du-serveur-web--json-des-elections.html#refheading251914391218965">17.4.4</a>. Il a été prévu pour faire des appels synchrones à l&#x27;interface [IElectionsMetier]. Nous le modifions pour qu&#x27;il fasse des appels synchrones à la nouvelle interface [IRxElectionsMetier]. Il est en effet possible de faire des appels synchrones à une interface asynchrone RxJava. Le code devient le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.metier.junit;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.junit.Assert;</span></span>
@@ -1769,7 +1769,7 @@
 <h4 id="20142-test02">20.1.4.2. Test02</h4>
 <p>Nous transformons le test [Test01] afin de tester désormais l&#x27;interface asynchrone [IRxElectionsMetier] en faisant des appels asynchrones à ses méthodes.</p>
 <p>Etudions un premier test :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// sémaphore de synchronisation de threads</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> CountDownLatch latch;</span></span>
 <span class="odt-code-line"></span>
@@ -1846,7 +1846,7 @@
 <li>ligne 25 : lorsqu&#x27;on arrive à cette ligne, l&#x27;observable a terminé son travail. On peut alors faire les mêmes vérifications que dans le test [Test01] ;</li>
 </ul>
 <p>Examinons un autre test :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">// -----------------------------------</span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> ElectionsException calculSieges1Exception;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> ListeElectorale[] listesCalculSieges1;</span></span>
@@ -1915,7 +1915,7 @@
 <li>puisqu&#x27;il n&#x27;y a plus qu&#x27;un thread, la synchronisation de threads devient inutile et le sémaphore disparaît ;</li>
 </ul>
 <p>Voici deux exemples de tests :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// -----------------------------------</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> ElectionsException checkUserUserException;</span></span>
 <span class="odt-code-line"></span>
@@ -1939,7 +1939,7 @@
 <ul>
 <li>ligne 7 : par défaut, la méthode [<span style="color: #ff0000">electionsMetier.authenticate(user)</span>.subscribe] s&#x27;exécute dans le thread du code appelant. On a donc une opération synchrone ;</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// -----------------------------------</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> ElectionsException calculSieges1Exception;</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> ListeElectorale[] listesCalculSieges1;</span></span>
@@ -2013,7 +2013,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000100000000B8D59AAE49.png" style="display:inline-block; margin:4px;width:4.74cm;height:3.41cm;" class="odt-zoomable" data-zoom-src="images/1000000000000100000000B8D59AAE49.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le code actuel de la classe [BootElectionsConsole01] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.boot;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.console.IElectionsUI;</span></span>
@@ -2039,7 +2039,7 @@
 </code></pre></div>
 
 <p>Revenons au code de la classe [ElectionsConsole01] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#646464">@</span><span style="color:#000000">Component</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ElectionsConsole01 </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> IElectionsUI {</span></span>
 <span class="odt-code-line"></span>
@@ -2067,7 +2067,7 @@
 </code></pre></div>
 
 <p>Si on suit l&#x27;exemple du test [Test01] du paragraphe <a href="#refheading127476149879088">20.1.4.1</a>, les lignes 5, 17, 20 et 22 vont évoluer de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="color:#646464">@</span><span style="color:#000000">Component</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ElectionsConsole01 </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> IElectionsUI {</span></span>
 <span class="odt-code-line"></span>
@@ -2169,7 +2169,7 @@
 <p><a id="refheading129888735939761"></a></p>
 <h3 id="2032-la-classe-electionsconnectform">20.3.2. <span style="color: #000000">La classe [ElectionsConnectForm]</span></h3>
 <p><span style="color: #000000">Dans un fonctionnement asynchrone, la classe [ElectionsConnectForm] devient la suivante :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.swing;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.console.IElectionsUI;</span></span>
@@ -2289,7 +2289,7 @@
 
 <p><a id="refheading129892735939761"></a></p>
 <h4 id="20331-initialisation-de-linterface-graphique">20.3.3.1. Initialisation de l&#x27;interface graphique</h4>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span> elections.security.client.swing;</span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.console.IElectionsUI;</span></span>
@@ -2389,7 +2389,7 @@
 <li><span style="color: #000000">lignes 74-77 : le résultat renvoyé par le processus observé est mémorisé dans le champ [listes] de la ligne 38 ;</span></li>
 <li><span style="color: #000000">ligne 79 : l&#x27;éventuelle exception est traitée par la méthode suivante :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">  <span style="font-weight:bold;color:#7f0055">private</span> <span style="font-weight:bold;color:#7f0055">void</span> showException(Throwable th) {</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// on affiche l&#x27;exception</span></span>
 <span class="odt-code-line"><span style="color:#000000">    jTextPaneMessages.setText(getInfoForException(</span><span style="color:#2a00ff">&quot;Les erreurs suivantes se sont produites : &quot;</span><span style="color:#000000">, th));</span></span>
@@ -2400,7 +2400,7 @@
 <ul>
 <li><span style="color: #000000">lignes 81-84 : à la fin du processus observé, on exécute les lignes 81-84. Ces lignes ne sont pas exécutées s&#x27;il y a eu exception. La méthode [doInitStep2] assure l&#x27;étape 2 de l&#x27;initialisation de la façon suivante :</span></li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">  <span style="font-weight:bold;color:#7f0055">private</span> <span style="font-weight:bold;color:#7f0055">void</span> doInitStep2() {</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// on associe les noms des listes au combo jComboBoxNomsListes</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">for</span><span style="color:#000000"> (</span><span style="font-weight:bold;color:#7f0055">int</span><span style="color:#000000"> i = 0; i &lt; listes.length; i++) {</span></span>
@@ -2433,7 +2433,7 @@
 <li><span style="color: #000000">lignes 17-20 : à réception du signal de fin de l&#x27;observable, on passe à l&#x27;étape 3 du processus d&#x27;initialisation ;</span></li>
 </ul>
 <p><span style="color: #000000">L&#x27;étape 3 de l&#x27;initialisation est assurée par le code suivant :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">  <span style="font-weight:bold;color:#7f0055">private</span> <span style="font-weight:bold;color:#7f0055">void</span> doInitStep3() {</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// seuil électoral</span></span>
 <span class="odt-code-line">    <span style="color:#ff0000">metier.getSeuilElectoral(user).subscribeOn(Schedulers.io()).observeOn(SwingScheduler.getInstance())</span></span>
@@ -2488,7 +2488,7 @@
 <li><span style="color: #000000">lignes 13-14 : à réception du signal de fin de l&#x27;observable, rien n&#x27;est fait ;</span></li>
 </ul>
 <p><span style="color: #000000">Ligne 9, la méthode [consumeResultSieges] exploite le résultat renvoyé par le processus observé, les listes candidates avec leurs champs [sieges, elimine] mis à jour :</span></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">  <span style="font-weight:bold;color:#7f0055">private</span> <span style="font-weight:bold;color:#7f0055">void</span> consumeResultSieges(ListeElectorale[] tListesSaisies) {</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// on mémorise le résultat</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">this</span><span style="color:#000000">.tListesSaisies = tListesSaisies;</span></span>

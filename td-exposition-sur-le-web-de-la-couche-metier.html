@@ -1195,7 +1195,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011700000083837432B9.png" style="display:inline-block; margin:4px;width:5.181cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/100000000000011700000083837432B9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le projet de la couche [métier] est un projet Spring configuré par le fichier [MetierConfig] suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.metier.config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.context.annotation.ComponentScan;</span></span>
@@ -1304,7 +1304,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014100000093208C1DB3.png" style="display:inline-block; margin:4px;width:5.941cm;height:2.72cm;" class="odt-zoomable" data-zoom-src="images/100000000000014100000093208C1DB3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [WebConfig] configure le service web :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.webjson.config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.beans.factory.annotation.Autowired;</span></span>
@@ -1368,7 +1368,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000009220D29527.png" style="display:inline-block; margin:4px;width:5.791cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000001390000009220D29527.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Boot] lance le service web de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.webjson.boot;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.boot.SpringApplication;</span></span>
@@ -1391,7 +1391,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000A451BFCA3B.png" style="display:inline-block; margin:4px;width:6.04cm;height:3.039cm;" class="odt-zoomable" data-zoom-src="images/1000000000000146000000A451BFCA3B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Toutes les URL du service web / jSON envoient le même type de réponse :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.webjson.service;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.List;</span></span>
@@ -1428,7 +1428,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000A451BFCA3B.png" style="display:inline-block; margin:4px;width:6.04cm;height:3.039cm;" class="odt-zoomable" data-zoom-src="images/1000000000000146000000A451BFCA3B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le service web / jSON est implémenté par la classe [ElectionsController] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.webjson.service;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.ArrayList;</span></span>

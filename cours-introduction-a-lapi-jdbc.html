@@ -1280,7 +1280,7 @@
 <p><a id="refheading251880391218965"></a></p>
 <h3 id="631-etape-1-chargement-en-memoire-du-pilote-jdbc">6.3.1. étape 1 - chargement en mémoire du pilote JDBC</h3>
 <p><u><a id="refheading592718201560381"></a>Le code</u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// chargement du pilote JDBC</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">try</span><span style="color:#000000"> {</span></span>
 <span class="odt-code-line"><span style="color:#000000">            Class.</span><span style="font-style:italic;color:#000000">forName</span><span style="color:#000000">(</span><span style="font-weight:bold;font-style:italic;color:#0000c0">nom de la classe du pilote JDBC</span><span style="color:#000000">);</span></span>
@@ -1294,7 +1294,7 @@
 <h3 id="632-etape-2-ouverture-dune-connexion">6.3.2. étape 2 - ouverture d&#x27;une connexion</h3>
 <p><a id="refheading592918201560381"></a>Une fois le pilote JDBC en place, on lui demande d&#x27;ouvrir une connexion avec la BD :</p>
 <p><u>Le code</u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.jdbc;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.sql.Connection;</span></span>
@@ -1343,7 +1343,7 @@
 <h3 id="633-etape-3-emission-dordres-sql-select">6.3.3. étape 3 - émission d&#x27;ordres SQL [SELECT]</h3>
 <p><a id="refheading593118201560381"></a>Une fois obtenue une connexion, on peut émettre des ordres SQL. La façon de gérer des ordres de lecture [SELECT] diffère de celle utilisée pour les opérations de mise à jour [UPDATE, INSERT, DELETE]. Nous commençons par les ordres SQL [SELECT] :</p>
 <p><u><strong>Le code</strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span style="color:#000000">Connection </span><span style="color:#6a3e3e">connexion</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        PreparedStatement </span><span style="color:#6a3e3e">ps</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line"><span style="color:#000000">        ResultSet </span><span style="color:#6a3e3e">rs</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span>
@@ -1413,7 +1413,7 @@
 <li>ligne 19 : la transaction est validée (on dit également committée). Cela la termine et libère les ressources que le SGBD avait mobilisées pour elle ;</li>
 <li>ligne 25 : les ressources sont libérées dans le [finally]. Celui-ci appelle la méthode [doFinally] suivante :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> doFinally(ResultSet </span><span style="color:#6a3e3e">rs</span><span style="color:#000000">, PreparedStatement </span><span style="color:#6a3e3e">ps</span><span style="color:#000000">, Connection </span><span style="color:#6a3e3e">connexion</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// fermeture ResultSet</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (</span><span style="color:#6a3e3e">rs</span><span style="color:#000000"> != </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">) {</span></span>
@@ -1451,7 +1451,7 @@
 <ul>
 <li>ligne 22 : l&#x27;exception est traitée par la méthode [doCatchException] suivante :</li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> doCatchException(Connection </span><span style="color:#6a3e3e">connexion</span><span style="color:#000000">, Throwable </span><span style="color:#6a3e3e">th</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// annulation transaction</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">try</span><span style="color:#000000"> {</span></span>
@@ -1571,7 +1571,7 @@
 <p><a id="refheading59431820156038"></a></p>
 <h3 id="644-la-classe-des-produits">6.4.4. La classe des produits</h3>
 <p>La classe [Produit] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.jdbc;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> com.fasterxml.jackson.core.JsonProcessingException;</span></span>
@@ -1625,7 +1625,7 @@
 <p><a id="refheading59451820156038"></a></p>
 <h3 id="645-la-classe-static">6.4.5. La classe [Static]</h3>
 <p>La classe [Static] regroupe dans des méthodes du code utilisé fréquemment dans la classe principale :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.jdbc;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.ArrayList;</span></span>
@@ -1664,7 +1664,7 @@
 <p>Ce code pourrait être dans la classe principale parce qu&#x27;ici c&#x27;est la seule à l&#x27;utiliser. On se place ici dans un cas plus large ou d&#x27;autres classes auraient besoin de ce code.</p>
 <p><a id="refheading59471820156038"></a></p>
 <h3 id="646-le-squelette-de-la-classe-principale">6.4.6. Le squelette de la classe principale</h3>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-sql">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.jdbc;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.sql.Connection;</span></span>
@@ -1785,7 +1785,7 @@
 <p><a id="refheading59491820156038"></a></p>
 <h3 id="647-suppression-du-contenu-de-la-table-des-produits">6.4.7. Suppression du contenu de la table des produits</h3>
 <p>La méthode [delete] supprime le contenu de la table :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">// suppression produits</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> delete() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        Connection </span><span style="color:#6a3e3e">connexion</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span>
@@ -1824,7 +1824,7 @@
 </li>
 </ul>
 <p>Dans nos exemples, à chaque fois que se produit une exception, nous annulons la transaction dans la méthode [<em><span style="color: #000000">doCatchException</span></em>] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> doCatchException(String </span><span style="color:#6a3e3e">title</span><span style="color:#000000">, Connection </span><span style="color:#6a3e3e">connexion</span><span style="color:#000000">, Throwable </span><span style="color:#6a3e3e">th</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// on affiche les msg d&#x27;erreur</span></span>
 <span class="odt-code-line"><span style="color:#000000">        Static.</span><span style="font-style:italic;color:#000000">show</span><span style="color:#000000">(</span><span style="color:#6a3e3e">title</span><span style="color:#000000">, Static.</span><span style="font-style:italic;color:#000000">getErreursFromThrowable</span><span style="color:#000000">(</span><span style="color:#6a3e3e">th</span><span style="color:#000000">));</span></span>
@@ -1843,7 +1843,7 @@
 <p><a id="refheading59511820156038"></a></p>
 <h3 id="648-creation-du-contenu-de-la-table-des-produits">6.4.8. Création du contenu de la table des produits</h3>
 <p>La méthode [insert] crée le contenu de la table :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">// ajout produits</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> insert() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        Connection </span><span style="color:#6a3e3e">connexion</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span>
@@ -1883,7 +1883,7 @@
 <p><a id="refheading59531820156038"></a></p>
 <h3 id="649-affichage-du-contenu-de-la-table-des-produits">6.4.9. Affichage du contenu de la table des produits</h3>
 <p>La méthode [select] affiche le contenu de la table :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// liste des produits</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> select() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        Connection </span><span style="color:#6a3e3e">connexion</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span>
@@ -1918,7 +1918,7 @@
 <p><a id="refheading59551820156038"></a></p>
 <h3 id="6410-mise-a-jour-du-contenu-de-la-table">6.4.10. Mise à jour du contenu de la table</h3>
 <p>La méthode [update] met à jour certains produits :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">// mise à jour de certains produits</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> update() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        Connection </span><span style="color:#6a3e3e">connexion</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span>
@@ -1951,7 +1951,7 @@
 <p><a id="refheading59571820156038"></a></p>
 <h3 id="6411-role-de-la-transaction">6.4.11. Rôle de la transaction</h3>
 <p>La méthode [insert2] insère deux produits de même clé primaire dans la table, ce qui n&#x27;est pas possible. Comme on est dans une transaction, le première insertion va être annulée.</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">// ajout de  2 produits de mêmes clés primaires</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> insert2() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        Connection </span><span style="color:#6a3e3e">connexion</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span>
@@ -2162,7 +2162,7 @@
 <p><a id="refheading59651820156038"></a></p>
 <h3 id="652-la-classe-principale">6.5.2. La classe principale</h3>
 <p>La classe principale [IntroJdbc02] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.jdbc;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.sql.Connection;</span></span>

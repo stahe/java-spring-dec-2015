@@ -1283,7 +1283,7 @@
 </ul>
 <p>Il nous reste à modifier les classes de configuration du projet :</p>
 <p><u><strong>[DaoConfig]</strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.context.annotation.Bean;</span></span>
@@ -1315,7 +1315,7 @@
 </ul>
 <p><strong>Note</strong> : comme il a été dit, cette configuration ne marche que si la classe [<span style="color: #000000">elections.dao.config.DaoConfig</span>] a l&#x27;annotation [@Configuration]. Vérifiez ce point.</p>
 <p><u><strong>[SecurityConfig]</strong></u></p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">...</span>
@@ -1374,7 +1374,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000106000000A6331D601E.png" style="display:inline-block; margin:4px;width:4.851cm;height:3.069cm;" class="odt-zoomable" data-zoom-src="images/1000000000000106000000A6331D601E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface [IElectionsMetier] évolue de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.metier;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.entities.ListeElectorale;</span></span>
@@ -1405,7 +1405,7 @@
 
 <p>Toutes les méthodes ont pour premier paramètre, l&#x27;utilisateur qui veut utiliser les ressources du serveur sécurisé.</p>
 <p>L&#x27;implémentation [ElectionsMetier] évolue de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.metier;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.IOException;</span></span>
@@ -1500,7 +1500,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000102000000836B55FF70.png" style="display:inline-block; margin:4px;width:4.78cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/1000000000000102000000836B55FF70.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [MetierConfig] évolue comme suit :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">...</span>
@@ -1515,7 +1515,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001220000008C545EB71D.png" style="display:inline-block; margin:4px;width:5.369cm;height:2.589cm;" class="odt-zoomable" data-zoom-src="images/10000000000001220000008C545EB71D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe de test [Test01] évolue de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.metier.junit;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.junit.Assert;</span></span>
@@ -1805,7 +1805,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000000E555E1FEA0.png" style="display:inline-block; margin:4px;width:4.56cm;height:4.24cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000000E555E1FEA0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [UiConfig] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.entities.User;</span></span>
@@ -1838,7 +1838,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000105000000A3E63A28B1.png" style="display:inline-block; margin:4px;width:4.83cm;height:3.02cm;" class="odt-zoomable" data-zoom-src="images/1000000000000105000000A3E63A28B1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ElectionsConsole] évolue de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.console;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.Arrays;</span></span>
@@ -2018,7 +2018,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B58BE6BCD8.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000B58BE6BCD8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Lorsqu&#x27;une application Swing a plusieurs vues, il faut trouver un moyen pour qu&#x27;une vue puisse passer de l&#x27;information à une autre vue. Nous utilisons un concept utilisé en développement web : la session qui permet aux vues associées à un utilisateur précis de  partager de l&#x27;information. Ce concept sera implémenté ici à l&#x27;aide d&#x27;un singleton Spring qui sera injecté dans les deux classes qui gèrent les événements des deux vues :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.swing;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.entities.User;</span></span>
@@ -2044,7 +2044,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001170000006EEE4D1884.png" style="display:inline-block; margin:4px;width:5.159cm;height:2.041cm;" class="odt-zoomable" data-zoom-src="images/10000000000001170000006EEE4D1884.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe de boot de l&#x27;application graphique est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.boot;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.console.IElectionsUI;</span></span>
@@ -2069,7 +2069,7 @@
 <p><a id="refheading251930391218965"></a></p>
 <h3 id="1766-la-classe-electionsmainform">17.6.6. La classe [ElectionsMainForm]</h3>
 <p>La classe [ElectionsMainForm] est celle qui s&#x27;appelait auparavant [ElectionsSwing]. Elle gère les événements de la vue [AbstractElectionsMainForm]. Son code évolue de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.swing;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.console.IElectionsUI;</span></span>
@@ -2210,7 +2210,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B552B2A441.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000B552B2A441.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [ElectionsConnectForm] implémente la gestion des événements de la vue de connexion de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.security.client.swing;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.security.client.console.IElectionsUI;</span></span>

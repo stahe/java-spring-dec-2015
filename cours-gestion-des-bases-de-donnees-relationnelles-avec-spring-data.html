@@ -1350,7 +1350,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB00000077D50ECFCE.png" style="display:inline-block; margin:4px;width:4.35cm;height:2.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EB00000077D50ECFCE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;application est basique et gère des clients [Customer]. La classe [Customer] fait partie de la couche [JPA] et est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> hello;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.persistence.Entity;</span></span>
@@ -1401,7 +1401,7 @@
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB00000077BA57F747.png" style="display:inline-block; margin:4px;width:4.35cm;height:2.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EB00000077BA57F747.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> hello;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.List;</span></span>
@@ -1415,7 +1415,7 @@
 </code></pre></div>
 
 <p>C&#x27;est donc une interface et non une classe (ligne 7). Elle étend l&#x27;interface [CrudRepository], une interface de Spring Data (ligne 5). Cette interface est paramétrée par deux types : le premier est le type des éléments gérés, ici le type [Customer], le second le type de la clé primaire des éléments gérés, ici un type [Long]. L&#x27;interface [CrudRepository] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> org.springframework.data.repository;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.Serializable;</span></span>
@@ -1458,7 +1458,7 @@
 <li>ligne 18 : idem mais limitées aux entités dont on a passé la liste des identifiants ;</li>
 </ul>
 <p>Revenons à l&#x27;interface [CustomerRepository] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> hello;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.List;</span></span>
@@ -1500,7 +1500,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB00000077E52D8FD9.png" style="display:inline-block; margin:4px;width:4.35cm;height:2.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EB00000077E52D8FD9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Application] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> hello;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.beans.factory.annotation.Autowired;</span></span>
@@ -1770,7 +1770,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E80000009FB5A3B942.png" style="display:inline-block; margin:4px;width:4.3cm;height:2.94cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E80000009FB5A3B942.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe exécutable [Application] est désormais la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> console;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.context.annotation.AnnotationConfigApplicationContext;</span></span>
@@ -1807,7 +1807,7 @@
 <li>ligne 13 : on demande une référence sur le bean de type [<span style="color: #000000">CustomerRepository</span>] ;</li>
 </ul>
 <p>La classe [<a id="springdataconfig"></a>Config] qui configure le projet est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.persistence.EntityManagerFactory;</span></span>
@@ -2150,7 +2150,7 @@
 <li>lignes 37-41 : les dépendances nécessaires aux tests JUnit intégrés avec Spring ;</li>
 </ul>
 <p>La classe exécutable [Application] ne fait rien mais est préconfigurée :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> demo;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.boot.SpringApplication;</span></span>
@@ -2169,7 +2169,7 @@
 <li>l&#x27;annotation [@SpringBootApplication] fait de la classe une classe d&#x27;auto-configuration du projet ;</li>
 </ul>
 <p>La classe de tests [ApplicationTests] ne fait rien mais est préconfigurée :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> demo;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.junit.Test;</span></span>
@@ -2320,13 +2320,13 @@
 </ul>
 <p><a id="refheading2192502014630537"></a></p>
 <h3 id="1135-les-entites-de-la-couche-jpa">11.3.5. Les entités de la couche [JPA]</h3>
-<p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
+<p>Couche[<strong>DAO</strong>]Couche[<strong>console</strong>]Couche[<strong>JPA</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>Spring Data</strong>]Spring 4SGBD</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DB000000CFBC5B5629.png" style="display:inline-block; margin:4px;width:4.06cm;height:3.829cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DB000000CFBC5B5629.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading1961141114084373"></a></p>
 <h4 id="11351-la-classe-abstractentity">11.3.5.1. La classe [AbstractEntity]</h4>
 <p>La classe [AbstractEntity] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.entities;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.persistence.Column;</span></span>
@@ -2414,7 +2414,7 @@
 <p>La classe [Produit] est une entité JPA associée à une ligne de la table [PRODUITS] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024F000000AC2E1845DE.png" style="display:inline-block; margin:4px;width:11.299cm;height:3.24cm;" class="odt-zoomable" data-zoom-src="images/100000000000024F000000AC2E1845DE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.entities;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.persistence.Column;</span></span>
@@ -2480,7 +2480,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000219000000692D8D8733.png" style="display:inline-block; margin:4px;width:9.94cm;height:1.94cm;" class="odt-zoomable" data-zoom-src="images/1000000000000219000000692D8D8733.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Son code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.entities;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.HashSet;</span></span>
@@ -2540,7 +2540,7 @@
 </ul>
 <p><a id="refheading2192522014630537"></a></p>
 <h3 id="1136-la-couche-spring-data">11.3.6. La couche [Spring Data]</h3>
-<p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
+<p>Couche[<strong>DAO</strong>]Couche[<strong>console</strong>]Couche[<strong>JPA</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>Spring Data</strong>]Spring 4SGBD</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010000000139D8D8F9D3.png" style="display:inline-block; margin:4px;width:4.74cm;height:5.791cm;" class="odt-zoomable" data-zoom-src="images/100000000000010000000139D8D8F9D3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface [CategoriesRepository] gère les accès à la table [CATEGORIES] :</p>
@@ -2608,11 +2608,11 @@
 <p>Ces interfaces vont être implémentées par des classes générées par [Spring Data] au moment de l&#x27;exécution du projet. On appelle de telles classes des [proxy]. Par défaut, les méthodes de la classe d&#x27;implémentation <strong>s&#x27;exécutent dans une transaction</strong>. Le fait que ces interfaces étendent la classe [<span style="color: #000000">CrudRepository</span>] font d&#x27;elles des composants Spring.</p>
 <p><a id="refheading2192542014630537"></a></p>
 <h3 id="1137-la-couche-dao">11.3.7. La couche [DAO]</h3>
-<p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
+<p>Couche[<strong>DAO</strong>]Couche[<strong>console</strong>]Couche[<strong>JPA</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>Spring Data</strong>]Spring 4SGBD</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D7000000C851D05EDC.png" style="display:inline-block; margin:4px;width:3.979cm;height:3.679cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D7000000C851D05EDC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface [IDao] de la couche [DAO] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.dao;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.List;</span></span>
@@ -2668,7 +2668,7 @@
 
 <p>On a adopté ici la règle que toute méthode qui modifie les objets qu&#x27;elle a en paramètres d&#x27;entrée doit alors les rendre dans son résultat. La raison de cette règle a été expliquée au paragraphe <a href="td-architectures-en-couches.html#refheading317791812363491">4.2</a> : elle permet à une couche et à son client d&#x27;être dans deux JVM séparées et donc de travailler en client / serveur.</p>
 <p>L&#x27;implémentation [Dao] de cette interface est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.dao;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.ArrayList;</span></span>
@@ -2848,7 +2848,7 @@
 <li>ligne 28 : la méthode [<span style="color: #0000c0">produitsRepository</span><span style="color: #000000">.save(</span><span style="color: #6a3e3e">produits</span><span style="color: #000000">)</span>] rend un type [Iterable&lt;Produit&gt;]. Il en est de même pour les autres opérations [save] de la classe ;</li>
 </ul>
 <p>Dans la classe [Dao] ci-dessus, les exceptions qui peuvent se produire sont encapsulées dans le type [DaoException] suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.dao;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.Serializable;</span></span>
@@ -2952,7 +2952,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB000000C97BBACDD4.png" style="display:inline-block; margin:4px;width:4.35cm;height:3.72cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EB000000C97BBACDD4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [DaoConfig] configure la couche [DAO] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.persistence.EntityManagerFactory;</span></span>
@@ -3041,7 +3041,7 @@
 <li>lignes 73-76 : nous avons défini un bean qui représente le tableau des packages à scanner pour trouver des entités JPA. Cela permettra à un projet qui importe la classe [DaoConfig] de redéfinir ce bean et de changer ainsi les packages scannés ligne 59. Plus loin dans le document, nous allons rencontrer cette problématique ;</li>
 </ul>
 <p>La classe [AppConfig] configure l&#x27;ensemble du projet :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.context.annotation.Bean;</span></span>
@@ -3123,11 +3123,11 @@
 <p>On notera que l&#x27;on construit un filtre jSON pour une entité T, on doit configurer non seulement le filtre de l&#x27;entité T mais également ceux des entités Ti qu&#x27;elle-même peut contenir.</p>
 <p><a id="refheading2192562014630537"></a></p>
 <h3 id="1139-la-couche-console">11.3.9. La couche [console]</h3>
-<p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
+<p>Couche[<strong>DAO</strong>]Couche[<strong>console</strong>]Couche[<strong>JPA</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>Spring Data</strong>]Spring 4SGBD</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D7000000CA3A9BDE61.png" style="display:inline-block; margin:4px;width:3.979cm;height:3.739cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D7000000CA3A9BDE61.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Main] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.console;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.ArrayList;</span></span>
@@ -3355,7 +3355,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C40000008E249C2D8E.png" style="display:inline-block; margin:4px;width:3.63cm;height:2.63cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C40000008E249C2D8E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Test01] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.tests;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.ArrayList;</span></span>

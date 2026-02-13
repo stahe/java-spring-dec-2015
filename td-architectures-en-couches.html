@@ -1028,30 +1028,30 @@
 <span class="normal"><a href="#__codelineno-0-21">21</a></span>
 <span class="normal"><a href="#__codelineno-0-22">22</a></span>
 <span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">istia.st.elections</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">package</span> <span class="n">istia</span><span class="o">.</span><span class="n">st</span><span class="o">.</span><span class="n">elections</span><span class="p">;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.</span><span class="o">*</span><span class="p">;</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MainElections</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">public</span> <span class="k">class</span><span class="w"> </span><span class="nc">MainElections</span> <span class="p">{</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="c1">// qqs données</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">barre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>  <span class="o">//</span> <span class="n">qqs</span> <span class="n">données</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a>  <span class="n">private</span> <span class="n">static</span> <span class="n">final</span> <span class="n">double</span> <span class="n">barre</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">;</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="c1">// ----------------------------------------------------------------------</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="c1">// la procédure principale</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">arguments</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a>  <span class="o">//</span> <span class="o">----------------------------------------------------------------------</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>  <span class="o">//</span> <span class="n">la</span> <span class="n">procédure</span> <span class="n">principale</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>  <span class="n">public</span> <span class="n">static</span> <span class="n">void</span> <span class="n">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">arguments</span><span class="p">)</span> <span class="n">throws</span> <span class="n">IOException</span> <span class="p">{</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="c1">// on prépare le flux d&#39;entrée clavier</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">clavier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">));</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a>    <span class="o">//</span> <span class="n">on</span> <span class="n">prépare</span> <span class="n">le</span> <span class="n">flux</span> <span class="n">d</span><span class="s1">&#39;entrée clavier</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>    <span class="n">BufferedReader</span> <span class="n">clavier</span> <span class="o">=</span> <span class="n">new</span> <span class="n">BufferedReader</span><span class="p">(</span><span class="n">new</span> <span class="n">InputStreamReader</span><span class="p">(</span><span class="n">System</span><span class="o">.</span><span class="ow">in</span><span class="p">));</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16"></a>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="c1">// saisie des données nécessaires au calcul des sièges</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="p">...</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="c1">// calcul des sièges obtenus par les différentes listes</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="p">....</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="c1">// affichage des résultats</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="p">...</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="c1">// main</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="p">}</span><span class="w"> </span><span class="c1">// classe</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a>    <span class="o">//</span> <span class="n">saisie</span> <span class="n">des</span> <span class="n">données</span> <span class="n">nécessaires</span> <span class="n">au</span> <span class="n">calcul</span> <span class="n">des</span> <span class="n">sièges</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="o">...</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>    <span class="o">//</span> <span class="n">calcul</span> <span class="n">des</span> <span class="n">sièges</span> <span class="n">obtenus</span> <span class="n">par</span> <span class="n">les</span> <span class="n">différentes</span> <span class="n">listes</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="o">....</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a>    <span class="o">//</span> <span class="n">affichage</span> <span class="n">des</span> <span class="n">résultats</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="o">...</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a>  <span class="p">}</span> <span class="o">//</span> <span class="n">main</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="p">}</span> <span class="o">//</span> <span class="n">classe</span>
 </code></pre></div></td></tr></table></div>
 <p>La solution précédente inclut trois phases classiques :</p>
 <ul>
@@ -1278,7 +1278,7 @@
 <li>lorsque la couche [3] récupère la valeur d&#x27;un objet [ListeElectorale] afin de créer de nouveau un objet [ListeElectorale], on dit que l&#x27;objet est <strong>désérialisé</strong> ;</li>
 </ul>
 <p>Pour qu&#x27;un objet puisse subir cette sérialisation / désérialisation, certains protocoles exigent que l&#x27;objet implémente l&#x27;interface [Serializable]. Cette interface est juste un marqueur. Il n&#x27;y a pas de méthodes à implémenter. Aussi la classe [ListeElectorale] sera-t-elle désormais déclarée de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">abstract</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ListeElectorale </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> Serializable {</span></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">final</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">long</span><span style="color:#000000"> </span><span style="font-weight:bold;font-style:italic;color:#0000c0">serialVersionUID</span><span style="color:#000000"> = 1L;</span></span>
 </code></pre></div>
@@ -1305,7 +1305,7 @@
 </code></pre></div>
 
 <p>Ces méthodes travaillent avec une base de données et peuvent rencontrer diverses erreurs, par exemple un SGBD non disponible. Lorsqu&#x27;on écrit une méthode, il faut toujours prévoir les cas d&#x27;erreur. Celles-ci sont signalées classiquement par une exception. Nous avons déjà rencontré la classe [ElectionsException] au paragraphe <a href="td-classes.html#refheading317691812363491">3.3</a>. Nous allons continuer à l&#x27;utiliser mais en l&#x27;enrichissant de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> ...;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.io.Serializable;</span></span>
@@ -1427,19 +1427,19 @@
 <li><span style="color: #000000">ligne 50 : </span><strong><span style="color: #7f0055">public</span></strong><span style="color: #000000"> ElectionsException(</span><strong><span style="color: #7f0055">int</span></strong><span style="color: #000000"> </span><span style="color: #6a3e3e">code</span><span style="color: #000000">, List&lt;String&gt; </span><span style="color: #6a3e3e">erreurs</span><span style="color: #000000">) : </span><span style="color: #000000">constructeur sans encapsulation d&#x27;exception, ni mesage ;</span></li>
 </ul>
 <p><span style="color: #000000">La classe [ElectionsException] pourra être utilisée de la façon suivante :</span></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">try</span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">...</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception1</span><span class="w"> </span><span class="n">e1</span><span class="p">){</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">   </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">(</span><span class="n">un_code</span><span class="p">,</span><span class="n">un_message</span><span class="p">,</span><span class="n">e1</span><span class="p">);</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>try{
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>...
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>}catch (Exception1 e1){
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>   throw new ElectionsException(un_code,un_message,e1);
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>}
 </code></pre></div>
 <p><span style="color: #000000">où le message sera ou non présent. Une fois créée, l&#x27;exception [ElectionsException] n&#x27;a pas vocation à encapsuler de nouvelles exceptions. Ci-dessus, elle encapsule l&#x27;exception </span><em><span style="color: #000000">e1</span></em><span style="color: #000000"> et les exceptions que </span><em><span style="color: #000000">e1</span></em><span style="color: #000000"> encapsule. Il n&#x27;y a ensuite, plus de nouvelles encapsulations.</span></p>
 <p><span style="color: #000000">La classe [ElectionsException] pourra être également utilisée de la façon suivante :</span></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1">// code susceptible de rencontrer un cas d&#39;erreur (mais pas sous la forme d&#39;une exception)</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="p">...</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">if</span><span class="p">(</span><span class="n">erreur</span><span class="p">){</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">(</span><span class="n">un_code</span><span class="p">,</span><span class="n">un_message</span><span class="p">);</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>// code susceptible de rencontrer un cas d&#39;erreur (mais pas sous la forme d&#39;une exception)
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>...
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>if(erreur){
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    throw new ElectionsException(un_code,un_message);
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>}
 </code></pre></div>
 
 

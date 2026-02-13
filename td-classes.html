@@ -1071,7 +1071,7 @@
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>   };
 </code></pre></div>
 <p>La notion de structure n&#x27;existe pas dans le langage Java. Il faut la remplacer par celle de <strong>classe</strong>. On décide donc de créer une classe pour mémoriser les informations sur une liste candidate. Celle-ci aurait le squelette suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.elections;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ListeElectorale {</span></span>
@@ -1230,7 +1230,7 @@
 <li>ligne 130-132 : définissent la méthode [toString] qui rend une chaîne de caractères donnant les valeurs des cinq champs de l&#x27;objet.</li>
 </ul>
 <p>Un programme de test de la classe <strong>ListeElectorale</strong> pourrait être le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.elections.tests;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> istia.st.elections.ListeElectorale;</span></span>
@@ -1278,16 +1278,16 @@
 <h2 id="33-creation-dune-classe-dexception-electionsexception">3.3. Création d&#x27;une classe d&#x27;exception [ElectionsException]</h2>
 <p>Parmi les différentes classes d&#x27;exception du langage Java, il en est une appelée [RuntimeException]. Cette classe dérive de la classe [Exception], racine de toutes les classes d&#x27;exception. La particularité des instances de [RuntimeException] ou instances dérivées est que l&#x27;on n&#x27;est pas obligé de les déclarer ou de les gérer. On les appelle des <strong>exceptions non contrôlées</strong>.</p>
 <p>Prenons un premier exemple. La classe [BufferedReader] est une classe dont les instances permettent de lire des lignes de texte dans un flux de données. Elle possède une méthode [readLine] dont la signature est la suivante :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">readLine</span><span class="p">()</span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>public String readLine()throws IOException
 </code></pre></div>
 <p>On voit que la méthode peut lancer une exception de type [IOException]. L&#x27;arborescence de cette classe est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">Object</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">  </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">Throwable</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">      </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">Exception</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">          </span><span class="n">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">IOException</span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>java.lang.Object
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>  java.lang.Throwable
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>      java.lang.Exception
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>          java.io.IOException
 </code></pre></div></td></tr></table></div>
 <p>La classe [IOException] dérive de la classe [Exception] (ligne 3). Le compilateur nous force à gérer et à déclarer les exceptions de type [java.lang.Exception] ou dérivé (sauf pour la branche [RuntimeException] que nous allons présenter plus loin). Ainsi, pour lire une ligne de texte tapée au clavier, on sera obligé d&#x27;écrire quelque chose comme :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
@@ -1297,17 +1297,17 @@
 <span class="normal"><a href="#__codelineno-3-5">5</a></span>
 <span class="normal"><a href="#__codelineno-3-6">6</a></span>
 <span class="normal"><a href="#__codelineno-3-7">7</a></span>
-<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">BufferedReader</span><span class="w"> </span><span class="n">clavier</span><span class="o">=</span><span class="p">....;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">String</span><span class="w"> </span><span class="n">ligne</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="k">try</span><span class="p">{</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="n">ligne</span><span class="o">=</span><span class="n">clavier</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="c1">// gérer l&#39;exception</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="p">....</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>BufferedReader clavier=....;
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>String ligne=null;
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>try{
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>    ligne=clavier.readLine();
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>}catch (IOException ex){
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a>    // gérer l&#39;exception
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>    ....
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a>}
 </code></pre></div></td></tr></table></div>
 <p>Prenons un autre exemple. Pour transformer une chaîne en entier on peut utiliser la méthode statique [Integer.parseInt] dont la signature est la suivante :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">parseInt</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">NumberFormatException</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>public static int parseInt(String s) throws NumberFormatException
 </code></pre></div>
 <p>L&#x27;argument [s] est la chaîne de caractères à transformer en entier. On voit que la méthode peut lancer une exception de type [NumberFormatException]. L&#x27;arborescence de cette classe est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
@@ -1315,12 +1315,12 @@
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
 <span class="normal"><a href="#__codelineno-5-4">4</a></span>
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
-<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">Object</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">  </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">Throwable</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">      </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">Exception</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">          </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">RuntimeException</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">              </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">IllegalArgumentException</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">                  </span><span class="n">java</span><span class="p">.</span><span class="na">lang</span><span class="p">.</span><span class="na">NumberFormatException</span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>java.lang.Object
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>  java.lang.Throwable
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>      java.lang.Exception
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>          java.lang.RuntimeException
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>              java.lang.IllegalArgumentException
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>                  java.lang.NumberFormatException
 </code></pre></div></td></tr></table></div>
 <p>La classe [NumberFormatException] dérive de la classe [RuntimeException] (ligne 4). Le compilateur ne nous force pas à gérer et à déclarer les exceptions de type [java.lang.RuntimeException] ou dérivé. Ainsi, on pourra écrire quelque chose comme :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
@@ -1331,15 +1331,15 @@
 <span class="normal"><a href="#__codelineno-6-6">6</a></span>
 <span class="normal"><a href="#__codelineno-6-7">7</a></span>
 <span class="normal"><a href="#__codelineno-6-8">8</a></span>
-<span class="normal"><a href="#__codelineno-6-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">BufferedReader</span><span class="w"> </span><span class="n">clavier</span><span class="o">=</span><span class="p">....;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">String</span><span class="w"> </span><span class="n">ligne</span><span class="o">=</span><span class="kc">null</span><span class="p">;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="k">try</span><span class="p">{</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="n">ligne</span><span class="o">=</span><span class="n">clavier</span><span class="p">.</span><span class="na">readLine</span><span class="p">();</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="p">}</span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">ex</span><span class="p">){</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="c1">// gérer l&#39;exception</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="p">....</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="p">}</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="o">=</span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">ligne</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-6-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>BufferedReader clavier=....;
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>String ligne=null;
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>try{
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>    ligne=clavier.readLine();
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>}catch (IOException ex){
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>    // gérer l&#39;exception
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>    ....
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>}
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>int age=Integer.parseInt(ligne);
 </code></pre></div></td></tr></table></div>
 <p>Nous ne sommes pas obligés de mettre une clause [try - catch] pour gérer l&#x27;éventuelle exception générée par [Integer.parseInt] (ligne 9).</p>
 <p>Il y a des avantages et inconvénients à créer et utiliser des classes d&#x27;exception dérivées de [RuntimeException] :</p>
@@ -1348,7 +1348,7 @@
 <li>au chapitre des inconvénients : on peut être ramené aux méthodes du C où chaque fonction rend un code d&#x27;erreur que peu de gens utilisent, justement pour avoir un code plus léger. Lorsqu&#x27;une telle erreur non gérée se produit, le programme plante, généralement de façon peu élégante.</li>
 </ul>
 <p>Nous décidons de créer une classe spéciale regroupant toutes les exceptions pouvant survenir dans notre application ELECTIONS. Elle s&#x27;appellera [ElectionsException] et dérivera de la classe [RuntimeException]. Son code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.elections;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ElectionsException </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> RuntimeException {</span></span>
@@ -1381,10 +1381,10 @@
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ElectionsException</span><span class="p">(</span><span class="s">&quot;Le nombre de sièges doit être &gt;0&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>throw new ElectionsException(&quot;Le nombre de sièges doit être &gt;0&quot;)
 </code></pre></div>
 <p>Dans ce cas, la méthode qui appelle une méthode lançant une telle exception peut la gérer comme suit :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// test exception</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">try</span><span style="color:#000000"> {</span></span>
 <span class="odt-code-line">            listeElectorale2.setSieges(-3);</span>
@@ -1400,7 +1400,7 @@
 </ul>
 </li>
 </ul>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">try</span><span style="color:#000000"> {</span></span>
 <span class="odt-code-line">        ...;</span>
 <span class="odt-code-line"><span style="color:#000000">        } </span><span style="font-weight:bold;color:#7f0055">catch</span><span style="color:#000000"> (SQLException ex) {</span></span>
@@ -1410,7 +1410,7 @@
 </code></pre></div>
 
 <p>Cette seconde méthode a l&#x27;avantage de conserver l&#x27;information que peut contenir la première exception. Dans ce cas, la méthode qui appelle une méthode lançant une telle exception peut la gérer comme suit :</p>
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">try</span><span style="color:#000000"> {</span></span>
 <span class="odt-code-line">            ...;</span>
 <span class="odt-code-line"><span style="color:#000000">        } </span><span style="font-weight:bold;color:#7f0055">catch</span><span style="color:#000000"> (ElectionsException ex) {</span></span>
@@ -1433,7 +1433,7 @@
 <li>[5] : la classe de test [MainTest1ListeElectorale]</li>
 </ul>
 <p>La classe de test [MainTest1ListeElectorale] déjà étudiée est légèrement modifiée pour tester les cas d&#x27;exception :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.elections.tests;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> istia.st.elections.ElectionsException;</span></span>
@@ -1484,7 +1484,7 @@
 <p>Une application évolue au fil du temps. A chaque évolution, on doit vérifier que l&#x27;application ne &quot;régresse&quot; pas, c.a.d. qu&#x27;elle continue à passer les tests de bon fonctionnement qui avaient été faits lors de son écriture initiale. On appelle ces tests, des tests de &quot;non régression&quot;. Une application un peu importante peut nécessiter des centaines de tests. On teste en effet chaque méthode de chaque classe de l&#x27;application. On appelle cela des <strong>tests unitaires</strong>. Ceux-ci peuvent mobiliser beaucoup de développeurs s&#x27;ils n&#x27;ont pas été automatisés.</p>
 <p>Des outils ont été développés pour automatiser les tests. L&#x27;un d&#x27;eux s&#x27;appelle [JUnit]. C&#x27;est une bibliothèque de classes destinées à gérer les tests. Nous allons utiliser cet outil pour tester la classe [ListeElectorale].</p>
 <p>Un programme de test JUnit (versions 4.x) a la forme suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.elections.tests;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.junit.Assert;</span></span>
@@ -1556,7 +1556,7 @@
 <li>[6] : la classe <em>JUnitEssai</em> a été générée</li>
 </ul>
 <p>L&#x27;assistant précédent génère une classe quasiment vide :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.elections.tests;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.junit.Assert;</span></span>
@@ -1576,7 +1576,7 @@
 </code></pre></div>
 
 <p>Complétons et modifions le code précédent de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.elections.tests;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.junit.Assert;</span></span>
@@ -1630,7 +1630,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001C6000001AB22F05F4D.png" style="display:inline-block; margin:4px;width:8.41cm;height:7.909cm;" class="odt-zoomable" data-zoom-src="images/10000000000001C6000001AB22F05F4D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FA000000DEA23A34D9.png" style="display:inline-block; margin:4px;width:4.63cm;height:4.11cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FA000000DEA23A34D9.png" /></td></tr></table>
 
 <p>Nous complétons le code généré par l&#x27;assistant de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.elections.tests;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.junit.Assert;</span></span>
@@ -1743,24 +1743,24 @@
 <span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-8-10">10</a></span>
 <span class="normal"><a href="#__codelineno-8-11">11</a></span>
-<span class="normal"><a href="#__codelineno-8-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1">// classe de comparaison de listes électorales</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kd">class</span> <span class="nc">CompareListesElectorales</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Comparator</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-8-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>// classe de comparaison de listes électorales
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>class CompareListesElectorales implements Comparator {
 <a id="__codelineno-8-3" name="__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="c1">// comparaison de deux listes électorales selon le nombre de voix</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compare</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj1</span><span class="p">,</span><span class="w"> </span><span class="n">Object</span><span class="w"> </span><span class="n">obj2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="c1">// on récupère les listes électorales</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">        </span><span class="n">ListeElectorale</span><span class="w"> </span><span class="n">listeElectorale1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">)</span><span class="w"> </span><span class="n">obj1</span><span class="p">;</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="n">ListeElectorale</span><span class="w"> </span><span class="n">listeElectorale2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ListeElectorale</span><span class="p">)</span><span class="w"> </span><span class="n">obj2</span><span class="p">;</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="c1">// on compare les voix de ces deux listes</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="p">....</span><span class="w">        </span>
-<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="p">}</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>    // comparaison de deux listes électorales selon le nombre de voix
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>    public int compare(Object obj1, Object obj2) {
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>        // on récupère les listes électorales
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a>        ListeElectorale listeElectorale1 = (ListeElectorale) obj1;
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a>        ListeElectorale listeElectorale2 = (ListeElectorale) obj2;
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a>        // on compare les voix de ces deux listes
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>....        
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a>    }
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>ligne 2 : la classe n&#x27;est pas déclarée <strong>publique</strong>. Dans un fichier source Java, il peut y avoir plusieurs classes mais une seule peut avoir l&#x27;attribut <strong>public</strong>, celle qui porte le nom du fichier source.</li>
 </ul>
 <p>Dans la méthode <em>compare</em> précédente, les paramètres sont de type <em>Object,</em> ce qui oblige lignes 7 et 8, à faire un transtypage des paramètres de la méthode, du type <em>Object</em> vers le type <em>ListeElectorale</em>. La signature de la méthode <em>compare</em> est imposée par l&#x27;interface <em>Comparator</em> qui a été écrite pour comparer des objets quelconques. Depuis le JDK 1.5, il existe une interface <em>Comparator</em> générique : <em>Comparator&lt;T&gt;</em> où <em>T</em> est un type Java quelconque. La méthode <em>compare</em> de l&#x27;interface <em>Comparator&lt;T&gt;</em> compare des objets de type <em>T</em> et non de type <em>Object</em> ce qui évite les transtypages précédents. La classe de comparaison des objets de type <em>ListeElectorale</em> pourrait ressembler à ceci :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">// classe de comparaison de listes électorales</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> CompareListesElectorales </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> Comparator&lt;ListeElectorale&gt; {</span></span>
 <span class="odt-code-line"></span>

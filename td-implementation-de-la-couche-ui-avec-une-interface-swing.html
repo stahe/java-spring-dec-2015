@@ -1408,7 +1408,7 @@
 <li>[4] : choisir l&#x27;événement qu&#x27;on veut gérer</li>
 </ul>
 <p>Le code Java généré par cette opération est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000c0">jLabelCalculer</span><span style="color:#000000">.addMouseListener(</span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> java.awt.event.MouseAdapter() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">      </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> mouseClicked(java.awt.event.MouseEvent </span><span style="color:#6a3e3e">evt</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        jLabelCalculerMouseClicked(</span><span style="color:#6a3e3e">evt</span><span style="color:#000000">);</span></span>
@@ -1438,7 +1438,7 @@
 <p>Le code ci-dessus utilise la technique de la classe anonyme exposée au paragraphe 2.5 du cours [<a href="http://tahe.developpez.com/java/cours">ref1</a>].</p>
 <p>Ligne 1, le paramètre de la méthode <em>addMouseListener</em> est une classe anonyme, définie à la volée. C&#x27;est une instance d&#x27;une classe dérivée de la classe <em>MouseAdapter</em> (ligne 1) dont on redéfinit la méthode <em>mouseClicked</em> (lignes 2-4) afin qu&#x27;elle fasse quelque chose.</p>
 <p>La méthode <em>jLabelCalculerMouseClicked</em> appelée ligne 3 est définie comme suit :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> jLabelCalculerMouseClicked(java.awt.event.MouseEvent </span><span style="color:#6a3e3e">evt</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// </span><span style="font-weight:bold;color:#7f9fbf">TODO</span><span style="color:#3f7f5f"> add your handling code here:</span></span>
 <span class="odt-code-line">}</span>
@@ -1446,7 +1446,7 @@
 
 <p>Le développeur gère l&#x27;événement &quot;<em>MouseClicked</em>&quot; en mettant du code dans cette méthode.</p>
 <p>Tous les gestionnaires d&#x27;événements sont générés par Netbeans de cette façon. Le développeur peut ignorer les lignes de code générées par Netbeans pour associer une méthode à un événement d&#x27;un composant. Il peut se contenter de mettre son code en ligne 2 ci-dessus. Voici un exemple :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> jLabelCalculerMouseClicked(java.awt.event.MouseEvent </span><span style="color:#6a3e3e">evt</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    System.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">out</span><span style="color:#000000">.println(</span><span style="color:#2a00ff">&quot;Mouse Clicked&quot;</span><span style="color:#000000">);</span></span>
 <span class="odt-code-line">}</span>
@@ -1490,7 +1490,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000108000000B031B76F2A.png" style="display:inline-block; margin:4px;width:4.89cm;height:3.26cm;" class="odt-zoomable" data-zoom-src="images/1000000000000108000000B031B76F2A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le code de la classe [AbstractElectionsSwing] lui, évolue de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">abstract</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> AbstractElectionsSwing {</span></span>
 <span class="odt-code-line">....</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> jMenuItemCalculerActionPerformed(java.awt.event.ActionEvent </span><span style="color:#6a3e3e">evt</span><span style="color:#000000">) {</span></span>
@@ -1535,7 +1535,7 @@
 <li>lignes 15 et au-delà : cette technique de délégation du traitement des événements vers une méthode abstraite est apliquée à tous les gestionnaires d&#x27;événements.</li>
 </ul>
 <p>La classe [ElectionsSwing] dérivée de [AbstractElectionsSwing] implémente tous les gestionnaires d&#x27;événements non implémentés par [AbstractElectionsSwing] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.ui.service;</span><span style="color:#000000">;</span></span>
 <span class="odt-code-line">...</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ElectionsSwing </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> AbstractElectionsSwing {</span></span>
@@ -1613,7 +1613,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AF000000FEFC7607C9.png" style="display:inline-block; margin:4px;width:15.863cm;height:3.36cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AF000000FEFC7607C9.png" /></td></tr></table>
 
 <p>Ci-dessus la couche [ui] doit présenter l&#x27;interface [IElectionsUI] à l&#x27;objet [main] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.ui.service;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">interface</span><span style="color:#000000"> IElectionsUI {</span></span>
@@ -1641,7 +1641,7 @@
 <li>lignes 4-6 : la méthode [run] de cette interface</li>
 </ul>
 <p>Que doit faire la méthode <em>run</em> ? Afficher la fenêtre graphique. Comment fait-on cela ? On peut se laisser guider par la méthode [main] qu&#x27;à générée Netbeans dans la classe [AbstractElectionsSwing] et qui fait ce qui est souhaité :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> main(String </span><span style="color:#6a3e3e">args</span><span style="color:#000000">[]) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">/* Set the Nimbus look and feel */</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">//&lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot; Look and feel setting code (optional) &quot;&gt;</span></span>
@@ -1727,7 +1727,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B10000010765176D5C.png" style="display:inline-block; margin:4px;width:15.889cm;height:3.48cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B10000010765176D5C.png" /></td></tr></table>
 
 <p>Nous voudrions que Spring instancie la couche [ui] comme il a été fait lorsque celle-ci était implémentée par une application <em>console</em>. Pour cela, il faut que la classe d&#x27;implémentation [ElectionsSwing] ait une référence sur la couche [métier] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">@Component</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ElectionsSwing </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> AbstractElectionsSwing </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> IElectionsUI{</span></span>
 <span class="odt-code-line"></span>
@@ -1744,7 +1744,7 @@
 <p>L&#x27;interface graphique est lancée par l&#x27;exécution de la classe [BootElectionsSwing] suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FE000000941C25FA12.png" style="display:inline-block; margin:4px;width:4.701cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FE000000941C25FA12.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.ui.boot;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.ui.service.IElectionsUI;</span></span>
@@ -1796,7 +1796,7 @@
 <li>ligne 12, nous avons dit qu&#x27;on appelait la méthode [init] de la classe parent qui va dessiner les composants de l&#x27;interface graphique. Nous allons redéfinir cette méthode, localement, dans la classe [ElectionsSwing]. C&#x27;est dans cette méthode que nous initialiserons, avec des données cette fois, les composants de la fenêtre (combo, labels) :</li>
 </ul>
 <p>La méthode locale [init] pourrait avoir le squelette suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ElectionsSwing </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> AbstractElectionsSwing </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> IElectionsUI {</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">...</span></span>
@@ -1831,7 +1831,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010500000094F3639E55.png" style="display:inline-block; margin:4px;width:4.83cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/100000000000010500000094F3639E55.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Utilitaires] est la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.elections.ui;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> javax.swing.JLabel;</span></span>
@@ -1863,7 +1863,7 @@
 <p><a id="refheading318791812363491"></a></p>
 <h3 id="1039-le-code-de-la-classe-electionsswing">10.3.9. Le code de la classe [ElectionsSwing]</h3>
 <p>Rappelons la structure générale de la classe [ElectionsSwing] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.elections.ui;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line">...</span>
@@ -1943,7 +1943,7 @@
 <li>de désactiver certains liens</li>
 </ul>
 <p>Le squelette de la méthode [init] pourrait être le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line">@Override</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">protected</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> init() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// génération des composants par la classe parent</span></span>
@@ -2053,7 +2053,7 @@
 <p><a id="refheading318831812363491"></a></p>
 <h4 id="10392-gerer-letat-du-lien-ajouter">10.3.9.2. Gérer l&#x27;état du lien [Ajouter]</h4>
 <p>Le lien [Ajouter] [6] n&#x27;est actif que lorsque le champ [5] des voix est non vide. Dans la classe [AbstractElectionsSwing], le gestionnaire qui suit les mouvements du curseur dans le champ [5] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> jTextFieldVoixListeCaretUpdate(javax.swing.event.CaretEvent </span><span style="color:#6a3e3e">evt</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">doMajLabelAjouter()</span></span>
 <span class="odt-code-line">}</span>
@@ -2086,7 +2086,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010700000050C8319E8A.png" style="display:inline-block; margin:4px;width:4.87cm;height:1.48cm;" class="odt-zoomable" data-zoom-src="images/100000000000010700000050C8319E8A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A700000086A5A768BE.png" style="display:inline-block; margin:4px;width:7.83cm;height:2.48cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A700000086A5A768BE.png" /></td></tr></table>
 
 <p>Dans la classe [AbstractElectionsSwing], le gestionnaire qui gère le clic sur le lien [Ajouter] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> jLabelAjouterMouseClicked(java.awt.event.MouseEvent </span><span style="color:#6a3e3e">evt</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000"> (</span><span style="color:#0000c0">jLabel</span><span style="color:#000000">Ajouter.isEnabled()) {</span></span>
 <span class="odt-code-line">            do<span style="color:#000000">Ajouter</span>();</span>
@@ -2139,7 +2139,7 @@
 <h4 id="10394-gerer-letat-du-lien-supprimer">10.3.9.4. Gérer l&#x27;état du lien [Supprimer]</h4>
 <p>Le lien [Supprimer] [9] n&#x27;est actif que lorsqu&#x27;un élément est sélectionné dans [8].</p>
 <p>Dans la classe [AbstractElectionsSwing], le gestionnaire qui réagit au clic sur un élément de la liste [8] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> jListNomsVoixValueChanged(javax.swing.event.ListSelectionEvent </span><span style="color:#6a3e3e">evt</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line">    doMajLabelSupprimer();</span>
 <span class="odt-code-line">}</span>
@@ -2163,7 +2163,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A4000000818CF2F26E.png" style="display:inline-block; margin:4px;width:3.47cm;height:2.731cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A4000000818CF2F26E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A60000007D7A7AA404.png" style="display:inline-block; margin:4px;width:3.51cm;height:2.649cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A60000007D7A7AA404.png" /></td></tr></table>
 
 <p>Dans la classe [AbstractElectionsSwing], le gestionnaire qui réagit au clic sur le lien [Supprimer] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> jLabelSupprimerMouseClicked(java.awt.event.MouseEvent </span><span style="color:#6a3e3e">evt</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000">(</span><span style="color:#0000c0">jLabel</span><span style="color:#000000">Supprimer.isEnabled()){</span></span>
 <span class="odt-code-line">      doSupprimer();</span>
@@ -2197,7 +2197,7 @@
 <h4 id="10397-calculer-les-sieges">10.3.9.7. Calculer les sièges</h4>
 <p>Le lien [Calculer] [10] permet de lancer le calcul des sièges et d&#x27;afficher les résultats dans (14). En cas d&#x27;échec (toutes les listes ont été éliminées), un message d&#x27;erreur est affiché dans [15]. Dans tous les cas, après calcul, le lien [Calculer] [10] est désactivé.</p>
 <p>Dans la classe [AbstractElectionsSwing], le gestionnaire qui réagit au clic sur le lien [Calculer] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> jLabelCalculerMouseClicked(java.awt.event.MouseEvent </span><span style="color:#6a3e3e">evt</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000">(</span><span style="color:#0000c0">jLabelCalculer</span><span style="color:#000000">.isEnabled()){</span></span>
 <span class="odt-code-line">      do<span style="color:#000000">Calculer</span>();</span>
@@ -2206,7 +2206,7 @@
 </code></pre></div>
 
 <p>La ligne 3 appelle la méthode [doCalculer] de la classe [ElectionsSwing].</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#3f7f5f">// listes saisies par l&#x27;utilisateur</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">final</span><span style="color:#000000"> List&lt;ListeElectorale&gt; </span><span style="color:#0000c0">listesSaisies</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> ArrayList&lt;&gt;();</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> ListeElectorale[] </span><span style="color:#0000c0">tListesSaisies</span><span style="color:#000000">;</span></span>
@@ -2237,7 +2237,7 @@
 <h4 id="10398-enregistrer-les-resultats-dans-la-source-de-donnees">10.3.9.8. Enregistrer les résultats dans la source de données</h4>
 <p>Le lien [Enregistrer] (12) permet d&#x27;enregistrer les résultats du calcul des sièges dans la source de données. Une fois l&#x27;enregistrement opéré avec succès, le lien [Enregistrer] est désactivé. En cas d&#x27;échec, un message d&#x27;erreur est affiché dans [15]. Dans tous les cas, le lien [Enregistrer] est ensuite désactivé.</p>
 <p>Dans la classe [AbstractElectionsSwing], le gestionnaire qui gère le clic sur le label [Enregistrer] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> jLabelEnregistrerMouseClicked(java.awt.event.MouseEvent </span><span style="color:#6a3e3e">evt</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000">(</span><span style="color:#0000c0">jLabelEnregistrer</span><span style="color:#000000">.isEnabled()){</span></span>
 <span class="odt-code-line">      do<span style="color:#000000">Enregistrer</span>();</span>
@@ -2246,7 +2246,7 @@
 </code></pre></div>
 
 <p>La ligne 3 appelle la méthode [doEnregistrer] de la classe [ElectionsSwing] :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">@Override</span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">protected</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> doEnregistrer() {</span></span>
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#3f7f5f">// on demande l&#x27;enregistrement à la couche métier</span></span>
@@ -2271,7 +2271,7 @@
 <h4 id="10399-effacer-les-resultats">10.3.9.9. Effacer les résultats</h4>
 <p>Le lien [Effacer] (11) permet d&#x27;effacer les résultats affichés dans (14).</p>
 <p>Dans la classe [AbstractElectionsSwing], le gestionnaire qui gère le clic sur le label [Effacer] est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> jLabelEffacerMouseClicked(java.awt.event.MouseEvent </span><span style="color:#6a3e3e">evt</span><span style="color:#000000">) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">if</span><span style="color:#000000">(</span><span style="color:#0000c0">jLabelEffacer</span><span style="color:#000000">.isEnabled()){</span></span>
 <span class="odt-code-line">      do<span style="color:#000000">Effacer</span>();</span>

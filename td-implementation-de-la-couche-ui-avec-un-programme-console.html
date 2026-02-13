@@ -1112,7 +1112,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011E000000AC14E8B420.png" style="display:inline-block; margin:4px;width:5.3cm;height:3.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000011E000000AC14E8B420.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [UiConfig] configure l&#x27;application Spring :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.ui.config;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.context.annotation.ComponentScan;</span></span>
@@ -1138,7 +1138,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004AC000001077CD9D27D.png" style="display:inline-block; margin:4px;width:15.822cm;height:3.48cm;" class="odt-zoomable" data-zoom-src="images/10000000000004AC000001077CD9D27D.png" /></td></tr></table>
 
 <p>L&#x27;interface [IElectionsUI] est présentée au programme principal [main] qui va lancer l&#x27;application. Que peut demander [main] à la couche [ui] ? Elle peut lui demander de commencer les échanges avec l&#x27;utilisateur qui va saisir les données manquantes de l&#x27;élection. On adoptera l&#x27;interface minimale suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> istia.st.elections.ui;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">interface</span><span style="color:#000000"> IElectionsUI {</span></span>
@@ -1157,7 +1157,7 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000116000000AE6E041AA8.png" style="display:inline-block; margin:4px;width:5.151cm;height:3.221cm;" class="odt-zoomable" data-zoom-src="images/1000000000000116000000AE6E041AA8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Le classe de démarrage de l&#x27;application est une classe Java ayant une méthode statique [main]. Cette méthode doit créer des instances des couches [ui, metier, demo] et demander à la couche [ui] de commencer le dialogue avec l&#x27;utilisateur. Cette classe pourrait être la classe [<span style="color: #000000">AbstractBootElections</span>] suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.ui.boot;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> org.springframework.context.annotation.AnnotationConfigApplicationContext;</span></span>
@@ -1251,7 +1251,7 @@
 </li>
 </ul>
 <p>La classe [BootElectionsConsole] est la classe qui lance l&#x27;implémentation console. Son code est le suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.ui.boot;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.ui.service.IElectionsUI;</span></span>
@@ -1280,16 +1280,16 @@
 
 <p>Parce que le champ a l&#x27;attribut [protected], il est visible dans les classes filles.</p>
 <p>Le bean de la ligne 12 sera déclaré de la façon suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">@Component</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ElectionsConsole </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> IElectionsUI {</span></span>
 </code></pre></div>
 
 <p>Le nom par défaut de ce bean est le nom de la classe avec sa première lettre en minuscule. On peut s&#x27;affranchir de ce nom par défaut en écrivant explicitement :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nd">@Component</span><span class="p">(</span><span class="n">nom_du_bean_entre_guillemets</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>@Component(nom_du_bean_entre_guillemets)
 </code></pre></div>
 <p>La classe [BootElectionsSwing] qui lancerait l&#x27;implémentation Swing pourrait être la suivante :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.ui.boot;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> elections.ui.service.IElectionsUI;</span></span>
@@ -1336,7 +1336,7 @@
 </code></pre></div>
 
 <p>La classe [<span style="color: #000000">ElectionsConsole</span>] pourrait avoir le squelette suivant :</p>
-<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-java">
+<div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.ui.service;</span></span>
 <span class="odt-code-line"></span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">import</span><span style="color:#000000"> java.util.Comparator;</span></span>
