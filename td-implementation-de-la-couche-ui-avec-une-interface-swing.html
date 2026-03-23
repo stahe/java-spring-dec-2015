@@ -1239,29 +1239,43 @@
 
 <p>L&#x27;interface graphique se trouve dans la couche [ui]. C&#x27;est elle qui interagit avec l&#x27;utilisateur.</p>
 <ul>
-<li>
-<p>au démarrage, l&#x27;application console [<strong>main</strong>] instancie les trois couches de l&#x27;application grâce à Spring. Ceci est fait avant même que l&#x27;interface graphique ne soit visible. Toujours dans cette phase d&#x27;initialisation, les renseignements caractérisant l&#x27;élection (nombre de sièges à pourvoir, seuil électoral, listes en compétition) sont demandés à la couche [dao]. Si cette phase d&#x27;initialisation échoue (impossibilité d&#x27;accéder aux données par exemple), un message d&#x27;erreur est affiché sur la console et l&#x27;interface graphique n&#x27;est pas affichée.</p>
-</li>
-<li>
-<p>si la lecture des données s&#x27;est bien passée, l&#x27;interface graphique est affichée avec les renseignements suivants (cf copie d&#x27;écran plus haut) :</p>
+  <li>au démarrage, l&#x27;application console [<b>main</b>] instancie les trois couches de l&#x27;application grâce à Spring. Ceci est fait avant même que l&#x27;interface graphique ne soit visible. Toujours dans cette phase d&#x27;initialisation, les renseignements caractérisant l&#x27;élection (nombre de sièges à pourvoir, seuil électoral, listes en compétition) sont demandés à la couche [dao]. Si cette phase d&#x27;initialisation échoue (impossibilité d&#x27;accéder aux données par exemple), un message d&#x27;erreur est affiché sur la console et l&#x27;interface graphique n&#x27;est pas affichée.
+  </li>
+</ul>
+
 <ul>
-<li>le nombre de sièges à pourvoir dans (2)</li>
-<li>le seuil électoral dans (3)</li>
-<li>les identifiants et noms des listes candidates dans (4)</li>
+  <li>si la lecture des données s&#x27;est bien passée, l&#x27;interface graphique est affichée avec les renseignements suivants (cf copie d&#x27;écran plus haut) :
+  </li>
 </ul>
-</li>
-<li>
-<p>l&#x27;utilisateur affecte alors à chaque liste candidate son nombre de voix à l&#x27;aide des champs 4 (id - nom), 5 (voix), 6 (pour ajouter).</p>
-</li>
+
+<ol>
+    <ul>
+      <li>le nombre de sièges à pourvoir dans (2)
+      </li>
+      <li>le seuil électoral dans (3)
+      </li>
+      <li>les identifiants et noms des listes candidates dans (4)
+      </li>
+    </ul>
+</ol>
+
+<ul>
+  <li>l&#x27;utilisateur affecte alors à chaque liste candidate son nombre de voix à l&#x27;aide des champs 4 (id - nom), 5 (voix), 6 (pour ajouter).
+  </li>
 </ul>
+
 <p><img src="images/10000000000001AC000000775D50E179.png" style="width:9.059cm;height:2.521cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001AC000000775D50E179.png" /></p>
 <ul>
-<li>on peut alors utiliser le lien (10) pour calculer les sièges :</li>
+  <li>on peut alors utiliser le lien (10) pour calculer les sièges :
+  </li>
 </ul>
+
 <p><img src="images/10000000000000BF0000006B6F7C0BD3.png" style="width:3.54cm;height:1.981cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000000BF0000006B6F7C0BD3.png" /></p>
 <ul>
-<li>le lien [Enregistrer] (12) permet d&#x27;enregistrer les résultats dans la source de données.</li>
+  <li>le lien [Enregistrer] (12) permet d&#x27;enregistrer les résultats dans la source de données.
+  </li>
 </ul>
+
 <p><a id="refheading318611812363491"></a></p>
 <h2 id="103-la-classe-electionsswing-dimplementation-de-la-couche-ui">10.3. La classe [ElectionsSwing] d&#x27;implémentation de la couche [ui]</h2>
 <p><a id="refheading318631812363491"></a></p>
@@ -1290,42 +1304,62 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002B1000001E0D373F464.png" style="display:inline-block; margin:4px;width:9.116cm;height:6.35cm;" class="odt-zoomable" data-zoom-src="images/10000000000002B1000001E0D373F464.png" /></td></tr></table>
 
 <ul>
-<li>[1] : ajout d&#x27;un objet au paquetage [elections.ui.service]</li>
-<li>[2] : choix de l&#x27;option [JFrame Form] dans la catégorie [Swing GUI Forms]</li>
+  <li>[1] : ajout d&#x27;un objet au paquetage [elections.ui.service]
+  </li>
+  <li>[2] : choix de l&#x27;option [JFrame Form] dans la catégorie [Swing GUI Forms]
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F60000017F755E9FA4.png" style="display:inline-block; margin:4px;width:16.801cm;height:5.068cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F60000017F755E9FA4.png" /></td></tr></table>
 
 <ul>
-<li>[4] : donner un nom à la classe</li>
-<li>[5] : le package de la classe.</li>
-<li>Terminer l&#x27;assistant.</li>
-<li>[6] : la classe générée</li>
+  <li>[4] : donner un nom à la classe
+  </li>
+  <li>[5] : le package de la classe.
+  </li>
+  <li>Terminer l&#x27;assistant.
+  </li>
+  <li>[6] : la classe générée
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000054E00000126B251AB47.png" style="display:inline-block; margin:4px;width:17.965cm;height:3.889cm;" class="odt-zoomable" data-zoom-src="images/100000000000054E00000126B251AB47.png" /></td></tr></table>
 
 <ul>
-<li>[7] : la classe [AbstractElectionsSwing] en mode [Design]</li>
-<li>[8] : l&#x27;onglet [Navigator] qui affiche l&#x27;arbre [9] des composants de la fenêtre</li>
-<li>[10] : l&#x27;onglet [Properties] qui affiche les propriétés du composant [jFrame] sélectionné en [9]</li>
+  <li>[7] : la classe [AbstractElectionsSwing] en mode [Design]
+  </li>
+  <li>[8] : l&#x27;onglet [Navigator] qui affiche l&#x27;arbre [9] des composants de la fenêtre
+  </li>
+  <li>[10] : l&#x27;onglet [Properties] qui affiche les propriétés du composant [jFrame] sélectionné en [9]
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000028E0000012158B404C5.png" style="display:inline-block; margin:4px;width:8.652cm;height:3.824cm;" class="odt-zoomable" data-zoom-src="images/100000000000028E0000012158B404C5.png" /></td></tr></table>
 
 <ul>
-<li>[11] : [JFrame] est un conteneur de composants. Ceux-ci peuvent être disposés dans le conteneur selon diverses règles de positionnement appelées <em>layouts</em>. Ici, nous choisissons le <em>layout</em> [Free Design] [14] qui permet de positionner des composants de façon libre dans le conteneur.</li>
+  <li>[11] : [JFrame] est un conteneur de composants. Ceux-ci peuvent être disposés dans le conteneur selon diverses règles de positionnement appelées <i>layouts</i>. Ici, nous choisissons le <i>layout</i> [Free Design] [14] qui permet de positionner des composants de façon libre dans le conteneur.
+  </li>
 </ul>
+
 <p>Nous trouvons les composants dans la barre d&#x27;outils appelée <em>Palette</em> :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000594000001925C114E9C.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.066cm;" class="odt-zoomable" data-zoom-src="images/1000000000000594000001925C114E9C.png" /></td></tr></table>
 
 <ul>
-<li>[1] : la palette</li>
-<li>[2] : un composant JLabel est déposé dans le conteneur de composants</li>
-<li>avec un clic droit dessus, on a accès à diverses propriétés : son nom [4], son texte [3] ou bien ses gestionnaires d&#x27;événements [5]. Nous utilisons [3] pour fixer le texte [6].</li>
+  <li>[1] : la palette
+  </li>
+  <li>[2] : un composant JLabel est déposé dans le conteneur de composants
+  </li>
+  <li>avec un clic droit dessus, on a accès à diverses propriétés : son nom [4], son texte [3] ou bien ses gestionnaires d&#x27;événements [5]. Nous utilisons [3] pour fixer le texte [6].
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000252000001F4BB8FBB0F.png" style="display:inline-block; margin:4px;width:7.858cm;height:6.615cm;" class="odt-zoomable" data-zoom-src="images/1000000000000252000001F4BB8FBB0F.png" /></td></tr></table>
 
 <ul>
-<li>[1] : l&#x27;onglet [Properties] du composant [JLabel] donne accès aux propriétés de celui-ci : son positionnement horizontal [2], vertical [3], la police de caractères du texte [4], le texte [5].</li>
+  <li>[1] : l&#x27;onglet [Properties] du composant [JLabel] donne accès aux propriétés de celui-ci : son positionnement horizontal [2], vertical [3], la police de caractères du texte [4], le texte [5].
+  </li>
 </ul>
+
 <p>Lorsqu&#x27;un composant est déposé et configuré sur l&#x27;interface graphique et qu&#x27;on sauvegarde (Ctrl-S) le travail fait, du code est généré dans la classe [AbstractElectionsSwing] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000264000000CF3DE1D0AD.png" style="display:inline-block; margin:4px;width:11.329cm;height:3.829cm;" class="odt-zoomable" data-zoom-src="images/1000000000000264000000CF3DE1D0AD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1337,63 +1371,70 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000394000003415B3742BA.png" style="display:inline-block; margin:4px;width:12.118cm;height:11.021cm;" class="odt-zoomable" data-zoom-src="images/1000000000000394000003415B3742BA.png" /></td></tr></table>
 
 <p>Les composants de l&#x27;interface sont les suivants :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>n°</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>type</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>nom</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>rôle</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>n°</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>type</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>nom</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>rôle</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">JMenuBar</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jMenuBar1</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">un menu</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JMenuBar</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jMenuBar1</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">un menu</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>2
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">JLabel</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jLabelSAP</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le nombre de sièges à pourvoir</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JLabel</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jLabelSAP</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">le nombre de sièges à pourvoir</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>3
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">JLabel</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jLabelSE</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le seuil électoral</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JLabel</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jLabelSE</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">le seuil électoral</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>4
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">JComboBox</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jComboBoxNomsListes</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">liste des noms des listes en compétition</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JComboBox</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jComboBoxNomsListes</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">liste des noms des listes en compétition</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>5
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">JTextField</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jTextFieldVoixListe</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">le nombre de voix d&#x27;une liste</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JTextField</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jTextFieldVoixListe</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">le nombre de voix d&#x27;une liste</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>6
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">JLabel</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jLabelAjouter</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour ajouter une liste à (8)</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JLabel</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jLabelAjouter</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">pour ajouter une liste à (8)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>7,8
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">(JScrollPane, JList)</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jListNomsVoix</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">les noms et voix des listes</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">(JScrollPane, JList)</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jListNomsVoix</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">les noms et voix des listes</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>9
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">JLabel</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jLabelSupprimer</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour supprimer de (8) la liste sélectionnée dans (8)</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JLabel</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jLabelSupprimer</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">pour supprimer de (8) la liste sélectionnée dans (8)</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>10
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">JLabel</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jLabelCalculer</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour calculer les résultats de l&#x27;élection</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JLabel</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jLabelCalculer</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">pour calculer les résultats de l&#x27;élection</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>11
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">JLabel</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jLabelEffacer</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour effacer les résultats de l&#x27;élection</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JLabel</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jLabelEffacer</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">pour effacer les résultats de l&#x27;élection</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>12
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">JLabel</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jLabelEnregistrer</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour enregistrer les résultats de l&#x27;élection</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">JLabel</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jLabelEnregistrer</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">pour enregistrer les résultats de l&#x27;élection</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>13,14
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">(JScrollPane, JList)</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jListResultats</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour afficher les résultats de l&#x27;élection</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">(JScrollPane, JList)</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jListResultats</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">pour afficher les résultats de l&#x27;élection</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>15,16
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">(JScrollPane,</p><p style="margin:0;">JTextPane)</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">jTextPaneMessages</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">pour afficher des messages de suivi</p></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">(JScrollPane,</div><div style="margin:0 0 0.5em 0">JTextPane)</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">jTextPaneMessages</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">pour afficher des messages de suivi</div></td></tr></table>
 
 <p>L&#x27;annotation (JScrollPane, JList) [13-14] est là pour indiquer que lorsqu&#x27;on dépose un composant [JList] dans la fenêtre, il est automatiquement inséré dans un composant [JScrollPane] qui permet le défilement de la liste. C&#x27;est le composant [JScrollPane] qui permet de voir tous les éléments de la liste alors que seul un nombre restreint d&#x27;entre-eux n&#x27;est visible à un moment donné. Il en est de même pour le composant [JTextPane] [15-16].</p>
 <p>Le menu pourra être créé de la façon suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000059F00000189AD148B2E.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.916cm;" class="odt-zoomable" data-zoom-src="images/100000000000059F00000189AD148B2E.png" /></td></tr></table>
 
 <ul>
-<li>[1, 2] : un composant [Menu Bar] est déposé sur la fenêtre</li>
-<li>[3] : le menu généré par défaut tel que présenté dans l&#x27;onglet [Navigator]</li>
-<li>[4,5,6] : par un clic droit sur une option de menu, on peut :<ul>
-<li>changer son texte [4], son nom [5]</li>
-<li>gérer ses événements [6]</li>
+  <li>[1, 2] : un composant [Menu Bar] est déposé sur la fenêtre
+  </li>
+  <li>[3] : le menu généré par défaut tel que présenté dans l&#x27;onglet [Navigator]
+  </li>
+  <li>[4,5,6] : par un clic droit sur une option de menu, on peut :
+    <ul>
+      <li>changer son texte [4], son nom [5]
+      </li>
+      <li>gérer ses événements [6]
+      </li>
+    </ul>
+  </li>
+  <li>[7] : le menu souhaité
+  </li>
 </ul>
-</li>
-<li>[7] : le menu souhaité</li>
-</ul>
+
 <p>Le menu désiré est le suivant :</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>niveau 1</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>niveau 2</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Elections</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Quitter</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Listes</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Ajouter</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Supprimer</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>Résultats</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Calculer</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Effacer</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><i>Enregistrer</i></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>A propos</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>niveau 1</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>niveau 2</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Elections</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>Quitter</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Listes</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>Ajouter</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>Supprimer</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>Résultats</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>Calculer</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>Effacer</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><i>Enregistrer</i></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>A propos</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>On peut tester l&#x27;interface graphique à tout moment :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000113000000618FF501BE.png" style="display:inline-block; margin:4px;width:5.091cm;height:1.799cm;" class="odt-zoomable" data-zoom-src="images/1000000000000113000000618FF501BE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1402,11 +1443,16 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F50000020F1187B4BD.png" style="display:inline-block; margin:4px;width:16.789cm;height:6.973cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F50000020F1187B4BD.png" /></td></tr></table>
 
 <ul>
-<li>[1] : cliquer droit sur le composant dont on veut gérer un événement</li>
-<li>[2] : choisir l&#x27;option [Events]</li>
-<li>[3] : choisir une catégorie d&#x27;événements</li>
-<li>[4] : choisir l&#x27;événement qu&#x27;on veut gérer</li>
+  <li>[1] : cliquer droit sur le composant dont on veut gérer un événement
+  </li>
+  <li>[2] : choisir l&#x27;option [Events]
+  </li>
+  <li>[3] : choisir une catégorie d&#x27;événements
+  </li>
+  <li>[4] : choisir l&#x27;événement qu&#x27;on veut gérer
+  </li>
 </ul>
+
 <p>Le code Java généré par cette opération est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#0000c0">jLabelCalculer</span><span style="color:#000000">.addMouseListener(</span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> java.awt.event.MouseAdapter() {</span></span>
@@ -1422,8 +1468,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 1-5 : un gestionnaire d&#x27;événement est ajouté au composant <em>jLabelCalculer</em>. La méthode <strong>addMouseListener</strong> attend comme paramètre une classe implémentant l&#x27;interface <strong>MouseListener</strong> suivante :</li>
+  <li>lignes 1-5 : un gestionnaire d&#x27;événement est ajouté au composant <i>jLabelCalculer</i>. La méthode <b>addMouseListener</b> attend comme paramètre une classe implémentant l&#x27;interface <b>MouseListener</b> suivante :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001FC0000012674E252F1.png" style="display:inline-block; margin:4px;width:8.64cm;height:4.999cm;" class="odt-zoomable" data-zoom-src="images/10000000000001FC0000012674E252F1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface <em>MouseListener</em> est implémentée par différentes classes dont la classe <em>MouseAdapter</em>. Celle-ci implémente les cinq méthodes de l&#x27;interface <em>MouseListener</em> mais ces méthodes ne font rien. Aussi faut-il dériver cette classe pour implémenter la ou les méthodes de son choix. Ce qui est fait dans le code ci-dessus et repris ci-dessous :</p>
@@ -1456,9 +1504,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E0000000A3C39FEEDD.png" style="display:inline-block; margin:4px;width:16.51cm;height:2.157cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E0000000A3C39FEEDD.png" /></td></tr></table>
 
 <ul>
-<li>[1] : on clique deux fois sur le label [Calculer]</li>
-<li>[2] : le gestionnaire de cet événement a été exécuté et a produit les messages <em>mouseClicked</em> dans la console de Netbeans.</li>
+  <li>[1] : on clique deux fois sur le label [Calculer]
+  </li>
+  <li>[2] : le gestionnaire de cet événement a été exécuté et a produit les messages <i>mouseClicked</i> dans la console de Netbeans.
+  </li>
 </ul>
+
 <p>Les composants [jComboBoxNomsListes, jListNomsVoix, jListResultats] sont déclarés de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">protected</span><span style="font-weight:bold;color:#000000"> </span><span style="color:#000000">javax.swing.JComboBox </span><span style="color:#0000c0">jComboBoxNomsListes</span><span style="color:#000000">;</span></span>
@@ -1483,9 +1534,12 @@
 
 <p>La classe [AbstractElectionsSwing] doit implémenter la couche [ui] ci-dessus. Son code généré par Netbeans ne contient pour l&#x27;instant que du code de gestion de la fenêtre et des gestionnaires d&#x27;événement qui pour l&#x27;instant ne font rien. Ci-dessus, on voit que la classe [AbstractElectionsSwing] devra gérer des échanges avec la couche [métier]. Cette gestion se fera dans les gestionnaires d&#x27;événement. Pour clarifier la structure du code, on décide de le placer dans deux classes :</p>
 <ul>
-<li>[AbstractElectionsSwing] qui restera comme elle a été générée par Netbeans à quelques détails près. Cette classe ne gèrera aucun événement elle-même. Les gestionnaires d&#x27;événements seront vides et déclarés abstraits. Ils seront implémentés par une classe dérivée de [AbstractElectionsSwing].</li>
-<li>[ElectionsSwing], classe dérivée de [AbstractElectionsSwing] qui implémentera tous les gestionnaires d&#x27;événement.</li>
+  <li>[AbstractElectionsSwing] qui restera comme elle a été générée par Netbeans à quelques détails près. Cette classe ne gèrera aucun événement elle-même. Les gestionnaires d&#x27;événements seront vides et déclarés abstraits. Ils seront implémentés par une classe dérivée de [AbstractElectionsSwing].
+  </li>
+  <li>[ElectionsSwing], classe dérivée de [AbstractElectionsSwing] qui implémentera tous les gestionnaires d&#x27;événement.
+  </li>
 </ul>
+
 <p>Ce type de séparation n&#x27;est pas inhabituel. On le trouve par exemple dans les pages web ASP.NET (version non MVC). Le projet Netbeans évolue comme suit :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000108000000B031B76F2A.png" style="display:inline-block; margin:4px;width:4.89cm;height:3.26cm;" class="odt-zoomable" data-zoom-src="images/1000000000000108000000B031B76F2A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1529,11 +1583,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : la classe est déclarée <strong>abstraite</strong></li>
-<li>lignes 3-5 : gestion du clic sur sur l&#x27;option de menu [jMenuItemCalculer]. On voit que le traitement de l&#x27;événement est déporté sur la méthode <em>doCalculer</em> de la ligne 19. Cette méthode n&#x27;est pas implémentée et est déclarée abstraite. C&#x27;est la classe dérivée [ElectionsSwing] qui l&#x27;implémentera ;</li>
-<li>lignes 9-13 : le gestionnaire de l&#x27;événement <em>clic</em> sur le label [jLabelCalculer]. Le clic provoque toujours un événement, que le composant [jLabel] soit actif (enabled=true) ou inactif (enabled=false). On s&#x27;assure ici qu&#x27;il est bien actif pour traiter l&#x27;événement ;</li>
-<li>lignes 15 et au-delà : cette technique de délégation du traitement des événements vers une méthode abstraite est apliquée à tous les gestionnaires d&#x27;événements.</li>
+  <li>ligne 1 : la classe est déclarée <b>abstraite</b>
+  </li>
+  <li>lignes 3-5 : gestion du clic sur sur l&#x27;option de menu [jMenuItemCalculer]. On voit que le traitement de l&#x27;événement est déporté sur la méthode <i>doCalculer</i> de la ligne 19. Cette méthode n&#x27;est pas implémentée et est déclarée abstraite. C&#x27;est la classe dérivée [ElectionsSwing] qui l&#x27;implémentera ;
+  </li>
+  <li>lignes 9-13 : le gestionnaire de l&#x27;événement <i>clic</i> sur le label [jLabelCalculer]. Le clic provoque toujours un événement, que le composant [jLabel] soit actif (enabled=true) ou inactif (enabled=false). On s&#x27;assure ici qu&#x27;il est bien actif pour traiter l&#x27;événement ;
+  </li>
+  <li>lignes 15 et au-delà : cette technique de délégation du traitement des événements vers une méthode abstraite est apliquée à tous les gestionnaires d&#x27;événements.
+  </li>
 </ul>
+
 <p>La classe [ElectionsSwing] dérivée de [AbstractElectionsSwing] implémente tous les gestionnaires d&#x27;événements non implémentés par [AbstractElectionsSwing] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.ui.service;</span><span style="color:#000000">;</span></span>
@@ -1591,9 +1650,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : [ElectionsSwing] dérive de [AbstractElectionsSwing]</li>
-<li>lignes 7-50 : les gestionnaires des événements de la fenêtre graphique</li>
+  <li>ligne 3 : [ElectionsSwing] dérive de [AbstractElectionsSwing]
+  </li>
+  <li>lignes 7-50 : les gestionnaires des événements de la fenêtre graphique
+  </li>
 </ul>
+
 <p>Les méthodes de la classe dérivée [ElectionsSwing] vont manipuler les composants de la classe parent [AbstractElectionsSwing]. Actuellement ces composants ont une portée <em>private</em>, interdisant à la classe fille [ElectionsSwing] d&#x27;y avoir accès :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> JMenuItem </span><span style="color:#0000c0">jMenuItemAPropos</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">null</span><span style="color:#000000">;</span></span>
@@ -1605,8 +1667,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000057B0000019C18CB4098.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.285cm;" class="odt-zoomable" data-zoom-src="images/100000000000057B0000019C18CB4098.png" /></td></tr></table>
 
 <ul>
-<li>mettre en [3], l&#x27;attribut [protected] ;</li>
+  <li>mettre en [3], l&#x27;attribut [protected] ;
+  </li>
 </ul>
+
 <p><a id="refheading318691812363491"></a></p>
 <h3 id="1035-implementation-de-linterface-ielectionsui">10.3.5. Implémentation de l&#x27;interface [IElectionsUI]</h3>
 <p>Revenons à la structure de notre application :</p>
@@ -1637,9 +1701,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : la classe [ElectionsSwing] implémente l&#x27;interface [IElectionsUI]</li>
-<li>lignes 4-6 : la méthode [run] de cette interface</li>
+  <li>ligne 1 : la classe [ElectionsSwing] implémente l&#x27;interface [IElectionsUI]
+  </li>
+  <li>lignes 4-6 : la méthode [run] de cette interface
+  </li>
 </ul>
+
 <p>Que doit faire la méthode <em>run</em> ? Afficher la fenêtre graphique. Comment fait-on cela ? On peut se laisser guider par la méthode [main] qu&#x27;à générée Netbeans dans la classe [AbstractElectionsSwing] et qui fait ce qui est souhaité :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">static</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> main(String </span><span style="color:#6a3e3e">args</span><span style="color:#000000">[]) {</span></span>
@@ -1683,8 +1750,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 2 : la méthode [initComponents] est une méthode privée générée par le générateur de l&#x27;interface graphique. On ne peut changer son code.</li>
+  <li>ligne 2 : la méthode [initComponents] est une méthode privée générée par le générateur de l&#x27;interface graphique. On ne peut changer son code.
+  </li>
 </ul>
+
 <p>La méthode [run] de la classe [ElectionsSwing] pourrait alors être la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#646464">@Override</span></span>
@@ -1700,8 +1769,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : l&#x27;interface graphique est initialisée au moyen d&#x27;une méthode [init]. Ici, on voudrait appeler la méthode [initComponents] de la classe parent, mais celle-ci est privée. On ajoute alors dans la classe parent [<span style="color: #000000">AbstractElectionsSwing</span>], la méthode [init] suivante :</li>
+  <li>ligne 6 : l&#x27;interface graphique est initialisée au moyen d&#x27;une méthode [init]. Ici, on voudrait appeler la méthode [initComponents] de la classe parent, mais celle-ci est privée. On ajoute alors dans la classe parent [<span style="color: #000000">AbstractElectionsSwing</span>], la méthode [init] suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">protected</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> init(){</span></span>
 <span class="odt-code-line">    initComponents();</span>
@@ -1709,17 +1780,21 @@
 </code></pre></div>
 
 <ul>
-<li>
-<p>(suite)</p>
+  <li>(suite)
+    <ul>
+      <li>parce qu&#x27;elle est dans la classe [<span style="color: #000000">AbstractElectionsSwing</span>], la méthode [init] a accès à la méthode privée [initComponents] de la même classe ;
+      </li>
+      <li>parce qu&#x27;elle a l&#x27;attribut [protected], elle est visible dans la classe fille [ElectionsSwing] ;
+      </li>
+    </ul>
+  </li>
+</ul>
+
 <ul>
-<li>parce qu&#x27;elle est dans la classe [<span style="color: #000000">AbstractElectionsSwing</span>], la méthode [init] a accès à la méthode privée [initComponents] de la même classe ;</li>
-<li>parce qu&#x27;elle a l&#x27;attribut [protected], elle est visible dans la classe fille [ElectionsSwing] ;</li>
+  <li>ligne 7 : l&#x27;interface graphique est rendue visible ;
+  </li>
 </ul>
-</li>
-<li>
-<p>ligne 7 : l&#x27;interface graphique est rendue visible ;</p>
-</li>
-</ul>
+
 <p><strong>Note</strong> : lorsque la méthode [run] a été écrite dans la classe [ElectionsSwing], la méthode [main] de la classe abstraite [AbstractElectionsSwing] peut être supprimée.</p>
 <p><a id="refheading318711812363491"></a></p>
 <h3 id="1036-la-classe-executable">10.3.6. La classe exécutable</h3>
@@ -1738,9 +1813,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 1 : la classe [<span style="color: #000000">ElectionsSwing</span>] est un composant Spring ;</li>
-<li>lignes 5-6 : injection par Spring d&#x27;une référence sur la couche [métier] ;</li>
+  <li>ligne 1 : la classe [<span style="color: #000000">ElectionsSwing</span>] est un composant Spring ;
+  </li>
+  <li>lignes 5-6 : injection par Spring d&#x27;une référence sur la couche [métier] ;
+  </li>
 </ul>
+
 <p>L&#x27;interface graphique est lancée par l&#x27;exécution de la classe [BootElectionsSwing] suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FE000000941C25FA12.png" style="display:inline-block; margin:4px;width:4.701cm;height:2.739cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FE000000941C25FA12.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1768,17 +1846,26 @@
 <p><img src="images/10000000000002520000021987E754B8.png" style="width:11cm;height:9.94cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000002520000021987E754B8.png" /></p>
 <p>On voit ci-dessus : </p>
 <ul>
-<li>que le combo a été rempli avec les noms des listes ;</li>
-<li>que le nombre de sièges à pourvoir et le seuil électoral sont indiqués ;</li>
-<li>que certains liens ont été désactivés ;</li>
-<li>qu&#x27;un message de succès est affiché en bas de la fenêtre ;</li>
+  <li>que le combo a été rempli avec les noms des listes ;
+  </li>
+  <li>que le nombre de sièges à pourvoir et le seuil électoral sont indiqués ;
+  </li>
+  <li>que certains liens ont été désactivés ;
+  </li>
+  <li>qu&#x27;un message de succès est affiché en bas de la fenêtre ;
+  </li>
 </ul>
+
 <p>A quel moment vont se faire ces initialisations ? Elles ne peuvent se faire qu&#x27;après initialisation du champ [electionsMetier] de la classe [ElectionsSwing]. En effet, les noms des listes vont être demandés à la couche [metier]. L&#x27;initialisation de ce champ va être faite par Spring dans l&#x27;ordre suivant :</p>
 <ul>
-<li>utilisation du constructeur sans paramètres de la classe [ElectionsSwing] ;</li>
-<li>injection des dépendances, ici la référence de la couche [métier] ;</li>
-<li>exécution de la méthode [run] de la classe [ElectionsSwing] :</li>
+  <li>utilisation du constructeur sans paramètres de la classe [ElectionsSwing] ;
+  </li>
+  <li>injection des dépendances, ici la référence de la couche [métier] ;
+  </li>
+  <li>exécution de la méthode [run] de la classe [ElectionsSwing] :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@Override</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">void</span><span style="color:#000000"> run() {</span></span>
@@ -1793,8 +1880,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 12, nous avons dit qu&#x27;on appelait la méthode [init] de la classe parent qui va dessiner les composants de l&#x27;interface graphique. Nous allons redéfinir cette méthode, localement, dans la classe [ElectionsSwing]. C&#x27;est dans cette méthode que nous initialiserons, avec des données cette fois, les composants de la fenêtre (combo, labels) :</li>
+  <li>ligne 12, nous avons dit qu&#x27;on appelait la méthode [init] de la classe parent qui va dessiner les composants de l&#x27;interface graphique. Nous allons redéfinir cette méthode, localement, dans la classe [ElectionsSwing]. C&#x27;est dans cette méthode que nous initialiserons, avec des données cette fois, les composants de la fenêtre (combo, labels) :
+  </li>
 </ul>
+
 <p>La méthode locale [init] pourrait avoir le squelette suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> ElectionsSwing </span><span style="font-weight:bold;color:#7f0055">extends</span><span style="color:#000000"> AbstractElectionsSwing </span><span style="font-weight:bold;color:#7f0055">implements</span><span style="color:#000000"> IElectionsUI {</span></span>
@@ -1855,8 +1944,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 9 :  la méthode <em>setEnabled</em> fixe l&#x27;état de composants <em>JLabel</em> définis dans un tableau. La méthode <em>setEnabled</em> d&#x27;un composant <em>JLabel</em> permet d&#x27;activer ou de désactiver le <em>JLabel</em>.</li>
+  <li>ligne 9 :  la méthode <i>setEnabled</i> fixe l&#x27;état de composants <i>JLabel</i> définis dans un tableau. La méthode <i>setEnabled</i> d&#x27;un composant <i>JLabel</i> permet d&#x27;activer ou de désactiver le <i>JLabel</i>.
+  </li>
 </ul>
+
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : en suivant l&#x27;exemple de la méthode <em>setEnabled</em> de la ligne 9<em>,</em> écrivez la méthode <em>setEnabled</em> de la ligne 16 qui fait la même chose avec des composants <em>JMenuItem</em>.</p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
@@ -1937,11 +2028,16 @@
 
 <p>La méthode [init] a pour objectifs :</p>
 <ul>
-<li>de remplir le combo [4] avec les identifiants et noms des listes sous la forme [id - nom]</li>
-<li>d&#x27;afficher un message de succès dans [15]</li>
-<li>d&#x27;initialiser les labels [2] et [3]</li>
-<li>de désactiver certains liens</li>
+  <li>de remplir le combo [4] avec les identifiants et noms des listes sous la forme [id - nom]
+  </li>
+  <li>d&#x27;afficher un message de succès dans [15]
+  </li>
+  <li>d&#x27;initialiser les labels [2] et [3]
+  </li>
+  <li>de désactiver certains liens
+  </li>
 </ul>
+
 <p>Le squelette de la méthode [init] pourrait être le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-vbscript">
 <span class="odt-code-line">@Override</span>
@@ -2023,23 +2119,29 @@
 <p><strong>A savoir</strong> :</p>
 <p>Un composant <em>JList</em> affiche les données présentes dans un modèle. Par défaut, ce modèle est de type <em>DefaultListModel</em> (lignes 2 et 3). Un objet de <em>DefaultListModel</em>  se comporte un peu comme un type <em>ArrayList</em> :</p>
 <ul>
-<li>pour ajouter un objet <em>o</em> dans le modèle :</li>
+  <li>pour ajouter un objet <i>o</i> dans le modèle :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000c0">[DefaultListModel]</span><span style="color:#000000">.addElement(</span><span style="color:#2a00ff">Object o</span><span style="color:#000000">);</span></span>
 </code></pre></div>
 
 <p>Dans cette application, l&#x27;objet <em>o</em> sera toujours de type <em>String</em>.</p>
 <ul>
-<li>pour enlever l&#x27;élément n° i du modèle :</li>
+  <li>pour enlever l&#x27;élément n° i du modèle :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000c0">[DefaultListModel]</span><span style="color:#000000">.remove(</span><span style="color:#2a00ff">int i</span><span style="color:#000000">);</span></span>
 </code></pre></div>
 
 <ul>
-<li>pour obtenir l&#x27;élément n° i du modèle :</li>
+  <li>pour obtenir l&#x27;élément n° i du modèle :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#0000c0">[DefaultListModel]</span><span style="color:#000000">.elementAt(</span><span style="color:#2a00ff">int i</span><span style="color:#000000">);</span></span>
 </code></pre></div>
@@ -2076,10 +2178,14 @@
 <h4 id="10393-affecter-les-voix-a-chaque-liste">10.3.9.3. Affecter les voix à chaque liste</h4>
 <p>Pour chaque liste candidate de (4), on procède ainsi :</p>
 <ul>
-<li>choix d&#x27;une liste dans (4)</li>
-<li>saisie du nombre de voix dans (5)</li>
-<li>validation par un clic sur le lien [Ajouter]</li>
+  <li>choix d&#x27;une liste dans (4)
+  </li>
+  <li>saisie du nombre de voix dans (5)
+  </li>
+  <li>validation par un clic sur le lien [Ajouter]
+  </li>
 </ul>
+
 <p>Les erreurs de saisie sont signalées comme le montre l&#x27;exemple suivant :</p>
 <p><img src="images/10000000000001F50000007952FDAE3C.png" style="width:9.28cm;height:2.24cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000001F50000007952FDAE3C.png" /></p>
 <p>Si le nombre de voix est correct, la liste est ajoutée dans le composant (8), le nombre de voix effacé et le lien [Ajouter] éteint :</p>
@@ -2130,8 +2236,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 25 : à chaque fois que l&#x27;utilisateur ajoute des voix à une liste et valide son choix, cette liste est mise dans le champ [<span style="color: #0000c0">listesSaisies</span>] de la ligne 9. On y enregistrera la liste avec les informations [id, version, nom, voix]. Les trois premières informations viennent des listes enregistrées initialement dans le tableau de la ligne 6. La méthode [getSelectedIndex] du combo permet de connaître l&#x27;indice de la liste sélectionnée ;</li>
+  <li>ligne 25 : à chaque fois que l&#x27;utilisateur ajoute des voix à une liste et valide son choix, cette liste est mise dans le champ [<span style="color: #0000c0">listesSaisies</span>] de la ligne 9. On y enregistrera la liste avec les informations [id, version, nom, voix]. Les trois premières informations viennent des listes enregistrées initialement dans le tableau de la ligne 6. La méthode [getSelectedIndex] du combo permet de connaître l&#x27;indice de la liste sélectionnée ;
+  </li>
 </ul>
+
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : complétez le code de la méthode [doAjouter].</p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />

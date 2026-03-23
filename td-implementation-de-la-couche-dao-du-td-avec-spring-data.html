@@ -1115,21 +1115,30 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015F000000BCA205EC53.png" style="display:inline-block; margin:4px;width:4.644cm;height:2.487cm;" class="odt-zoomable" data-zoom-src="images/100000000000015F000000BCA205EC53.png" /></td></tr></table>
 
 <ul>
-<li>en [1], le dossier [support / chap-12] contient le projet Eclipse de ce chapitre ;</li>
+  <li>en [1], le dossier [support / chap-12] contient le projet Eclipse de ce chapitre ;
+  </li>
 </ul>
+
 <p><a id="refheading2192622014630537"></a></p>
 <h2 id="122-le-projet-eclipse">12.2. Le projet Eclipse</h2>
 <p>Le projet Eclipse sera le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F70000014EC15FE9D3.png" style="display:inline-block; margin:4px;width:4.57cm;height:6.181cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F70000014EC15FE9D3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>[elections.dao.config] : contient la classe de configuration du projet Spring ;</li>
-<li>[elections.dao.entities] : contient les entités JPA ainsi que la classe d&#x27;exception du projet ;</li>
-<li>[elections.dao.repositories] : contient les interfaces [CrudRepository] pour les tables [CONF] et [LISTES] ;</li>
-<li>[elections.dao.service] : contient l&#x27;implémentation de la couche [DAO]. C&#x27;est elle qu&#x27;il nous faut écrire ;</li>
-<li>[elections.dao.console] : contient une classe de test de type [console] ;</li>
-<li>[pom.xml] : le fichier de configuration du projet Maven ;</li>
+  <li>[elections.dao.config] : contient la classe de configuration du projet Spring ;
+  </li>
+  <li>[elections.dao.entities] : contient les entités JPA ainsi que la classe d&#x27;exception du projet ;
+  </li>
+  <li>[elections.dao.repositories] : contient les interfaces [CrudRepository] pour les tables [CONF] et [LISTES] ;
+  </li>
+  <li>[elections.dao.service] : contient l&#x27;implémentation de la couche [DAO]. C&#x27;est elle qu&#x27;il nous faut écrire ;
+  </li>
+  <li>[elections.dao.console] : contient une classe de test de type [console] ;
+  </li>
+  <li>[pom.xml] : le fichier de configuration du projet Maven ;
+  </li>
 </ul>
+
 <p>Ce projet implémente l&#x27;architecture suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000438000000FAD9AFB415.png" style="display:inline-block; margin:4px;width:14.288cm;height:3.307cm;" class="odt-zoomable" data-zoom-src="images/1000000000000438000000FAD9AFB415.png" /></td></tr></table>
 
@@ -1146,11 +1155,16 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D10000005AD3AD4B0F.png" style="display:inline-block; margin:4px;width:3.87cm;height:1.67cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D10000005AD3AD4B0F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>[ElectionsConfig] est le modèle objet associé à une ligne de la table [CONF] ;</li>
-<li>[ListeElectorale] est le modèle objet associé à une ligne de la table [LISTES] ;</li>
-<li>[AbstactEntity] est la classe parent des deux classes précédentes. Elle factorise les champs [id, version] communs aux deux classes ;</li>
-<li>[ElectionsException] est la classe d&#x27;exception du projet ;</li>
+  <li>[ElectionsConfig] est le modèle objet associé à une ligne de la table [CONF] ;
+  </li>
+  <li>[ListeElectorale] est le modèle objet associé à une ligne de la table [LISTES] ;
+  </li>
+  <li>[AbstactEntity] est la classe parent des deux classes précédentes. Elle factorise les champs [id, version] communs aux deux classes ;
+  </li>
+  <li>[ElectionsException] est la classe d&#x27;exception du projet ;
+  </li>
 </ul>
+
 <p><a id="refheading226835658489731"></a></p>
 <h3 id="1241-la-classe-electionsexception">12.4.1. La classe [ElectionsException]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D10000005A1EDAED12.png" style="display:inline-block; margin:4px;width:3.87cm;height:1.67cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D10000005A1EDAED12.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>

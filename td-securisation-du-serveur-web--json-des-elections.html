@@ -1214,10 +1214,14 @@
 
 <p>La progession se fera de la façon suivante :</p>
 <ul>
-<li>écriture du serveur ;</li>
-<li>écriture du client sans couche [ui] mais avec un test JUnit de la couche [métier] ;</li>
-<li>écriture du client avec la couche [ui] ;</li>
+  <li>écriture du serveur ;
+  </li>
+  <li>écriture du client sans couche [ui] mais avec un test JUnit de la couche [métier] ;
+  </li>
+  <li>écriture du client avec la couche [ui] ;
+  </li>
 </ul>
+
 <p><a id="refheading1217241037674463"></a></p>
 <h2 id="171-support">17.1. Support</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000139000000C90A649EAC.png" style="display:inline-block; margin:4px;width:5.791cm;height:3.72cm;" class="odt-zoomable" data-zoom-src="images/1000000000000139000000C90A649EAC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DE0000006B5C473BFD.png" style="display:inline-block; margin:4px;width:4.11cm;height:1.981cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE0000006B5C473BFD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1278,9 +1282,12 @@
 </code></pre></div>
 
 <ul>
-<li>aux lignes 23-27, remplacez la dépendance sur le projet [intro-server-webjson-01] par celle sur le projet [<span style="color: #000000">elections-webjson-metier-dao-spring-data</span>] étudié au paragraphe <a href="td-implementation-de-la-couche-dao-du-td-avec-spring-data.html#refheading2192602014630537">12</a> ;</li>
-<li>aux lignes 4-7, mettre les caractéristiques du nouveau projet ;</li>
+  <li>aux lignes 23-27, remplacez la dépendance sur le projet [intro-server-webjson-01] par celle sur le projet [<span style="color: #000000">elections-webjson-metier-dao-spring-data</span>] étudié au paragraphe <a href="td-implementation-de-la-couche-dao-du-td-avec-spring-data.html#refheading2192602014630537">12</a> ;
+  </li>
+  <li>aux lignes 4-7, mettre les caractéristiques du nouveau projet ;
+  </li>
 </ul>
+
 <p>Il nous reste à modifier les classes de configuration du projet :</p>
 <p><u><strong>[DaoConfig]</strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
@@ -1310,9 +1317,12 @@
 
 <p>Les modifications sont aux lignes suivantes :</p>
 <ul>
-<li>lignes 8, 9, 14 : mettre les bons noms de packages ;</li>
-<li>ligne 10 : la classe importée est maintenant [<span style="color: #000000">elections.dao.config.DaoConfig</span>] du projet [<span style="color: #000000">elections-webjson-metier-dao-spring-data</span>] ;</li>
+  <li>lignes 8, 9, 14 : mettre les bons noms de packages ;
+  </li>
+  <li>ligne 10 : la classe importée est maintenant [<span style="color: #000000">elections.dao.config.DaoConfig</span>] du projet [<span style="color: #000000">elections-webjson-metier-dao-spring-data</span>] ;
+  </li>
 </ul>
+
 <p><strong>Note</strong> : comme il a été dit, cette configuration ne marche que si la classe [<span style="color: #000000">elections.dao.config.DaoConfig</span>] a l&#x27;annotation [@Configuration]. Vérifiez ce point.</p>
 <p><u><strong>[SecurityConfig]</strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
@@ -1331,8 +1341,10 @@
 
 <p>Les modifications sont aux lignes suivantes :</p>
 <ul>
-<li>ligne 6 : changez le nom du package ;</li>
+  <li>ligne 6 : changez le nom du package ;
+  </li>
 </ul>
+
 <p>C&#x27;est tout. Faites un premier test en exécutant le test JUnit [] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C9000000608400FFD5.png" style="display:inline-block; margin:4px;width:3.72cm;height:1.78cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C9000000608400FFD5.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1741,15 +1753,22 @@
 
 <p>Procédez ainsi pour construire le nouveau projet Maven :</p>
 <ul>
-<li>faites un copy / paste du projet [elections-ui-metier-dao-webjson] dans le projet [elections-ui-metier-dao-security-webjson] ;</li>
-<li>dans le nouveau projet :<ul>
-<li>supprimez les packages [elections.client.dao, elections.client.metier, elections.client.entities] ;</li>
-<li>dans le package [elections.client.ui], gardez seulement la classe console [ElectionsConsole] et son interface [IElectionsUI] ;</li>
-<li>renommez les packages comme indiqué en [3] ;</li>
-<li>réglez les problèmes d&#x27;import dans les diverses classes par [clic droit / Fix Imports] ;</li>
+  <li>faites un copy / paste du projet [elections-ui-metier-dao-webjson] dans le projet [elections-ui-metier-dao-security-webjson] ;
+  </li>
+  <li>dans le nouveau projet :
+    <ul>
+      <li>supprimez les packages [elections.client.dao, elections.client.metier, elections.client.entities] ;
+      </li>
+      <li>dans le package [elections.client.ui], gardez seulement la classe console [ElectionsConsole] et son interface [IElectionsUI] ;
+      </li>
+      <li>renommez les packages comme indiqué en [3] ;
+      </li>
+      <li>réglez les problèmes d&#x27;import dans les diverses classes par [clic droit / Fix Imports] ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>A ce stade, le nouveau projet présente de nombreuses erreurs.</p>
 <p><a id="refheading251916391218965"></a></p>
 <h3 id="1751-configuration-maven">17.5.1. Configuration Maven</h3>
@@ -1797,9 +1816,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 4-8 : l&#x27;identité Maven du nouveau projet ;</li>
-<li>lignes 22-26 : la dépendance sur le projet [elections-metier-dao-security-webjson] que nous venons de construire au paragraphe <a href="#refheading110174391218965">17.4</a>, et qui fournit les couches [DAO] et [métier] ;</li>
+  <li>lignes 4-8 : l&#x27;identité Maven du nouveau projet ;
+  </li>
+  <li>lignes 22-26 : la dépendance sur le projet [elections-metier-dao-security-webjson] que nous venons de construire au paragraphe <a href="#refheading110174391218965">17.4</a>, et qui fournit les couches [DAO] et [métier] ;
+  </li>
 </ul>
+
 <p><a id="refheading111102391218965"></a></p>
 <h3 id="1752-configuration-spring">17.5.2. Configuration Spring</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000000E555E1FEA0.png" style="display:inline-block; margin:4px;width:4.56cm;height:4.24cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000000E555E1FEA0.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1829,10 +1851,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : on importe la classe [elections.security.client.config.MetierConfig] du projet [elections-metier-dao-security-webjson] étudié au paragraphe <a href="#refheading110174391218965">17.4</a> ;</li>
-<li>ligne 9 : on déclare les packages où se trouvent les beans Spring ;</li>
-<li>lignes 12-18 : le bean [admin] est l&#x27;utilisateur [admin, admin] qui sera utilisé par l&#x27;application console. On se rappelle que c&#x27;est le seul utilisateur autorisé à interroger el serveur web / jSON sécurisé ;</li>
+  <li>ligne 8 : on importe la classe [elections.security.client.config.MetierConfig] du projet [elections-metier-dao-security-webjson] étudié au paragraphe <a href="#refheading110174391218965">17.4</a> ;
+  </li>
+  <li>ligne 9 : on déclare les packages où se trouvent les beans Spring ;
+  </li>
+  <li>lignes 12-18 : le bean [admin] est l&#x27;utilisateur [admin, admin] qui sera utilisé par l&#x27;application console. On se rappelle que c&#x27;est le seul utilisateur autorisé à interroger el serveur web / jSON sécurisé ;
+  </li>
 </ul>
+
 <p><a id="refheading251918391218965"></a></p>
 <h3 id="1753-lapplication-de-boot-de-la-console">17.5.3. L&#x27;application de boot de la console</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000105000000A3E63A28B1.png" style="display:inline-block; margin:4px;width:4.83cm;height:3.02cm;" class="odt-zoomable" data-zoom-src="images/1000000000000105000000A3E63A28B1.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1935,12 +1961,18 @@
 
 <p>Dans le nouveau projet [2] :</p>
 <ul>
-<li>supprimez les packages [elections.client.dao, elections.client.metier, elections.client.entities] ;</li>
-<li>dans le package [elections.client.ui], supprimez les classes [ElectionsConsole, IElectionsUI] ;</li>
-<li>renommez les packages comme indiqué en [2] ;</li>
-<li>dans le package [elections.security.client.swing], renommez la classe [AbstractElectionsSwing] qui implémente l&#x27;interface graphique en [AbstractElectionsMainForm] et la classe [ElectionsSwing] qui implémente les gestionnaires des événements de l&#x27;interface graphque en [ElectionsMainForm] ;</li>
-<li>réglez les problèmes d&#x27;import dans les diverses classes par [clic droit / Fix Imports] ;</li>
+  <li>supprimez les packages [elections.client.dao, elections.client.metier, elections.client.entities] ;
+  </li>
+  <li>dans le package [elections.client.ui], supprimez les classes [ElectionsConsole, IElectionsUI] ;
+  </li>
+  <li>renommez les packages comme indiqué en [2] ;
+  </li>
+  <li>dans le package [elections.security.client.swing], renommez la classe [AbstractElectionsSwing] qui implémente l&#x27;interface graphique en [AbstractElectionsMainForm] et la classe [ElectionsSwing] qui implémente les gestionnaires des événements de l&#x27;interface graphque en [ElectionsMainForm] ;
+  </li>
+  <li>réglez les problèmes d&#x27;import dans les diverses classes par [clic droit / Fix Imports] ;
+  </li>
 </ul>
+
 <p>A ce stade, il y a de nombreuses erreurs.</p>
 <p><a id="refheading251920391218965"></a></p>
 <h3 id="1761-configuration-maven">17.6.1. Configuration Maven</h3>
@@ -1988,9 +2020,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 4-8 : l&#x27;identité Maven du nouveau projet ;</li>
-<li>lignes 22-26 : une dépendance sur le projet console que nous venons d&#x27;étudier au paragraphe <a href="#refheading110868391218965">17.5</a> ;</li>
+  <li>lignes 4-8 : l&#x27;identité Maven du nouveau projet ;
+  </li>
+  <li>lignes 22-26 : une dépendance sur le projet console que nous venons d&#x27;étudier au paragraphe <a href="#refheading110868391218965">17.5</a> ;
+  </li>
 </ul>
+
 <p><a id="refheading251922391218965"></a></p>
 <h3 id="1762-configuration-spring">17.6.2. Configuration Spring</h3>
 <p>Ce projet utilise la configuration Spring du projet console qu&#x27;il importe (cf paragraphe <a href="#refheading111102391218965">17.5.2</a>).</p>
@@ -2002,17 +2037,24 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005380000024F96777603.png" style="display:inline-block; margin:4px;width:17.674cm;height:7.819cm;" class="odt-zoomable" data-zoom-src="images/10000000000005380000024F96777603.png" /></td></tr></table>
 
 <ul>
-<li>la vue [1] de connexion est nouvelle. Elle sert à authentifier l&#x27;utilisateur qui veut utiliser l&#x27;application. Elle utilise les classes :<ul>
-<li>[AbstractElectionsConnectForm] qui implémente la vue ;</li>
-<li>[ElectionsConnectForm] qui gère les événements de la vue ;</li>
+  <li>la vue [1] de connexion est nouvelle. Elle sert à authentifier l&#x27;utilisateur qui veut utiliser l&#x27;application. Elle utilise les classes :
+    <ul>
+      <li>[AbstractElectionsConnectForm] qui implémente la vue ;
+      </li>
+      <li>[ElectionsConnectForm] qui gère les événements de la vue ;
+      </li>
+    </ul>
+  </li>
+  <li>la vue [2] est connue. C&#x27;est celle utilisée jusqu&#x27;à maintenant. Elle utilise les classes :
+    <ul>
+      <li>[AbstractElectionsMainForm] qui implémente la vue ;
+      </li>
+      <li>[ElectionsMainForm] qui gère les événements de la vue ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>la vue [2] est connue. C&#x27;est celle utilisée jusqu&#x27;à maintenant. Elle utilise les classes :<ul>
-<li>[AbstractElectionsMainForm] qui implémente la vue ;</li>
-<li>[ElectionsMainForm] qui gère les événements de la vue ;</li>
-</ul>
-</li>
-</ul>
+
 <p><a id="refheading251926391218965"></a></p>
 <h3 id="1764-la-session">17.6.4. La session</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B58BE6BCD8.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000B58BE6BCD8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -2036,9 +2078,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : la classe [UiSession] est un composant Spring ;</li>
-<li>ligne 10 : elle ne sert qu&#x27;à une chose : mémoriser l&#x27;utilisateur qui se connecte avec la vue [1]. La vue [2] qui a besoin de connaître celui-ci ira le chercher là ;</li>
+  <li>ligne 6 : la classe [UiSession] est un composant Spring ;
+  </li>
+  <li>ligne 10 : elle ne sert qu&#x27;à une chose : mémoriser l&#x27;utilisateur qui se connecte avec la vue [1]. La vue [2] qui a besoin de connaître celui-ci ira le chercher là ;
+  </li>
 </ul>
+
 <p><a id="refheading251928391218965"></a></p>
 <h3 id="1765-la-classe-de-boot">17.6.5. La classe de boot</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001170000006EEE4D1884.png" style="display:inline-block; margin:4px;width:5.159cm;height:2.041cm;" class="odt-zoomable" data-zoom-src="images/10000000000001170000006EEE4D1884.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -2062,10 +2107,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5 : la classe [<span style="color: #000000">BootElectionsSwing</span>] étend la classe [<span style="color: #000000">AbstractBootElections</span>] définit dans le projet console présent dans les dépendances du projet ;</li>
-<li>lignes 10-13 : la classe [<span style="color: #000000">BootElectionsSwing</span>] fera afficher la vue de connexion [E<span style="color: #2a00ff">lectionsConnectForm</span>] ;</li>
-<li>lignes 6-8 : c&#x27;est la méthode [run] de cette classe qui sera exécutée ;</li>
+  <li>ligne 5 : la classe [<span style="color: #000000">BootElectionsSwing</span>] étend la classe [<span style="color: #000000">AbstractBootElections</span>] définit dans le projet console présent dans les dépendances du projet ;
+  </li>
+  <li>lignes 10-13 : la classe [<span style="color: #000000">BootElectionsSwing</span>] fera afficher la vue de connexion [E<span style="color: #2a00ff">lectionsConnectForm</span>] ;
+  </li>
+  <li>lignes 6-8 : c&#x27;est la méthode [run] de cette classe qui sera exécutée ;
+  </li>
 </ul>
+
 <p><a id="refheading251930391218965"></a></p>
 <h3 id="1766-la-classe-electionsmainform">17.6.6. La classe [ElectionsMainForm]</h3>
 <p>La classe [ElectionsMainForm] est celle qui s&#x27;appelait auparavant [ElectionsSwing]. Elle gère les événements de la vue [AbstractElectionsMainForm]. Son code évolue de la façon suivante :</p>
@@ -2193,10 +2242,14 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 32-33 : injection de la session de l&#x27;application ;</li>
-<li>lignes 112-119 : la vue sera activée comme précédemment par sa méthode [run] ;</li>
-<li>ligne 115 : on récupère l&#x27;utilisateur dans la session. Celui-ci y aura été mis par le code de la vue de connexion [ElectionsConnectForm]. Le code ensuite est modifié pour que le 1er paramètre des appels à la couche [métier] soient cet utilisateur (lignes 63, 69-70 par exemple) ;</li>
+  <li>lignes 32-33 : injection de la session de l&#x27;application ;
+  </li>
+  <li>lignes 112-119 : la vue sera activée comme précédemment par sa méthode [run] ;
+  </li>
+  <li>ligne 115 : on récupère l&#x27;utilisateur dans la session. Celui-ci y aura été mis par le code de la vue de connexion [ElectionsConnectForm]. Le code ensuite est modifié pour que le 1er paramètre des appels à la couche [métier] soient cet utilisateur (lignes 63, 69-70 par exemple) ;
+  </li>
 </ul>
+
 <p><a id="refheading251932391218965"></a></p>
 <h3 id="1767-la-vue-abstractelectionsconnectform">17.6.7. La vue [AbstractElectionsConnectForm]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000123000000B510C58FFE.png" style="display:inline-block; margin:4px;width:5.39cm;height:3.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000123000000B510C58FFE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -2310,15 +2363,22 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 73-82 : la méthode [run] qui sera appelée par la classe de boot [BootElectionsSwing] ;</li>
-<li>lignes 26-27 : injection d&#x27;une référence sur la vue n° 2 qui devra être affichée si l&#x27;utilisateur est reconnu ;</li>
-<li>lignes 30-31 : injection de la session de l&#x27;application ;</li>
-<li>ligne 84 : la méthode [<span style="color: #000000">isPageValid</span>] fait deux choses :<ul>
-<li>elle vérifie que l&#x27;identifiant n&#x27;est pas vide (le mot de passe peut l&#x27;être lui) ;</li>
-<li>instancie avec les saisies le champ User de la ligne 23 ;</li>
+  <li>lignes 73-82 : la méthode [run] qui sera appelée par la classe de boot [BootElectionsSwing] ;
+  </li>
+  <li>lignes 26-27 : injection d&#x27;une référence sur la vue n° 2 qui devra être affichée si l&#x27;utilisateur est reconnu ;
+  </li>
+  <li>lignes 30-31 : injection de la session de l&#x27;application ;
+  </li>
+  <li>ligne 84 : la méthode [<span style="color: #000000">isPageValid</span>] fait deux choses :
+    <ul>
+      <li>elle vérifie que l&#x27;identifiant n&#x27;est pas vide (le mot de passe peut l&#x27;être lui) ;
+      </li>
+      <li>instancie avec les saisies le champ User de la ligne 23 ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012AA6F09D99.png" style="display:inline-block; margin:4px;width:8.641cm;height:4.895cm;" class="odt-zoomable" data-zoom-src="images/100000000000020E0000012AA6F09D99.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A6F32C14F.png" style="display:inline-block; margin:4px;width:8.839cm;height:5.006cm;" class="odt-zoomable" data-zoom-src="images/100000000000020E0000012A6F32C14F.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A404BE896.png" style="display:inline-block; margin:4px;width:8.641cm;height:4.895cm;" class="odt-zoomable" data-zoom-src="images/100000000000020E0000012A404BE896.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000020E0000012A0B2E7A39.png" style="display:inline-block; margin:4px;width:8.839cm;height:5.006cm;" class="odt-zoomable" data-zoom-src="images/100000000000020E0000012A0B2E7A39.png" /></td></tr></table>

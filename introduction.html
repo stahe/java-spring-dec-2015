@@ -1006,13 +1006,17 @@
 <p><a id="refheading1051242082896917"></a></p>
 <h2 id="11-contexte">1.1. Contexte</h2>
 <p>Le PDF du document peut être trouvé |<a href="https://1drv.ms/b/c/f53a919f43d27eb5/IQBnFK8sZPpJS72PvvLHzhO-Af1LK9Uc_Xb-zE4j7_JDACs?e=Y9Z8rh">ICI</a>|.</p>
-<p>Les exemples du document sont disponibles |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQBchuYd805qTZq5g_2_7OskAW2zzcm2MrkwCP_vklw8nWw?e=JChG0g">ICI</a>|.</p>
+<p>Les exemples du document sont disponibles |<a href="https://1drv.ms/u/c/f53a919f43d27eb5/IQCyMn-mxDxGSZB24VcwoqUyAT2isxjoRctfqAl2Q_rIbTc?e=b5JA0X">ICI</a>|.</p>
 <p>Ce document est à la fois un cours et un TD (Travail Dirigé) d&#x27;université. Il est destiné à des débutants. Il utilise les sources suivantes :</p>
 <p><strong>Références</strong> : </p>
 <ol>
 <li><a href="https://tahe.developpez.com/java/cours">Introduction au langage Java</a> ;</li>
-<li><a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/">Exploiter une base relationnelle avec l&#x27;écosystème Spring</a> ;</li>
 </ol>
+<ol start="2">
+  <li><a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/">Exploiter une base relationnelle avec l&#x27;écosystème Spring</a> ;
+  </li>
+</ol>
+
 <p>Nous noterons ces références respectivement [<a href="https://tahe.developpez.com/java/cours">ref1</a>] et [<a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/">ref2</a>]. La source [<a href="https://tahe.developpez.com/java/cours">ref1</a>] est ancienne (2002) mais suffisante pour ce document où elle n&#x27;est utilisée que pour sa présentation de la syntaxe du langage Java et de ses actions élémentaires. Le reste nécessaire à la réalisation du TD est présenté dans ce document dans des chapitres intitulés [Cours]. Ces chapitres proviennent directement de [<a href="https://tahe.developpez.com/tutoriels-cours/spring/spring-data-jpa/serge-tahe-spring-data-jpa-jdbc-mvc-rest-security-cors/">ref2</a>] (2015) et ont été parfois simplifiés.</p>
 <p>L&#x27;objectif du document est d&#x27;enseigner le langage Java dans une optique professionnelle. Pour cette raison, nous nous appuyons fortement sur le framework Spring [http://spring.io/] très utilisé dans le développement JEE (Java Enterprise Edition). Logiquement, ce cours devrait être suivi par un cours JEE. C&#x27;est le cas à l&#x27;Istia (université d&#x27;Angers). JEE est la principale source d&#x27;emplois actuellement (novembre 2015) pour les jeunes développeurs Bac+5. Il y a beaucoup d&#x27;autres technologies que Spring dans le monde JEE. Spring a l&#x27;avantage d&#x27;être compréhensible et surtout d&#x27;apporter de bonnes pratiques de codage réutilisables en dehors de l&#x27;écosystème Spring. C&#x27;est ce qui explique son choix ici.</p>
 <p>Ce TD est utilisé depuis plus de 10 ans et a évolué avec les technologies. Il est suivi (à l&#x27;IstiA) d&#x27;un TD JEE [<a href="https://tahe.developpez.com/java/javaee">Introduction à Java EE</a>]. Ce dernier TD date de 2012 (on est ici en 2015) et mériterait d&#x27;être rafraîchi. Il présente l&#x27;orthodoxie JEE au travers du framework web JSF2 (Java Server Faces) et les EJB3 (Enterprise Java Bean). Mis bout à bout, ces deux TD ont permis à de nombreux étudiants de décrocher des stages JEE en ESN (Entreprises de Services Numériques) et de s&#x27;y faire embaucher dans la foulée.</p>
@@ -1027,10 +1031,14 @@
 <p>Le chapitre 3 demande d&#x27;implémenter la solution du TD en Java avec des classes. L&#x27;objectif est de présenter les notions de classes, d&#x27;héritage, d&#x27;interfaces et de classes génériques. La notion de test unitaire JUnit est introduite.</p>
 <p>Le chapitre 4 introduit les concepts qui sous-tendent les chapitres suivants :</p>
 <ul>
-<li>les architectures en couches ;</li>
-<li>la programmation par interfaces ;</li>
-<li>l&#x27;utilisation de Spring pour implémenter les deux précédents concepts ;</li>
+  <li>les architectures en couches ;
+  </li>
+  <li>la programmation par interfaces ;
+  </li>
+  <li>l&#x27;utilisation de Spring pour implémenter les deux précédents concepts ;
+  </li>
 </ul>
+
 <p><img src="images/10000000000006F80000018144D83424.png" style="width:16.521cm;height:3.56cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006F80000018144D83424.png" /></p>
 <p>Le chapitre 5 présente le framework Spring avec quatre projets.</p>
 <p>Le chapitre 6 présente l&#x27;API JDBC qui est une interface d&#x27;accès aux bases de données.</p>
@@ -1057,23 +1065,34 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000007A80000041E7F7BCDF5.png" style="display:inline-block; margin:4px;width:17.999cm;height:9.678cm;" class="odt-zoomable" data-zoom-src="images/10000000000007A80000041E7F7BCDF5.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], une application web délivre des pages HTML / Javascript ;</span></li>
-<li><span style="color: #000000">en [2], le navigateur exécute le Javascript embarqué dans les pages HTML pour interroger le service web sécurisé [3-4] ;</span></li>
+  <li><span style="color: #000000">en [1], une application web délivre des pages HTML / Javascript ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], le navigateur exécute le Javascript embarqué dans les pages HTML pour interroger le service web sécurisé [3-4] ;</span>
+  </li>
 </ul>
+
 <p>Soit D1=http://machine1:port1 le domaine du serveur [1] et D4=http://machine4:port4 le domaine du serveur [4]. Si les serveurs [1] et [4] ne sont pas dans le même domaine [D1!=D4], alors les requêtes de [3] vers [4] sont appelées des requêtes inter-domaines. A cause de restrictions de sécurité mises en oeuvre par les navigateurs, leur mise en place peut être problématique. Nous examinerons une solution.</p>
 <p>Le chapitre 19 met en oeuvre les requêtes inter-domaines avec l&#x27;application des élections.</p>
 <p><a id="refheading251519391218965"></a></p>
 <h2 id="13-les-outils-utilises">1.3. Les outils utilisés</h2>
 <p><a id="refheading4233146869296"></a>Les exemples qui suivent ont été testés dans l&#x27;environnement suivant :</p>
 <ul>
-<li>machine Windows 10 pro 64 bits ;</li>
-<li>JDK 1.8 (paragraphe <a href="annexes.html#refheading1633352067866943">22.1</a>) ;</li>
-<li>IDE Spring Tool Suite 3.6.3 ( paragraphe <a href="#refheading261305838046689">1</a>) ;</li>
-<li>Netbeans 8.1 ( paragraphe <a href="annexes.html#refheading78364566070260">22.4</a>) ;</li>
-<li>navigateur Chrome (les autres navigateurs n&#x27;ont pas été utilisés) ;</li>
-<li>extension Chrome [Advanced Rest Client] ( paragraphe <a href="#refheading261305838046689">1</a>) ;</li>
-<li>WampServer qui amène le SGBD MySQL et l&#x27;outil [PhpMyAdmin] pour le gérer ( paragraphe <a href="annexes.html#wampserver">22.7</a>) ;</li>
+  <li>machine Windows 10 pro 64 bits ;
+  </li>
+  <li>JDK 1.8 (paragraphe <a href="annexes.html#refheading1633352067866943">22.1</a>) ;
+  </li>
+  <li>IDE Spring Tool Suite 3.6.3 ( paragraphe <a href="#refheading261305838046689">1</a>) ;
+  </li>
+  <li>Netbeans 8.1 ( paragraphe <a href="annexes.html#refheading78364566070260">22.4</a>) ;
+  </li>
+  <li>navigateur Chrome (les autres navigateurs n&#x27;ont pas été utilisés) ;
+  </li>
+  <li>extension Chrome [Advanced Rest Client] ( paragraphe <a href="#refheading261305838046689">1</a>) ;
+  </li>
+  <li>WampServer qui amène le SGBD MySQL et l&#x27;outil [PhpMyAdmin] pour le gérer ( paragraphe <a href="annexes.html#wampserver">22.7</a>) ;
+  </li>
 </ul>
+
 <p>Il est important d&#x27;utiliser un JDK 1.8. Certains exemples utilisent des éléments de ce JDK. La plupart des exemples sont des projets Maven qui peuvent être ouverts indifféremment par les IDE Eclipse [<a href="https://www.eclipse.org/">https://www.eclipse.org/</a>], IntellijIDEA Community Edition [<a href="https://www.jetbrains.com/idea/download/">https://www.jetbrains.com/idea/download/</a>] et Netbeans [<a href="https://netbeans.org/">https://netbeans.org/</a>]. Dans la suite, les copies d&#x27;écran proviennent de l&#x27;IDE Spring Tool Suite, une variante d&#x27;Eclipse.</p>
 <p><a id="refheading1201561767547304"></a></p>
 <h2 id="14-le-support">1.4. Le support</h2>

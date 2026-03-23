@@ -1105,8 +1105,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 22-26 : on importe l&#x27;archive de la couche [métier] et par cascade celle de la couche [DAO] ;</li>
+  <li>lignes 22-26 : on importe l&#x27;archive de la couche [métier] et par cascade celle de la couche [DAO] ;
+  </li>
 </ul>
+
 <p><a id="refheading17455869506693"></a></p>
 <h2 id="93-configuration-spring">9.3. Configuration Spring</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011E000000AC14E8B420.png" style="display:inline-block; margin:4px;width:5.3cm;height:3.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000011E000000AC14E8B420.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1127,9 +1129,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : on importe les beans définis dans la couche [métier]. Celle-ci importait déjà les beans définis dans la couche [DAO]. On a donc ici accès aux beans des trois couches ;</li>
-<li>ligne 9 : le package [elections.ui.service] contient d&#x27;autres beans ;</li>
+  <li>ligne 8 : on importe les beans définis dans la couche [métier]. Celle-ci importait déjà les beans définis dans la couche [DAO]. On a donc ici accès aux beans des trois couches ;
+  </li>
+  <li>ligne 9 : le package [elections.ui.service] contient d&#x27;autres beans ;
+  </li>
 </ul>
+
 <p><a id="refheading318391812363491"></a></p>
 <h2 id="94-linterface-de-la-couche-ui">9.4. L&#x27;interface de la couche [UI]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000110000000BB2C62B0D2.png" style="display:inline-block; margin:4px;width:5.039cm;height:3.461cm;" class="odt-zoomable" data-zoom-src="images/1000000000000110000000BB2C62B0D2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1150,8 +1155,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : l&#x27;interface n&#x27;a qu&#x27;une unique méthode : <strong>run</strong>. En appelant cette méthode, on demande à la couche [ui] de commencer les échanges avec l&#x27;utilisateur.</li>
+  <li>ligne 7 : l&#x27;interface n&#x27;a qu&#x27;une unique méthode : <b>run</b>. En appelant cette méthode, on demande à la couche [ui] de commencer les échanges avec l&#x27;utilisateur.
+  </li>
 </ul>
+
 <p><a id="refheading318411812363491"></a></p>
 <h2 id="95-la-classe-de-demarrage-de-lapplication">9.5. La classe de démarrage de l&#x27;application</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000116000000AE6E041AA8.png" style="display:inline-block; margin:4px;width:5.151cm;height:3.221cm;" class="odt-zoomable" data-zoom-src="images/1000000000000116000000AE6E041AA8.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1228,28 +1235,42 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 19 : le contexte Spring est instancié : tous les beans définis dans les différents fichiers de configuration vont être créés ;</li>
-<li>ligne 21 : on récupère une référence sur le bean qui implémente l&#x27;interface [IElectionsUI]. Nous allons implémenter l&#x27;interface [IElectionsUI] par deux beans :<ul>
-<li>[ElectionsConsole] pour une application console ;</li>
-<li>[ElectionsSwing] pour une application Swing ;</li>
+  <li>ligne 19 : le contexte Spring est instancié : tous les beans définis dans les différents fichiers de configuration vont être créés ;
+  </li>
+  <li>ligne 21 : on récupère une référence sur le bean qui implémente l&#x27;interface [IElectionsUI]. Nous allons implémenter l&#x27;interface [IElectionsUI] par deux beans :
+    <ul>
+      <li>[ElectionsConsole] pour une application console ;
+      </li>
+      <li>[ElectionsSwing] pour une application Swing ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>La méthode [getUI] est abstraite (ligne 44). En effet, la classe [<span style="color: #000000">AbstractBootElections</span>] va être parente de deux classes :</p>
 <ul>
-<li>[<span style="color: #000000">BootElectionsConsole</span>] qui fournira le bean [ElectionsConsole] à sa classe parent ;</li>
-<li>[<span style="color: #000000">BootElectionsSwing</span>] qui fournira le bean [ElectionsSwing] à sa classe parent ;</li>
-<li>ligne 30 : la méthode [run] de l&#x27;interface est exécutée ;</li>
+  <li>[<span style="color: #000000">BootElectionsConsole</span>] qui fournira le bean [ElectionsConsole] à sa classe parent ;
+  </li>
+  <li>[<span style="color: #000000">BootElectionsSwing</span>] qui fournira le bean [ElectionsSwing] à sa classe parent ;
+  </li>
+  <li>ligne 30 : la méthode [run] de l&#x27;interface est exécutée ;
+  </li>
 </ul>
+
 <p>Les exceptions sont gérées à divers endroits :</p>
 <ul>
-<li>lignes 22-27 : une exception peut se produire lors de l&#x27;instanciation du contexte Spring ;</li>
-<li>lignes 31-41 : une exception peut se produire lors de l&#x27;exécution de la couche [UI]. On distingue deux types d&#x27;exception :<ul>
-<li>la classe [ElectionsException] que la couche [DAO] lance ;</li>
-<li>la classe [RuntimeException] pour les autres exceptions qui pourraient survenir pendant l&#x27;exécution ;</li>
+  <li>lignes 22-27 : une exception peut se produire lors de l&#x27;instanciation du contexte Spring ;
+  </li>
+  <li>lignes 31-41 : une exception peut se produire lors de l&#x27;exécution de la couche [UI]. On distingue deux types d&#x27;exception :
+    <ul>
+      <li>la classe [ElectionsException] que la couche [DAO] lance ;
+      </li>
+      <li>la classe [RuntimeException] pour les autres exceptions qui pourraient survenir pendant l&#x27;exécution ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>La classe [BootElectionsConsole] est la classe qui lance l&#x27;implémentation console. Son code est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> elections.ui.boot;</span></span>
@@ -1269,10 +1290,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 5, la classe [BootElectionsConsole] étend la classe [<span style="color: #000000">AbstractBootElections</span>]. Elle doit donc implémenter la méthode [getUI] que sa classe parente avait déclarée abstraite ;</li>
-<li>lignes 10-13 : implémentation de la méthode [getUI] ;</li>
-<li>ligne 12 : on rend le bean nommé [<span style="color: #2a00ff">electionsConsole</span>] implémentant l&#x27;interface [<span style="color: #000000">IElectionsUI</span>]. [<span style="color: #0000c0">ctx</span>] est le contexte Spring défini dans la classe parente par la déclaration :</li>
+  <li>ligne 5, la classe [BootElectionsConsole] étend la classe [<span style="color: #000000">AbstractBootElections</span>]. Elle doit donc implémenter la méthode [getUI] que sa classe parente avait déclarée abstraite ;
+  </li>
+  <li>lignes 10-13 : implémentation de la méthode [getUI] ;
+  </li>
+  <li>ligne 12 : on rend le bean nommé [<span style="color: #2a00ff">electionsConsole</span>] implémentant l&#x27;interface [<span style="color: #000000">IElectionsUI</span>]. [<span style="color: #0000c0">ctx</span>] est le contexte Spring défini dans la classe parente par la déclaration :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// récupération du contexte Spring</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">protected</span><span style="color:#000000"> AnnotationConfigApplicationContext </span><span style="color:#0000c0">ctx</span><span style="color:#000000">;</span></span>
@@ -1396,11 +1421,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 12 : la classe [<span style="color: #000000">ElectionsConsole</span>] est un composant Spring ;</li>
-<li>ligne 13 : la classe implémente l&#x27;interface [IElectionsUI]</li>
-<li>lignes 15-16 : injection par Spring d&#x27;une référence sur la couche [metier] ;</li>
-<li>ligne 18-34 : la méthode [run] de l&#x27;interface [IelectionsUI] ;</li>
+  <li>ligne 12 : la classe [<span style="color: #000000">ElectionsConsole</span>] est un composant Spring ;
+  </li>
+  <li>ligne 13 : la classe implémente l&#x27;interface [IElectionsUI]
+  </li>
+  <li>lignes 15-16 : injection par Spring d&#x27;une référence sur la couche [metier] ;
+  </li>
+  <li>ligne 18-34 : la méthode [run] de l&#x27;interface [IelectionsUI] ;
+  </li>
 </ul>
+
 <p>Le <em>try</em> des lignes 21-28 s&#x27;appelle <em>try-with-resources</em> et sa syntaxe est la suivante :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>

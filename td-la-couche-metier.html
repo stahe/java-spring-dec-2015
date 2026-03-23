@@ -1133,8 +1133,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 21-25 : la dépendance sur le jar du projet [elections-jdbc-01]. On prend ces lignes directement dans le fichier [pom.xml] du projet que l&#x27;on veut importer :</li>
+  <li>lignes 21-25 : la dépendance sur le jar du projet [elections-jdbc-01]. On prend ces lignes directement dans le fichier [pom.xml] du projet que l&#x27;on veut importer :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">project</span> <span style="color:#7f007f">xmlns</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0&quot;</span> <span style="color:#7f007f">xmlns:xsi</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://www.w3.org/2001/XMLSchema-instance&quot; </span><span style="color:#7f007f">xsi:schemaLocation</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span><span style="color:#000000">4.0.0</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">modelVersion</span><span style="color:#008080">&gt;</span></span>
@@ -1145,8 +1147,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 26-37 : les dépendances nécessaires aux tests. Bien qu&#x27;elles soient présentes dans le fichier [pom.xml] du projet [elections-jdbc-01], nous sommes obligés de les remettre car leur attribut [<span style="color: #008080">&lt;</span><span style="color: #3f7f7f">scope</span><span style="color: #008080">&gt;</span><span style="color: #000000">test</span><span style="color: #008080">&lt;/</span><span style="color: #3f7f7f">scope</span><span style="color: #008080">&gt;</span>] fait qu&#x27;elles n&#x27;ont pas été incluses dans le jar mis dans le dépôt Maven local ;</li>
+  <li>lignes 26-37 : les dépendances nécessaires aux tests. Bien qu&#x27;elles soient présentes dans le fichier [pom.xml] du projet [elections-jdbc-01], nous sommes obligés de les remettre car leur attribut [<span style="color: #008080">&lt;</span><span style="color: #3f7f7f">scope</span><span style="color: #008080">&gt;</span><span style="color: #000000">test</span><span style="color: #008080">&lt;/</span><span style="color: #3f7f7f">scope</span><span style="color: #008080">&gt;</span>] fait qu&#x27;elles n&#x27;ont pas été incluses dans le jar mis dans le dépôt Maven local ;
+  </li>
 </ul>
+
 <p><a id="refheading17455269506693"></a></p>
 <h2 id="83-configuration-spring">8.3. Configuration Spring</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001060000007DCFC8459E.png" style="display:inline-block; margin:4px;width:4.851cm;height:2.311cm;" class="odt-zoomable" data-zoom-src="images/10000000000001060000007DCFC8459E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1166,10 +1170,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : on importe tous les beans définis dans la couche [DAO] ;</li>
-<li>ligne 8 : on active le cache. On ne redéfinit pas le bean [CacheManager], car il est déjà défini dans la couche [DAO] ;</li>
-<li>ligne 9 : la couche [métier] définit de nouveaux beans dans le package [elections.metier.service] ;</li>
+  <li>ligne 7 : on importe tous les beans définis dans la couche [DAO] ;
+  </li>
+  <li>ligne 8 : on active le cache. On ne redéfinit pas le bean [CacheManager], car il est déjà défini dans la couche [DAO] ;
+  </li>
+  <li>ligne 9 : la couche [métier] définit de nouveaux beans dans le package [elections.metier.service] ;
+  </li>
 </ul>
+
 <p><a id="refheading318211812363491"></a>
 <a id="ielectionsmetier"></a></p>
 <h2 id="84-linterface-ielectionsmetier">8.4. L&#x27;interface [IElectionsMetier]</h2>
@@ -1250,11 +1258,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 10 : la classe [ElectionsMetier] est un composant Spring ;</li>
-<li>ligne 11 : la classe [ElectionsMetier] implémente l&#x27;interface [IElectionsMetier] ;</li>
-<li>lignes 15-16 : injection Spring d&#x27;une référence sur la couche [DAO] ;</li>
-<li>lignes 37 et 44 : le nombre de sièges à pourvoir et le seuil électoral sont mis en cache ;</li>
+  <li>ligne 10 : la classe [ElectionsMetier] est un composant Spring ;
+  </li>
+  <li>ligne 11 : la classe [ElectionsMetier] implémente l&#x27;interface [IElectionsMetier] ;
+  </li>
+  <li>lignes 15-16 : injection Spring d&#x27;une référence sur la couche [DAO] ;
+  </li>
+  <li>lignes 37 et 44 : le nombre de sièges à pourvoir et le seuil électoral sont mis en cache ;
+  </li>
 </ul>
+
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : écrivez la classe [ElectionsMetier]. On s&#x27;aidera des commentaires lorsqu&#x27;il y en a. On n&#x27;essaiera pas d&#x27;arrêter (try / catch) les exceptions de type [ElectionsException] qui remontent de la couche [DAO]. On les laissera remonter à la couche [UI]. Parce que la classe [ElectionsException] est un type d&#x27;exception non contrôlée, il n&#x27;y a pas obligation à la gérer par un (try / catch).</p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
@@ -1372,8 +1385,10 @@
 
 <p>Nous avons construit les couches [metier] et [dao]. Nous allons maintenant construire la couche [ui]. Nous proposerons deux implémentations pour cette couche :</p>
 <ul>
-<li>une implémentation &quot; console &quot;</li>
-<li>une implémentation avec interface graphique</li>
+  <li>une implémentation &quot; console &quot;
+  </li>
+  <li>une implémentation avec interface graphique
+  </li>
 </ul>
 
 

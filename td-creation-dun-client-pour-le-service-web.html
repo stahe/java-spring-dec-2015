@@ -1154,12 +1154,18 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C400000083E6D8B180.png" style="display:inline-block; margin:4px;width:3.63cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C400000083E6D8B180.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>le package [elections.client.config] contient la configation Spring de la couche [DAO] ;</li>
-<li>le package [elections .client.dao] contient l&#x27;implémentation de la couche [DAO] ;</li>
-<li>le package [elections .client.entities] contient les objets échangés avec le service web / jSON ;</li>
-<li>le package [elections .client.metier] contient la couche [métier]</li>
-<li>le package [elections .client.ui] contient la couche [UI]</li>
+  <li>le package [elections.client.config] contient la configation Spring de la couche [DAO] ;
+  </li>
+  <li>le package [elections .client.dao] contient l&#x27;implémentation de la couche [DAO] ;
+  </li>
+  <li>le package [elections .client.entities] contient les objets échangés avec le service web / jSON ;
+  </li>
+  <li>le package [elections .client.metier] contient la couche [métier]
+  </li>
+  <li>le package [elections .client.ui] contient la couche [UI]
+  </li>
 </ul>
+
 <p><a id="refheading18459265679331"></a></p>
 <h3 id="1551-configuration-de-la-couche-metier">15.5.1. Configuration de la couche [métier]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000104000000CEF699EE9C.png" style="display:inline-block; margin:4px;width:4.821cm;height:3.821cm;" class="odt-zoomable" data-zoom-src="images/1000000000000104000000CEF699EE9C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1340,10 +1346,14 @@
 
 <p>L&#x27;interface n&#x27;a qu&#x27;une unique méthode [getResponse] :</p>
 <ul>
-<li>le 1er paramètre est l&#x27;URL du serveur à interroger ;</li>
-<li>le second paramètre est la valeur jSON de la valeur à poster, <em>null</em> s&#x27;il n&#x27;y a rien à poster ;</li>
-<li>le résultat est la chaîne jSON d&#x27;un objet [Response&lt;T&gt;] où la classe [Response] a été décrite au paragraphe <a href="td-exposition-sur-le-web-de-la-couche-metier.html#refheading18038265679331">14.7</a>;</li>
+  <li>le 1er paramètre est l&#x27;URL du serveur à interroger ;
+  </li>
+  <li>le second paramètre est la valeur jSON de la valeur à poster, <i>null</i> s&#x27;il n&#x27;y a rien à poster ;
+  </li>
+  <li>le résultat est la chaîne jSON d&#x27;un objet [Response&lt;T&gt;] où la classe [Response] a été décrite au paragraphe <a href="td-exposition-sur-le-web-de-la-couche-metier.html#refheading18038265679331">14.7</a>;
+  </li>
 </ul>
+
 <p><a id="refheading18465265679331"></a></p>
 <h3 id="1554-implementation-des-echanges-avec-le-service-web-json">15.5.4. Implémentation des échanges avec le service web / jSON</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000117000000CA2AEDA8C2.png" style="display:inline-block; margin:4px;width:5.159cm;height:3.739cm;" class="odt-zoomable" data-zoom-src="images/1000000000000117000000CA2AEDA8C2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1591,8 +1601,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 19 : le contexte Spring défini par la classe de configuration [UiConfig] est instancié. Cette classe est la suivante :</li>
+  <li>ligne 19 : le contexte Spring défini par la classe de configuration [UiConfig] est instancié. Cette classe est la suivante :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011B000000D01E906E73.png" style="display:inline-block; margin:4px;width:5.241cm;height:3.851cm;" class="odt-zoomable" data-zoom-src="images/100000000000011B000000D01E906E73.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [UiConfig] est la suivante :</p>
@@ -1609,9 +1621,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 : on importe les beans de la couche [métier] ;</li>
-<li>ligne 7 : on indique qu&#x27;il y des beans Spring dans le package [<span style="color: #2a00ff">elections.client.ui</span>] ;</li>
+  <li>ligne 6 : on importe les beans de la couche [métier] ;
+  </li>
+  <li>ligne 7 : on indique qu&#x27;il y des beans Spring dans le package [<span style="color: #2a00ff">elections.client.ui</span>] ;
+  </li>
 </ul>
+
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : vérifiez que les versions console et swing de la couche [ui] fonctionnent.</p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />

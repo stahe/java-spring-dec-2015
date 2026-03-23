@@ -1180,17 +1180,23 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003B70000035CAC4B5101.png" style="display:inline-block; margin:4px;width:12.582cm;height:11.377cm;" class="odt-zoomable" data-zoom-src="images/10000000000003B70000035CAC4B5101.png" /></td></tr></table>
 
 <ul>
-<li>les pages HTML / CSS / JS de l&#x27;application Angular viennent du serveur [1] ;</li>
-<li>en [2], le service [dao] fait une requête à un autre serveur, le serveur [2]. Et bien ça, c&#x27;est interdit par le navigateur qui exécute l&#x27;application Angular parce que c&#x27;est une faille de sécurité. L&#x27;application ne peut interroger que le serveur d&#x27;où elle vient, ç-à-d le serveur [1] ;</li>
+  <li>les pages HTML / CSS / JS de l&#x27;application Angular viennent du serveur [1] ;
+  </li>
+  <li>en [2], le service [dao] fait une requête à un autre serveur, le serveur [2]. Et bien ça, c&#x27;est interdit par le navigateur qui exécute l&#x27;application Angular parce que c&#x27;est une faille de sécurité. L&#x27;application ne peut interroger que le serveur d&#x27;où elle vient, ç-à-d le serveur [1] ;
+  </li>
 </ul>
+
 <p>En fait, il est inexact de dire que le navigateur interdit à l&#x27;application Angular d&#x27;interroger le serveur [2]. Elle l&#x27;interroge en fait pour lui demander s&#x27;il autorise un client qui ne vient pas de chez lui à l&#x27;interroger. On appelle cette technique de partage, le <strong>CORS</strong> (Cross-Origin Resource Sharing). Le serveur [2] donne son accord en envoyant des entêtes HTTP précis.</p>
 <p><span style="color: #000000">Nous allons créer l&#x27;architecture suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004C20000027F7259DF97.png" style="display:inline-block; margin:4px;width:16.113cm;height:8.454cm;" class="odt-zoomable" data-zoom-src="images/10000000000004C20000027F7259DF97.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], une application web délivre des pages HTML / jS ;</span></li>
-<li><span style="color: #000000">en [2], le navigateur exécute le Javascript embarqué dans les pages HTML pour interroger le service web sécurisé [3] ;</span></li>
+  <li><span style="color: #000000">en [1], une application web délivre des pages HTML / jS ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], le navigateur exécute le Javascript embarqué dans les pages HTML pour interroger le service web sécurisé [3] ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading1217261037674463"></a></p>
 <h2 id="181-support">18.1. Support</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E000000086360FDC72.png" style="display:inline-block; margin:4px;width:4.17cm;height:2.48cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E000000086360FDC72.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1251,9 +1257,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 11-15 : c&#x27;est un projet Spring Boot ;</span></li>
-<li><span style="color: #000000">lignes 23-26 : on utilise la dépendance [spring-boot-starter-web] qui amène avec elle un serveur Tomcat et Spring MVC ;</span></li>
+  <li><span style="color: #000000">lignes 11-15 : c&#x27;est un projet Spring Boot ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 23-26 : on utilise la dépendance [spring-boot-starter-web] qui amène avec elle un serveur Tomcat et Spring MVC ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading1184671799226695"></a></p>
 <h2 id="184-configuration-spring">18.4. Configuration Spring</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E3000000708D6932EB.png" style="display:inline-block; margin:4px;width:4.2cm;height:2.071cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E3000000708D6932EB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1306,13 +1315,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 15 : la classe configure un projet Spring MVC ;</span></li>
-<li><span style="color: #000000">ligne 16 : la classe étend la classe [WebMvcConfigurerAdapter] pour redéfinir certaines de ses méthodes ;</span></li>
-<li><span style="color: #000000">lignes 18-36 : nous avons déjà rencontré ces beans, par exemple au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17988265679331">13.5.3.1</a>. On notera, ligne 35, que le service web fonctionnera sur le port 8081 ;</span></li>
-<li><span style="color: #000000">lignes 38-42 : la méthode [addResourceHandlers] permet de définir des ressources statiques, ç-à-d des ressources non traitées par la [DispatcherServlet] de la ligne 23 ;</span></li>
-<li><span style="color: #000000">ligne 40 : toute requête d&#x27;une ressource ayant un suffixe .html aura pour réponse le fichier demandé par la requête et trouvé dans le dossier [static] du Classpath du projet ;</span></li>
-<li><span style="color: #000000">ligne 41 : toute requête d&#x27;une ressource ayant un suffixe .js aura pour réponse le fichier Javascript demandé par la requête et trouvé dans le dossier [static/js] du Classpath du projet ;</span></li>
+  <li><span style="color: #000000">ligne 15 : la classe configure un projet Spring MVC ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 16 : la classe étend la classe [WebMvcConfigurerAdapter] pour redéfinir certaines de ses méthodes ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 18-36 : nous avons déjà rencontré ces beans, par exemple au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17988265679331">13.5.3.1</a>. On notera, ligne 35, que le service web fonctionnera sur le port 8081 ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 38-42 : la méthode [addResourceHandlers] permet de définir des ressources statiques, ç-à-d des ressources non traitées par la [DispatcherServlet] de la ligne 23 ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 40 : toute requête d&#x27;une ressource ayant un suffixe .html aura pour réponse le fichier demandé par la requête et trouvé dans le dossier [static] du Classpath du projet ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 41 : toute requête d&#x27;une ressource ayant un suffixe .js aura pour réponse le fichier Javascript demandé par la requête et trouvé dans le dossier [static/js] du Classpath du projet ;</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F400000103E8BCB7A6.png" style="display:inline-block; margin:4px;width:4.521cm;height:4.8cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F400000103E8BCB7A6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading4847838046689"></a></p>
@@ -1340,9 +1356,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 6 : importation de jQuery ;</span></li>
-<li><span style="color: #000000">lignes 10-12 : un élément de la page d&#x27;<strong>id</strong> [element1]. Nous allons jouer avec cet élément.</span></li>
+  <li><span style="color: #000000">ligne 6 : importation de jQuery ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 10-12 : un élément de la page d&#x27;<b>id</b> [element1]. Nous allons jouer avec cet élément.</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Il nous faut télécharger le fichier [<em><span style="color: #2a00ff">jquery-2.1.3.min.js</span></em>]. On trouvera la dernière version de jQuery à l&#x27;URL [<a href="http://jquery.com/download/">http://jquery.com/download/</a>] :</span></p>
 <p><img src="images/10000000000003CC00000103F6C4BFF9.png" style="width:18cm;height:4.8cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000003CC00000103F6C4BFF9.png" /></p>
 <p><span style="color: #000000">On placera le fichier téléchargé dans le dossier [static / js] et on changera la ligne 6 du fichier HTML en fonction de la version installée.</span></p>
@@ -1359,22 +1378,28 @@
 </div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>$(&quot;#element1&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: rend la collection de tous les éléments d&#x27;<b>id</b> [element1],</p><p style="margin:0;">donc normalement une collection de 0 ou 1 élément</p><p style="margin:0;">parce qu&#x27;on ne peut avoir deux <b>id</b> identiques dans une page HTML.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B60000008356BBD730.png" style="display:inline-block; margin:4px;width:3.371cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B60000008356BBD730.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">: rend la collection de tous les éléments d&#x27;<b>id</b> [element1],</div><div style="margin:0 0 0.5em 0">donc normalement une collection de 0 ou 1 élément</div><div style="margin:0 0 0.5em 0">parce qu&#x27;on ne peut avoir deux <b>id</b> identiques dans une page HTML.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B60000008356BBD730.png" style="display:inline-block; margin:4px;width:3.371cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B60000008356BBD730.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$(&quot;#element1&quot;).text(&quot;blabla&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: affecte le texte [blabla] à tous les éléments</p><p style="margin:0;">de la collection. Ceci a pour effet de changer le</p><p style="margin:0;">contenu affiché par la page</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000253B59BD93.png" style="display:inline-block; margin:4px;width:4.761cm;height:0.681cm;" class="odt-zoomable" data-zoom-src="images/1000000000000101000000253B59BD93.png" /><img src="images/10000000000000EF000000B740C0BE12.png" style="display:inline-block; margin:4px;width:4.431cm;height:3.39cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EF000000B740C0BE12.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">: affecte le texte [blabla] à tous les éléments</div><div style="margin:0 0 0.5em 0">de la collection. Ceci a pour effet de changer le</div><div style="margin:0 0 0.5em 0">contenu affiché par la page</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000253B59BD93.png" style="display:inline-block; margin:4px;width:4.761cm;height:0.681cm;" class="odt-zoomable" data-zoom-src="images/1000000000000101000000253B59BD93.png" /><img src="images/10000000000000EF000000B740C0BE12.png" style="display:inline-block; margin:4px;width:4.431cm;height:3.39cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EF000000B740C0BE12.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$(&quot;#element1&quot;).hide()
 </code></pre></div>
-</div><p style="margin:0;">cache les éléments de la collection.</p><p style="margin:0;">Le texte [blabla] n&#x27;est plus affiché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FD0000001F991499F4.png" style="display:inline-block; margin:4px;width:4.68cm;height:0.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FD0000001F991499F4.png" /><img src="images/10000000000000DE000000987D612336.png" style="display:inline-block; margin:4px;width:4.11cm;height:2.82cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE000000987D612336.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">cache les éléments de la collection.</div><div style="margin:0 0 0.5em 0">Le texte [blabla] n&#x27;est plus affiché.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000FD0000001F991499F4.png" style="display:inline-block; margin:4px;width:4.68cm;height:0.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000FD0000001F991499F4.png" /><img src="images/10000000000000DE000000987D612336.png" style="display:inline-block; margin:4px;width:4.11cm;height:2.82cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DE000000987D612336.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>$(&quot;#element1&quot;)
 </code></pre></div>
-</div><p style="margin:0;">: affiche de nouveau la collection. Cela nous</p><p style="margin:0;">permet de voir que l&#x27;élément d&#x27;id [element1] a</p><p style="margin:0;">l&#x27;attribut CSS <b>style=&#x27;display : none;&#x27;</b> qui fait</p><p style="margin:0;">que l&#x27;élément est caché.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019B0000002A4792CCDD.png" style="display:inline-block; margin:4px;width:7.609cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/100000000000019B0000002A4792CCDD.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">: affiche de nouveau la collection. Cela nous</div><div style="margin:0 0 0.5em 0">permet de voir que l&#x27;élément d&#x27;id [element1] a</div><div style="margin:0 0 0.5em 0">l&#x27;attribut CSS <b>style=&#x27;display : none;&#x27;</b> qui fait</div><div style="margin:0 0 0.5em 0">que l&#x27;élément est caché.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019B0000002A4792CCDD.png" style="display:inline-block; margin:4px;width:7.609cm;height:0.78cm;" class="odt-zoomable" data-zoom-src="images/100000000000019B0000002A4792CCDD.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$(&quot;#element1&quot;).show()
 </code></pre></div>
-</div><p style="margin:0;">: affiche les éléments de la collection. Le texte</p><p style="margin:0;">[blabla] apparaît de nouveau. C&#x27;est l&#x27;attribut</p><p style="margin:0;">CSS <b>style=&#x27;display : block;&#x27;</b> qui assure cet</p><p style="margin:0;">affichage.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A500000026083A7878.png" style="display:inline-block; margin:4px;width:7.789cm;height:0.7cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A500000026083A7878.png" /><img src="images/10000000000000F9000000C13449EDE1.png" style="display:inline-block; margin:4px;width:4.611cm;height:3.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F9000000C13449EDE1.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">: affiche les éléments de la collection. Le texte</div><div style="margin:0 0 0.5em 0">[blabla] apparaît de nouveau. C&#x27;est l&#x27;attribut</div><div style="margin:0 0 0.5em 0">CSS <b>style=&#x27;display : block;&#x27;</b> qui assure cet</div><div style="margin:0 0 0.5em 0">affichage.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A500000026083A7878.png" style="display:inline-block; margin:4px;width:7.789cm;height:0.7cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A500000026083A7878.png" /><img src="images/10000000000000F9000000C13449EDE1.png" style="display:inline-block; margin:4px;width:4.611cm;height:3.57cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F9000000C13449EDE1.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>$(&quot;#element1&quot;).attr(&#39;style&#39;,&#39;color: red&#39;)
 </code></pre></div>
-</div><p style="margin:0;">: fixe un attribut à tous les éléments de la</p><p style="margin:0;">collection. L&#x27;attribut est ici [style] et sa valeur</p><p style="margin:0;">[color: red]. Le texte [blabla] passe en rouge.</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018B000000231B4940BC.png" style="display:inline-block; margin:4px;width:7.31cm;height:0.651cm;" class="odt-zoomable" data-zoom-src="images/100000000000018B000000231B4940BC.png" /><img src="images/10000000000000F7000000BF541DB4ED.png" style="display:inline-block; margin:4px;width:4.57cm;height:3.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000BF541DB4ED.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div>
+<div style="margin:0 0 0.5em 0">: fixe un attribut à tous les éléments de la</div><div style="margin:0 0 0.5em 0">collection. L&#x27;attribut est ici [style] et sa valeur</div><div style="margin:0 0 0.5em 0">[color: red]. Le texte [blabla] passe en rouge.</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000018B000000231B4940BC.png" style="display:inline-block; margin:4px;width:7.31cm;height:0.651cm;" class="odt-zoomable" data-zoom-src="images/100000000000018B000000231B4940BC.png" /><img src="images/10000000000000F7000000BF541DB4ED.png" style="display:inline-block; margin:4px;width:4.57cm;height:3.54cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F7000000BF541DB4ED.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Tableau
 </code></pre></div>
 </div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EE0000011645A3961D.png" style="display:inline-block; margin:4px;width:4.41cm;height:5.151cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EE0000011645A3961D.png" /></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
@@ -1439,10 +1464,14 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 6 : on importe la bibliothèque jQuery ;</span></li>
-<li><span style="color: #000000">ligne 7 : on importe un code que nous allons écrire ;</span></li>
-<li><span style="color: #000000">lignes 15, 19, 26, 29, 31 : on notera les identifiants [id] des composants de la page. Le javascript référence ces composants via ces identifiants ;</span></li>
+  <li><span style="color: #000000">ligne 6 : on importe la bibliothèque jQuery ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 7 : on importe un code que nous allons écrire ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 15, 19, 26, 29, 31 : on notera les identifiants [id] des composants de la page. Le javascript référence ces composants via ces identifiants ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le code [client.js] est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">// données globales</span>
@@ -1535,42 +1564,68 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 80-87 : du code jS exécuté à la fin du chargement du document dans le navigateur ;</span></li>
-<li><span style="color: #000000">lignes 81-86 : on récupère les références des différents éléments du document HTML, via leur identifiant [id] ;</span></li>
-<li><span style="color: #000000">lignes 2-9 : des variables globales connues dans toute les fonctions définies dans le fichier jS ;</span></li>
-<li><span style="color: #000000">ligne 13 : on récupère l&#x27;URL tapée par l&#x27;utilisateur ;</span></li>
-<li><span style="color: #000000">ligne 14 : on récupère la valeur qu&#x27;il veut poster (vide si opération GET) ;</span></li>
-<li><span style="color: #000000">ligne 15 : on récupère l&#x27;identifiant tapé par l&#x27;utilisateur ;</span></li>
-<li><span style="color: #000000">ligne 16 : on récupère sont mot de passe ;</span></li>
-<li><span style="color: #000000">ligne 17 : on récupère la façon [get] ou [post] à utiliser pour demander l&#x27;URL de la ligne 9 :</span><ul>
-<li><span style="color: #000000">[<strong>document</strong>] désigne le document chargé par le navigateur, ce qu&#x27;on appelle le DOM (Document Object Model),</span></li>
-<li><span style="color: #000000">[<strong>document.forms[0]</strong>] désigne le 1er formulaire du document, un document pouvant en avoir plusieurs. Ici, il n&#x27;y en qu&#x27;un,</span></li>
-<li><span style="color: #000000">[<strong>document.forms[0].elements[&#x27;method&#x27;</strong>]] désigne l&#x27;élément du formulaire qui a l&#x27;attribut [name=&#x27;method&#x27;]. Il y en a deux :</span></li>
+  <li><span style="color: #000000">lignes 80-87 : du code jS exécuté à la fin du chargement du document dans le navigateur ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 81-86 : on récupère les références des différents éléments du document HTML, via leur identifiant [id] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 2-9 : des variables globales connues dans toute les fonctions définies dans le fichier jS ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 13 : on récupère l&#x27;URL tapée par l&#x27;utilisateur ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 14 : on récupère la valeur qu&#x27;il veut poster (vide si opération GET) ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 15 : on récupère l&#x27;identifiant tapé par l&#x27;utilisateur ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 16 : on récupère sont mot de passe ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 17 : on récupère la façon [get] ou [post] à utiliser pour demander l&#x27;URL de la ligne 9 :</span>
+    <ul>
+      <li><span style="color: #000000">[<b>document</b>] désigne le document chargé par le navigateur, ce qu&#x27;on appelle le DOM (Document Object Model),</span>
+      </li>
+      <li><span style="color: #000000">[<b>document.forms[0]</b>] désigne le 1er formulaire du document, un document pouvant en avoir plusieurs. Ici, il n&#x27;y en qu&#x27;un,</span>
+      </li>
+      <li><span style="color: #000000">[<b>document.forms[0].elements[&#x27;method&#x27;</b>]] désigne l&#x27;élément du formulaire qui a l&#x27;attribut [name=&#x27;method&#x27;]. Il y en a deux :</span>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">input</span> <span style="color:#7f007f">type</span>=<span style="font-style:italic;color:#2a00ff">&quot;radio&quot;</span> <span style="color:#7f007f">id</span>=<span style="font-style:italic;color:#2a00ff">&quot;get&quot;</span> <span style="background-color:#ff950e;color:#7f007f">name</span><span style="background-color:#ff950e">=</span><span style="font-style:italic;background-color:#ff950e;color:#2a00ff">&quot;method&quot;</span> <span style="color:#7f007f">value</span>=<span style="font-style:italic;color:#2a00ff">&quot;get&quot;</span> <span style="color:#7f007f">checked</span>=<span style="font-style:italic;color:#2a00ff">&quot;checked&quot;</span> <span style="color:#008080">/&gt;</span>GET</span>
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">input</span> <span style="color:#7f007f">type</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;radio&quot;</span> <span style="color:#7f007f">id</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;post&quot;</span> <span style="background-color:#ff950e;color:#7f007f">name</span><span style="background-color:#ff950e;color:#000000">=</span><span style="font-style:italic;background-color:#ff950e;color:#2a00ff">&quot;method&quot;</span> <span style="color:#7f007f">value</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;post&quot;</span> <span style="color:#008080">/&gt;</span><span style="color:#000000">POST</span></span>
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">(suite)</span><ul>
-<li><span style="color: #000000">[<strong>document.forms[0].elements[&#x27;method&#x27;].value</strong>] est la valeur qui va être postée pour le composant qui a l&#x27;attribut [name=&#x27;method&#x27;]. On sait que la valeur postée est la valeur de l&#x27;attribut [value] du bouton radio coché. Ici, ce sera donc l&#x27;une des chaînes [&#x27;get&#x27;, &#x27;post&#x27;] ;</span></li>
+  <li><span style="color: #000000">(suite)</span>
+    <ul>
+      <li><span style="color: #000000">[<b>document.forms[0].elements[&#x27;method&#x27;].value</b>] est la valeur qui va être postée pour le composant qui a l&#x27;attribut [name=&#x27;method&#x27;]. On sait que la valeur postée est la valeur de l&#x27;attribut [value] du bouton radio coché. Ici, ce sera donc l&#x27;une des chaînes [&#x27;get&#x27;, &#x27;post&#x27;] ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">ligne 18 : on construit l&#x27;encodage Base74 de la chaîne identifiant:password. Cet chaîne codée va servir dans l&#x27;entête HTTP [Authorization] que nous allons envoyer au serveur pour authentifier la requête ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 22-26 : selon la méthode HTTP à utiliser, on exécute la méthode [doGet] ou [doPost] ;</span>
+  </li>
+  <li><span style="color: #000000">la méthode jQuery [$.ajax] effectue un appel HTTP ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 32-34 : on s&#x27;adresse à un serveur qui exige un entête HTTP [Authorization: Basic code] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 35 : l&#x27;utilisateur saisira des URL du type [/cors-getAllCategories,/cors-addProduits, ...]. Il faut donc compléter ces URL avec l&#x27;URL du serveur de la ligne 6 ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 36 : méthode HTTP à utiliser ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 37 : le serveur renvoie du jSON. On indique le type [text] comme type de résultat afin de l&#x27;afficher tel qu&#x27;il a été reçu ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 42 : affichage de la réponse texte du serveur ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 48-49 : affichage du message d&#x27;erreur éventuel ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 53 : la méthode [doPost] reçoit un second paramètre qui est la valeur à poster ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 61 : pour indiquer que la valeur postée va l&#x27;être sous la forme d&#x27;une chaîne jSON ;</span>
+  </li>
 </ul>
-</li>
-<li><span style="color: #000000">ligne 18 : on construit l&#x27;encodage Base74 de la chaîne identifiant:password. Cet chaîne codée va servir dans l&#x27;entête HTTP [Authorization] que nous allons envoyer au serveur pour authentifier la requête ;</span></li>
-<li><span style="color: #000000">lignes 22-26 : selon la méthode HTTP à utiliser, on exécute la méthode [doGet] ou [doPost] ;</span></li>
-<li><span style="color: #000000">la méthode jQuery [$.ajax] effectue un appel HTTP ;</span></li>
-<li><span style="color: #000000">lignes 32-34 : on s&#x27;adresse à un serveur qui exige un entête HTTP [Authorization: Basic code] ;</span></li>
-<li><span style="color: #000000">ligne 35 : l&#x27;utilisateur saisira des URL du type [/cors-getAllCategories,/cors-addProduits, ...]. Il faut donc compléter ces URL avec l&#x27;URL du serveur de la ligne 6 ;</span></li>
-<li><span style="color: #000000">ligne 36 : méthode HTTP à utiliser ;</span></li>
-<li><span style="color: #000000">ligne 37 : le serveur renvoie du jSON. On indique le type [text] comme type de résultat afin de l&#x27;afficher tel qu&#x27;il a été reçu ;</span></li>
-<li><span style="color: #000000">ligne 42 : affichage de la réponse texte du serveur ;</span></li>
-<li><span style="color: #000000">lignes 48-49 : affichage du message d&#x27;erreur éventuel ;</span></li>
-<li><span style="color: #000000">ligne 53 : la méthode [doPost] reçoit un second paramètre qui est la valeur à poster ;</span></li>
-<li><span style="color: #000000">ligne 61 : pour indiquer que la valeur postée va l&#x27;être sous la forme d&#x27;une chaîne jSON ;</span></li>
-</ul>
+
 <p><a id="refheading4851838046689"></a></p>
 <h2 id="187-execution-du-client">18.7. Exécution du client</h2>
 <p><span style="color: #000000">L&#x27;application cliente est une application Spring Boot lancée par la classe exécutable [Boot] suivante :</span></p>
@@ -1592,34 +1647,50 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 10 : la méthode [SpringApplication.<em>run</em>] utilise le fichier de configuration [WebConfig]. La page [client.html] va être déployée sur le serveur Tomcat présent dans le Classpath du projet ;</span></li>
+  <li><span style="color: #000000">ligne 10 : la méthode [SpringApplication.<i>run</i>] utilise le fichier de configuration [WebConfig]. La page [client.html] va être déployée sur le serveur Tomcat présent dans le Classpath du projet ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading196719811596012"></a></p>
 <h2 id="188-lurl-getallcategories">18.8. L&#x27;URL [/getAllCategories]</h2>
 <p><span style="color: #000000">Nous lançons :</span></p>
 <ul>
-<li><span style="color: #000000">le serveur web / json sur le port 8080 ;</span></li>
-<li><span style="color: #000000">le client de ce serveur sur le port 8081 ;</span></li>
+  <li><span style="color: #000000">le serveur web / json sur le port 8080 ;</span>
+  </li>
+  <li><span style="color: #000000">le client de ce serveur sur le port 8081 ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">puis nous demandons l&#x27;URL [http://localhost:8081/client.html] [1] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F500000239E2064DDE.png" style="display:inline-block; margin:4px;width:16.789cm;height:7.528cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F500000239E2064DDE.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [2], nous faisons un GET sur l&#x27;URL [http://localhost:8080/getAllCategories];</span></li>
+  <li><span style="color: #000000">en [2], nous faisons un GET sur l&#x27;URL [http://localhost:8080/getAllCategories];</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Nous n&#x27;obtenons pas de réponse du serveur. Lorsqu&#x27;on regarde la console de développement de Chrome (Ctrl-Maj-I) on découvre une erreur :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042D00000440D640C30B.png" style="display:inline-block; margin:4px;width:14.143cm;height:14.393cm;" class="odt-zoomable" data-zoom-src="images/100000000000042D00000440D640C30B.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], on est dans l&#x27;onglet [Network] ;</span></li>
-<li><span style="color: #000000">en [2], on voit que la requête HTTP qui a été faite n&#x27;est pas [GET] mais [OPTIONS]. Dans le cas d&#x27;une requête inter-domaines, le navigateur vérifie auprès du serveur qu&#x27;un certain nombre de conditions sont vérifiées en lui envoyant une requête HTTP [OPTIONS]. En l&#x27;occurrence, les requêtes sont celles pointées par les pastilles [5-6] ;</span></li>
-<li><span style="color: #000000">en [5], le navigateur demande si l&#x27;URL cible peut être atteinte avec un GET. L&#x27;entête de la requête [Access-Control-Request-Method] demande une réponse avec un entête HTTP [Access-Control-Allow-Methods] indiquant que la méthode demandée est acceptée ;</span></li>
-<li><span style="color: #000000">en [6], le navigateur envoie l&#x27;entête HTTP [Origin: http://localhost:8081]. Cet entête demande une réponse dans un entête HTTP [Access-Control-Allow-Origin] indiquant que l&#x27;origine indiquée est acceptée ;</span></li>
-<li><span style="color: #000000">en [7],  le navigateur demande si les entêtes HTTP [accept] et [authorization] sont acceptés. L&#x27;entête de la requête [Access-Control-Request-Headers] attend une réponse avec un entête HTTP [Access-Control-Allow-Headers] indiquant que les entêtes demandés sont acceptés ;</span></li>
-<li><span style="color: #000000">on a une erreur en [3]. En cliquant sur l&#x27;icône, on a l&#x27;erreur [4] ;</span></li>
-<li><span style="color: #000000">en [4], le message indique que le serveur n&#x27;a pas envoyé l&#x27;entête HTTP [Access-Control-Allow-Origin] qui indique si l&#x27;origine de la requête est acceptée ;</span></li>
-<li><span style="color: #000000">en [8], on peut constater que le serveur n&#x27;a effectivement pas envoyé cet entête. Du coup le navigateur a refusé de faire la requête HTTP GET demandée initialement ;</span></li>
+  <li><span style="color: #000000">en [1], on est dans l&#x27;onglet [Network] ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], on voit que la requête HTTP qui a été faite n&#x27;est pas [GET] mais [OPTIONS]. Dans le cas d&#x27;une requête inter-domaines, le navigateur vérifie auprès du serveur qu&#x27;un certain nombre de conditions sont vérifiées en lui envoyant une requête HTTP [OPTIONS]. En l&#x27;occurrence, les requêtes sont celles pointées par les pastilles [5-6] ;</span>
+  </li>
+  <li><span style="color: #000000">en [5], le navigateur demande si l&#x27;URL cible peut être atteinte avec un GET. L&#x27;entête de la requête [Access-Control-Request-Method] demande une réponse avec un entête HTTP [Access-Control-Allow-Methods] indiquant que la méthode demandée est acceptée ;</span>
+  </li>
+  <li><span style="color: #000000">en [6], le navigateur envoie l&#x27;entête HTTP [Origin: http://localhost:8081]. Cet entête demande une réponse dans un entête HTTP [Access-Control-Allow-Origin] indiquant que l&#x27;origine indiquée est acceptée ;</span>
+  </li>
+  <li><span style="color: #000000">en [7],  le navigateur demande si les entêtes HTTP [accept] et [authorization] sont acceptés. L&#x27;entête de la requête [Access-Control-Request-Headers] attend une réponse avec un entête HTTP [Access-Control-Allow-Headers] indiquant que les entêtes demandés sont acceptés ;</span>
+  </li>
+  <li><span style="color: #000000">on a une erreur en [3]. En cliquant sur l&#x27;icône, on a l&#x27;erreur [4] ;</span>
+  </li>
+  <li><span style="color: #000000">en [4], le message indique que le serveur n&#x27;a pas envoyé l&#x27;entête HTTP [Access-Control-Allow-Origin] qui indique si l&#x27;origine de la requête est acceptée ;</span>
+  </li>
+  <li><span style="color: #000000">en [8], on peut constater que le serveur n&#x27;a effectivement pas envoyé cet entête. Du coup le navigateur a refusé de faire la requête HTTP GET demandée initialement ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Il nous faut modifier le serveur web / jSON.</span></p>
 <p><a id="refheading4853838046689"></a></p>
 <h2 id="189-le-nouveau-service-web-json">18.9. Le nouveau service web / json</h2>
@@ -1678,8 +1749,10 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 23-27 : nous récupérons tout l&#x27;acquis du travail fait jusqu&#x27;à maintenant en nous appuyant sur l&#x27;archive du serveur web / json sécurisé ;</li>
+  <li>lignes 23-27 : nous récupérons tout l&#x27;acquis du travail fait jusqu&#x27;à maintenant en nous appuyant sur l&#x27;archive du serveur web / json sécurisé ;
+  </li>
 </ul>
+
 <p><a id="refheading1184711799226695"></a></p>
 <h3 id="1892-configuration-spring">18.9.2. Configuration Spring</h3>
 <p>La classe de configuration [AppConfig] est la suivante :</p>
@@ -1709,10 +1782,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 10 : la classe est une classe de configuration Spring ;</li>
-<li>ligne 11 : d&#x27;autres composants Spring sont à chercher dans le paquetage [<span style="color: #2a00ff">spring.cors.server.service</span>] ;</li>
-<li>lignes 16-19 : nous créons un composant Spring nommé [<span style="color: #000000">isCorsEnabled</span>] qui indique si on accepte ou non les clients étrangers au domaine du serveur ;</li>
+  <li>ligne 10 : la classe est une classe de configuration Spring ;
+  </li>
+  <li>ligne 11 : d&#x27;autres composants Spring sont à chercher dans le paquetage [<span style="color: #2a00ff">spring.cors.server.service</span>] ;
+  </li>
+  <li>lignes 16-19 : nous créons un composant Spring nommé [<span style="color: #000000">isCorsEnabled</span>] qui indique si on accepte ou non les clients étrangers au domaine du serveur ;
+  </li>
 </ul>
+
 <p><a id="refheading1184731799226695"></a></p>
 <h3 id="1893-la-classe-abstractcorscontroller">18.9.3. La classe [AbstractCorsController]</h3>
 <p>La classe [AbstractCorsController] qui sera la classe parente de tous les contrôleurs de cette application :</p>
@@ -1748,35 +1825,48 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : la classe [<span style="color: #000000">CorsController</span>] est abstraite car elle est conçue pour être étendue et non instanciée ;</li>
-<li>lignes 13-24 : la méthode [setHeaders] met dans la réponse [<span style="color: #000000">HttpServletResponse </span><span style="color: #6a3e3e">response</span>] (ligne 13) faite au client, les entêtes HTTP réclamés par les requêtes inter-domaines ;</li>
-<li>ligne 33 : la méthode [<span style="color: #2a00ff">/setHeaders</span>] admet pour paramètres :<ul>
-<li>la chaîne [origin] présent dans l&#x27;entête HTTP [Origin] des requêtes inter-domaines :</li>
+  <li>ligne 7 : la classe [<span style="color: #000000">CorsController</span>] est abstraite car elle est conçue pour être étendue et non instanciée ;
+  </li>
+  <li>lignes 13-24 : la méthode [setHeaders] met dans la réponse [<span style="color: #000000">HttpServletResponse </span><span style="color: #6a3e3e">response</span>] (ligne 13) faite au client, les entêtes HTTP réclamés par les requêtes inter-domaines ;
+  </li>
+  <li>ligne 33 : la méthode [<span style="color: #2a00ff">/setHeaders</span>] admet pour paramètres :
+    <ul>
+      <li>la chaîne [origin] présent dans l&#x27;entête HTTP [Origin] des requêtes inter-domaines :
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Origin:http://localhost:8081
 </code></pre></div>
 <p>Ici le paramètre [origin] de la ligne 13 aurait la valeur [http://localhost:8081]. Au cas, où la demande ne contient pas l&#x27;entête HTTP [Origin], on s&#x27;arrangera pour avoir [origin==null] ;</p>
 <ul>
-<li>(suite)<ul>
-<li>l&#x27;objet [HttpServletResponse response] qui va être renvoyé au client qui a fait la demande ;</li>
+  <li>(suite)
+    <ul>
+      <li> l&#x27;objet [HttpServletResponse response] qui va être renvoyé au client qui a fait la demande ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Ces deux paramètres sont injectés par Spring ;</p>
 <ul>
-<li>lignes 15-175 : si l&#x27;application est configurée pour accepter les requêtes inter-domaines et si l&#x27;émetteur a envoyé l&#x27;entête HTTP [Origin] et si cette origine commence par [http://localhost], alors on va accepter la requête inter-domaines, sinon on la rejette ;</li>
-<li>ligne 19 : si le client est dans le domaine [http://localhost:port], on envoie l&#x27;entête HTTP :</li>
+  <li>lignes 15-175 : si l&#x27;application est configurée pour accepter les requêtes inter-domaines et si l&#x27;émetteur a envoyé l&#x27;entête HTTP [Origin] et si cette origine commence par [http://localhost], alors on va accepter la requête inter-domaines, sinon on la rejette ;
+  </li>
+  <li>ligne 19 : si le client est dans le domaine [http://localhost:port], on envoie l&#x27;entête HTTP :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#2a00ff">Access-Control-Allow-Origin:</span><span style="color:#000000"> </span><span style="color:#2a00ff"> </span><span style="color:#2a00ff">http://localhost:port</span></span>
 </code></pre></div>
 
 <p>qui signifie que le serveur accepte l&#x27;origine du client ;</p>
 <ul>
-<li>ligne 21 : nous avons signalé deux entêtes HTTP particuliers dans la requête HTTP [OPTIONS] :</li>
+  <li>ligne 21 : nous avons signalé deux entêtes HTTP particuliers dans la requête HTTP [OPTIONS] :
+  </li>
 </ul>
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>Access-Control-Request-Method: GET
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Access-Control-Request-Headers: accept, authorization
 </code></pre></div>
@@ -1814,16 +1904,24 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 14 : la classe est un contrôleur Spring MVC ;</li>
-<li>ligne 15 : la classe [<span style="color: #000000">MyControllerWithHttpOptions</span>] étend la classe [<span style="color: #000000">AbstractCorsController</span>] que nous venons de décrire ;</li>
-<li>lignes 17-18 : la méthode [<span style="color: #000000">getAllCategories</span>] (ligne 18) traite l&#x27;URL [<span style="color: #2a00ff">&quot;/cors-getAllCategories&quot;</span>] lorsqu&#x27;elle est demandée avec la méthode HTTP [OPTIONS] ;</li>
-<li>ligne 18 : la méthode [<span style="color: #000000">getAllCategories</span>] admet deux paramètres :<ul>
-<li>[<span style="color: #646464">@RequestHeader</span><span style="color: #000000">(value = </span><span style="color: #2a00ff">&quot;Origin&quot;</span><span style="color: #000000">, required = </span><strong><span style="color: #7f0055">false</span></strong><span style="color: #000000">) String </span><span style="color: #6a3e3e">origin</span>] pour récupérer la valeur de l&#x27;entête HTTP [<strong>Origin</strong>:http://localhost:8081] lorsqu&#x27;il est présent. Dans cet exemple, le paramètre [String origin] recevra la valeur [http://localhost:8081]. Cet entête n&#x27;est pas obligatoire [<span style="color: #000000">required = </span><strong><span style="color: #7f0055">false</span></strong>]. Lorsqu&#x27;il n&#x27;est pas présent, le paramètre [String origin] aura la valeur <em>null</em> ;</li>
-<li>[<span style="color: #000000">HttpServletResponse </span><span style="color: #6a3e3e">httpServletResponse</span>] : la réponse qui sera envoyée au client ;</li>
+  <li>ligne 14 : la classe est un contrôleur Spring MVC ;
+  </li>
+  <li>ligne 15 : la classe [<span style="color: #000000">MyControllerWithHttpOptions</span>] étend la classe [<span style="color: #000000">AbstractCorsController</span>] que nous venons de décrire ;
+  </li>
+  <li>lignes 17-18 : la méthode [<span style="color: #000000">getAllCategories</span>] (ligne 18) traite l&#x27;URL [<span style="color: #2a00ff">&quot;/cors-getAllCategories&quot;</span>] lorsqu&#x27;elle est demandée avec la méthode HTTP [OPTIONS] ;
+  </li>
+  <li>ligne 18 : la méthode [<span style="color: #000000">getAllCategories</span>] admet deux paramètres :
+    <ul>
+      <li>[<span style="color: #646464">@RequestHeader</span><span style="color: #000000">(value = </span><span style="color: #2a00ff">&quot;Origin&quot;</span><span style="color: #000000">, required = </span><b><span style="color: #7f0055">false</span></b><span style="color: #000000">) String </span><span style="color: #6a3e3e">origin</span>] pour récupérer la valeur de l&#x27;entête HTTP [<b>Origin</b>:http://localhost:8081] lorsqu&#x27;il est présent. Dans cet exemple, le paramètre [String origin] recevra la valeur [http://localhost:8081]. Cet entête n&#x27;est pas obligatoire [<span style="color: #000000">required = </span><b><span style="color: #7f0055">false</span></b>]. Lorsqu&#x27;il n&#x27;est pas présent, le paramètre [String origin] aura la valeur <i>null</i> ;
+      </li>
+      <li>[<span style="color: #000000">HttpServletResponse </span><span style="color: #6a3e3e">httpServletResponse</span>] : la réponse qui sera envoyée au client ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 21 : on envoie les entêtes HTTP qui permettent les requêtes inter-domaines. La méthode [<span style="color: #000000">setHeaders</span>] est définie dans la classe parent [<span style="color: #000000">AbstractCorsController</span>] ;
+  </li>
 </ul>
-</li>
-<li>ligne 21 : on envoie les entêtes HTTP qui permettent les requêtes inter-domaines. La méthode [<span style="color: #000000">setHeaders</span>] est définie dans la classe parent [<span style="color: #000000">AbstractCorsController</span>] ;</li>
-</ul>
+
 <p>Il est fait ainsi pour toutes les URL exposées par le serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17986265679331">13.5.3</a>. Lorsque ce service expose l&#x27;URL [/url], la classe [<span style="color: #000000">MyControllerWithHttpOptions</span>] ci-dessus expose l&#x27;URL [/<strong>cors-</strong>url].</p>
 <p><a id="refheading1184771799226695"></a></p>
 <h3 id="1895-le-controleur-mycontrollerwithcors">18.9.5. Le contrôleur [MyControllerWithCors]</h3>
@@ -1866,24 +1964,38 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 17 : la classe [<span style="color: #000000">MyControllerWithCors</span>] est un contrôleur Spring MVC</li>
-<li>ligne 18 : elle étend la classe [<span style="color: #000000">AbstractCorsController</span>] ;</li>
-<li>lignes 21-22 : injection du contrôleur [MyController] du serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17986265679331">13.5.3</a> ;</li>
-<li>lignes 25-27 : la méthode [<span style="color: #000000">getAllCategories</span>] traite l&#x27;URL [<span style="color: #2a00ff">/cors-getAllCategories</span>] (ligne 28) lorsqu&#x27;elle demandée avec la méthode HTTP [GET] ;</li>
-<li>ligne 26 : le résultat de la méthode [<span style="color: #000000">getAllCategories</span>] sera envoyé au client. Ce résultat est un flux jSON (attribut [produces] de la ligne 27 et type [String] du résultat ligne 25) ;</li>
-<li>ligne 27 : la méthode reçoit les mêmes paramètres que la méthode [<span style="color: #000000">getAllCategories</span>] du contrôleur [<span style="color: #000000">MyControllerWithHttpOptions</span>] que nous venons d&#x27;étudier ;</li>
-<li>ligne 30 : on demande à la méthode [<span style="color: #0000c0">myController</span><span style="color: #000000">.getAllCategories()</span>] d&#x27;envoyer la réponse ;</li>
+  <li>ligne 17 : la classe [<span style="color: #000000">MyControllerWithCors</span>] est un contrôleur Spring MVC
+  </li>
+  <li>ligne 18 : elle étend la classe [<span style="color: #000000">AbstractCorsController</span>] ;
+  </li>
+  <li>lignes 21-22 : injection du contrôleur [MyController] du serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17986265679331">13.5.3</a> ;
+  </li>
+  <li>lignes 25-27 : la méthode [<span style="color: #000000">getAllCategories</span>] traite l&#x27;URL [<span style="color: #2a00ff">/cors-getAllCategories</span>] (ligne 28) lorsqu&#x27;elle demandée avec la méthode HTTP [GET] ;
+  </li>
+  <li>ligne 26 : le résultat de la méthode [<span style="color: #000000">getAllCategories</span>] sera envoyé au client. Ce résultat est un flux jSON (attribut [produces] de la ligne 27 et type [String] du résultat ligne 25) ;
+  </li>
+  <li>ligne 27 : la méthode reçoit les mêmes paramètres que la méthode [<span style="color: #000000">getAllCategories</span>] du contrôleur [<span style="color: #000000">MyControllerWithHttpOptions</span>] que nous venons d&#x27;étudier ;
+  </li>
+  <li>ligne 30 : on demande à la méthode [<span style="color: #0000c0">myController</span><span style="color: #000000">.getAllCategories()</span>] d&#x27;envoyer la réponse ;
+  </li>
 </ul>
+
 <p>Au final, c&#x27;est la méthode [<span style="color: #0000c0">myController</span><span style="color: #000000">.getAllCategories()</span>] du serveur non sécurisé qui envoie la réponse. On a simplement enrichi sa réponse avec les entêtes nécessaires aux requêtes inter-domaines.</p>
 <p>Il est fait ainsi pour toutes les URL exposées par le serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17986265679331">13.5.3</a>. Lorsque ce service expose l&#x27;URL [/url], la classe [<span style="color: #000000">MyControllerWithCors</span>] ci-dessus expose l&#x27;URL [/<strong>cors-</strong>url].</p>
 <p>Une requête inter-domaine se déroulera de la façon suivante :</p>
 <ul>
-<li>le code JS du client demande l&#x27;URL [/cors-url] avec une requête HTTP GET ou un POST ;</li>
-<li>le navigateur qui exécute ce code intercepte cette demande et demande d&#x27;abord l&#x27;URL [/cors-url] avec une requête HTTP OPTIONS pour vérifier que le service web cible accepte les requêtes inter-domaines ;</li>
-<li>l&#x27;une des méthodes du contrôleur [<span style="color: #000000">MyControllerWithHttpOptions</span>] envoie les entêtes inter-domaines attendus par le navigateur ;</li>
-<li>le navigateur demande alors l&#x27;URL initiale [/cors-url] avec une requête HTTP GET ou un POST ;</li>
-<li>l&#x27;une des méthodes du contrôleur [<span style="color: #000000">MyControllerWithCors</span>] lui répond alors ;</li>
+  <li>le code JS du client demande l&#x27;URL [/cors-url] avec une requête HTTP GET ou un POST ;
+  </li>
+  <li>le navigateur qui exécute ce code intercepte cette demande et demande d&#x27;abord l&#x27;URL [/cors-url] avec une requête HTTP OPTIONS pour vérifier que le service web cible accepte les requêtes inter-domaines ;
+  </li>
+  <li>l&#x27;une des méthodes du contrôleur [<span style="color: #000000">MyControllerWithHttpOptions</span>] envoie les entêtes inter-domaines attendus par le navigateur ;
+  </li>
+  <li>le navigateur demande alors l&#x27;URL initiale [/cors-url] avec une requête HTTP GET ou un POST ;
+  </li>
+  <li>l&#x27;une des méthodes du contrôleur [<span style="color: #000000">MyControllerWithCors</span>] lui répond alors ;
+  </li>
 </ul>
+
 <p><a id="refheading1184791799226695"></a></p>
 <h3 id="1896-tests">18.9.6. Tests</h3>
 <p>La classe de boot du projet [intro-spring-cors-server-jpa] est la suivante :</p>
@@ -1905,12 +2017,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 10 : la méthode statique [<span style="color: #000000">SpringApplication.</span><em><span style="color: #000000">run</span></em>] est exécutée avec la configuration Spring [AppConfig]. A cause de cette configuration, le serveur Tomcat embarqué dans les archives du projet est exécuté et l&#x27;application web [intro-spring-cors-server-jpa] est déployée dessus. L&#x27;application web du serveur non sécurisé [intro-server-webjson-01] qui fait partie des archives du projet est également déployée dessus. Comme le projet [<span style="color: #000000">intro-spring-security-server-01</span>] fait également partie des archives, deux types d&#x27;URL sont finalement exposées :<ul>
-<li>celles du service web sécurisé : /url ;</li>
-<li>celles du service web acceptant les requêtes inter-domaines : /cors-url ;</li>
+  <li>ligne 10 : la méthode statique [<span style="color: #000000">SpringApplication.</span><i><span style="color: #000000">run</span></i>] est exécutée avec la configuration Spring [AppConfig]. A cause de cette configuration, le serveur Tomcat embarqué dans les archives du projet est exécuté et l&#x27;application web [intro-spring-cors-server-jpa] est déployée dessus. L&#x27;application web du serveur non sécurisé [intro-server-webjson-01] qui fait partie des archives du projet est également déployée dessus. Comme le projet [<span style="color: #000000">intro-spring-security-server-01</span>] fait également partie des archives, deux types d&#x27;URL sont finalement exposées :
+    <ul>
+      <li>celles du service web sécurisé : /url ;
+      </li>
+      <li>celles du service web acceptant les requêtes inter-domaines : /cors-url ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Nous sommes désormais prêts pour de nouveaux tests. Nous lançons la nouvelle version du service web et nous découvrons que le problème reste entier. Rien n&#x27;a changé. Si ligne 7 ci-dessous, on met un affichage console, celui-ci n&#x27;est jamais affiché montrant par là que la méthode [<span style="color: #000000">getAllCategories</span>] de la classe [<span style="color: #000000">MyControllerWithHttpOptions</span>] n&#x27;est jamais appelée ;</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">@Controller</span>
@@ -1966,29 +2082,44 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 25-26 : injection du bean [dispatcherServlet] qui gère les demandes des clients. Ce bean a été défini dans la configuration du serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17986265679331">13.5.3</a> ;</li>
-<li>lignes 28-29 : la méthode [init] (ligne 29) sera exécutée dès que la classe [<span style="color: #000000">AppConfig</span>] aura été instanciée et les injections Spring faites. Donc lorsqu&#x27;elle s&#x27;exécute, le champ de la ligne 26 a été initialisé ;</li>
-<li>ligne 31 : on configure le bean [dispatcherServlet] pour qu&#x27;il laisse l&#x27;application web traiter elle-même les commandes HTTP [OPTIONS] ;</li>
+  <li>lignes 25-26 : injection du bean [dispatcherServlet] qui gère les demandes des clients. Ce bean a été défini dans la configuration du serveur web / jSON non sécurisé [intro-server-webjson-01] étudié au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17986265679331">13.5.3</a> ;
+  </li>
+  <li>lignes 28-29 : la méthode [init] (ligne 29) sera exécutée dès que la classe [<span style="color: #000000">AppConfig</span>] aura été instanciée et les injections Spring faites. Donc lorsqu&#x27;elle s&#x27;exécute, le champ de la ligne 26 a été initialisé ;
+  </li>
+  <li>ligne 31 : on configure le bean [dispatcherServlet] pour qu&#x27;il laisse l&#x27;application web traiter elle-même les commandes HTTP [OPTIONS] ;
+  </li>
 </ul>
+
 <p>Nous refaisons les tests avec cette nouvelle configuration. On obtient le résultat suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051D0000039B3DDD374B.png" style="display:inline-block; margin:4px;width:17.318cm;height:12.211cm;" class="odt-zoomable" data-zoom-src="images/100000000000051D0000039B3DDD374B.png" /></td></tr></table>
 
 <ul>
-<li>en [1], nous voyons qu&#x27;il y a deux requêtes HTTP vers l&#x27;URL [http://localhost:8080/cors-getAllCategories];</li>
-<li>en [2], la requête [OPTIONS] ;</li>
-<li>en [3], les trois entêtes HTTP que nous venons de configurer dans la réponse du serveur ;</li>
+  <li>en [1], nous voyons qu&#x27;il y a deux requêtes HTTP vers l&#x27;URL [http://localhost:8080/cors-getAllCategories];
+  </li>
+  <li>en [2], la requête [OPTIONS] ;
+  </li>
+  <li>en [3], les trois entêtes HTTP que nous venons de configurer dans la réponse du serveur ;
+  </li>
 </ul>
+
 <p>Examinons maintenant la seconde requête :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000051E000003C11F3B3495.png" style="display:inline-block; margin:4px;width:17.33cm;height:12.714cm;" class="odt-zoomable" data-zoom-src="images/100000000000051E000003C11F3B3495.png" /></td></tr></table>
 
 <ul>
-<li>en [1], la requête examinée ;</li>
-<li>en [2], c&#x27;est la requête GET. Grâce à la première requête [OPTIONS], le navigateur a reçu les informations qu&#x27;il demandait. Il réalise maintenant la requête [GET] demandée initialement ;</li>
-<li>en [3], la réponse du serveur ;</li>
-<li>en [4], le serveur envoie du jSON ;</li>
-<li>en [5], une erreur s&#x27;est produite ;</li>
-<li>en [6], le message d&#x27;erreur ;</li>
+  <li>en [1], la requête examinée ;
+  </li>
+  <li>en [2], c&#x27;est la requête GET. Grâce à la première requête [OPTIONS], le navigateur a reçu les informations qu&#x27;il demandait. Il réalise maintenant la requête [GET] demandée initialement ;
+  </li>
+  <li>en [3], la réponse du serveur ;
+  </li>
+  <li>en [4], le serveur envoie du jSON ;
+  </li>
+  <li>en [5], une erreur s&#x27;est produite ;
+  </li>
+  <li>en [6], le message d&#x27;erreur ;
+  </li>
 </ul>
+
 <p>Il est plus difficile d&#x27;expliquer ce qui s&#x27;est passé ici. La réponse [3] du serveur est normale [HTTP/1.1 200 OK]. On devrait donc avoir le document demandé. Il est possible que le serveur ait bien envoyé le document mais que c&#x27;est le navigateur qui empêche son utilisation parce qu&#x27;il veut que pour la requête GET également, la réponse comporte l&#x27;entête HTTP [Access-Control-Allow-Origin:http://localhost:8081].</p>
 <p>Nous modifions alors le contrôleur [MyControllerWithCors] pour que lui aussi envoie les entêtes nécessaires aux requêtes inter-domaines :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
@@ -2004,8 +2135,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 6 :  les entêtes nécessaires aux requêtes inter-domaines sont inclus dans la réponse ;</li>
+  <li>ligne 6 :  les entêtes nécessaires aux requêtes inter-domaines sont inclus dans la réponse ;
+  </li>
 </ul>
+
 <p>Après cette modification, les résultats sont les suivants :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000344000001B12C453CD6.png" style="display:inline-block; margin:4px;width:15.48cm;height:8.02cm;" class="odt-zoomable" data-zoom-src="images/1000000000000344000001B12C453CD6.png" /></td></tr></table>
 
@@ -2045,19 +2178,28 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000347000002364D26D28E.png" style="display:inline-block; margin:4px;width:11.1cm;height:7.488cm;" class="odt-zoomable" data-zoom-src="images/1000000000000347000002364D26D28E.png" /></td></tr></table>
 
 <ul>
-<li>on fait un POST [1] vers l&#x27;URL [2] ;</li>
-<li>en [3], la valeur postée. Il s&#x27;agit d&#x27;une chaîne jSON ;</li>
-<li>au total, on cherche à créer une catégorie appelée [categorie2] ;</li>
+  <li>on fait un POST [1] vers l&#x27;URL [2] ;
+  </li>
+  <li>en [3], la valeur postée. Il s&#x27;agit d&#x27;une chaîne jSON ;
+  </li>
+  <li>au total, on cherche à créer une catégorie appelée [categorie2] ;
+  </li>
 </ul>
+
 <p>Nous ne modifions pour l&#x27;instant aucun code. Le résultat obtenu est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E4000003F5B1DD62CA.png" style="display:inline-block; margin:4px;width:16.563cm;height:13.402cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E4000003F5B1DD62CA.png" /></td></tr></table>
 
 <ul>
-<li>en [1], comme pour les requêtes [GET], une requête [OPTIONS] est faite par le navigateur ;</li>
-<li>en [2], il demande une autorisation d&#x27;accès pour une requête [POST]. Auparavant c&#x27;était [GET] ;</li>
-<li>en [3], il demande une autorisation d&#x27;envoyer les entêtes HTTP [accept, authorization, content-type]. Auparavant, on avait seulement les deux premiers entêtes ;</li>
-<li>en [4], le service web ne donne pas toutes les autorisations demandées ce qui provoque l&#x27;erreur [5] ;</li>
+  <li>en [1], comme pour les requêtes [GET], une requête [OPTIONS] est faite par le navigateur ;
+  </li>
+  <li>en [2], il demande une autorisation d&#x27;accès pour une requête [POST]. Auparavant c&#x27;était [GET] ;
+  </li>
+  <li>en [3], il demande une autorisation d&#x27;envoyer les entêtes HTTP [accept, authorization, content-type]. Auparavant, on avait seulement les deux premiers entêtes ;
+  </li>
+  <li>en [4], le service web ne donne pas toutes les autorisations demandées ce qui provoque l&#x27;erreur [5] ;
+  </li>
 </ul>
+
 <p>Nous modifions la méthode [AbstractController.sendHeaders] de la façon suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.cors.server.service;</span></span>
@@ -2088,9 +2230,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 21 : on a ajouté l&#x27;entête HTTP [Content-Type] (la casse n&#x27;a pas d&#x27;importance) ;</li>
-<li>ligne 23 : on a ajouté la méthode HTTP [POST] ;</li>
+  <li>ligne 21 : on a ajouté l&#x27;entête HTTP [Content-Type] (la casse n&#x27;a pas d&#x27;importance) ;
+  </li>
+  <li>ligne 23 : on a ajouté la méthode HTTP [POST] ;
+  </li>
 </ul>
+
 <p>Ceci fait les méthodes [POST] sont traitées de la même façon que les requêtes [GET]. Voici l&#x27;exemple de l&#x27;URL [/cors-addArticles] :</p>
 <p><u><strong>dans [<span style="color: #000000">MyControllerWithCors</span>]</strong></u></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
@@ -2171,8 +2316,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004EE0000029608FC6559.png" style="display:inline-block; margin:4px;width:16.695cm;height:8.758cm;" class="odt-zoomable" data-zoom-src="images/10000000000004EE0000029608FC6559.png" /></td></tr></table>
 
 <ul>
-<li>les réponses affichées le sont par le code jS suivant :</li>
+  <li>les réponses affichées le sont par le code jS suivant :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> doGet(url) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#3f7f5f">// on fait un appel Ajax à la main</span></span>
@@ -2200,9 +2347,12 @@
 </code></pre></div>
 
 <ul>
-<li>la réponse [1] est affichée par la ligne 14 de la fonction [success] ;</li>
-<li>la réponse [2] est affichée par la ligne 20 de la fonction [error]. La fonction [JSON.stringify] crée la chaîne jSON de l&#x27;objet [jqXHR.statusCode()] qui est l&#x27;objet encapsulant l&#x27;erreur qui s&#x27;est produite. Cet objet donne peu d&#x27;informations. Il est possible d&#x27;exploiter d&#x27;autres méthodes de l&#x27;objet [<span style="color: #000000">jqXHR</span>] pour avoir, par exemple, les entêtes HTTP renvoyés par le serveur ;</li>
+  <li>la réponse [1] est affichée par la ligne 14 de la fonction [success] ;
+  </li>
+  <li>la réponse [2] est affichée par la ligne 20 de la fonction [error]. La fonction [JSON.stringify] crée la chaîne jSON de l&#x27;objet [jqXHR.statusCode()] qui est l&#x27;objet encapsulant l&#x27;erreur qui s&#x27;est produite. Cet objet donne peu d&#x27;informations. Il est possible d&#x27;exploiter d&#x27;autres méthodes de l&#x27;objet [<span style="color: #000000">jqXHR</span>] pour avoir, par exemple, les entêtes HTTP renvoyés par le serveur ;
+  </li>
 </ul>
+
 <p><a id="refheading196725811596012"></a></p>
 <h2 id="1813-conclusion">18.13. Conclusion</h2>
 <p>Notre application supporte désormais les requêtes inter-domaines. Celles-ci peuvent être autorisées ou non par configuration dans la classe [AppConfig] :</p>

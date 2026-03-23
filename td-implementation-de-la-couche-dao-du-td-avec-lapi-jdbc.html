@@ -1152,9 +1152,12 @@
 
 <p><a id="dbelections1"></a>Le dossier [support / chap-07] [1] contient :</p>
 <ul>
-<li>les projets Eclipse de ce chapitre [2] ;</li>
-<li>le script SQL de création de la base MySQL [dbelections] [3] ;</li>
+  <li>les projets Eclipse de ce chapitre [2] ;
+  </li>
+  <li>le script SQL de création de la base MySQL [dbelections] [3] ;
+  </li>
 </ul>
+
 <p><a id="refheading318011812363491"></a>
 <a id="dbelections"></a></p>
 <h2 id="72-la-base-de-donnees-dbelections">7.2. La base de données [dbelections]</h2>
@@ -1168,11 +1171,16 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000239000000BFCE24760F.png" style="display:inline-block; margin:4px;width:10.539cm;height:3.54cm;" class="odt-zoomable" data-zoom-src="images/1000000000000239000000BFCE24760F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>[id] : clé primaire auto-incrémentée ;</li>
-<li>[version] : n° de version de l&#x27;enregistrement - peut être ignoré ici ;</li>
-<li>[sap] : nombre de sièges à pourvoir ;</li>
-<li>[seuilelectoral] : la barre au-dessous de laquelle une liste est éliminée ;</li>
+  <li>[id] : clé primaire auto-incrémentée ;
+  </li>
+  <li>[version] : n° de version de l&#x27;enregistrement - peut être ignoré ici ;
+  </li>
+  <li>[sap] : nombre de sièges à pourvoir ;
+  </li>
+  <li>[seuilelectoral] : la barre au-dessous de laquelle une liste est éliminée ;
+  </li>
 </ul>
+
 <p>Son contenu est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001BE000000518D5261E4.png" style="display:inline-block; margin:4px;width:8.26cm;height:1.499cm;" class="odt-zoomable" data-zoom-src="images/10000000000001BE000000518D5261E4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1180,13 +1188,20 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000224000000EFED15390F.png" style="display:inline-block; margin:4px;width:10.149cm;height:4.431cm;" class="odt-zoomable" data-zoom-src="images/1000000000000224000000EFED15390F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>[id] : clé primaire auto-incrémentée ;</li>
-<li>[version] : n° de version de l&#x27;enregistrement - peut être ignoré ici ;</li>
-<li>[nom] : nom de la liste ;</li>
-<li>[voix] : voix de la liste - n&#x27;est connu qu&#x27;après saisie de l&#x27;utilisateur dans la couche [présentation] ;</li>
-<li>[sieges] : nombre de sièges obtenus - n&#x27;est connu qu&#x27;après calcul de la couche [métier] ;</li>
-<li>[elimine] : à 1 si la liste est éliminée, à 0 sinon - n&#x27;est connu qu&#x27;après calcul de la couche [métier] ;</li>
+  <li>[id] : clé primaire auto-incrémentée ;
+  </li>
+  <li>[version] : n° de version de l&#x27;enregistrement - peut être ignoré ici ;
+  </li>
+  <li>[nom] : nom de la liste ;
+  </li>
+  <li>[voix] : voix de la liste - n&#x27;est connu qu&#x27;après saisie de l&#x27;utilisateur dans la couche [présentation] ;
+  </li>
+  <li>[sieges] : nombre de sièges obtenus - n&#x27;est connu qu&#x27;après calcul de la couche [métier] ;
+  </li>
+  <li>[elimine] : à 1 si la liste est éliminée, à 0 sinon - n&#x27;est connu qu&#x27;après calcul de la couche [métier] ;
+  </li>
 </ul>
+
 <p>Le contenu de la table [listes] est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000101000000CD7E60F518.png" style="display:inline-block; margin:4px;width:4.761cm;height:3.799cm;" class="odt-zoomable" data-zoom-src="images/1000000000000101000000CD7E60F518.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1280,12 +1295,18 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013B0000013B850721FB.png" style="display:inline-block; margin:4px;width:5.83cm;height:5.83cm;" class="odt-zoomable" data-zoom-src="images/100000000000013B0000013B850721FB.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>le package [elections.dao.entities] contient les objets manipulés par la couche [DAO] ;</li>
-<li>le package [elections.dao.service] contient l&#x27;implémentation de la couche [DAO] ;</li>
-<li>le package [elections.dao.config] contient la configuration de la couche [DAO]</li>
-<li>le package [elections.dao.junit] contient une classe de test JUnit du projet ;</li>
-<li>le package [elections.dao.console] contient une classe exécutable de test ;</li>
+  <li>le package [elections.dao.entities] contient les objets manipulés par la couche [DAO] ;
+  </li>
+  <li>le package [elections.dao.service] contient l&#x27;implémentation de la couche [DAO] ;
+  </li>
+  <li>le package [elections.dao.config] contient la configuration de la couche [DAO]
+  </li>
+  <li>le package [elections.dao.junit] contient une classe de test JUnit du projet ;
+  </li>
+  <li>le package [elections.dao.console] contient une classe exécutable de test ;
+  </li>
 </ul>
+
 <p><a id="refheading22679565848973"></a></p>
 <h2 id="74-configuration-du-projet-maven">7.4. Configuration du projet Maven</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000142000000E016C40EC7.png" style="display:inline-block; margin:4px;width:5.96cm;height:4.15cm;" class="odt-zoomable" data-zoom-src="images/1000000000000142000000E016C40EC7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1379,25 +1400,37 @@
 
 <p>Ce fichier est analogue à celui décrit au paragraphe <a href="cours-introduction-a-lapi-jdbc.html#refheading59631820156038">6.5.1</a>. On y a apporté les modifications suivantes :</p>
 <ul>
-<li>lignes 8-12 : on a défini un projet Maven parent. Le projet [<span style="color: #000000">spring-boot-starter-parent</span>] (ligne 10) définit un très grand nombre de dépendances avec leurs versions. Lorsqu&#x27;on utilise l&#x27;une d&#x27;elles (lignes 19-57), il est alors inutile d&#x27;en préciser la version, celle-ci étant définie dans le projet Maven parent ;</li>
-<li>lignes 40-51 : dépendances nécessaires à la classe de test du projet. Ces dépendances ont l&#x27;attribut [<span style="color: #008080">&lt;</span><span style="color: #3f7f7f">scope</span><span style="color: #008080">&gt;</span><span style="color: #000000">test</span><span style="color: #008080">&lt;/</span><span style="color: #3f7f7f">scope</span><span style="color: #008080">&gt;</span>] qui signifie qu&#x27;elles ne sont nécessaires que pour les classes du dossier [src / test / java]. Ces dépendances ne seront pas incluses dans l&#x27;archive finale du projet ;</li>
-<li>lignes 53-56 : la bibliothèque [<span style="color: #000000">spring-boot-starter-logging</span>] sera utilisée par Spring pour faire des logs à l&#x27;écran ;</li>
-<li>lignes 14-17 : des propriétés de configuration Maven :<ul>
-<li>ligne 15 : indique que les fichiers source sont codés en UTF-8 ;</li>
-<li>ligne 16 : indique que le compilateur à utiliser doit être de niveau 1.8 ;</li>
+  <li>lignes 8-12 : on a défini un projet Maven parent. Le projet [<span style="color: #000000">spring-boot-starter-parent</span>] (ligne 10) définit un très grand nombre de dépendances avec leurs versions. Lorsqu&#x27;on utilise l&#x27;une d&#x27;elles (lignes 19-57), il est alors inutile d&#x27;en préciser la version, celle-ci étant définie dans le projet Maven parent ;
+  </li>
+  <li>lignes 40-51 : dépendances nécessaires à la classe de test du projet. Ces dépendances ont l&#x27;attribut [<span style="color: #008080">&lt;</span><span style="color: #3f7f7f">scope</span><span style="color: #008080">&gt;</span><span style="color: #000000">test</span><span style="color: #008080">&lt;/</span><span style="color: #3f7f7f">scope</span><span style="color: #008080">&gt;</span>] qui signifie qu&#x27;elles ne sont nécessaires que pour les classes du dossier [src / test / java]. Ces dépendances ne seront pas incluses dans l&#x27;archive finale du projet ;
+  </li>
+  <li>lignes 53-56 : la bibliothèque [<span style="color: #000000">spring-boot-starter-logging</span>] sera utilisée par Spring pour faire des logs à l&#x27;écran ;
+  </li>
+  <li>lignes 14-17 : des propriétés de configuration Maven :
+    <ul>
+      <li>ligne 15 : indique que les fichiers source sont codés en UTF-8 ;
+      </li>
+      <li>ligne 16 : indique que le compilateur à utiliser doit être de niveau 1.8 ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><a id="refheading22681565848973"></a></p>
 <h2 id="75-les-entites-de-la-couche-dao">7.5. Les entités de la couche [DAO]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBA7F86E43.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.761cm;" class="odt-zoomable" data-zoom-src="images/1000000000000128000000CBA7F86E43.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>[ElectionsConfig] est le modèle objet associé à une ligne de la table [CONF] ;</li>
-<li>[ListeElectorale] est le modèle objet associé à une ligne de la table [LISTES] ;</li>
-<li>[AbstactEntity] est la classe parent des deux classes précédentes. Elle factorise les champs [id, version] communs aux deux classes ;</li>
-<li>[ElectionsException] est une classe d&#x27;exception ;</li>
+  <li>[ElectionsConfig] est le modèle objet associé à une ligne de la table [CONF] ;
+  </li>
+  <li>[ListeElectorale] est le modèle objet associé à une ligne de la table [LISTES] ;
+  </li>
+  <li>[AbstactEntity] est la classe parent des deux classes précédentes. Elle factorise les champs [id, version] communs aux deux classes ;
+  </li>
+  <li>[ElectionsException] est une classe d&#x27;exception ;
+  </li>
 </ul>
+
 <p><a id="refheading22683565848973"></a></p>
 <h3 id="751-la-classe-electionsexception">7.5.1. La classe [ElectionsException]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CB4ED74EBE.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.761cm;" class="odt-zoomable" data-zoom-src="images/1000000000000128000000CB4ED74EBE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1488,11 +1521,16 @@
 
 <p>Un objet [ElectionsException] est caractérisé par deux informations :</p>
 <ul>
-<li>ligne 16 : un code d&#x27;erreur ;</li>
-<li>ligne 17 : une liste de messages d&#x27;erreur associés à la pile des exceptions qui se sont produites ;</li>
-<li>la classe a 5 constructeurs (lignes 20, 24, 32, 40, 50) ;</li>
-<li>lignes 59-76 : la méthode [getErreursForException] permet de récupérer les messages d&#x27;erreur de la pile d&#x27;exceptions ;</li>
+  <li>ligne 16 : un code d&#x27;erreur ;
+  </li>
+  <li>ligne 17 : une liste de messages d&#x27;erreur associés à la pile des exceptions qui se sont produites ;
+  </li>
+  <li>la classe a 5 constructeurs (lignes 20, 24, 32, 40, 50) ;
+  </li>
+  <li>lignes 59-76 : la méthode [getErreursForException] permet de récupérer les messages d&#x27;erreur de la pile d&#x27;exceptions ;
+  </li>
 </ul>
+
 <p><a id="refheading22685565848973"></a></p>
 <h3 id="752-la-classe-abstractentity">7.5.2. La classe [AbstractEntity]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBC48C394C.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.759cm;" class="odt-zoomable" data-zoom-src="images/1000000000000128000000CBC48C394C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1540,10 +1578,14 @@
 
 <p>Elle mémorise les champs [ID, NOM] des lignes des tables [CONF] et [LISTES] (lignes 8-9).</p>
 <ul>
-<li>ligne 8 : la classe a l&#x27;attribut [Abstract] indiquant qu&#x27;elle ne peut être instanciée. Elle ne peut être que dérivée ;</li>
-<li>lignes 26-33 : signature jSON de l&#x27;objet ;</li>
-<li>ligne 28 : on retourne la chaîne jSON de [this]. Si au moment de l&#x27;exécution, [this] représente un objet dérivé de [AbstactEntity], c&#x27;est la chaîne jSON de l&#x27;objet dérivé qui est obtenue. Les classes dérivées n&#x27;auront ainsi pas besoin de définir une méthode [toString]. Celle de la classe parent est suffisante ;</li>
+  <li>ligne 8 : la classe a l&#x27;attribut [Abstract] indiquant qu&#x27;elle ne peut être instanciée. Elle ne peut être que dérivée ;
+  </li>
+  <li>lignes 26-33 : signature jSON de l&#x27;objet ;
+  </li>
+  <li>ligne 28 : on retourne la chaîne jSON de [this]. Si au moment de l&#x27;exécution, [this] représente un objet dérivé de [AbstactEntity], c&#x27;est la chaîne jSON de l&#x27;objet dérivé qui est obtenue. Les classes dérivées n&#x27;auront ainsi pas besoin de définir une méthode [toString]. Celle de la classe parent est suffisante ;
+  </li>
 </ul>
+
 <p><a id="refheading22687565848973"></a></p>
 <h3 id="753-la-classe-electionsconfig">7.5.3. La classe [ElectionsConfig]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBD98166F6.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.759cm;" class="odt-zoomable" data-zoom-src="images/1000000000000128000000CBD98166F6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1578,9 +1620,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 4 : la classe étend la classe [AbstractEntity] ;</li>
-<li>lignes 8-9 : mémorisent les informations des colonnes [SAP, SEUILELECTORAL] de la table [CONF] ;</li>
+  <li>ligne 4 : la classe étend la classe [AbstractEntity] ;
+  </li>
+  <li>lignes 8-9 : mémorisent les informations des colonnes [SAP, SEUILELECTORAL] de la table [CONF] ;
+  </li>
 </ul>
+
 <p><a id="refheading22689565848973"></a></p>
 <h3 id="754-la-classe-listeelectorale">7.5.4. La classe [ListeElectorale]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000128000000CBABF9AE30.png" style="display:inline-block; margin:4px;width:5.48cm;height:3.759cm;" class="odt-zoomable" data-zoom-src="images/1000000000000128000000CBABF9AE30.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1681,9 +1726,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 3 : la classe étend la classe [AbstractEntity] ;</li>
-<li>lignes 6-9 : la classe mémorise les colonnes [NOM, VOIX, SIEGES, ELIMINE] de la table [LISTES] ;</li>
+  <li>ligne 3 : la classe étend la classe [AbstractEntity] ;
+  </li>
+  <li>lignes 6-9 : la classe mémorise les colonnes [NOM, VOIX, SIEGES, ELIMINE] de la table [LISTES] ;
+  </li>
 </ul>
+
 <p><a id="refheading22691565848973"></a></p>
 <h2 id="76-configuration-spring-de-la-couche-dao">7.6. Configuration Spring de la couche [DAO]</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005170000010DBE71959B.png" style="display:inline-block; margin:4px;width:17.238cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000005170000010DBE71959B.png" /></td></tr></table>
@@ -1738,17 +1786,26 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 25-38 : l&#x27;accès à la BD se fera via une source de données [tomcat-jdbc]. Ce type de source a été utilisée et expliquée au paragraphe <a href="cours-introduction-a-lapi-jdbc.html#refheading59611820156038">6.5</a> ;</li>
-<li>lignes 17-23 : un ensemble de constantes statiques accessibles par toutes les classes du projet ;</li>
-<li>ligne 13 : l&#x27;annotation [@Configuration] fait de la classe [AppConfig] une classe de configuration Spring ;</li>
-<li>ligne 11 : l&#x27;annotation [@ComponentScan] indique les packages où on peut trouver des objets Spring. Ici, nous allons définir un objet Spring dans le package [dao]. L&#x27;annotation [@ComponentScan] fait de la classe une classe de configuration qui nous épargne de mettre l&#x27;annotation [@Configuration] ;</li>
-<li>la ligne 12 active la gestion d&#x27;un cache. Le principe est la suivant :<ul>
-<li>on met l&#x27;annotation [@Cacheable(&#x27;nom_du_cache&#x27;)] à une méthode M. Le &#x27;nom_du-cache&#x27; est le nom utilisé ligne 41 ;</li>
-<li>lorsque la méthode M est appelée la 1ère fois, ses résultats sont rendus et également mis dans le cache nommé par l&#x27;annotation ;</li>
-<li>lorsque la méthode M est appelée les fois suivantes avec les mêmes paramètres que la 1ère fois, elle n&#x27;est pas exécutée et Spring se contente de rendre les valeurs mises en cache ;</li>
+  <li>lignes 25-38 : l&#x27;accès à la BD se fera via une source de données [tomcat-jdbc]. Ce type de source a été utilisée et expliquée au paragraphe <a href="cours-introduction-a-lapi-jdbc.html#refheading59611820156038">6.5</a> ;
+  </li>
+  <li>lignes 17-23 : un ensemble de constantes statiques accessibles par toutes les classes du projet ;
+  </li>
+  <li>ligne 13 : l&#x27;annotation [@Configuration] fait de la classe [AppConfig] une classe de configuration Spring ;
+  </li>
+  <li>ligne 11 : l&#x27;annotation [@ComponentScan] indique les packages où on peut trouver des objets Spring. Ici, nous allons définir un objet Spring dans le package [dao]. L&#x27;annotation [@ComponentScan] fait de la classe une classe de configuration qui nous épargne de mettre l&#x27;annotation [@Configuration] ;
+  </li>
+  <li>la ligne 12 active la gestion d&#x27;un cache. Le principe est la suivant :
+    <ul>
+      <li>on met l&#x27;annotation [@Cacheable(&#x27;nom_du_cache&#x27;)] à une méthode M. Le &#x27;nom_du-cache&#x27; est le nom utilisé ligne 41 ;
+      </li>
+      <li>lorsque la méthode M est appelée la 1ère fois, ses résultats sont rendus et également mis dans le cache nommé par l&#x27;annotation ;
+      </li>
+      <li>lorsque la méthode M est appelée les fois suivantes avec les mêmes paramètres que la 1ère fois, elle n&#x27;est pas exécutée et Spring se contente de rendre les valeurs mises en cache ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><a id="refheading106239108242770"></a></p>
 <h2 id="77-configuration-des-logs">7.7. Configuration des logs</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001AD000001B9F417F917.png" style="display:inline-block; margin:4px;width:5.676cm;height:5.835cm;" class="odt-zoomable" data-zoom-src="images/10000000000001AD000001B9F417F917.png" /></td></tr></table>
@@ -1767,14 +1824,20 @@
 
 <p>C&#x27;est la bibliothèque [logback] qui va assurer les logs. Elle est configurée par deux fichiers :</p>
 <ul>
-<li>[logback.xml] pour la branche principale du code ;</li>
-<li>[logback-test.xml] pour la branche de test du code. En l&#x27;absence de ce fichier, le fichier précédent est alors utilisé ;</li>
+  <li>[logback.xml] pour la branche principale du code ;
+  </li>
+  <li>[logback-test.xml] pour la branche de test du code. En l&#x27;absence de ce fichier, le fichier précédent est alors utilisé ;
+  </li>
 </ul>
+
 <p>Ces deux fichiers doivent se trouver dans le [Classpath] du projet. Pour cette raison, ils sont placés dans le dossier :</p>
 <ul>
-<li>[src / main / ressources] pour la branche principale du code ;</li>
-<li>[src / test / ressources] pour la branche de test du code ;</li>
+  <li>[src / main / ressources] pour la branche principale du code ;
+  </li>
+  <li>[src / test / ressources] pour la branche de test du code ;
+  </li>
 </ul>
+
 <p>Le contenu des fichiers est ici le même :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">configuration</span><span style="color:#008080">&gt;</span><span style="color:#000000"> </span></span>
@@ -1796,11 +1859,16 @@
 
 <p>Tout se passe ligne 12 où on fixe le niveau d&#x27;information désiré :</p>
 <ul>
-<li>[debug] : le niveau le plus détaillé ;</li>
-<li>[off] : pas de logs ;</li>
-<li>[info] : le niveau normal des logs ;</li>
-<li>[warn] : idem niveau [info] plus les messages d&#x27;avertissement (warning). Ces messages indiquent une possibilité d&#x27;erreur ;</li>
+  <li>[debug] : le niveau le plus détaillé ;
+  </li>
+  <li>[off] : pas de logs ;
+  </li>
+  <li>[info] : le niveau normal des logs ;
+  </li>
+  <li>[warn] : idem niveau [info] plus les messages d&#x27;avertissement (warning). Ces messages indiquent une possibilité d&#x27;erreur ;
+  </li>
 </ul>
+
 <p>Passez en mode [debug] dès que des erreurs apparaissent à l&#x27;exécution.</p>
 <p><a id="refheading22693565848973"></a></p>
 <h2 id="78-implementation-de-la-couche-dao">7.8. Implémentation de la couche [DAO]</h2>
@@ -1920,11 +1988,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 24 : l&#x27;annotation [@<span style="color: #646464">Cacheable</span>] est une annotation Spring qui demande de mettre en mémoire (&#x27;cacher&#x27;) les résultats de la méthode [<span style="color: #000000">getElectionsConfig</span>]. Il est possible de faire cela ici parce que le contenu de la table [CONF] ne change jamais. Il ne serait pas possible de mettre cette annotation sur la méthode [<span style="color: #000000">getListesElectorales</span>] car le contenu de la table [LISTES] change au cours du temps ;</li>
-<li>les méthodes [<span style="color: #000000">doCatchException</span>] et [<span style="color: #000000">doFinally</span>] retournent un type [<span style="color: #000000">ElectionsException</span>]. La méthode [<span style="color: #000000">doFinally</span>] rend un pointeur <em>null</em> si la libération des ressources s&#x27;est faite sans erreurs ;</li>
+  <li>ligne 24 : l&#x27;annotation [@<span style="color: #646464">Cacheable</span>] est une annotation Spring qui demande de mettre en mémoire (&#x27;cacher&#x27;) les résultats de la méthode [<span style="color: #000000">getElectionsConfig</span>]. Il est possible de faire cela ici parce que le contenu de la table [CONF] ne change jamais. Il ne serait pas possible de mettre cette annotation sur la méthode [<span style="color: #000000">getListesElectorales</span>] car le contenu de la table [LISTES] change au cours du temps ;
+  </li>
+  <li>les méthodes [<span style="color: #000000">doCatchException</span>] et [<span style="color: #000000">doFinally</span>] retournent un type [<span style="color: #000000">ElectionsException</span>]. La méthode [<span style="color: #000000">doFinally</span>] rend un pointeur <i>null</i> si la libération des ressources s&#x27;est faite sans erreurs ;
+  </li>
 </ul>
+
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p><strong>Travail à faire </strong>: écrivez la classe [ElectionDaoJdbc] en vous inspirant de la classe [IntroJdbc02] étudiée au paragraphe <a href="cours-introduction-a-lapi-jdbc.html#refheading59651820156038">6.5.2</a>.</p>
+<p><strong>Travail à faire</strong> : écrivez la classe [ElectionDaoJdbc] en vous inspirant de la classe [IntroJdbc02] étudiée au paragraphe <a href="cours-introduction-a-lapi-jdbc.html#refheading59651820156038">6.5.2</a>.</p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><a id="refheading22695565848973"></a></p>
 <h2 id="79-la-classe-de-test-main">7.9. La classe de test [Main]</h2>
@@ -2013,9 +2084,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 21-31 : récupération d&#x27;une référence sur la couche [DAO] ;</li>
-<li>ligne 21 : on utilise une syntaxe appelée <em>try_with_resources</em>. Sa syntaxe est la suivante :</li>
+  <li>lignes 21-31 : récupération d&#x27;une référence sur la couche [DAO] ;
+  </li>
+  <li>ligne 21 : on utilise une syntaxe appelée <i>try_with_resources</i>. Sa syntaxe est la suivante :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">try</span><span style="color:#000000"> (T ressource=expression) {</span></span>
 <span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#3f7f5f">// exploitation de ressource</span></span>
@@ -2024,28 +2098,38 @@
 </code></pre></div>
 
 <ul>
-<li>(suite)<ul>
-<li>le type T de la ligne 1 doit implémenter l&#x27;interface [java.lang.AutoCloseable] ;</li>
-<li>à la sortie du bloc des lignes 1-4, la ressource de type [java.lang.AutoCloseable] est automatiquement libérée qu&#x27;il y ait eu exception ou pas. Ceux qui connaissent le langage C# reconnaîtront là un frère syntaxique et fonctionnel de la clause <strong><span style="color: #7f0055">using</span></strong><span style="color: #000000"> (T ressource=expression) ;</span></li>
+  <li>(suite)
+    <ul>
+      <li>le type T de la ligne 1 doit implémenter l&#x27;interface [java.lang.AutoCloseable] ;
+      </li>
+      <li>à la sortie du bloc des lignes 1-4, la ressource de type [java.lang.AutoCloseable] est automatiquement libérée qu&#x27;il y ait eu exception ou pas. Ceux qui connaissent le langage C# reconnaîtront là un frère syntaxique et fonctionnel de la clause <b><span style="color: #7f0055">using</span></b><span style="color: #000000"> (T ressource=expression) ;</span>
+      </li>
+    </ul>
+  </li>
+  <li>lignes 40-49 : utilisation de la couche [DAO] pour obtenir le contenu des tables [CONF] et [LISTES] ;
+  </li>
+  <li>lignes 41-47 : on teste le cache [electionsconfig]. Celui-ci a été défini à deux endroits :
+    <ul>
+      <li>dans la classe [ElectionsDaoJdbc] :
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-<li>lignes 40-49 : utilisation de la couche [DAO] pour obtenir le contenu des tables [CONF] et [LISTES] ;</li>
-<li>lignes 41-47 : on teste le cache [electionsconfig]. Celui-ci a été défini à deux endroits :<ul>
-<li>dans la classe [ElectionsDaoJdbc] :</li>
-</ul>
-</li>
-</ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="color:#646464">@Cacheable</span><span style="color:#000000">(</span><span style="color:#2a00ff">&quot;electionsConfig&quot;</span><span style="color:#000000">)</span></span>
 <span class="odt-code-line"><span style="color:#000000">  </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> ElectionsConfig getElectionsConfig() {</span></span>
 </code></pre></div>
 
 <ul>
-<li>(suite)<ul>
-<li>dans la classe de configuration [AppConfig] :</li>
+  <li>(suite)
+    <ul>
+      <li>dans la classe de configuration [AppConfig] :
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">@EnableCaching</span>
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">class</span><span style="color:#000000"> AppConfig {</span></span>
@@ -2058,9 +2142,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 59 : fermeture du contexte Spring ;</li>
-<li>lignes 62-67 : affichage des informations obtenues ;</li>
+  <li>ligne 59 : fermeture du contexte Spring ;
+  </li>
+  <li>lignes 62-67 : affichage des informations obtenues ;
+  </li>
 </ul>
+
 <p>Les résultats obtenus avec une couche [DAO] implémentée sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -2093,12 +2180,16 @@
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a>{&quot;id&quot;:7,&quot;version&quot;:13,&quot;nom&quot;:&quot;G&quot;,&quot;voix&quot;:2500,&quot;sieges&quot;:0,&quot;elimine&quot;:true}
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 2-4 : montrent l&#x27;influence du cache :<ul>
-<li>la requête 1 dure 80 millisecondes ;</li>
-<li>la requête 2 dure 1 milliseconde ;</li>
+  <li>lignes 2-4 : montrent l&#x27;influence du cache :
+    <ul>
+      <li>la requête 1 dure 80 millisecondes ;
+      </li>
+      <li>la requête 2 dure 1 milliseconde ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Lorsque la base de données est coupée on obtient les résultats suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
@@ -2169,11 +2260,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 17 : l&#x27;annotation [<span style="color: #646464">RunWith</span>] qui est une annotation [JUnit] (ligne 6) assure l&#x27;intégration avec Spring via la classe [<span style="color: #000000">SpringJUnit4ClassRunner</span>] ;</li>
-<li>ligne 16 : l&#x27;annotation [<span style="color: #646464">SpringApplicationConfiguration</span>] est une annotation [Spring] (ligne 8) qui permet de désigner les classes de configuration du test JUnit. Ici on désigne la classe [AppConfig] utilisée pour configurer le projet. On dispose alors de tous les objets Spring définis par cette classe de configuration. C&#x27;est ainsi qu&#x27;on peut injecter lignes 21-22 une référence sur la couche [DAO] qui va être testée ;</li>
-<li>ligne 25 : l&#x27;annotation [<span style="color: #646464">Before</span>] désigne une méthode qui doit être exécutée avant chaque test ;</li>
-<li>lignes 26-41 : la méthode [init] met les voix et sièges des listes de la table [LISTES] à zéro et le booléen [elimine] à [false] ;</li>
+  <li>ligne 17 : l&#x27;annotation [<span style="color: #646464">RunWith</span>] qui est une annotation [JUnit] (ligne 6) assure l&#x27;intégration avec Spring via la classe [<span style="color: #000000">SpringJUnit4ClassRunner</span>] ;
+  </li>
+  <li>ligne 16 : l&#x27;annotation [<span style="color: #646464">SpringApplicationConfiguration</span>] est une annotation [Spring] (ligne 8) qui permet de désigner les classes de configuration du test JUnit. Ici on désigne la classe [AppConfig] utilisée pour configurer le projet. On dispose alors de tous les objets Spring définis par cette classe de configuration. C&#x27;est ainsi qu&#x27;on peut injecter lignes 21-22 une référence sur la couche [DAO] qui va être testée ;
+  </li>
+  <li>ligne 25 : l&#x27;annotation [<span style="color: #646464">Before</span>] désigne une méthode qui doit être exécutée avant chaque test ;
+  </li>
+  <li>lignes 26-41 : la méthode [init] met les voix et sièges des listes de la table [LISTES] à zéro et le booléen [elimine] à [false] ;
+  </li>
 </ul>
+
 <p>L&#x27;unique méthode de test est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">@Test</span>
@@ -2235,12 +2331,18 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 5-9 : on s&#x27;assure qu&#x27;on est capable de récupérer le contenu de la table [CONF] ;</li>
-<li>lignes 11-19 : on affiche le contenu de la table [LISTES]. Il n&#x27;y a pas de tests ici, seulement un contrôle visuel ;</li>
-<li>lignes 21-35 : on modifie en base, la table [LISTES] en donnant aux listes des valeurs pour leurs champs [voix, sieges, elimine] ;</li>
-<li>lignes 37-51 : on relit la table [LISTES] et on vérifie que ce qui est obtenu est bien égal à ce qui a été mis ;</li>
-<li>lignes 52-55 : vérification visuelle ;</li>
+  <li>lignes 5-9 : on s&#x27;assure qu&#x27;on est capable de récupérer le contenu de la table [CONF] ;
+  </li>
+  <li>lignes 11-19 : on affiche le contenu de la table [LISTES]. Il n&#x27;y a pas de tests ici, seulement un contrôle visuel ;
+  </li>
+  <li>lignes 21-35 : on modifie en base, la table [LISTES] en donnant aux listes des valeurs pour leurs champs [voix, sieges, elimine] ;
+  </li>
+  <li>lignes 37-51 : on relit la table [LISTES] et on vérifie que ce qui est obtenu est bien égal à ce qui a été mis ;
+  </li>
+  <li>lignes 52-55 : vérification visuelle ;
+  </li>
 </ul>
+
 <p>Les résultats console obtenus avec une couche [DAO] implémentée sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -2327,11 +2429,16 @@
 <a id="__codelineno-2-42" name="__codelineno-2-42"></a><span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="s2">&quot;version&quot;</span><span class="p">:</span><span class="mi">19</span><span class="p">,</span><span class="s2">&quot;nom&quot;</span><span class="p">:</span><span class="s2">&quot;G&quot;</span><span class="p">,</span><span class="s2">&quot;voix&quot;</span><span class="p">:</span><span class="mi">60</span><span class="p">,</span><span class="s2">&quot;sieges&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="s2">&quot;elimine&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 1-23 : logs de Spring Test ;</li>
-<li>lignes 25-26 : le contenu de la table [CONF] ;</li>
-<li>lignes 27-34 : le contenu initial de la table [LISTES] ;</li>
-<li>lignes 35-42 : le contenu de la table [LISTES] après affectation de valeurs aux champs [voix, sieges, elimine] ;</li>
+  <li>lignes 1-23 : logs de Spring Test ;
+  </li>
+  <li>lignes 25-26 : le contenu de la table [CONF] ;
+  </li>
+  <li>lignes 27-34 : le contenu initial de la table [LISTES] ;
+  </li>
+  <li>lignes 35-42 : le contenu de la table [LISTES] après affectation de valeurs aux champs [voix, sieges, elimine] ;
+  </li>
 </ul>
+
 <p>Par ailleurs le test JUnit réussit :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000015C000000CBF66E50FE.png" style="display:inline-block; margin:4px;width:6.44cm;height:3.761cm;" class="odt-zoomable" data-zoom-src="images/100000000000015C000000CBF66E50FE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2469,35 +2576,50 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 25-37 : configurent un plugin Maven pour générer le jar ;</li>
-<li>ligne 15 : indique la version de Java à utiliser pour la compilation ;</li>
+  <li>lignes 25-37 : configurent un plugin Maven pour générer le jar ;
+  </li>
+  <li>ligne 15 : indique la version de Java à utiliser pour la compilation ;
+  </li>
 </ul>
+
 <p>Une fois cette modification faite, on peut générer le jar de la façon suivante [1-10] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004E5000002EDF261F0B0.png" style="display:inline-block; margin:4px;width:16.577cm;height:9.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000004E5000002EDF261F0B0.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DF00000141E7C0DBB7.png" style="display:inline-block; margin:4px;width:13.111cm;height:4.247cm;" class="odt-zoomable" data-zoom-src="images/10000000000003DF00000141E7C0DBB7.png" /></td></tr></table>
 
 <ul>
-<li>en [5], mettre le dossier du projet en utilisant le bouton [6] ;</li>
-<li>en [7], donner un nom à la configuration d&#x27;exécution ;</li>
-<li>en [8], mettre la liste des buts Maven à exécuter :<ul>
-<li>[clean] : vide le dossier [target] du projet dans lequel va être placé le jar généré ;</li>
-<li>[compile] : compile le projet ;</li>
-<li>[assembly:single] : génère un unique jar comprenant toutes les classes du projet et de ses dépendances ;</li>
+  <li>en [5], mettre le dossier du projet en utilisant le bouton [6] ;
+  </li>
+  <li>en [7], donner un nom à la configuration d&#x27;exécution ;
+  </li>
+  <li>en [8], mettre la liste des buts Maven à exécuter :
+    <ul>
+      <li>[clean] : vide le dossier [target] du projet dans lequel va être placé le jar généré ;
+      </li>
+      <li>[compile] : compile le projet ;
+      </li>
+      <li>[assembly:single] : génère un unique jar comprenant toutes les classes du projet et de ses dépendances ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004640000016A4EBC4A4F.png" style="display:inline-block; margin:4px;width:14.87cm;height:4.789cm;" class="odt-zoomable" data-zoom-src="images/10000000000004640000016A4EBC4A4F.png" /></td></tr></table>
 
 <ul>
-<li>en [9-10], vérifiez que vous avez un <strong>JDK</strong> (Java Development Kit) et non un <strong>JRE</strong> (Java Runtime Environment). La différence est que le JDK a un compilateur et pas le JRE. Si vous n&#x27;avez pas un JDK, il vous faut en ajouter un dans [10] avec [11]. Pour cela, suivre la procédure décrite au paragraphe <a href="td-classes.html#refheading17454269506693">3.1</a> ;</li>
+  <li>en [9-10], vérifiez que vous avez un <b>JDK</b> (Java Development Kit) et non un <b>JRE</b> (Java Runtime Environment). La différence est que le JDK a un compilateur et pas le JRE. Si vous n&#x27;avez pas un JDK, il vous faut en ajouter un dans [10] avec [11]. Pour cela, suivre la procédure décrite au paragraphe <a href="td-classes.html#refheading17454269506693">3.1</a> ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004F2000000EE9C7D9767.png" style="display:inline-block; margin:4px;width:16.748cm;height:3.149cm;" class="odt-zoomable" data-zoom-src="images/10000000000004F2000000EE9C7D9767.png" /></td></tr></table>
 
 <ul>
-<li>en [17], exécutez la configuration d&#x27;exécution ;</li>
-<li>en [13], l&#x27;archive générée ;</li>
+  <li>en [17], exécutez la configuration d&#x27;exécution ;
+  </li>
+  <li>en [13], l&#x27;archive générée ;
+  </li>
 </ul>
+
 <p>On peut ouvrir cette archive avec un dézippeur :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000013500000180C2689868.png" style="display:inline-block; margin:4px;width:5.72cm;height:7.11cm;" class="odt-zoomable" data-zoom-src="images/100000000000013500000180C2689868.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2520,13 +2642,17 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000590000002ABEFCC8920.png" style="display:inline-block; margin:4px;width:17.999cm;height:8.632cm;" class="odt-zoomable" data-zoom-src="images/1000000000000590000002ABEFCC8920.png" /></td></tr></table>
 
 <ul>
-<li>en [18], on a importé l&#x27;archive de la couche [DAO] créée précédemment ;</li>
+  <li>en [18], on a importé l&#x27;archive de la couche [DAO] créée précédemment ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000307000000DBE24C6827.png" style="display:inline-block; margin:4px;width:10.253cm;height:2.898cm;" class="odt-zoomable" data-zoom-src="images/1000000000000307000000DBE24C6827.png" /></td></tr></table>
 
 <ul>
-<li>en [19], le projet ne présente plus d&#x27;erreurs ;</li>
+  <li>en [19], le projet ne présente plus d&#x27;erreurs ;
+  </li>
 </ul>
+
 <p>On peut alors exécuter la classe [Main]. On obtient les mêmes résultats que précédemment.</p>
 
 

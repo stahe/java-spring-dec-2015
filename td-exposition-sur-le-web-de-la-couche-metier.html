@@ -1187,9 +1187,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 18-22 : la dépendance sur la couche [DAO] construite au paragraphe <a href="td-implementation-de-la-couche-dao-du-td-avec-spring-data.html#refheading2192602014630537">12</a> ;</li>
-<li>lignes 23-34 : les dépendances nécessaires aux tests ;</li>
+  <li>lignes 18-22 : la dépendance sur la couche [DAO] construite au paragraphe <a href="td-implementation-de-la-couche-dao-du-td-avec-spring-data.html#refheading2192602014630537">12</a> ;
+  </li>
+  <li>lignes 23-34 : les dépendances nécessaires aux tests ;
+  </li>
 </ul>
+
 <p><a id="refheading251902391218965"></a></p>
 <h3 id="1422-configuration-spring">14.2.2. Configuration Spring</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011700000083837432B9.png" style="display:inline-block; margin:4px;width:5.181cm;height:2.431cm;" class="odt-zoomable" data-zoom-src="images/100000000000011700000083837432B9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1210,10 +1213,14 @@
 </code></pre></div>
 
 <ul>
-<li>nous n&#x27;utilisons pas ici la notation [@Configuration] qui fait de la classe une classe de configuration Spring. La présence des annotations [@Import, @ComponentScan] fait automatiquement d&#x27;elle une classe de configuration ;</li>
-<li>ligne 8 : on importe le fichier de configuration de la couche [DAO]. On dispose alors de tous les beans définis par ce fichier ;</li>
-<li>ligne 9 : d&#x27;autres beans Spring sont à chercher dans le dossier [<span style="color: #2a00ff">elections.metier.service</span>] ;</li>
+  <li>nous n&#x27;utilisons pas ici la notation [@Configuration] qui fait de la classe une classe de configuration Spring. La présence des annotations [@Import, @ComponentScan] fait automatiquement d&#x27;elle une classe de configuration ;
+  </li>
+  <li>ligne 8 : on importe le fichier de configuration de la couche [DAO]. On dispose alors de tous les beans définis par ce fichier ;
+  </li>
+  <li>ligne 9 : d&#x27;autres beans Spring sont à chercher dans le dossier [<span style="color: #2a00ff">elections.metier.service</span>] ;
+  </li>
 </ul>
+
 <p><a id="refheading251904391218965"></a></p>
 <h3 id="1423-implementation-de-la-couche-metier">14.2.3. Implémentation de la couche [métier]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010C0000008FFD111688.png" style="display:inline-block; margin:4px;width:4.96cm;height:2.649cm;" class="odt-zoomable" data-zoom-src="images/100000000000010C0000008FFD111688.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1238,11 +1245,16 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000144000000DF0DF25CC2.png" style="display:inline-block; margin:4px;width:6.001cm;height:4.129cm;" class="odt-zoomable" data-zoom-src="images/1000000000000144000000DF0DF25CC2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E2000000AAC294C278.png" style="display:inline-block; margin:4px;width:4.189cm;height:3.15cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E2000000AAC294C278.png" /></td></tr></table>
 
 <ul>
-<li>[Boot.java] est la classe qui lance le service web ;</li>
-<li>[WebConfig.java] est la classe de configuration du service web ;</li>
-<li>[Response.java] est la réponse faite par les différentes URL du service web ;</li>
-<li>[ElectionsController] est la classe d&#x27;implémentation du service web ;</li>
+  <li>[Boot.java] est la classe qui lance le service web ;
+  </li>
+  <li>[WebConfig.java] est la classe de configuration du service web ;
+  </li>
+  <li>[Response.java] est la réponse faite par les différentes URL du service web ;
+  </li>
+  <li>[ElectionsController] est la classe d&#x27;implémentation du service web ;
+  </li>
 </ul>
+
 <p><a id="refheading18032265679331"></a></p>
 <h2 id="144-configuration-maven">14.4. Configuration Maven</h2>
 <p>Le projet est un projet Maven configuré par le fichier [pom.xml] suivant :</p>
@@ -1296,9 +1308,12 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 19-23 : la dépendance sur l&#x27;archive la couche [métier]. C&#x27;est celle que nous avons créé au paragraphe <a href="#refheading18028265679331">14</a> ;</li>
-<li>lignes 25-28 : la dépendance pour avoir une application Spring MVC ;</li>
+  <li>lignes 19-23 : la dépendance sur l&#x27;archive la couche [métier]. C&#x27;est celle que nous avons créé au paragraphe <a href="#refheading18028265679331">14</a> ;
+  </li>
+  <li>lignes 25-28 : la dépendance pour avoir une application Spring MVC ;
+  </li>
 </ul>
+
 <p><a id="refheading18034265679331"></a></p>
 <h2 id="145-configuration-spring">14.5. Configuration Spring</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014100000093208C1DB3.png" style="display:inline-block; margin:4px;width:5.941cm;height:2.72cm;" class="odt-zoomable" data-zoom-src="images/100000000000014100000093208C1DB3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1359,10 +1374,14 @@
 </code></pre></div>
 
 <ul>
-<li>la signification de cette configuration a été donnée au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17988265679331">13.5.3.1</a>. Nous n&#x27;expliquons que les nouveautés :</li>
-<li>ligne 22 : on importe le fichier de configuration de la couche [métier] pour bénéficier de tous ses beans ;</li>
-<li>ligne 23 : on indique que d&#x27;autres beans seront trouvés dans le dossier [<span style="color: #2a00ff">elections.webjson.server.service</span>] ;</li>
+  <li>la signification de cette configuration a été donnée au paragraphe <a href="cours-exposer-une-base-de-donnees-sur-le-web-avec-spring-mvc.html#refheading17988265679331">13.5.3.1</a>. Nous n&#x27;expliquons que les nouveautés :
+  </li>
+  <li>ligne 22 : on importe le fichier de configuration de la couche [métier] pour bénéficier de tous ses beans ;
+  </li>
+  <li>ligne 23 : on indique que d&#x27;autres beans seront trouvés dans le dossier [<span style="color: #2a00ff">elections.webjson.server.service</span>] ;
+  </li>
 </ul>
+
 <p><a id="refheading18036265679331"></a></p>
 <h2 id="146-la-classe-de-lancement-du-service-web">14.6. La classe de lancement du service web</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001390000009220D29527.png" style="display:inline-block; margin:4px;width:5.791cm;height:2.701cm;" class="odt-zoomable" data-zoom-src="images/10000000000001390000009220D29527.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1384,8 +1403,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 10 : la méthode statique [<span style="color: #000000">SpringApplication.</span><em><span style="color: #000000">run</span></em>] va exploiter le fichier de configuration [WebConfig]. A cause de l&#x27;annotation [@EnableAutoConfiguration], Spring Boot va lancer le serveur Tomvat et déployer le service web dessus ;</li>
+  <li>ligne 10 : la méthode statique [<span style="color: #000000">SpringApplication.</span><i><span style="color: #000000">run</span></i>] va exploiter le fichier de configuration [WebConfig]. A cause de l&#x27;annotation [@EnableAutoConfiguration], Spring Boot va lancer le serveur Tomvat et déployer le service web dessus ;
+  </li>
 </ul>
+
 <p><a id="refheading18038265679331"></a></p>
 <h2 id="147-la-reponse-des-url-du-service-web">14.7. La réponse des URL du service web</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000A451BFCA3B.png" style="display:inline-block; margin:4px;width:6.04cm;height:3.039cm;" class="odt-zoomable" data-zoom-src="images/1000000000000146000000A451BFCA3B.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1523,12 +1544,18 @@
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
 <p><strong>Notes</strong> : </p>
 <ul>
-<li>il n&#x27;y a pas ici de filtres jSON car les tables [CONF] et [LISTES] ne sont pas liées entre-elles par une relation de clé étrangère, ce qui allège considérablement le code du service web ;</li>
-<li>ne pas oublier les différentes annotations Spring nécessaires ;</li>
-<li>on donnera aux URL le nom des méthodes associées ;</li>
-<li>la méthode [setListeElectorales] est appelée avec une opération [POST]. La valeur postée est le tableau des listes en compétition (de type <em>ListeElectorale[])</em> avec leurs attributs [sieges, voix, elimine] qu&#x27;il faut enregistrer en base. Cette méthode rend un type [Response&lt;Void&gt;] avec un champ [status=0] s&#x27;il n&#x27;y a pas eu d&#x27;erreur, autre chose sinon ;</li>
-<li>la méthode [calculerSieges] est appelée avec une opération [POST]. La valeur postée est le tableau des listes en compétition (de type <em>ListeElectorale[])</em> avec leurs attributs [nom, voix]. Cette méthode rend un type [Response&lt;<em>ListeElectorale[]</em>&gt;] avec comme corps, les listes électorales avec leurs champs [sieges, elimine] initialisés ;</li>
+  <li>il n&#x27;y a pas ici de filtres jSON car les tables [CONF] et [LISTES] ne sont pas liées entre-elles par une relation de clé étrangère, ce qui allège considérablement le code du service web ;
+  </li>
+  <li>ne pas oublier les différentes annotations Spring nécessaires ;
+  </li>
+  <li>on donnera aux URL le nom des méthodes associées ;
+  </li>
+  <li>la méthode [setListeElectorales] est appelée avec une opération [POST]. La valeur postée est le tableau des listes en compétition (de type <i>ListeElectorale[])</i> avec leurs attributs [sieges, voix, elimine] qu&#x27;il faut enregistrer en base. Cette méthode rend un type [Response&lt;Void&gt;] avec un champ [status=0] s&#x27;il n&#x27;y a pas eu d&#x27;erreur, autre chose sinon ;
+  </li>
+  <li>la méthode [calculerSieges] est appelée avec une opération [POST]. La valeur postée est le tableau des listes en compétition (de type <i>ListeElectorale[])</i> avec leurs attributs [nom, voix]. Cette méthode rend un type [Response&lt;<i>ListeElectorale[]</i>&gt;] avec comme corps, les listes électorales avec leurs champs [sieges, elimine] initialisés ;
+  </li>
 </ul>
+
 <p><a id="refheading18042265679331"></a></p>
 <h2 id="149-tests">14.9. Tests</h2>
 <p>Aorès avoir lancé le service web, vous ferez les tests suivants pour vous assurer du bon fonctionnement du service web avec l&#x27;utilitaire [Advanced Rest Client] :</p>
@@ -1539,7 +1566,7 @@
 <p>La réponse jSON à la demande précédente est la suivante [1] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004EE0000010E9AF4E549.png" style="display:inline-block; margin:4px;width:16.695cm;height:3.572cm;" class="odt-zoomable" data-zoom-src="images/10000000000004EE0000010E9AF4E549.png" /></td></tr></table>
 
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b></p><img src="images/100000000000020E0000009B405BC0BA.png" style="display:inline-block; margin:4px;width:8.641cm;height:2.545cm;" class="odt-zoomable" data-zoom-src="images/100000000000020E0000009B405BC0BA.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>2</b></p><img src="images/10000000000001660000009D582D7FD4.png" style="display:inline-block; margin:4px;width:6.63cm;height:2.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001660000009D582D7FD4.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>1</b></div><img src="images/100000000000020E0000009B405BC0BA.png" style="display:inline-block; margin:4px;width:8.641cm;height:2.545cm;" class="odt-zoomable" data-zoom-src="images/100000000000020E0000009B405BC0BA.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>2</b></div><img src="images/10000000000001660000009D582D7FD4.png" style="display:inline-block; margin:4px;width:6.63cm;height:2.91cm;" class="odt-zoomable" data-zoom-src="images/10000000000001660000009D582D7FD4.png" /></td></tr></table>
 
 <p>En [2], copier la réponse dans le presse-papiers puis copiez celui-ci dans un éditeur de texte quelconque [3] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004DB000000B345A6C2CD.png" style="display:inline-block; margin:4px;width:16.445cm;height:2.369cm;" class="odt-zoomable" data-zoom-src="images/10000000000004DB000000B345A6C2CD.png" /></td></tr></table>
@@ -1551,8 +1578,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000389000002951E58C4B7.png" style="display:inline-block; margin:4px;width:11.973cm;height:8.745cm;" class="odt-zoomable" data-zoom-src="images/1000000000000389000002951E58C4B7.png" /></td></tr></table>
 
 <ul>
-<li>en [6], demandez l&#x27;URL [setListesElectorales]. Cette URL se demande avec un POST. La valeur postée est le tableau jSON des listes en compétition dont il faut enregistrer les résultats en base ;</li>
+  <li>en [6], demandez l&#x27;URL [setListesElectorales]. Cette URL se demande avec un POST. La valeur postée est le tableau jSON des listes en compétition dont il faut enregistrer les résultats en base ;
+  </li>
 </ul>
+
 <p>On obtient le résultat suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000012D000000AAEFA1BA96.png" style="display:inline-block; margin:4px;width:5.57cm;height:3.15cm;" class="odt-zoomable" data-zoom-src="images/100000000000012D000000AAEFA1BA96.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1563,10 +1592,14 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000036B0000026DEF80E326.png" style="display:inline-block; margin:4px;width:11.576cm;height:8.216cm;" class="odt-zoomable" data-zoom-src="images/100000000000036B0000026DEF80E326.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : l&#x27;URL du calcul des sièges ;</li>
-<li>en [2] : on fait un [POST] ;</li>
-<li>en [3] : les listes en compétition. On donne au champ [voix] les valeurs du TD, tous les [sieges] sont à 0, tous les champs [elimine] sont à false ;</li>
+  <li>en [1] : l&#x27;URL du calcul des sièges ;
+  </li>
+  <li>en [2] : on fait un [POST] ;
+  </li>
+  <li>en [3] : les listes en compétition. On donne au champ [voix] les valeurs du TD, tous les [sieges] sont à 0, tous les champs [elimine] sont à false ;
+  </li>
 </ul>
+
 <p>Le résultat obtenu est le suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010E00000280D0177E14.png" style="display:inline-block; margin:4px;width:5.001cm;height:11.85cm;" class="odt-zoomable" data-zoom-src="images/100000000000010E00000280D0177E14.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 

@@ -1251,26 +1251,37 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000037F0000011E3930C6BE.png" style="display:inline-block; margin:4px;width:11.841cm;height:3.784cm;" class="odt-zoomable" data-zoom-src="images/100000000000037F0000011E3930C6BE.png" /></td></tr></table>
 
 <ul>
-<li>en [1], le dossier [support / chap-11] contient trois projets Eclipse ;</li>
-<li>en [2], le script SQL permettant de créer la base de données exemple de ce chapitre ;</li>
+  <li>en [1], le dossier [support / chap-11] contient trois projets Eclipse ;
+  </li>
+  <li>en [2], le script SQL permettant de créer la base de données exemple de ce chapitre ;
+  </li>
 </ul>
+
 <p><a id="refheading2192302014630537"></a></p>
 <h2 id="112-exemple-1">11.2. Exemple 1</h2>
 <p>Sur le site de Spring existent de nombreux tutoriels pour démarrer avec Spring [<a href="http://spring.io/guides">http://spring.io/guides</a>]. Nous allons utiliser l&#x27;un d&#x27;eux pour introduire Spring Data. Nous utilisons pour cela Spring Tool Suite (STS).</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003D20000015DA19B7E0B.png" style="display:inline-block; margin:4px;width:12.938cm;height:4.618cm;" class="odt-zoomable" data-zoom-src="images/10000000000003D20000015DA19B7E0B.png" /></td></tr></table>
 
 <ul>
-<li>en [1], nous importons l&#x27;un des tutoriels de [spring.io/guides] ;</li>
+  <li>en [1], nous importons l&#x27;un des tutoriels de [spring.io/guides] ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005340000032B0ABEBB8F.png" style="display:inline-block; margin:4px;width:17.621cm;height:10.73cm;" class="odt-zoomable" data-zoom-src="images/10000000000005340000032B0ABEBB8F.png" /></td></tr></table>
 
 <ul>
-<li>en [2], on choisit le tutoriel [Accessing Data Jpa] qui montre comment accéder à une base de données avec Spring Data ;</li>
-<li>en [3], on choisit un projet configuré par Maven ;</li>
-<li>en [4], le tutoriel peut être délivré sous deux formes : [initial] qui est une version vide qu&#x27;on remplit en suivant le tutoriel ou [complete] qui est la version finale du tutoriel. Nous choisissons cette dernière ;</li>
-<li>en [5], on peut choisir de visualiser le tutoriel dans un navigateur ;</li>
-<li>en [6], le projet final.</li>
+  <li>en [2], on choisit le tutoriel [Accessing Data Jpa] qui montre comment accéder à une base de données avec Spring Data ;
+  </li>
+  <li>en [3], on choisit un projet configuré par Maven ;
+  </li>
+  <li>en [4], le tutoriel peut être délivré sous deux formes : [initial] qui est une version vide qu&#x27;on remplit en suivant le tutoriel ou [complete] qui est la version finale du tutoriel. Nous choisissons cette dernière ;
+  </li>
+  <li>en [5], on peut choisir de visualiser le tutoriel dans un navigateur ;
+  </li>
+  <li>en [6], le projet final.
+  </li>
 </ul>
+
 <p><a id="refheading2192322014630537"></a></p>
 <h3 id="1121-la-configuration-maven-du-projet">11.2.1. La configuration Maven du projet</h3>
 <p><a id="refheading1622671200878134"></a>Les dépendances Maven du projet sont configurées dans le fichier [pom.xml] :</p>
@@ -1306,20 +1317,29 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 5-9 : définissent un projet Maven parent. C&#x27;est lui qui définit l&#x27;essentiel des dépendances du projet. Elles peuvent être suffisantes, auquel cas on n&#x27;en rajoute pas, ou pas, auquel cas on rajoute les dépendances manquantes ;</li>
-<li>lignes 12-15 : définissent une dépendance sur [spring-boot-starter-data-jpa]. Cet artifact contient les classes de Spring Data ;</li>
-<li>lignes 16-19 : définissent une dépendance sur le SGBD H2 qui permet de créer et gérer des bases de données en mémoire.</li>
+  <li>lignes 5-9 : définissent un projet Maven parent. C&#x27;est lui qui définit l&#x27;essentiel des dépendances du projet. Elles peuvent être suffisantes, auquel cas on n&#x27;en rajoute pas, ou pas, auquel cas on rajoute les dépendances manquantes ;
+  </li>
+  <li>lignes 12-15 : définissent une dépendance sur [spring-boot-starter-data-jpa]. Cet artifact contient les classes de Spring Data ;
+  </li>
+  <li>lignes 16-19 : définissent une dépendance sur le SGBD H2 qui permet de créer et gérer des bases de données en mémoire.
+  </li>
 </ul>
+
 <p>Regardons les classes amenées par ces dépendances :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000014F00000173C684B02E.png" style="display:inline-block; margin:4px;width:5.609cm;height:6.071cm;" class="odt-zoomable" data-zoom-src="images/100000000000014F00000173C684B02E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F70000010C4CA71FE9.png" style="display:inline-block; margin:4px;width:4.57cm;height:4.96cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F70000010C4CA71FE9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000114000000BD1D144A05.png" style="display:inline-block; margin:4px;width:5.11cm;height:3.5cm;" class="odt-zoomable" data-zoom-src="images/1000000000000114000000BD1D144A05.png" /></td></tr></table>
 
 <p>Elles sont très nombreuses :</p>
 <ul>
-<li>certaines appartiennent à l&#x27;écosystème Spring (celles commençant par spring) ;</li>
-<li>d&#x27;autres appartiennent à l&#x27;écosystème Hibernate (hibernate, jboss) dont on utilise ici l&#x27;implémentation JPA ;</li>
-<li>d&#x27;autres sont des bibliothèques de tests (junit, hamcrest) ;</li>
-<li>d&#x27;autres des bibliothèques de logs (log4j, logback, slf4j) ;</li>
+  <li>certaines appartiennent à l&#x27;écosystème Spring (celles commençant par spring) ;
+  </li>
+  <li>d&#x27;autres appartiennent à l&#x27;écosystème Hibernate (hibernate, jboss) dont on utilise ici l&#x27;implémentation JPA ;
+  </li>
+  <li>d&#x27;autres sont des bibliothèques de tests (junit, hamcrest) ;
+  </li>
+  <li>d&#x27;autres des bibliothèques de logs (log4j, logback, slf4j) ;
+  </li>
 </ul>
+
 <p>Nous allons les garder toutes. Pour une application en production, il faudrait ne garder que celles qui sont nécessaires.</p>
 <p>Ligne 26 du fichier [pom.xml] on trouve la ligne :</p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -1385,14 +1405,20 @@
 
 <p>Un client a un identifiant [id], un prénom [firstName] et un nom [lastName]. Chaque instance [Customer] représente une ligne d&#x27;une table de la base de données.</p>
 <ul>
-<li>ligne 8 : annotation JPA qui fait que la persistence des instances [Customer] (Create, Read, Update, Delete) va être gérée par une implémentation JPA. D&#x27;après les dépendances Maven, on voit que c&#x27;est l&#x27;implémentation JPA / Hibernate qui est utilisée ;</li>
-<li>lignes 11-12 : annotations JPA qui associent le champ [id] à la clé primaire de la table des [Customer]. La ligne 12, indique que l&#x27;implémentation JPA utilisera la méthode de génération de clé primaire propre au SGBD utilisé, ici H2 ;</li>
+  <li>ligne 8 : annotation JPA qui fait que la persistence des instances [Customer] (Create, Read, Update, Delete) va être gérée par une implémentation JPA. D&#x27;après les dépendances Maven, on voit que c&#x27;est l&#x27;implémentation JPA / Hibernate qui est utilisée ;
+  </li>
+  <li>lignes 11-12 : annotations JPA qui associent le champ [id] à la clé primaire de la table des [Customer]. La ligne 12, indique que l&#x27;implémentation JPA utilisera la méthode de génération de clé primaire propre au SGBD utilisé, ici H2 ;
+  </li>
 </ul>
+
 <p>Il n&#x27;y a pas d&#x27;autres annotations JPA. Des valeurs par défaut seront alors utilisées :</p>
 <ul>
-<li>la table des [Customer] portera le nom de la classe, ç-à-d [Customer] ;</li>
-<li>les colonnes de cette table porteront le nom des champs de la classe : [id, firstName, lastName] sachant que la casse n&#x27;est pas prise en compte dans le nom d&#x27;une colonne de table ;</li>
+  <li>la table des [Customer] portera le nom de la classe, ç-à-d [Customer] ;
+  </li>
+  <li>les colonnes de cette table porteront le nom des champs de la classe : [id, firstName, lastName] sachant que la casse n&#x27;est pas prise en compte dans le nom d&#x27;une colonne de table ;
+  </li>
 </ul>
+
 <p>On notera qu&#x27;à aucun moment, l&#x27;implémentation JPA utilisée n&#x27;est nommée.</p>
 <p><a id="refheading2192362014630537"></a></p>
 <h3 id="1123-la-couche-spring-data">11.2.3. La couche [Spring Data]</h3>
@@ -1449,14 +1475,22 @@
 
 <p>Cette interface définit les opérations CRUD (Create – Read – Update – Delete) qu&#x27;on peut faire sur un type JPA T :</p>
 <ul>
-<li>ligne 8 : la méthode <strong>save</strong> permet de <strong>persister</strong> une entité T en base. Elle rend l&#x27;entité persistée avec la clé primaire que lui a donnée le SGBD. Elle permet également de <strong>mettre à jour</strong> une entité T identifiée par sa clé primaire <em>id</em>. Le choix de l&#x27;une ou l&#x27;autre action se fait selon la valeur de la clé primaire <em>id</em> : si celle-ci vaut <strong>null</strong> c&#x27;est l&#x27;opération de persistence qui a lieu, sinon c&#x27;est l&#x27;opération de mise à jour ;</li>
-<li>ligne 10 : idem mais pour une liste d&#x27;entités ;</li>
-<li>ligne 12 : la méthode <strong>findOne</strong> permet de retrouver une entité T identifiée par sa clé primaire <em>id</em> ;</li>
-<li>ligne 22 : la méthode <strong>delete</strong> permet de supprimer une entité T identifiée par sa clé primaire <em>id</em> ;</li>
-<li>lignes 24-28 : des variantes de la méthode [delete] ;</li>
-<li>ligne 16 : la méthode [findAll] permet de retrouver toutes les entités persistées T ;</li>
-<li>ligne 18 : idem mais limitées aux entités dont on a passé la liste des identifiants ;</li>
+  <li>ligne 8 : la méthode <b>save</b> permet de <b>persister</b> une entité T en base. Elle rend l&#x27;entité persistée avec la clé primaire que lui a donnée le SGBD. Elle permet également de <b>mettre à jour</b> une entité T identifiée par sa clé primaire <i>id</i>. Le choix de l&#x27;une ou l&#x27;autre action se fait selon la valeur de la clé primaire <i>id</i> : si celle-ci vaut <b>null</b> c&#x27;est l&#x27;opération de persistence qui a lieu, sinon c&#x27;est l&#x27;opération de mise à jour ;
+  </li>
+  <li>ligne 10 : idem mais pour une liste d&#x27;entités ;
+  </li>
+  <li>ligne 12 : la méthode <b>findOne</b> permet de retrouver une entité T identifiée par sa clé primaire <i>id</i> ;
+  </li>
+  <li>ligne 22 : la méthode <b>delete</b> permet de supprimer une entité T identifiée par sa clé primaire <i>id</i> ;
+  </li>
+  <li>lignes 24-28 : des variantes de la méthode [delete] ;
+  </li>
+  <li>ligne 16 : la méthode [findAll] permet de retrouver toutes les entités persistées T ;
+  </li>
+  <li>ligne 18 : idem mais limitées aux entités dont on a passé la liste des identifiants ;
+  </li>
 </ul>
+
 <p>Revenons à l&#x27;interface [CustomerRepository] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> hello;</span></span>
@@ -1472,8 +1506,10 @@
 </code></pre></div>
 
 <ul>
-<li>la ligne 9 permet de retrouver un [Customer] par son nom [lastName] ;</li>
+  <li>la ligne 9 permet de retrouver un [Customer] par son nom [lastName] ;
+  </li>
 </ul>
+
 <p>Et c&#x27;est tout pour la couche [DAO]. Il n&#x27;y a pas de classe d&#x27;implémentation de l&#x27;interface précédente. Celle-ci est générée à l&#x27;exécution par [Spring Data]. Les méthodes de l&#x27;interface [CrudRepository] sont automatiquement implémentées. Pour les méthodes rajoutées dans l&#x27;interface [CustomerRepository], ça dépend. Revenons à la définition de [Customer] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">private</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">long</span><span style="color:#000000"> </span><span style="color:#0000c0">id</span><span style="color:#000000">;</span></span>
@@ -1554,17 +1590,26 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 9 : la classe implémente l&#x27;interface [CommandLineRunner] qui est une interface [Spring Boot] (ligne 4). Cette interfae n&#x27;a qu&#x27;une méthode, celle de la ligne 19 ;</li>
-<li>ligne 8 : @<strong>SpringBootApplication</strong> est une annotation regroupant plusieurs annotations [Spring Boot] :<ul>
-<li>@<strong>Configuration</strong> : indique que la classe est une classe de configuration ;</li>
-<li>@<strong>EnableAutoConfiguration</strong> : demande à [Spring Boot] de créer lui-même un certain nombre de beans en fonction de diverses propriétés, en particulier le contenu du Classpath du projet. Parce que les bibliothèques Hibernate sont dans le Classpath, le bean [entityManagerFactory] sera implémenté avec Hibernate. Parce que la bibliothèque du SGBD H2 est dans le Classpath, le bean [dataSource] sera implémenté avec H2. Dans le bean [dataSource], on doit définir également l&#x27;utilisateur et son mot de passe. Ici Spring Boot utilisera l&#x27;administrateur par défaut de H2, <strong>sa</strong> sans mot de passe. Parce que la bibliothèque [spring-tx] est dans le Classpath, c&#x27;est le gestionnaire de transactions de Spring qui sera utilisé ;</li>
-<li>@<strong>EnableWebMvc</strong> : si dans le Classpath se trouve la bibliothèque [spring-mvc]. Dans ce cas, une auto-configuration est faite pour l&#x27;application web ;</li>
-<li>@<strong>ComponentScan</strong> : qui dit à Spring où chercher les autres beans, configurations et services. Ici ils sont cherchés par défaut dans le package contenant la classe taguée, ç-à-d le package [hello]. Ainsi les classes [Customer] et [CustomerRepository] vont-elles être trouvées. Parce que la première a l&#x27;annotation [@Entity] elle sera cataloguée comme entité à gérer par Hibernate. Parce que la seconde étend l&#x27;interface [CrudRepository] elle sera enregistrée comme bean Spring ;</li>
+  <li>ligne 9 : la classe implémente l&#x27;interface [CommandLineRunner] qui est une interface [Spring Boot] (ligne 4). Cette interfae n&#x27;a qu&#x27;une méthode, celle de la ligne 19 ;
+  </li>
+  <li>ligne 8 : @<b>SpringBootApplication</b> est une annotation regroupant plusieurs annotations [Spring Boot] :
+    <ul>
+      <li>@<b>Configuration</b> : indique que la classe est une classe de configuration ;
+      </li>
+      <li>@<b>EnableAutoConfiguration</b> : demande à [Spring Boot] de créer lui-même un certain nombre de beans en fonction de diverses propriétés, en particulier le contenu du Classpath du projet. Parce que les bibliothèques Hibernate sont dans le Classpath, le bean [entityManagerFactory] sera implémenté avec Hibernate. Parce que la bibliothèque du SGBD H2 est dans le Classpath, le bean [dataSource] sera implémenté avec H2. Dans le bean [dataSource], on doit définir également l&#x27;utilisateur et son mot de passe. Ici Spring Boot utilisera l&#x27;administrateur par défaut de H2, <b>sa</b> sans mot de passe. Parce que la bibliothèque [spring-tx] est dans le Classpath, c&#x27;est le gestionnaire de transactions de Spring qui sera utilisé ;
+      </li>
+      <li>@<b>EnableWebMvc</b> : si dans le Classpath se trouve la bibliothèque [spring-mvc]. Dans ce cas, une auto-configuration est faite pour l&#x27;application web ;
+      </li>
+      <li>@<b>ComponentScan</b> : qui dit à Spring où chercher les autres beans, configurations et services. Ici ils sont cherchés par défaut dans le package contenant la classe taguée, ç-à-d le package [hello]. Ainsi les classes [Customer] et [CustomerRepository] vont-elles être trouvées. Parce que la première a l&#x27;annotation [@Entity] elle sera cataloguée comme entité à gérer par Hibernate. Parce que la seconde étend l&#x27;interface [CrudRepository] elle sera enregistrée comme bean Spring ;
+      </li>
+    </ul>
+  </li>
+  <li>lignes 11-12 : le bean [CustomerRepository] est injecté dans le code de la classe principale ;
+  </li>
+  <li>ligne 15 : la méthode statique [run] de la classe [SpringApplication] du projet Spring Boot est exécutée. Son paramètre est la classe qui a une annotation [Configuration] ou [EnableAutoConfiguration]. Tout ce qui a été expliqué précédemment va alors se dérouler. Le résultat est un contexte d&#x27;application Spring, ç-à-d un ensemble de beans gérés par Spring ;
+  </li>
 </ul>
-</li>
-<li>lignes 11-12 : le bean [CustomerRepository] est injecté dans le code de la classe principale ;</li>
-<li>ligne 15 : la méthode statique [run] de la classe [SpringApplication] du projet Spring Boot est exécutée. Son paramètre est la classe qui a une annotation [Configuration] ou [EnableAutoConfiguration]. Tout ce qui a été expliqué précédemment va alors se dérouler. Le résultat est un contexte d&#x27;application Spring, ç-à-d un ensemble de beans gérés par Spring ;</li>
-</ul>
+
 <p>Les opérations qui suivent ne font qu&#x27;utiliser les méthodes du bean implémentant l&#x27;interface [CustomerRepository]. Les résultats console sont les suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
@@ -1657,18 +1702,30 @@
 <a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="sb">2015-03-10 15:35:47.051  INFO 5784 --- [       Thread-1] org.hibernate.tool.hbm2ddl.SchemaExport  : HHH000230: Schema export complete</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 1-8 : le logo du projet Spring Boot ;</li>
-<li>ligne 9 : la classe [hello.Application] est exécutée ;</li>
-<li>ligne 10 : [AnnotationConfigApplicationContext] est une classe implémentant l&#x27;interface [ApplicationContext] de Spring. C&#x27;est un conteneur de beans ;</li>
-<li>ligne 11 : le bean [entityManagerFactory] est implémenté avec la classe [LocalContainerEntityManagerFactory], une classe de Spring ;</li>
-<li>ligne 12 : on voit apparaître [Hibernate]. C&#x27;est cette implémentation JPA qui a été choisie ;</li>
-<li>ligne 19 : un dialecte Hibernate est la variante SQL à utiliser avec le SGBD. Ici le dialecte [H2Dialect] montre qu&#x27;Hibernate va travailler avec le SGBD H2 ;</li>
-<li>lignes 21-22 : la base de données est créée. La table [CUSTOMER] est créée. Cela signifie qu&#x27;Hibernate a été configuré pour générer les tables à partir des définitions JPA, ici la définition JPA de la classe [Customer] ;</li>
-<li>lignes 26-30 : résultat de la méthode [findAll] de l&#x27;interface ;</li>
-<li>ligne 34 : résultat de la méthode [findOne] de l&#x27;interface ;</li>
-<li>lignes 38-39 : résultats de la méthode [findByLastName] ;</li>
-<li>lignes 41 et suivantes : logs de la fermeture du contexte Spring.</li>
+  <li>lignes 1-8 : le logo du projet Spring Boot ;
+  </li>
+  <li>ligne 9 : la classe [hello.Application] est exécutée ;
+  </li>
+  <li>ligne 10 : [AnnotationConfigApplicationContext] est une classe implémentant l&#x27;interface [ApplicationContext] de Spring. C&#x27;est un conteneur de beans ;
+  </li>
+  <li>ligne 11 : le bean [entityManagerFactory] est implémenté avec la classe [LocalContainerEntityManagerFactory], une classe de Spring ;
+  </li>
+  <li>ligne 12 : on voit apparaître [Hibernate]. C&#x27;est cette implémentation JPA qui a été choisie ;
+  </li>
+  <li>ligne 19 : un dialecte Hibernate est la variante SQL à utiliser avec le SGBD. Ici le dialecte [H2Dialect] montre qu&#x27;Hibernate va travailler avec le SGBD H2 ;
+  </li>
+  <li>lignes 21-22 : la base de données est créée. La table [CUSTOMER] est créée. Cela signifie qu&#x27;Hibernate a été configuré pour générer les tables à partir des définitions JPA, ici la définition JPA de la classe [Customer] ;
+  </li>
+  <li>lignes 26-30 : résultat de la méthode [findAll] de l&#x27;interface ;
+  </li>
+  <li>ligne 34 : résultat de la méthode [findOne] de l&#x27;interface ;
+  </li>
+  <li>lignes 38-39 : résultats de la méthode [findByLastName] ;
+  </li>
+  <li>lignes 41 et suivantes : logs de la fermeture du contexte Spring.
+  </li>
 </ul>
+
 <p><a id="refheading5939178138399"></a></p>
 <h3 id="1125-configuration-manuelle-du-projet-spring-data">11.2.5. Configuration manuelle du projet Spring Data</h3>
 <p><a id="refheading1622751200878134"></a>Nous dupliquons le projet précédent dans le projet [gs-accessing-data-jpa-02] :</p>
@@ -1756,17 +1813,26 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 10-14 : le projet Maven parent dont nous allons utiliser les bibliothèques qu&#x27;il définit ;</li>
-<li>lignes 18-21 : Spring Data utilisé pour accéder à la base de données ;</li>
-<li>lignes 23-26 : l&#x27;implémentation Hibernate de la spécification JPA ;</li>
-<li>lignes 28-31 : le SGBD H2 ;</li>
-<li>lignes 33-36 : les bases de données sont souvent utilisées avec des pools de connexions ouvertes qui évitent les ouvertures / fermetures de connexion à répétition. Ici, l&#x27;implémentation utilisée est celle de [tomcat-jdbc] ;</li>
+  <li>lignes 10-14 : le projet Maven parent dont nous allons utiliser les bibliothèques qu&#x27;il définit ;
+  </li>
+  <li>lignes 18-21 : Spring Data utilisé pour accéder à la base de données ;
+  </li>
+  <li>lignes 23-26 : l&#x27;implémentation Hibernate de la spécification JPA ;
+  </li>
+  <li>lignes 28-31 : le SGBD H2 ;
+  </li>
+  <li>lignes 33-36 : les bases de données sont souvent utilisées avec des pools de connexions ouvertes qui évitent les ouvertures / fermetures de connexion à répétition. Ici, l&#x27;implémentation utilisée est celle de [tomcat-jdbc] ;
+  </li>
 </ul>
+
 <p>Dans le nouveau projet, l&#x27;entité [Customer] et l&#x27;interface [CustomerRepository] ne changent pas. On va changer la classe [Application] qui va être scindée en deux classes : </p>
 <ul>
-<li>[Config] qui sera la classe de configuration :</li>
-<li>[Main] qui sera la classe exécutable ;</li>
+  <li>[Config] qui sera la classe de configuration :
+  </li>
+  <li>[Main] qui sera la classe exécutable ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E80000009FB5A3B942.png" style="display:inline-block; margin:4px;width:4.3cm;height:2.94cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E80000009FB5A3B942.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe exécutable [Application] est désormais la suivante :</p>
@@ -1801,11 +1867,16 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 9 : la classe [Application] n&#x27;a plus d&#x27;annotations de configuration ;</li>
-<li>lignes 3-7 : on notera qu&#x27;il n&#x27;y a plus d&#x27;imports de packages [Spring Boot] ;</li>
-<li>ligne 12 : on instancie les beans Spring. On obtient le contexte de Spring qui contient la référence des beans ainsi créés ;</li>
-<li>ligne 13 : on demande une référence sur le bean de type [<span style="color: #000000">CustomerRepository</span>] ;</li>
+  <li>ligne 9 : la classe [Application] n&#x27;a plus d&#x27;annotations de configuration ;
+  </li>
+  <li>lignes 3-7 : on notera qu&#x27;il n&#x27;y a plus d&#x27;imports de packages [Spring Boot] ;
+  </li>
+  <li>ligne 12 : on instancie les beans Spring. On obtient le contexte de Spring qui contient la référence des beans ainsi créés ;
+  </li>
+  <li>ligne 13 : on demande une référence sur le bean de type [<span style="color: #000000">CustomerRepository</span>] ;
+  </li>
 </ul>
+
 <p>La classe [<a id="springdataconfig"></a>Config] qui configure le projet est la suivante :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> config;</span></span>
@@ -1879,23 +1950,40 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 17 : l&#x27;annotation [@EnableTransactionManagement] indique que les méthodes des interfaces [CrudRepository] doivent se dérouler à l&#x27;intérieur d&#x27;une transaction. Elle a été mise en commentaires car c&#x27;est le cas par défaut ;</li>
-<li>ligne 18 :  l&#x27;annotation [@EnableJpaRepositories] permet de désigner les dossiers où se trouvent les interfaces Spring Data [CrudRepository]. Ces interfaces vont devenir des composants Spring et être disponibles dans son contexte ;</li>
-<li>ligne 19 : l&#x27;annotation [@Configuration] fait de la classe [Config] une classe de configuration Spring ;</li>
-<li>ligne 20 : l&#x27;annotation [@ComponentScan] permet de lister les dossiers où les composants Spring doivent être recherchés. Les composants Spring sont des classes taguées avec des annotations Spring telles que @<strong>Service</strong>, @<strong>Component</strong>, @<strong>Controller</strong>, ... Ici, il n&#x27;y en a pas d&#x27;autres que ceux qui sont définis au sein de la classe [AppConfig], aussi l&#x27;annotation a-t-elle été mise en commentaires ;</li>
-<li>lignes 24-37 : définissent la source de données, la base de données H2. C&#x27;est l&#x27;annotation @Bean de la ligne 25 qui fait de l&#x27;objet créé par cette méthode un composant géré par Spring. Le nom de la méthode peut être ici quelconque. Cependant elle doit être appelée [<strong>dataSource</strong>] si l&#x27;EntityManagerFactory de la ligne 51 est absent et défini par autoconfiguration ;</li>
-<li>ligne 30 : la base de données s&#x27;appellera [demo] et sera générée dans le dossier du projet ;</li>
-<li>lignes 40-47 : définissent l&#x27;implémentation JPA utilisée, ici une implémentation Hibernate. Le nom de la méthode peut être ici quelconque ;</li>
-<li>ligne 43 : pas de logs SQL ;</li>
-<li>ligne 44 : la base de données sera créée si elle n&#x27;existe pas ;</li>
-<li>lignes 50-58 : définissent l&#x27;EntityManagerFactory qui va gérer la persistance JPA. La méthode doit s&#x27;appeler obligatoirement [<strong>entityManagerFactory</strong>] ;</li>
-<li>ligne 51 : la méthode reçoit deux paramètres ayant le type des deux beans définis précédemment. Ceux-ci seront alors construits puis injectés par Spring comme paramètres de la méthode ;</li>
-<li>ligne 53 : fixe l&#x27;implémentation JPA utilisée ;</li>
-<li>ligne 54 : fixe les dossiers où trouver les entités JPA ;</li>
-<li>ligne 55 : fixe la source de données à gérer ;</li>
-<li>lignes 61-66 : le gestionnaire de transactions. La méthode doit s&#x27;appeler obligatoirement [<strong>transactionManager</strong>]. Elle reçoit pour paramètre le bean des lignes 51-58 ;</li>
-<li>ligne 64 : le gestionnaire de transactions est associé à l&#x27;EntityManagerFactory ;</li>
+  <li>ligne 17 : l&#x27;annotation [@EnableTransactionManagement] indique que les méthodes des interfaces [CrudRepository] doivent se dérouler à l&#x27;intérieur d&#x27;une transaction. Elle a été mise en commentaires car c&#x27;est le cas par défaut ;
+  </li>
+  <li>ligne 18 :  l&#x27;annotation [@EnableJpaRepositories] permet de désigner les dossiers où se trouvent les interfaces Spring Data [CrudRepository]. Ces interfaces vont devenir des composants Spring et être disponibles dans son contexte ;
+  </li>
+  <li>ligne 19 : l&#x27;annotation [@Configuration] fait de la classe [Config] une classe de configuration Spring ;
+  </li>
+  <li>ligne 20 : l&#x27;annotation [@ComponentScan] permet de lister les dossiers où les composants Spring doivent être recherchés. Les composants Spring sont des classes taguées avec des annotations Spring telles que @<b>Service</b>, @<b>Component</b>, @<b>Controller</b>, ... Ici, il n&#x27;y en a pas d&#x27;autres que ceux qui sont définis au sein de la classe [AppConfig], aussi l&#x27;annotation a-t-elle été mise en commentaires ;
+  </li>
+  <li>lignes 24-37 : définissent la source de données, la base de données H2. C&#x27;est l&#x27;annotation @Bean de la ligne 25 qui fait de l&#x27;objet créé par cette méthode un composant géré par Spring. Le nom de la méthode peut être ici quelconque. Cependant elle doit être appelée [<b>dataSource</b>] si l&#x27;EntityManagerFactory de la ligne 51 est absent et défini par autoconfiguration ;
+  </li>
+  <li>ligne 30 : la base de données s&#x27;appellera [demo] et sera générée dans le dossier du projet ;
+  </li>
+  <li>lignes 40-47 : définissent l&#x27;implémentation JPA utilisée, ici une implémentation Hibernate. Le nom de la méthode peut être ici quelconque ;
+  </li>
+  <li>ligne 43 : pas de logs SQL ;
+  </li>
+  <li>ligne 44 : la base de données sera créée si elle n&#x27;existe pas ;
+  </li>
+  <li>lignes 50-58 : définissent l&#x27;EntityManagerFactory qui va gérer la persistance JPA. La méthode doit s&#x27;appeler obligatoirement [<b>entityManagerFactory</b>] ;
+  </li>
+  <li>ligne 51 : la méthode reçoit deux paramètres ayant le type des deux beans définis précédemment. Ceux-ci seront alors construits puis injectés par Spring comme paramètres de la méthode ;
+  </li>
+  <li>ligne 53 : fixe l&#x27;implémentation JPA utilisée ;
+  </li>
+  <li>ligne 54 : fixe les dossiers où trouver les entités JPA ;
+  </li>
+  <li>ligne 55 : fixe la source de données à gérer ;
+  </li>
+  <li>lignes 61-66 : le gestionnaire de transactions. La méthode doit s&#x27;appeler obligatoirement [<b>transactionManager</b>]. Elle reçoit pour paramètre le bean des lignes 51-58 ;
+  </li>
+  <li>ligne 64 : le gestionnaire de transactions est associé à l&#x27;EntityManagerFactory ;
+  </li>
 </ul>
+
 <p>Les méthodes précédentes peuvent être définies dans un ordre quelconque.</p>
 <p>L&#x27;exécution du projet donne les mêmes résultats. Un nouveau fichier apparaît dans le dossier du projet, celui de la base de données H2 :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F1000000D6F0EB16BE.png" style="display:inline-block; margin:4px;width:4.461cm;height:3.96cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F1000000D6F0EB16BE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1906,25 +1994,38 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005870000018D0FFF267A.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.05cm;" class="odt-zoomable" data-zoom-src="images/10000000000005870000018D0FFF267A.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : on crée une configuration d&#x27;exécution ;</li>
-<li>en [2] : de type [Java Application]</li>
-<li>en [3] : désigne le projet à exécuter (utiliser le bouton <em>Browse</em>) ;</li>
-<li>en [4] : désigne la classe à exécuter ;</li>
-<li>en [5] : le nom de la configuration d&#x27;exécution – peut être quelconque ;</li>
+  <li>en [1] : on crée une configuration d&#x27;exécution ;
+  </li>
+  <li>en [2] : de type [Java Application]
+  </li>
+  <li>en [3] : désigne le projet à exécuter (utiliser le bouton <i>Browse</i>) ;
+  </li>
+  <li>en [4] : désigne la classe à exécuter ;
+  </li>
+  <li>en [5] : le nom de la configuration d&#x27;exécution – peut être quelconque ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000595000002955D9CFE45.png" style="display:inline-block; margin:4px;width:17.999cm;height:8.326cm;" class="odt-zoomable" data-zoom-src="images/1000000000000595000002955D9CFE45.png" /></td></tr></table>
 
 <ul>
-<li>en [6] : on exporte le projet ;</li>
-<li>en [7] : sous la forme d&#x27;une archive JAR exécutable ;</li>
-<li>en [8] : indique le chemin et le nom du fichier exécutable à créer ;</li>
-<li>en [9] : le nom de la configuration d&#x27;exécution créée en [5] ;</li>
+  <li>en [6] : on exporte le projet ;
+  </li>
+  <li>en [7] : sous la forme d&#x27;une archive JAR exécutable ;
+  </li>
+  <li>en [8] : indique le chemin et le nom du fichier exécutable à créer ;
+  </li>
+  <li>en [9] : le nom de la configuration d&#x27;exécution créée en [5] ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001A60000019938FC06CE.png" style="display:inline-block; margin:4px;width:5.583cm;height:5.412cm;" class="odt-zoomable" data-zoom-src="images/10000000000001A60000019938FC06CE.png" /></td></tr></table>
 
 <ul>
-<li>en [10], l&#x27;archive créée ;</li>
+  <li>en [10], l&#x27;archive créée ;
+  </li>
 </ul>
+
 <p>Ceci fait, on ouvre une console dans le dossier contenant l&#x27;archive exécutable :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>.....\dist&gt;dir
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>12/06/2014  09:11        15 104 869 gs-accessing-data-jpa-02.jar
@@ -2044,21 +2145,32 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000219000000692D8D8733.png" style="display:inline-block; margin:4px;width:9.94cm;height:1.94cm;" class="odt-zoomable" data-zoom-src="images/1000000000000219000000692D8D8733.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>[ID] : clé primaire en mode AUTO_INCREMENT ;</li>
-<li>[VERSION] : n° de version de l&#x27;enregistrement ;</li>
-<li>[NOM] : nom de la catégorie - unique ;</li>
+  <li>[ID] : clé primaire en mode AUTO_INCREMENT ;
+  </li>
+  <li>[VERSION] : n° de version de l&#x27;enregistrement ;
+  </li>
+  <li>[NOM] : nom de la catégorie - unique ;
+  </li>
 </ul>
+
 <p>La table [PRODUITS] est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000024F000000AC2E1845DE.png" style="display:inline-block; margin:4px;width:10.94cm;height:3.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000024F000000AC2E1845DE.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>[ID] : clé primaire en mode AUTO_INCREMENT ;</li>
-<li>[VERSION] : n° de version de l&#x27;enregistrement ;</li>
-<li>[NOM] : nom d&#x27;un produit - unique ;</li>
-<li>[ID_CATEGORIE] : n° de sa catégorie - clé étrangère sur le champ [CATEGORIES.ID] ;</li>
-<li>[PRIX] : son prix ;</li>
-<li>[DESCRIPTION] : une description du produit ;</li>
+  <li>[ID] : clé primaire en mode AUTO_INCREMENT ;
+  </li>
+  <li>[VERSION] : n° de version de l&#x27;enregistrement ;
+  </li>
+  <li>[NOM] : nom d&#x27;un produit - unique ;
+  </li>
+  <li>[ID_CATEGORIE] : n° de sa catégorie - clé étrangère sur le champ [CATEGORIES.ID] ;
+  </li>
+  <li>[PRIX] : son prix ;
+  </li>
+  <li>[DESCRIPTION] : une description du produit ;
+  </li>
 </ul>
+
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : créez la base de données [<span style="color: #2a00ff">dbintrospringdata</span>] avec le script SQL [dbintrospringdata.sql] du support :</p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
@@ -2068,24 +2180,36 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000053B0000037FB182922E.png" style="display:inline-block; margin:4px;width:17.715cm;height:11.841cm;" class="odt-zoomable" data-zoom-src="images/100000000000053B0000037FB182922E.png" /></td></tr></table>
 
 <ul>
-<li>en [1], on crée un nouveau projet ;</li>
-<li>en [2] : de type [Spring Starter Project] ;</li>
-<li>le projet généré sera un projet Maven. En [3], on indique le nom du groupe du projet ;</li>
-<li>en [4] : on indique le nom de l&#x27;artifact (un jar ici) qui sera créé par construction du projet ;</li>
-<li>en [5] : le nom Eclipse du projet – peut être quelconque (n&#x27;a pas à être identique à [4]) ;</li>
-<li>en [7] : on indique qu&#x27;on va créer un projet ayant une couche [JPA] avec le SGBD MySQL. Les dépendances nécessaires à un tel projet vont alors être incluses dans le fichier [pom.xml] ;</li>
+  <li>en [1], on crée un nouveau projet ;
+  </li>
+  <li>en [2] : de type [Spring Starter Project] ;
+  </li>
+  <li>le projet généré sera un projet Maven. En [3], on indique le nom du groupe du projet ;
+  </li>
+  <li>en [4] : on indique le nom de l&#x27;artifact (un jar ici) qui sera créé par construction du projet ;
+  </li>
+  <li>en [5] : le nom Eclipse du projet – peut être quelconque (n&#x27;a pas à être identique à [4]) ;
+  </li>
+  <li>en [7] : on indique qu&#x27;on va créer un projet ayant une couche [JPA] avec le SGBD MySQL. Les dépendances nécessaires à un tel projet vont alors être incluses dans le fichier [pom.xml] ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000035100000366DD79C834.png" style="display:inline-block; margin:4px;width:11.232cm;height:11.509cm;" class="odt-zoomable" data-zoom-src="images/100000000000035100000366DD79C834.png" /></td></tr></table>
 
 <ul>
-<li>en [8], donner le nom du dossier du projet ;</li>
-<li>en [9], terminer l&#x27;assistant ;</li>
+  <li>en [8], donner le nom du dossier du projet ;
+  </li>
+  <li>en [9], terminer l&#x27;assistant ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002300000018C3796C846.png" style="display:inline-block; margin:4px;width:7.408cm;height:5.239cm;" class="odt-zoomable" data-zoom-src="images/10000000000002300000018C3796C846.png" /></td></tr></table>
 
 <ul>
-<li>en [10] : le projet créé ;</li>
+  <li>en [10] : le projet créé ;
+  </li>
 </ul>
+
 <p>Le fichier [pom.xml] intègre les dépendances nécessaires à un projet JPA :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span><span style="color:#000000">=</span><span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span>
@@ -2144,11 +2268,16 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 14-19 : le projet Maven parent - définit un grand nombre de bibliothèques avec leurs versions - on utilise ces bibliothèques comme dépendances Maven sans préciser leur version ;</li>
-<li>lignes 28-31 : la dépendance nécessaire à JPA – va inclure [Spring Data] ;</li>
-<li>lignes 32-36 : la dépendance sur le pilote JDBC de MySQL ;</li>
-<li>lignes 37-41 : les dépendances nécessaires aux tests JUnit intégrés avec Spring ;</li>
+  <li>lignes 14-19 : le projet Maven parent - définit un grand nombre de bibliothèques avec leurs versions - on utilise ces bibliothèques comme dépendances Maven sans préciser leur version ;
+  </li>
+  <li>lignes 28-31 : la dépendance nécessaire à JPA – va inclure [Spring Data] ;
+  </li>
+  <li>lignes 32-36 : la dépendance sur le pilote JDBC de MySQL ;
+  </li>
+  <li>lignes 37-41 : les dépendances nécessaires aux tests JUnit intégrés avec Spring ;
+  </li>
 </ul>
+
 <p>La classe exécutable [Application] ne fait rien mais est préconfigurée :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> demo;</span></span>
@@ -2166,8 +2295,10 @@
 </code></pre></div>
 
 <ul>
-<li>l&#x27;annotation [@SpringBootApplication] fait de la classe une classe d&#x27;auto-configuration du projet ;</li>
+  <li>l&#x27;annotation [@SpringBootApplication] fait de la classe une classe d&#x27;auto-configuration du projet ;
+  </li>
 </ul>
+
 <p>La classe de tests [ApplicationTests] ne fait rien mais est préconfigurée :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> demo;</span></span>
@@ -2189,9 +2320,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 9 : l&#x27;annotation [<span style="color: #646464">@SpringApplicationConfiguration</span>] permet d&#x27;exploiter le fichier de configuration [<span style="color: #000000">Application</span>]. La classe de test bénéficiera ainsi de tous les beans qui seront définis par ce fichier ;</li>
-<li>ligne 8 : l&#x27;annotation [<span style="color: #646464">@RunWith</span>] permet l&#x27;intégration de Spring avec JUnit : la classe va pouvoir être exécutée comme un test JUnit. [<span style="color: #646464">@RunWith</span>] est une annotation JUnit (ligne 4) alors que la classe [<span style="color: #000000">SpringJUnit4ClassRunner</span>] est une classe Spring (ligne 6) ;</li>
+  <li>ligne 9 : l&#x27;annotation [<span style="color: #646464">@SpringApplicationConfiguration</span>] permet d&#x27;exploiter le fichier de configuration [<span style="color: #000000">Application</span>]. La classe de test bénéficiera ainsi de tous les beans qui seront définis par ce fichier ;
+  </li>
+  <li>ligne 8 : l&#x27;annotation [<span style="color: #646464">@RunWith</span>] permet l&#x27;intégration de Spring avec JUnit : la classe va pouvoir être exécutée comme un test JUnit. [<span style="color: #646464">@RunWith</span>] est une annotation JUnit (ligne 4) alors que la classe [<span style="color: #000000">SpringJUnit4ClassRunner</span>] est une classe Spring (ligne 6) ;
+  </li>
 </ul>
+
 <p>Maintenant que nous avons un squelette d&#x27;application JPA, nous pouvons le compléter pour écrire le projet de la couche de persistance associée à la base de données des produits.</p>
 <p><a id="refheading2192482014630537"></a></p>
 <h3 id="1133-le-projet-eclipse">11.3.3. Le projet Eclipse</h3>
@@ -2199,17 +2333,28 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F6000002024FC5FC8F.png" style="display:inline-block; margin:4px;width:4.56cm;height:9.52cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F6000002024FC5FC8F.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>[AppConfig.java] : la classe de configuration du projet Spring ;</li>
-<li>[Main.java] : la classe exécutable du projet ;</li>
-<li>[IDao.java] : l&#x27;interface de la couche [DAO] ;</li>
-<li>[Dao.java] : la classe d&#x27;implémentation de la couche [DAO] ;</li>
-<li>[AbstractEntity.java] : la classe parent des classes [Produit] et [Categorie] ;</li>
-<li>[Produit.java] : classe associée à une ligne de la table [PRODUITS] de la base de données ;</li>
-<li>[Categorie.java] : classe associée à une ligne de la table [CATEGORIES] de la base de données ;</li>
-<li>[ProduitsRepository] : l&#x27;interface Spring Data d&#x27;accès à la table [PRODUITS] ;</li>
-<li>[CategoriesRepository] : l&#x27;interface Spring Data d&#x27;accès à la table [CATEGORIES] ;</li>
-<li>[pom.xml] : le fichier de configuration du projet Maven ;</li>
+  <li>[AppConfig.java] : la classe de configuration du projet Spring ;
+  </li>
+  <li>[Main.java] : la classe exécutable du projet ;
+  </li>
+  <li>[IDao.java] : l&#x27;interface de la couche [DAO] ;
+  </li>
+  <li>[Dao.java] : la classe d&#x27;implémentation de la couche [DAO] ;
+  </li>
+  <li>[AbstractEntity.java] : la classe parent des classes [Produit] et [Categorie] ;
+  </li>
+  <li>[Produit.java] : classe associée à une ligne de la table [PRODUITS] de la base de données ;
+  </li>
+  <li>[Categorie.java] : classe associée à une ligne de la table [CATEGORIES] de la base de données ;
+  </li>
+  <li>[ProduitsRepository] : l&#x27;interface Spring Data d&#x27;accès à la table [PRODUITS] ;
+  </li>
+  <li>[CategoriesRepository] : l&#x27;interface Spring Data d&#x27;accès à la table [CATEGORIES] ;
+  </li>
+  <li>[pom.xml] : le fichier de configuration du projet Maven ;
+  </li>
 </ul>
+
 <p>Ce projet implémente l&#x27;architecture suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049B00000112C905184C.png" style="display:inline-block; margin:4px;width:15.598cm;height:3.625cm;" class="odt-zoomable" data-zoom-src="images/100000000000049B00000112C905184C.png" /></td></tr></table>
 
@@ -2312,15 +2457,21 @@
 
 <p>Cette configuration est celle utilisée et expliquée au paragraphe <a href="#refheading5939178138399">11.2.5</a>. Nous y ajoutons les bibliothèques suivantes :</p>
 <ul>
-<li>lignes 42-49 : une bibliothèque jSON utilisée par la méthode [toString] de la classe [Produit] ;</li>
-<li>lignes 51-55 : la bibliothèque [Google Guava] qui amène des méthodes utilitaires pour gérer des collections d&#x27;éléments. Elle sera utilisée par la classe [Dao] qui implémente la couche [DAO] ;</li>
-<li>lignes 56-67 : les bibliothèques nécessaires aux tests JUnit ;</li>
-<li>lignes 69-72 : une bibliothèque de logs ;</li>
-<li>lignes 81-86 : les plugins Maven nécessaires au projet ;</li>
+  <li>lignes 42-49 : une bibliothèque jSON utilisée par la méthode [toString] de la classe [Produit] ;
+  </li>
+  <li>lignes 51-55 : la bibliothèque [Google Guava] qui amène des méthodes utilitaires pour gérer des collections d&#x27;éléments. Elle sera utilisée par la classe [Dao] qui implémente la couche [DAO] ;
+  </li>
+  <li>lignes 56-67 : les bibliothèques nécessaires aux tests JUnit ;
+  </li>
+  <li>lignes 69-72 : une bibliothèque de logs ;
+  </li>
+  <li>lignes 81-86 : les plugins Maven nécessaires au projet ;
+  </li>
 </ul>
+
 <p><a id="refheading2192502014630537"></a></p>
 <h3 id="1135-les-entites-de-la-couche-jpa">11.3.5. Les entités de la couche [JPA]</h3>
-<p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
+<p>Couche[<strong>DAO</strong>]Couche[<strong>console</strong>]Couche[<strong>JPA</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>Spring Data</strong>]Spring 4SGBD</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000DB000000CFBC5B5629.png" style="display:inline-block; margin:4px;width:4.06cm;height:3.829cm;" class="odt-zoomable" data-zoom-src="images/10000000000000DB000000CFBC5B5629.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading1961141114084373"></a></p>
@@ -2399,16 +2550,26 @@
 
 <p>Cette classe a pour objectif de fournir une classe mère aux entités JPA en encapsulant à un unique endroit <span style="color: #000000">les propriétés [id, version] (lignes 19, 22) communes aux deux entités [Produit] et [Categorie] liées à la base de données. Ces propriétés sont liées aux colonnes [ID, VERSION] des tables (lignes 18, 21).</span></p>
 <ul>
-<li><span style="color: #000000">ligne 13 : l&#x27;annotation [@MappedSuperclass] indique que la classe est une classe parent d&#x27;entités JPA ;</span></li>
-<li><span style="color: #000000">ligne 16 : l&#x27;annotation [@Id] indique que le champ [id] (il pourrait avoir un autre nom) est associé à la clé primaire d&#x27;une table ;</span></li>
-<li><span style="color: #000000">ligne 17 : l&#x27;annotation [<span style="color: #646464">@GeneratedValue</span>(strategy=GenerationType.<strong><em><span style="color: #0000c0">IDENTITY</span></em></strong>)] fixe le mode de génération des clés primaires. Le mode [GenerationType.<strong><em><span style="color: #0000c0">IDENTITY</span></em></strong>] va utiliser avec MySQL le mode [AUTO_INCREMENT]. Avec un autre SGBD, ce mode utiliserait une autre méthode. L&#x27;intérêt est que le développeur n&#x27;a pas à s&#x27;en préoccuper et que son code reste valide quelque soit le SGBD utilisé ;</span></li>
-<li><span style="color: #000000">ligne 18 : l&#x27;annotation [@Column] indique la colonne associée au champ. Lorsque cette annotation n&#x27;est pas présente, JPA assume que la colonne porte le même nom que le champ. C&#x27;est le cas ici. On n&#x27;aurait donc pu ne pas mettre cette annotation ;</span></li>
-<li><span style="color: #000000">ligne 20 : l&#x27;annotation [<span style="color: #646464">@Version</span>] indique que le champ [version] est associé à une colonne de versioning. L&#x27;implémentation JPA va incrémenter ce n° de version à chaque fois que l&#x27;entité sera modifiée. Ce n° sert à empêcher la mise à jour simultanée de l&#x27;entité par deux utilisateur différents : deux utilisateurs U1 et U2 lisent l&#x27;entité E avec un n° de version égal à V1. U1 modifie E et persiste cette modification en base : le n° de version passe alors à V1+1. U2 modifie E à son tour et persiste cette modification en base : il recevra une exception car il possède une version (V1) différente de celle en base (V1+1) ;</span></li>
-<li><span style="color: #000000">lignes 35-52 : redéfinition des méthodes [hashCode] et [equals]. Par défaut, [obj1.equals(obj2)] vaut true si [obj1==obj2], ç-à-d si ob1 et obj2 sont deux pointeurs égaux. Si on veut comparer les objets pointés plutôt que les pointeurs eux-mêmes, il faut redéfinir la méthode [equals] et la méthode [hashCode]. Celle-ci doit rendre la même valeur pour deux objets que la méthode [equals] dit égaux ;</span></li>
-<li><span style="color: #000000">lignes 42-51 : deux objets de type [AbstractEntity] ou dérivés seront dits égaux si leurs clés primaires [id] sont égales ;</span></li>
-<li><span style="color: #000000">lignes 35-38 : la méthode [hashCode] rend bien la même valeur pour deux objets [AbstractEntity] identiques et donc ayant la même clé primaire [id] ;</span></li>
-<li><span style="color: #000000">lignes 55-63 : la méthode [toString] rend la chaîne jSon de l&#x27;objet [this]. Si cet objet désigne une classe fille, cette méthode rendra alors la chaîne jSON de la classe fille. Cela nous dispense de créer une méthode [toString] dans les classes filles ;</span></li>
+  <li><span style="color: #000000">ligne 13 : l&#x27;annotation [@MappedSuperclass] indique que la classe est une classe parent d&#x27;entités JPA ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 16 : l&#x27;annotation [@Id] indique que le champ [id] (il pourrait avoir un autre nom) est associé à la clé primaire d&#x27;une table ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 17 : l&#x27;annotation [<span style="color: #646464">@GeneratedValue</span>(strategy=GenerationType.<i><b><span style="color: #0000c0">IDENTITY</span></b></i>)] fixe le mode de génération des clés primaires. Le mode [GenerationType.<i><b><span style="color: #0000c0">IDENTITY</span></b></i>] va utiliser avec MySQL le mode [AUTO_INCREMENT]. Avec un autre SGBD, ce mode utiliserait une autre méthode. L&#x27;intérêt est que le développeur n&#x27;a pas à s&#x27;en préoccuper et que son code reste valide quelque soit le SGBD utilisé ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 18 : l&#x27;annotation [@Column] indique la colonne associée au champ. Lorsque cette annotation n&#x27;est pas présente, JPA assume que la colonne porte le même nom que le champ. C&#x27;est le cas ici. On n&#x27;aurait donc pu ne pas mettre cette annotation ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 20 : l&#x27;annotation [<span style="color: #646464">@Version</span>] indique que le champ [version] est associé à une colonne de versioning. L&#x27;implémentation JPA va incrémenter ce n° de version à chaque fois que l&#x27;entité sera modifiée. Ce n° sert à empêcher la mise à jour simultanée de l&#x27;entité par deux utilisateur différents : deux utilisateurs U1 et U2 lisent l&#x27;entité E avec un n° de version égal à V1. U1 modifie E et persiste cette modification en base : le n° de version passe alors à V1+1. U2 modifie E à son tour et persiste cette modification en base : il recevra une exception car il possède une version (V1) différente de celle en base (V1+1) ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 35-52 : redéfinition des méthodes [hashCode] et [equals]. Par défaut, [obj1.equals(obj2)] vaut true si [obj1==obj2], ç-à-d si ob1 et obj2 sont deux pointeurs égaux. Si on veut comparer les objets pointés plutôt que les pointeurs eux-mêmes, il faut redéfinir la méthode [equals] et la méthode [hashCode]. Celle-ci doit rendre la même valeur pour deux objets que la méthode [equals] dit égaux ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 42-51 : deux objets de type [AbstractEntity] ou dérivés seront dits égaux si leurs clés primaires [id] sont égales ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 35-38 : la méthode [hashCode] rend bien la même valeur pour deux objets [AbstractEntity] identiques et donc ayant la même clé primaire [id] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 55-63 : la méthode [toString] rend la chaîne jSon de l&#x27;objet [this]. Si cet objet désigne une classe fille, cette méthode rendra alors la chaîne jSON de la classe fille. Cela nous dispense de créer une méthode [toString] dans les classes filles ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading1961161114084373"></a></p>
 <h4 id="11352-lentite-jpa-produit">11.3.5.2. L&#x27;entité JPA [Produit]</h4>
 <p>La classe [Produit] est une entité JPA associée à une ligne de la table [PRODUITS] :</p>
@@ -2466,14 +2627,22 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 12 : l&#x27;annotation [@Entity] fait de la classe [Produit] une entité gérée par la couche [JPA] ;</li>
-<li>ligne 13 : l&#x27;annotation [@Table(name = &quot;PRODUITS&quot;)] indique que la classe [Produit] est l&#x27;image objet d&#x27;une ligne de la table [PRODUITS] de la base de données ;</li>
-<li>ligne 14 : le nom du filtre jSON à appliquer à l&#x27;entité. Nous allons voir que la propriété [<span style="color: #0000c0">categorie</span>] de la ligne 13 n&#x27;est pas toujours disponible. Il faut alors l&#x27;exclure de la représentation jSON de l&#x27;objet. Pour cela nous avons besoin d&#x27;un filtre. C&#x27;est donc dans un filtre nommé [<span style="color: #2a00ff">jsonFilterCategorie</span>] que nous indiquerons si on veut ou non la propriété [<span style="color: #0000c0">categorie</span>] ;</li>
-<li>ligne 18 : l&#x27;annotation [@Column] associe le champ [nom] à la colonne [NOM] de la table [PRODUITS]. Lorsque le champ porte le même nom que la colonne associée, l&#x27;annotation [@Column] peut être omise. Ce serait le cas ici ;</li>
-<li>lignes 31-33 : la catégorie du produit ;</li>
-<li>ligne 31 : l&#x27;annotation [<span style="color: #646464">@ManyToOne</span>] indique que la colonne de l&#x27;annotation de la ligne 32 [<span style="color: #646464">@JoinColumn</span><span style="color: #000000">(name = </span><span style="color: #2a00ff">&quot;CATEGORIE_ID&quot;</span><span style="color: #000000">)</span>] est clé étrangère de la table [PRODUITS] de l&#x27;entité [Produit] sur la table [CATEGORIES] associée à l&#x27;entité de la ligne 33. Cette annotation doit annoter une entité JPA. Ainsi la classe de  la ligne 33 doit être une entité JPA ;</li>
-<li>ligne 31 : l&#x27;annotation [<span style="color: #000000">fetch = FetchType.</span><strong><em><span style="color: #0000c0">LAZY</span></em></strong>] demande à ce que lorsqu&#x27;on ramène un produit de la table [PRODUITS], sa catégorie (ligne 33) ne soit pas ramenée immédiatement (lazy loading). Elle est alors obtenue lors du premier appel à la méthode [getCategorie]. Cet attribut <strong>n&#x27;est pas contraignant</strong>. L&#x27;implémentation JPA utilisée a le droit de l&#x27;ignorer. C&#x27;est parce que la propriété [<span style="color: #0000c0">categorie</span>] peut être présente ou non que nous avons introduit le filtre jSON de la ligne 14. Les implémentations JPA existantes (Hibernate, Eclipselink, OpenJPA) ne gèrent pas cette annotation de la même façon. Hibernate enrichit la méthode [getCategorie] initiale (qui se contente de rendre le champ <em>categorie</em>) par un appel au SGBD pour aller chercher la catégorie. Pour que cela soit possible, il faut que la connexion au SGBD utilisée initialement pour obtenir le produit soit encore ouverte sinon on a une exception.</li>
+  <li>ligne 12 : l&#x27;annotation [@Entity] fait de la classe [Produit] une entité gérée par la couche [JPA] ;
+  </li>
+  <li>ligne 13 : l&#x27;annotation [@Table(name = &quot;PRODUITS&quot;)] indique que la classe [Produit] est l&#x27;image objet d&#x27;une ligne de la table [PRODUITS] de la base de données ;
+  </li>
+  <li>ligne 14 : le nom du filtre jSON à appliquer à l&#x27;entité. Nous allons voir que la propriété [<span style="color: #0000c0">categorie</span>] de la ligne 13 n&#x27;est pas toujours disponible. Il faut alors l&#x27;exclure de la représentation jSON de l&#x27;objet. Pour cela nous avons besoin d&#x27;un filtre. C&#x27;est donc dans un filtre nommé [<span style="color: #2a00ff">jsonFilterCategorie</span>] que nous indiquerons si on veut ou non la propriété [<span style="color: #0000c0">categorie</span>] ;
+  </li>
+  <li>ligne 18 : l&#x27;annotation [@Column] associe le champ [nom] à la colonne [NOM] de la table [PRODUITS]. Lorsque le champ porte le même nom que la colonne associée, l&#x27;annotation [@Column] peut être omise. Ce serait le cas ici ;
+  </li>
+  <li>lignes 31-33 : la catégorie du produit ;
+  </li>
+  <li>ligne 31 : l&#x27;annotation [<span style="color: #646464">@ManyToOne</span>] indique que la colonne de l&#x27;annotation de la ligne 32 [<span style="color: #646464">@JoinColumn</span><span style="color: #000000">(name = </span><span style="color: #2a00ff">&quot;CATEGORIE_ID&quot;</span><span style="color: #000000">)</span>] est clé étrangère de la table [PRODUITS] de l&#x27;entité [Produit] sur la table [CATEGORIES] associée à l&#x27;entité de la ligne 33. Cette annotation doit annoter une entité JPA. Ainsi la classe de  la ligne 33 doit être une entité JPA ;
+  </li>
+  <li>ligne 31 : l&#x27;annotation [<span style="color: #000000">fetch = FetchType.</span><i><b><span style="color: #0000c0">LAZY</span></b></i>] demande à ce que lorsqu&#x27;on ramène un produit de la table [PRODUITS], sa catégorie (ligne 33) ne soit pas ramenée immédiatement (lazy loading). Elle est alors obtenue lors du premier appel à la méthode [getCategorie]. Cet attribut <b>n&#x27;est pas contraignant</b>. L&#x27;implémentation JPA utilisée a le droit de l&#x27;ignorer. C&#x27;est parce que la propriété [<span style="color: #0000c0">categorie</span>] peut être présente ou non que nous avons introduit le filtre jSON de la ligne 14. Les implémentations JPA existantes (Hibernate, Eclipselink, OpenJPA) ne gèrent pas cette annotation de la même façon. Hibernate enrichit la méthode [getCategorie] initiale (qui se contente de rendre le champ <i>categorie</i>) par un appel au SGBD pour aller chercher la catégorie. Pour que cela soit possible, il faut que la connexion au SGBD utilisée initialement pour obtenir le produit soit encore ouverte sinon on a une exception.
+  </li>
 </ul>
+
 <p><a id="refheading1961181114084373"></a></p>
 <h4 id="11353-lentite-jpa-categorie">11.3.5.3. L&#x27;entité JPA [Categorie]</h4>
 <p>La classe [Categorie] est une entité JPA associée à une ligne de la table [CATEGORIES] :</p>
@@ -2531,16 +2700,23 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 21-22 : le nom de la catégorie ;</li>
-<li>lignes 25-26 : les produits de cette catégorie ;</li>
-<li>ligne 25 : l&#x27;annotation [<span style="color: #646464">@OneToMany</span>] est la <strong>relation inverse</strong> de la relation [@ManyToOne] que nous avons rencontrée dans l&#x27;entité [Produit]. L&#x27;attribut [<span style="color: #000000">mappedBy = </span><span style="color: #2a00ff">&quot;categorie&quot;</span>] indique le champ de l&#x27;entité [Produit] annoté par la relation inverse [@ManyToOne]. L&#x27;attribut [<span style="color: #000000">cascade = { CascadeType.</span><strong><em><span style="color: #0000c0">ALL</span></em></strong><span style="color: #000000"> }</span>] demande à ce que les opérations (persist, merge, remove) faites sur une @Entity [Categorie] soient cascadées sur les [produits] de la ligne 26. On peut indiquer des cascades partielles avec les constantes [<span style="color: #000000">CascadeType.</span><strong><em><span style="color: #0000c0">PERSIST</span></em></strong><span style="color: #0000c0">, </span><span style="color: #000000">CascadeType.</span><strong><em><span style="color: #0000c0">MERGE</span></em></strong><em><span style="color: #0000c0">, </span></em><span style="color: #000000">CascadeType.</span><strong><em><span style="color: #0000c0">REMOVE</span></em></strong>] ;</li>
-<li>ligne 25 : l&#x27;attribut [<span style="color: #000000">fetch = FetchType.</span><strong><em><span style="color: #0000c0">LAZY</span></em></strong>] demande à ce que, lorsqu&#x27;on ramène une catégorie de la table [CATEGORIES], ses produits ne soient pas immédiatement ramenés. Ils le seront lors du premier appel à la méthode [getProduits]. Les implémentations JPA existantes (Hibernate, Eclipselink, OpenJPA) ne gèrent pas cette annotation de la même façon. Hibernate enrichit la méthode [getProduits] initiale (qui se contente de rendre le champ <em>produits</em>) par un appel au SGBD pour aller chercher les produits de la catégorie. Pour que cela soit possible, il faut que la connexion au SGBD utilisée initialement pour obtenir la catégorie soit encore ouverte. Cet attribut <strong>est contraignant</strong>. L&#x27;implémentation JPA ne peut l&#x27;ignorer. Parce que la propriété [produits] peut être ou non initialisée, nous avons introduit le filtre jSON de la ligne 17 qui nous permettra d&#x27;indiquer si on veut ou non cette propriété ;</li>
-<li>ligne 26 : le type [Set] est une interface. Le type [HashSet] est une classe implémentant cette interface. Elle implémente une collection d&#x27;éléments appelée <em>ensemble</em>. Un ensemble ne peut contenir deux objets identiques. Ici les objets sont de type [Produit]. Ainsi dans l&#x27;ensemble, on ne pourra avoir deux objets identiques. Comme la méthode [equals] de la classe parent [AbstractEntity] a été redéfinie pour dire que deux produits sont identiques s&#x27;ils ont la même clé primaire, alors le champ [produits] ne pourra contenir deux produits de même clé primaire ;</li>
-<li>lignes 38-43 : la méthode [addProduit] permet d&#x27;ajouter un produit à la catégorie ;</li>
+  <li>lignes 21-22 : le nom de la catégorie ;
+  </li>
+  <li>lignes 25-26 : les produits de cette catégorie ;
+  </li>
+  <li>ligne 25 : l&#x27;annotation [<span style="color: #646464">@OneToMany</span>] est la <b>relation inverse</b> de la relation [@ManyToOne] que nous avons rencontrée dans l&#x27;entité [Produit]. L&#x27;attribut [<span style="color: #000000">mappedBy = </span><span style="color: #2a00ff">&quot;categorie&quot;</span>] indique le champ de l&#x27;entité [Produit] annoté par la relation inverse [@ManyToOne]. L&#x27;attribut [<span style="color: #000000">cascade = { CascadeType.</span><i><b><span style="color: #0000c0">ALL</span></b></i><span style="color: #000000"> }</span>] demande à ce que les opérations (persist, merge, remove) faites sur une @Entity [Categorie] soient cascadées sur les [produits] de la ligne 26. On peut indiquer des cascades partielles avec les constantes [<span style="color: #000000">CascadeType.</span><i><b><span style="color: #0000c0">PERSIST</span></b></i><span style="color: #0000c0">, </span><span style="color: #000000">CascadeType.</span><i><b><span style="color: #0000c0">MERGE</span></b></i><i><span style="color: #0000c0">, </span></i><span style="color: #000000">CascadeType.</span><i><b><span style="color: #0000c0">REMOVE</span></b></i>] ;
+  </li>
+  <li>ligne 25 : l&#x27;attribut [<span style="color: #000000">fetch = FetchType.</span><i><b><span style="color: #0000c0">LAZY</span></b></i>] demande à ce que, lorsqu&#x27;on ramène une catégorie de la table [CATEGORIES], ses produits ne soient pas immédiatement ramenés. Ils le seront lors du premier appel à la méthode [getProduits]. Les implémentations JPA existantes (Hibernate, Eclipselink, OpenJPA) ne gèrent pas cette annotation de la même façon. Hibernate enrichit la méthode [getProduits] initiale (qui se contente de rendre le champ <i>produits</i>) par un appel au SGBD pour aller chercher les produits de la catégorie. Pour que cela soit possible, il faut que la connexion au SGBD utilisée initialement pour obtenir la catégorie soit encore ouverte. Cet attribut <b>est contraignant</b>. L&#x27;implémentation JPA ne peut l&#x27;ignorer. Parce que la propriété [produits] peut être ou non initialisée, nous avons introduit le filtre jSON de la ligne 17 qui nous permettra d&#x27;indiquer si on veut ou non cette propriété ;
+  </li>
+  <li>ligne 26 : le type [Set] est une interface. Le type [HashSet] est une classe implémentant cette interface. Elle implémente une collection d&#x27;éléments appelée <i>ensemble</i>. Un ensemble ne peut contenir deux objets identiques. Ici les objets sont de type [Produit]. Ainsi dans l&#x27;ensemble, on ne pourra avoir deux objets identiques. Comme la méthode [equals] de la classe parent [AbstractEntity] a été redéfinie pour dire que deux produits sont identiques s&#x27;ils ont la même clé primaire, alors le champ [produits] ne pourra contenir deux produits de même clé primaire ;
+  </li>
+  <li>lignes 38-43 : la méthode [addProduit] permet d&#x27;ajouter un produit à la catégorie ;
+  </li>
 </ul>
+
 <p><a id="refheading2192522014630537"></a></p>
 <h3 id="1136-la-couche-spring-data">11.3.6. La couche [Spring Data]</h3>
-<p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
+<p>Couche[<strong>DAO</strong>]Couche[<strong>console</strong>]Couche[<strong>JPA</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>Spring Data</strong>]Spring 4SGBD</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000010000000139D8D8F9D3.png" style="display:inline-block; margin:4px;width:4.74cm;height:5.791cm;" class="odt-zoomable" data-zoom-src="images/100000000000010000000139D8D8F9D3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface [CategoriesRepository] gère les accès à la table [CATEGORIES] :</p>
@@ -2567,20 +2743,30 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 8 : l&#x27;interface [CrudRepository] a été utilisée et expliquée paragraphe <a href="#crudrepository">11.2.3</a> . On rappelle que :<ul>
-<li>le 1er type de l&#x27;interface est l&#x27;entité JPA gérée pour des accès CRUD (findOne, findAll, save, delete, deleteAll),</li>
-<li>le second type est celui de la clé primaire de l&#x27;entité JPA, ici un entier [Long] ;</li>
+  <li>ligne 8 : l&#x27;interface [CrudRepository] a été utilisée et expliquée paragraphe <a href="#crudrepository">11.2.3</a> . On rappelle que :
+    <ul>
+      <li>le 1er type de l&#x27;interface est l&#x27;entité JPA gérée pour des accès CRUD (findOne, findAll, save, delete, deleteAll),
+      </li>
+      <li>le second type est celui de la clé primaire de l&#x27;entité JPA, ici un entier [Long] ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 12 : la méthode de la ligne 12 est implémentée par la requête JPQL (Java Persistence Query Language) de la ligne 11. Celle-ci requête des entités JPA. Dans une telle requête :
+    <ul>
+      <li>les tables sont remplacées par leurs entités JPA associées ;
+      </li>
+      <li>les colonnes sont remplacées par des champs des entités JPA utilisées dans la requête ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 11 : la requête JPQL ramène une catégorie avec ses produits. On se rappelle que dans l&#x27;entité [Categorie], le champ [produits] avait l&#x27;attribut [fetch = FetchType.LAZY] (lazy loading). Dans la requête JPQL, on force le chargement des produits avec le mot clé [fetch]. Le paramètre <b>?1</b> de la requête sera remplacé à l&#x27;exécution par la valeur du 1er paramètre de la méthode de la ligne 12, donc par le paramètre [Long id] ;
+  </li>
+  <li>lignes 14-15 : une méthode analogue pour une catégorie identifiée par son nom ;
+  </li>
+  <li>ligne 18 : la méthode [findByNom] sera automatiquement implémentée par [Spring Data] car le type [Category] a un champ [nom] ;
+  </li>
 </ul>
-</li>
-<li>ligne 12 : la méthode de la ligne 12 est implémentée par la requête JPQL (Java Persistence Query Language) de la ligne 11. Celle-ci requête des entités JPA. Dans une telle requête :<ul>
-<li>les tables sont remplacées par leurs entités JPA associées ;</li>
-<li>les colonnes sont remplacées par des champs des entités JPA utilisées dans la requête ;</li>
-</ul>
-</li>
-<li>ligne 11 : la requête JPQL ramène une catégorie avec ses produits. On se rappelle que dans l&#x27;entité [Categorie], le champ [produits] avait l&#x27;attribut [fetch = FetchType.LAZY] (lazy loading). Dans la requête JPQL, on force le chargement des produits avec le mot clé [fetch]. Le paramètre <strong>?1</strong> de la requête sera remplacé à l&#x27;exécution par la valeur du 1er paramètre de la méthode de la ligne 12, donc par le paramètre [Long id] ;</li>
-<li>lignes 14-15 : une méthode analogue pour une catégorie identifiée par son nom ;</li>
-<li>ligne 18 : la méthode [findByNom] sera automatiquement implémentée par [Spring Data] car le type [Category] a un champ [nom] ;</li>
-</ul>
+
 <p>L&#x27;interface [ProduitsRepository] gère les accès à la table [PRODUITS] :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.repositories;</span></span>
@@ -2608,7 +2794,7 @@
 <p>Ces interfaces vont être implémentées par des classes générées par [Spring Data] au moment de l&#x27;exécution du projet. On appelle de telles classes des [proxy]. Par défaut, les méthodes de la classe d&#x27;implémentation <strong>s&#x27;exécutent dans une transaction</strong>. Le fait que ces interfaces étendent la classe [<span style="color: #000000">CrudRepository</span>] font d&#x27;elles des composants Spring.</p>
 <p><a id="refheading2192542014630537"></a></p>
 <h3 id="1137-la-couche-dao">11.3.7. La couche [DAO]</h3>
-<p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
+<p>Couche[<strong>DAO</strong>]Couche[<strong>console</strong>]Couche[<strong>JPA</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>Spring Data</strong>]Spring 4SGBD</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D7000000C851D05EDC.png" style="display:inline-block; margin:4px;width:3.979cm;height:3.679cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D7000000C851D05EDC.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>L&#x27;interface [IDao] de la couche [DAO] est la suivante :</p>
@@ -2841,12 +3027,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 16 : l&#x27;annotation [@Component] fait de la classe [Dao] un composant Spring ;</li>
-<li>lignes 19-23 : injection des références sur les deux interfaces [CrudRepository] de [Spring Data]. Cette injection aura lieu lors de l&#x27;instantiation des objets Spring, en général au début de l&#x27;exécution du projet Spring ;</li>
-<li>on notera lignes 28 et 46 que la méthode [save] de l&#x27;interface [<span style="color: #0000c0">produitsRepository</span>] est utilisée aussi bien pour l&#x27;insertion que pour la mise à jour de produits. [Spring Data] utilise la clé primaire du produit pour savoir s&#x27;il doit faire une insertion ou une mise à jour. Si la clé primaire vaut [null], ce sera une insertion sinon ce sera une mise à jour ;</li>
-<li>ligne 82 : on utilise la méthode [<span style="color: #000000">Lists.</span><em><span style="color: #000000">newArrayList</span></em>] de la bibliothèque Guava pour obtenir une liste de produits. La méthode [<span style="color: #0000c0">produitsRepository</span><span style="color: #000000">.findAll()</span>] rend un type [Iterable&lt;Produit&gt;] ;</li>
-<li>ligne 28 : la méthode [<span style="color: #0000c0">produitsRepository</span><span style="color: #000000">.save(</span><span style="color: #6a3e3e">produits</span><span style="color: #000000">)</span>] rend un type [Iterable&lt;Produit&gt;]. Il en est de même pour les autres opérations [save] de la classe ;</li>
+  <li>ligne 16 : l&#x27;annotation [@Component] fait de la classe [Dao] un composant Spring ;
+  </li>
+  <li>lignes 19-23 : injection des références sur les deux interfaces [CrudRepository] de [Spring Data]. Cette injection aura lieu lors de l&#x27;instantiation des objets Spring, en général au début de l&#x27;exécution du projet Spring ;
+  </li>
+  <li>on notera lignes 28 et 46 que la méthode [save] de l&#x27;interface [<span style="color: #0000c0">produitsRepository</span>] est utilisée aussi bien pour l&#x27;insertion que pour la mise à jour de produits. [Spring Data] utilise la clé primaire du produit pour savoir s&#x27;il doit faire une insertion ou une mise à jour. Si la clé primaire vaut [null], ce sera une insertion sinon ce sera une mise à jour ;
+  </li>
+  <li>ligne 82 : on utilise la méthode [<span style="color: #000000">Lists.</span><i><span style="color: #000000">newArrayList</span></i>] de la bibliothèque Guava pour obtenir une liste de produits. La méthode [<span style="color: #0000c0">produitsRepository</span><span style="color: #000000">.findAll()</span>] rend un type [Iterable&lt;Produit&gt;] ;
+  </li>
+  <li>ligne 28 : la méthode [<span style="color: #0000c0">produitsRepository</span><span style="color: #000000">.save(</span><span style="color: #6a3e3e">produits</span><span style="color: #000000">)</span>] rend un type [Iterable&lt;Produit&gt;]. Il en est de même pour les autres opérations [save] de la classe ;
+  </li>
 </ul>
+
 <p>Dans la classe [Dao] ci-dessus, les exceptions qui peuvent se produire sont encapsulées dans le type [DaoException] suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.dao;</span></span>
@@ -2932,21 +3124,32 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 10 : la classe dérive de la classe [RuntimeException] et est donc une exception non contrôlée ;</li>
-<li>ligne 16 : un code d&#x27;erreur ;</li>
-<li>ligne 17 : une liste de messages d&#x27;erreur, ceux associés à la pile des exceptions qui ont provoqué la [DaoException] ;</li>
-<li>lignes 59-76 : la méthode privée [<span style="color: #000000">getMessagesForException</span>] permet d&#x27;obtenir la liste des messages d&#x27;erreurs associées aux exception de la pile d&#x27;exceptions. Il est en effet possible d&#x27;empiler les exceptions avec les constructeurs suivants de la classe <strong>Exception</strong> :<ul>
-<li><strong>Exception(String message, Throwable cause)</strong> : crée une exception avec un message et l&#x27;exception qu&#x27;on veut encapsuler ;</li>
-<li><strong>Exception(Throwable cause)</strong> : crée une exception avec l&#x27;exception qu&#x27;on veut encapsuler ;</li>
+  <li>ligne 10 : la classe dérive de la classe [RuntimeException] et est donc une exception non contrôlée ;
+  </li>
+  <li>ligne 16 : un code d&#x27;erreur ;
+  </li>
+  <li>ligne 17 : une liste de messages d&#x27;erreur, ceux associés à la pile des exceptions qui ont provoqué la [DaoException] ;
+  </li>
+  <li>lignes 59-76 : la méthode privée [<span style="color: #000000">getMessagesForException</span>] permet d&#x27;obtenir la liste des messages d&#x27;erreurs associées aux exception de la pile d&#x27;exceptions. Il est en effet possible d&#x27;empiler les exceptions avec les constructeurs suivants de la classe <b>Exception</b> :
+    <ul>
+      <li><b>Exception(String message, Throwable cause)</b> : crée une exception avec un message et l&#x27;exception qu&#x27;on veut encapsuler ;
+      </li>
+      <li><b>Exception(Throwable cause)</b> : crée une exception avec l&#x27;exception qu&#x27;on veut encapsuler ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Le type [Throwable] est la classe parent de la classe [Exception]. Si les constructeurs précédents sont exécutés de façon répétée, l&#x27;exception finale contient alors plusieurs exceptions. On dit qu&#x27;on a une pile d&#x27;exceptions. </p>
 <ul>
-<li>la dernière cause d&#x27;une exception e1 est obtenue par l&#x27;expression [e1.getCause()] ;</li>
-<li>l&#x27;avant-dernière cause d&#x27;une exception e1 est obtenue par l&#x27;expression [e1.getCause().getCause()] ;</li>
-<li>on poursuit ainsi jusqu&#x27;à obtenir [getCause()==null] ;</li>
+  <li>la dernière cause d&#x27;une exception e1 est obtenue par l&#x27;expression [e1.getCause()] ;
+  </li>
+  <li>l&#x27;avant-dernière cause d&#x27;une exception e1 est obtenue par l&#x27;expression [e1.getCause().getCause()] ;
+  </li>
+  <li>on poursuit ainsi jusqu&#x27;à obtenir [getCause()==null] ;
+  </li>
 </ul>
+
 <p><a id="refheading2189872014630537"></a></p>
 <h3 id="1138-configuration-du-projet-spring">11.3.8. Configuration du projet Spring</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EB000000C97BBACDD4.png" style="display:inline-block; margin:4px;width:4.35cm;height:3.72cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EB000000C97BBACDD4.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -3035,11 +3238,16 @@
 
 <p>Une configuration analogue a été rencontrée et expliquée paragraphe <a href="#springdataconfig">11.2.5</a>. Nous y avons ajouté les annotations Spring suivantes :</p>
 <ul>
-<li>ligne 17 : l&#x27;annotation [<span style="color: #646464">@EnableJpaRepositories</span>] sert à indiquer les packages où se trouvent les interfaces [CrudRepository] de [Spring Data] ;</li>
-<li>ligne 18 : la classe est une classe de configuration Spring. Cette information est importante. Si on l&#x27;enlève le projet fonctionne. Mais plus loin dans le document, lorsqu&#x27;on construira des projets qui s&#x27;appuient sur celui-ci, alors certains d&#x27;entre-eux ne fonctionnent plus si l&#x27;annotation de la ligne 18 est enlevée ;</li>
-<li>ligne 19 : l&#x27;annotation [<span style="color: #646464">@ComponentScan</span>] indique les packages où se trouvent les objets Spring. Ce sont les classes annotées par [@Component, @Service, @Controller, ...]. Ici le composant Spring [Dao] va être trouvé et instancié ;</li>
-<li>lignes 73-76 : nous avons défini un bean qui représente le tableau des packages à scanner pour trouver des entités JPA. Cela permettra à un projet qui importe la classe [DaoConfig] de redéfinir ce bean et de changer ainsi les packages scannés ligne 59. Plus loin dans le document, nous allons rencontrer cette problématique ;</li>
+  <li>ligne 17 : l&#x27;annotation [<span style="color: #646464">@EnableJpaRepositories</span>] sert à indiquer les packages où se trouvent les interfaces [CrudRepository] de [Spring Data] ;
+  </li>
+  <li>ligne 18 : la classe est une classe de configuration Spring. Cette information est importante. Si on l&#x27;enlève le projet fonctionne. Mais plus loin dans le document, lorsqu&#x27;on construira des projets qui s&#x27;appuient sur celui-ci, alors certains d&#x27;entre-eux ne fonctionnent plus si l&#x27;annotation de la ligne 18 est enlevée ;
+  </li>
+  <li>ligne 19 : l&#x27;annotation [<span style="color: #646464">@ComponentScan</span>] indique les packages où se trouvent les objets Spring. Ce sont les classes annotées par [@Component, @Service, @Controller, ...]. Ici le composant Spring [Dao] va être trouvé et instancié ;
+  </li>
+  <li>lignes 73-76 : nous avons défini un bean qui représente le tableau des packages à scanner pour trouver des entités JPA. Cela permettra à un projet qui importe la classe [DaoConfig] de redéfinir ce bean et de changer ainsi les packages scannés ligne 59. Plus loin dans le document, nous allons rencontrer cette problématique ;
+  </li>
 </ul>
+
 <p>La classe [AppConfig] configure l&#x27;ensemble du projet :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> spring.data.config;</span></span>
@@ -3110,20 +3318,30 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 11 : la classe est une classe de configuration Spring ;</li>
-<li>ligne 12 : qui importe les beans définis par la classe [DaoConfig] que nous venons de voir ;</li>
-<li>la couche [console] utilise des mappeurs jSON qui sont définis ici ;</li>
-<li>lignes 14-64 : définissent cinq mappeurs jSON ;</li>
-<li>lignes 15-18 : le filtre jSON [<span style="color: #2a00ff">jsonMapper</span>] n&#x27;a pas de filtres ;</li>
-<li>lignes 20-30 : le filtre jSON [<span style="color: #2a00ff">jsonMapperCategorieWithProduits</span>] permet de sérialiser / désérialiser un objet [Categorie] <strong>avec</strong> ses produits ;</li>
-<li>lignes 32-42 : le filtre jSON [<span style="color: #2a00ff">jsonMapperProduitWithCategorie</span>] permet de sérialiser / désérialiser un objet [Produit] <strong>avec</strong> sa catégorie ;</li>
-<li>lignes 43-53 : le filtre jSON [<span style="color: #2a00ff">jsonMapperCategorieWithoutProduits</span>] permet de sérialiser / désérialiser un objet [Categorie] <strong>sans</strong> ses produits ;</li>
-<li>lignes 55-64 : le filtre jSON [<span style="color: #2a00ff">jsonMapperProduitWithoutCategorie</span>] permet de sérialiser / désérialiser un objet [Produit] <strong>sans</strong> sa catégorie ;</li>
+  <li>ligne 11 : la classe est une classe de configuration Spring ;
+  </li>
+  <li>ligne 12 : qui importe les beans définis par la classe [DaoConfig] que nous venons de voir ;
+  </li>
+  <li>la couche [console] utilise des mappeurs jSON qui sont définis ici ;
+  </li>
+  <li>lignes 14-64 : définissent cinq mappeurs jSON ;
+  </li>
+  <li>lignes 15-18 : le filtre jSON [<span style="color: #2a00ff">jsonMapper</span>] n&#x27;a pas de filtres ;
+  </li>
+  <li>lignes 20-30 : le filtre jSON [<span style="color: #2a00ff">jsonMapperCategorieWithProduits</span>] permet de sérialiser / désérialiser un objet [Categorie] <b>avec</b> ses produits ;
+  </li>
+  <li>lignes 32-42 : le filtre jSON [<span style="color: #2a00ff">jsonMapperProduitWithCategorie</span>] permet de sérialiser / désérialiser un objet [Produit] <b>avec</b> sa catégorie ;
+  </li>
+  <li>lignes 43-53 : le filtre jSON [<span style="color: #2a00ff">jsonMapperCategorieWithoutProduits</span>] permet de sérialiser / désérialiser un objet [Categorie] <b>sans</b> ses produits ;
+  </li>
+  <li>lignes 55-64 : le filtre jSON [<span style="color: #2a00ff">jsonMapperProduitWithoutCategorie</span>] permet de sérialiser / désérialiser un objet [Produit] <b>sans</b> sa catégorie ;
+  </li>
 </ul>
+
 <p>On notera que l&#x27;on construit un filtre jSON pour une entité T, on doit configurer non seulement le filtre de l&#x27;entité T mais également ceux des entités Ti qu&#x27;elle-même peut contenir.</p>
 <p><a id="refheading2192562014630537"></a></p>
 <h3 id="1139-la-couche-console">11.3.9. La couche [console]</h3>
-<p>Couche[<strong>Spring Data</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>JPA</strong>]Couche[<strong>console</strong>]Couche[<strong>DAO</strong>]Spring 4SGBD</p>
+<p>Couche[<strong>DAO</strong>]Couche[<strong>console</strong>]Couche[<strong>JPA</strong>]Pilote[<strong>JDBC</strong>]Couche[<strong>Spring Data</strong>]Spring 4SGBD</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D7000000CA3A9BDE61.png" style="display:inline-block; margin:4px;width:3.979cm;height:3.739cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D7000000CA3A9BDE61.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>La classe [Main] est la suivante :</p>
@@ -3274,14 +3492,20 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 25 : instanciation des beans Spring à partir de la classe de configuration [AppConfig] ;</li>
-<li>lignes 26-33 : récupération des références sur les mappeurs jSON. On utilise la signature suivante de la méthode [ApplicationContext].getBean :<ul>
-<li><strong>[ApplicationContext].getBean(String id, Class classe)</strong> : qu&#x27;on utilise lorsqu&#x27;il y a plusieurs beans ayant le type [classe]. Dans ce cas, on précise l&#x27;identifiant du bean demandé. Si celui-ci a été défini avec l&#x27;annotation [<strong>@Bean</strong>], son identifiant est le nom de la méthode annotée. S&#x27;il a été défini avec l&#x27;annotation [<strong>@Bean(« identifiant »</strong>], son identifiant est celui indiqué dans l&#x27;annotation ;</li>
+  <li>ligne 25 : instanciation des beans Spring à partir de la classe de configuration [AppConfig] ;
+  </li>
+  <li>lignes 26-33 : récupération des références sur les mappeurs jSON. On utilise la signature suivante de la méthode [ApplicationContext].getBean :
+    <ul>
+      <li><b>[ApplicationContext].getBean(String id, Class classe)</b> : qu&#x27;on utilise lorsqu&#x27;il y a plusieurs beans ayant le type [classe]. Dans ce cas, on précise l&#x27;identifiant du bean demandé. Si celui-ci a été défini avec l&#x27;annotation [<b>@Bean</b>], son identifiant est le nom de la méthode annotée. S&#x27;il a été défini avec l&#x27;annotation [<b>@Bean(« identifiant »</b>], son identifiant est celui indiqué dans l&#x27;annotation ;
+      </li>
+    </ul>
+  </li>
+  <li>ligne 34 : récupération d&#x27;une référence sur la couche [DAO] ;
+  </li>
+  <li>lignes 37-39 : vidage de la base de données. On vide la table des catégories (ligne 39). Parce qu&#x27;on a écrit :
+  </li>
 </ul>
-</li>
-<li>ligne 34 : récupération d&#x27;une référence sur la couche [DAO] ;</li>
-<li>lignes 37-39 : vidage de la base de données. On vide la table des catégories (ligne 39). Parce qu&#x27;on a écrit :</li>
-</ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@OneToMany</span><span style="color:#000000">(fetch = FetchType.</span><span style="font-weight:bold;font-style:italic;color:#0000c0">LAZY</span><span style="color:#000000">, mappedBy = </span><span style="color:#2a00ff">&quot;categorie&quot;</span><span style="color:#000000">, </span><span style="background-color:#ff950e;color:#000000">cascade = { CascadeType.</span><span style="font-weight:bold;font-style:italic;background-color:#ff950e;color:#0000c0">ALL</span><span style="background-color:#ff950e;color:#000000"> }</span><span style="color:#000000">)</span></span>
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="font-weight:bold;color:#7f0055">public</span><span style="color:#000000"> Set&lt;Produit&gt; </span><span style="color:#0000c0">produits</span><span style="color:#000000"> = </span><span style="font-weight:bold;color:#7f0055">new</span><span style="color:#000000"> HashSet&lt;Produit&gt;();</span></span>
@@ -3289,16 +3513,26 @@
 
 <p>lorsqu&#x27;une catégorie est supprimée, tous les produits qui lui sont liés le sont aussi ;</p>
 <ul>
-<li>lignes 43-53 : remplissage de la table avec 2 catégories de 5 produits chacune. Ligne 50, l&#x27;insertion des deux catégories va provoquer en même temps l&#x27;insertion de leurs produits, toujours parce qu&#x27;on a écrit [<span style="color: #000000">cascade = { CascadeType.</span><strong><em><span style="color: #0000c0">ALL</span></em></strong><span style="color: #000000"> }</span>] ;</li>
-<li>ligne 58 : on affiche les catégories. On utilise le mappeur jSON [<span style="color: #6a3e3e">jsonMapperCategorieWithoutProduits</span>] pour afficher les catégories sans leurs produits. En effet la méthode [<span style="color: #6a3e3e">dao</span><span style="color: #000000">.getAllCategories()</span>] rend les catégories sans leurs produits (lazy loading) ;</li>
-<li>ligne 61 : on affiche les produits sans leur catégorie. En effet la méthode [<span style="color: #6a3e3e">dao</span><span style="color: #000000">.getAllProduits()</span>] rend les produits sans leur catégorie (lazy loading) ;</li>
-<li>lignes 63-65 : affichent la catégorie de nom [categorie1] avec ses produits (eager loading) ;</li>
-<li>lignes 67-69 : affiche un produit avec sa catégorie ;</li>
-<li>lignes 71-81 : on augmente de 10% tous les prix des produits de la catégorie [categorie1] ;</li>
-<li>lignes 91-101 : on ajoute une catégorie avec deux produits de même nom. Or dans la table [PRODUITS] on a une contrainte d&#x27;unicité sur la colonne [NOM]. L&#x27;insertion du 2ième produit va donc être rejetée et une exception lancée. Or la méthode [<span style="color: #6a3e3e">dao</span><span style="color: #000000">.addProduits</span>] s&#x27;exécute dans une transaction. Le fait que la seconde insertion échoue doit donc également annuler l&#x27;insertion du premier produit ainsi que celle de leur catégorie [cat1]. C&#x27;est ce qu&#x27;on veut vérifier ;</li>
-<li>lignes 119-121 : une méthode générique capable d&#x27;afficher la chaîne jSON de tout élément de type T. La sérialisation jSON est contrôlée par le mappeur passé en paramètre ;</li>
-<li>lignes 124-128 : une méthode analogue, cette-fois pour une liste d&#x27;éléments de type T ;</li>
+  <li>lignes 43-53 : remplissage de la table avec 2 catégories de 5 produits chacune. Ligne 50, l&#x27;insertion des deux catégories va provoquer en même temps l&#x27;insertion de leurs produits, toujours parce qu&#x27;on a écrit [<span style="color: #000000">cascade = { CascadeType.</span><i><b><span style="color: #0000c0">ALL</span></b></i><span style="color: #000000"> }</span>] ;
+  </li>
+  <li>ligne 58 : on affiche les catégories. On utilise le mappeur jSON [<span style="color: #6a3e3e">jsonMapperCategorieWithoutProduits</span>] pour afficher les catégories sans leurs produits. En effet la méthode [<span style="color: #6a3e3e">dao</span><span style="color: #000000">.getAllCategories()</span>] rend les catégories sans leurs produits (lazy loading) ;
+  </li>
+  <li>ligne 61 : on affiche les produits sans leur catégorie. En effet la méthode [<span style="color: #6a3e3e">dao</span><span style="color: #000000">.getAllProduits()</span>] rend les produits sans leur catégorie (lazy loading) ;
+  </li>
+  <li>lignes 63-65 : affichent la catégorie de nom [categorie1] avec ses produits (eager loading) ;
+  </li>
+  <li>lignes 67-69 : affiche un produit avec sa catégorie ;
+  </li>
+  <li>lignes 71-81 : on augmente de 10% tous les prix des produits de la catégorie [categorie1] ;
+  </li>
+  <li>lignes 91-101 : on ajoute une catégorie avec deux produits de même nom. Or dans la table [PRODUITS] on a une contrainte d&#x27;unicité sur la colonne [NOM]. L&#x27;insertion du 2ième produit va donc être rejetée et une exception lancée. Or la méthode [<span style="color: #6a3e3e">dao</span><span style="color: #000000">.addProduits</span>] s&#x27;exécute dans une transaction. Le fait que la seconde insertion échoue doit donc également annuler l&#x27;insertion du premier produit ainsi que celle de leur catégorie [cat1]. C&#x27;est ce qu&#x27;on veut vérifier ;
+  </li>
+  <li>lignes 119-121 : une méthode générique capable d&#x27;afficher la chaîne jSON de tout élément de type T. La sérialisation jSON est contrôlée par le mappeur passé en paramètre ;
+  </li>
+  <li>lignes 124-128 : une méthode analogue, cette-fois pour une liste d&#x27;éléments de type T ;
+  </li>
 </ul>
+
 <p>L&#x27;exécution de la classe [Main] donne les résultats suivants (hors logs de Spring) :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">Vidage de la base de données --------------------------------</span>
@@ -3341,13 +3575,20 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 4-17 : les catégories et produits insérés dans la table ;</li>
-<li>lignes 18-19 : une catégorie avec ses produits ;</li>
-<li>lignes 20-21 : un produit avec sa catégorie ;</li>
-<li>lignes 22-26 : mise à jour du prix de certains produits. Ligne 24, on voit que les prix ont bien augmenté de 10% ;</li>
-<li>lignes 27-36 : ajout de la catégorie [cat1] avec deux produits de même nom. On voit que la table est la même avant (lignes 28-29) et après ajout (lignes 35-36) montrant par là que toutes les insertions de la transaction ont bien été annulées ;</li>
-<li>lignes 31-34 : l&#x27;exception qui s&#x27;est produite lors de l&#x27;insertion du second produit et qui a fait échouer toute la transaction ;</li>
+  <li>lignes 4-17 : les catégories et produits insérés dans la table ;
+  </li>
+  <li>lignes 18-19 : une catégorie avec ses produits ;
+  </li>
+  <li>lignes 20-21 : un produit avec sa catégorie ;
+  </li>
+  <li>lignes 22-26 : mise à jour du prix de certains produits. Ligne 24, on voit que les prix ont bien augmenté de 10% ;
+  </li>
+  <li>lignes 27-36 : ajout de la catégorie [cat1] avec deux produits de même nom. On voit que la table est la même avant (lignes 28-29) et après ajout (lignes 35-36) montrant par là que toutes les insertions de la transaction ont bien été annulées ;
+  </li>
+  <li>lignes 31-34 : l&#x27;exception qui s&#x27;est produite lors de l&#x27;insertion du second produit et qui a fait échouer toute la transaction ;
+  </li>
 </ul>
+
 <p><a id="refheading251892391218965"></a></p>
 <h3 id="11310-le-test-unitaire-junit">11.3.10. Le test unitaire JUnit</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000049300000118B0C0B6D1.png" style="display:inline-block; margin:4px;width:15.492cm;height:3.704cm;" class="odt-zoomable" data-zoom-src="images/100000000000049300000118B0C0B6D1.png" /></td></tr></table>
@@ -3545,17 +3786,28 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 27 : le test unitaire est configuré par la classe [AppConfig] déjà présentée au paragraphe <a href="#refheading2189872014630537">11.3.8</a> ;</li>
-<li>lignes 32-33 : injection  d&#x27;une référence sur la couche [DAO] ;</li>
-<li>lignes 36-50 : injection des cinq mappeurs jSON ;</li>
-<li>lignes 60-71 : après avoir vidé la base (ligne 57), on remplit la base de données avec 2 catégories contenant chacune 5 produits. Cette méthode est exécutée avant chaque test à cause de l&#x27;annotation [@Before] de la ligne 52 ;</li>
-<li>lignes 75-93 : affiche le contenu de la base ;</li>
-<li>lignes 95-101 : demande une catégorie avec ses produits, catégorie identifiée par son nom ;</li>
-<li>lignes 103-109 : demande une catégorie sans ses produits, catégorie identifiée par son nom ;</li>
-<li>lignes 111-120 : demande un produit avec sa catégorie, produit identifié par son n° ;</li>
-<li>lignes 122-130 : demande un produit sans sa catégorie, produit identifié par son n° ;</li>
-<li>lignes 133-184 : des méthodes privées partagées par les différents tests ;</li>
+  <li>ligne 27 : le test unitaire est configuré par la classe [AppConfig] déjà présentée au paragraphe <a href="#refheading2189872014630537">11.3.8</a> ;
+  </li>
+  <li>lignes 32-33 : injection  d&#x27;une référence sur la couche [DAO] ;
+  </li>
+  <li>lignes 36-50 : injection des cinq mappeurs jSON ;
+  </li>
+  <li>lignes 60-71 : après avoir vidé la base (ligne 57), on remplit la base de données avec 2 catégories contenant chacune 5 produits. Cette méthode est exécutée avant chaque test à cause de l&#x27;annotation [@Before] de la ligne 52 ;
+  </li>
+  <li>lignes 75-93 : affiche le contenu de la base ;
+  </li>
+  <li>lignes 95-101 : demande une catégorie avec ses produits, catégorie identifiée par son nom ;
+  </li>
+  <li>lignes 103-109 : demande une catégorie sans ses produits, catégorie identifiée par son nom ;
+  </li>
+  <li>lignes 111-120 : demande un produit avec sa catégorie, produit identifié par son n° ;
+  </li>
+  <li>lignes 122-130 : demande un produit sans sa catégorie, produit identifié par son n° ;
+  </li>
+  <li>lignes 133-184 : des méthodes privées partagées par les différents tests ;
+  </li>
 </ul>
+
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : exécutez le test. Il doit réussir.</p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
@@ -3584,13 +3836,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 12 : la balise [<span style="color: #008080">&lt;</span><span style="color: #3f7f7f">root</span> <span style="color: #7f007f">level</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;info&quot;</span></em><span style="color: #008080">&gt;</span>] affiche les logs de niveau [info]. A la place de [info], on peut mettre :<ul>
-<li>[debug] : c&#x27;est le niveau le plus détaillé de logs. Il est conseillé de l&#x27;utiliser pendant la phase de débogage du projet car il y a des logs très intéressants sur les échanges client / serveur. C&#x27;est une façon de comprendre ce qui se passe &#x27;sous le capot&#x27; ;</li>
-<li>[off] : pas de logs du tout ;</li>
-<li>[warn] : un niveau de logs intermédiaire où Spring affiche des anomalies qui ne pas pour autant des erreurs. Il faut les regarder si on n&#x27;obtient pas le résultat escompté ;</li>
+  <li>ligne 12 : la balise [<span style="color: #008080">&lt;</span><span style="color: #3f7f7f">root</span> <span style="color: #7f007f">level</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;info&quot;</span></i><span style="color: #008080">&gt;</span>] affiche les logs de niveau [info]. A la place de [info], on peut mettre :
+    <ul>
+      <li>[debug] : c&#x27;est le niveau le plus détaillé de logs. Il est conseillé de l&#x27;utiliser pendant la phase de débogage du projet car il y a des logs très intéressants sur les échanges client / serveur. C&#x27;est une façon de comprendre ce qui se passe &#x27;sous le capot&#x27; ;
+      </li>
+      <li>[off] : pas de logs du tout ;
+      </li>
+      <li>[warn] : un niveau de logs intermédiaire où Spring affiche des anomalies qui ne pas pour autant des erreurs. Il faut les regarder si on n&#x27;obtient pas le résultat escompté ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
 <p><strong>Travail à faire</strong> : passez le niveau de la ligne 12 à [debug] puis exécutez le test unitaire. Regardez la différence de logs.</p>
 <hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />

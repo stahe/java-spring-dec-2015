@@ -1333,36 +1333,57 @@
 <p><strong>Mots clés</strong> : architecture multicouche, Spring, injection de dépendances.</p>
 <p>Spring est apparu en 2004 d&#x27;abord en tant que <strong>conteneur d&#x27;objets</strong>. Depuis, il a évolué en de multiple ramifications : Spring MVC, Spring Data, Spring Batch, ... [<a href="http://spring.io/">http://spring.io</a>]. Nous ne présentons dans ce chapitre que le conteneur d&#x27;objets. Voici quelques points de repère :</p>
 <ul>
-<li>une application a de multiples classes et certaines d&#x27;entre-elles se partagent des objets qui doivent être uniques (singletons). Spring crée et gère ces singletons ;</li>
-<li>Spring place ces singletons dans une structure appelée <strong>contexte</strong> ;</li>
-<li>les classes ont accès aux singletons de l&#x27;application en les demandant à Spring via leur nom, leur type ou les deux ;</li>
-<li>Spring crée les singletons et gère leurs dépendances éventuelles : un singleton peut en effet avoir des références sur un ou plusieurs autres singletons. Lorsque Spring crée un singleton, il crée également leurs dépendances ;</li>
-<li>lorsqu&#x27;une application s&#x27;appuyant sur Spring démarre, elle peut demander à Spring de créer tous les singletons de l&#x27;application. Ceux-ci seront ensuite disponibles dans le contexte de Spring ;</li>
-<li>Spring facilite l&#x27;utilisation des <strong>architectures en couches</strong> et la <strong>programmation par interfaces</strong>. Dans les cas simples, chaque couche est implémentée par un singleton et implémente une interface. Si l&#x27;application travaille avec les interfaces des couches et non avec leurs classes d&#x27;implémentation, alors on obtient une architecture évolutive qui permet de changer l&#x27;implémentation d&#x27;une couche sans changer les autres grâce aux deux caractéristiques suivantes :<ul>
-<li>l&#x27;application obtient une référence sur la couche via son nom. Spring lui délivre une référence sur la classe implémentant la couche ;</li>
-<li>l&#x27;application utilise cette référence comme celle de l&#x27;interface de la couche et non comme celle d&#x27;une classe ;</li>
+  <li>une application a de multiples classes et certaines d&#x27;entre-elles se partagent des objets qui doivent être uniques (singletons). Spring crée et gère ces singletons ;
+  </li>
+  <li>Spring place ces singletons dans une structure appelée <b>contexte</b> ;
+  </li>
+  <li>les classes ont accès aux singletons de l&#x27;application en les demandant à Spring via leur nom, leur type ou les deux ;
+  </li>
+  <li>Spring crée les singletons et gère leurs dépendances éventuelles : un singleton peut en effet avoir des références sur un ou plusieurs autres singletons. Lorsque Spring crée un singleton, il crée également leurs dépendances ;
+  </li>
+  <li>lorsqu&#x27;une application s&#x27;appuyant sur Spring démarre, elle peut demander à Spring de créer tous les singletons de l&#x27;application. Ceux-ci seront ensuite disponibles dans le contexte de Spring ;
+  </li>
+  <li>Spring facilite l&#x27;utilisation des <b>architectures en couches</b> et la <b>programmation par interfaces</b>. Dans les cas simples, chaque couche est implémentée par un singleton et implémente une interface. Si l&#x27;application travaille avec les interfaces des couches et non avec leurs classes d&#x27;implémentation, alors on obtient une architecture évolutive qui permet de changer l&#x27;implémentation d&#x27;une couche sans changer les autres grâce aux deux caractéristiques suivantes :
+    <ul>
+      <li>l&#x27;application obtient une référence sur la couche via son nom. Spring lui délivre une référence sur la classe implémentant la couche ;
+      </li>
+      <li>l&#x27;application utilise cette référence comme celle de l&#x27;interface de la couche et non comme celle d&#x27;une classe ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>La déclaration des singletons peut être faite de trois façons qui peuvent être mixées :</p>
 <ul>
-<li>au sein d&#x27;un fichier XML,</li>
-<li>dans une classe spéciale de configuration ;</li>
-<li>avec toute classe à l&#x27;aide d&#x27;annotations ;</li>
+  <li>au sein d&#x27;un fichier XML,
+  </li>
+  <li>dans une classe spéciale de configuration ;
+  </li>
+  <li>avec toute classe à l&#x27;aide d&#x27;annotations ;
+  </li>
 </ul>
+
 <p>Nous présentons dans la suite trois exemples de configuration :</p>
 <ul>
-<li>[exemple-01] : configuration centralisée dans un unique fichier XML ;</li>
-<li>[exemple-02] : configuration centralisée dans une unique classe Java ;</li>
-<li>[exemple-03] : configuration distribuée sur plusieurs classes Java ;</li>
+  <li>[exemple-01] : configuration centralisée dans un unique fichier XML ;
+  </li>
+  <li>[exemple-02] : configuration centralisée dans une unique classe Java ;
+  </li>
+  <li>[exemple-03] : configuration distribuée sur plusieurs classes Java ;
+  </li>
 </ul>
+
 <p>Le dernier exemple [exemple-04] s&#x27;intéresse à la configuration Spring d&#x27;une architecture en couches. C&#x27;est l&#x27;exemple le plus important. C&#x27;est lui qui sera repris constamment pour configurer les architectures du document.</p>
 <p>Ces quatre exemples posent les bases de ce qui suit :</p>
 <ul>
-<li>configuration Spring et injection de dépendances ;</li>
-<li>utilisation de Maven pour gérer les dépendances d&#x27;un projet ;</li>
-<li>utilisation de JUnit pour tester les projets ;</li>
+  <li>configuration Spring et injection de dépendances ;
+  </li>
+  <li>utilisation de Maven pour gérer les dépendances d&#x27;un projet ;
+  </li>
+  <li>utilisation de JUnit pour tester les projets ;
+  </li>
 </ul>
+
 <p><a id="refheading17454469506693"></a></p>
 <h2 id="51-support">5.1. Support</h2>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B4000000C9831547A3.png" style="display:inline-block; margin:4px;width:3.33cm;height:3.72cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B4000000C9831547A3.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000A4000000B4309421B7.png" style="display:inline-block; margin:4px;width:3.039cm;height:3.33cm;" class="odt-zoomable" data-zoom-src="images/10000000000000A4000000B4309421B7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1514,18 +1535,28 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 2, 27 : les singletons sont définis au sein d&#x27;une balise &lt;<strong>beans</strong>&gt; ;</li>
-<li>lignes 6-10 : chaque singleton est défini par une balise &lt;<strong>bean</strong>&gt; ;</li>
-<li>ligne 6 : [id] est l&#x27;identifiant du singleton. [class] est le nom complet de la classe à instancier ;</li>
-<li>lignes 7-9 : les trois valeurs à passer au constructeur de la classe [Personne] ;</li>
-<li>lignes 12-16 : la classe [Personne] est d&#x27;abord créée avec son constructeur par défaut [new Personne()]. Puis pour chaque balise [property], un setter de la classe est utilisé. Par exemple pour la ligne 13, la méthode [<strong>setNom</strong>(&quot;martin&quot;)] va être exécutée. Il faut donc que la méthode [<strong>setNom</strong>] existe. C&#x27;est un point important à se rappeler ;</li>
-<li>lignes 18-21 : la balise &lt;util:list&gt; permet de définir un singleton qui est une liste ;</li>
-<li>ligne 19 : désigne le singleton [personne_01] défini ligne 6. On a là ce qu&#x27;on appelle une <strong>injection de dépendances</strong>. Deux attributs sont utilisables pour initialiser le champ d&#x27;un singleton :<ul>
-<li>[value] : pour affecter au champ une valeur primitive (chaîne, nombre, date, ...),</li>
-<li>[ref] : pour affecter au champ la référence d&#x27;un objet Spring ;</li>
+  <li>lignes 2, 27 : les singletons sont définis au sein d&#x27;une balise &lt;<b>beans</b>&gt; ;
+  </li>
+  <li>lignes 6-10 : chaque singleton est défini par une balise &lt;<b>bean</b>&gt; ;
+  </li>
+  <li>ligne 6 : [id] est l&#x27;identifiant du singleton. [class] est le nom complet de la classe à instancier ;
+  </li>
+  <li>lignes 7-9 : les trois valeurs à passer au constructeur de la classe [Personne] ;
+  </li>
+  <li>lignes 12-16 : la classe [Personne] est d&#x27;abord créée avec son constructeur par défaut [new Personne()]. Puis pour chaque balise [property], un setter de la classe est utilisé. Par exemple pour la ligne 13, la méthode [<b>setNom</b>(&quot;martin&quot;)] va être exécutée. Il faut donc que la méthode [<b>setNom</b>] existe. C&#x27;est un point important à se rappeler ;
+  </li>
+  <li>lignes 18-21 : la balise &lt;util:list&gt; permet de définir un singleton qui est une liste ;
+  </li>
+  <li>ligne 19 : désigne le singleton [personne_01] défini ligne 6. On a là ce qu&#x27;on appelle une <b>injection de dépendances</b>. Deux attributs sont utilisables pour initialiser le champ d&#x27;un singleton :
+    <ul>
+      <li>[value] : pour affecter au champ une valeur primitive (chaîne, nombre, date, ...),
+      </li>
+      <li>[ref] : pour affecter au champ la référence d&#x27;un objet Spring ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><strong>Note</strong> : le fichier de configuration Spring peut être généré de la façon suivante [1-4] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000063C00000454195FBF13.png" style="display:inline-block; margin:4px;width:17.999cm;height:12.494cm;" class="odt-zoomable" data-zoom-src="images/100000000000063C00000454195FBF13.png" /></td></tr></table>
 
@@ -1572,48 +1603,67 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 14 : crée le contexte Spring. Tous les singletons définis dans le fichier [config-01.xml] sont alors instanciés ;</li>
-<li>ligne 16 : demande une référence sur le singleton identifié par [personne_01] de type [Personne]. Ce second paramètre est facultatif mais alors on reçoit une référence sur un type [Object], référence qu&#x27;il faut alors transtyper vers le type [Personne] ;</li>
-<li>ligne 19 : on n&#x27;utilise pas le nom du bean mais uniquement son type car il n&#x27;y a qu&#x27;un singleton de type [Appartement] ;</li>
-<li>ligne 18 : on a utilisé à la fois l&#x27;identifiant et le type du singleton désiré. L&#x27;identifiant est superflu puisque qu&#x27;il n&#x27;y a qu&#x27;un singleton de type [<strong><span style="color: #7f0055">new</span></strong><span style="color: #000000"> ArrayList&lt;Personne&gt;().getClass()</span>] ;</li>
-<li>lignes 32-33 : montrent que si on demande plusieurs fois le même singleton, on obtient bien toujours la même référence, montrant par là qu&#x27;on a bien affaire à un singleton. Ce point est important à comprendre ;</li>
+  <li>ligne 14 : crée le contexte Spring. Tous les singletons définis dans le fichier [config-01.xml] sont alors instanciés ;
+  </li>
+  <li>ligne 16 : demande une référence sur le singleton identifié par [personne_01] de type [Personne]. Ce second paramètre est facultatif mais alors on reçoit une référence sur un type [Object], référence qu&#x27;il faut alors transtyper vers le type [Personne] ;
+  </li>
+  <li>ligne 19 : on n&#x27;utilise pas le nom du bean mais uniquement son type car il n&#x27;y a qu&#x27;un singleton de type [Appartement] ;
+  </li>
+  <li>ligne 18 : on a utilisé à la fois l&#x27;identifiant et le type du singleton désiré. L&#x27;identifiant est superflu puisque qu&#x27;il n&#x27;y a qu&#x27;un singleton de type [<b><span style="color: #7f0055">new</span></b><span style="color: #000000"> ArrayList&lt;Personne&gt;().getClass()</span>] ;
+  </li>
+  <li>lignes 32-33 : montrent que si on demande plusieurs fois le même singleton, on obtient bien toujours la même référence, montrant par là qu&#x27;on a bien affaire à un singleton. Ce point est important à comprendre ;
+  </li>
 </ul>
+
 <p><strong>Note</strong> : une classe exécutable peut être générée de la façon suivante [1-6] :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000480000002287489348E.png" style="display:inline-block; margin:4px;width:15.24cm;height:7.303cm;" class="odt-zoomable" data-zoom-src="images/1000000000000480000002287489348E.png" /></td></tr></table>
 
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000375000003148D450C5D.png" style="display:inline-block; margin:4px;width:11.709cm;height:10.425cm;" class="odt-zoomable" data-zoom-src="images/1000000000000375000003148D450C5D.png" /></td></tr></table>
 
 <ul>
-<li>c&#x27;est le fait de cocher [6] qui va faire que la classe générée va contenir une méthode statique [main] qui va la rendre exécutable ;</li>
+  <li>c&#x27;est le fait de cocher [6] qui va faire que la classe générée va contenir une méthode statique [main] qui va la rendre exécutable ;
+  </li>
 </ul>
+
 <p><a id="refheading78433838046689"></a></p>
 <h3 id="526-les-dependances-du-projet">5.2.6. Les dépendances du projet</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000011D000001401CAF2AA2.png" style="display:inline-block; margin:4px;width:5.241cm;height:5.92cm;" class="odt-zoomable" data-zoom-src="images/100000000000011D000001401CAF2AA2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <ul>
-<li>dépendances Spring : [spring-core, spring-beans, spring-context, spring-expression, commons-logging] ;</li>
+  <li>dépendances Spring : [spring-core, spring-beans, spring-context, spring-expression, commons-logging] ;
+  </li>
 </ul>
+
 <p>Les dépendances sont ajoutées au projet de la façon suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000381000002A8CF759027.png" style="display:inline-block; margin:4px;width:11.867cm;height:8.996cm;" class="odt-zoomable" data-zoom-src="images/1000000000000381000002A8CF759027.png" /></td></tr></table>
 
 <ul>
-<li>en [1] : clic droit sur le projet / [Build Path] / [Configure Build Path] ;</li>
+  <li>en [1] : clic droit sur le projet / [Build Path] / [Configure Build Path] ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000038A0000013FB29E77D9.png" style="display:inline-block; margin:4px;width:11.986cm;height:4.221cm;" class="odt-zoomable" data-zoom-src="images/100000000000038A0000013FB29E77D9.png" /></td></tr></table>
 
 <ul>
-<li>en [2] : [Add JARs] si les JARs à ajouter sont dans un dossier du projet. Sinon [Add External JARs] ;</li>
+  <li>en [2] : [Add JARs] si les JARs à ajouter sont dans un dossier du projet. Sinon [Add External JARs] ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001DA000001B90B0E735E.png" style="display:inline-block; margin:4px;width:6.271cm;height:5.835cm;" class="odt-zoomable" data-zoom-src="images/10000000000001DA000001B90B0E735E.png" /></td></tr></table>
 
 <ul>
-<li>en [3], sélectionnez les JARs à ajouter au ClassPath du projet (ils sont ici dans le dossier [lib] à l&#x27;intérieur du projet) ;</li>
+  <li>en [3], sélectionnez les JARs à ajouter au ClassPath du projet (ils sont ici dans le dossier [lib] à l&#x27;intérieur du projet) ;
+  </li>
 </ul>
+
 <p><strong>Définition</strong> : le [ClassPath] d&#x27;un projet est l&#x27;ensemble des dossiers explorés par la JVM (Java Virtual Machine) qui exécute le projet, pour trouver une classe référencée par celui-ci. Pour un projet Eclipse, le [ClassPath] est formé des éléments suivants :</p>
 <ul>
-<li>le dossier [bin] du projet ;</li>
-<li>les éléments du [Build Path] du projet ;</li>
+  <li>le dossier [bin] du projet ;
+  </li>
+  <li>les éléments du [Build Path] du projet ;
+  </li>
 </ul>
+
 <p>Le dossier [bin] est le dossier produit par la compilation du dossier [src]. Donc tout ce qui est placé dans le dossier [src] fait automatiquement partie du [ClassPath] (même si ce n&#x27;est pas un fichier .java). Donc dans le projet précédent, le fichier de configuration de spring [config-01.xml] qui est dans le dossier [src] fera partie du [Classpath] du projet à l&#x27;exécution.</p>
 <p><a id="refheading78435838046689"></a></p>
 <h3 id="527-les-resultats">5.2.7. Les résultats</h3>
@@ -1692,10 +1742,14 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 9 : l&#x27;annotation [@Configuration] est une annotation Spring. Elle indique que la classe annotée définit des singletons. Ceux-ci sont définis à l&#x27;aide de l&#x27;annotation [@Bean]. Spring va exécuter toutes les méthodes annotées par [@Bean]. Celles-ci créent les singletons de l&#x27;application ;</li>
-<li>lignes 12-15 : définit un singleton identifié par [personne_01], ç-à-d le nom de la méthode.</li>
-<li>ligne 23 : les paramètres [personne_01, personne_02] portent les noms de singletons. Spring va automatiquement les initialiser avec les références de ces singletons. On parle d&#x27;injection de paramètres ;</li>
+  <li>ligne 9 : l&#x27;annotation [@Configuration] est une annotation Spring. Elle indique que la classe annotée définit des singletons. Ceux-ci sont définis à l&#x27;aide de l&#x27;annotation [@Bean]. Spring va exécuter toutes les méthodes annotées par [@Bean]. Celles-ci créent les singletons de l&#x27;application ;
+  </li>
+  <li>lignes 12-15 : définit un singleton identifié par [personne_01], ç-à-d le nom de la méthode.
+  </li>
+  <li>ligne 23 : les paramètres [personne_01, personne_02] portent les noms de singletons. Spring va automatiquement les initialiser avec les références de ces singletons. On parle d&#x27;injection de paramètres ;
+  </li>
 </ul>
+
 <p>Cette façon de configurer les singletons est plus explicite que celle qui utilise le fichier XML. En fait, on reproduit nous-mêmes ce que faisait Spring implicitement à partir du fichier XML.</p>
 <p><a id="refheading78443838046689"></a></p>
 <h3 id="533-la-classe-executable">5.3.3. La classe exécutable</h3>
@@ -1739,9 +1793,12 @@
 </code></pre></div>
 
 <ul>
-<li>la ligne 13 provoque l&#x27;instanciation de tous les beans définis dans la classe [Config] ;</li>
-<li>le reste du code ne change pas ;</li>
+  <li>la ligne 13 provoque l&#x27;instanciation de tous les beans définis dans la classe [Config] ;
+  </li>
+  <li>le reste du code ne change pas ;
+  </li>
 </ul>
+
 <p><a id="refheading78445838046689"></a></p>
 <h3 id="534-les-dependances-du-projet">5.3.4. Les dépendances du projet</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D0000000DACB9D0C84.png" style="display:inline-block; margin:4px;width:3.851cm;height:4.039cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D0000000DACB9D0C84.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000118000000FE63D89BAA.png" style="display:inline-block; margin:4px;width:5.181cm;height:4.701cm;" class="odt-zoomable" data-zoom-src="images/1000000000000118000000FE63D89BAA.png" /></td></tr></table>
@@ -1794,21 +1851,32 @@
 
 <p>La gestion à la main des dépendances d&#x27;un projet devient un casse-tête lorsqu&#x27;on utilise des bibliothèques Java dont on ne connaît pas les dépendances. Ainsi le framework [Hibernate] qui gère l&#x27;accès aux bases de données a des dizaines de dépendances. Le projet [Maven] résoud ce problème. On nomme la dépendance dont on a besoin. Celle-ci est cherchée automatiquement dans des dépôts Maven répartis sur le net. Si la dépendance demandée a elle-même des dépendances, alors celles-ci sont automatiquement téléchargées également. Ces dépendances téléchargées sont stockées dans un dépôt local au poste. Si une autre application a besoin plus tard de la même dépendance, celle-ci ne sera pas téléchargée mais cherchée dans le dépôt local. Une dépendance est caractérisée par les éléments suivants :</p>
 <ul>
-<li>ligne 17 : une balise &lt;dependency&gt; ;</li>
-<li>ligne 18 : un attribut [groupId] qui identifie en général l&#x27;entreprise qui a créé la dépendance ;</li>
-<li>ligne 19 : un attribut [artifactId] qui identifie la dépendance ;</li>
-<li>ligne 20 :  un attribut [version] qui identifie la version désirée ;</li>
+  <li>ligne 17 : une balise &lt;dependency&gt; ;
+  </li>
+  <li>ligne 18 : un attribut [groupId] qui identifie en général l&#x27;entreprise qui a créé la dépendance ;
+  </li>
+  <li>ligne 19 : un attribut [artifactId] qui identifie la dépendance ;
+  </li>
+  <li>ligne 20 :  un attribut [version] qui identifie la version désirée ;
+  </li>
 </ul>
+
 <p>La génération du projet va elle-même produire un composant Maven défini par les lignes 4-8 :</p>
 <ul>
-<li>lignes 4-6 : les attributs [ groupId, artifactId,version] que nous venons de décrire ;</li>
-<li>lignes 7-8 : sont des attributs facultatifs ;</li>
+  <li>lignes 4-6 : les attributs [ groupId, artifactId,version] que nous venons de décrire ;
+  </li>
+  <li>lignes 7-8 : sont des attributs facultatifs ;
+  </li>
 </ul>
+
 <p>Nous allons revenir un peu plus loin sur le rôle des lignes 24-40. Pour transformer un projet Eclipse ordinaire en un projet Maven, il faut faire deux choses :</p>
 <ul>
-<li>créer le fichier [pom.xml] précédent ;</li>
-<li>déclarer que le projet est désormais un projet Maven [1-4] :</li>
+  <li>créer le fichier [pom.xml] précédent ;
+  </li>
+  <li>déclarer que le projet est désormais un projet Maven [1-4] :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000630000005599C8903AB.png" style="display:inline-block; margin:4px;width:17.999cm;height:15.556cm;" class="odt-zoomable" data-zoom-src="images/1000000000000630000005599C8903AB.png" /></td></tr></table>
 
 <p>L&#x27;icône d&#x27;un projet <strong>M</strong>aven a un <strong>M</strong> [4]. Le <strong>S</strong> indique que le projet a des éléments <strong>S</strong>pring. Il est déconseillé de transformer (comme nous venons de le faire) un projet Eclipse en projet Maven car alors le projet n&#x27;a pas la structure attendue pour un projet Maven ce qui peut amener parfois des problèmes inattendus.</p>
@@ -1854,24 +1922,37 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000420000001B012B07181.png" style="display:inline-block; margin:4px;width:13.97cm;height:5.715cm;" class="odt-zoomable" data-zoom-src="images/1000000000000420000001B012B07181.png" /></td></tr></table>
 
 <ul>
-<li>en [3b] : désignez un dossier vide où sera généré le projet ;</li>
+  <li>en [3b] : désignez un dossier vide où sera généré le projet ;
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000502000001E727D0DA44.png" style="display:inline-block; margin:4px;width:16.96cm;height:6.443cm;" class="odt-zoomable" data-zoom-src="images/1000000000000502000001E727D0DA44.png" /></td></tr></table>
 
 <ul>
-<li>en [4] : l&#x27;identifiant du groupe Maven auquel appartiendra le projet ;</li>
-<li>en [5] : le nom de l&#x27;artifact Maven produit :</li>
-<li>en [6] : sa version ;</li>
-<li>en [7]: son mode de packaging (il existe également war, ear, apk, ...) ;</li>
-<li>en [8] : le projet ainsi créé ;</li>
+  <li>en [4] : l&#x27;identifiant du groupe Maven auquel appartiendra le projet ;
+  </li>
+  <li>en [5] : le nom de l&#x27;artifact Maven produit :
+  </li>
+  <li>en [6] : sa version ;
+  </li>
+  <li>en [7]: son mode de packaging (il existe également war, ear, apk, ...) ;
+  </li>
+  <li>en [8] : le projet ainsi créé ;
+  </li>
 </ul>
+
 <p>Un projet Maven a par défaut, une arborescence précise :</p>
 <ul>
-<li>[src / main / java] : les codes source du projet. Les produits compilés de ces sources iront dans le dossier [target/classes] du projet ;</li>
-<li>[src / main / resources] : les ressources qui doivent être dans le Classpath du projet sans pour autant être des sources Java. Elles seront recopiées telles-quelles dans le dossier [target/classes] du projet ;</li>
-<li>[src / test / java] : les codes source des tests du projet. Les produits compilés de ces sources iront dans le dossier [target/test-classes] du projet. Ces éléments ne sont pas intégrés dans l&#x27;archive Maven du projet ;</li>
-<li>[src / test / resources] : les ressources qui doivent être dans le Classpath du projet pour les tests sans pour autant être des sources Java. Elles seront recopiées telles-quelles dans le dossier [target/test-classes] du projet ;</li>
+  <li>[src / main / java] : les codes source du projet. Les produits compilés de ces sources iront dans le dossier [target/classes] du projet ;
+  </li>
+  <li>[src / main / resources] : les ressources qui doivent être dans le Classpath du projet sans pour autant être des sources Java. Elles seront recopiées telles-quelles dans le dossier [target/classes] du projet ;
+  </li>
+  <li>[src / test / java] : les codes source des tests du projet. Les produits compilés de ces sources iront dans le dossier [target/test-classes] du projet. Ces éléments ne sont pas intégrés dans l&#x27;archive Maven du projet ;
+  </li>
+  <li>[src / test / resources] : les ressources qui doivent être dans le Classpath du projet pour les tests sans pour autant être des sources Java. Elles seront recopiées telles-quelles dans le dossier [target/test-classes] du projet ;
+  </li>
 </ul>
+
 <p>Nous complétons le projet de la façon suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000F0000001354C1F466D.png" style="display:inline-block; margin:4px;width:4.45cm;height:5.72cm;" class="odt-zoomable" data-zoom-src="images/10000000000000F0000001354C1F466D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1939,13 +2020,20 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 11 : le projet est codé en UTF-8 ;</li>
-<li>ligne 12 : on utilise un JDK 1.8 pour compiler le projet ;</li>
-<li>lignes 16-20 : pour les projets utilisant les bibliothèques Spring, il est pratique d&#x27;utiliser un projet Maven parent appelé [spring-boot-starter-parent]. Celui-ci définit les versions de différentes bibliothèques Spring ainsi que celles de leurs dépendances. Ceci permet de ne plus les définir dans la définition des dépendances. Ainsi lignes 24-27 on ne précise pas la version de [spring-context] désirée. Ce sera celle définie par le projet parent [spring-boot-starter-parent]. Cette technique permet de ne pas se soucier d&#x27;éventuelles incompatibilités de versions entre dépendances. Celles définies  par le projet parent sont compatibles entre-elles ;</li>
-<li>lignes 29-32 : Spring écrit un nombre important d&#x27;informations sur la console au travers d&#x27;une bibliothèque de logs. Celle-ci est importée ici ;</li>
-<li>lignes 40-47 : un plugin Maven sur lequel nous allons revenir ;</li>
-<li>lignes 50-52 : le plugin de génération de l&#x27;artifact Maven du projet ;</li>
+  <li>ligne 11 : le projet est codé en UTF-8 ;
+  </li>
+  <li>ligne 12 : on utilise un JDK 1.8 pour compiler le projet ;
+  </li>
+  <li>lignes 16-20 : pour les projets utilisant les bibliothèques Spring, il est pratique d&#x27;utiliser un projet Maven parent appelé [spring-boot-starter-parent]. Celui-ci définit les versions de différentes bibliothèques Spring ainsi que celles de leurs dépendances. Ceci permet de ne plus les définir dans la définition des dépendances. Ainsi lignes 24-27 on ne précise pas la version de [spring-context] désirée. Ce sera celle définie par le projet parent [spring-boot-starter-parent]. Cette technique permet de ne pas se soucier d&#x27;éventuelles incompatibilités de versions entre dépendances. Celles définies  par le projet parent sont compatibles entre-elles ;
+  </li>
+  <li>lignes 29-32 : Spring écrit un nombre important d&#x27;informations sur la console au travers d&#x27;une bibliothèque de logs. Celle-ci est importée ici ;
+  </li>
+  <li>lignes 40-47 : un plugin Maven sur lequel nous allons revenir ;
+  </li>
+  <li>lignes 50-52 : le plugin de génération de l&#x27;artifact Maven du projet ;
+  </li>
 </ul>
+
 <p><a id="refheading78451838046689"></a></p>
 <h3 id="543-la-classe-de-configuration-de-spring">5.4.3. La classe de configuration de Spring</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000C7000000912C7701B6.png" style="display:inline-block; margin:4px;width:3.679cm;height:2.679cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C7000000912C7701B6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1993,12 +2081,16 @@
 </code></pre></div>
 
 <ul>
-<li>on retrouve là un code déjà commenté avec deux nouveautés :<ul>
-<li>ligne 13 : indique qu&#x27;il y a d&#x27;autres beans à instancier dans le package [<span style="color: #2a00ff">spring.core.entities</span>],</li>
-<li>lignes 34-37 : un bean [mySurface] ;</li>
+  <li>on retrouve là un code déjà commenté avec deux nouveautés :
+    <ul>
+      <li>ligne 13 : indique qu&#x27;il y a d&#x27;autres beans à instancier dans le package [<span style="color: #2a00ff">spring.core.entities</span>],
+      </li>
+      <li>lignes 34-37 : un bean [mySurface] ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><a id="refheading78453838046689"></a></p>
 <h3 id="544-la-classe-appartement">5.4.4. La classe [Appartement]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000CB0000009067F100C7.png" style="display:inline-block; margin:4px;width:3.761cm;height:2.671cm;" class="odt-zoomable" data-zoom-src="images/10000000000000CB0000009067F100C7.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -2048,13 +2140,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 7 : l&#x27;annotation [@Component] indique à Spring que la classe est un singleton que le framework doit instancier et gérer. C&#x27;est parce que dans la classe [Config], nous avons écrit [<span style="color: #646464">@ComponentScan</span><span style="color: #000000">({ </span><span style="color: #2a00ff">&quot;istia.st.spring.core.entities&quot;</span><span style="color: #000000"> })</span>] que ce singleton va être trouvé ;</li>
-<li>ligne 11 : demande à Spring d&#x27;injecter dans le champ la référence d&#x27;un des singletons. Celui-ci peut être défini de deux façons :<ul>
-<li>par son identifiant (lignes 12, 16),</li>
-<li>par son type s&#x27;il n&#x27;y a qu&#x27;un singleton ayant ce type ;</li>
+  <li>ligne 7 : l&#x27;annotation [@Component] indique à Spring que la classe est un singleton que le framework doit instancier et gérer. C&#x27;est parce que dans la classe [Config], nous avons écrit [<span style="color: #646464">@ComponentScan</span><span style="color: #000000">({ </span><span style="color: #2a00ff">&quot;istia.st.spring.core.entities&quot;</span><span style="color: #000000"> })</span>] que ce singleton va être trouvé ;
+  </li>
+  <li>ligne 11 : demande à Spring d&#x27;injecter dans le champ la référence d&#x27;un des singletons. Celui-ci peut être défini de deux façons :
+    <ul>
+      <li>par son identifiant (lignes 12, 16),
+      </li>
+      <li>par son type s&#x27;il n&#x27;y a qu&#x27;un singleton ayant ce type ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><a id="refheading1051282082896917"></a></p>
 <h3 id="545-execution-du-projet">5.4.5. Exécution du projet</h3>
 <p>L&#x27;exécution du projet donne le résultat suivant dans la console :</p>
@@ -2085,8 +2182,10 @@
 <a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="nx">beans</span><span class="w"> </span><span class="p">[</span><span class="nx">p01</span><span class="p">,</span><span class="nx">p01b</span><span class="p">]</span><span class="w"> </span><span class="nx">identiques</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="kc">true</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lignes 1-3 : Spring génère un très grand nombre de logs, plusieurs dizaines de lignes. Ces logs peuvent être très utiles pour déboguer un projet qui ne marche pas. Lorsqu&#x27;il fonctionne, on peut réduire les logs de la façon suivante :</li>
+  <li>lignes 1-3 : Spring génère un très grand nombre de logs, plusieurs dizaines de lignes. Ces logs peuvent être très utiles pour déboguer un projet qui ne marche pas. Lorsqu&#x27;il fonctionne, on peut réduire les logs de la façon suivante :
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000EE000000C927997B07.png" style="display:inline-block; margin:4px;width:4.41cm;height:3.72cm;" class="odt-zoomable" data-zoom-src="images/10000000000000EE000000C927997B07.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p>Dans le dossier [src / main / resources] on crée le fichier [logback.xml] suivant :</p>
@@ -2109,8 +2208,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 12, on fixe le niveau des logs. [debug] est un niveau très détaillé, [info] beaucoup moins ;</li>
+  <li>ligne 12, on fixe le niveau des logs. [debug] est un niveau très détaillé, [info] beaucoup moins ;
+  </li>
 </ul>
+
 <p>Voici les résultats avec [level=info] :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
@@ -2162,24 +2263,35 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003DB0000018947338836.png" style="display:inline-block; margin:4px;width:13.058cm;height:5.2cm;" class="odt-zoomable" data-zoom-src="images/10000000000003DB0000018947338836.png" /></td></tr></table>
 
 <ul>
-<li>[4-6] représentent une configuration d&#x27;exécution Maven ;</li>
-<li>en [4], mettre un nom quelconque ;</li>
-<li>en [5], désigner le dossier du projet ;</li>
-<li>en [6], mettre les cibles Maven (goals) :<ul>
-<li>[clean] : le dossier [target] du projet est supprimé ;</li>
-<li>[compile] : le projet est compilé. Les produits de la compilation sont placés dans un dossier [target] régénéré ;</li>
-<li>[assembly:single] : les classes du projet et de ses dépendances sont placées dans une unique archive jar dans le dossier [target] ;</li>
+  <li>[4-6] représentent une configuration d&#x27;exécution Maven ;
+  </li>
+  <li>en [4], mettre un nom quelconque ;
+  </li>
+  <li>en [5], désigner le dossier du projet ;
+  </li>
+  <li>en [6], mettre les cibles Maven (goals) :
+    <ul>
+      <li>[clean] : le dossier [target] du projet est supprimé ;
+      </li>
+      <li>[compile] : le projet est compilé. Les produits de la compilation sont placés dans un dossier [target] régénéré ;
+      </li>
+      <li>[assembly:single] : les classes du projet et de ses dépendances sont placées dans une unique archive jar dans le dossier [target] ;
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p>Après exécution, on obtient le résultat suivant :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005580000046E37D883F0.png" style="display:inline-block; margin:4px;width:17.999cm;height:14.919cm;" class="odt-zoomable" data-zoom-src="images/10000000000005580000046E37D883F0.png" /></td></tr></table>
 
 <p>Une archive jar est un fichier zippé qu&#x27;on peut donc ouvrir avec un dézippeur. Une fois l&#x27;archive précédente dézippée, on obtient l&#x27;arborescence suivante :</p>
 <ul>
-<li>en [8], les classes des dépendances du projet ;</li>
-<li>en [9], les classes du projet lui-même ;</li>
+  <li>en [8], les classes des dépendances du projet ;
+  </li>
+  <li>en [9], les classes du projet lui-même ;
+  </li>
 </ul>
+
 <p><a id="refheading295457838046689"></a></p>
 <h2 id="55-exemple-04">5.5. Exemple-04</h2>
 <p><a id="refheading1051302082896917"></a></p>
@@ -2199,19 +2311,29 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003A4000004344FBDC476.png" style="display:inline-block; margin:4px;width:12.33cm;height:14.235cm;" class="odt-zoomable" data-zoom-src="images/10000000000003A4000004344FBDC476.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en  [4], mettre le nom du projet Eclipse ;</span></li>
-<li><span style="color: #000000">en [5], choisir un projet Maven ;</span></li>
-<li><span style="color: #000000">en [6], choisir une version de Java &gt;=1.7 ;</span></li>
-<li><span style="color: #000000">en [7], choisir la version de Spring Boot proposée ;</span></li>
-<li><span style="color: #000000">les informations [8-11] sont des informations Maven ;</span></li>
-<li><span style="color: #000000">en [12], on peut choisir une ou plusieurs des dépendances proposées. Cela va avoir pour effet d&#x27;intégrer dans le fichier [pom.xml] de Maven, un certain nombre de dépendances ;</span></li>
+  <li><span style="color: #000000">en  [4], mettre le nom du projet Eclipse ;</span>
+  </li>
+  <li><span style="color: #000000">en [5], choisir un projet Maven ;</span>
+  </li>
+  <li><span style="color: #000000">en [6], choisir une version de Java &gt;=1.7 ;</span>
+  </li>
+  <li><span style="color: #000000">en [7], choisir la version de Spring Boot proposée ;</span>
+  </li>
+  <li><span style="color: #000000">les informations [8-11] sont des informations Maven ;</span>
+  </li>
+  <li><span style="color: #000000">en [12], on peut choisir une ou plusieurs des dépendances proposées. Cela va avoir pour effet d&#x27;intégrer dans le fichier [pom.xml] de Maven, un certain nombre de dépendances ;</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005F8000001EA2ACC3E6A.png" style="display:inline-block; margin:4px;width:17.999cm;height:5.771cm;" class="odt-zoomable" data-zoom-src="images/10000000000005F8000001EA2ACC3E6A.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [13], désigner un dossier existant et vide pour accueillir le projet ;</span></li>
-<li><span style="color: #000000">en [14], le projet généré. Nous allons en disséquer les éléments ;</span></li>
+  <li><span style="color: #000000">en [13], désigner un dossier existant et vide pour accueillir le projet ;</span>
+  </li>
+  <li><span style="color: #000000">en [14], le projet généré. Nous allons en disséquer les éléments ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le projet est un projet Maven configuré par le fichier [pom.xml] suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#008080">&lt;?</span><span style="color:#3f7f7f">xml</span> <span style="color:#7f007f">version</span>=<span style="font-style:italic;color:#2a00ff">&quot;1.0&quot;</span> <span style="color:#7f007f">encoding</span>=<span style="font-style:italic;color:#2a00ff">&quot;UTF-8&quot;</span><span style="color:#008080">?&gt;</span></span>
@@ -2266,13 +2388,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 6-12 : reprennent les informations saisies dans l&#x27;assistant de réation du projet ;</span></li>
-<li><span style="color: #000000">lignes 14-19 : le projet Maven parent qui définit un certain nombre de bibliothèques avec leurs versions. Si l&#x27;une d&#x27;elles est une dépendance du projet, elle est mentionnée dans le fichier [pom.xml] sans sa version ;</span></li>
-<li><span style="color: #000000">ligne 23 : cette ligne ne sert que si on a l&#x27;intention de générer une archive exécutable du projet. Elle est inutilisée sinon ;</span></li>
-<li><span style="color: #000000">lignes 28-31 : la dépendance minimale d&#x27;un projet Spring Boot. On rappelle que nous n&#x27;avons sélectionné aucune dépendance dans la liste à cocher ;</span></li>
-<li><span style="color: #000000">lignes 33-37 : la dépendance nécessaire pour gérer des tests unitaires JUnit [<a href="http://junit.org/">http://junit.org/</a>] intégrés avec Spring. La ligne 36 indique que la dépendance n&#x27;est nécessaire que pour les tests. En conséquence, elle ne sera pas intégrée à l&#x27;archive du projet ;</span></li>
-<li><span style="color: #000000">lignes 42-45 : le plugin qui permet de générer l&#x27;artifact Maven du projet ;</span></li>
+  <li><span style="color: #000000">lignes 6-12 : reprennent les informations saisies dans l&#x27;assistant de réation du projet ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 14-19 : le projet Maven parent qui définit un certain nombre de bibliothèques avec leurs versions. Si l&#x27;une d&#x27;elles est une dépendance du projet, elle est mentionnée dans le fichier [pom.xml] sans sa version ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 23 : cette ligne ne sert que si on a l&#x27;intention de générer une archive exécutable du projet. Elle est inutilisée sinon ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 28-31 : la dépendance minimale d&#x27;un projet Spring Boot. On rappelle que nous n&#x27;avons sélectionné aucune dépendance dans la liste à cocher ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 33-37 : la dépendance nécessaire pour gérer des tests unitaires JUnit [<a href="http://junit.org/">http://junit.org/</a>] intégrés avec Spring. La ligne 36 indique que la dépendance n&#x27;est nécessaire que pour les tests. En conséquence, elle ne sera pas intégrée à l&#x27;archive du projet ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 42-45 : le plugin qui permet de générer l&#x27;artifact Maven du projet ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La liste des dépendances amenée par ce fichier est la suivante [1] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025D000003AABD00222B.png" style="display:inline-block; margin:4px;width:8.005cm;height:12.409cm;" class="odt-zoomable" data-zoom-src="images/100000000000025D000003AABD00222B.png" /></td></tr></table>
 
@@ -2298,14 +2427,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 6, l&#x27;annotation [@SpringBootApplication] est un raccourci pour les trois annotations [@Configuration, @EnableAutoConfiguration, @ComponentScan] ce qui signifie :</span><ul>
-<li><span style="color: #000000">que la classe [SpringCore04Application] est une classe de configuration Spring ;</span></li>
-<li><span style="color: #000000">qu&#x27;il est demandé à Spring Boot d&#x27;opérer des configurations à partir des classes qu&#x27;il va trouver dans le Classpath du projet, donc ici dans les dépendances Maven ;</span></li>
-<li><span style="color: #000000">d&#x27;examiner le dossier courant (celui de la classe [SpringCore04Application]) pour y trouver d&#x27;éventuels autres composants Spring ;</span></li>
+  <li><span style="color: #000000">ligne 6, l&#x27;annotation [@SpringBootApplication] est un raccourci pour les trois annotations [@Configuration, @EnableAutoConfiguration, @ComponentScan] ce qui signifie :</span>
+    <ul>
+      <li><span style="color: #000000">que la classe [SpringCore04Application] est une classe de configuration Spring ;</span>
+      </li>
+      <li><span style="color: #000000">qu&#x27;il est demandé à Spring Boot d&#x27;opérer des configurations à partir des classes qu&#x27;il va trouver dans le Classpath du projet, donc ici dans les dépendances Maven ;</span>
+      </li>
+      <li><span style="color: #000000">d&#x27;examiner le dossier courant (celui de la classe [SpringCore04Application]) pour y trouver d&#x27;éventuels autres composants Spring ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">ligne 10 : la méthode statique [SpringApplication.run] est exécutée. Son premier paramètre est une classe de configuration Spring, ici la classe [SpringCore04Application]. Son deuxième paramètre est ici la liste des arguments passés à la méthode [main] (ligne 9). La méthode statique [SpringApplication.run] a pour rôle de créer le contexte Spring, ç-à-d créer les différents beans trouvés soit dans les classes de configuration soit dans les dossiers explorés par l&#x27;annotation [@ComponentScan]. La méthode [main] ici ne fait rien d&#x27;autre. Pour lui donner un peu plus de substance, nous allons la transformer de la façon suivante :</span>
+  </li>
 </ul>
-</li>
-<li><span style="color: #000000">ligne 10 : la méthode statique [SpringApplication.run] est exécutée. Son premier paramètre est une classe de configuration Spring, ici la classe [SpringCore04Application]. Son deuxième paramètre est ici la liste des arguments passés à la méthode [main] (ligne 9). La méthode statique [SpringApplication.run] a pour rôle de créer le contexte Spring, ç-à-d créer les différents beans trouvés soit dans les classes de configuration soit dans les dossiers explorés par l&#x27;annotation [@ComponentScan]. La méthode [main] ici ne fait rien d&#x27;autre. Pour lui donner un peu plus de substance, nous allons la transformer de la façon suivante :</span></li>
-</ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span><span style="color:#000000"> demo;</span></span>
 <span class="odt-code-line"></span>
@@ -2331,9 +2466,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 12 : la méthode statique [SpringApplication.run] rend le contexte Spring qu&#x27;elle a construit ;</span></li>
-<li><span style="color: #000000">lignes 15-17 : on affiche le nom de tous les beans de ce contexte ;</span></li>
+  <li><span style="color: #000000">ligne 12 : la méthode statique [SpringApplication.run] rend le contexte Spring qu&#x27;elle a construit ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 15-17 : on affiche le nom de tous les beans de ce contexte ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">On peut exécuter l&#x27;application de la façon suivante [1-3]. La méthode habituelle [Run As Java Application] est également valide.</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000406000004EA30706C3E.png" style="display:inline-block; margin:4px;width:13.626cm;height:16.642cm;" class="odt-zoomable" data-zoom-src="images/1000000000000406000004EA30706C3E.png" /></td></tr></table>
 
@@ -2399,9 +2537,12 @@
 <a id="__codelineno-4-30" name="__codelineno-4-30"></a><span class="mi">2015</span><span class="o">-</span><span class="mi">04</span><span class="o">-</span><span class="mi">08</span> <span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mf">38.790</span>  <span class="n">INFO</span> <span class="mi">4796</span> <span class="o">---</span> <span class="p">[</span>           <span class="n">main</span><span class="p">]</span> <span class="n">o</span><span class="o">.</span><span class="n">s</span><span class="o">.</span><span class="n">j</span><span class="o">.</span><span class="n">e</span><span class="o">.</span><span class="n">a</span><span class="o">.</span><span class="n">AnnotationMBeanExporter</span>        <span class="p">:</span> <span class="n">Unregistering</span> <span class="n">JMX</span><span class="o">-</span><span class="n">exposed</span> <span class="n">beans</span> <span class="n">on</span> <span class="n">shutdown</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span style="color: #000000">lignes 14-28 : les beans du contexte Spring. Nous ne connaissons pas leur rôle. Nous retrouvons le bean [springCore04Application] ligne 18 qui de par son annotation [@SpringBootApplication] devient automatiquement un bean Spring ;</span></li>
-<li><span style="color: #000000">les autres lignes sont des logs de Spring de niveau [INFO]. Comme nous l&#x27;avons déjà vu, ces logs peuvent être contrôlés par le fichier [logback.xml] placé dans le Classpath du projet :</span></li>
+  <li><span style="color: #000000">lignes 14-28 : les beans du contexte Spring. Nous ne connaissons pas leur rôle. Nous retrouvons le bean [springCore04Application] ligne 18 qui de par son annotation [@SpringBootApplication] devient automatiquement un bean Spring ;</span>
+  </li>
+  <li><span style="color: #000000">les autres lignes sont des logs de Spring de niveau [INFO]. Comme nous l&#x27;avons déjà vu, ces logs peuvent être contrôlés par le fichier [logback.xml] placé dans le Classpath du projet :</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E5000000CED8D6CD16.png" style="display:inline-block; margin:4px;width:4.24cm;height:3.821cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E5000000CED8D6CD16.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
@@ -2691,12 +2832,18 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 20-23 : le bean nommé [dao1] (nom de la méthode) est une instance de la classe [Dao1] (ligne 22) considérée comme une implémentation de l&#x27;interface [IDao] (ligne 21). Le bean [dao1] est donc vu comme une instance d&#x27;interface (la terminologie est incorrecte mais elle peut se comprendre) et non une instance de classe. C&#x27;est un point important à comprendre. Tous les autres beans vont être eux aussi des instances d&#x27;interfaces ;</li>
-<li>lignes 25-30 : une instance de l&#x27;interface [IMetier] implémentée par la classe [Metier1] ;</li>
-<li>lignes 32-37 : une instance de l&#x27;interface [IUi] implémentée par la classe [Ui1] ;</li>
-<li>lignes 20-37 : implémentent les couches [UI, Metier, DAO] avec des instances [Ui1, Metier1, Dao1] ;</li>
-<li>lignes 40-57 : implémentent les couches [UI, Metier, DAO] avec des instances [Ui2, Metier2, Dao2] ;</li>
+  <li>lignes 20-23 : le bean nommé [dao1] (nom de la méthode) est une instance de la classe [Dao1] (ligne 22) considérée comme une implémentation de l&#x27;interface [IDao] (ligne 21). Le bean [dao1] est donc vu comme une instance d&#x27;interface (la terminologie est incorrecte mais elle peut se comprendre) et non une instance de classe. C&#x27;est un point important à comprendre. Tous les autres beans vont être eux aussi des instances d&#x27;interfaces ;
+  </li>
+  <li>lignes 25-30 : une instance de l&#x27;interface [IMetier] implémentée par la classe [Metier1] ;
+  </li>
+  <li>lignes 32-37 : une instance de l&#x27;interface [IUi] implémentée par la classe [Ui1] ;
+  </li>
+  <li>lignes 20-37 : implémentent les couches [UI, Metier, DAO] avec des instances [Ui1, Metier1, Dao1] ;
+  </li>
+  <li>lignes 40-57 : implémentent les couches [UI, Metier, DAO] avec des instances [Ui2, Metier2, Dao2] ;
+  </li>
 </ul>
+
 <p><a id="refheading840651126111057"></a></p>
 <h3 id="555-test-unitaire-junittest">5.5.5. Test unitaire [JUnitTest]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E5000000ED0A9D7A57.png" style="display:inline-block; margin:4px;width:4.24cm;height:4.39cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E5000000ED0A9D7A57.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -2726,8 +2873,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 16 : l&#x27;annotation [@SpringApplicationConfiguration] est une annotation du projet Spring Boot Test (ligne 8). Elle est amenée par la dépendance suivante du fichier [pom.xml] :</span></li>
+  <li><span style="color: #000000">ligne 16 : l&#x27;annotation [@SpringApplicationConfiguration] est une annotation du projet Spring Boot Test (ligne 8). Elle est amenée par la dépendance suivante du fichier [pom.xml] :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">org.springframework.boot</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span>
@@ -2737,8 +2886,10 @@
 
 <p><span style="color: #000000">Cette annotation a pour paramètre la liste des classes de configuration à utiliser pour construire le contexte Spring nécessaire au test. Ici nous utilisons la classe de configuration [Config] déjà présentée ;</span></p>
 <ul>
-<li><span style="color: #000000">ligne 17 : l&#x27;annotation [@RunWith] est une annotation JUnit (ligne 5). Son paramètre est la classe chargée de conduire les tests à la place de la classe par défaut du framework Junit. Cette classe est une classe Spring (ligne 9). Elle va utiliser les annotations Spring présentes dans la classe de test ;</span></li>
+  <li><span style="color: #000000">ligne 17 : l&#x27;annotation [@RunWith] est une annotation JUnit (ligne 5). Son paramètre est la classe chargée de conduire les tests à la place de la classe par défaut du framework Junit. Cette classe est une classe Spring (ligne 9). Elle va utiliser les annotations Spring présentes dans la classe de test ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La classe complète est la suivante</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">...</span>
@@ -2796,33 +2947,56 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 8-10 : on injecte (ligne 8) le bean nommé (ligne 9) [ui1]. On remarquera ligne 10 qu&#x27;on injecte une instance d&#x27;interface et non une instance de classe ;</span></li>
-<li><span style="color: #000000">lignes 21-32 : on injecte de la même façon les autres beans définis dans la classe [Config] ;</span></li>
-<li><span style="color: #000000">ligne 34 : l&#x27;annotation [@Test] désigne une méthode à exécuter au cours des tests. Les autres annotations possibles sont les suivantes :</span><ul>
-<li><span style="color: #000000">[@BeforeClass] : méthode à exécuter avant de commencer les tests ;</span></li>
-<li><span style="color: #000000">[@AfterClass] : méthode à exécuter une fois tous les tests faits ;</span></li>
-<li><span style="color: #000000">[@Before] : méthode à exécuter <strong>avant</strong> <strong>chaque</strong> test ;</span></li>
-<li><span style="color: #000000">[@After] : méthode à exécuter <strong>après chaque</strong> test ;</span></li>
+  <li><span style="color: #000000">lignes 8-10 : on injecte (ligne 8) le bean nommé (ligne 9) [ui1]. On remarquera ligne 10 qu&#x27;on injecte une instance d&#x27;interface et non une instance de classe ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 21-32 : on injecte de la même façon les autres beans définis dans la classe [Config] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 34 : l&#x27;annotation [@Test] désigne une méthode à exécuter au cours des tests. Les autres annotations possibles sont les suivantes :</span>
+    <ul>
+      <li><span style="color: #000000">[@BeforeClass] : méthode à exécuter avant de commencer les tests ;</span>
+      </li>
+      <li><span style="color: #000000">[@AfterClass] : méthode à exécuter une fois tous les tests faits ;</span>
+      </li>
+      <li><span style="color: #000000">[@Before] : méthode à exécuter <b>avant</b> <b>chaque</b> test ;</span>
+      </li>
+      <li><span style="color: #000000">[@After] : méthode à exécuter <b>après chaque</b> test ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">line 36 : on vérifie que l&#x27;appel [dao1.doSomethingInDaoLayer(10, 20)] rend bien 30. Le premier paramètre est par convention, la valeur attendue et le second la valeur réelle ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 36 : teste l&#x27;instance [dao1] de l&#x27;interface [IDao] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 37 : teste l&#x27;instance [dao2] de l&#x27;interface [IDao] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 42 : teste l&#x27;instance [metier1] de l&#x27;interface [IMetier] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 43 : teste l&#x27;instance [metier2] de l&#x27;interface [IMetier] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 48 : teste l&#x27;instance [ui1] de l&#x27;interface [IUi] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 36 : teste l&#x27;instance [ui2] de l&#x27;interface [IUi] ;</span>
+  </li>
 </ul>
-</li>
-<li><span style="color: #000000">line 36 : on vérifie que l&#x27;appel [dao1.doSomethingInDaoLayer(10, 20)] rend bien 30. Le premier paramètre est par convention, la valeur attendue et le second la valeur réelle ;</span></li>
-<li><span style="color: #000000">ligne 36 : teste l&#x27;instance [dao1] de l&#x27;interface [IDao] ;</span></li>
-<li><span style="color: #000000">ligne 37 : teste l&#x27;instance [dao2] de l&#x27;interface [IDao] ;</span></li>
-<li><span style="color: #000000">ligne 42 : teste l&#x27;instance [metier1] de l&#x27;interface [IMetier] ;</span></li>
-<li><span style="color: #000000">ligne 43 : teste l&#x27;instance [metier2] de l&#x27;interface [IMetier] ;</span></li>
-<li><span style="color: #000000">ligne 48 : teste l&#x27;instance [ui1] de l&#x27;interface [IUi] ;</span></li>
-<li><span style="color: #000000">ligne 36 : teste l&#x27;instance [ui2] de l&#x27;interface [IUi] ;</span></li>
-</ul>
+
 <p><span style="color: #000000">Les assertions utilisables dans une méthode de test sont les suivantes :</span></p>
 <ul>
-<li><strong>assertEquals(expression1, expression2)</strong> : vérifie que les valeurs des deux expressions sont égales. De nombreux types d&#x27;expression sont acceptés (int, String, float, double, boolean, char, short). Si les deux expressions ne sont pas égales, alors une exception de type [AssertionFailedError ] est lancée,</li>
-<li><strong>assertEquals(réel1, réel2, delta)</strong> : vérifie que deux réels sont égaux à <strong>delta</strong> près, c.a.d abs(réel1-réel2)&lt;=delta. On pourra écrire par exemple <strong>assertEquals(réel1, réel2, 1E-6)</strong> pour vérifier que deux valeurs sont égales à 10-6 près,</li>
-<li><strong>assertEquals(message, expression1, expression2)</strong> et <strong>assertEquals(message, réel1, réel2, delta)</strong> sont des variantes permettant de préciser le message d&#x27;erreur à associer à l&#x27;exception  de type [AssertionFailedError] lancée lorsque la méthode [assertEquals] échoue,</li>
-<li><strong>assertNotNull(Object)</strong> et <strong>assertNotNull(message, Object) </strong>: vérifie que la référence <strong>Object</strong> n&#x27;est pas égale à <strong>null,</strong></li>
-<li><strong>assertNull(Object)</strong> et <strong>assertNull(message, Object) </strong>: vérifie que la référence <strong>Object</strong> est égale à <strong>null,</strong></li>
-<li><strong>assertSame(Object1, Object2)</strong> et <strong>assertSame(message, Object1, Object2)</strong> : vérifie que les références <strong>Object1</strong> et <strong>Object2</strong> pointent sur le même objet,</li>
-<li><span style="color: #000000"><strong>assertNotSame(Object1, Object2)</strong> et <strong>assertNotSame(message, Object1, Object2)</strong> : vérifie que les références <strong>Object1</strong> et <strong>Object2</strong> ne pointent pas sur le même objet ;</span></li>
+  <li><b>assertEquals(expression1, expression2)</b> : vérifie que les valeurs des deux expressions sont égales. De nombreux types d&#x27;expression sont acceptés (int, String, float, double, boolean, char, short). Si les deux expressions ne sont pas égales, alors une exception de type [AssertionFailedError ] est lancée,
+  </li>
+  <li><b>assertEquals(réel1, réel2, delta)</b> : vérifie que deux réels sont égaux à <b>delta</b> près, c.a.d abs(réel1-réel2)&lt;=delta. On pourra écrire par exemple <b>assertEquals(réel1, réel2, 1E-6)</b> pour vérifier que deux valeurs sont égales à 10-6 près,
+  </li>
+  <li><b>assertEquals(message, expression1, expression2)</b> et <b>assertEquals(message, réel1, réel2, delta)</b> sont des variantes permettant de préciser le message d&#x27;erreur à associer à l&#x27;exception  de type [AssertionFailedError] lancée lorsque la méthode [assertEquals] échoue,
+  </li>
+  <li><b>assertNotNull(Object)</b> et <b>assertNotNull(message, Object) </b>: vérifie que la référence <b>Object</b> n&#x27;est pas égale à <b>null,</b>
+  </li>
+  <li><b>assertNull(Object)</b> et <b>assertNull(message, Object) </b>: vérifie que la référence <b>Object</b> est égale à <b>null,</b>
+  </li>
+  <li><b>assertSame(Object1, Object2)</b> et <b>assertSame(message, Object1, Object2)</b> : vérifie que les références <b>Object1</b> et <b>Object2</b> pointent sur le même objet,
+  </li>
+  <li><span style="color: #000000"><b>assertNotSame(Object1, Object2)</b> et <b>assertNotSame(message, Object1, Object2)</b> : vérifie que les références <b>Object1</b> et <b>Object2</b> ne pointent pas sur le même objet ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Pour exécuter le test, on peut procéder de la façon suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000041B00000484D9A1D990.png" style="display:inline-block; margin:4px;width:13.905cm;height:15.293cm;" class="odt-zoomable" data-zoom-src="images/100000000000041B00000484D9A1D990.png" /></td></tr></table>
 
@@ -2833,15 +3007,22 @@
 <p><a id="refheading78455838046689"></a></p>
 <h2 id="56-conclusion">5.6. Conclusion</h2>
 <ul>
-<li>Spring gère des objets qui sont des singletons (un seul exemplaire). Spring gère également des objets qui sont instanciés à chaque fois qu&#x27;on en demande une instance à Spring. Ce cas sera également présenté dans ce document ;</li>
-<li>ces objets peuvent être déclarés de diverses façons qui peuvent être mixées :<ul>
-<li>dans un fichier XML,</li>
-<li>dans une classe Java annotée par [@Configuration],</li>
-<li>avec n&#x27;importe quelle classe Java annotée par [@Component, @Service, ...] ;</li>
-</ul>
-</li>
-<li>un objet Spring peut être injecté dans un autre objet Spring avec l&#x27;annotation [@Autowired]. On parle alors d&#x27;injection de dépendances (DI : Dependency Injection) ;</li>
-<li>Spring se montre très pratique pour configurer des architectures en couches avec l&#x27;utilisation conjointe du paradigme de de la programmation par interfaces ;</li>
+  <li>Spring gère des objets qui sont des singletons (un seul exemplaire). Spring gère également des objets qui sont instanciés à chaque fois qu&#x27;on en demande une instance à Spring. Ce cas sera également présenté dans ce document ;
+  </li>
+  <li>ces objets peuvent être déclarés de diverses façons qui peuvent être mixées :
+    <ul>
+      <li>dans un fichier XML,
+      </li>
+      <li>dans une classe Java annotée par [@Configuration],
+      </li>
+      <li>avec n&#x27;importe quelle classe Java annotée par [@Component, @Service, ...] ;
+      </li>
+    </ul>
+  </li>
+  <li>un objet Spring peut être injecté dans un autre objet Spring avec l&#x27;annotation [@Autowired]. On parle alors d&#x27;injection de dépendances (DI : Dependency Injection) ;
+  </li>
+  <li>Spring se montre très pratique pour configurer des architectures en couches avec l&#x27;utilisation conjointe du paradigme de de la programmation par interfaces ;
+  </li>
 </ul>
 
 

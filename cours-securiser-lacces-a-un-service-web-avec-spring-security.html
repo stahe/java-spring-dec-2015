@@ -1286,8 +1286,10 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000057D00000147B2236C80.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.189cm;" class="odt-zoomable" data-zoom-src="images/100000000000057D00000147B2236C80.png" /></td></tr></table>
 
 <ul>
-<li>la couche [<strong>Spring Security</strong>] n&#x27;accorde l&#x27;accès à la couche [web] qu&#x27;aux utilisateurs autorisés.</li>
+  <li>la couche [<b>Spring Security</b>] n&#x27;accorde l&#x27;accès à la couche [web] qu&#x27;aux utilisateurs autorisés.
+  </li>
 </ul>
+
 <p><a id="refheading9319894989336"></a></p>
 <h2 id="163-un-tutoriel-sur-spring-security">16.3. Un tutoriel sur Spring Security</h2>
 <p><a id="refheading1623631200878134"></a>Nous allons de nouveau importer un guide Spring en suivant les étapes 1 à 3 ci-dessous :</p>
@@ -1297,11 +1299,16 @@
 
 <p>Le projet se compose des éléments suivants :</p>
 <ul>
-<li>dans le dossier [templates], on trouve les pages HTML du projet ;</li>
-<li>[Application] : est la classe exécutable du projet ;</li>
-<li>[MvcConfig] : est la classe de configuration de Spring MVC ;</li>
-<li>[WebSecurityConfig] : est la classe de configuration de Spring Security ;</li>
+  <li>dans le dossier [templates], on trouve les pages HTML du projet ;
+  </li>
+  <li>[Application] : est la classe exécutable du projet ;
+  </li>
+  <li>[MvcConfig] : est la classe de configuration de Spring MVC ;
+  </li>
+  <li>[WebSecurityConfig] : est la classe de configuration de Spring Security ;
+  </li>
 </ul>
+
 <p><a id="refheading9321894989336"></a></p>
 <h3 id="1631-configuration-maven">16.3.1. Configuration Maven</h3>
 <p><a id="refheading1623651200878134"></a>Le projet [3] est un projet Maven. Examinons son fichier [pom.xml] pour connaître ses dépendances :</p>
@@ -1352,10 +1359,14 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 10-14 : le projet est un projet Spring Boot ;</li>
-<li>lignes 17-20 : dépendance sur le framework [Thymeleaf] ;</li>
-<li>lignes 22-25 : dépendance sur le framework Spring Security ;</li>
+  <li>lignes 10-14 : le projet est un projet Spring Boot ;
+  </li>
+  <li>lignes 17-20 : dépendance sur le framework [Thymeleaf] ;
+  </li>
+  <li>lignes 22-25 : dépendance sur le framework Spring Security ;
+  </li>
 </ul>
+
 <p><a id="refheading9323894989336"></a></p>
 <h3 id="1632-les-vues-thymeleaf">16.3.2. Les vues Thymeleaf</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B7000000654C02E8DD.png" style="display:inline-block; margin:4px;width:3.39cm;height:1.87cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B7000000654C02E8DD.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
@@ -1383,8 +1394,10 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 12 : l&#x27;attribut [<span style="color: #7f007f">th:href</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;@{/hello}&quot;</span></em>] va générer l&#x27;attribut [href] de la balise [&lt;a&gt;]. <span style="color: #000000">La valeur [</span><em><span style="color: #2a00ff">@{/hello}</span></em><span style="color: #000000">] va générer le chemin [&lt;context&gt;/hello] où [context] est le contexte de l&#x27;application web ;</span></li>
+  <li>ligne 12 : l&#x27;attribut [<span style="color: #7f007f">th:href</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;@{/hello}&quot;</span></i>] va générer l&#x27;attribut [href] de la balise [&lt;a&gt;]. <span style="color: #000000">La valeur [</span><i><span style="color: #2a00ff">@{/hello}</span></i><span style="color: #000000">] va générer le chemin [&lt;context&gt;/hello] où [context] est le contexte de l&#x27;application web ;</span>
+  </li>
 </ul>
+
 <p>Le code HTML généré est le suivant :</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span>
@@ -1426,9 +1439,12 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 9 : <span style="color: #000000">L&#x27;attribut [</span><span style="color: #7f007f">th:inline</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;text&quot;</span></em><span style="color: #000000">] va générer le texte de la balise </span><span style="color: #000000">[</span><span style="color: #000000">&lt;h1&gt;</span><span style="color: #000000">]</span><span style="color: #000000">. Ce texte contient une expression $ qui doit être évaluée. L</span>&#x27;élément <span style="color: #000000">[[${#httpServletRequest.remoteUser}]] est la valeur de l&#x27;attribut [RemoteUser] de la requête HTTP courante. C&#x27;est le nom de l&#x27;utilisateur connecté ;</span></li>
-<li><span style="color: #000000">ligne 10 : un formulaire HTML. L&#x27;attribut [</span><span style="color: #7f007f">th:action</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;@{/logout}&quot;</span></em><span style="color: #000000">] va générer l&#x27;attribut [action] de la balise [form]. La valeur [</span><em><span style="color: #2a00ff">@{/logout}</span></em><span style="color: #000000">] va générer le chemin [&lt;context&gt;/logout] où [context] est le contexte de l&#x27;application web ;</span></li>
+  <li>ligne 9 : <span style="color: #000000">L&#x27;attribut [</span><span style="color: #7f007f">th:inline</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;text&quot;</span></i><span style="color: #000000">] va générer le texte de la balise </span><span style="color: #000000">[</span><span style="color: #000000">&lt;h1&gt;</span><span style="color: #000000">]</span><span style="color: #000000">. Ce texte contient une expression $ qui doit être évaluée. L</span>&#x27;élément <span style="color: #000000">[[${#httpServletRequest.remoteUser}]] est la valeur de l&#x27;attribut [RemoteUser] de la requête HTTP courante. C&#x27;est le nom de l&#x27;utilisateur connecté ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : un formulaire HTML. L&#x27;attribut [</span><span style="color: #7f007f">th:action</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;@{/logout}&quot;</span></i><span style="color: #000000">] va générer l&#x27;attribut [action] de la balise [form]. La valeur [</span><i><span style="color: #2a00ff">@{/logout}</span></i><span style="color: #000000">] va générer le chemin [&lt;context&gt;/logout] où [context] est le contexte de l&#x27;application web ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le code HTML généré est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span>
@@ -1448,10 +1464,14 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 8 : la traduction de </span><em><span style="color: #000000">Hello [[${#httpServletRequest.remoteUser}]]!</span></em><span style="color: #000000">;</span></li>
-<li><span style="color: #000000">ligne 9 :  la traduction de </span><em><span style="color: #2a00ff">@{/logout}</span></em><span style="color: #000000"> ;</span></li>
-<li><span style="color: #000000">ligne 11 : un champ caché appelé (attribut </span><em><span style="color: #000000">name</span></em><span style="color: #000000">) </span><strong><span style="color: #000000">_csrf</span></strong><span style="color: #000000"> ;</span></li>
+  <li><span style="color: #000000">ligne 8 : la traduction de </span><i><span style="color: #000000">Hello [[${#httpServletRequest.remoteUser}]]!</span></i><span style="color: #000000">;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 :  la traduction de </span><i><span style="color: #2a00ff">@{/logout}</span></i><span style="color: #000000"> ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : un champ caché appelé (attribut </span><i><span style="color: #000000">name</span></i><span style="color: #000000">) </span><b><span style="color: #000000">_csrf</span></b><span style="color: #000000"> ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La vue [login.html] est la suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000146000000C2EE6CA80A.png" style="display:inline-block; margin:4px;width:5.609cm;height:3.341cm;" class="odt-zoomable" data-zoom-src="images/1000000000000146000000C2EE6CA80A.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -1484,13 +1504,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 9 : l&#x27;attribut [</span><span style="color: #7f007f">th:if</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;${param.error}&quot;</span></em><span style="color: #000000">] fait que la balise &lt;div&gt; ne sera générée que si l&#x27;URL qui affiche la page de login contient le paramètre [error] (http://context/login?error);</span></li>
-<li><span style="color: #000000">ligne 10 : l&#x27;attribut [</span><span style="color: #7f007f">th:if</span><span style="color: #000000">=</span><em><span style="color: #2a00ff">&quot;${param.logout}&quot;</span></em><span style="color: #000000">] fait que la balise &lt;div&gt; ne sera générée que si l&#x27;URL qui affiche la page de login contient le paramètre [logout] (http://context/login?logout);</span></li>
-<li><span style="color: #000000">lignes 11-23 : un formulaire HTML ;</span></li>
-<li><span style="color: #000000">ligne 11 : le formulaire sera posté à l&#x27;URL [&lt;context&gt;/login] où &lt;context&gt; est le contexte de l&#x27;application web ;</span></li>
-<li><span style="color: #000000">ligne 13 : un champ de saisie nommé [username] ;</span></li>
-<li><span style="color: #000000">ligne 17 : un champ de saisie nommé [password] ;</span></li>
+  <li><span style="color: #000000">ligne 9 : l&#x27;attribut [</span><span style="color: #7f007f">th:if</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;${param.error}&quot;</span></i><span style="color: #000000">] fait que la balise &lt;div&gt; ne sera générée que si l&#x27;URL qui affiche la page de login contient le paramètre [error] (http://context/login?error);</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : l&#x27;attribut [</span><span style="color: #7f007f">th:if</span><span style="color: #000000">=</span><i><span style="color: #2a00ff">&quot;${param.logout}&quot;</span></i><span style="color: #000000">] fait que la balise &lt;div&gt; ne sera générée que si l&#x27;URL qui affiche la page de login contient le paramètre [logout] (http://context/login?logout);</span>
+  </li>
+  <li><span style="color: #000000">lignes 11-23 : un formulaire HTML ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : le formulaire sera posté à l&#x27;URL [&lt;context&gt;/login] où &lt;context&gt; est le contexte de l&#x27;application web ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 13 : un champ de saisie nommé [username] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 17 : un champ de saisie nommé [password] ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Le code HTML généré est le suivant :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;!</span><span style="color:#3f7f7f">DOCTYPE</span> <span style="color:#008080">html&gt;</span></span>
@@ -1555,24 +1582,29 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 7 : l&#x27;annotation [@Configuration] fait de la classe [MvcConfig] une classe de configuration ;</span></li>
-<li><span style="color: #000000">ligne 8 : la classe [MvcConfig] étend la classe [WebMvcConfigurerAdapter] pour en redéfinir certaines méthodes ;</span></li>
-<li><span style="color: #000000">ligne 10 : redéfinition d&#x27;une méthode de la classe parent ;</span></li>
-<li><span style="color: #000000">lignes 11- 16 : la méthode [addViewControllers] permet d&#x27;associer des URL à des vues HTML. Les associations suivantes y sont faites :</span></li>
+  <li><span style="color: #000000">ligne 7 : l&#x27;annotation [@Configuration] fait de la classe [MvcConfig] une classe de configuration ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 8 : la classe [MvcConfig] étend la classe [WebMvcConfigurerAdapter] pour en redéfinir certaines méthodes ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : redéfinition d&#x27;une méthode de la classe parent ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 11- 16 : la méthode [addViewControllers] permet d&#x27;associer des URL à des vues HTML. Les associations suivantes y sont faites :</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>URL
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>vue</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>vue</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>/, /home
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">/templates/home.html</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/templates/home.html</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>/hello
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">/templates/hello.html</p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/templates/hello.html</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/login
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">/templates/login.html</p></td></tr></table>
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">/templates/login.html</div></td></tr></table>
 
 <p><span style="color: #000000">Le suffixe [html] et le dossier [templates] sont les valeurs par défaut utilisées par Thymeleaf. Elles peuvent être changées par configuration. Le dossier [templates] doit être à la racine du Classpath du projet :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000003E800000174E26E89AE.png" style="display:inline-block; margin:4px;width:13.229cm;height:4.921cm;" class="odt-zoomable" data-zoom-src="images/10000000000003E800000174E26E89AE.png" /></td></tr></table>
@@ -1610,34 +1642,45 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 9 : l&#x27;annotation [@Configuration] fait de la classe [WebSecurityConfig] une classe de configuration ;</span></li>
-<li><span style="color: #000000">ligne 10 : l&#x27;annotation [@EnableWebSecurity]  fait de la classe [WebSecurityConfig] une classe de configuration de Spring Security ;</span></li>
-<li><span style="color: #000000">ligne 11 : la classe [WebSecurity] étend la classe [WebSecurityConfigurerAdapter] pour en redéfinir certaines méthodes ;</span></li>
-<li><span style="color: #000000">ligne 12 : redéfinition d&#x27;une méthode de la classe parent ;</span></li>
-<li><span style="color: #000000">lignes 13- 16 : la méthode [configure(HttpSecurity http)] est redéfinie pour définir les droits d&#x27;accès aux différentes URL de l&#x27;application ;</span></li>
-<li><span style="color: #000000">ligne 14 : la méthode [http.authorizeRequests()] permet d&#x27;associer des URL à des droits d&#x27;accès. Les associations suivantes y sont faites :</span></li>
+  <li><span style="color: #000000">ligne 9 : l&#x27;annotation [@Configuration] fait de la classe [WebSecurityConfig] une classe de configuration ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : l&#x27;annotation [@EnableWebSecurity]  fait de la classe [WebSecurityConfig] une classe de configuration de Spring Security ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 11 : la classe [WebSecurity] étend la classe [WebSecurityConfigurerAdapter] pour en redéfinir certaines méthodes ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 12 : redéfinition d&#x27;une méthode de la classe parent ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 13- 16 : la méthode [configure(HttpSecurity http)] est redéfinie pour définir les droits d&#x27;accès aux différentes URL de l&#x27;application ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 14 : la méthode [http.authorizeRequests()] permet d&#x27;associer des URL à des droits d&#x27;accès. Les associations suivantes y sont faites :</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>URL
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>régle</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>code</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>régle</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>code</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>/, /home
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">accès sans être authentifié</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">accès sans être authentifié</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">http.authorizeRequests().antMatchers(</span><span style="color:#2a00ff">&quot;/&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;/home&quot;</span><span style="color:#000000">).permitAll()</span></span>
 </code></pre></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>autres URL
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">accès authentifié uniquement</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">accès authentifié uniquement</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>http.anyRequest().authenticated();
 </code></pre></div>
 </div></td></tr></table>
 
 <ul>
-<li>ligne 15 : définit la méthode d&#x27;authentification. L&#x27;authentification se fait via un formulaire d&#x27;URL [/login] accessible à tous [<span style="color: #000000">http.formLogin().loginPage(</span><span style="color: #2a00ff">&quot;/login&quot;</span><span style="color: #000000">).permitAll()</span>]. La déconnexion (logout) est également accessible à tous ;</li>
-<li>lignes 19-21 : redéfinissent la méthode [<span style="color: #000000">configure(AuthenticationManagerBuilder auth)</span>] qui gère les utilisateurs ;</li>
-<li>ligne 20 : l&#x27;autentification se fait avec des utilisateurs définis en &quot; dur &quot; [<span style="color: #000000">auth.inMemoryAuthentication()</span>]. Un utilisateur est ici défini avec le login [user], le mot de passe [password] et le rôle [USER]. On peut accorder les mêmes droits à des utilisateurs ayant le même rôle ;</li>
+  <li>ligne 15 : définit la méthode d&#x27;authentification. L&#x27;authentification se fait via un formulaire d&#x27;URL [/login] accessible à tous [<span style="color: #000000">http.formLogin().loginPage(</span><span style="color: #2a00ff">&quot;/login&quot;</span><span style="color: #000000">).permitAll()</span>]. La déconnexion (logout) est également accessible à tous ;
+  </li>
+  <li>lignes 19-21 : redéfinissent la méthode [<span style="color: #000000">configure(AuthenticationManagerBuilder auth)</span>] qui gère les utilisateurs ;
+  </li>
+  <li>ligne 20 : l&#x27;autentification se fait avec des utilisateurs définis en &quot; dur &quot; [<span style="color: #000000">auth.inMemoryAuthentication()</span>]. Un utilisateur est ici défini avec le login [user], le mot de passe [password] et le rôle [USER]. On peut accorder les mêmes droits à des utilisateurs ayant le même rôle ;
+  </li>
 </ul>
+
 <p><a id="refheading9329894989336"></a></p>
 <h3 id="1635-classe-executable">16.3.5. Classe exécutable</h3>
 <p><a id="refheading1623731200878134"></a></p>
@@ -1666,12 +1709,18 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 8 : l&#x27;annotation [@EnableAutoConfiguration] demande à Spring Boot (ligne 3) de faire la configuration que le développeur n&#x27;aura pas fait explicitement ;</span></li>
-<li><span style="color: #000000">ligne 9 : fait de la classe [Application] une classe de configuration Spring ;</span></li>
-<li><span style="color: #000000">ligne 10 : demande le scan du dossier de la classe [Application] afin de rechercher des composants Spring. Les deux classes [MvcConfig] et [WebSecurityConfig] vont être ainsi découvertes car elles ont l&#x27;annotation [@Configuration] ;</span></li>
-<li><span style="color: #000000">ligne 13 : la méthode [main] de la classe exécutable ;</span></li>
-<li><span style="color: #000000">ligne 14 : la méthode statique [SpringApplication.run] est exécutée avec comme paramètre la classe de configuration [Application]. Nous avons déjà rencontré ce processus et nous savons que le serveur Tomcat embarqué dans les dépendances Maven du projet va être lancé et le projet déployé dessus. Nous avons vu que quatre URL étaient gérées [/, /home, /login, /hello] et que certaines étaient protégées par des droits d&#x27;accès.</span></li>
+  <li><span style="color: #000000">ligne 8 : l&#x27;annotation [@EnableAutoConfiguration] demande à Spring Boot (ligne 3) de faire la configuration que le développeur n&#x27;aura pas fait explicitement ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 : fait de la classe [Application] une classe de configuration Spring ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : demande le scan du dossier de la classe [Application] afin de rechercher des composants Spring. Les deux classes [MvcConfig] et [WebSecurityConfig] vont être ainsi découvertes car elles ont l&#x27;annotation [@Configuration] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 13 : la méthode [main] de la classe exécutable ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 14 : la méthode statique [SpringApplication.run] est exécutée avec comme paramètre la classe de configuration [Application]. Nous avons déjà rencontré ce processus et nous savons que le serveur Tomcat embarqué dans les dépendances Maven du projet va être lancé et le projet déployé dessus. Nous avons vu que quatre URL étaient gérées [/, /home, /login, /hello] et que certaines étaient protégées par des droits d&#x27;accès.</span>
+  </li>
 </ul>
+
 <p><a id="refheading9331894989336"></a></p>
 <h3 id="1636-tests-de-lapplication">16.3.6. Tests de l&#x27;application</h3>
 <p><span style="color: #000000"><a id="refheading1623751200878134"></a>Commençons par demander l&#x27;URL [/] qui est l&#x27;une des quatre URL acceptées. Elle est associée à la vue [/templates/home.html] :</span></p>
@@ -1685,15 +1734,15 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>URL
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>règle</b></p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>code</b></p></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>règle</b></div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>code</b></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>/, /home
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">accès sans être authentifié</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">accès sans être authentifié</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span style="color:#000000">http.authorizeRequests().antMatchers(</span><span style="color:#2a00ff">&quot;/&quot;</span><span style="color:#000000">, </span><span style="color:#2a00ff">&quot;/home&quot;</span><span style="color:#000000">).permitAll()</span></span>
 </code></pre></div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>autres URL
 </code></pre></div>
-</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;">accès authentifié uniquement</p></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
+</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0">accès authentifié uniquement</div></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div markdown="block">
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>http.anyRequest().authenticated();
 </code></pre></div>
 </div></td></tr></table>
@@ -1728,8 +1777,10 @@
 <a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span style="color: #000000">ligne 7, un champ caché apparaît qui n&#x27;est pas dans la page [login.html] d&#x27;origine. C&#x27;est Thymeleaf qui l&#x27;a ajouté. Ce code appelé CSRF (Cross Site Request Forgery) vise à éliminer une faille de sécurité. Ce jeton doit être renvoyé à Spring Security avec l&#x27;authentification pour que cette dernière soit acceptée ;</span></li>
+  <li><span style="color: #000000">ligne 7, un champ caché apparaît qui n&#x27;est pas dans la page [login.html] d&#x27;origine. C&#x27;est Thymeleaf qui l&#x27;a ajouté. Ce code appelé CSRF (Cross Site Request Forgery) vise à éliminer une faille de sécurité. Ce jeton doit être renvoyé à Spring Security avec l&#x27;authentification pour que cette dernière soit acceptée ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Nous nous souvenons que seul l&#x27;utilisateur <em>user/password</em> est reconnu par Spring Security. Si nous entrons autre chose en [2], nous obtenons la même page avec un message d&#x27;erreur en [3]. Spring Security a redirigé le navigateur vers l&#x27;URL [http://localhost:8080/login?error]. La présence du paramètre [error] a déclenché l&#x27;affichage de la balise :</span></p>
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">div</span> <span style="color:#7f007f">th:if</span>=<span style="font-style:italic;color:#2a00ff">&quot;${param.error}&quot;</span><span style="color:#008080">&gt;</span>Invalid username and password.<span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">div</span><span style="color:#008080">&gt;</span></span>
@@ -1739,9 +1790,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000048900000147D6AF35A2.png" style="display:inline-block; margin:4px;width:15.36cm;height:4.327cm;" class="odt-zoomable" data-zoom-src="images/100000000000048900000147D6AF35A2.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [4], nous nous identifions ;</span></li>
-<li><span style="color: #000000">en [5], Spring Security nous redirige vers l&#x27;URL [/hello] car c&#x27;est l&#x27;URL que nous demandions lorsque nous avons été redirigés vers la page de login. L&#x27;identité de l&#x27;utilisateur a été affichée par la ligne suivante de [hello.html] :</span></li>
+  <li><span style="color: #000000">en [4], nous nous identifions ;</span>
+  </li>
+  <li><span style="color: #000000">en [5], Spring Security nous redirige vers l&#x27;URL [/hello] car c&#x27;est l&#x27;URL que nous demandions lorsque nous avons été redirigés vers la page de login. L&#x27;identité de l&#x27;utilisateur a été affichée par la ligne suivante de [hello.html] :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-javascript">
 <span class="odt-code-line">    <span style="color:#008080">&lt;</span><span style="color:#3f7f7f">h1</span> <span style="color:#7f007f">th:inline</span>=<span style="font-style:italic;color:#2a00ff">&quot;text&quot;</span><span style="color:#008080">&gt;</span>Hello [[${#httpServletRequest.remoteUser}]]!<span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">h1</span><span style="color:#008080">&gt;</span></span>
 </code></pre></div>
@@ -1762,9 +1816,12 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004B70000015550E2A552.png" style="display:inline-block; margin:4px;width:15.968cm;height:4.512cm;" class="odt-zoomable" data-zoom-src="images/10000000000004B70000015550E2A552.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [6], nous cliquons sur le bouton [Sign Out] ;</span></li>
-<li><span style="color: #000000">en [7], nous voyons que nous avons été redirigés vers l&#x27;URL [http://localhost:8080/login?logout]. C&#x27;est Spring Security qui a demandé cette redirection. La présence du paramètre [logout] dans l&#x27;URL a fait afficher la ligne suivante de la vue :</span></li>
+  <li><span style="color: #000000">en [6], nous cliquons sur le bouton [Sign Out] ;</span>
+  </li>
+  <li><span style="color: #000000">en [7], nous voyons que nous avons été redirigés vers l&#x27;URL [http://localhost:8080/login?logout]. C&#x27;est Spring Security qui a demandé cette redirection. La présence du paramètre [logout] dans l&#x27;URL a fait afficher la ligne suivante de la vue :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-html">
 <span class="odt-code-line"><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">div</span> <span style="color:#7f007f">th:if</span>=<span style="font-style:italic;color:#2a00ff">&quot;${param.logout}&quot;</span><span style="color:#008080">&gt;</span>You have been logged out.<span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">div</span><span style="color:#008080">&gt;</span></span>
 </code></pre></div>
@@ -1774,18 +1831,27 @@
 <p><span style="color: #000000"><a id="refheading1623771200878134"></a>Dans l&#x27;exemple précédent, nous aurions pu écrire l&#x27;application web d&#x27;abord puis la sécuriser ensuite. Spring Security n&#x27;est pas intrusif. On peut mettre en place la sécurité d&#x27;une application web déjà écrite. Par ailleurs, nous avons découvert les points suivants :</span></p>
 <p><span style="color: #000000"><a id="refheading570951429907001"></a></span></p>
 <ul>
-<li><span style="color: #000000">il est possible de définir une page d&#x27;authentification ;</span></li>
-<li><span style="color: #000000">l&#x27;authentification doit être accompagnée du jeton CSRF délivré par Spring Security ;</span></li>
-<li><span style="color: #000000">si l&#x27;authentification échoue, on est redirigé vers la page d&#x27;authentification avec de plus un paramètre <strong>error</strong> dans l&#x27;URL ;</span></li>
-<li><span style="color: #000000">si l&#x27;authentification réussit, on est redirigé vers la page demandée lorsque l&#x27;authentification a eu lieu. Si on demande directement la page d&#x27;authentification sans passer par une page intermédiaire, alors Spring Security nous redirige vers l&#x27;URL [/] (ce cas n&#x27;a pas été présenté) ;</span></li>
-<li><span style="color: #000000">on se déconnecte en demandant l&#x27;URL [/logout] avec un POST. Spring Security nous redirige alors vers la page d&#x27;authentification avec le paramètre <strong>logout</strong> dans l&#x27;URL ;</span></li>
+  <li><span style="color: #000000">il est possible de définir une page d&#x27;authentification ;</span>
+  </li>
+  <li><span style="color: #000000">l&#x27;authentification doit être accompagnée du jeton CSRF délivré par Spring Security ;</span>
+  </li>
+  <li><span style="color: #000000">si l&#x27;authentification échoue, on est redirigé vers la page d&#x27;authentification avec de plus un paramètre <b>error</b> dans l&#x27;URL ;</span>
+  </li>
+  <li><span style="color: #000000">si l&#x27;authentification réussit, on est redirigé vers la page demandée lorsque l&#x27;authentification a eu lieu. Si on demande directement la page d&#x27;authentification sans passer par une page intermédiaire, alors Spring Security nous redirige vers l&#x27;URL [/] (ce cas n&#x27;a pas été présenté) ;</span>
+  </li>
+  <li><span style="color: #000000">on se déconnecte en demandant l&#x27;URL [/logout] avec un POST. Spring Security nous redirige alors vers la page d&#x27;authentification avec le paramètre <b>logout</b> dans l&#x27;URL ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Toutes ces conclusions reposent sur des comportements par défaut de Spring Security. Ces comportements peuvent être changés par configuration en redéfinissant certaines méthodes de la classe [WebSecurityConfigurerAdapter].</span></p>
 <p><span style="color: #000000">Le tutoriel précédent nous aidera peu dans la suite. Nous allons en effet utiliser :</span></p>
 <ul>
-<li><span style="color: #000000">une base de données pour stocker les utilisateurs, leurs mots de passe et leurs rôles ;</span></li>
-<li><span style="color: #000000">une authentification par entête HTTP ;</span></li>
+  <li><span style="color: #000000">une base de données pour stocker les utilisateurs, leurs mots de passe et leurs rôles ;</span>
+  </li>
+  <li><span style="color: #000000">une authentification par entête HTTP ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">On trouve assez peu de tutoriels pour ce qu&#x27;on veut faire ici. La solution qui va être proposée est un assemblage de codes trouvés ici et là.</span></p>
 <p><a id="refheading9335894989336"></a></p>
 <h2 id="164-mise-en-place-de-la-securite-sur-le-service-web-json-des-produits">16.4. Mise en place de la sécurité sur le service web / json des produits</h2>
@@ -1797,51 +1863,73 @@
 <p><img src="images/1000000000000295000000BEB9405F01.png" style="width:12.24cm;height:3.521cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000295000000BEB9405F01.png" /></p>
 <p><strong><span style="color: #000000">Table [USERS] : les utilisateurs</span></strong></p>
 <ul>
-<li><span style="color: #000000">ID : clé primaire ;</span></li>
-<li><span style="color: #000000">VERSION : colonne de versioning de la ligne ;</span></li>
-<li><span style="color: #000000">IDENTITY : une identité descriptive de l&#x27;utilisateur ;</span></li>
-<li><span style="color: #000000">LOGIN : le login de l&#x27;utilisateur ;</span></li>
-<li><span style="color: #000000">PASSWORD : son mot de passe ;</span></li>
+  <li><span style="color: #000000">ID : clé primaire ;</span>
+  </li>
+  <li><span style="color: #000000">VERSION : colonne de versioning de la ligne ;</span>
+  </li>
+  <li><span style="color: #000000">IDENTITY : une identité descriptive de l&#x27;utilisateur ;</span>
+  </li>
+  <li><span style="color: #000000">LOGIN : le login de l&#x27;utilisateur ;</span>
+  </li>
+  <li><span style="color: #000000">PASSWORD : son mot de passe ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Dans la table USERS, les mots de passe ne sont pas stockés en clair :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025B00000088CAEA4E9C.png" style="display:inline-block; margin:4px;width:11.171cm;height:2.521cm;" class="odt-zoomable" data-zoom-src="images/100000000000025B00000088CAEA4E9C.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><span style="color: #000000">L&#x27;algorithme qui crypte les mots de passe est l&#x27;algorithme BCRYPT.</span></p>
 <p><strong><span style="color: #000000">Table [ROLES] : les rôles</span></strong></p>
 <ul>
-<li><span style="color: #000000">ID : clé primaire ;</span></li>
-<li><span style="color: #000000">VERSION : colonne de versioning de la ligne ;</span></li>
-<li><span style="color: #000000">NAME : nom du rôle. Par défaut, Spring Security attend des noms de la forme ROLE_XX, par exemple ROLE_ADMIN ou ROLE_GUEST ;</span></li>
+  <li><span style="color: #000000">ID : clé primaire ;</span>
+  </li>
+  <li><span style="color: #000000">VERSION : colonne de versioning de la ligne ;</span>
+  </li>
+  <li><span style="color: #000000">NAME : nom du rôle. Par défaut, Spring Security attend des noms de la forme ROLE_XX, par exemple ROLE_ADMIN ou ROLE_GUEST ;</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000B500000048E262A78D.png" style="display:inline-block; margin:4px;width:3.35cm;height:1.33cm;" class="odt-zoomable" data-zoom-src="images/10000000000000B500000048E262A78D.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><strong><span style="color: #000000">Table [USERS_ROLES] : table de jointure USERS / ROLES</span></strong></p>
 <p><span style="color: #000000">Un utilisateur peut avoir plusieurs rôles, un rôle peut rassembler plusieurs utilisateurs. On a une relation <strong>plusieurs à plusieurs</strong> matérialisée par la table [USERS_ROLES].</span></p>
 <ul>
-<li><span style="color: #000000">ID : clé primaire ;</span></li>
-<li><span style="color: #000000">VERSION : colonne de versioning de la ligne ;</span></li>
-<li><span style="color: #000000">USER_ID : identifiant d&#x27;un utilisateur ;</span></li>
-<li><span style="color: #000000">ROLE_ID : identifiant d&#x27;un rôle ;</span></li>
+  <li><span style="color: #000000">ID : clé primaire ;</span>
+  </li>
+  <li><span style="color: #000000">VERSION : colonne de versioning de la ligne ;</span>
+  </li>
+  <li><span style="color: #000000">USER_ID : identifiant d&#x27;un utilisateur ;</span>
+  </li>
+  <li><span style="color: #000000">ROLE_ID : identifiant d&#x27;un rôle ;</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000D70000004EAD3A1F94.png" style="display:inline-block; margin:4px;width:3.979cm;height:1.439cm;" class="odt-zoomable" data-zoom-src="images/10000000000000D70000004EAD3A1F94.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading9339894989336"></a></p>
 <h3 id="1642-le-projet-eclipse">16.4.2. Le projet Eclipse</h3>
 <p><span style="color: #000000">Nous créons le projet Eclipse suivant :</span></p>
 <p><span style="color: #000000"><a id="refheading1623811200878134"></a></span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><p style="margin:0;"><b>1</b></p><img src="images/1000000000000118000000B9B4B6008E.png" style="display:inline-block; margin:4px;width:5.181cm;height:3.431cm;" class="odt-zoomable" data-zoom-src="images/1000000000000118000000B9B4B6008E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><div style="margin:0 0 0.5em 0"><b>1</b></div><img src="images/1000000000000118000000B9B4B6008E.png" style="display:inline-block; margin:4px;width:5.181cm;height:3.431cm;" class="odt-zoomable" data-zoom-src="images/1000000000000118000000B9B4B6008E.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
 <p><a id="refheading571011429907001"></a></p>
 <ul>
-<li><span style="color: #000000">en [1] : le nouveau projet avec les paquetages suivants :</span><ul>
-<li><span style="color: #000000">[spring.security.entities] : contient les entités JPA correspondant aux trois nouvelles tables de la base de données ;</span></li>
-<li><span style="color: #000000">[spring.security.repositories] : contient les [repositories] de Spring Data associés  aux trois nouvelles tables ;</span></li>
-<li><span style="color: #000000">[spring.security.dao] : contient un service s&#x27;appuyant sur les [repositories] ;</span></li>
-<li><span style="color: #000000">[spring.security.config] : contient la configuration du projet et notamment celle des accès sécurisés au service web ;</span></li>
-<li><span style="color: #000000">[spring.security.boot] : conteint la classe de lancement du service web sécurisé ;</span></li>
+  <li><span style="color: #000000">en [1] : le nouveau projet avec les paquetages suivants :</span>
+    <ul>
+      <li><span style="color: #000000">[spring.security.entities] : contient les entités JPA correspondant aux trois nouvelles tables de la base de données ;</span>
+      </li>
+      <li><span style="color: #000000">[spring.security.repositories] : contient les [repositories] de Spring Data associés  aux trois nouvelles tables ;</span>
+      </li>
+      <li><span style="color: #000000">[spring.security.dao] : contient un service s&#x27;appuyant sur les [repositories] ;</span>
+      </li>
+      <li><span style="color: #000000">[spring.security.config] : contient la configuration du projet et notamment celle des accès sécurisés au service web ;</span>
+      </li>
+      <li><span style="color: #000000">[spring.security.boot] : conteint la classe de lancement du service web sécurisé ;</span>
+      </li>
+    </ul>
+  </li>
 </ul>
-</li>
-</ul>
+
 <p><a id="refheading9341894989336"></a></p>
 <h3 id="1643-la-configuration-maven">16.4.3. La configuration Maven</h3>
 <p><span style="color: #000000">Le nouveau projet est un projet Maven configuré par le fichier [pom.xml] suivant :</span></p>
@@ -1918,12 +2006,18 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 23-27 : on reprend l&#x27;existant avec l&#x27;archive du service web / json étudié ;</span></li>
-<li><span style="color: #000000">lignes 29-32 : la dépendance qui amène les classes de Spring Security ;</span></li>
-<li><span style="color: #000000">lignes 34-37 : la bibliothèque de logs ;</span></li>
-<li><span style="color: #000000">lignes 39-42 : la bibliothèque permettant d&#x27;utiliser les annotations Spring Boot ;</span></li>
-<li><span style="color: #000000">lignes 44-48 : la bibliothèque nécessaire aux tests ;</span></li>
+  <li><span style="color: #000000">lignes 23-27 : on reprend l&#x27;existant avec l&#x27;archive du service web / json étudié ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 29-32 : la dépendance qui amène les classes de Spring Security ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 34-37 : la bibliothèque de logs ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 39-42 : la bibliothèque permettant d&#x27;utiliser les annotations Spring Boot ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 44-48 : la bibliothèque nécessaire aux tests ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading9343894989336"></a></p>
 <h3 id="1644-les-nouvelles-entites-jpa">16.4.4. Les nouvelles entités [JPA]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042C000000F0DB12BAF6.png" style="display:inline-block; margin:4px;width:14.129cm;height:3.175cm;" class="odt-zoomable" data-zoom-src="images/100000000000042C000000F0DB12BAF6.png" /></td></tr></table>
@@ -1970,8 +2064,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 11 : la classe étend la classe [AbstractEntity] déjà utilisée pour les autres entités ;</span></li>
+  <li><span style="color: #000000">ligne 11 : la classe étend la classe [AbstractEntity] déjà utilisée pour les autres entités ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La classe [Role] est l&#x27;image de la table [ROLES] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span> spring.security.entities;</span>
@@ -2059,9 +2155,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 22-24 : matérialisent la clé étrangère de la table [USERS_ROLES] vers la table [USERS] ;</span></li>
-<li><span style="color: #000000">lignes 27-29 : matérialisent la clé étrangère de la table [USERS_ROLES] vers la table [ROLES] ;</span></li>
+  <li><span style="color: #000000">lignes 22-24 : matérialisent la clé étrangère de la table [USERS_ROLES] vers la table [USERS] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 27-29 : matérialisent la clé étrangère de la table [USERS_ROLES] vers la table [ROLES] ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading9345894989336"></a></p>
 <h3 id="1645-les-repositories">16.4.5. Les [repositories]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000042B000000FAD8CF0402.png" style="display:inline-block; margin:4px;width:14.116cm;height:3.307cm;" class="odt-zoomable" data-zoom-src="images/100000000000042B000000FAD8CF0402.png" /></td></tr></table>
@@ -2096,11 +2195,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 9 : l&#x27;interface [UserRepository] étend l&#x27;interface [CrudRepository] de Spring Data (ligne 4) ;</span></li>
-<li><span style="color: #000000">lignes 12-13 : la méthode [getRoles(User user)] permet d&#x27;avoir tous les rôles d&#x27;un utilisateur identifié par son [id]</span></li>
-<li><span style="color: #000000">lignes 16-17 : idem mais pour un utilisateur identifié pas ses login / mot de passe ;</span></li>
-<li><span style="color: #000000">ligne 20 : pour trouver un utilisateur via son login ;</span></li>
+  <li><span style="color: #000000">ligne 9 : l&#x27;interface [UserRepository] étend l&#x27;interface [CrudRepository] de Spring Data (ligne 4) ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 12-13 : la méthode [getRoles(User user)] permet d&#x27;avoir tous les rôles d&#x27;un utilisateur identifié par son [id]</span>
+  </li>
+  <li><span style="color: #000000">lignes 16-17 : idem mais pour un utilisateur identifié pas ses login / mot de passe ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 20 : pour trouver un utilisateur via son login ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">L&#x27;interface [RoleRepository] gère les accès aux entités [Role] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span> spring.security.repositories;</span>
@@ -2118,9 +2222,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 7 : l&#x27;interface [RoleRepository] étend l&#x27;interface [CrudRepository] ;</span></li>
-<li><span style="color: #000000">ligne 10 : on peut chercher un rôle via son nom ;</span></li>
+  <li><span style="color: #000000">ligne 7 : l&#x27;interface [RoleRepository] étend l&#x27;interface [CrudRepository] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 10 : on peut chercher un rôle via son nom ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">L&#x27;interface [UserRoleRepository] gère les accès aux entités [UserRole] :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span> spring.security.repositories;</span>
@@ -2135,8 +2242,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 5 : l&#x27;interface [UserRoleRepository] se contente d&#x27;étendre l&#x27;interface [CrudRepository] sans lui ajouter de nouvelles méthodes ;</span></li>
+  <li><span style="color: #000000">ligne 5 : l&#x27;interface [UserRoleRepository] se contente d&#x27;étendre l&#x27;interface [CrudRepository] sans lui ajouter de nouvelles méthodes ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading9347894989336"></a></p>
 <h3 id="1646-les-classes-de-gestion-des-utilisateurs-et-des-roles">16.4.6. Les classes de gestion des utilisateurs et des rôles</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000644000001940A76A60B.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.533cm;" class="odt-zoomable" data-zoom-src="images/1000000000000644000001940A76A60B.png" /></td></tr></table>
@@ -2224,18 +2333,30 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 14 : la classe [AppUserDetails] implémente l&#x27;interface [UserDetails] ;</span></li>
-<li><span style="color: #000000">lignes 19-20 : la classe encapsule un utilisateur (ligne 19) et le repository qui permet d&#x27;avoir les détails de cet utilisateur (ligne 20) ;</span></li>
-<li><span style="color: #000000">lignes 26-29 : le constructeur qui instancie la classe avec un utilisateur et son repository ;</span></li>
-<li><span style="color: #000000">lignes 32-36 : implémentation de la méthode [getAuthorities] de l&#x27;interface [UserDetails]. Elle doit construire une collection d&#x27;éléments de type [GrantedAuthority] ou dérivé. Ici, nous utilisons le type dérivé [SimpleGrantedAuthority] (ligne 36) qui encapsule le nom d&#x27;un des rôles de l&#x27;utilisateur de la ligne 19 ;</span></li>
-<li><span style="color: #000000">lignes 35-37 : on parcourt la liste des rôles de l&#x27;utilisateur de la ligne 19 pour construire une liste d&#x27;éléments de type [SimpleGrantedAuthority] ;</span></li>
-<li><span style="color: #000000">lignes 42-44 : implémentent la méthode [getPassword] de l&#x27;interface [UserDetails]. On rend le mot de passe  de l&#x27;utilisateur de la ligne 19 ;</span></li>
-<li><span style="color: #000000">lignes 42-44 : implémentent la méthode [getUserName] de l&#x27;interface [UserDetails]. On rend le login  de l&#x27;utilisateur de la ligne 19 ;</span></li>
-<li><span style="color: #000000">lignes 51-54 : le compte de l&#x27;utilisateur n&#x27;expire jamais ;</span></li>
-<li><span style="color: #000000">lignes 56-59 : le compte de l&#x27;utilisateur n&#x27;est jamais bloqué ;</span></li>
-<li><span style="color: #000000">lignes 61-64 : les identifiants de l&#x27;utilisateur n&#x27;expirent jamais ;</span></li>
-<li><span style="color: #000000">lignes 66-69 :  le compte de l&#x27;utilisateur est toujours actif ;</span></li>
+  <li><span style="color: #000000">ligne 14 : la classe [AppUserDetails] implémente l&#x27;interface [UserDetails] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 19-20 : la classe encapsule un utilisateur (ligne 19) et le repository qui permet d&#x27;avoir les détails de cet utilisateur (ligne 20) ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 26-29 : le constructeur qui instancie la classe avec un utilisateur et son repository ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 32-36 : implémentation de la méthode [getAuthorities] de l&#x27;interface [UserDetails]. Elle doit construire une collection d&#x27;éléments de type [GrantedAuthority] ou dérivé. Ici, nous utilisons le type dérivé [SimpleGrantedAuthority] (ligne 36) qui encapsule le nom d&#x27;un des rôles de l&#x27;utilisateur de la ligne 19 ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 35-37 : on parcourt la liste des rôles de l&#x27;utilisateur de la ligne 19 pour construire une liste d&#x27;éléments de type [SimpleGrantedAuthority] ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 42-44 : implémentent la méthode [getPassword] de l&#x27;interface [UserDetails]. On rend le mot de passe  de l&#x27;utilisateur de la ligne 19 ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 42-44 : implémentent la méthode [getUserName] de l&#x27;interface [UserDetails]. On rend le login  de l&#x27;utilisateur de la ligne 19 ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 51-54 : le compte de l&#x27;utilisateur n&#x27;expire jamais ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 56-59 : le compte de l&#x27;utilisateur n&#x27;est jamais bloqué ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 61-64 : les identifiants de l&#x27;utilisateur n&#x27;expirent jamais ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 66-69 :  le compte de l&#x27;utilisateur est toujours actif ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Spring Security impose également l&#x27;existence d&#x27;une classe implémentant l&#x27;interface [AppUserDetailsService] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000019C0000007FEE7FC945.png" style="display:inline-block; margin:4px;width:7.631cm;height:2.35cm;" class="odt-zoomable" data-zoom-src="images/100000000000019C0000007FEE7FC945.png" /></td></tr></table>
 
@@ -2274,13 +2395,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 12 : la classe sera un composant Spring, donc disponible dans son contexte ;</span></li>
-<li><span style="color: #000000">lignes 15-16 : le composant [UserRepository] sera injecté ici ;</span></li>
-<li><span style="color: #000000">lignes 19-28 : implémentation de la méthode [loadUserByUsername] de l&#x27;interface [UserDetailsService] (ligne 10). Le paramètre est le login de l&#x27;utilisateur ;</span></li>
-<li><span style="color: #000000">ligne 21 : l&#x27;utilisateur est recherché via son login ;</span></li>
-<li><span style="color: #000000">lignes 23-25 : s&#x27;il n&#x27;est pas trouvé, une exception est lancée ;</span></li>
-<li><span style="color: #000000">ligne 27 : un objet [AppUserDetails] est construit et rendu. Il est bien de type [UserDetails] (ligne 19) ;</span></li>
+  <li><span style="color: #000000">ligne 12 : la classe sera un composant Spring, donc disponible dans son contexte ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 15-16 : le composant [UserRepository] sera injecté ici ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 19-28 : implémentation de la méthode [loadUserByUsername] de l&#x27;interface [UserDetailsService] (ligne 10). Le paramètre est le login de l&#x27;utilisateur ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 21 : l&#x27;utilisateur est recherché via son login ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 23-25 : s&#x27;il n&#x27;est pas trouvé, une exception est lancée ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 27 : un objet [AppUserDetails] est construit et rendu. Il est bien de type [UserDetails] (ligne 19) ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading9351894989336"></a></p>
 <h3 id="1647-la-configuration-du-projet">16.4.7. La configuration du projet</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000055A00000159EA15AF59.png" style="display:inline-block; margin:4px;width:17.999cm;height:4.533cm;" class="odt-zoomable" data-zoom-src="images/100000000000055A00000159EA15AF59.png" /></td></tr></table>
@@ -2314,11 +2442,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 10 : on importe la classe de configuration [spring.data.config.DaoConfig] du projet [intro-spring-data-01] qui implémente la couche [DAO] des produits et catégories ;</span></li>
-<li><span style="color: #000000">ligne 8 : on désigne les dossiers du projet courant contenant des [repositories] Spring Data ;</span></li>
-<li><span style="color: #000000">ligne 9 : on désigne les dossiers du projet courant contenant des composants Spring concernant la couche [DAO] ;</span></li>
-<li><span style="color: #000000">ligne 14 : on désigne les dossiers contenant des entités JPA. Il y a celles du projet [intro-spring-data-01] et celles du projet du serveur sécurisé. Cette information fait l&#x27;objet du bean des lignes 16-19. Ce bean redéfinit le bean de même nom du projet [intro-spring-data-01] :</span></li>
+  <li><span style="color: #000000">ligne 10 : on importe la classe de configuration [spring.data.config.DaoConfig] du projet [intro-spring-data-01] qui implémente la couche [DAO] des produits et catégories ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 8 : on désigne les dossiers du projet courant contenant des [repositories] Spring Data ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 9 : on désigne les dossiers du projet courant contenant des composants Spring concernant la couche [DAO] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 14 : on désigne les dossiers contenant des entités JPA. Il y a celles du projet [intro-spring-data-01] et celles du projet du serveur sécurisé. Cette information fait l&#x27;objet du bean des lignes 16-19. Ce bean redéfinit le bean de même nom du projet [intro-spring-data-01] :</span>
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line">    <span style="font-weight:bold;color:#7f0055">final</span> <span style="font-weight:bold;color:#7f0055">static</span> <span style="font-weight:bold;color:#7f0055">private</span> String[] <span style="font-weight:bold;font-style:italic;color:#0000c0">ENTITIES_PACKAGES</span> = { <span style="color:#2a00ff">&quot;spring.data.entities&quot;</span> };</span>
 <span class="odt-code-line">    </span>
@@ -2368,10 +2501,14 @@
 
 <p><span style="color: #000000">Nous allons suivre la même démarche :</span></p>
 <ul>
-<li><span style="color: #000000">ligne 11 : définir une classe qui étend la classe [WebSecurityConfigurerAdapter] ;</span></li>
-<li><span style="color: #000000">ligne 13 : définir une méthode [configure(HttpSecurity http)] qui définit les droits d&#x27;accès aux différentes URL du service web ;</span></li>
-<li><span style="color: #000000">ligne 19 : définir une méthode [configure(AuthenticationManagerBuilder auth)] qui définit les utilisateurs et leurs rôles ;</span></li>
+  <li><span style="color: #000000">ligne 11 : définir une classe qui étend la classe [WebSecurityConfigurerAdapter] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 13 : définir une méthode [configure(HttpSecurity http)] qui définit les droits d&#x27;accès aux différentes URL du service web ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 19 : définir une méthode [configure(AuthenticationManagerBuilder auth)] qui définit les utilisateurs et leurs rôles ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La classe [SecurityConfig] sera la suivante :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-python">
 <span class="odt-code-line"><span style="font-weight:bold;color:#7f0055">package</span> spring.security.config;</span>
@@ -2430,29 +2567,44 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 16 : pour activer les éléments de Spring Security ;</span></li>
-<li><span style="color: #000000">ligne 17 : on rajoute les composants Spring du package [<span style="color: #2a00ff">spring.security.service</span>] ;</span></li>
-<li><span style="color: #000000">ligne 18 : on importe les beans de la couche [DAO] que l&#x27;on vient de présenter ainsi que ceux du serveur web / jSON non sécurisé ;</span></li>
-<li><span style="color: #000000">lignes 21-22 : la classe [AppUserDetails] qui donne accès aux utilisateurs de l&#x27;application est injectée ;</span></li>
-<li><span style="color: #000000">ligne 25 : un booléen qui sécurise (true) ou non (false) l&#x27;application web ;</span></li>
-<li><span style="color: #000000">lignes 27-32 : la méthode [configure(HttpSecurity http)] définit les utilisateurs et leurs rôles. Elle reçoit en paramètre un type [AuthenticationManagerBuilder]. Ce paramètre est enrichi de deux informations (ligne 38) :</span><ul>
-<li><span style="color: #000000">une référence sur le service [<span style="color: #0000c0">appUserDetailsService</span>] de la ligne 22 qui donne accès aux utilisateurs enregistrés. On notera ici que le fait qu&#x27;ils soient enregistrés dans une base de données n&#x27;apparaît pas. Ils pourraient donc être dans un cache, délivrés par un service web, ...</span></li>
-<li><span style="color: #000000">le type de cryptage utilisé pour le mot de passe. On rappelle ici que nous avons utilisé l&#x27;algorithme BCrypt ;</span></li>
+  <li><span style="color: #000000">ligne 16 : pour activer les éléments de Spring Security ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 17 : on rajoute les composants Spring du package [<span style="color: #2a00ff">spring.security.service</span>] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 18 : on importe les beans de la couche [DAO] que l&#x27;on vient de présenter ainsi que ceux du serveur web / jSON non sécurisé ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 21-22 : la classe [AppUserDetails] qui donne accès aux utilisateurs de l&#x27;application est injectée ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 25 : un booléen qui sécurise (true) ou non (false) l&#x27;application web ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 27-32 : la méthode [configure(HttpSecurity http)] définit les utilisateurs et leurs rôles. Elle reçoit en paramètre un type [AuthenticationManagerBuilder]. Ce paramètre est enrichi de deux informations (ligne 38) :</span>
+    <ul>
+      <li><span style="color: #000000">une référence sur le service [<span style="color: #0000c0">appUserDetailsService</span>] de la ligne 22 qui donne accès aux utilisateurs enregistrés. On notera ici que le fait qu&#x27;ils soient enregistrés dans une base de données n&#x27;apparaît pas. Ils pourraient donc être dans un cache, délivrés par un service web, ...</span>
+      </li>
+      <li><span style="color: #000000">le type de cryptage utilisé pour le mot de passe. On rappelle ici que nous avons utilisé l&#x27;algorithme BCrypt ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">lignes 34-52 : la méthode [configure(HttpSecurity http)] définit les droits d&#x27;accès aux URL du service web ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 37 : nous avons vu dans le projet d&#x27;introduction que par défaut Spring Security gérait un jeton CSRF (Cross Site Request Forgery) que l&#x27;utilisateur qui voulait s&#x27;authentifier devait renvoyer au serveur. Ici ce mécanisme est désactivé. Ceci allié au booléen (isSecured=false) permet d&#x27;utiliser l&#x27;application web sans sécurité ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 41 : on active le mode d&#x27;authentification par entête HTTP. Le client devra envoyer l&#x27;entête HTTP suivant :</span>
+  </li>
 </ul>
-</li>
-<li><span style="color: #000000">lignes 34-52 : la méthode [configure(HttpSecurity http)] définit les droits d&#x27;accès aux URL du service web ;</span></li>
-<li><span style="color: #000000">ligne 37 : nous avons vu dans le projet d&#x27;introduction que par défaut Spring Security gérait un jeton CSRF (Cross Site Request Forgery) que l&#x27;utilisateur qui voulait s&#x27;authentifier devait renvoyer au serveur. Ici ce mécanisme est désactivé. Ceci allié au booléen (isSecured=false) permet d&#x27;utiliser l&#x27;application web sans sécurité ;</span></li>
-<li><span style="color: #000000">ligne 41 : on active le mode d&#x27;authentification par entête HTTP. Le client devra envoyer l&#x27;entête HTTP suivant :</span></li>
-</ul>
+
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Authorization:Basic code
 </code></pre></div>
 <p><span style="color: #000000">où code est le codage de la chaîne <strong>login:password</strong> par l&#x27;algorithme Base64. Par exemple, le codage Base64 de la chaîne <em>admin:admin</em> est <em>YWRtaW46YWRtaW4=</em>. Donc l&#x27;utilisateur de login [admin] et de mot de passe [admin] enverra l&#x27;entête HTTP suivant pour s&#x27;authentifier :</span></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Authorization:Basic YWRtaW46YWRtaW4=
 </code></pre></div>
 <ul>
-<li><span style="color: #000000">lignes 46-48 : indiquent que toutes les URL du service web sont accessibles aux utilisateurs ayant le rôle [ROLE_ADMIN]. Cela veut dire qu&#x27;un utilisateur n&#x27;ayant pas ce rôle ne peut accéder au service web ;</span></li>
-<li><span style="color: #000000">ligne 50 : en mode [session], un utilisateur qui s&#x27;est authentifié une fois n&#x27;a pas besoin de le faire pour ses accès suivants. Ici on désactive ce mode, aussi l&#x27;utilisateur devra-t-il s&#x27;authentifier à chaque accès ;</span></li>
+  <li><span style="color: #000000">lignes 46-48 : indiquent que toutes les URL du service web sont accessibles aux utilisateurs ayant le rôle [ROLE_ADMIN]. Cela veut dire qu&#x27;un utilisateur n&#x27;ayant pas ce rôle ne peut accéder au service web ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 50 : en mode [session], un utilisateur qui s&#x27;est authentifié une fois n&#x27;a pas besoin de le faire pour ses accès suivants. Ici on désactive ce mode, aussi l&#x27;utilisateur devra-t-il s&#x27;authentifier à chaque accès ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading9349894989336"></a></p>
 <h3 id="1648-tests-de-la-couche-dao">16.4.8. Tests de la couche [DAO]</h3>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000004300000010D540F8048.png" style="display:inline-block; margin:4px;width:14.182cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000004300000010D540F8048.png" /></td></tr></table>
@@ -2534,16 +2686,26 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 17 : la classe attend trois arguments définissant un utilisateur : son login, son mot de passe, son rôle ;</li>
-<li>lignes 25-27 : les trois paramètres sont récupérés ;</li>
-<li>ligne 29 : le contexte Spring est construit à partir de la classe de configuration [AppConfig] ;</li>
-<li>lignes 30-32 : on récupère les références des trois [Repository] qui peuvent nous être utiles pour créer l&#x27;utilisateur ;</li>
-<li>ligne 34 : on regarde si le rôle existe déjà ;</li>
-<li>lignes 36-38 : si ce n&#x27;est pas le cas, on le crée en base. Il aura un nom du type [ROLE_XX] ;</li>
-<li>ligne 40 : on regarde si le login existe déjà ;</li>
-<li>lignes 42-49 : si le login n&#x27;existe pas, on le crée en base ;</li>
-<li>ligne 44 : on crypte le mot de passe. On utilise ici, la classe [BCrypt] de Spring Security (ligne 4). On a donc besoin des archives de ce framework. Le fichier [pom.xml] inclut cette dépendance :</li>
+  <li>ligne 17 : la classe attend trois arguments définissant un utilisateur : son login, son mot de passe, son rôle ;
+  </li>
+  <li>lignes 25-27 : les trois paramètres sont récupérés ;
+  </li>
+  <li>ligne 29 : le contexte Spring est construit à partir de la classe de configuration [AppConfig] ;
+  </li>
+  <li>lignes 30-32 : on récupère les références des trois [Repository] qui peuvent nous être utiles pour créer l&#x27;utilisateur ;
+  </li>
+  <li>ligne 34 : on regarde si le rôle existe déjà ;
+  </li>
+  <li>lignes 36-38 : si ce n&#x27;est pas le cas, on le crée en base. Il aura un nom du type [ROLE_XX] ;
+  </li>
+  <li>ligne 40 : on regarde si le login existe déjà ;
+  </li>
+  <li>lignes 42-49 : si le login n&#x27;existe pas, on le crée en base ;
+  </li>
+  <li>ligne 44 : on crypte le mot de passe. On utilise ici, la classe [BCrypt] de Spring Security (ligne 4). On a donc besoin des archives de ce framework. Le fichier [pom.xml] inclut cette dépendance :
+  </li>
 </ul>
+
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-xml">
 <span class="odt-code-line"><span style="color:#000000">        </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">dependency</span><span style="color:#008080">&gt;</span></span>
 <span class="odt-code-line"><span style="color:#000000">            </span><span style="color:#008080">&lt;</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span><span style="color:#000000">org.springframework.boot</span><span style="color:#008080">&lt;/</span><span style="color:#3f7f7f">groupId</span><span style="color:#008080">&gt;</span></span>
@@ -2552,12 +2714,18 @@
 </code></pre></div>
 
 <ul>
-<li>ligne 46 : l&#x27;utilisateur est persisté en base ;</li>
-<li>ligne 48 : ainsi que la relation qui le lie à son rôle ;</li>
-<li>lignes 51-57 : cas où le login existe déjà – on regarde alors si parmi ses rôles se trouve déjà le rôle qu&#x27;on veut lui attribuer ;</li>
-<li>ligne 59-61 : si le rôle cherché n&#x27;a pas été trouvé, on crée une ligne dans la table [USERS_ROLES] pour relier l&#x27;utilisateur à son rôle ;</li>
-<li>on ne s&#x27;est pas protégé des exceptions éventuelles. C&#x27;est une classe de soutien pour créer rapidement un utilisateur avec un rôle.</li>
+  <li>ligne 46 : l&#x27;utilisateur est persisté en base ;
+  </li>
+  <li>ligne 48 : ainsi que la relation qui le lie à son rôle ;
+  </li>
+  <li>lignes 51-57 : cas où le login existe déjà – on regarde alors si parmi ses rôles se trouve déjà le rôle qu&#x27;on veut lui attribuer ;
+  </li>
+  <li>ligne 59-61 : si le rôle cherché n&#x27;a pas été trouvé, on crée une ligne dans la table [USERS_ROLES] pour relier l&#x27;utilisateur à son rôle ;
+  </li>
+  <li>on ne s&#x27;est pas protégé des exceptions éventuelles. C&#x27;est une classe de soutien pour créer rapidement un utilisateur avec un rôle.
+  </li>
 </ul>
+
 <p>Lorsqu&#x27;on exécute la classe avec les arguments [x x guest], on obtient en base les résultats suivants :</p>
 <p><strong>Table [USERS]</strong></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000025F000000704AB541BB.png" style="display:inline-block; margin:4px;width:11.24cm;height:2.071cm;" class="odt-zoomable" data-zoom-src="images/100000000000025F000000704AB541BB.png" /></td></tr></table>
@@ -2653,11 +2821,16 @@
 </code></pre></div>
 
 <ul>
-<li>lignes 37-44 : test visuel. On affiche tous les utilisateurs avec leurs rôles ;</li>
-<li>lignes 46-56 : on vérifie que l&#x27;utilisateur [admin] a le mot de passe [admin] et le  rôle [ROLE_ADMIN] en utilisant le repository [UserRepository] ;</li>
-<li>ligne 51 : [admin] est le mot de passe en clair. En base, il est crypté selon l&#x27;algorithme BCrypt. La méthode [BCrypt.checkpw] permet de vérifier que le mot de passe en clair une fois crypté est bien égal à celui qui est en base ;</li>
-<li>lignes 58-69 : on vérifie que l&#x27;utilisateur [admin] a le mot de passe [admin] et le  rôle [ROLE_ADMIN] en utilisant le service [<span style="color: #0000c0">appUserDetailsService</span>] ;</li>
+  <li>lignes 37-44 : test visuel. On affiche tous les utilisateurs avec leurs rôles ;
+  </li>
+  <li>lignes 46-56 : on vérifie que l&#x27;utilisateur [admin] a le mot de passe [admin] et le  rôle [ROLE_ADMIN] en utilisant le repository [UserRepository] ;
+  </li>
+  <li>ligne 51 : [admin] est le mot de passe en clair. En base, il est crypté selon l&#x27;algorithme BCrypt. La méthode [BCrypt.checkpw] permet de vérifier que le mot de passe en clair une fois crypté est bien égal à celui qui est en base ;
+  </li>
+  <li>lignes 58-69 : on vérifie que l&#x27;utilisateur [admin] a le mot de passe [admin] et le  rôle [ROLE_ADMIN] en utilisant le service [<span style="color: #0000c0">appUserDetailsService</span>] ;
+  </li>
 </ul>
+
 <p>L&#x27;exécution des tests réussit avec les logs suivants :</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
@@ -2732,18 +2905,26 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000452000001B0CCD29594.png" style="display:inline-block; margin:4px;width:14.631cm;height:5.715cm;" class="odt-zoomable" data-zoom-src="images/1000000000000452000001B0CCD29594.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], nous demandons l&#x27;URL des catégories ;</span></li>
-<li><span style="color: #000000">en [2], avec une méthode GET ;</span></li>
-<li><span style="color: #000000">en [3], nous donnons l&#x27;entête HTTP de l&#x27;authentification. Le code [YWRtaW46YWRtaW4=] est le codage Base64 de la chaîne [admin:admin] ;</span></li>
-<li><span style="color: #000000">en [4], nous envoyons la commande HTTP ;</span></li>
+  <li><span style="color: #000000">en [1], nous demandons l&#x27;URL des catégories ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], avec une méthode GET ;</span>
+  </li>
+  <li><span style="color: #000000">en [3], nous donnons l&#x27;entête HTTP de l&#x27;authentification. Le code [YWRtaW46YWRtaW4=] est le codage Base64 de la chaîne [admin:admin] ;</span>
+  </li>
+  <li><span style="color: #000000">en [4], nous envoyons la commande HTTP ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">La réponse du serveur est la suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002CE000001B5B729F0DF.png" style="display:inline-block; margin:4px;width:9.499cm;height:5.782cm;" class="odt-zoomable" data-zoom-src="images/10000000000002CE000001B5B729F0DF.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1], l&#x27;entête HTTP d&#x27;authentification ;</span></li>
-<li><span style="color: #000000">en [2], le serveur renvoie une réponse jSON ;</span></li>
+  <li><span style="color: #000000">en [1], l&#x27;entête HTTP d&#x27;authentification ;</span>
+  </li>
+  <li><span style="color: #000000">en [2], le serveur renvoie une réponse jSON ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">On obtient bien la liste des catégories :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000119000001657189CC21.png" style="display:inline-block; margin:4px;width:5.2cm;height:6.609cm;" class="odt-zoomable" data-zoom-src="images/1000000000000119000001657189CC21.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2751,14 +2932,18 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000417000001BAAC19A967.png" style="display:inline-block; margin:4px;width:13.852cm;height:5.847cm;" class="odt-zoomable" data-zoom-src="images/1000000000000417000001BAAC19A967.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1] : l&#x27;entête HTTP d&#x27;authentification ;</span></li>
+  <li><span style="color: #000000">en [1] : l&#x27;entête HTTP d&#x27;authentification ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Nous obtenons la réponse suivante :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000323000001EA481B75CA.png" style="display:inline-block; margin:4px;width:10.624cm;height:6.482cm;" class="odt-zoomable" data-zoom-src="images/1000000000000323000001EA481B75CA.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [2] : la réponse du service web ;</span></li>
+  <li><span style="color: #000000">en [2] : la réponse du service web ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Maintenant, essayons l&#x27;utilisateur user / user. Il existe mais n&#x27;a pas accès au service web. Si nous exécutons le programme d&#x27;encodage Base64 avec les deux arguments [user user] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/100000000000009E000000765D52ED73.png" style="display:inline-block; margin:4px;width:2.93cm;height:2.191cm;" class="odt-zoomable" data-zoom-src="images/100000000000009E000000765D52ED73.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2768,13 +2953,17 @@
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002E20000011B5B418D52.png" style="display:inline-block; margin:4px;width:9.763cm;height:3.745cm;" class="odt-zoomable" data-zoom-src="images/10000000000002E20000011B5B418D52.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [1]  : l&#x27;entête HTTP d&#x27;authentification erroné ;</span></li>
+  <li><span style="color: #000000">en [1]  : l&#x27;entête HTTP d&#x27;authentification erroné ;</span>
+  </li>
 </ul>
+
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000002AC000001CCB5568B61.png" style="display:inline-block; margin:4px;width:9.049cm;height:6.085cm;" class="odt-zoomable" data-zoom-src="images/10000000000002AC000001CCB5568B61.png" /></td></tr></table>
 
 <ul>
-<li><span style="color: #000000">en [2] : la réponse du service web. Elle est différente de la précédente qui était [401 Unauthorized]. Cette fois-ci, l&#x27;utilisateur s&#x27;est authentifié correctement mais n&#x27;a pas les droits suffisants pour accéder à l&#x27;URL ;</span></li>
+  <li><span style="color: #000000">en [2] : la réponse du service web. Elle est différente de la précédente qui était [401 Unauthorized]. Cette fois-ci, l&#x27;utilisateur s&#x27;est authentifié correctement mais n&#x27;a pas les droits suffisants pour accéder à l&#x27;URL ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">Notre service web sécurisé est désormais opérationnel.</span></p>
 <p><a id="refheading9355894989336"></a></p>
 <h3 id="16410-une-url-dauthentification">16.4.10. Une URL d&#x27;authentification</h3>
@@ -2815,11 +3004,16 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 15 : la classe [AuthenticateController] est un contrôleur Spring. A ce titre elle expose des URL ;</span></li>
-<li><span style="color: #000000">ligne 22 : expose l&#x27;URL [/authenticate] ;</span></li>
-<li><span style="color: #000000">ligne 23 : le résultat de la méthode sera envoyé directement au client ;</span></li>
-<li><span style="color: #000000">lignes 26-27 : la méthode se contente de renvoyer un objet [Response] vide mais avec un [status] égal à 0, montrant qu&#x27;il n&#x27;y a pas eu d&#x27;erreur ;</span></li>
+  <li><span style="color: #000000">ligne 15 : la classe [AuthenticateController] est un contrôleur Spring. A ce titre elle expose des URL ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 22 : expose l&#x27;URL [/authenticate] ;</span>
+  </li>
+  <li><span style="color: #000000">ligne 23 : le résultat de la méthode sera envoyé directement au client ;</span>
+  </li>
+  <li><span style="color: #000000">lignes 26-27 : la méthode se contente de renvoyer un objet [Response] vide mais avec un [status] égal à 0, montrant qu&#x27;il n&#x27;y a pas eu d&#x27;erreur ;</span>
+  </li>
 </ul>
+
 <p><span style="color: #000000">A quoi sert cette URL ? Lorsque nous voudrons simplement authentifier un utilisateur, nous la demanderons. Nous avons vu que si la couche de sécurité n&#x27;accepte pas cet utilisateur, elle renvoie une exception. Voici un exemple ;</span></p>
 <p><span style="color: #000000">Avec l&#x27;utilisateur [admin:admin] :</span></p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000001420000009AABCE08F9.png" style="display:inline-block; margin:4px;width:5.96cm;height:2.85cm;" class="odt-zoomable" data-zoom-src="images/10000000000001420000009AABCE08F9.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/1000000000000117000000B591DBE78F.png" style="display:inline-block; margin:4px;width:5.159cm;height:3.35cm;" class="odt-zoomable" data-zoom-src="images/1000000000000117000000B591DBE78F.png" /></td></tr></table>
@@ -2871,8 +3065,10 @@
 
 <p><span style="color: #000000">    </span></p>
 <ul>
-<li>ligne 15 : la méthode générique [getResponse] en charge de la communication HTTP avec le service web sécurisé, admet désormais comme premier paramètre l&#x27;utilisateur qui demande une URL. La classe [User] est la suivante :</li>
+  <li>ligne 15 : la méthode générique [getResponse] en charge de la communication HTTP avec le service web sécurisé, admet désormais comme premier paramètre l&#x27;utilisateur qui demande une URL. La classe [User] est la suivante :
+  </li>
 </ul>
+
 <p>Cette classe est la suivante :</p>
 <table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000000E7000000C0BE8614F6.png" style="display:inline-block; margin:4px;width:4.279cm;height:3.56cm;" class="odt-zoomable" data-zoom-src="images/10000000000000E7000000C0BE8614F6.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;">&nbsp;</td></tr></table>
 
@@ -2970,9 +3166,12 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lignes 42-44, 49-51 : si l&#x27;utilisateur [user] n&#x27;est pas </span><strong><span style="color: #000000">null</span></strong><span style="color: #000000">, alors on ajoute l&#x27;entête d&#x27;authentification. L&#x27;encodage </span><em><span style="color: #000000">Base64</span></em><span style="color: #000000"> de l&#x27;utilisateur et de son mot de passe est assuré par la méthode [getBase64] des lignes 25-29. On fera attention au fait que cette méthode utilise une classe [Base64] appartenant au JDK 1.8.</span></li>
-<li><span style="color: #000000">en-dehors des lignes précédentes, le code reste inchangé ;</span></li>
+  <li><span style="color: #000000">lignes 42-44, 49-51 : si l&#x27;utilisateur [user] n&#x27;est pas </span><b><span style="color: #000000">null</span></b><span style="color: #000000">, alors on ajoute l&#x27;entête d&#x27;authentification. L&#x27;encodage </span><i><span style="color: #000000">Base64</span></i><span style="color: #000000"> de l&#x27;utilisateur et de son mot de passe est assuré par la méthode [getBase64] des lignes 25-29. On fera attention au fait que cette méthode utilise une classe [Base64] appartenant au JDK 1.8.</span>
+  </li>
+  <li><span style="color: #000000">en-dehors des lignes précédentes, le code reste inchangé ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading9361894989336"></a></p>
 <h3 id="1652-linterface-idao">16.5.2. L&#x27;interface [IDao]</h3>
 <p><span style="color: #000000">Toutes les méthodes de l&#x27;interface [IDao] reçoivent un paramètre supplémentaire [User user] :</span></p>
@@ -3038,8 +3237,10 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">ligne 12 : nous avons ajouté la méthode [authenticate(User user)] pour authentifier un utilisateur. Elle lance une exception si l&#x27;utilsateur n&#x27;a pas le droit d&#x27;accéder à l&#x27;URL [/authenticate] du service web ;</span></li>
+  <li><span style="color: #000000">ligne 12 : nous avons ajouté la méthode [authenticate(User user)] pour authentifier un utilisateur. Elle lance une exception si l&#x27;utilsateur n&#x27;a pas le droit d&#x27;accéder à l&#x27;URL [/authenticate] du service web ;</span>
+  </li>
 </ul>
+
 <p><a id="refheading9363894989336"></a></p>
 <h3 id="1653-la-classe-dao">16.5.3. La classe [Dao]</h3>
 <p><span style="color: #000000">Toutes les méthodes de la classe [Dao] reçoivent un paramètre supplémentaire [User user] qu&#x27;elles passent à la méthode générique [getResponse] de la classe [AbstractDao]. Voici deux exemples :</span></p>
@@ -3195,14 +3396,20 @@
 </code></pre></div>
 
 <ul>
-<li><span style="color: #000000">lors de l&#x27;initialisation de la classe de test, lignes 21-26, trois utilisateurs sont créés :</span><ul>
-<li><span style="color: #000000">l&#x27;utilisateur [admin] a accès aux URL du service web, test lignes 96-104 ;</span></li>
-<li><span style="color: #000000">l&#x27;utilisateur [user] existe mais n&#x27;est pas autorisé à utiliser les URL du service web, test lignes 71-81 ;</span></li>
-<li><span style="color: #000000">l&#x27;utilisateur [unknown] n&#x27;existe pas, test lignes 83-93 ;</span></li>
+  <li><span style="color: #000000">lors de l&#x27;initialisation de la classe de test, lignes 21-26, trois utilisateurs sont créés :</span>
+    <ul>
+      <li><span style="color: #000000">l&#x27;utilisateur [admin] a accès aux URL du service web, test lignes 96-104 ;</span>
+      </li>
+      <li><span style="color: #000000">l&#x27;utilisateur [user] existe mais n&#x27;est pas autorisé à utiliser les URL du service web, test lignes 71-81 ;</span>
+      </li>
+      <li><span style="color: #000000">l&#x27;utilisateur [unknown] n&#x27;existe pas, test lignes 83-93 ;</span>
+      </li>
+    </ul>
+  </li>
+  <li><span style="color: #000000">les méthodes de tests sont celles déjà vues pour le service web non sécurisé, si ce n&#x27;est que les méthodes de l&#x27;interface [IDaoClient] sont appelées avec comme premier paramètre, l&#x27;utilisateur [admin] qui a le droit d&#x27;utiliser les URL ;</span>
+  </li>
 </ul>
-</li>
-<li><span style="color: #000000">les méthodes de tests sont celles déjà vues pour le service web non sécurisé, si ce n&#x27;est que les méthodes de l&#x27;interface [IDaoClient] sont appelées avec comme premier paramètre, l&#x27;utilisateur [admin] qui a le droit d&#x27;utiliser les URL ;</span></li>
-</ul>
+
 <p><span style="color: #000000">Le test passe mais on peut constater qu&#x27;il est plus lent qu&#x27;avec le service web non sécurisé. La sécurisation d&#x27;une application augmente sensiblement ses temps de réponse. On peut noter un facteur important dans les performances du service web sécurisé : dans la classe [AppConfig] qui le configure, nous avons écrit :</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-markdown">
 <span class="odt-code-line"><span style="color:#000000">    </span><span style="color:#646464">@Override</span></span>
